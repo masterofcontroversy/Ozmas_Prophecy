@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="17" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="SnowPeaks" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Tilesets/SnowPeaks/SnowPeaks.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="17" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzLYGZgyADiLiB2Z8TErUDxZUCczADB6kD2exxYlAm3/l9IZiwFsttwmGGKZgbIXTpo+kF4G9TNMH1deMyQYMLUD8OrgOL5QFzADGEjm4dshgUTdv0g/IoZlY0rPPCZgY7xhQe6WlAYs0NxB5RGDl90MzywmAESS4emheVQWh3JXC5mTDNuA+kPQHo2kL4DxJ1IdioxQLA6jnQFM+M3I2r8o6cvWPrBlTa1oe6DxSEHVP0sqPg1oN/doOkHXT8nHrNx5QFCavHph6VBNyLshMU1Mhs5DRMyQw7qf5C9R4H4ODR9I8c5LOzYmTHt4oHqnQ7E25mxp3UQvsaMwKvQ7ELXSwxGz0uk6B0MGAA/Mpft
+  </data>
+ </layer>
+</map>

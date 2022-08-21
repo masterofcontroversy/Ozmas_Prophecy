@@ -1,0 +1,11 @@
+PUSH
+ORG 0x846AC
+POIN BattleQuoteList
+POP
+
+#define BattleQuoteEntry(Unit1, Unit2, ChapterID, CompletionFlag, TextID, QuoteEvent) "SHORT Unit1 Unit2 ChapterID CompletionFlag TextID 0x0000; WORD QuoteEvent"
+
+ALIGN 4
+BattleQuoteList:
+
+BYTE 0xFF 0xFF 0x00 0x00 0x43 0x0C 0x00 0x00 0x00 0x00 0xFF 0xFF //TERMINATOR

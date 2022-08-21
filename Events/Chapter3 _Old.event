@@ -1,0 +1,153 @@
+EventPointerTable(0x0D,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+//TurnEventPlayer(0, CallReinforcements, 2)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Armory(Chap3ArmoryList,12,1)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+
+//LOAD1 0 EnemyUnits
+
+ENUN
+
+PREP
+
+ENDA
+
+EndingScene:
+MNC2 0x3
+ENDA
+
+PlayerUnits:
+UNIT Devan Duke Devan Level(1,Player,0) [2,4] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,5] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,3] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,3] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,4] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,3] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [0,5] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [0,6] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+
+UNIT
+
+/*
+Notes:
+More time should be given to the player to access villages and shops
+before nearly every enemy is killed.
+
+Consider moving the rightmost red village. It's too far out of the way. DONE. NEEDS TEST
+
+Letting Evelyn fly over to the middle village once it's moved should be fine.
+
+Upper right combat drags on too long. Might get fixed with the addition of Britanny
+
+*/
+
+EnemyUnits:
+//Boss
+UNIT 0x80 Shaman 0x0 Level(3,Enemy,1) [17,20] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+
+//Turn one enemies
+UNIT 0x80 Myrmidon 0x0 Level(3,Enemy,1) [6,6] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT 0x80 Soldier 0x0 Level(3,Enemy,1) [4,8] 0x0 0x0 0x0 0x1 [IronLance] AttackInRangeAI
+UNIT 0x80 Acolyte 0x0 Level(3,Enemy,1) [2,9] 0x0 0x0 0x0 0x1 [Lightning] AttackInRangeAI
+UNIT 0x80 HeavyCavalier 0x0 Level(3,Enemy,1) [5,11] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+//First path branch
+UNIT 0x80 Mercenary 0x0 Level(3,Enemy,1) [10,6] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT 0x80 Fighter 0x0 Level(3,Enemy,1) [12,7] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+
+//Second path branch
+//UNIT 0x80 PegasusKnight 0x0 Level(3,Enemy,1) [8,11] 0x0 0x0 0x0 0x1 [IronLance] AttackInRangeAI //Chopping block
+UNIT 0x80 Mage 0x0 Level(3,Enemy,1) [11,12] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
+
+//Bottom Entrance
+UNIT 0x80 Fighter 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+//End of first path branch (Northern guys)
+//GroupOneAI
+UNIT 0x80 Archer 0x0 Level(3,Enemy,1) [14,3] 0x0 0x0 0x0 0x1 [SteelBow] GroupOneAI
+UNIT 0x80 Soldier 0x0 Level(3,Enemy,1) [16,3] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
+//UNIT 0x80 Fighter 0x0 Level(3,Enemy,1) [16,4] 0x0 0x0 0x0 0x1 [IronAxe] GroupOneAI //Chopping block
+
+//GroupTwoAI
+UNIT 0x80 Myrmidon 0x0 Level(3,Enemy,1) [4,15] 0x0 0x0 0x0 0x1 [IronSword] GroupTwoAI
+UNIT 0x80 Soldier 0x0 Level(3,Enemy,1) [7,14] 0x0 0x0 0x0 0x1 [IronLance] GroupTwoAI
+
+//Lower defense
+UNIT 0x80 Soldier 0x0 Level(3,Enemy,1) [6,18] 0x0 0x0 0x0 0x1 [IronLance] MoveIn2TurnsAI
+UNIT 0x80 ArmorKnight 0x0 Level(3,Enemy,1) [8,16] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+
+//Last line before boss
+UNIT 0x80 Acolyte 0x0 Level(3,Enemy,1) [10,20] 0x0 0x0 0x0 0x1 [Lightning] AttackInRangeAI
+UNIT 0x80 Mercenary 0x0 Level(3,Enemy,1) [9,18] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI //Chopping block
+UNIT 0x80 Fighter 0x0 Level(3,Enemy,1) [12,19] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+
+//Eastern house guard
+//GroupThreeAI
+UNIT 0x80 Fighter 0x0 Level(3,Enemy,1) [14,12] 0x0 0x0 0x0 0x1 [IronAxe] GroupThreeAI
+UNIT 0x80 Acolyte 0x0 Level(3,Enemy,1) [15,11] 0x0 0x0 0x0 0x1 [Lightning] GroupThreeAI
+UNIT 0x80 Mercenary 0x0 Level(3,Enemy,1) [15,14] 0x0 0x0 0x0 0x1 [IronSword] GroupThreeAI
+
+UNIT 0x80 Cavalier 0x0 Level(3,Enemy,1) [13,3] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+
+UNIT 0x80 Cavalier 0x0 Level(3,Enemy,1) [17,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI //Chopping block
+UNIT 0x80 HeavyCavalier 0x0 Level(3,Enemy,1) [17,21] 0x0 0x0 0x0 0x1 [IronAxe] NoAI //Chopping block
+
+UNIT
+
+//Reinforcements from bottom right
+Reinforcements_1:
+UNIT 0x80 Cavalier 0x0 Level(3,Enemy,1) [17,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT 0x80 HeavyCavalier 0x0 Level(3,Enemy,1) [17,21] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+UNIT
+
+CallReinforcements:
+LOAD1 0 Reinforcements_1
+NoFade
+ENDA

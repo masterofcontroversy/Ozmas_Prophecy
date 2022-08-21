@@ -1,0 +1,36 @@
+#define PaletteTable 0xEF8008
+
+#define setPalette(index, palette) "PUSH; ORG (PaletteTable + (index * 0x10) - 0x4); POIN palette; POP"
+
+setPalette(0x01, DevanDukePal)
+setPalette(0x03, RonniBowKnightPal)
+setPalette(0x04, RonniArchKnightPal)
+setPalette(0x05, AnthonyMercenaryPal)
+setPalette(0x07, KennethCavalierPal)
+
+//0x8ef9000
+
+//Devan(Duke)
+ALIGN 4
+DevanDukePal:
+#incbin "Devan(Duke).dmp"
+
+//Ronni(Bow Knight)
+ALIGN 4
+RonniBowKnightPal:
+#incbin "Ronni(Bow Knight).dmp"
+
+//Ronni(Arch Knight)
+ALIGN 4
+RonniArchKnightPal:
+#incbin "Ronni(Arch Knight).dmp"
+
+//Anthony(Mercenary)
+ALIGN 4
+AnthonyMercenaryPal:
+#incbin "Anthony(Mercenary).dmp"
+
+//Kenneth(Cavalier)
+ALIGN 4
+KennethCavalierPal:
+#incbin "Kenneth(Cavalier).dmp"

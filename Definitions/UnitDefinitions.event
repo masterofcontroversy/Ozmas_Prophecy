@@ -1,0 +1,18 @@
+//Unit Definitions
+#define Devan 0x1
+#define Ronni 0x2
+#define Anthony 0x3
+#define Kenneth 0x4
+#define Holly 0x5
+#define Julianne 0x6
+#define Absalom 0x7
+#define Colton 0x8
+#define Lucy 0x9
+#define Max 0xA
+#define Alexandra 0xF
+#define Evelyn 0x10
+
+#define Duramontis 0xCD
+#define Cassis 0xC0
+#define Tolva 0x80
+#define Raider 0x64

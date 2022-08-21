@@ -1,0 +1,382 @@
+//Skill System replacing favouritism stat
+#include repointbuffer.event
+// #include "FE8-Weapon Rank on Levelup/FE8-Weapon Rank on Levelup EA.txt"
+
+PUSH //let 203e884 + charnum*10 = skill area (bytes 1,2,3,4 NOT 0 tho)
+
+//This was done through trial and error.... 
+
+//PROBLEM: skills 1 and 2 get kept along with loss count
+
+ORG $5904A
+SHORT 0x46C0
+jumpToHack(SkillActivationAnims)
+ORG $518E4      // Don't overwrite VRAM holding procced skill icon.
+jumpToHack(KeepProcSkillIcon)
+
+ORG $5B9724
+SHORT 0x9 0x0; POIN SPD_main_Proc         // Kill all instances of SPD_main_Proc on death quote.
+                                          // SPD_Map_main_Proc should be fast enough to not need killing.
+ORG $5D9408                               // Make defensive skill use opponent's x-location.
+BYTE 0x16                                 // Replace proc loop with proc call (can yield).
+ORG $6E614                                // This means we no longer have to break proc loop,
+WORD 0xF7EB6DE0 0x2302FE4D 0x48055E1A     // allowing us to replace the call to breakProcLoop
+WORD 0x21802301 0xF0040049 0x2000F9BD     // with a call to getTargetAIS.
+WORD 0xBC02BC10 0x00004708                // Originally the proc loop would immediately break.
+                                          // It seems whoever designed battle animation stuff
+                                          // didn't know about proc call.
+ORG $7A89C
+jumpToHack(SkillProcDisplayMap)           // Display procced skill icon during map battle.
+
+/*
+ORG $a44c8 //bwl
+BYTE $70 $47
+ORG $a4534 //bwl
+BYTE $70 $47
+
+ORG $a41c8 //seems to be saving/loading
+BYTE $70 $47
+ORG $a421c //same here
+BYTE $70 $47 */
+ORG $a474c
+BYTE $70 $47
+ORG $a478c
+BYTE $70 $47
+ORG $a4a34
+BYTE $70 $47
+// ORG $a4cfc //breaks at credits
+// BYTE $70 $47
+
+ORG $a464c //only save 1 byte when dying (as opposed to 3)
+BYTE 1
+
+ORG $a4140
+SHORT 0 //nop the 0x200000
+
+// now managed via InitLevelUpSkillPopup (see SkillPopups.event, Engine Hacks/Popups.event and Engine Hacks/PopupRework) -Stan
+// ORG $76018
+// jumpToHack(SkillLearner)
+
+// now managed by Icon Rework (see Engine Hacks/IconRework) -Stan
+// ORG $3730
+// jumpToHack(AlternateIconPopup)
+
+// now managed by Popup Rework (see Engine Hacks/Popups.event and Engine Hacks/PopupRework) -Stan
+// ORG $75d64
+// jumpToHack(AnimsOnPopupHack)
+
+ORG $17ef4
+jumpToHack(HookUnitLoading)
+
+ORG $2B3EC
+jumpToHack(Rerun_Battle_Calcs)
+
+ORG $22862
+BL(Unset_Attack_Flag) //this is in masterhackinstaller
+
+ORG $18680
+jumpToHack(Unset_Attack_Flag_2)
+
+ORG $2B918
+jumpToHack(RemoveRoundHack)
+POP
+
+ALIGN 4
+KeepProcSkillIcon:
+#include "KeepProcSkillIcon.lyn.event"
+ALIGN 4
+SkillActivationAnims:
+#include "activationanims.lyn.event"
+ALIGN 4
+SkillProcDisplayMap:
+#include "SkillProcDisplayMap.lyn.event"
+ALIGN 4
+#include "C/SkillProcDisplay.lyn.event"
+ALIGN 4
+SPD_ProcDisplayTiles:
+#incbin "Graphics/ProcDisplayTiles.dmp"    // Uncompressed image.
+
+ALIGN 4
+Skill_Getter: // gets a list of skills
+	#incbin "asm/GetSkills.dmp"
+	POIN PersonalSkillTable
+	POIN ClassSkillTable
+	POIN (GetInitialSkillList|1)
+
+
+#include "NewSkillTester/_src/SkillTester.lyn.event"
+
+//Pointer with thumb bit set for NewSkillTester to use
+ALIGN 4
+GetInitialSkillList_Pointer:
+POIN (GetInitialSkillList|1)
+
+//Determines the maximum number of entries the AuraSkillBuffer can take up. Each entry is 2 bytes long
+#define AuraSkillBufferLimit 480
+
+//Determines the max number of skills generics get from learned skills
+#define MaxGenericLearnedSkills 4
+
+ALIGN 4
+PassiveSkillBit:
+WORD PASSIVE_ITEM_SKILL_ATTR
+
+PassiveSkillStack:
+WORD PASSIVE_SKILLS_STACK
+
+gAuraSkillBufferLimit:
+WORD AuraSkillBufferLimit
+
+GenericLearnedSkillLimit:
+WORD MaxGenericLearnedSkills
+
+#define NegatedSkillEntry(skillID) "PUSH; ORG NegatedSkills + skillID; BYTE 0x1; POP"
+
+ALIGN 4
+NihilIDLink:
+WORD NihilID
+
+ALIGN 4
+NegatedSkills: //comment or uncomment skills to your liking, this should come with an updated list of skills that work with nihil and are meant to
+//Confirmed working and grouped by type for easier adding/removing from the NegatedSkills list
+//please note that I have only tested one or two skills of each group so if there is any issue with any of them please let me know
+FILL 0xFF
+
+NegatedSkillEntry(VantageID)
+NegatedSkillEntry(VantagePlusID)
+NegatedSkillEntry(DesperationID)
+NegatedSkillEntry(WrathID)
+NegatedSkillEntry(SwordbreakerID)
+NegatedSkillEntry(LancebreakerID)
+NegatedSkillEntry(AxebreakerID)
+NegatedSkillEntry(BowbreakerID)
+NegatedSkillEntry(TomebreakerID)
+NegatedSkillEntry(SwordfaireID)
+NegatedSkillEntry(LancefaireID)
+NegatedSkillEntry(AxefaireID)
+NegatedSkillEntry(BowfaireID)
+NegatedSkillEntry(TomefaireID)
+NegatedSkillEntry(DuelistsBlowID)
+NegatedSkillEntry(DeathBlowID)
+NegatedSkillEntry(DartingBlowID)
+NegatedSkillEntry(WardingBlowID)
+NegatedSkillEntry(CertainBlowID)
+NegatedSkillEntry(ArmoredBlowID)
+NegatedSkillEntry(ElbowRoomID)
+NegatedSkillEntry(NaturalCoverID)
+NegatedSkillEntry(QuickDrawID) 
+NegatedSkillEntry(StrongRiposteID)
+NegatedSkillEntry(PatienceID)
+NegatedSkillEntry(PursuitID)
+NegatedSkillEntry(CounterID)
+NegatedSkillEntry(CounterMagicID)
+NegatedSkillEntry(SureShotID)
+NegatedSkillEntry(IgnisID)
+NegatedSkillEntry(ColossusID)
+NegatedSkillEntry(ImpaleID)
+NegatedSkillEntry(PaviseID)
+NegatedSkillEntry(AegisID)
+NegatedSkillEntry(AstraID)
+NegatedSkillEntry(SolID)
+NegatedSkillEntry(LunaID)
+NegatedSkillEntry(AetherID)
+NegatedSkillEntry(AdeptID)
+NegatedSkillEntry(LethalityID)
+NegatedSkillEntry(SolidarityID)
+NegatedSkillEntry(MaleficAuraID)
+NegatedSkillEntry(VoiceOfPeaceID)
+NegatedSkillEntry(IntimidateID)
+NegatedSkillEntry(AnathemaID)
+NegatedSkillEntry(LifetakerID)
+NegatedSkillEntry(GaleforceID)
+NegatedSkillEntry(DespoilID)
+NegatedSkillEntry(SavageBlowID)
+NegatedSkillEntry(SealStrID)
+NegatedSkillEntry(SealSklID)
+NegatedSkillEntry(SealSpdID)
+NegatedSkillEntry(SealLukID)
+NegatedSkillEntry(SealDefID)
+NegatedSkillEntry(SealResID)
+NegatedSkillEntry(CritUpID)
+NegatedSkillEntry(WaryFighterID)
+NegatedSkillEntry(FrenzyID)
+NegatedSkillEntry(MiracleID)
+NegatedSkillEntry(LifeAndDeathID)
+NegatedSkillEntry(TantivyID)
+NegatedSkillEntry(FocusID)
+NegatedSkillEntry(FieryBloodID)
+NegatedSkillEntry(WindDiscipleID)
+NegatedSkillEntry(HawkeyeID)
+NegatedSkillEntry(LightWeightID)
+NegatedSkillEntry(KillingMachineID)
+NegatedSkillEntry(CriticalForceID)
+NegatedSkillEntry(ChivalryID)
+NegatedSkillEntry(PragmaticID)
+NegatedSkillEntry(OpportunistID)
+NegatedSkillEntry(TrampleID)
+NegatedSkillEntry(MoonbowID)
+NegatedSkillEntry(DownWithArchID)
+NegatedSkillEntry(LuckySevenID)
+NegatedSkillEntry(OddRhythmID)
+NegatedSkillEntry(EvenRhythmID)
+NegatedSkillEntry(SlowBurnID)
+NegatedSkillEntry(QuickBurnID)
+NegatedSkillEntry(BracingStanceID)
+NegatedSkillEntry(DartingStanceID)
+NegatedSkillEntry(FierceStanceID)
+NegatedSkillEntry(KestrelStanceID)
+NegatedSkillEntry(MirrorStanceID)
+NegatedSkillEntry(ReadyStanceID)
+NegatedSkillEntry(SteadyStanceID)
+NegatedSkillEntry(SturdyStanceID)
+NegatedSkillEntry(SwiftStanceID)
+NegatedSkillEntry(WardingStanceID)
+NegatedSkillEntry(SpectrumStanceID)
+NegatedSkillEntry(ExpertiseID)
+NegatedSkillEntry(SlayerID)
+NegatedSkillEntry(NullifyID)
+NegatedSkillEntry(BlackMagicID)
+NegatedSkillEntry(FortressDefenseID)
+NegatedSkillEntry(FortressResistanceID)
+NegatedSkillEntry(ForesightID)
+NegatedSkillEntry(AxefaithID)
+NegatedSkillEntry(FullMetalBodyID)
+NegatedSkillEntry(LiquidOozeID)
+NegatedSkillEntry(DevilsLuckID)
+NegatedSkillEntry(DevilsPactID)
+NegatedSkillEntry(DevilsWhimID)
+NegatedSkillEntry(PoisonStrikeID)
+NegatedSkillEntry(GrislyWoundID)
+NegatedSkillEntry(HexID)
+NegatedSkillEntry(BarricadeID)
+NegatedSkillEntry(BarricadePlusID)
+NegatedSkillEntry(PointBlankID)
+NegatedSkillEntry(PerfectionistID)
+NegatedSkillEntry(PuissanceID)
+NegatedSkillEntry(BattleVeteranID)
+NegatedSkillEntry(HolyAuraID)
+NegatedSkillEntry(SilentPrideID)
+NegatedSkillEntry(LoyaltyID)
+NegatedSkillEntry(ThunderstormID)
+NegatedSkillEntry(OutriderID)
+NegatedSkillEntry(HeavyStrikesID)
+NegatedSkillEntry(ChargeID)
+NegatedSkillEntry(InfiltratorID)
+NegatedSkillEntry(VanityID)
+NegatedSkillEntry(MageSlayerID)
+NegatedSkillEntry(KnightAspirantID)
+NegatedSkillEntry(DisciplinePlusID)
+NegatedSkillEntry(HeroID)
+NegatedSkillEntry(SealMagID)
+NegatedSkillEntry(DriveStrID)
+NegatedSkillEntry(DriveMagID)
+NegatedSkillEntry(DriveSpdID)
+NegatedSkillEntry(DriveDefID)
+NegatedSkillEntry(DriveResID)
+NegatedSkillEntry(QuickRiposteID)
+NegatedSkillEntry(ResolveID)
+NegatedSkillEntry(InsightID)
+NegatedSkillEntry(VigilanceID)
+NegatedSkillEntry(DauntID)
+NegatedSkillEntry(BloodTideID)
+NegatedSkillEntry(WhitePoolID)
+NegatedSkillEntry(NightTideID)
+NegatedSkillEntry(PrescienceID)
+NegatedSkillEntry(DefiantAvoID)
+NegatedSkillEntry(DefiantCritID)
+NegatedSkillEntry(DefiantStrID)
+NegatedSkillEntry(DefiantMagID)
+NegatedSkillEntry(DefiantSklID)
+NegatedSkillEntry(DefiantSpdID)
+NegatedSkillEntry(DefiantLckID)
+NegatedSkillEntry(DefiantDefID)
+NegatedSkillEntry(DefiantResID)
+NegatedSkillEntry(ShortShieldID)
+NegatedSkillEntry(TowerShieldID)
+NegatedSkillEntry(TowerShieldPlusID)
+NegatedSkillEntry(IndoorFighterID)
+NegatedSkillEntry(OutdoorFighterID)
+NegatedSkillEntry(AlertStanceID)
+NegatedSkillEntry(AlertStancePlusID)
+NegatedSkillEntry(CoronaID)
+NegatedSkillEntry(FlareID)
+NegatedSkillEntry(TempestID)
+NegatedSkillEntry(SerenityID)
+NegatedSkillEntry(PetrifyID)
+NegatedSkillEntry(EnrageID)
+NegatedSkillEntry(DeadeyeID)
+NegatedSkillEntry(DragonFangID)
+NegatedSkillEntry(FortuneID)
+
+/*
+//NOT WORKING (or they should not be affected by nihil)
+BYTE ProvokeID//this is kinda it's own thing really (works)
+BYTE MercyID LungeID GambleID CaptureID//commands, not working, if you want to you can make a test for nihil in the target routine and make it not a valid target if they have nihil
+BYTE ShoveID SmiteID//commands that do not initiate a fight, same as above but I felt they should be another group
+BYTE StaffSavantID BowRangeUpID//range skills, not working, if you really want to you can edit the targeting routine to make an enemy with nihil untargetable if they are outside the range you would have without the skill
+BYTE RallyStrID RallyMagID RallySklID RallySpdID RallyLukID RallyDefID RallyResID RallyMovID RallySpectrumID//not even tested, they have no reason to be negated
+BYTE SpurStrID SpurMagID SpurSpdID SpurDefID SpurResID//spur, same as rally
+BYTE UpWithArchID DemoiselleID GentilhommeID InspirationID CharmID AmaterasuID CamaraderieID LilysPoiseID BondID//auras that don't affect the one that makes them, so same as rally
+BYTE DisciplineID ParagonID ArmsthriftID CantoPlusID//after battle, probably not working and probably shouldn't be nullified anyway
+BYTE CelerityID ReliefID LockTouchID LiveToServeID NihilID PersonalityID NiceThighsID SummonID DanceID CunningID DragonsBloodID AcrobatID PassID CantoID RenewalID//other, can't be affected
+BYTE RightfulArchID RightfulKingID RightfulGodID//Rightful skills shouldn't really be checked by nihil since any skill that's going to be affected by them should already be nullified
+
+//TO DO:
+BYTE SaviorID//works, but changes are not displayed in the pre-battle numbers (they ARE updated when the combat begins tho)
+BYTE ForeignPrincessID
+*/
+BYTE 0x00//terminator
+ALIGN 4
+
+ALIGN 4
+SkillDescGetter: //given skill number, get description text ID
+#incbin skillDescGetter.dmp
+POIN SkillDescTable
+POIN Skill_Getter
+WORD SS_SkillsDefaultRText
+
+ALIGN 4
+SkillAdder: //given chardata in r0, skill in r1, add skill if possible
+#incbin addSkill.dmp
+
+ALIGN 4
+HookUnitLoading:
+	#incbin "asm/HookUnitLoading.dmp"
+	POIN (AutoloadSkills|1)
+	// POIN (Skill_Getter|1)
+	// POIN ChargeupTable
+
+ALIGN 4
+AutoloadSkills:
+	// TODO: maybe merge with HookUnitLoading?
+	#incbin "asm/AutoloadSkills.dmp"
+	POIN (GetInitialSkillList|1)
+	POIN (SkillAdder|1)
+
+ALIGN 4
+GetInitialSkillList:
+	#incbin "asm/GetInitialSkillList.dmp"
+	POIN (GetUnitLevelSkills|1)
+
+ALIGN 4
+GetUnitLevelSkills:
+	#incbin "asm/GetUnitLevelSkills.dmp"
+	POIN ClassLevelUpSkillTable
+	POIN CharLevelUpSkillTable
+
+RTextLoop:
+#incbin "rtextloop.dmp"
+POIN Skill_Getter
+
+Rerun_Battle_Calcs:
+#incbin "Rerun_Battle_Calcs.dmp"
+
+Unset_Attack_Flag_2:
+#incbin "clearAttackFlag.dmp"
+
+#include "RemoveRound.lyn.event" // This hack makes bit 5 of rounds attributes cause the round not to occur. -Snek
+gBattleBufferWidth:
+BYTE BattleBufferWidth
+
+#include "SkillPopups.event"
+#include "HPHealing.event"

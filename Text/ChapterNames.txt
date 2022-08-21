@@ -1,0 +1,8 @@
+# 0x160 Chapter1Name
+Ch1: Among the Clouds[X]
+
+# 0x161 Chapter2Name
+Ch2: Stone Cold Valley[X]
+
+# 0x162 Chpater3Name
+Ch3: Urban Warfare[X]

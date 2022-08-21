@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="22" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+ <tileset firstgid="1" name="SnowPeaks" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Tilesets/SnowPeaks/SnowPeaks.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="22" height="18">
+  <properties>
+   <property name="Anims1" value="0x0"/>
+   <property name="Anims2" value="0x0"/>
+   <property name="ChapterID" value="0x3"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x13"/>
+   <property name="MapID" value="0x11"/>
+   <property name="ObjectType" value="SnowPeaksObjectID"/>
+   <property name="PaletteID" value="SnowPeaksPaletteID"/>
+   <property name="TileConfig" value="SnowPeaksConfigID"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9VMtqVFEQ7Jur3ijiR4zJ3AkR/QMx4OMaBMfkExIzA7pwXPgDPlGExMX8gJiIBPEXsoiKe3dukhAUN66yyyJVnGpOO45ZFH1Oz+nq6sedujC7AXRKs19mtgn7E7YN31Oc14HvwAZ8+8CCJf8kcEe2Ap7p3Tp+7xGIXwHOFYn3GuypwDnE+QB2DnYK6FvS8BV2IDsN/7uQg+jwLXBJvG3prwPnsjSQc8lybeTje3JMC6z3iyXuGWBebxu9vaf8xBngMnxXgNPB5zquB37WOwn08Hu//Le/nVCj62JdLcv+Wr52APs3C6wKL8vcX+bj/azmQS7X5nzOwXc93Xm+UCatjPkE+wHYBj6zP7rz91q6+0Eb+W5prh7nMUPNl1oPYX/Dbmouty3d71qaM3U0YzQ9CnHLls+c8Z8y4Qf3APcuUAOLlnard4ymxnLMRUu7S11XLe80NZPnvfJVYa9iLTwPlLseeTdX5G/moXa60p05qIUx88BzaaemRvHM6/mnQr99/x7A96ZIdlD8P0d/5LtwXbN661zOsVqkb5527ZgcnBX5nljev3FczkEtJ4HtoGNcjtG5jePaEof/77xQD2P/iK1Qx7fAy3PU1VX/uQ+vgBPsXZm442yd/7Hq9l2+yR7o/Fr7tRD6fp9aJ7KmXWDP8mwq5WhURyU9nrtrf+/XPrjeAi3k2wl8rSLBexz1c5c2FP9R53okt/eNnAV4JoDzwBHS+6cx
+  </data>
+ </layer>
+ <layer id="2" name="CellDoor1" width="22" height="18" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYIAAd2YGmgBVRgYGD0bqm6tOI/eOglEwCkbBKMAOADe/AOQ=
+  </data>
+ </layer>
+ <layer id="4" name="Chest1" width="22" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="6"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFowABmAbaAaNgFIyCQQsADnAAAw==
+  </data>
+ </layer>
+ <layer id="5" name="Chest2" width="22" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxUwDbQDRsEoGAXDCgAADtgAAw==
+  </data>
+ </layer>
+ <layer id="6" name="Chest3" width="22" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="4"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgwkwDbQDRsEoGAWjAAcAAA9wAAM=
+  </data>
+ </layer>
+</map>

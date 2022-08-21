@@ -1,0 +1,13 @@
+//Repoint prep shop
+PUSH
+ORG 0x99E64
+POIN PrepShopList
+POP
+
+ALIGN 4
+PrepShopList:
+SHLI IronSword IronBlade IronLance Javelin IronAxe HandAxe IronBow Fire Lightning Flux Heal Torch Vulnerary
+
+ALIGN 4
+Chap3ArmoryList:
+SHLI SteelSword SteelBlade SteelLance Greatlance Javelin SteelAxe Hammer HandAxe SteelBow Longbow

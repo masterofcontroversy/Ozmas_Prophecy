@@ -1,0 +1,129 @@
+INLINE Class_Level_Cap_Table,Level Cap
+0x00 Separator/Nothing,30
+0x01 Ephraim Lord,30
+0x02 Eirika Lord,30
+0x03 Ephraim Great Lord,30
+0x04 Eirika Great Lord,30
+0x05 Cavalier,30
+0x06 Cavalier (F),30
+0x07 Paladin,30
+0x08 Paladin (F),30
+0x09 Armour Knight,30
+0x0A Armour Knight (F),30
+0x0B General,30
+0x0C General (F),30
+0x0D Thief,30
+0x0E Manakete,30
+0x0F Mercenary,30
+0x10 Mercenary (F),30
+0x11 Hero,30
+0x12 Hero (F),30
+0x13 Myrmidon,30
+0x14 Myrmidon (F),30
+0x15 Swordmaster,30
+0x16 Swordmaster (F),30
+0x17 Assassin,30
+0x18 Assassin (F),30
+0x19 Archer,30
+0x1A Archer (F),30
+0x1B Sniper,30
+0x1C Sniper (F),30
+0x1D Ranger,30
+0x1E Ranger (F),30
+0x1F Wyvern Rider,30
+0x20 Wyvern Rider (F),30
+0x21 Wyvern Lord,30
+0x22 Wyvern Lord (F),30
+0x23 Wyvern Knight,30
+0x24 Wyvern Knight (F),30
+0x25 Mage,30
+0x26 Mage (F),30
+0x27 Sage,30
+0x28 Sage (F),30
+0x29 Mage Knight,30
+0x2A Mage Knight (F),30
+0x2B Bishop,30
+0x2C Bishop (F),30
+0x2D Shaman,30
+0x2E Shaman (F),30
+0x2F Druid,30
+0x30 Druid (F),30
+0x31 Summoner,30
+0x32 Summoner (F),30
+0x33 Rogue,30
+0x34 Gorgon Egg,30
+0x35 Great Knight,30
+0x36 Great Knight (F),30
+0x37 Recruit (2),30
+0x38 Journeyman (3),30
+0x39 Pupil (3),30
+0x3A Recruit (3),30
+0x3B Manakete,30
+0x3C Manakete (F),30
+0x3D Journeyman (1),30
+0x3E Pupil (1),30
+0x3F Fighter,30
+0x40 Warrior,30
+0x41 Brigand,30
+0x42 Pirate,30
+0x43 Berserker,30
+0x44 Monk,30
+0x45 Priest,30
+0x46 Bard,30
+0x47 Recruit (1),30
+0x48 Pegasus Knight,30
+0x49 Falcon Knight,30
+0x4A Cleric,30
+0x4B Troubadour,30
+0x4C Valkyrie,30
+0x4D Dancer,30
+0x4E Soldier,30
+0x4F Necromancer,30
+0x50 Fleet,30
+0x51 Phantom,30
+0x52 Revenant,30
+0x53 Entombed,30
+0x54 Bonewalker,30
+0x55 Bonewalker (Bow),30
+0x56 Wight,30
+0x57 Wight (Bow),30
+0x58 Bael,30
+0x59 Elder Bael,30
+0x5A Cyclops,30
+0x5B Mauthe Doog,30
+0x5C Gwyllgi,30
+0x5D Tarvos,30
+0x5E Maelduin,30
+0x5F Mogall,30
+0x60 Arch Mogall,30
+0x61 Gorgon,30
+0x62 Gorgon Egg,30
+0x63 Gargoyle,30
+0x64 Deathgoyle,30
+0x65 Dracozombie,30
+0x66 Demon King,30
+0x67 Archer on Ballista,30
+0x68 Archer on Iron Ballista,30
+0x69 Archer on Killer Ballista,30
+0x6A Ballista,30
+0x6B Iron Ballista,30
+0x6C Killer Ballista,30
+0x6D Civilian,30
+0x6E Civilian (F),30
+0x6F Civilian,30
+0x70 Civilian (F),30
+0x71 Civilian,30
+0x72 Civilian (F),30
+0x73 Peer,30
+0x74 Queen,30
+0x75 Prince,30
+0x76 Queen,30
+0x77 (empty),30
+0x78 Fallen Prince,30
+0x79 Tent,30
+0x7A Pontifex,30
+0x7B Fallen Peer,30
+0x7C Cyclops 2,30
+0x7D Elder Bael 2,30
+0x7E Journeyman (2),30
+0x7F Invalid,0

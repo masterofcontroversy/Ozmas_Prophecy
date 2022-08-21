@@ -1,0 +1,94 @@
+//SnowSky
+ALIGN 4
+SnowSkyObjects:
+#incbin "Tilesets/SnowSky/SnowSkyObjects.lz77"
+
+ALIGN 4
+SnowSkyConfig:
+#incext compress "Tilesets/SnowSky/SnowSkyConfig.mapchip"
+
+ALIGN 4
+SnowSkyPalette:
+#incbin "Tilesets/SnowSky/SnowSky.pal"
+
+//SnowFields
+ALIGN 4
+SnowFieldsObjects:
+#incbin "Tilesets/SnowFields/SnowFieldsObjects.lz77"
+
+ALIGN 4
+SnowFieldsConfig:
+#incext compress "Tilesets/SnowFields/SnowFieldsConfig.mapchip"
+
+ALIGN 4
+SnowFieldsPalette:
+#incbin "Tilesets/SnowFields/SnowFieldsObjects.pal"
+
+//SnowVillage
+ALIGN 4
+SnowVillageObjects:
+#incbin "Tilesets/ImprovedVillage/VillageSnowObjects.lz77"
+
+ALIGN 4
+SnowVillageConfig:
+#incext compress "Tilesets/ImprovedVillage/ImprovedVillageConfig.mapchip"
+
+ALIGN 4
+SnowVillagePalette:
+#incbin "Tilesets/ImprovedVillage/VillageSnowObjects.pal"
+
+ALIGN 4
+SnowPeaksObjects:
+#incbin "Tilesets/SnowPeaks/SnowPeaksObjects.lz77"
+
+ALIGN 4
+SnowPeaksConfig:
+#incext compress "Tilesets/SnowPeaks/SnowPeaksConfig.mapchip"
+
+ALIGN 4
+SnowPeaksPalette:
+#incbin "Tilesets/SnowPeaks/SnowPeaksObjects.pal"
+
+
+#define SnowSkyObjectID 0x50
+#define SnowSkyPaletteID 0x51
+#define SnowSkyConfigID 0x52
+
+#define SnowFieldsObjectID 0x42
+#define SnowFieldsPaletteID 0x43
+#define SnowFieldsConfigID 0x44
+
+#define SnowFieldsAnim2ID 0x54
+#define SnowFieldsAnimationID 0xE6
+
+#define SnowVillageObjectID 0x8B
+#define SnowVillagePaletteID 0x8C
+#define SnowVillageConfigID 0x8D
+
+#define VillageAnimationID 0x12
+
+#define SnowPeaksObjectID 0x8E
+#define SnowPeaksPaletteID 0x8F
+#define SnowPeaksConfigID 0x90
+
+EventPointerTable(SnowFieldsAnimationID, SnowFieldsAnimationLabel)
+
+EventPointerTable(SnowSkyObjectID, SnowSkyObjects)
+EventPointerTable(SnowSkyPaletteID, SnowSkyPalette)
+EventPointerTable(SnowSkyConfigID, SnowSkyConfig)
+
+EventPointerTable(SnowFieldsObjectID, SnowFieldsObjects)
+EventPointerTable(SnowFieldsPaletteID, SnowFieldsPalette)
+EventPointerTable(SnowFieldsConfigID, SnowFieldsConfig)
+
+EventPointerTable(SnowFieldsAnim2ID, SnowFieldsAnimation2)
+
+EventPointerTable(SnowVillageObjectID, SnowVillageObjects)
+EventPointerTable(SnowVillagePaletteID, SnowVillagePalette)
+EventPointerTable(SnowVillageConfigID, SnowVillageConfig)
+
+EventPointerTable(VillageAnimationID, VillageAnimationLabel)
+
+EventPointerTable(SnowPeaksObjectID, SnowPeaksObjects)
+EventPointerTable(SnowPeaksPaletteID, SnowPeaksPalette)
+EventPointerTable(SnowPeaksConfigID, SnowPeaksConfig)

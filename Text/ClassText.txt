@@ -1,0 +1,268 @@
+## DukeName
+Duke[X]
+
+## ArchDukeName
+ArchDuke[X]
+
+## LordName
+Lord[X]
+
+## GreatLordName
+Great Lord[X]
+
+## CavalierName
+Cavalier[X]
+
+## PaladinName
+Paladin[X]
+
+## TroubadourName
+Troubadour[X]
+
+## ValkyrieName
+Valkyrie[X]
+
+## HeavyCavalierName
+Heavy Cav.[X]
+
+## GreatKnightName
+Great Knight[X]
+
+## BowKnightName
+Bow Knight[X]
+
+## ArchKnightName
+Arch Knight[X]
+
+## SoldierName
+Soldier[X]
+
+## DragoonName
+Dragoon[X]
+
+## MyrmidonName
+Myrmidon[X]
+
+## SwordmasterName
+Swordmaster[X]
+
+## MercenaryName
+Mercenary[X]
+
+## HeroName
+Hero[X]
+
+## FighterName
+Fighter[X]
+
+## WarriorName
+Warrior[X]
+
+## ArcherName
+Archer[X]
+
+## SniperName
+Sniper[X]
+
+## ArmorKnightName
+Armor Knight[X]
+
+## GeneralName
+General[X]
+
+## ThiefName
+Thief[X]
+
+## RogueName
+Rogue[X]
+
+## PegasusKnightName
+Peg. Knight[X]
+
+## FalcoKnightName
+Falcoknight[X]
+
+## DracoKnightName
+Dracoknight[X]
+
+## DracoMasterName
+Dracomaster[X]
+
+## BrigandName
+Brigand[X]
+
+## PirateName
+Pirate[X]
+
+## BerserkerName
+Berserker[X]
+
+## DeserterName
+Deserter[X]
+
+## MageName
+Mage[X]
+
+## SageName
+Sage[X]
+
+## AcolyteName
+Acolyte[X]
+
+## BishopName
+Bishop[X]
+
+## ShamanName
+Shaman[X]
+
+## DruidName
+Druid[X]
+
+## PriestName
+priest[X]
+
+## ClericName
+Cleric[X]
+
+
+## DukeDesc
+Leaders of the grand council[NL]
+with great talent in lancing.[X]
+
+## ArchDukeDesc
+ArchDukeDesc[X]
+
+## LordDesc
+Heirs to a ruling house who[NL]
+are skilled in fencing.[X]
+
+## GreatLordDesc
+Great LordDesc[X]
+
+## CavalierDesc
+Mounted knights with high mobility[NL]
+and good allaround combat ability.[X]
+
+## PaladinDesc
+PaladinDesc[X]
+
+## TroubadourDesc
+Battle maidens skilled in[NL]
+magic staves and swords.[X]
+
+## ValkyrieDesc
+ValkyrieDesc[X]
+
+## HeavyCavalierDesc
+Mounted knights who are tougher but[NL]
+slower than their counterparts.[X]
+
+## GreatKnightDesc
+Great KnightDesc[X]
+
+## BowKnightDesc
+Knights who use bows from horseback.[X]
+
+## ArchKnightDesc
+Arch KnightDesc[X]
+
+## SoldierDesc
+Foot soldiers armed with[NL]
+basic lancing equipment.[X]
+
+## DragoonDesc
+Masterful lancers who [NL]
+can pierce any armor.[X]
+
+## MyrmidonDesc
+Quick swordsmen[X]
+
+## SwordmasterDesc
+Lighting fast swordsmen who cut down[NL]
+their enemies before they can blink.[X]
+
+## MercenaryDesc
+Experienced sellswords who time[NL]
+and again earn their pay.[X]
+
+## HeroDesc
+HeroDesc[X]
+
+## FighterDesc
+FighterDesc[X]
+
+## WarriorDesc
+WarriorDesc[X]
+
+## ArcherDesc
+ArcherDesc[X]
+
+## SniperDesc
+Expert marksmen who never[NL]
+miss their mark.[X]
+
+## ArmorKnightDesc
+Slow but bulky soldiers skilled in[NL]
+swords and lances. Weak against magic.[X]
+
+## GeneralDesc
+Masters of warfare clad in near[NL]
+impenetrable armor.[X]
+
+## ThiefDesc
+ThiefDesc[X]
+
+## RogueDesc
+RogueDesc[X]
+
+## PegasusKnightDesc
+Swift airborne knights with strong[NL]
+resistances to magic.[X]
+
+## FalcoKnightDesc
+Masters of the skies who[NL]
+fear no magical attack.[X]
+
+## DracoKnightDesc
+Tough airborne knights who's only[NL]
+weaknesses are bows and magic.[X]
+
+## DracoMasterDesc
+Terrors of the skies known[NL]
+for constant rampages.[X]
+
+## BrigandDesc
+BrigandDesc[X]
+
+## PirateDesc
+PirateDesc[X]
+
+## BerserkerDesc
+BerserkerDesc[X]
+
+## DeserterDesc
+DeserterDesc[X]
+
+## MageDesc
+MageDesc[X]
+
+## SageDesc
+SageDesc[X]
+
+## AcolyteDesc
+AcolyteDesc[X]
+
+## BishopDesc
+BishopDesc[X]
+
+## ShamanDesc
+ShamanDesc[X]
+
+## DruidDesc
+DruidDesc[X]
+
+## PriestDesc
+PriestDesc[X]
+
+## ClericDesc
+ClericDesc[X]

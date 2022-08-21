@@ -1,0 +1,208 @@
+//Duke map sprites
+ALIGN 4
+DukeStanding:
+#incbin "dmp/DukeStanding.mpsprite"
+
+ALIGN 4
+DukeMoving:
+#incbin "dmp/DukeMoving.mpsprite"
+
+//Bow Knight (M) map sprites
+ALIGN 4
+BowKnightStanding:
+#incbin "dmp/BowKnightStanding.mpsprite"
+
+ALIGN 4
+BowKnightMoving:
+#incbin "dmp/BowKnightMoving.mpsprite"
+
+
+//Bow Knight (F) map sprites
+ALIGN 4
+BowKnightFStanding:
+#incbin "dmp/BowKnightFStanding.mpsprite"
+
+ALIGN 4
+BowKnightFMoving:
+#incbin "dmp/BowKnightFMoving.mpsprite"
+
+
+//PaladinF
+ALIGN 4
+PaladinFStanding:
+#incbin "dmp/PaladinFStanding.mpsprite"
+
+ALIGN 4
+PaladinFMoving:
+#incbin "dmp/PaladinFMoving.mpsprite"
+
+
+//Heavy Cavalier
+ALIGN 4
+HeavyCavalierStanding:
+#incbin "dmp/HeavyCavalierStanding.mpsprite"
+
+ALIGN 4
+HeavyCavalierMoving:
+#incbin "dmp/HeavyCavalierMoving.mpsprite"
+
+
+//Storm Mage
+ALIGN 4
+MageStanding:
+#incbin "dmp/MageStanding.mpsprite"
+
+ALIGN 4
+MageMoving:
+#incbin "dmp/MageMoving.mpsprite"
+
+ALIGN 4
+MageFStanding:
+#incbin "dmp/MageFStanding.mpsprite"
+
+
+//Tundra Mage
+ALIGN 4
+AcolyteFStanding:
+#incbin "dmp/AcolyteFStanding.mpsprite"
+
+ALIGN 4
+AcolyteFMoving:
+#incbin "dmp/AcolyteFMoving.mpsprite"
+
+
+//Dragon Knight (M) map sprites
+ALIGN 4
+DracoKnightStanding:
+#incbin "dmp/WyvernRiderStanding.mpsprite"
+
+ALIGN 4
+DracoKnightMoving:
+#incbin "dmp/WyvernRiderMoving.mpsprite"
+
+
+//Dragon Knight (F) map sprites
+ALIGN 4
+DracoKnightFStanding:
+#incbin "dmp/WyvernRiderFStanding.mpsprite"
+
+ALIGN 4
+DracoKnightFMoving:
+#incbin "dmp/WyvernRiderFMoving.mpsprite"
+
+
+//Dragon Master (M) map sprites
+ALIGN 4
+DracoMasterStanding:
+#incbin "dmp/WyvernKnightStanding.mpsprite"
+
+ALIGN 4
+DracoMasterMoving:
+#incbin "dmp/WyvernKnightMoving.mpsprite"
+
+
+//Dragon Master (F) map sprites
+ALIGN 4
+DracoMasterFStanding:
+#incbin "dmp/WyvernKnightFStanding.mpsprite"
+
+ALIGN 4
+DracoMasterFMoving:
+#incbin "dmp/WyvernKnightFMoving.mpsprite"
+
+
+//Sword Armor map sprites
+ALIGN 4
+SwordArmorStanding:
+#incbin "dmp/SwordArmorStanding.mpsprite"
+
+ALIGN 4
+SwordArmorMoving:
+#incbin "dmp/SwordArmorMoving.mpsprite"
+
+
+//Lance Armor map sprites
+ALIGN 4
+LanceArmorStanding:
+#incbin "dmp/LanceArmorStanding.mpsprite"
+
+ALIGN 4
+LanceArmorMoving:
+#incbin "dmp/LanceArmorMoving.mpsprite"
+
+
+//Axe Armor map sprites
+ALIGN 4
+AxeArmorStanding:
+#incbin "dmp/AxeArmorStanding.mpsprite"
+
+ALIGN 4
+AxeArmorMoving:
+#incbin "dmp/AxeArmorMoving.mpsprite"
+
+
+//Deserter map sprites
+ALIGN 4
+DeserterStanding:
+#incbin "dmp/DeserterStanding.mpsprite"
+
+ALIGN 4
+DeserterMoving:
+#incbin "dmp/DeserterMoving.mpsprite"
+
+
+//Fighter map sprites
+ALIGN 4
+FighterStanding:
+#incbin "dmp/FighterStanding.mpsprite"
+
+ALIGN 4
+FighterMoving:
+#incbin "dmp/FighterMoving.mpsprite"
+
+
+//Shaman (F) map sprites
+ALIGN 4
+ShamanFStanding:
+#incbin "dmp/ShamanFStanding.mpsprite"
+
+ALIGN 4
+ShamanFMoving:
+#incbin "dmp/ShamanFMoving.mpsprite"
+
+
+ALIGN 4
+DruidFStanding:
+#incbin "dmp/DruidFStanding.mpsprite"
+
+ALIGN 4
+DruidFMoving:
+#incbin "dmp/DruidFMoving.mpsprite"
+
+
+ALIGN 4
+DragoonStanding:
+#incbin "dmp/DragoonStanding.mpsprite"
+
+ALIGN 4
+DragoonMoving:
+#incbin "dmp/DragoonMoving.mpsprite"
+
+//Wagon map sprites
+ALIGN 4
+WagonStanding:
+#incbin "dmp/WagonStanding.mpsprite"
+
+ALIGN 4
+WagonMoving:
+#incbin "dmp/WagonMoving.mpsprite"
+
+
+//Torch map sprites
+ALIGN 4
+TorchStanding:
+#incbin "dmp/TorchStanding.mpsprite"
+
+ALIGN 4
+TorchMoving:
+#incbin "dmp/TorchMoving.mpsprite"

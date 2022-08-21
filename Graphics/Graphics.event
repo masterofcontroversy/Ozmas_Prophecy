@@ -1,0 +1,12 @@
+#include "Portraits/_PortraitInstaller.event"
+#include "MapSprites/_SpriteInstaller.event"
+#include "ItemIcons/IconInstaller.event"
+
+#include "SpellAnimations/MasterSpellAnimationInstaller.event"
+
+#include "BattlePlatforms/BattlePlatformInstaller.event"
+#include "UserInterface/UserInterface.event"
+
+#include "Palettes/PaletteInstaller.event"
+#include "CustomAnimations/AnimationInstaller.event"
+#include "CustomAnimations/AnimationPointers.event"

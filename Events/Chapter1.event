@@ -1,0 +1,100 @@
+EventPointerTable(0x07,ThisChapter)
+
+ALIGN 4
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventEnemy(0, MageAttack, 2)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+DefeatAll(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+
+WEATHER 0x7
+
+LOAD1 0 PlayerUnits
+
+ENUN
+
+LOAD1 0 EnemyUnits
+
+NoFade
+ENDA
+
+EndingScene:
+MNC2 0x1
+ENDA
+
+PlayerUnits:
+UNIT Devan Duke Devan Level(1,Player,0) [13,5] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary, RoundShield] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [14,4] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary, Clover] NoAI
+UNIT Anthony Mercenary Devan Level(1,Player,0) [13,4] 0x0 0x0 0x0 0x1 [IronSword, IronBlade, Vulnerary, Sash] NoAI
+UNIT Kenneth Cavalier Devan Level(1,Player,0) [14,3] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary, KiteShield] NoAI
+
+UNIT //Tells the game that the unit list has ended
+
+EnemyUnits:
+UNIT ONeill Dragoon 0x0 Level(3,Enemy,0) [3,12] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
+
+UNIT 0x80 PegasusKnight 0x0 Level(1,Enemy,1) [0,1] 0x0 0x0 0x0 0x1 [SteelSword] MoveIn2TurnsAI
+UNIT 0x80 PegasusKnight 0x0 Level(1,Enemy,1) [1,0] 0x0 0x0 0x0 0x1 [SteelSword] MoveIn2TurnsAI
+UNIT 0x80 Mercenary 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT 0x80 Soldier 0x0 Level(1,Enemy,1) [11,8] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 Fighter 0x0 Level(1,Enemy,1) [14,12] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT 0x80 Mage 0x0 Level(1,Enemy,1) [4,11] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
+UNIT 0x80 HeavyCavalier 0x0 Level(1,Enemy,1) [2,8] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+UNIT 0x80 Mercenary 0x0 Level(1,Enemy,1) [5,13] 0x0 0x0 0x0 0x1 [IronSword] GroupOneAI
+UNIT 0x80 Cavalier 0x0 Level(1,Enemy,1) [10,14] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT 0x80 Myrmidon 0x0 Level(1,Enemy,1) [7,9] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+//UNIT 0x80 BowKnight 0x0 Level(1,Enemy,1) [4,7] 0x0 0x0 0x0 0x1 [IronBow] AttackInRangeAI
+
+UNIT
+
+MageAttack:
+SVAL s1 0x00000000
+CHAI [0,1]
+CHAI [1,0]
+CHAI [4,11]
+NoFade
+ENDA

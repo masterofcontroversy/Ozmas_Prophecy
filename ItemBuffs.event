@@ -1,0 +1,25 @@
+//StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)
+
+ALIGN 4
+RoundShieldBonus:
+StatBonus(0,0,0,0,(-1),2,0,0,0,0)
+
+ALIGN 4
+KiteShieldBonus:
+StatBonus(0,0,0,0,(-2),4,0,0,0,0)
+
+ALIGN 4
+GreatshieldBonus:
+StatBonus(0,0,0,0,(-4),6,0,0,0,0)
+
+ALIGN 4
+SashBonus:
+StatBonus(0,2,0,0,0,(-2),0,0,0,0)
+
+ALIGN 4
+MagicShieldBonus:
+StatBonus(0,0,0,0,0,(-3),3,0,0,0)
+
+ALIGN 4
+CloverBonus:
+StatBonus(0,0,0,0,0,0,0,10,0,0)

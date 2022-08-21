@@ -1,0 +1,96 @@
+#ifndef IconTable
+    #define IconTable $5926F4
+#endif
+#ifndef SetIcon
+    #define SetIcon(ID) "ORG IconTable + ID * 128"
+#endif
+
+PUSH
+ORG IconTable
+
+SetIcon(IronSwordIcon)
+#incbin "Images/Swords/IronSword.4bpp"
+SetIcon(SteelSwordIcon)
+#incbin "Images/Swords/SteelSword.4bpp"
+SetIcon(SilverSwordIcon)
+#incbin "Images/Swords/SilverSword.4bpp"
+SetIcon(KillingEdgeIcon)
+#incbin "Images/Swords/KillingEdge.4bpp"
+SetIcon(BraveSwordIcon)
+#incbin "Images/Swords/BraveSword.4bpp"
+SetIcon(IronBladeIcon)
+#incbin "Images/Swords/IronBlade.4bpp"
+SetIcon(SteelBladeIcon)
+#incbin "Images/Swords/SteelBlade.4bpp"
+SetIcon(SilverBladeIcon)
+#incbin "Images/Swords/SilverBlade.4bpp"
+SetIcon(LongswordIcon)
+#incbin "Images/Swords/Longsword.4bpp"
+SetIcon(ArmorslayerIcon)
+#incbin "Images/Swords/Armorslayer.4bpp"
+SetIcon(LancereaverIcon)
+//#incbin "Images/Swords/lanceraver.4bpp"
+SetIcon(RapierIcon)
+#incbin "Images/Swords/Rapier.4bpp"
+
+
+SetIcon(IronLanceIcon)
+#incbin "Images/Lances/IronLance.4bpp"
+SetIcon(SteelLanceIcon)
+#incbin "Images/Lances/SteelLance.4bpp"
+SetIcon(SilverLanceIcon)
+#incbin "Images/Lances/SilverLance.4bpp"
+SetIcon(KillerLanceIcon)
+#incbin "Images/Lances/KillerLance.4bpp"
+SetIcon(BraveLanceIcon)
+#incbin "Images/Lances/BraveLance.4bpp"
+SetIcon(JavelinIcon)
+#incbin "Images/Lances/Javelin.4bpp"
+SetIcon(SpearIcon)
+#incbin "Images/Lances/Spear.4bpp"
+SetIcon(GreatlanceIcon)
+#incbin "Images/Lances/Greatlance.4bpp"
+SetIcon(KnightGreatlanceIcon)
+#incbin "Images/Lances/KnightGreatlance.4bpp"
+SetIcon(AxereaverIcon)
+#incbin "Images/Lances/Axereaver.4bpp"
+SetIcon(DragonSpear)
+#incbin "Images/Lances/DragonSpear.4bpp"
+
+SetIcon(IronAxeIcon)
+#incbin "Images/Axes/IronAxe.4bpp"
+SetIcon(SteelAxeIcon)
+#incbin "Images/Axes/SteelAxe.4bpp"
+SetIcon(SilverAxeIcon)
+#incbin "Images/Axes/SilverAxe.4bpp"
+SetIcon(KillerAxeIcon)
+#incbin "Images/Axes/KillerAxe.4bpp"
+SetIcon(BraveAxeIcon)
+#incbin "Images/Axes/BraveAxe.4bpp"
+SetIcon(HandaxeIcon)
+#incbin "Images/Axes/Handaxe.4bpp"
+SetIcon(TomahawkIcon)
+#incbin "Images/Axes/Tomahawk.4bpp"
+SetIcon(HalberdIcon)
+#incbin "Images/Axes/Halberd.4bpp"
+SetIcon(HammerIcon)
+#incbin "Images/Axes/Hammer.4bpp"
+
+SetIcon(IronBowIcon)
+#incbin "Images/Bows/IronBow.4bpp"
+SetIcon(SteelBowIcon)
+#incbin "Images/Bows/SteelBow.4bpp"
+SetIcon(SilverBowIcon)
+#incbin "Images/Bows/SilverBow.4bpp"
+SetIcon(KillerBowIcon)
+#incbin "Images/Bows/KillerBow.4bpp"
+SetIcon(BraveBowIcon)
+#incbin "Images/Bows/BraveBow.4bpp"
+SetIcon(LongbowIcon)
+#incbin "Images/Bows/Longbow.4bpp"
+SetIcon(GreatbowIcon)
+#incbin "Images/Bows/Greatbow.4bpp"
+SetIcon(HuntingBowIcon)
+#incbin "Images/Bows/HuntingBow.4bpp"
+
+POP

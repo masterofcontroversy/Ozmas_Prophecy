@@ -1,0 +1,284 @@
+#ifndef tilesetAnimation
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
+#ifndef AnimType2Installer
+    #define AnimType2Installer(PaletteData,Interval,DataSize,PaletteNo) "POIN PaletteData; BYTE Interval DataSize PaletteNo 0x0"
+#endif
+
+//SnowFields animations
+ALIGN 4
+SnowAnimation0:
+#incbin "SnowFields/Frame_000.4bpp"
+ALIGN 4
+SnowAnimation1:
+#incbin "SnowFields/Frame_001.4bpp"
+ALIGN 4
+SnowAnimation2:
+#incbin "SnowFields/Frame_002.4bpp"
+ALIGN 4
+SnowAnimation3:
+#incbin "SnowFields/Frame_003.4bpp"
+ALIGN 4
+SnowAnimation4:
+#incbin "SnowFields/Frame_004.4bpp"
+ALIGN 4
+SnowAnimation5:
+#incbin "SnowFields/Frame_005.4bpp"
+ALIGN 4
+SnowAnimation6:
+#incbin "SnowFields/Frame_006.4bpp"
+ALIGN 4
+SnowAnimation7:
+#incbin "SnowFields/Frame_007.4bpp"
+ALIGN 4
+SnowAnimation8:
+#incbin "SnowFields/Frame_008.4bpp"
+ALIGN 4
+SnowAnimation9:
+#incbin "SnowFields/Frame_009.4bpp"
+ALIGN 4
+SnowAnimation10:
+#incbin "SnowFields/Frame_010.4bpp"
+ALIGN 4
+SnowAnimation11:
+#incbin "SnowFields/Frame_011.4bpp"
+ALIGN 4
+SnowAnimation12:
+#incbin "SnowFields/Frame_012.4bpp"
+ALIGN 4
+SnowAnimation13:
+#incbin "SnowFields/Frame_013.4bpp"
+ALIGN 4
+SnowAnimation14:
+#incbin "SnowFields/Frame_014.4bpp"
+ALIGN 4
+SnowAnimation15:
+#incbin "SnowFields/Frame_015.4bpp"
+
+
+//Snow Peaks
+ALIGN 4
+SnowPeaksAnimation0:
+#incbin "SnowPeaks/Frame_000.4bpp"
+ALIGN 4
+SnowPeaksAnimation1:
+#incbin "SnowPeaks/Frame_001.4bpp"
+ALIGN 4
+SnowPeaksAnimation2:
+#incbin "SnowPeaks/Frame_002.4bpp"
+ALIGN 4
+SnowPeaksAnimation3:
+#incbin "SnowPeaks/Frame_003.4bpp"
+ALIGN 4
+SnowPeaksAnimation4:
+#incbin "SnowPeaks/Frame_004.4bpp"
+ALIGN 4
+SnowPeaksAnimation5:
+#incbin "SnowPeaks/Frame_005.4bpp"
+ALIGN 4
+SnowPeaksAnimation6:
+#incbin "SnowPeaks/Frame_006.4bpp"
+ALIGN 4
+SnowPeaksAnimation7:
+#incbin "SnowPeaks/Frame_007.4bpp"
+ALIGN 4
+SnowPeaksAnimation8:
+#incbin "SnowPeaks/Frame_008.4bpp"
+ALIGN 4
+SnowPeaksAnimation9:
+#incbin "SnowPeaks/Frame_009.4bpp"
+ALIGN 4
+SnowPeaksAnimation10:
+#incbin "SnowPeaks/Frame_010.4bpp"
+ALIGN 4
+SnowPeaksAnimation11:
+#incbin "SnowPeaks/Frame_011.4bpp"
+ALIGN 4
+SnowPeaksAnimation12:
+#incbin "SnowPeaks/Frame_012.4bpp"
+ALIGN 4
+SnowPeaksAnimation13:
+#incbin "SnowPeaks/Frame_013.4bpp"
+ALIGN 4
+SnowPeaksAnimation14:
+#incbin "SnowPeaks/Frame_014.4bpp"
+ALIGN 4
+SnowPeaksAnimation15:
+#incbin "SnowPeaks/Frame_015.4bpp"
+
+//Improved Village animations
+ALIGN 4
+VillageAnimation0:
+#incbin "ImprovedVillage/Frame_000.4bpp"
+ALIGN 4
+VillageAnimation1:
+#incbin "ImprovedVillage/Frame_001.4bpp"
+ALIGN 4
+VillageAnimation2:
+#incbin "ImprovedVillage/Frame_002.4bpp"
+ALIGN 4
+VillageAnimation3:
+#incbin "ImprovedVillage/Frame_003.4bpp"
+ALIGN 4
+VillageAnimation4:
+#incbin "ImprovedVillage/Frame_004.4bpp"
+ALIGN 4
+VillageAnimation5:
+#incbin "ImprovedVillage/Frame_005.4bpp"
+ALIGN 4
+VillageAnimation6:
+#incbin "ImprovedVillage/Frame_006.4bpp"
+ALIGN 4
+VillageAnimation7:
+#incbin "ImprovedVillage/Frame_007.4bpp"
+
+//Improved Castle animations
+ALIGN 4
+CastleAnimation0:
+#incbin "ImprovedCastle/Frame_000.4bpp"
+CastleAnimation1:
+#incbin "ImprovedCastle/Frame_001.4bpp"
+CastleAnimation2:
+#incbin "ImprovedCastle/Frame_002.4bpp"
+CastleAnimation3:
+#incbin "ImprovedCastle/Frame_003.4bpp"
+CastleAnimation4:
+#incbin "ImprovedCastle/Frame_004.4bpp"
+CastleAnimation5:
+#incbin "ImprovedCastle/Frame_005.4bpp"
+CastleAnimation6:
+#incbin "ImprovedCastle/Frame_006.4bpp"
+CastleAnimation7:
+#incbin "ImprovedCastle/Frame_007.4bpp"
+
+//Bringing them together
+
+ALIGN 4
+SnowFieldsAnimationLabel:
+tilesetAnimation(0x1C,0x1000,SnowAnimation0)
+tilesetAnimation(0x1C,0x1000,SnowAnimation1)
+tilesetAnimation(0x1C,0x1000,SnowAnimation2)
+tilesetAnimation(0x1C,0x1000,SnowAnimation3)
+tilesetAnimation(0x1C,0x1000,SnowAnimation4)
+tilesetAnimation(0x1C,0x1000,SnowAnimation5)
+tilesetAnimation(0x1C,0x1000,SnowAnimation6)
+tilesetAnimation(0x1C,0x1000,SnowAnimation7)
+tilesetAnimation(0x1C,0x1000,SnowAnimation8)
+tilesetAnimation(0x1C,0x1000,SnowAnimation9)
+tilesetAnimation(0x1C,0x1000,SnowAnimation10)
+tilesetAnimation(0x1C,0x1000,SnowAnimation11)
+tilesetAnimation(0x1C,0x1000,SnowAnimation12)
+tilesetAnimation(0x1C,0x1000,SnowAnimation13)
+tilesetAnimation(0x1C,0x1000,SnowAnimation14)
+tilesetAnimation(0x1C,0x1000,SnowAnimation15)
+WORD 0 0
+
+ALIGN 4
+SnowPeaksAnimationLabel:
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation0)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation1)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation2)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation3)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation4)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation5)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation6)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation7)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation8)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation9)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation10)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation11)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation12)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation13)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation14)
+tilesetAnimation(0x1C,0x1000,SnowPeaksAnimation15)
+WORD 0 0
+
+//Improved Village animation
+ALIGN 4
+VillageAnimationLabel:
+tilesetAnimation(0x1C,0x1000,VillageAnimation0)
+tilesetAnimation(0x1C,0x1000,VillageAnimation1)
+tilesetAnimation(0x1C,0x1000,VillageAnimation2)
+tilesetAnimation(0x1C,0x1000,VillageAnimation3)
+tilesetAnimation(0x1C,0x1000,VillageAnimation4)
+tilesetAnimation(0x1C,0x1000,VillageAnimation5)
+tilesetAnimation(0x1C,0x1000,VillageAnimation6)
+tilesetAnimation(0x1C,0x1000,VillageAnimation7)
+WORD 0 0
+
+//Improved Castle animations
+ALIGN 4
+CastleAnimationLabel:
+tilesetAnimation(0x1C,0x200,CastleAnimation0)
+tilesetAnimation(0x1C,0x200,CastleAnimation1)
+tilesetAnimation(0x1C,0x200,CastleAnimation2)
+tilesetAnimation(0x1C,0x200,CastleAnimation3)
+tilesetAnimation(0x1C,0x200,CastleAnimation4)
+tilesetAnimation(0x1C,0x200,CastleAnimation5)
+tilesetAnimation(0x1C,0x200,CastleAnimation6)
+tilesetAnimation(0x1C,0x200,CastleAnimation7)
+WORD 0 0
+
+
+//Anim2
+ALIGN 4
+SnowFieldsAnim2_0:
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+
+SnowFieldsAnim2_1:
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+
+SnowFieldsAnim2_2:
+PaletteShort(200,240,224)
+PaletteShort(232,248,248)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+
+SnowFieldsAnim2_3:
+PaletteShort(200,240,224)
+PaletteShort(232,248,248)
+PaletteShort(248,248,248)
+PaletteShort(200,240,224)
+
+SnowFieldsAnim2_4:
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(232,248,248)
+PaletteShort(248,248,248)
+
+SnowFieldsAnim2_5:
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(232,248,248)
+
+SnowFieldsAnim2_6:
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(216,248,240)
+
+SnowFieldsAnim2_7:
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(200,240,224)
+PaletteShort(208,240,232)
+
+
+ALIGN 4
+SnowFieldsAnimation2:
+AnimType2Installer(SnowFieldsAnim2_0, 61, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_1, 61, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_2, 3, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_3, 4, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_4, 5, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_5, 4, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_6, 3, 4, 60)
+AnimType2Installer(SnowFieldsAnim2_7, 2, 4, 60)
+WORD 0 0

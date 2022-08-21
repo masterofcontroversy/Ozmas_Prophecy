@@ -1,0 +1,47 @@
+//Movement sounds definitions
+#define HorseWalk    $8078FC4
+#define HeavyWalk    $8078FD4
+#define NormalWalk   $8078FEC
+#define PegasusWalk  $8078DB8
+#define ManaketeWalk $8078FE4
+
+//Vanilla FE8 AP definitions
+#define NormalAP        $81C3D7C
+#define GeneralAP       $81C8A80
+#define RangerAP        $81CA124
+#define ArcherAP        $81D0A7C
+#define M_SageAP        $81D1D48
+#define SwordmasterAP   $81CE4FC
+#define HeroAP          $81CBD94
+#define FemaleSniperAP  $81D2714
+#define WyvernRiderAP   $81D403C
+#define WyvernLordAP    $81D5E58
+#define WyvernKnightAP  $81D7CC8
+#define MageAP          $81D8668
+#define F_SageAP        $81D8668
+#define GreatLordAP     $81C52B4
+#define JourneymanAP    $81E173C
+#define DancerAP        $81ED1C8
+#define BardAP          $81E8840
+#define CyclopsAP       $81F49B8
+#define DemonKingAP     $81FD028
+
+//Vanilla terrain bonus tables
+#define TerrainAvoBonus  $80c479
+#define TerrainDefBonus  $80c4ba
+#define TerrainResBonus  $80c4fb
+#define FlierDefBonus    $80c53c
+#define FlierAvoBonus    $80c57d
+#define FlierResBonus    $80c5be
+
+//Vanilla movement tables
+#define FootMovCost      $80b808
+#define ArmorMovCost     $80b88a
+#define CavMovCost       $80ba92
+#define PaladinMovCost   $80bad3
+#define FighterMovCost   $80b8cb
+#define BrigandMovCost   $80b94d
+#define PirateMovCost    $80b98e
+#define BerserkerMovCost $80b90c
+#define MageMovCost      $80ba10
+#define FlierMovCost     $80bb96

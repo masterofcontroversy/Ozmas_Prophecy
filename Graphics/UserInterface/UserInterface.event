@@ -1,0 +1,12 @@
+ALIGN 4
+MenuTiles:
+#incbin "MenuTiles.lz77"
+
+PUSH
+ORG 0x5B6470
+// For each color style
+POIN MenuTiles
+POIN MenuTiles
+POIN MenuTiles
+POIN MenuTiles
+POP

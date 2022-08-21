@@ -1,0 +1,248 @@
+## IronSwordName
+Iron Sword[X]
+
+## SteelSwordName
+Steel Sword[X]
+
+## SilverSwordName
+Silver Sword[X]
+
+## BraveSwordName
+Brave Sword[X]
+
+## KillingEdgeName
+Killing Edge[X]
+
+## IronBladeName
+Iron Blade[X]
+
+## SteelBladeName
+Steel Blade[X]
+
+## SilverBladeName
+Silver Blade[X]
+
+## LongswordName
+Longsword[X]
+
+## ArmorSlayerName
+Armor Slayer[X]
+
+## RapierName
+Rapier[X]
+
+## IronLanceName
+Iron Lance[X]
+
+## SteelLanceName
+Steel Lance[X]
+
+## SilverLanceName
+Silver Lance[X]
+
+## BraveLanceName
+Brave Lance[X]
+
+## KillerLanceName
+Killer Lance[X]
+
+## JavelinName
+Javelin[X]
+
+## SpearName
+Spear[X]
+
+## IronAxeName
+Iron Axe[X]
+
+## SteelAxeName
+Steel Axe[X]
+
+## SilverAxeName
+Silver Axe[X]
+
+## BraveAxeName
+Brave Axe[X]
+
+## KillerAxeName
+Killer Axe[X]
+
+## HandAxeName
+Handaxe[X]
+
+## TomahawkName
+Tomahawk[X]
+
+## HammerName
+Hammer[X]
+
+## HalberdName
+Halberd[X]
+
+## IronBowName
+Iron Bow[X]
+
+## SteelBowName
+Steel Bow[X]
+
+## SilverBowName
+Silver Bow[X]
+
+## BraveBowName
+Brave Bow[X]
+
+## KillerBowName
+Killer Bow[X]
+
+## LongBowName
+Longbow[X]
+
+## GreatBowName
+Greatbow[X]
+
+## HuntingBowName
+Hunting Bow[X]
+
+## AirShotName
+Air Shot[X]
+
+## FarFrostName
+Far Frost[X]
+
+## ShaverName
+Shaver[X]
+
+## BlueBoltName
+Blue Bolt[X]
+
+## FrostbiteName
+Frostbite[X]
+
+## RazeName
+Raze[X]
+
+## QuakeName
+Quake[X]
+
+## ResireName
+Resire[X]
+
+## DivineName
+Divine Protection[X]
+
+## LightJavelinName
+Light Javelin[X]
+
+## PrismName
+Prism[X]
+
+## ShadeName
+Shade[X]
+
+## VoidName
+Void[X]
+
+## BlackHoleName
+Black Hole[X]
+
+## HealName
+Heal[X]
+
+## MendName
+Mend[X]
+
+## RecoverName
+Recover[X]
+
+## PhysicName
+Physic[X]
+
+## FortifyName
+Fortify[X]
+
+## RestoreName
+Restore[X]
+
+## SilenceName
+Silence[X]
+
+## SleepName
+Sleep[X]
+
+## BerserkName
+Berserk[X]
+
+## WarpName
+Warp[X]
+
+## RescueName
+Rescue[X]
+
+## TorchName
+Torch[X]
+
+## HammerneName
+Hammerne[X]
+
+## UnlockName
+Unlock[X]
+
+## BarrierName
+Barrier[X]
+
+## ArmorEffectiveDesc
+Effective against armored units.[X]
+
+## HorseEffectiveDesc
+Effective against calvalry.[X]
+
+## RapierDesc
+Effective against calvary and armors.[X]
+
+## KillerDesc
+Allows for critical hits.[X]
+
+## BraveDesc
+Double attack count.[X]
+
+## RevearDesc
+Reverses and doubles weapon triangle.[X]
+
+## HealDesc
+Recovers a little HP.[X]
+
+## MendDesc
+Recovers a lot of HP.[X]
+
+## RecoverDesc
+Recovers all HP.[X]
+
+## PhysicDesc
+Heals from a distance.[X]
+
+## FortifyDesc
+Heals all allies in range.[X]
+
+## RestoreDesc
+Removes negative status effects.[X]
+
+## RescueDesc
+Moves distant ally to adjacent tile.[X]
+
+## WarpDesc
+Moves adjacent ally to a distant tile.[X]
+
+## HammerneDesc
+Restores a weapon to new condition.[X]
+
+## StormTypeText
+Storm[X]
+
+## TundraTypeText ^
+Tundra[X]
+
+## MagmaTypeText
+Magma[X]
+
+## LightTypeText
+Light[X]

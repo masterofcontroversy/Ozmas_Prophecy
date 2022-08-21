@@ -1,0 +1,129 @@
+INLINE MovementSoundsTable,Footsteps
+None,NormalWalk
+Duke,NormalWalk
+Lord,HorseWalk
+Arch Duke,NormalWalk
+Great Lord,HorseWalk
+Cavalier,HorseWalk
+Cavalier_F,HorseWalk
+Paladin,HorseWalk
+Paladin_F,HeavyWalk
+Armor Knight,HeavyWalk
+Armour Knight (F),HeavyWalk
+General,HeavyWalk
+General (F),HeavyWalk
+Thief,NormalWalk
+Manakete,ManaketeWalk
+Mercenary,NormalWalk
+Mercenary_F,NormalWalk
+Hero,NormalWalk
+Hero_F,NormalWalk
+Myrmidon,NormalWalk
+Myrmidon_F,NormalWalk
+Swordmaster,NormalWalk
+Swordmaster_F,NormalWalk
+Assassin,NormalWalk
+Assassin (F),NormalWalk
+Archer,NormalWalk
+Archer_F,NormalWalk
+Sniper,NormalWalk
+Sniper_F,NormalWalk
+Bow Knight,HorseWalk
+Bow Knight_F,HorseWalk
+Dragon Knight,ManaketeWalk
+Dragon Knight_F,ManaketeWalk
+Dragon Master,ManaketeWalk
+Dragon Master_F,ManaketeWalk
+Wyvern Knight,ManaketeWalk
+Wyvern Knight (F),ManaketeWalk
+Mage,NormalWalk
+Mage_F,NormalWalk
+Sage,NormalWalk
+Sage_F,NormalWalk
+Mage Knight,HorseWalk
+Mage Knight (F),HorseWalk
+Bishop,ManaketeWalk
+Bishop_F,ManaketeWalk
+Shaman,NormalWalk
+Shaman_F,NormalWalk
+Druid,NormalWalk
+Druid_F,NormalWalk
+Summoner,NormalWalk
+Summoner (F),NormalWalk
+Rogue,NormalWalk
+Gorgon Egg,NormalWalk
+Great Knight,HorseWalk
+Great Knight (F),HorseWalk
+Recruit (2),NormalWalk
+Journeyman (3),NormalWalk
+Pupil (3),NormalWalk
+Recruit (3),NormalWalk
+Manakete,NormalWalk
+Manakete (F),NormalWalk
+Journeyman (1),NormalWalk
+Pupil (1),NormalWalk
+Fighter,NormalWalk
+Warrior,NormalWalk
+Brigand,NormalWalk
+Pirate,NormalWalk
+Berserker,NormalWalk
+Acolyte,NormalWalk
+Priest,NormalWalk
+Bard,NormalWalk
+Recruit (1),NormalWalk
+Pegasus Knight,PegasusWalk
+FalcoKnight,PegasusWalk
+Cleric,NormalWalk
+Troubadour,HorseWalk
+Valkyrie,HorseWalk
+Dancer,NormalWalk
+Soldier,NormalWalk
+Necromancer,NormalWalk
+Fleet,NormalWalk
+Angel,PegasusWalk
+Thief_F,NormalWalk
+Rogue_F,NormalWalk
+Arch Knight,HorseWalk
+Arch Knight_F,HorseWalk
+Soldier_F,NormalWalk
+Dragoon,NormalWalk
+Heavy Cavalier,HorseWalk
+Acolyte_F,NormalWalk
+Cyclops,NormalWalk
+Mauthe Doog,NormalWalk
+Gwyllgi,NormalWalk
+Tarvos,NormalWalk
+Maelduin,NormalWalk
+Mogall,NormalWalk
+Arch Mogall,NormalWalk
+Gorgon,NormalWalk
+Gorgon Egg,NormalWalk
+Gargoyle,NormalWalk
+Deathgoyle,NormalWalk
+Dracozombie,NormalWalk
+Demon King,NormalWalk
+Archer on Ballista,NormalWalk
+Archer on Iron Ballista,NormalWalk
+Archer on Killer Ballista,NormalWalk
+Ballista,NormalWalk
+Iron Ballista,NormalWalk
+Killer Ballista,NormalWalk
+Civilian,NormalWalk
+Civilian (F),NormalWalk
+Civilian,NormalWalk
+Civilian (F),NormalWalk
+Civilian,NormalWalk
+Civilian (F),NormalWalk
+Peer,NormalWalk
+Queen,NormalWalk
+Prince,NormalWalk
+Queen,NormalWalk
+(empty),NormalWalk
+Fallen Prince,NormalWalk
+Tent,NormalWalk
+Pontifex,NormalWalk
+Dead Peer,NormalWalk
+Cyclops,NormalWalk
+Elder Bael,NormalWalk
+Journeyman (2),NormalWalk
+Pupil (2),NormalWalk

@@ -1,0 +1,41 @@
+#ifdef _FE8_
+    #include "EAstdlib.event"
+    #include "CustomDefinitions.event"
+
+    ORG FreeSpace
+
+    //Repointed tables
+    #include "repointedTextTable.event"
+
+    //Text first for Text ID definitions
+    #include "Text/InstallTextData.event"
+    MESSAGE Used text space ends at currentOffset
+
+    #include "AnimationTable.event"
+
+    //CSV tables
+    #include "Tables/TableInstaller.event"
+    MESSAGE Used table space ends at currentOffset
+
+    //Item bonuses
+    #include "ItemBuffs.event"
+
+    //Engine Hacks
+    #include "EngineHacks/_MasterHackInstaller.event"
+    MESSAGE Used hax space ends at currentOffset
+
+    //Events
+    #include "Events/_EventInstaller.event" 
+
+    //Graphics
+    #include "Graphics/Graphics.event"
+
+    //Maps
+    #include "Maps/Tilesets/Animations/TileAnimationInstaller.event"
+    #include "Maps/TilesetInstaller.event"
+    #include "Maps/_MapInstaller.event"
+
+    MESSAGE Free Space ends at currentOffset Additions size is (currentOffset - FreeSpace)
+#else
+    ERROR Not building events on FE8 is a pitfall! Try again on a FE8 ROM.
+#endif

@@ -1,0 +1,82 @@
+//Inline hacks
+#include "_InlineHacks.event"
+
+//Skill Systems
+#include "SkillSystem_FE8/EngineHacks/_MasterHackInstaller.event"
+
+//Danger map optimizations
+#include "ASM/DecideOnDangerMap/DecideOnDangerMap.event"
+
+//Send items to convoy on death
+#include "ASM/SendInventoryOnDeath/Installer.event"
+
+//Steal with full inventory
+#include "ASM/StealWithFullInv/Installer.event"
+
+//Res terrain window
+#include "ASM/ResTerrainWindow/Installer.event"
+
+//Modular Minimug Box
+#include "ASM/ModularMinimugBox/Installers/MMBInstallerBpat2.event"
+
+//Icons for enemies with droppable items
+#include "ASM/DisplayDroppableItem/DisplayDroppableItem.event"
+
+//Thing for javelin animations
+#include "ASM/JavelinAnimSubstitution/JavelinAnimSubstitution.event"
+
+//For different spell animations at a distance
+#include "ASM/SpellLoader/Installer.event"
+
+//Modular Goal Window
+#include "C/ModularGoalWindow/MGW.event"
+
+//Terrain Window
+#include "C/TerrainWindow/TerrainWindow.lyn.event"
+
+//ItemHealAmount
+#include "C/ItemHealAmount/ItemHealAmount.lyn.event"
+
+//GroupAI
+#include "ASM/GroupAI/GroupAI.event"
+
+//Thumb1 case thing for switch cases in C
+#include "ASM/__gnu_thumb1_case_uqi/__gnu_thumb1_case_uqi.lyn.event"
+
+//CloudFix
+#include "ASM/RWCloudFix/Cloud_Fix_EA.event"
+
+//Minimug Palette Fix
+#include "ASM/FE8U_MinimugPalette/MinimugPalette.event"
+
+//Conditional nosferatu palette
+#include "ASM/NosResire/NosResire.event"
+
+//Fates exp
+//#include "ASM/FatesExp/Installer.event"
+
+//New Calculations
+#include "ASM/NewCalcs/NewBattleCalcs.lyn.event"
+WORD CritUpID
+
+//Narrowfont
+#include "ASM/NarrowFont/NarrowFontInstaller.event"
+
+//Forced Deployment
+#include "ASM/ToggleDeploymentSwapping/ToggleDeploymentSwappingInstaller.event"
+
+//AutoPromote
+#include "ASM/AutoPromote/AutoPromote.lyn.event"
+
+ALIGN 4
+AutoPromoteTestEvents:
+    ASMC PromotionTime|1
+    NoFade
+    ENDA
+
+#ifdef __DEBUG__
+    #include "DebugTools/ChapterJump/ChapterJump.event"
+#endif
+
+//ASMCs
+#include "ASM/ASMC/CheckWeather/CheckWeather.lyn.event"

@@ -1,0 +1,34 @@
+#ifndef MODULAR_GETTER_LUCK_EVENT
+#define MODULAR_GETTER_LUCK_EVENT
+
+#include "_Common.event"
+
+pLuckModifiers: // Luck
+	POIN prAddUnitLuck prHalveIfCapturing prDebuffLck prAddEquipLuck prItemPassiveLuck prRallyLck prDefiantLck
+	#ifdef DEBUFFS_MIN_ZERO
+	POIN prMinZero
+	#endif
+WORD 0
+
+prAddUnitLuck:
+	rAdd(rSByteAt(UNIT_LUCK))
+
+prAddEquipLuck:
+	rAdd(rForUnitEquipped(rCallExternal(prGetItemLckBonus)))
+
+prDebuffLck:
+	#include "_asm/DebuffLck.lyn.event"
+	POIN GetDebuffs|1
+
+prRallyLck:
+	#include "_asm/RallyLck.lyn.event"
+	POIN GetDebuffs|1
+
+prItemPassiveLuck:
+#ifndef DONT_STACK_BOOSTS
+	rPassiveStatBoostsStacking(STAT_LUCK)
+#else // DONT_STACK_BOOSTS
+	rPassiveStatBoostsNonStacking(STAT_LUCK)
+#endif // DONT_STACK_BOOSTS
+
+#endif // MODULAR_GETTER_LUCK_EVENT

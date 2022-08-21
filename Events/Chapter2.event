@@ -1,0 +1,114 @@
+EventPointerTable(0x0A,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+//TurnEventPlayer(0, RandomSnowEvent, 1, 255)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Seize(19,11)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+
+LOAD1 0 PlayerUnits
+
+ENUN
+
+LOAD1 0 EnemyUnits
+
+ENUN
+
+NoFade
+ENDA
+
+EndingScene:
+LOAD1 0 HollyUnit
+
+MNC2 0x2
+ENDA
+
+PlayerUnits:
+UNIT Devan Duke Devan Level(1,Player,False) [3,4] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,False) [2,4] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(1,Player,False) [2,5] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
+UNIT Kenneth Cavalier Devan Level(1,Player,False) [2,3] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
+
+UNIT Alexandra Lord Devan Level(1,Player,False) [3,5] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(10,Player,False) [1,4] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(2,Player,False) [3,3] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+
+UNIT //Tells the game that the unit list has ended
+
+HollyUnit:
+UNIT Holly Cleric Devan Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Mend, Sleep] NoAI
+
+UNIT
+
+EnemyUnits:
+//Boss
+UNIT Breguet Fighter Breguet Level(2,Enemy,False) [19,11] DropItem 0x0 0x0 0x1 [IronAxe, HandAxe, _3000G] NeverMoveAI
+
+UNIT 0x80 Mage Breguet Level(2,Enemy,True) [18,11] 0x0 0x0 0x0 0x1 [AirShot] GroupTwoAI
+UNIT 0x80 Mercenary Breguet Level(2,Enemy,True) [19,8] 0x0 0x0 0x0 0x1 [IronSword] GroupTwoAI
+
+UNIT 0x80 Fighter Breguet Level(2,Enemy,True) [4,7] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT 0x80 Soldier Breguet Level(2,Enemy,True) [6,6] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+
+UNIT 0x80 Acolyte Breguet Level(2,Enemy,True) [6,3] 0x0 0x0 0x0 0x1 [Lightning] NoAI
+UNIT 0x80 ArmorKnight Breguet Level(2,Enemy,True) [8,4] 0x0 0x0 0x0 0x1 [Javelin] NeverMoveAI
+
+UNIT 0x80 Myrmidon Breguet Level(2,Enemy,True) [16,3] 0x0 0x0 0x0 0x1 [IronSword] GroupOneAI
+UNIT 0x80 Soldier Breguet Level(2,Enemy,True) [14,2] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
+UNIT 0x80 HeavyCavalier Breguet Level(2,Enemy,True) [16,2] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI
+
+UNIT 0x80 Mercenary Breguet Level(2,Enemy,True) [11,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT 0x80 Archer Breguet Level(2,Enemy,True) [11,10] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+
+UNIT 0x80 Shaman Breguet Level(2,Enemy,True) [13,9] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT 0x80 Acolyte Breguet Level(2,Enemy,True) [13,8] 0x0 0x0 0x0 0x1 [Lightning] NeverMoveAI
+
+UNIT 0x80 PegasusKnight Breguet Level(2,Enemy,True) [9,11] 0x0 0x0 0x0 0x1 [IronSword] MoveIn2TurnsAI
+
+UNIT 0x80 Cavalier Breguet Level(2,Enemy,True) [18,10] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+
+UNIT

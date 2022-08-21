@@ -1,0 +1,334 @@
+//Item Definitions
+#undef IronSword
+#undef SlimSword
+#undef SteelSword
+#undef SilverSword
+#undef IronBlade
+#undef SteelBlade
+#undef SilverBlade
+#undef PoisonSword
+#undef Rapier
+#undef ManiKatti
+#undef BraveSword
+#undef Shamshir
+#undef KillingEdge
+#undef Armourslayer
+#undef Armorslayer
+//#undef Wyrmslayer
+#undef LightBrand
+#undef Lightbrand
+//#undef Runesword
+#undef Lancereaver
+#undef Longsword
+#undef Zanbato
+#undef Zanbatou
+#undef IronLance
+#undef SlimLance
+#undef SteelLance
+#undef SilverLance
+#undef PoisonLance
+#undef ToxicLance
+#undef ToxinLance
+#undef BraveLance
+#undef KillerLance
+//#undef Horseslayer
+#undef Ridersbane
+#undef Horsekiller
+#undef Javelin
+#undef Spear
+#undef Axereaver
+#undef IronAxe
+#undef SteelAxe
+#undef SilverAxe
+#undef PoisonAxe
+#undef BraveAxe 
+#undef KillerAxe
+#undef Halberd
+#undef Hammer 
+//#undef DevilAxe
+#undef HandAxe 
+#undef Tomahawk
+#undef Swordreaver
+#undef Swordslayer
+//#undef Hatchet
+#undef IronBow
+#undef SteelBow
+#undef SilverBow
+#undef PoisonBow
+#undef KillerBow
+#undef BraveBow
+//#undef ShortBow
+#undef Longbow 
+#undef Ballista
+#undef IronBallista
+#undef KillerBallista
+#undef Fire
+#undef Thunder
+//#undef Elfire
+#undef Bolting
+#undef Fimbulvetr
+//#undef Forblaze
+//#undef Excalibur
+#undef Lightning
+#undef Shine
+#undef Divine
+#undef Purge
+#undef Aura
+//#undef Luce
+#undef Flux
+#undef Luna
+#undef Nosferatu
+#undef Eclipse
+#undef Fenrir
+//#undef Gleipnir
+//#undef Heal
+//#undef Mend
+//#undef Recover
+//#undef Physic
+//#undef Fortify
+//#undef Restore
+//#undef Silence
+//#undef Sleep
+//#undef Berserk
+//#undef Warp
+//#undef Rescue
+//#undef TorchStaff
+//#undef Hammerne
+//#undef Unlock
+//#undef Barrier
+//#undef DragonAxe
+//#undef AngelicRobe
+//#undef EnergyRing
+//#undef SecretBook
+//#undef Speedwings
+//#undef GoddessIcon
+//#undef Dragonshield
+//#undef Dracoshield
+//#undef Talisman
+//#undef Boots
+//#undef BodyRing
+//#undef HeroCrest
+//#undef HerosCrest
+//#undef KnightCrest
+//#undef KnightsCrest
+//#undef OrionBolt
+//#undef OrionsBolt
+//#undef ElysianWhip
+//#undef GuidingRing
+//#undef ChestKey
+//#undef DoorKey
+//#undef Lockpick
+//#undef Vulnerary
+//#undef Elixir
+//#undef PureWater
+//#undef Antidote
+//#undef Antitoxin
+//#undef Torch
+//#undef TorchItem
+//#undef DelphiShield
+//#undef MemberCard
+//#undef SilverCard
+//#undef WhiteGem
+//#undef BlueGem
+//#undef RedGem
+//#undef Gold
+//#undef Reginleif
+//#undef ChestKey_5
+//#undef Mine
+//#undef LightRune
+//#undef HoplonShield
+//#undef FillasMight
+//#undef NinissGrace
+//#undef ThorsIre
+//#undef SetsLitany
+//#undef ShadowKiller
+//#undef Shadowkiller
+//#undef BrightLance
+//#undef FiendCleaver
+//#undef Fiendcleaver
+//#undef BeaconBow
+//#undef Sieglind
+//#undef Sieglinde
+//#undef BattleAxe
+//#undef Ivaldi
+//#undef MasterProof
+//#undef MasterSeal
+//#undef MetissTome
+//#undef HeavenSeal
+//#undef SharpClaw
+//#undef Latona
+//#undef DragonSpear
+//#undef Vidofnir
+//#undef Naglfar
+//#undef WretchedAir
+//#undef Audomra
+//#undef Audhulma
+//#undef Siegmund
+//#undef Garm
+//#undef Nidhogg
+//#undef HeavySpear
+//#undef ShortSpear
+//#undef ConquerorsProof
+//#undef OceanSeal
+//#undef MoonBracelet
+//#undef LunarBracelet
+//#undef SunBracelet
+//#undef SolarBracelet
+//#undef Item1G
+//#undef Item5G
+//#undef Item10G
+//#undef Item50G
+//#undef Item100G
+//#undef Item3000G
+//#undef Item5000G
+//#undef _1G
+//#undef _5G
+//#undef _10G
+//#undef _50G
+//#undef _100G
+//#undef _3000G
+//#undef _5000G
+//#undef WindSword
+//#undef Vulnerary_2
+#undef Greennote
+#undef Rednote
+//#undef Dance
+//#undef Nightmare
+//#undef NightmareStaff
+//#undef DemonShard
+//#undef DemonStone
+//#undef DemonLight
+//#undef Ravager
+//#undef HolyDragonStone
+//#undef DivineDragonStone
+//#undef DragonStone
+//#undef Dragonstone
+//#undef DemonSurge
+//#undef Shadowshot
+//#undef RottenClaw
+//#undef FetidClaw
+//#undef PoisonClaw
+//#undef LongPoisonClaw
+//#undef LethalTalon
+//#undef FireFang
+//#undef HellFang
+//#undef EvilEye
+//#undef BloodyEye
+//#undef CrimsonEye
+//#undef Stone
+//#undef Aircalibur
+//#undef JunaFruit
+//#undef _150G
+//#undef _200G
+//#undef BlackGem
+//#undef GoldGem
+
+#define IronSword        0x1
+#define SteelSword       0x2
+#define SilverSword      0x3
+#define BraveSword       0x4
+#define KillingEdge      0x5
+#define Magebane         0x6
+#define LightBrand       0x7
+#define Shadowblade      0x8
+#define Lancereaver      0x9
+#define Shamshir         0xa
+#define IronBlade        0xb
+#define SteelBlade       0xc
+#define SilverBlade      0xd
+#define Longsword        0xe
+#define Armorslayer      0xf
+#define AstraSword       0x10
+#define LunaSword        0x11
+#define KnightSword      0x12
+#define ManSword         0x13
+#define Rapier           0x14
+//#define Free           0x15
+//#define Free           0x16
+#define IronLance        0x17
+#define SteelLance       0x18
+#define SilverLance      0x19
+#define BraveLance       0x1a
+#define KillerLance      0x1b
+#define Javelin          0x1c
+#define Spear            0x1d
+#define Greatlance       0x1e
+#define KnightGreatlance 0x1f
+#define Axereaver        0x20
+#define Partisan         0x21
+#define Flagpole         0x22
+#define IronAxe          0x23
+#define SteelAxe         0x24
+#define SilverAxe        0x25
+#define BraveAxe         0x26
+#define KillerAxe        0x27
+#define HandAxe          0x28
+#define Tomahawk         0x29
+#define Hammer           0x2a
+#define Halberd          0x2b
+#define Swordreaver      0x2c
+#define Swordslayer      0x2d
+#define IronBow          0x2e
+#define SteelBow         0x2f
+#define SilverBow        0x30
+#define BraveBow         0x31
+#define KillerBow        0x32
+#define Longbow          0x33
+#define Greatbow         0x34
+#define Ballista         0x35
+#define IronBallista     0x36
+#define KillerBallista   0x37
+#define HuntingBow       0x38
+#define MagicBow         0x39
+//#define Free           0x3a
+//#define Free           0x3b
+#define Fire             0x3c
+#define Thunder          0x3d
+#define Quake            0x3e
+#define BlueBolt         0x3f
+#define Shaver           0x40
+#define Raze             0x41
+#define Frostbite        0x42
+#define AirShot          0x43
+#define FarFrost         0x44
+#define Bolting          0x45
+
+
+#define Lightning        0xbe
+#define Shine            0xbf
+#define Aura             0xc0
+#define Resire           0xc1
+#define Divine           0xc2
+#define LightJavelin     0xc3
+#define Prism            0xc4
+#define Purge            0xc5
+
+#define Flux             0xc9
+#define ShadeTome        0xca
+#define Fenrir           0xcb
+#define Luna             0xcc
+#define Eclipse          0xcd
+#define Void             0xce
+#define BlackHole        0xcf
+
+#define RoundShield 0xd5
+#define KiteShield 0xd6
+#define Greatshield 0xd7
+#define Sash 0xd8
+#define Clover 0xd9
+#define MagicShield 0xda
+
+
+//Type Definitions
+#define Sword            0x00
+#define Lance            0x01
+#define Axe              0x02
+#define Bow              0x03
+#define Staff            0x04
+//#define Anima          0x05
+//#define Light          0x06
+//#define Dark           0x07
+#define Unarmed          0x09 //(Actually "Item", but no one calls it that)
+#define Monster          0x0B //Used to be monster weapon
+#define Ring             0x0C //(For Dancers)
+#define FireStone        0x11

@@ -1,0 +1,54 @@
+#include "BattleBG/BattleBG.event"
+
+ALIGN 4
+PaletteTable:
+FILL 0x200 * 0x10
+
+
+PUSH
+
+ORG $59BFC
+POIN PaletteTable + 4
+ORG $59CD0
+POIN PaletteTable + 4
+ORG $59D24
+POIN PaletteTable + 4
+ORG $5A7AC
+POIN PaletteTable + 4
+ORG $5A928
+POIN PaletteTable + 4
+
+POP
+
+#define setPalette(index, palette) "PUSH; ORG (PaletteTable + (index * 0x10)); POIN palette; POP"
+
+setPalette(0x01, DevanDukePal)
+setPalette(0x03, RonniBowKnightPal)
+setPalette(0x04, RonniArchKnightPal)
+setPalette(0x05, AnthonyMercenaryPal)
+setPalette(0x07, KennethCavalierPal)
+
+//Devan(Duke)
+ALIGN 4
+DevanDukePal:
+#incbin "Devan_Duke.btlpal"
+
+//Ronni(Bow Knight)
+ALIGN 4
+RonniBowKnightPal:
+#incbin "Ronni_BowKnight.btlpal"
+
+//Ronni(Arch Knight)
+ALIGN 4
+RonniArchKnightPal:
+#incbin "Ronni_ArchKnight.btlpal"
+
+//Anthony(Mercenary)
+ALIGN 4
+AnthonyMercenaryPal:
+#incbin "Anthony_Mercenary.btlpal"
+
+//Kenneth(Cavalier)
+ALIGN 4
+KennethCavalierPal:
+#incbin "Kenneth_Cavalier.btlpal"

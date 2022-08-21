@@ -1,0 +1,55 @@
+//Devan
+ALIGN 4
+DevanPortrait:
+#incbin "dmp/Devan.portraitdmp"
+
+//Ronni
+ALIGN 4
+RonniPortrait:
+#incbin "dmp/Ronni.portraitdmp"
+
+//Anthony
+ALIGN 4
+AnthonyPortrait:
+#incbin "dmp/Anthony.portraitdmp"
+
+//Kenneth (More temperary than the others)
+ALIGN 4
+KennethPortrait:
+#incbin "dmp/Kenneth.portraitdmp"
+
+//Julianne
+ALIGN 4
+JuliannePortrait:
+#incbin "dmp/Julianne.portraitdmp"
+
+//Alexandra
+ALIGN 4
+AlexandraPortrait:
+#incbin "dmp/Alexandra.portraitdmp"
+
+//Lucy
+ALIGN 4
+LucyPortrait:
+#incbin "dmp/Lucy.portraitdmp"
+
+//Enemies
+
+//Hendrick
+ALIGN 4
+HendrickPortrait:
+#incbin "dmp/Hendrick.portraitdmp"
+
+
+//setMugEntry(<mugindex>,<portrait label>,<mouth X>,<mouth Y>,<eye X>,<eye Y>)
+
+setMugEntry(0x02,DevanPortrait,3,5,3,3)
+setMugEntry(0x04,RonniPortrait,4,6,4,4)
+setMugEntry(0x05,AnthonyPortrait,3,5,3,3)
+setMugEntry(0x06,KennethPortrait,3,6,3,4)
+setMugEntry(0x08,JuliannePortrait,4,6,3,4)
+setMugEntry(0x14,AlexandraPortrait,3,6,3,4)
+setMugEntry(0xC,LucyPortrait,3,7,3,5)
+
+//Enemies
+setMugEntry(0x31,HendrickPortrait,3,5,3,3)

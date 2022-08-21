@@ -1,0 +1,117 @@
+Tech:
+Skillsystems: (Make the list later. It's big)
+Cloud fix: Tequila and Random Wizard
+Autopromote: HyperSpacesGamma, Tequila, Snakey1 (and the next person to be the original maker)
+Fates EXP: Circles
+MNC2 fix: Kirb
+Base Promotion: Pikmin1211
+Set/Unset condition: Tequila
+Narrowfont: Scraiza
+Minimug Palette Fix: Huichelaar
+Group AI: PhantomSentine
+Movement Sounds Implementation: 7743
+Class Anim Substitution: Stan
+Repointed battle platforms: Zane
+Droppable item display: Mkol
+Spell Loader: Kao
+ModularMinimugBox: Zane
+ModularMinimugBox Template: Bpat
+Steal With Full Inventory: Vesly
+Nos/Resire Dynamic Palette: Sme
+Forced Deployment Swapping: AuraWolf
+Faster AI targetting display: Vesly
+Faster level ups: Tequila
+
+
+Icons:
+All swords except Brave Sword: Zane
+Brave Sword: Lisandra Brave
+Iron, Steel, Silver, Killer Lances and Heavy Spear: Zane
+DragonSpear: Beansy
+Greatlance and Knight Greatlance: George Reds
+Javelin: LordGlenn
+Spear: Orihara Saki
+Brave Lance: Ereshkigal
+Axereaver: 2WB
+
+Tomahawk: LordGlenn
+All other axes: Lisandra Brave
+
+Bows: Ereshkigal
+
+Storm, Magma Tomes: Leif
+Tundra, Light Tomes: Ereshkigal
+
+
+Map Sprites:
+Duke by Snewping
+Deserter by Alusq
+Bow Knight by flasuban
+Heavy Cavalier by Team SALVAGED
+Valkyrie by Permafrost
+Light Mage by Leo_Link, L95
+Storm Mages by Ash3wl, L95, Dominus_Vobiscum
+Male Tundra Sage by Devisian_Nights
+Female Tundra Mage by Teraspark
+Female Tundra Sage by Seal
+Female DracoRider by Flasuban
+Female DracoKnight by Blood
+Male DracoRider by Flasuban
+Male DracoKnight by ArcaneEli
+Dragoon by Pikmin1211, Unknown
+
+
+Spell Animations:
+Frostbite by Struedelmuffin
+
+
+Combat Animations:
+Duke by Nuramon
+Cavalier by Team SALVAGED
+Female Cavalier by Team SALVAGED, Flasuban, Epicer
+DracoKnight axe edit by TheBlindArcher
+DracoRiders by eCut, Flasuban
+Female DracoRider by eCut, Flasuban
+Fighter by MK404
+Thieves by Pikmin1211, Maiser6, Skitty, GabrielKnight
+Female Fighter MK404, Maiser6, Pikmin1211
+Female Warrior by Temp
+Female Rogue by Pikmin1211, Maiser6, Ukelele, SD9k, Temp, Black Mage, Wan, Sme
+Pegasus Knight Repalette by Flasuban
+Myrmidons by Iscaneus, Leo_Link
+Mercenary by Team SALVAGED
+Female Mercenary by Team SALVAGED, Jey the Count, Pushwall
+ArmorKnight by Team SALVAGED
+Swordmaster by TheBlindArcher, Greentea, Kenpuhu
+Female Swordmaster by RedBean, Jj09
+Heroes by Nuramon, Sax-Marine
+Archers by DerTheVaporeon
+Deserter by Alusq
+TheBlindArcher, DerTheVaporeon, Nuramon, The_Big_Dededester, DerTheVaporeon
+Female Shaman Fix by Shin19
+Snipers by Nuramon
+Soldier by Alusq
+Dragoon by Mercenary Lord, NYZGamer, Pikmin1211, Maiser6
+Female Soldier by Alusq, Maiser6, JeyTheCount
+Acolyte Recolor by Teraspark
+Female Acolyte by Teraspark
+Tundra Sage by Devisian_Nights
+Female Tundra Sage by GabrielKnight, Seal, Sacred War
+Great Knight by Nuramon
+FalcoKnight (improvement) by Flasuban
+Lord by Teraspark
+Great Lord by St jack
+Rogue knife by Orihara_Saki
+Mage by GabrielKnight
+Female Mage by Solum
+Sage by Levin64, HyperGammaSpaces
+Female Sage (fix) by Shin19
+MageKnights sword by Aruka, Kenpuhu
+Berserker (improved) by BwdYeti, Shadowofchaos, Red
+Pirate by DerTheVaporeon
+
+Tilesets:
+Updated FE6 Snow Fields: N426
+Snowy Bern / Snowy Peaks: ZoramineFae, Vennobennu
+
+Special Thanks:

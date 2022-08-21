@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="19" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="VillageSnow" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Tilesets/ImprovedVillage/VillageSnow.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="19" height="18">
+  <data encoding="base64" compression="zlib">
+   eJyNk01OQjEQx9sxYa0BV3oJA270DoomujF+nADQBBI0fpwA0ARPwF4vI+KSM+h7JrrxP7YN47RNXPzSmXbmP319M3NjzFywQ8a8W2M+QA32IaiSsyfYGyPmFJwZ51ex1sCqz2WNZetowa+DLdDw+V3Qs87uI/YW3HmtOtYG2DQuN9yJteQdJzZthzh9XlAclyJXL+iU0FlbStdMxctaYe8LGkfQOPB80t88qSfjO7AHoG2dHTT64BJceb+guG6panJ+S2jx3ou6x4wWsQMVKxmJc7ZfkTdE/goYCb0pxbHbQofrV8QbBPsJbIBncAxO/H5FfGPFv9WU4jfN/Z9rcJN59985gL/raap/meoZ/Q81bY/O5bWJdQ/sq97N6Q09uj77Hazn4MLEs6r7IvWNOfSs6jfjPr2H/wC+Ka9T/OMtufdkb4T5DXVZg+lSfA/mTfkzu+hnOb9Sp6dqBB29x5Tw18X8FuJ8DP8R/ACioMF7
+  </data>
+ </layer>
+</map>

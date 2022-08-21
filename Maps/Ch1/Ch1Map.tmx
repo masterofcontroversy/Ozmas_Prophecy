@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="18" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="SnowSky" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Tilesets/SnowSky/SnowSky.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="18" height="15">
+  <properties>
+   <property name="Anims1" value="0"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="0x0"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x6"/>
+   <property name="MapID" value="0x4"/>
+   <property name="ObjectType" value="SnowSkyObjectID"/>
+   <property name="PaletteID" value="SnowSkyPaletteID"/>
+   <property name="TileConfig" value="SnowSkyConfigID"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyVkktKA0EQhnumlSxU0OAFFFERF/FxAUWJoIKJJ5A8DOJC4wlEExUEvUJMJhjBhV7BJz4Q5wo+QPEQ/kX9jZNdXHx09fTUX1V/d94Yk28BzxrTA4YQL4MCyJKgRQ2hDxq3WBsgDTo8YzrBLuLSP3QsdD6xJtnLATRmwR4oYz+F82mrq881a5s15JvUzIA44zXkj4JTq7OVOOMMGPA4M3VOqCv1pP8E4ldQQ3zoac4HqPjqXYZ6N6Af+3fmB6whGteRmu3QGAR1fovT/zmei3ab1bvZRo1uq5R5Lt7GwAjIYV8FSzjfBEXEx+w5BXo57xt0qr7eUUAN8XaevuSoIXNugBj9l75D7MfBmNVZRK/O9VK+U2PHqEch+y1y3ce3BdPsu/TcFblbyUmDC6s+JPkeJZba50ZZN6p5h/WeGm6GLGcocg7xNAVWwRbjFdaWOxeNYawTvA+nkeC8IWcusK674zN6Kt48g0nmOm9q/PfIaA+SL/5e+VrXaTyAR8RPoOxpb84j8Vfe1mJEI5rXsH/xt3iM/J/I+6nwrt27S/JduPMX5gpf1JB38QsbjXYx
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,22 @@
+//Class Definitions
+
+#define Duke          0x1
+#define Lord          0x2
+#define ArchDuke      0x3
+#define GreatLord     0x4
+#define ArmorKnight   0x9
+#define BowKnight     0x1D
+#define BowKnight_F   0x1E
+#define DracoRider    0x1F
+#define DracoMaster   0x20
+#define DracoRider_F  0x21
+#define DracoMaster_F 0x22
+#define Acolyte       0x44
+#define Acolyte_F     0x59
+#define Thief_F       0x52
+#define Rogue_F       0x53
+#define ArchKnight    0x54
+#define ArchKnight_F  0x55
+#define Soldier_F     0x56
+#define Dragoon       0x57
+#define HeavyCavalier 0x58

@@ -1,0 +1,183 @@
+EventPointerTable(0x0D,ThisChapter)
+
+#define VillageID1 0x8
+#define VillageID2 0x9
+#define VillageID3 0xA
+
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(0, CallBandits_1, 3)
+TurnEventPlayer(0, CallBandits_2, 4)
+
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Village(VillageID1,DummyEvent,1,15)
+Village(VillageID2,DummyEvent,14,9)
+Village(VillageID3,DummyEvent,16,1)
+Armory(Chap3ArmoryList,17,13)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+
+//Make cutscene later
+
+LOAD1 0 LucyUnit
+
+ENUN
+
+LOAD1 0 EnemyUnits
+
+ENUN
+
+PREP
+
+ENDA
+
+EndingScene:
+MNC2 0x3
+ENDA
+
+DummyEvent:
+NoFade
+ENDA
+
+PlayerUnits:
+UNIT Devan Duke Devan Level(1,Player,0) [4,2] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [4,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,3] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+
+UNIT
+
+EnemyUnits:
+//Boss
+UNIT Bone Acolyte Bone Level(3,Enemy,0) [14,16] 0x0 0x0 0x0 0x1 [Resire] NeverMoveAI
+
+//Turn one enemies
+UNIT 0x80 Mercenary Bone Level(3,Enemy,1) [5,5] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+UNIT 0x80 Soldier Bone Level(3,Enemy,1) [7,4] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 Shaman Bone Level(3,Enemy,1) [7,2] 0x0 0x0 0x0 0x1 [Flux] NoAI
+
+//In front of top house
+UNIT 0x80 Fighter Bone Level(3,Enemy,1) [13,3] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+
+//Side path
+UNIT 0x80 Shaman Bone Level(3,Enemy,1) [16,2] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [16,10] 0x0 0x0 0x0 0x1 [Javelin] NeverMoveAI
+UNIT 0x80 Archer Bone Level(3,Enemy,1) [16,6] 0x0 0x0 0x0 0x1 [SteelBow] AttackInRangeAI
+UNIT 0x80 Acolyte Bone Level(3,Enemy,1) [18,11] 0x0 0x0 0x0 0x1 [Lightning] GroupTwoAI
+UNIT 0x80 Soldier Bone Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x1 [IronLance] GroupTwoAI
+
+//Main path
+UNIT 0x80 Myrmidon Bone Level(3,Enemy,1) [7,7] 0x0 0x0 0x0 0x1 [IronSword] GroupThreeAI
+UNIT 0x80 Mage Bone Level(3,Enemy,1) [2,8] 0x0 0x0 0x0 0x1 [Fire] GroupThreeAI
+UNIT 0x80 Soldier Bone Level(3,Enemy,1) [5,14] 0x0 0x0 0x0 0x1 [IronLance] GroupFourAI
+UNIT 0x80 Mercenary Bone Level(3,Enemy,1) [8,15] 0x0 0x0 0x0 0x1 [IronBlade] GroupFourAI
+UNIT 0x80 Archer Bone Level(3,Enemy,1) [4,16] 0x0 0x0 0x0 0x1 [Longbow] GroupFourAI
+
+
+//Path to south-west house
+UNIT 0x80 Fighter Bone Level(3,Enemy,1) [2,17] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+UNIT 0x80 Mage Bone Level(3,Enemy,1) [0,16] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
+
+//Around the inn
+UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [10,13] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+UNIT 0x80 Myrmidon Bone Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT 0x80 Fighter Bone Level(3,Enemy,1) [13,14] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+UNIT 0x80 Archer Bone Level(3,Enemy,1) [11,10] 0x0 0x0 0x0 0x1 [SteelBow] AttackInRangeAI
+
+
+/*Stationaries*/
+UNIT 0x80 Soldier Bone Level(3,Enemy,1) [12,3] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [12,4] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+
+UNIT 0x80 Shaman Bone Level(3,Enemy,1) [6,9] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT 0x80 Fighter Bone Level(3,Enemy,1) [7,9] 0x0 0x0 0x0 0x1 [HandAxe] NeverMoveAI
+
+
+/*Charging enemies*/
+UNIT 0x80 MageKnight Bone Level(3,Enemy,1) [18,9] 0x0 0x0 0x0 0x1 [Fire] MoveIn2TurnsAI
+
+UNIT 0x80 DracoRider Bone Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x1 [IronLance] MoveIn2TurnsAI
+
+UNIT
+
+LucyUnit:
+UNIT Lucy Mage_F Devan Level(3,Player,0) [7,3] 0x0 0x0 0x0 0x1 [Fire] NoAI
+
+UNIT
+
+//Bandits
+Bandits_1:
+UNIT 0x80 Brigand 0x0 Level(3,Enemy,1) [10,17] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAttackInRangeAI
+
+UNIT
+
+Bandits_2:
+UNIT 0x80 Brigand 0x0 Level(3,Enemy,1) [11,17] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAttackInRangeAI
+
+UNIT
+
+CallBandits_1:
+CAM1 [10,17]
+STAL 10
+LOAD1 0 Bandits_1
+NoFade
+ENDA
+
+CallBandits_2:
+LOAD1 0 Bandits_2
+CAM1 [11,17]
+STAL 10
+NoFade
+ENDA
+
+#undef VillageID1
+#undef VillageID2
+#undef VillageID3

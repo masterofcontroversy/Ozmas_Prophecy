@@ -1,0 +1,12 @@
+PUSH
+ORG 0x8472C
+POIN DeathQuoteList
+POP
+
+#define DeathQuoteEntry(Unit, Route, ChapterID, CompletionFlag, TextID, QuoteEvent) "BYTE Unit 0x0 Route ChapterID CompletionFlag 0x0; SHORT TextID; WORD QuoteEvent"
+
+ALIGN 4
+DeathQuoteList:
+DeathQuoteEntry(Devan, 0xFF, 0xFF, 0x65, DevanDeathQuote, 0)
+
+WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF //TERMINATOR

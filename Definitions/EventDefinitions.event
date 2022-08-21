@@ -1,0 +1,32 @@
+//AI Definitions
+#undef  NoAI
+#undef  AttackInRangeAI
+
+#define BrigandAttackInRangeAI [AttackInRange, BrigandMove, 0x8, DefaultAI4]
+#define NoAI [0x0, 0x0, 0x8, DefaultAI4]
+#define AttackInRangeAI [0x0 0x3, 0x8, DefaultAI4]
+#define DoNotMoveAI [0x0, DoNotMove, 0x4, DefaultAI4]
+#define MoveIn2TurnsAI [0x00, 0x6, 0x4, DefaultAI4]
+
+//Useful event definitions
+
+//Event every X turns
+#define EveryXTurns(whatTurn) "CHECK_TURNS; SVAL 0xA whatTurn; SMOD 0xAC1;"
+#define Every2Turns(CondID1,CondID2,EventID,Pointer) "CHECK_EVENTID EventID;BNE CondID1 0x0 0xC;CALL Pointer;ENUT EventID;GOTO CondID2;LABEL CondID1;ENUF EventID;LABEL CondID2"
+#define Every3Turns(CondID1,CondID2,CondID3,CondID4,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
+
+//Gold and Items
+#define SetGold(Amount) "SVAL 0x3 Amount;"
+#define GiveGold "CALL $591F40; GIVEMONEY 0x1;"
+#define GiveItem(ItemID,CharID) "SVAL 0x3 ItemID; GIVEITEM CharID;"
+
+#define EndConvo "CALL $9EE2C4"
+
+//Because Ally isn't clear enough
+#define Player 0
+#define AutoLevelTrue 1
+#define AutoLevelFalse 0
+
+//The following unset the event flag if they return false
+#define ContinueIfIDMatch(UnitID) "SVAL 0x2 UnitID; CALL 0x9EE19C"
+#define ContinueIfFactionMatch(AllegianceID) "SVAL 0x2 AllegianceID; CALL 0x9EE1B8"

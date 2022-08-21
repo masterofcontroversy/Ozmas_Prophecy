@@ -1,0 +1,30 @@
+PUSH
+    ORG $58034
+    jumpToHack(JavelinAnimSub)
+POP
+
+ALIGN 4
+JavelinAnimSub:
+    #incbin "asm/JavelinAnimSub.dmp"
+    POIN JavelinSubList
+
+#define JavelinAnimSubstitute(aClass, aSubAnim) "BYTE aClass 0x0; SHORT aSubAnim"
+#define JavelinAnimSubstituteEnd "WORD 0x0"
+
+ALIGN 4
+JavelinSubList:
+    // Including vanilla javelin substitutes
+    JavelinAnimSubstitute(Cavalier,      0x4)
+    JavelinAnimSubstitute(ArmorKnight,   0x6)
+    JavelinAnimSubstitute(Paladin,       0x6)
+    JavelinAnimSubstitute(Paladin_F,     0xD)
+    JavelinAnimSubstitute(General,       0xB)
+    JavelinAnimSubstitute(DracoRider,    0x9)
+    JavelinAnimSubstitute(DracoRider_F,  0x9)
+    JavelinAnimSubstitute(DracoMaster,   0xA)
+    JavelinAnimSubstitute(DracoMaster_F, 0xA)
+    JavelinAnimSubstitute(PegasusKnight, 0x7)
+    JavelinAnimSubstitute(FalcoKnight,   0x8)
+    JavelinAnimSubstitute(Soldier,       0x5)
+    // Add new Javelin substitutes here
+JavelinAnimSubstituteEnd

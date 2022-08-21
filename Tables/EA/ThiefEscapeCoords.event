@@ -1,0 +1,8 @@
+#define ThiefEscape(ChapterID, EscapePointer) "PUSH; ORG 0x5A8188 + (ChapterID * 4); POIN EscapePointer; POP;"
+
+ThiefEscape(3,Chapter4EscapePoints)
+
+ALIGN 4
+Chapter4EscapePoints:
+BYTE 21 3 1 0
+WORD 0xFFFFFFFF //Terminator

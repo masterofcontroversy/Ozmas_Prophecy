@@ -1,0 +1,264 @@
+//#ifndef ClassAnimTable
+//    #define ClassAnimTable (0xc00008)
+//#endif
+
+
+#define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
+
+{
+#include "_Animations/Cavalier_SwordInstaller.event"
+#include "_Animations/Cavalier_LanceInstaller.event"
+#include "_Animations/Cavalier_AxeInstaller.event"
+#include "_Animations/Cavalier_HandaxeInstaller.event"
+#include "_Animations/Cavalier_BowInstaller.event"
+#include "_Animations/Cavalier_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Cavalier_F_SwordInstaller.event"
+#include "_Animations/Cavalier_F_BowInstaller.event"
+#include "_Animations/Cavalier_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/ArmorKnight_SwordInstaller.event"
+#include "_Animations/ArmorKnight_LanceInstaller.event"
+#include "_Animations/ArmorKnight_UnarmedInstaller.event"
+}
+{
+#include "_Animations/DracoKnight_LanceInstaller.event"
+#include "_Animations/DracoKnight_AxeInstaller.event"
+#include "_Animations/DracoKnight_HandaxeInstaller.event"
+#include "_Animations/DracoKnight_UnarmedInstaller.event"
+}
+{
+#include "_Animations/DracoRider_LanceInstaller.event"
+#include "_Animations/DracoRider_AxeInstaller.event"
+#include "_Animations/DracoRider_HandaxeInstaller.event"
+#include "_Animations/DracoRider_UnarmedInstaller.event"
+}
+{
+#include "_Animations/DracoRider_F_LanceInstaller.event"
+#include "_Animations/DracoRider_F_AxeInstaller.event"
+#include "_Animations/DracoRider_F_HandaxeInstaller.event"
+#include "_Animations/DracoRider_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Hero_SwordInstaller.event"
+#include "_Animations/Hero_AxeInstaller.event"
+#include "_Animations/Hero_HandaxeInstaller.event"
+#include "_Animations/Hero_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Hero_F_SwordInstaller.event"
+#include "_Animations/Hero_F_AxeInstaller.event"
+#include "_Animations/Hero_F_HandaxeInstaller.event"
+#include "_Animations/Hero_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Mercenary_SwordInstaller.event"
+#include "_Animations/Mercenary_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Mercenary_F_UnarmedInstaller.event"
+#include "_Animations/Mercenary_F_SwordInstaller.event"
+}
+{
+#include "_Animations/Myrmidon_SwordInstaller.event"
+#include "_Animations/Myrmidon_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Myrmidon_F_SwordInstaller.event"
+#include "_Animations/Myrmidon_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Paladin_F_SwordInstaller.event"
+#include "_Animations/Paladin_F_LanceInstaller.event"
+#include "_Animations/Paladin_F_BowInstaller.event"
+#include "_Animations/Paladin_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Paladin_SwordInstaller.event"
+#include "_Animations/Paladin_LanceInstaller.event"
+#include "_Animations/Paladin_BowInstaller.event"
+#include "_Animations/Paladin_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Rogue_F_SwordInstaller.event"
+#include "_Animations/Rogue_F_KnifeInstaller.event"
+#include "_Animations/Rogue_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Rogue_SwordInstaller.event"
+#include "_Animations/Rogue_KnifeInstaller.event"
+#include "_Animations/Rogue_UnarmedInstaller.event"
+}
+{
+#include "_Animations/SwordMaster_SwordInstaller.event"
+#include "_Animations/SwordMaster_UnarmedInstaller.event"
+}
+{
+#include "_Animations/SwordMaster_F_SwordInstaller.event"
+#include "_Animations/SwordMaster_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Thief_F_SwordInstaller.event"
+#include "_Animations/Thief_F_KnifeInstaller.event"
+#include "_Animations/Thief_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Warrior_F_AxeInstaller.event"
+#include "_Animations/Warrior_F_HandaxeInstaller.event"
+#include "_Animations/Warrior_F_BowInstaller.event"
+#include "_Animations/Warrior_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/PegasusKnight_LanceInstaller.event"
+#include "_Animations/PegasusKnight_SwordInstaller.event"
+#include "_Animations/PegasusKnight_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Deserter_LanceInstaller.event"
+#include "_Animations/Deserter_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Fighter_AxeInstaller.event"
+#include "_Animations/Fighter_HandaxeInstaller.event"
+#include "_Animations/Fighter_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Fighter_F_AxeInstaller.event"
+#include "_Animations/Fighter_F_HandaxeInstaller.event"
+#include "_Animations/Fighter_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/General_AxeInstaller.event"
+#include "_Animations/General_HandaxeInstaller.event"
+#include "_Animations/General_LanceInstaller.event"
+#include "_Animations/General_SwordInstaller.event"
+#include "_Animations/General_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Soldier_LanceInstaller.event"
+#include "_Animations/Soldier_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Soldier_F_LanceInstaller.event"
+#include "_Animations/Soldier_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Dragoon_LanceInstaller.event"
+#include "_Animations/Dragoon_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Shaman_F_MagicInstaller.event"
+}
+{
+#include "_Animations/Druid_F_MagicInstaller.event"
+}
+{
+#include "_Animations/Acolyte_MagicInstaller.event"
+}
+{
+#include "_Animations/Acolyte_F_MagicInstaller.event"
+}
+{
+#include "_Animations/Bishop_MagicInstaller.event"
+}
+{
+#include "_Animations/Bishop_F_MagicInstaller.event"
+}
+{
+#include "_Animations/Archer_BowInstaller.event"
+#include "_Animations/Archer_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Archer_F_BowInstaller.event"
+#include "_Animations/Archer_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Sniper_BowInstaller.event"
+#include "_Animations/Sniper_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Sniper_F_BowInstaller.event"
+#include "_Animations/Sniper_F_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Duke_LanceInstaller.event"
+#include "_Animations/Duke_UnarmedInstaller.event"
+}
+{
+#include "_Animations/FalcoKnight_LanceInstaller.event"
+#include "_Animations/FalcoKnight_SwordInstaller.event"
+#include "_Animations/FalcoKnight_UnarmedInstaller.event"
+}
+{
+#include "_Animations/GreatKnight_AxeInstaller.event"
+#include "_Animations/GreatKnight_HandaxeInstaller.event"
+#include "_Animations/GreatKnight_LanceInstaller.event"
+#include "_Animations/GreatKnight_UnarmedInstaller.event"
+}
+{
+#include "_Animations/GreatLord_SwordInstaller.event"
+#include "_Animations/GreatLord_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Lord_SwordInstaller.event"
+}
+{
+#include "_Animations/Lord_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Shaman_MagicInstaller.event"
+}
+{
+#include "_Animations/Druid_MagicInstaller.event"
+}
+{
+#include "_Animations/Mage_F_MagicInstaller.event"
+}
+{
+#include "_Animations/Mage_MagicInstaller.event"
+}
+{
+#include "_Animations/Sage_F_MagicInstaller.event"
+}
+{
+#include "_Animations/Sage_MagicInstaller.event"
+}
+{
+#include "_Animations/Thief_KnifeInstaller.event"
+#include "_Animations/Thief_SwordInstaller.event"
+#include "_Animations/Thief_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Warrior_AxeInstaller.event"
+#include "_Animations/Warrior_BowInstaller.event"
+#include "_Animations/Warrior_HandaxeInstaller.event"
+#include "_Animations/Warrior_UnarmedInstaller.event"
+}
+{
+#include "_Animations/MageKnight_MagicInstaller.event"
+#include "_Animations/MageKnight_SwordInstaller.event"
+#include "_Animations/MageKnight_StaffInstaller.event"
+}
+{
+#include "_Animations/MageKnight_F_MagicInstaller.event"
+#include "_Animations/MageKnight_F_SwordInstaller.event"
+#include "_Animations/MageKnight_F_StaffInstaller.event"
+}
+
+{
+#include "_Animations/Brigand_AxeInstaller.event"
+#include "_Animations/Brigand_HandaxeInstaller.event"
+#include "_Animations/Brigand_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Pirate_AxeInstaller.event"
+#include "_Animations/Pirate_HandaxeInstaller.event"
+#include "_Animations/Pirate_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Berserker_AxeInstaller.event"
+#include "_Animations/Berserker_HandaxeInstaller.event"
+#include "_Animations/Berserker_UnarmedInstaller.event"
+}

@@ -1,0 +1,137 @@
+EventPointerTable(0x0A,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AREA 0x8 FortEvent [8,3] [8,3]
+AREA 0x9 FortEvent [16,7] [16,7]
+AREA 0xA FortEvent [18,15] [18,15]
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+
+LOAD1 0 PlayerUnits
+
+ENUN
+
+LOAD1 0 EnemyUnits
+
+ENUN
+
+NoFade
+ENDA
+
+EndingScene:
+MNC2 0x2
+ENDA
+
+PlayerUnits:
+UNIT Devan Duke Devan Level(1,Player,0) [2,8] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,8] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(1,Player,0) [1,9] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
+UNIT Kenneth Cavalier Devan Level(1,Player,0) [1,7] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
+
+UNIT Alexandra Lord Devan Level(1,Player,0) [4,14] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [3,14] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(2,Player,0) [4,13] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+
+UNIT //Tells the game that the unit list has ended
+
+EnemyUnits:
+UNIT 0x80 Fighter ONeill Level(2,Enemy,1) [7,17] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT 0x80 Soldier ONeill Level(2,Enemy,1) [6,16] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 Myrmidon ONeill Level(2,Enemy,1) [8,10] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT 0x80 Mercenary ONeill Level(2,Enemy,1) [11,12] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT 0x80 Fighter ONeill Level(2,Enemy,1) [15,16] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+UNIT 0x80 Archer ONeill Level(2,Enemy,1) [7,4] 0x0 0x0 0x0 0x1 [IronBow] GroupTwoAI
+UNIT 0x80 ArmorKnight ONeill Level(2,Enemy,1) [9,4] 0x0 0x0 0x0 0x1 [IronLance] GroupTwoAI
+UNIT 0x80 ArmorKnight ONeill Level(2,Enemy,1) [6,8] 0x0 0x0 0x0 0x1 [SteelSword] AttackInRangeAI
+UNIT 0x80 Mercenary ONeill Level(2,Enemy,1) [5,9] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+
+UNIT 0x80 Soldier ONeill Level(2,Enemy,1) [13,7] 0x0 0x0 0x0 0x1 [IronLance] AttackInRangeAI //footie
+
+//Group1 starts here
+UNIT 0x80 Archer ONeill Level(2,Enemy,1) [17,8] 0x0 0x0 0x0 0x1 [IronBow] GroupOneAI //footie
+UNIT 0x80 Acolyte ONeill Level(2,Enemy,1) [15,11] 0x0 0x0 0x0 0x1 [IceSerpent] GroupOneAI //footie
+
+//Following guys should be behind the previous group and a part of the charge (mounted maybe)
+UNIT 0x80 Cavalier ONeill Level(2,Enemy,1) [18,5] 0x0 0x0 0x0 0x1 [IronSword] GroupOneAI
+UNIT 0x80 Cavalier ONeill Level(2,Enemy,1) [20,10] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
+
+//Make myrm move in 2 turns and draco linked to that
+UNIT 0x80 DracoKnight ONeill Level(2,Enemy,1) [21,16] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI //flier
+UNIT 0x80 Myrmidon ONeill Level(2,Enemy,1) [19,14] 0x0 0x0 0x0 0x1 [IronSword] MoveIn2TurnsAI
+
+//Units guarding the forts
+UNIT 0x80 HeavyCavalier ONeill Level(4,Enemy,1) [18,15] 0x0 0x0 0x0 0x1 [SteelAxe] NeverMoveAI
+UNIT 0x80 Myrmidon ONeill Level(4,Enemy,1) [8,3] 0x0 0x0 0x0 0x1 [SteelSword] NeverMoveAI
+UNIT 0x80 ArmorKnight ONeill Level(4,Enemy,1) [16,7] 0x0 0x0 0x0 0x1 [SteelLance, Javelin] NeverMoveAI
+
+UNIT
+
+ALIGN 4
+FortEvent:
+ContinueIfFactionMatch(Player)
+    SVAL s1 0x0
+    COUNTER_CHECK s0
+    BNE 0x9000 sC s1
+        Text(FirstFortText)
+
+    LABEL 0x9000
+    SVAL s1 0x1
+    COUNTER_CHECK s0
+    BNE 0x9001 sC s1
+        Text(SecondFortText)
+
+    LABEL 0x9001
+    SVAL s1 0x2
+    COUNTER_CHECK s0
+    BNE 0x9003 sC s1
+        Text(ThirdFortText)
+        CALL EndingScene
+
+LABEL 0x9003
+COUNTER_INC s0
+NoFade
+ENDA
