@@ -9,11 +9,12 @@ RonniPortrait:
 #incbin "dmp/Ronni.portraitdmp"
 
 //Anthony
+
 ALIGN 4
 AnthonyPortrait:
 #incbin "dmp/Anthony.portraitdmp"
 
-//Kenneth (More temperary than the others)
+//Kenneth (More temporary than the others)
 ALIGN 4
 KennethPortrait:
 #incbin "dmp/Kenneth.portraitdmp"
