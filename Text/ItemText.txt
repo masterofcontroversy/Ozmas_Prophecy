@@ -31,6 +31,9 @@ Armor Slayer[X]
 ## RapierName
 Rapier[X]
 
+## LancereaverName
+Lancereaver[X]
+
 ## IronLanceName
 Iron Lance[X]
 
@@ -51,6 +54,9 @@ Javelin[X]
 
 ## SpearName
 Spear[X]
+
+## AxereaverName
+Axereaver[X]
 
 ## IronAxeName
 Iron Axe[X]
@@ -78,6 +84,12 @@ Hammer[X]
 
 ## HalberdName
 Halberd[X]
+
+## SwordreaverName
+Swordreaver[X]
+
+## SwordslayerName
+Swordslayer[X]
 
 ## IronBowName
 Iron Bow[X]
@@ -190,6 +202,40 @@ Unlock[X]
 ## BarrierName
 Barrier[X]
 
+## RoundShieldName
+Round Shield[X]
+
+## KiteShieldName
+Kite Shield[X]
+
+## GreatshieldName
+Greatshield[X]
+
+## CloverName
+Lucky Clover[X]
+
+## SashName
+Sash[X]
+
+## RoundShieldDesc
++2 defense, -1 speed.[X]
+
+## KiteShieldDesc
++4 defense, -2 speed.[X]
+
+## GreatshieldDesc
++6 defense, -4 speed.[X]
+
+## SashDesc
++2 strength, -2 defense.[X]
+
+## CloverDesc
+So lucky, it grew[NL]
+in the middle of winter.[X]
+
+## HPDrainDesc
+Restores HP equal to damage delt.[X]
+
 ## ArmorEffectiveDesc
 Effective against armored units.[X]
 
@@ -202,11 +248,17 @@ Effective against calvary and armors.[X]
 ## KillerDesc
 Allows for critical hits.[X]
 
+## BladeDesc
+Strong, but heavy.[X]
+
 ## BraveDesc
 Double attack count.[X]
 
-## RevearDesc
+## ReaverDesc
 Reverses and doubles weapon triangle.[X]
+
+## SwordslayerDesc
+Effective against infantry sword users.[X]
 
 ## HealDesc
 Recovers a little HP.[X]
@@ -234,15 +286,3 @@ Moves adjacent ally to a distant tile.[X]
 
 ## HammerneDesc
 Restores a weapon to new condition.[X]
-
-## StormTypeText
-Storm[X]
-
-## TundraTypeText ^
-Tundra[X]
-
-## MagmaTypeText
-Magma[X]
-
-## LightTypeText
-Light[X]

@@ -730,6 +730,8 @@
   blh     DrawStatscreenTextMap
   ldr     r6, =StatScreenStruct
   ldr     r0, [r6, #0xC]
+  blh     DrawUnitEquippedItem
+  ldr     r0, [r6, #0xC]
   ldr     r0, [r0, #0x4]
   ldrb    r0, [r0, #0x4]
   cmp     r0, #Deny_Statscreen_Class_Hi
@@ -902,6 +904,9 @@
   cmp     r4, #0x7
   ble     loc_0x8087660
   
+  b SkipPool
+  .ltorg
+  SkipPool:
 .endm
 
 .macro draw_items_text showBallista=0

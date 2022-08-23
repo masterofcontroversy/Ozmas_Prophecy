@@ -10,6 +10,9 @@ extern int IsSameAllegience(int, int) __attribute__((long_call)); // forgive the
 //Using a function pointer GetInitialSkillList doesn't have the thumb bit set
 extern u8* (*GetInitialSkillList_Pointer) (Unit* unit, u8* skillBuffer);
 
+//For equip hack
+extern u8 GetEquipmentSkill(Unit* unit);
+
 struct SkillBuffer {
 /*00*/  u8 lastUnitChecked;
 /*01*/  u8 skills[11];

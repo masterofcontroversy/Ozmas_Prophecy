@@ -1,3 +1,15 @@
+//Stat bonus offsets
+#define MHPBonus 0
+#define StrBonus 1
+#define SklBonus 2
+#define SpdBonus 3
+#define DefBonus 4
+#define ResBonus 5
+#define LckBonus 6
+#define MovBonus 7
+#define ConBonus 8
+#define MagBonus 9
+
 //Item Definitions
 #undef IronSword
 #undef SlimSword

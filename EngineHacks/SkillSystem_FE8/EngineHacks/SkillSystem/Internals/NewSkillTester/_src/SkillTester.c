@@ -97,7 +97,12 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
         }
     }
 
-    //Equipped weapon skills
+    //Equipped item skill
+    if (IsSkillIDValid(GetEquipmentSkill(unit))) {
+        buffer->skills[count++] = GetEquipmentSkill(unit);
+    }
+
+    //Equipped weapon skill
     //If unit is in combat, use the equipped weapon short
     if (unit->index == gBattleActor.unit.index && IsBattleReal()) {
         temp = GetItemData(gBattleActor.weaponBefore & 0xFF)->skill;

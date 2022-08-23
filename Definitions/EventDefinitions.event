@@ -26,6 +26,7 @@
 #define Player 0
 #define AutoLevelTrue 1
 #define AutoLevelFalse 0
+#define ACTIVEUNIT 0xFFFF
 
 //The following unset the event flag if they return false
 #define ContinueIfIDMatch(UnitID) "SVAL 0x2 UnitID; CALL 0x9EE19C"

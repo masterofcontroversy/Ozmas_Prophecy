@@ -20,6 +20,9 @@ gBattlePopupTable:
 		PopRBattlePopup(InitGaidenSpellLearnPopup|1, NewGaidenSpellPopup, 96)
 	#endif // GAIDEN_MAGIC
 	
+	// Equip item
+	PopRBattlePopup(PopR_InitEquipmentBroke, 0x592420, 96)
+
 	PopRBattlePopupEnd
 
 ALIGN 4

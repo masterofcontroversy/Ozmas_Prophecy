@@ -20,7 +20,8 @@ Steal With Full Inventory: Vesly
 Nos/Resire Dynamic Palette: Sme
 Forced Deployment Swapping: AuraWolf
 Faster AI targetting display: Vesly
-Faster level ups: Tequila
+Faster Level-ups: Tequila
+Secondary Equipment: Pikmin1211
 
 
 Icons:

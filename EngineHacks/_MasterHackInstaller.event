@@ -1,8 +1,11 @@
 //Inline hacks
 #include "_InlineHacks.event"
 
-//Skill Systems
+//Skill System
 #include "SkillSystem_FE8/EngineHacks/_MasterHackInstaller.event"
+
+//Equip hack
+#include "C/Equip/Installer.event"
 
 //Danger map optimizations
 #include "ASM/DecideOnDangerMap/DecideOnDangerMap.event"

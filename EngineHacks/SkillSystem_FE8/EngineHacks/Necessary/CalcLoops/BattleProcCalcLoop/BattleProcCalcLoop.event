@@ -33,8 +33,12 @@ POIN Proc_Impale Proc_Colossus
 	POIN CombatArt_Ignis CombatArt_AetherDamage
 #endif // COMBAT_ARTS
 POIN Proc_Corona Proc_Flare 
-//Wrath goes here. Don't skrew up
+
+//Wrath goes here. Don't screw up
 POIN Wrath
+
+//Equip hack stuff
+POIN IncrementAttackCount
 
 #ifndef COMBAT_ARTS
 	POIN Proc_Glacies

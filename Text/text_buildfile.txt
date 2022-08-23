@@ -141,6 +141,15 @@ You managed to kill not only[A][NL]
 your lord, but your only tank.[NL]
 Try easy mode next time.[A][X]
 
+## EquipEquipmentDescription
+Ready this equipment.[X]
+
+## UnequipName
+Unequip[X]
+
+## UnequipEquipmentDescription
+Remove this equipment.[X]
+
 #include "CharacterText/Names.txt"
 
 #include "ClassText.txt"
