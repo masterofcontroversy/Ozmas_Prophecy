@@ -1,7 +1,7 @@
 
 ALIGN 4
 
-#include "Equip.lyn.event"
+#include "src/Equip.lyn.event"
 
 ALIGN 4
 EquipmentList:

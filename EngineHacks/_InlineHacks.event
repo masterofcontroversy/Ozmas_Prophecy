@@ -7,6 +7,12 @@ SHORT $2000 //modified to: "mov r0,0x0" so all units are treated as unpromoted
 ORG $2C3B4 //original: "orr r0,0x0"
 SHORT $2000 //modified to: "mov r0,0x0" so all units are treated as unpromoted
 
+//Don't add 9 auto levels to enemy units
+PUSH
+  ORG 0x18136
+  SHORT $E007
+POP
+
 //Faster Level ups
 #define Time_Between_Stats 10 //default is 20
 PUSH

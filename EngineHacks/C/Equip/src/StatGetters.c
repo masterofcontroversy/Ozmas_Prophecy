@@ -1,11 +1,11 @@
 int GetEquipmentStatBonus(Unit* unit, int stat){
-	Item item = GetUnitEquippedItem(unit);
+	u16 item = GetUnitEquippedItem(unit);
 
-	if (item.number == 0){
+	if ((item & 0xFF) == 0){
 		return 0;
 	}
 
-	const ItemData* itemData = GetItemData(item.number);
+	const ItemData* itemData = GetItemData((item & 0xFF));
 
 	const ItemStatBonuses* itemStatBonuses = itemData -> pStatBonuses;
 

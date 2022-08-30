@@ -14,7 +14,7 @@ int UnequipEquipmentUsability(){
 int EquipEquipmentUsability(){
 	Unit* unit = gActiveUnit;
 	int slot = gActionData.itemSlotIndex;
-	Item item = unit->items[slot];
+	u16 item = unit->items[slot];
 
 	if (CanUnitEquipItem(unit, item)){
 		if ((unit->state & US_UNEQUIPMENT) || GetUnitEquippedItemSlot(unit) != slot){
@@ -27,7 +27,7 @@ int EquipEquipmentUsability(){
 void EquipEquipment(Proc* procState){
 	Unit* unit = gActiveUnit;
 	int slot = gActionData.itemSlotIndex;
-	Item item = unit->items[slot];
+	u16 item = unit->items[slot];
 
 	if (unit->state & US_UNEQUIPMENT){
 		unit->state &= ~US_UNEQUIPMENT;

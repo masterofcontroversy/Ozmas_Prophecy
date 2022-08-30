@@ -1,18 +1,18 @@
 
-EphraimLordSkillList:
+DukeSkillList:
 BYTE 00 00
 ALIGN 4
 
-EirikaLordSkillList:
+LordSkillList:
 BYTE 00 00
 ALIGN 4
 
-EphraimGreatLordSkillList:
+ArchDukeSkillList:
 BYTE 1 SupplyID
 BYTE 00 00
 ALIGN 4
 
-EirikaGreatLordSkillList:
+GreatLordSkillList:
 BYTE 1 SupplyID
 BYTE 00 00
 ALIGN 4

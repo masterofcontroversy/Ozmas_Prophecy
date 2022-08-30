@@ -59,12 +59,6 @@ PUSH
   SHORT $2187
 POP
 
-//Don't add 9 auto levels to enemy units
-PUSH
-  ORG 0x18136
-  SHORT $E007
-POP
-
 //change staff battle init to not give 0xFF status on miss
   PUSH
   ORG $2CBAC

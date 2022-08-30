@@ -1,14 +1,14 @@
-bool IsItemEquipment (Item item){
+bool IsItemEquipment (u16 item){
 	extern u8 EquipmentList[];
 
-	if (item.number == 0) {
+	if ((item & 0xFF) == 0) {
 		return false;
 	}
 
 	int cnt = 0;
 
 	while(EquipmentList[cnt] != 0){
-		if (item.number == EquipmentList[cnt]){
+		if ((item & 0xFF) == EquipmentList[cnt]){
 			return true;
 		}
 		++cnt;
@@ -17,7 +17,7 @@ bool IsItemEquipment (Item item){
 	return false;
 }
 
-bool CanUnitEquipItem (Unit* unit, Item item){
+bool CanUnitEquipItem (Unit* unit, u16 item){
 	if (!IsItemEquipment(item)){
 		return false;
 	}
@@ -28,7 +28,7 @@ bool CanUnitEquipItem (Unit* unit, Item item){
 }
 
 Item GetUnitEquippedItem (Unit* unit){
-	Item item;
+	u16 item = 0;
 
 	if (unit->state & US_UNEQUIPMENT){
 		return item;

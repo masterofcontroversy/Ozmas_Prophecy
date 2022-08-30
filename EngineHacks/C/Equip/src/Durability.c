@@ -1,16 +1,16 @@
 #include "Durability.h"
 
-bool IsItemDefenseEquipment(Item item){
+bool IsItemDefenseEquipment(u16 item){
 	extern u8 DefenseEquipmentList[];
 
-	if (item.number == 0) {
+	if ((item & 0xFF) == 0) {
 		return false;
 	}
 
 	int cnt = 0;
 
 	while(DefenseEquipmentList[cnt] != 0){
-		if (item.number == DefenseEquipmentList[cnt]){
+		if ((item & 0xFF) == DefenseEquipmentList[cnt]){
 			return true;
 		}
 		++cnt;
@@ -19,17 +19,17 @@ bool IsItemDefenseEquipment(Item item){
 	return false;
 }
 
-bool IsItemOffenseEquipment(Item item){
+bool IsItemOffenseEquipment(u16 item){
 	extern u8 OffenseEquipmentList[];
 
-	if (item.number == 0) {
+	if ((item & 0xFF) == 0) {
 		return false;
 	}
 
 	int cnt = 0;
 
 	while(OffenseEquipmentList[cnt] != 0){
-		if (item.number == OffenseEquipmentList[cnt]){
+		if ((item & 0xFF) == OffenseEquipmentList[cnt]){
 			return true;
 		}
 		++cnt;
@@ -38,28 +38,28 @@ bool IsItemOffenseEquipment(Item item){
 	return false;
 }
 
-bool CheckIfDefenseEquipmentBroke(BattleUnit* battleUnit, Item item){
-	if (item.durability <= battleUnit->hitsTaken){
+bool CheckIfDefenseEquipmentBroke(BattleUnit* battleUnit, u16 item){
+	if ((item >> 0x8) <= battleUnit->hitsTaken){
 		return true;
 	}
 	return false;
 }
 
-bool CheckIfOffenseEquipmentBroke(BattleUnit* battleUnit, Item item){
-	if (item.durability <= battleUnit->attacksMade){
+bool CheckIfOffenseEquipmentBroke(BattleUnit* battleUnit, u16 item){
+	if ((item >> 0x8) <= battleUnit->attacksMade){
 		return true;
 	}
 	return false;
 }
 
 bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
-	if (!(battleUnit->unit.index & FACTION_BLUE)){
+	if ((battleUnit->unit.index & (FACTION_RED | FACTION_GREEN))){
 		return false; // no popups for npcs
 	}
 
-	Item item = GetUnitEquippedItem(&battleUnit->unit);
+	u16 item = GetUnitEquippedItem(&battleUnit->unit);
 
-	if (item.number == 0){
+	if ((item & 0xFF) == 0){
 		return false;
 	}
 
@@ -74,13 +74,12 @@ bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
 }
 
 void DecrementItemSlotDurability(Unit* unit, int itemSlot, int amount){
-	Item item = unit->items[itemSlot];
-	if (item.durability > amount){
-		item.durability -= amount;
+	u16 item = unit->items[itemSlot];
+	if ((item >> 0x8) > amount){
+		item -= (amount << 8);
 	}
 	else {
-		item.number = 0;
-		item.durability = 0;
+		item = 0;
 	}
 	unit->items[itemSlot] = item;
 }
@@ -88,13 +87,13 @@ void DecrementItemSlotDurability(Unit* unit, int itemSlot, int amount){
 bool PopR_InitEquipmentBroke(void) {
 	// Check Active Unit
 	if (CheckIfEquipmentBroke(&gBattleActor)) {
-		SetPopupItem(GetUnitEquippedItem(&gBattleActor.unit).number);
+		SetPopupItem(GetUnitEquippedItem(&gBattleActor.unit) & 0xFF);
 		return true;
 	}
 
 	// Check Target Unit
-	if (CheckIfEquipmentBroke(&gBattleTarget)) {
-		SetPopupItem(GetUnitEquippedItem(&gBattleTarget.unit).number);
+	else if (CheckIfEquipmentBroke(&gBattleTarget)) {
+		SetPopupItem(GetUnitEquippedItem(&gBattleTarget.unit) & 0xFF);
 		return true;
 	}
 
@@ -149,7 +148,7 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 
 	UnitCheckStatCaps(unit);
 
-	int newWexp = GetBattleNewWEXP(battleUnit);
+	int newWexp = GetBattleUnitUpdatedWeaponExp(battleUnit);
 
 	if (newWexp > 0 && battleUnit->weaponType < 8){
 		unit->ranks[battleUnit->weaponType] = newWexp;
@@ -169,9 +168,9 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 	unit->items[4] = battleUnit->unit.items[4];
 
 	// Equipment
-	Item item = GetUnitEquippedItem(unit);
+	u16 item = GetUnitEquippedItem(unit);
 
-	if (item.number != 0){
+	if ((item & 0xFF) != 0){
 		int itemSlot = GetUnitEquippedItemSlot(unit);
 
 		if (IsItemOffenseEquipment(item)){
@@ -183,7 +182,7 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 	}
 	// Equipment
 
-	RemoveUnitBlankItems(unit);
+	UnitRemoveInvalidItems(unit);
 
 	if (battleUnit->expGain != 0){
 		BWL_AddExpGained(unit->pCharacterData->number, battleUnit->expGain);
