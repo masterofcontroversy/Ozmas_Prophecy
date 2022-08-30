@@ -1,8 +1,8 @@
 INLINE ClassSkillTable,Skill
 None,0x0
-Duke,0x0
-Lord,0x0
-Arch Duke,0x0
+Duke,SupplyID
+Lord,SupplyID
+Arch Duke,CantoID
 Great Lord,CantoID
 Cavalier,CantoID
 Cavalier_F,CantoID
