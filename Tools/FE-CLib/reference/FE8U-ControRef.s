@@ -24,6 +24,16 @@ SET_DATA gTempSkillBuffer, 0x02026B90
 SET_DATA gAuraSkillBuffer, 0x02027200
 SET_DATA gUnitRangeBuffer, 0x0202764C
 
+@ Equip
+SET_DATA idkAddr, 0x3003060
+
+SET_FUNC GetUnitMagic, (0x80191B8+1)
+
+SET_FUNC GetUnitMovement, (0x8019224+1)
+
+SET_FUNC GetUnitConstitution, (0x8019284+1)
+
+SET_FUNC ListItems, (0x8023550+1)
 
 @ MMB
 	SET_FUNC	FindProc,					(0x08002E9C+1)
@@ -841,8 +851,8 @@ SET_FUNC CopyUnit, 0x801781D
 SET_FUNC GetFreeUnit, 0x8017839
 SET_FUNC GetFreeBlueUnit, 0x8017871
 SET_FUNC GetUnitFogViewRange, 0x80178A9
-SET_FUNC SetUnitStatusExt, 0x80178D9
-SET_FUNC SetUnitStatusExt, 0x80178F5
+SET_FUNC SetUnitNewStatus, 0x80178D9
+SET_FUNC SetUnitStatus, 0x80178F5
 SET_FUNC GetUnitSMSId, 0x8017905
 SET_FUNC UnitAddItem, 0x8017949
 SET_FUNC ClearUnitInventory, 0x801796D

@@ -8,6 +8,7 @@
 typedef u16 Item;
 
 typedef struct ItemData ItemData;
+typedef struct ItemStatBonuses ItemStatBonuses;
 
 struct ItemStatBonuses
 {
@@ -20,6 +21,18 @@ struct ItemStatBonuses
 	s8 lckBonus;
 	s8 conBonus; // unused
 	s8 movBonus; // unused
+	s8 magBonus;
+	s8 hpGrowthBonus;
+	s8 powGrowthBonus;
+	s8 sklGrowthBonus;
+	s8 spdGrowthBonus;
+	s8 defGrowthBonus;
+	s8 resGrowthBonus;
+	s8 lckGrowthBonus;
+	s8 magGrowthBonus;
+	s8 movGrowthBonus;
+	s8 conGrowthBonus;
+	
 };
 
 struct ItemData

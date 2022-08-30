@@ -3,6 +3,8 @@
 
 #include "unit.h"
 
+typedef struct BattleStats BattleStats;
+
 enum {
 	// Battle-related magic constants
 
@@ -164,5 +166,7 @@ int GetStatIncrease(int growth); //! FE8U = 0x802B9A1
 
 int BattleUnit_ShouldDisplayWpnBroke(struct BattleUnit* bu); //! FE8U = 0x807A771
 int BattleUnit_ShouldDisplayWRankUp(struct BattleUnit* bu); //! FE8U = 0x802C1B1
+
+int GetBattleUnitUpdatedWeaponExp(struct BattleUnit* bu); //! FE8U = 0x802C0B5
 
 #endif // GBAFE_BATTLE_H
