@@ -997,8 +997,9 @@ Outdoor Fighter: +10 Hit and[N]
 Avo when fighting outdoors.[X]
 
 ## SD_TomeRangeUp
-Tome Range +1: Maximum range[N]
-of equipped tome is increased.[X]
+Distant Magic: Max tome range[NL]
+is at least 2.[NL]
+Does not apply to locked tomes.[X]
 
 ## SD_AlertStance
 Alert Stance: +15 Avo[N]

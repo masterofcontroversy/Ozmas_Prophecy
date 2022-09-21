@@ -55,6 +55,9 @@ Javelin[X]
 ## SpearName
 Spear[X]
 
+## GreatlanceName
+Greatlance[X]
+
 ## AxereaverName
 Axereaver[X]
 
@@ -233,6 +236,9 @@ Sash[X]
 So lucky, it grew[NL]
 in the middle of winter.[X]
 
+## GreatlanceDesc
++1 attack per space moved.[X]
+
 ## HPDrainDesc
 Restores HP equal to damage delt.[X]
 
@@ -261,19 +267,19 @@ Reverses and doubles weapon triangle.[X]
 Effective against infantry sword users.[X]
 
 ## HealDesc
-Recovers a little HP.[X]
+Restores 10 + mag HP to an ally.[X]
 
 ## MendDesc
-Recovers a lot of HP.[X]
+Restores 20 + mag HP to an ally.[X]
 
 ## RecoverDesc
-Recovers all HP.[X]
+Restores all HP to an ally.[X]
 
 ## PhysicDesc
-Heals from a distance.[X]
+Restores 10 + mag HP to a distant ally.[X]
 
 ## FortifyDesc
-Heals all allies in range.[X]
+Restores 10 + mag HP to nearby allies.[X]
 
 ## RestoreDesc
 Removes negative status effects.[X]

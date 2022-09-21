@@ -8,5 +8,16 @@ POP
 ALIGN 4
 DeathQuoteList:
 DeathQuoteEntry(Devan, 0xFF, 0xFF, 0x65, DevanDeathQuote, 0)
+DeathQuoteEntry(Alexandra, 0xFF, 0xFF, 0x65, AlexandraDeathQuote, 0)
+DeathQuoteEntry(Ronni, 0xFF, 0xFF, 0x0, RonniDeathQuote, 0)
+DeathQuoteEntry(Anthony, 0xFF, 0xFF, 0x0, AnthonyDeathQuote, 0)
+DeathQuoteEntry(Kenneth, 0xFF, 0xFF, 0x0, KennethDeathQuote, 0)
+DeathQuoteEntry(Evelyn, 0xFF, 0xFF, 0x0, EvelynDeathQuote, 0)
+DeathQuoteEntry(Absalom, 0xFF, 0xFF, 0x0, AbsalomDeathQuote, 0)
+DeathQuoteEntry(Holly, 0xFF, 0xFF, 0x0, HollyDeathQuote, 0)
+DeathQuoteEntry(Lucy, 0xFF, 0xFF, 0x0, LucyDeathQuote, 0)
+DeathQuoteEntry(Colton, 0xFF, 0xFF, 0x0, ColtonDeathQuote, 0)
+DeathQuoteEntry(Max, 0xFF, 0xFF, 0x0, MaxDeathQuote, 0)
+
 
 WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF //TERMINATOR

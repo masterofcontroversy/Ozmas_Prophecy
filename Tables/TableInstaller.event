@@ -38,8 +38,6 @@
 
 #include "NightmareModules/CharactersClasses/ClassTable.event"
 
-#include "NightmareModules/Misc/PromotionLevelList.event"
-
 #include "NightmareModules/Misc/ModularEXPClassTable.event"
 
 #include "NightmareModules/Misc/EscapeQuoteEditor.event"

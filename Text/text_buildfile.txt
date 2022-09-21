@@ -134,13 +134,6 @@ Second fort.[A][X]
 [MidRight][LoadFace][CurrentPortrait]
 Third fort.[A][X]
 
-## DevanDeathQuote
-[MidRight][LoadDevan]
-Congratulations.[NL]
-You managed to kill not only[A][NL]
-your lord, but your only tank.[NL]
-Try easy mode next time.[A][X]
-
 ## EquipEquipmentDescription
 Ready this equipment.[X]
 
@@ -151,6 +144,10 @@ Unequip[X]
 Remove this equipment.[X]
 
 #include "CharacterText/Names.txt"
+
+#include "CharacterText/Descriptions.txt"
+
+#include "CharacterText/DeathQuotes.txt"
 
 #include "ClassText.txt"
 

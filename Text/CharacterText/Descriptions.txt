@@ -1,0 +1,43 @@
+## DevanDesc
+The Cynical duke of Tristis Nivis.[NL]
+A quiet, but capable commander.[X]
+
+## RonniDesc
+A young huntress from Silva with[NL]
+jovial attitude. Devan's best friend.[X]
+
+## AnthonyDesc
+A miner who joined the army to support[NL]
+his family. Loves telling stories.[X]
+
+## KennethDesc
+A runaway from Tolva seeking[NL]
+to earn his knighthood.[X]
+
+## AlexandraDesc
+The crown princess of Tolva.[NL]
+Determined, but naive.[X]
+
+## EveylnDesc
+A dutiful Tolvan knight in service[NL]
+to Alexandra. Despises slackers.[X]
+
+## AbsalomDesc
+A laid-back soldier from Tolva.[NL]
+His happy attitude hides a dark past.[X]
+
+## HollyDesc
+A highly outspoken priestess[NL]
+willing to evangelize anyone.[X]
+
+## LucyDesc
+A gifted mage from Duramontis.[NL]
+Assertive, but cracks under pressure.[X]
+
+## ColtonDesc
+A thief with a sense for gold, and[NL]
+a better sense of self-preservation.[X]
+
+## MaxDesc
+A retired lord of Duramontis[NL]
+with many regrets.[X]
