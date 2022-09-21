@@ -6,922 +6,922 @@ SkillIcons:
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
 ORG SkillIcon(AcrobatID)
-#incbin "SkillIcons/Acrobat.dmp"
+#incbin "SkillIcons/Acrobat.4bpp"
 
 ORG SkillIcon(PassID)
-#incbin "SkillIcons/Pass.dmp"
+#incbin "SkillIcons/Pass.4bpp"
 
 ORG SkillIcon(CantoPlusID)
-#incbin "SkillIcons/CantoPlus.dmp"
+#incbin "SkillIcons/CantoPlus.4bpp"
 
 ORG SkillIcon(WaryFighterID)
-#incbin "SkillIcons/WaryFighter.dmp"
+#incbin "SkillIcons/WaryFighter.4bpp"
 
 ORG SkillIcon(SureShotID)
-#incbin "SkillIcons/SureShot.dmp"
+#incbin "SkillIcons/SureShot.4bpp"
 
 ORG SkillIcon(ProvokeID)
-#incbin "SkillIcons/Provoke.dmp"
+#incbin "SkillIcons/Provoke.4bpp"
 
 ORG SkillIcon(SaviorID)
-#incbin "SkillIcons/Savior.dmp"
+#incbin "SkillIcons/Savior.4bpp"
 
 ORG SkillIcon(MercyID)
-#incbin "SkillIcons/Mercy.dmp"
+#incbin "SkillIcons/Mercy.4bpp"
 
 ORG SkillIcon(FrenzyID)
-#incbin "SkillIcons/Frenzy.dmp"
+#incbin "SkillIcons/Frenzy.4bpp"
 
 ORG SkillIcon(AdeptID)
-#incbin "SkillIcons/Adept.dmp"
+#incbin "SkillIcons/Adept.4bpp"
 
 ORG SkillIcon(CantoID)
-#incbin "SkillIcons/Canto.dmp"
+#incbin "SkillIcons/Canto.4bpp"
 
 ORG SkillIcon(CunningID)
-#incbin "SkillIcons/Cunning.dmp"
+#incbin "SkillIcons/Cunning.4bpp"
 
 ORG SkillIcon(LethalityID)
-#incbin "SkillIcons/Lethality.dmp"
+#incbin "SkillIcons/Lethality.4bpp"
 
 ORG SkillIcon(LunaID)
-#incbin "SkillIcons/Luna.dmp"
+#incbin "SkillIcons/Luna.4bpp"
 
 ORG SkillIcon(SolID)
-#incbin "SkillIcons/Sol.dmp"
+#incbin "SkillIcons/Sol.4bpp"
 
 ORG SkillIcon(AetherID)
-#incbin "SkillIcons/Aether.dmp"
+#incbin "SkillIcons/Aether.4bpp"
 
 ORG SkillIcon(AstraID)
-#incbin "SkillIcons/Astra.dmp"
+#incbin "SkillIcons/Astra.4bpp"
 
 ORG SkillIcon(DisciplineID)
-#incbin "SkillIcons/Discipline.dmp"
+#incbin "SkillIcons/Discipline.4bpp"
 
 ORG SkillIcon(SwordbreakerID)
-#incbin "SkillIcons/Swordbreaker.dmp"
+#incbin "SkillIcons/Swordbreaker.4bpp"
 
 ORG SkillIcon(LancebreakerID)
-#incbin "SkillIcons/Lancebreaker.dmp"
+#incbin "SkillIcons/Lancebreaker.4bpp"
 
 ORG SkillIcon(AxebreakerID)
-#incbin "SkillIcons/Axebreaker.dmp"
+#incbin "SkillIcons/Axebreaker.4bpp"
 
 ORG SkillIcon(BowbreakerID)
-#incbin "SkillIcons/Bowbreaker.dmp"
+#incbin "SkillIcons/Bowbreaker.4bpp"
 
 ORG SkillIcon(TomebreakerID)
-#incbin "SkillIcons/Tomebreaker.dmp"
+#incbin "SkillIcons/Tomebreaker.4bpp"
 
 ORG SkillIcon(AegisID)
-#incbin "SkillIcons/Aegis.dmp"
+#incbin "SkillIcons/Aegis.4bpp"
 
 ORG SkillIcon(DuelistsBlowID)
-#incbin "SkillIcons/DuelistsBlow.dmp"
+#incbin "SkillIcons/DuelistsBlow.4bpp"
 
 ORG SkillIcon(DeathBlowID)
-#incbin "SkillIcons/DeathBlow.dmp"
+#incbin "SkillIcons/DeathBlow.4bpp"
 
 ORG SkillIcon(DartingBlowID)
-#incbin "SkillIcons/DartingBlow.dmp"
+#incbin "SkillIcons/DartingBlow.4bpp"
 
 ORG SkillIcon(WardingBlowID)
-#incbin "SkillIcons/WardingBlow.dmp"
+#incbin "SkillIcons/WardingBlow.4bpp"
 
 ORG SkillIcon(CertainBlowID)
-#incbin "SkillIcons/CertainBlow.dmp"
+#incbin "SkillIcons/CertainBlow.4bpp"
 
 ORG SkillIcon(ArmoredBlowID)
-#incbin "SkillIcons/ArmoredBlow.dmp"
+#incbin "SkillIcons/ArmoredBlow.4bpp"
 
 ORG SkillIcon(VantageID)
-#incbin "SkillIcons/Vantage.dmp"
+#incbin "SkillIcons/Vantage.4bpp"
 
 ORG SkillIcon(DesperationID)
-#incbin "SkillIcons/Desperation.dmp"
+#incbin "SkillIcons/Desperation.4bpp"
 
 ORG SkillIcon(WrathID)
-#incbin "SkillIcons/Wrath.dmp"
+#incbin "SkillIcons/Wrath.4bpp"
 
 ORG SkillIcon(CounterID)
-#incbin "SkillIcons/Counter.dmp"
+#incbin "SkillIcons/Counter.4bpp"
 
 ORG SkillIcon(CounterMagicID)
-#incbin "SkillIcons/CounterMagic.dmp"
+#incbin "SkillIcons/CounterMagic.4bpp"
 
 ORG SkillIcon(MiracleID)
-#incbin "SkillIcons/Miracle.dmp"
+#incbin "SkillIcons/Miracle.4bpp"
 
 ORG SkillIcon(SwordfaireID)
-#incbin "SkillIcons/Swordfaire.dmp"
+#incbin "SkillIcons/Swordfaire.4bpp"
 
 ORG SkillIcon(LancefaireID)
-#incbin "SkillIcons/Lancefaire.dmp"
+#incbin "SkillIcons/Lancefaire.4bpp"
 
 ORG SkillIcon(AxefaireID)
-#incbin "SkillIcons/Axefaire.dmp"
+#incbin "SkillIcons/Axefaire.4bpp"
 
 ORG SkillIcon(BowfaireID)
-#incbin "SkillIcons/Bowfaire.dmp"
+#incbin "SkillIcons/Bowfaire.4bpp"
 
 ORG SkillIcon(TomefaireID)
-#incbin "SkillIcons/Tomefaire.dmp"
+#incbin "SkillIcons/Tomefaire.4bpp"
 
 ORG SkillIcon(CritUpID)
-#incbin "SkillIcons/CritUp.dmp"
+#incbin "SkillIcons/CritUp.4bpp"
 
 ORG SkillIcon(SlayerID)
-#incbin "SkillIcons/Slayer.dmp"
+#incbin "SkillIcons/Slayer.4bpp"
 
 ORG SkillIcon(SummonID)
-#incbin "SkillIcons/Summon.dmp"
+#incbin "SkillIcons/Summon.4bpp"
 
 ORG SkillIcon(DanceID)
-#incbin "SkillIcons/Dance.dmp"
+#incbin "SkillIcons/Dance.4bpp"
 
 ORG SkillIcon(LifetakerID)
-#incbin "SkillIcons/Lifetaker.dmp"
+#incbin "SkillIcons/Lifetaker.4bpp"
 
 ORG SkillIcon(GaleforceID)
-#incbin "SkillIcons/Galeforce.dmp"
+#incbin "SkillIcons/Galeforce.4bpp"
 
 ORG SkillIcon(RenewalID)
-#incbin "SkillIcons/Renewal.dmp"
+#incbin "SkillIcons/Renewal.4bpp"
 
 ORG SkillIcon(NiceThighsID)
-#incbin "SkillIcons/NiceThighs.dmp"
+#incbin "SkillIcons/NiceThighs.4bpp"
 
 ORG SkillIcon(DemoiselleID)
-#incbin "SkillIcons/Demoiselle.dmp"
+#incbin "SkillIcons/Demoiselle.4bpp"
 
 ORG SkillIcon(GentilhommeID)
-#incbin "SkillIcons/Gentilhomme.dmp"
+#incbin "SkillIcons/Gentilhomme.4bpp"
 
 ORG SkillIcon(MaleficAuraID)
-#incbin "SkillIcons/MaleficAura.dmp"
+#incbin "SkillIcons/MaleficAura.4bpp"
 
 ORG SkillIcon(InspirationID)
-#incbin "SkillIcons/Inspiration.dmp"
+#incbin "SkillIcons/Inspiration.4bpp"
 
 ORG SkillIcon(CharmID)
-#incbin "SkillIcons/Charm.dmp"
+#incbin "SkillIcons/Charm.4bpp"
 
 ORG SkillIcon(VoiceOfPeaceID)
-#incbin "SkillIcons/VoiceOfPeace.dmp"
+#incbin "SkillIcons/VoiceOfPeace.4bpp"
 
 ORG SkillIcon(AmaterasuID)
-#incbin "SkillIcons/Amaterasu.dmp"
+#incbin "SkillIcons/Amaterasu.4bpp"
 
 ORG SkillIcon(SpurStrID)
-#incbin "SkillIcons/SpurStr.dmp"
+#incbin "SkillIcons/SpurStr.4bpp"
 
 ORG SkillIcon(SpurMagID)
-#incbin "SkillIcons/SpurMag.dmp"
+#incbin "SkillIcons/SpurMag.4bpp"
 
 ORG SkillIcon(SpurSpdID)
-#incbin "SkillIcons/SpurSpd.dmp"
+#incbin "SkillIcons/SpurSpd.4bpp"
 
 ORG SkillIcon(SpurDefID)
-#incbin "SkillIcons/SpurDef.dmp"
+#incbin "SkillIcons/SpurDef.4bpp"
 
 ORG SkillIcon(SpurResID)
-#incbin "SkillIcons/SpurRes.dmp"
+#incbin "SkillIcons/SpurRes.4bpp"
 
 ORG SkillIcon(NihilID)
-#incbin "SkillIcons/Nihil.dmp"
+#incbin "SkillIcons/Nihil.4bpp"
 
 ORG SkillIcon(NullifyID)
-#incbin "SkillIcons/Nullify.dmp"
+#incbin "SkillIcons/Nullify.4bpp"
 
 ORG SkillIcon(ParagonID)
-#incbin "SkillIcons/Paragon.dmp"
+#incbin "SkillIcons/Paragon.4bpp"
 
 ORG SkillIcon(ImpaleID)
-#incbin "SkillIcons/Impale.dmp"
+#incbin "SkillIcons/Impale.4bpp"
 
 ORG SkillIcon(ColossusID)
-#incbin "SkillIcons/Colossus.dmp"
+#incbin "SkillIcons/Colossus.4bpp"
 
 ORG SkillIcon(RallyStrID)
-#incbin "SkillIcons/RallyStr.dmp"
+#incbin "SkillIcons/RallyStr.4bpp"
 
 ORG SkillIcon(RallyMagID)
-#incbin "SkillIcons/RallyMag.dmp"
+#incbin "SkillIcons/RallyMag.4bpp"
 
 ORG SkillIcon(RallySklID)
-#incbin "SkillIcons/RallySkl.dmp"
+#incbin "SkillIcons/RallySkl.4bpp"
 
 ORG SkillIcon(RallySpdID)
-#incbin "SkillIcons/RallySpd.dmp"
+#incbin "SkillIcons/RallySpd.4bpp"
 
 ORG SkillIcon(RallyLukID)
-#incbin "SkillIcons/RallyLuk.dmp"
+#incbin "SkillIcons/RallyLuk.4bpp"
 
 ORG SkillIcon(RallyDefID)
-#incbin "SkillIcons/RallyDef.dmp"
+#incbin "SkillIcons/RallyDef.4bpp"
 
 ORG SkillIcon(RallyResID)
-#incbin "SkillIcons/RallyRes.dmp"
+#incbin "SkillIcons/RallyRes.4bpp"
 
 ORG SkillIcon(RallyMovID)
-#incbin "SkillIcons/RallyMov.dmp"
+#incbin "SkillIcons/RallyMov.4bpp"
 
 ORG SkillIcon(RallySpectrumID)
-#incbin "SkillIcons/RallySpectrum.dmp"
+#incbin "SkillIcons/RallySpectrum.4bpp"
 
 ORG SkillIcon(BowRangeUpID)
-#incbin "SkillIcons/BowRangeUp.dmp"
+#incbin "SkillIcons/BowRangeUp.4bpp"
 
 ORG SkillIcon(StaffSavantID)
-#incbin "SkillIcons/StaffSavant.dmp"
+#incbin "SkillIcons/StaffSavant.4bpp"
 
 ORG SkillIcon(LiveToServeID)
-#incbin "SkillIcons/LiveToServe.dmp"
+#incbin "SkillIcons/LiveToServe.4bpp"
 
 ORG SkillIcon(IgnisID)
-#incbin "SkillIcons/Ignis.dmp"
+#incbin "SkillIcons/Ignis.4bpp"
 
 ORG SkillIcon(LifeAndDeathID)
-#incbin "SkillIcons/LifeAndDeath.dmp"
+#incbin "SkillIcons/LifeAndDeath.4bpp"
 
 ORG SkillIcon(LockTouchID)
-#incbin "SkillIcons/LockTouch.dmp"
+#incbin "SkillIcons/LockTouch.4bpp"
 
 ORG SkillIcon(LungeID)
-#incbin "SkillIcons/Lunge.dmp"
+#incbin "SkillIcons/Lunge.4bpp"
 
 ORG SkillIcon(IntimidateID)
-#incbin "SkillIcons/Intimidate.dmp"
+#incbin "SkillIcons/Intimidate.4bpp"
 
 ORG SkillIcon(OpportunistID)
-#incbin "SkillIcons/Opportunist.dmp"
+#incbin "SkillIcons/Opportunist.4bpp"
 
 ORG SkillIcon(TrampleID)
-#incbin "SkillIcons/Trample.dmp"
+#incbin "SkillIcons/Trample.4bpp"
 
 ORG SkillIcon(CamaraderieID)
-#incbin "SkillIcons/Camaraderie.dmp"
+#incbin "SkillIcons/Camaraderie.4bpp"
 
 ORG SkillIcon(ForeignPrincessID)
-#incbin "SkillIcons/ForeignPrincess.dmp"
+#incbin "SkillIcons/ForeignPrincess.4bpp"
 
 ORG SkillIcon(SavageBlowID)
-#incbin "SkillIcons/SavageBlow.dmp"
+#incbin "SkillIcons/SavageBlow.4bpp"
 
 ORG SkillIcon(ReliefID)
-#incbin "SkillIcons/Relief.dmp"
+#incbin "SkillIcons/Relief.4bpp"
 
 ORG SkillIcon(TantivyID)
-#incbin "SkillIcons/Tantivy.dmp"
+#incbin "SkillIcons/Tantivy.4bpp"
 
 ORG SkillIcon(FocusID)
-#incbin "SkillIcons/Focus.dmp"
+#incbin "SkillIcons/Focus.4bpp"
 
 ORG SkillIcon(BondID)
-#incbin "SkillIcons/Bond.dmp"
+#incbin "SkillIcons/Bond.4bpp"
 
 ORG SkillIcon(AnathemaID)
-#incbin "SkillIcons/Anathema.dmp"
+#incbin "SkillIcons/Anathema.4bpp"
 
 ORG SkillIcon(LilysPoiseID)
-#incbin "SkillIcons/LilysPoise.dmp"
+#incbin "SkillIcons/LilysPoise.4bpp"
 
 ORG SkillIcon(ExpertiseID)
-#incbin "SkillIcons/Expertise.dmp"
+#incbin "SkillIcons/Expertise.4bpp"
 
 ORG SkillIcon(CelerityID)
-#incbin "SkillIcons/Celerity.dmp"
+#incbin "SkillIcons/Celerity.4bpp"
 
 ORG SkillIcon(FieryBloodID)
-#incbin "SkillIcons/FieryBlood.dmp"
+#incbin "SkillIcons/FieryBlood.4bpp"
 
 ORG SkillIcon(ElbowRoomID)
-#incbin "SkillIcons/ElbowRoom.dmp"
+#incbin "SkillIcons/ElbowRoom.4bpp"
 
 ORG SkillIcon(NaturalCoverID)
-#incbin "SkillIcons/NaturalCover.dmp"
+#incbin "SkillIcons/NaturalCover.4bpp"
 
 ORG SkillIcon(SealStrID)
-#incbin "SkillIcons/SealStr.dmp"
+#incbin "SkillIcons/SealStr.4bpp"
 
 ORG SkillIcon(SealSklID)
-#incbin "SkillIcons/SealSkl.dmp"
+#incbin "SkillIcons/SealSkl.4bpp"
 
 ORG SkillIcon(SealSpdID)
-#incbin "SkillIcons/SealSpd.dmp"
+#incbin "SkillIcons/SealSpd.4bpp"
 
 ORG SkillIcon(SealLukID)
-#incbin "SkillIcons/SealLuk.dmp"
+#incbin "SkillIcons/SealLuk.4bpp"
 
 ORG SkillIcon(SealDefID)
-#incbin "SkillIcons/SealDef.dmp"
+#incbin "SkillIcons/SealDef.4bpp"
 
 ORG SkillIcon(SealResID)
-#incbin "SkillIcons/SealRes.dmp"
+#incbin "SkillIcons/SealRes.4bpp"
 
 ORG SkillIcon(DragonsBloodID)
-#incbin "SkillIcons/DragonsBlood.dmp"
+#incbin "SkillIcons/DragonsBlood.4bpp"
 
 ORG SkillIcon(GambleID)
-#incbin "SkillIcons/Gamble.dmp"
+#incbin "SkillIcons/Gamble.4bpp"
 
 ORG SkillIcon(PersonalityID)
-#incbin "SkillIcons/Personality.dmp"
+#incbin "SkillIcons/Personality.4bpp"
 
 ORG SkillIcon(QuickDrawID)
-#incbin "SkillIcons/QuickDraw.dmp"
+#incbin "SkillIcons/QuickDraw.4bpp"
 
 ORG SkillIcon(WindDiscipleID)
-#incbin "SkillIcons/WindDisciple.dmp"
+#incbin "SkillIcons/WindDisciple.4bpp"
 
 ORG SkillIcon(StrongRiposteID)
-#incbin "SkillIcons/StrongRiposte.dmp"
+#incbin "SkillIcons/StrongRiposte.4bpp"
 
 ORG SkillIcon(PatienceID)
-#incbin "SkillIcons/Patience.dmp"
+#incbin "SkillIcons/Patience.4bpp"
 
 ORG SkillIcon(PursuitID)
-#incbin "SkillIcons/Pursuit.dmp"
+#incbin "SkillIcons/Pursuit.4bpp"
 
 ORG SkillIcon(LightWeightID)
-#incbin "SkillIcons/LightWeight.dmp"
+#incbin "SkillIcons/LightWeight.4bpp"
 
 ORG SkillIcon(KillingMachineID)
-#incbin "SkillIcons/KillingMachine.dmp"
+#incbin "SkillIcons/KillingMachine.4bpp"
 
 ORG SkillIcon(CriticalForceID)
-#incbin "SkillIcons/CriticalForce.dmp"
+#incbin "SkillIcons/CriticalForce.4bpp"
 
 ORG SkillIcon(ChivalryID)
-#incbin "SkillIcons/Chivalry.dmp"
+#incbin "SkillIcons/Chivalry.4bpp"
 
 ORG SkillIcon(PragmaticID)
-#incbin "SkillIcons/Pragmatic.dmp"
+#incbin "SkillIcons/Pragmatic.4bpp"
 
 ORG SkillIcon(ArmsthriftID)
-#incbin "SkillIcons/Armsthrift.dmp"
+#incbin "SkillIcons/Armsthrift.4bpp"
 
 ORG SkillIcon(MoonbowID)
-#incbin "SkillIcons/Moonbow.dmp"
+#incbin "SkillIcons/Moonbow.4bpp"
 
 ORG SkillIcon(ShoveID)
-#incbin "SkillIcons/Shove.dmp"
+#incbin "SkillIcons/Shove.4bpp"
 
 ORG SkillIcon(SmiteID)
-#incbin "SkillIcons/Smite.dmp"
+#incbin "SkillIcons/Smite.4bpp"
 
 ORG SkillIcon(BaneID)
-#incbin "SkillIcons/Bane.dmp"
+#incbin "SkillIcons/Bane.4bpp"
 
 ORG SkillIcon(DownWithArchID)
-#incbin "SkillIcons/DownWithArch.dmp"
+#incbin "SkillIcons/DownWithArch.4bpp"
 
 ORG SkillIcon(UpWithArchID)
-#incbin "SkillIcons/UpWithArch.dmp"
+#incbin "SkillIcons/UpWithArch.4bpp"
 
 ORG SkillIcon(RightfulArchID)
-#incbin "SkillIcons/RightfulArch.dmp"
+#incbin "SkillIcons/RightfulArch.4bpp"
 
 ORG SkillIcon(RightfulKingID)
-#incbin "SkillIcons/RightfulKing.dmp"
+#incbin "SkillIcons/RightfulKing.4bpp"
 
 ORG SkillIcon(RightfulGodID)
-#incbin "SkillIcons/RightfulGod.dmp"
+#incbin "SkillIcons/RightfulGod.4bpp"
 
 ORG SkillIcon(LuckySevenID)
-#incbin "SkillIcons/LuckySeven.dmp"
+#incbin "SkillIcons/LuckySeven.4bpp"
 
 ORG SkillIcon(OddRhythmID)
-#incbin "SkillIcons/OddRhythm.dmp"
+#incbin "SkillIcons/OddRhythm.4bpp"
 
 ORG SkillIcon(EvenRhythmID)
-#incbin "SkillIcons/EvenRhythm.dmp"
+#incbin "SkillIcons/EvenRhythm.4bpp"
 
 ORG SkillIcon(QuickBurnID)
-#incbin "SkillIcons/QuickBurn.dmp"
+#incbin "SkillIcons/QuickBurn.4bpp"
 
 ORG SkillIcon(SlowBurnID)
-#incbin "SkillIcons/SlowBurn.dmp"
+#incbin "SkillIcons/SlowBurn.4bpp"
 
 ORG SkillIcon(DespoilID)
-#incbin "SkillIcons/Despoil.dmp"
+#incbin "SkillIcons/Despoil.4bpp"
 
 ORG SkillIcon(PivotID)
-#incbin "SkillIcons/Pivot.dmp"
+#incbin "SkillIcons/Pivot.4bpp"
 
 ORG SkillIcon(RepositionID)
-#incbin "SkillIcons/Reposition.dmp"
+#incbin "SkillIcons/Reposition.4bpp"
 
 ORG SkillIcon(SwapID)
-#incbin "SkillIcons/Swap.dmp"
+#incbin "SkillIcons/Swap.4bpp"
 
 ORG SkillIcon(BreathOfLifeID)
-#incbin "SkillIcons/BreathOfLife.dmp"
+#incbin "SkillIcons/BreathOfLife.4bpp"
 
 ORG SkillIcon(FuryID)
-#incbin "SkillIcons/Fury.dmp"
+#incbin "SkillIcons/Fury.4bpp"
 
 ORG SkillIcon(DazzleID)
-#incbin "SkillIcons/Dazzle.dmp"
+#incbin "SkillIcons/Dazzle.4bpp"
 
 ORG SkillIcon(TriAdeptID)
-#incbin "SkillIcons/TriAdept.dmp"
+#incbin "SkillIcons/TriAdept.4bpp"
 
 ORG SkillIcon(SupplyID)
-#incbin "SkillIcons/Supply.dmp"
+#incbin "SkillIcons/Supply.4bpp"
 
 ORG SkillIcon(Roll12ID)
-#incbin "SkillIcons/Roll12.dmp"
+#incbin "SkillIcons/Roll12.4bpp"
 
 ORG SkillIcon(TraceID)
-#incbin "SkillIcons/Trace.dmp"
+#incbin "SkillIcons/Trace.4bpp"
 
 ORG SkillIcon(RandomMugID)
-#incbin "SkillIcons/RandomMug.dmp"
+#incbin "SkillIcons/RandomMug.4bpp"
 
 ORG SkillIcon(IdentityProblemsID)
-#incbin "SkillIcons/IdentityProblems.dmp"
+#incbin "SkillIcons/IdentityProblems.4bpp"
 
 ORG SkillIcon(CharismaID)
-#incbin "SkillIcons/Charisma.dmp"
+#incbin "SkillIcons/Charisma.4bpp"
 
 ORG SkillIcon(HeroesDeathBlowID)
-#incbin "SkillIcons/HeroesDeathBlow.dmp"
+#incbin "SkillIcons/HeroesDeathBlow.4bpp"
 
 ORG SkillIcon(HeroesLifeAndDeathID)
-#incbin "SkillIcons/HeroesLifeAndDeath.dmp"
+#incbin "SkillIcons/HeroesLifeAndDeath.4bpp"
 
 ORG SkillIcon(CatchEmAllID)
-#incbin "SkillIcons/CatchEmAll.dmp"
+#incbin "SkillIcons/CatchEmAll.4bpp"
 
 ORG SkillIcon(VantagePlusID)
-#incbin "SkillIcons/VantagePlus.dmp"
+#incbin "SkillIcons/VantagePlus.4bpp"
 
 ORG SkillIcon(HawkeyeID)
-#incbin "SkillIcons/Hawkeye.dmp"
+#incbin "SkillIcons/Hawkeye.4bpp"
 
 ORG SkillIcon(SolidarityID)
-#incbin "SkillIcons/Solidarity.dmp"
+#incbin "SkillIcons/Solidarity.4bpp"
 
 ORG SkillIcon(BracingStanceID)
-#incbin "SkillIcons/BracingStance.dmp"
+#incbin "SkillIcons/BracingStance.4bpp"
 
 ORG SkillIcon(DartingStanceID)
-#incbin "SkillIcons/DartingStance.dmp"
+#incbin "SkillIcons/DartingStance.4bpp"
 
 ORG SkillIcon(FierceStanceID)
-#incbin "SkillIcons/FierceStance.dmp"
+#incbin "SkillIcons/FierceStance.4bpp"
 
 ORG SkillIcon(KestrelStanceID)
-#incbin "SkillIcons/KestrelStance.dmp"
+#incbin "SkillIcons/KestrelStance.4bpp"
 
 ORG SkillIcon(MirrorStanceID)
-#incbin "SkillIcons/MirrorStance.dmp"
+#incbin "SkillIcons/MirrorStance.4bpp"
 
 ORG SkillIcon(ReadyStanceID)
-#incbin "SkillIcons/ReadyStance.dmp"
+#incbin "SkillIcons/ReadyStance.4bpp"
 
 ORG SkillIcon(SteadyStanceID)
-#incbin "SkillIcons/SteadyStance.dmp"
+#incbin "SkillIcons/SteadyStance.4bpp"
 
 ORG SkillIcon(SturdyStanceID)
-#incbin "SkillIcons/SturdyStance.dmp"
+#incbin "SkillIcons/SturdyStance.4bpp"
 
 ORG SkillIcon(SwiftStanceID)
-#incbin "SkillIcons/SwiftStance.dmp"
+#incbin "SkillIcons/SwiftStance.4bpp"
 
 ORG SkillIcon(WardingStanceID)
-#incbin "SkillIcons/WardingStance.dmp"
+#incbin "SkillIcons/WardingStance.4bpp"
 
 ORG SkillIcon(SpectrumStanceID)
-#incbin "SkillIcons/SpectrumStance.dmp"
+#incbin "SkillIcons/SpectrumStance.4bpp"
 
 ORG SkillIcon(StealID)
-#incbin "SkillIcons/Steal.dmp"
+#incbin "SkillIcons/Steal.4bpp"
 
 ORG SkillIcon(StealPlusID)
-#incbin "SkillIcons/StealPlus.dmp"
+#incbin "SkillIcons/StealPlus.4bpp"
 
 ORG SkillIcon(FortressDefenseID)
-#incbin "SkillIcons/FortressDefense.dmp"
+#incbin "SkillIcons/FortressDefense.4bpp"
 
 ORG SkillIcon(FortressResistanceID)
-#incbin "SkillIcons/FortressResistance.dmp"
+#incbin "SkillIcons/FortressResistance.4bpp"
 
 ORG SkillIcon(ForesightID)
-#incbin "SkillIcons/Foresight.dmp"
+#incbin "SkillIcons/Foresight.4bpp"
 
 ORG SkillIcon(AxefaithID)
-#incbin "SkillIcons/Axefaith.dmp"
+#incbin "SkillIcons/Axefaith.4bpp"
 
 ORG SkillIcon(ArmorMarchID)
-#incbin "SkillIcons/ArmorMarch.dmp"
+#incbin "SkillIcons/ArmorMarch.4bpp"
 
 ORG SkillIcon(VigorDanceID)
-#incbin "SkillIcons/VigorDance.dmp"
+#incbin "SkillIcons/VigorDance.4bpp"
 
 ORG SkillIcon(ForagerID)
-#incbin "SkillIcons/Forager.dmp"
+#incbin "SkillIcons/Forager.4bpp"
 
 ORG SkillIcon(FullMetalBodyID)
-#incbin "SkillIcons/FullMetalBody.dmp"
+#incbin "SkillIcons/FullMetalBody.4bpp"
 
 ORG SkillIcon(LiquidOozeID)
-#incbin "SkillIcons/LiquidOoze.dmp"
+#incbin "SkillIcons/LiquidOoze.4bpp"
 
 ORG SkillIcon(ShadowgiftID)
-#incbin "SkillIcons/Shadowgift.dmp"
+#incbin "SkillIcons/Shadowgift.4bpp"
 
 ORG SkillIcon(LuminaID)
-#incbin "SkillIcons/Lumina.dmp"
+#incbin "SkillIcons/Lumina.4bpp"
 
 ORG SkillIcon(DevilsLuckID)
-#incbin "SkillIcons/DevilsLuck.dmp"
+#incbin "SkillIcons/DevilsLuck.4bpp"
 
 ORG SkillIcon(DevilsPactID)
-#incbin "SkillIcons/DevilsPact.dmp"
+#incbin "SkillIcons/DevilsPact.4bpp"
 
 ORG SkillIcon(DevilsWhimID)
-#incbin "SkillIcons/DevilsWhim.dmp"
+#incbin "SkillIcons/DevilsWhim.4bpp"
 
 ORG SkillIcon(PoisonStrikeID)
-#incbin "SkillIcons/PoisonStrike.dmp"
+#incbin "SkillIcons/PoisonStrike.4bpp"
 
 ORG SkillIcon(GrislyWoundID)
-#incbin "SkillIcons/GrislyWound.dmp"
+#incbin "SkillIcons/GrislyWound.4bpp"
 
 ORG SkillIcon(HexID)
-#incbin "SkillIcons/Hex.dmp"
+#incbin "SkillIcons/Hex.4bpp"
 
 ORG SkillIcon(BarricadeID)
-#incbin "SkillIcons/Barricade.dmp"
+#incbin "SkillIcons/Barricade.4bpp"
 
 ORG SkillIcon(BarricadePlusID)
-#incbin "SkillIcons/BarricadePlus.dmp"
+#incbin "SkillIcons/BarricadePlus.4bpp"
 
 ORG SkillIcon(PointBlankID)
-#incbin "SkillIcons/PointBlank.dmp"
+#incbin "SkillIcons/PointBlank.4bpp"
 
 ORG SkillIcon(PerfectionistID)
-#incbin "SkillIcons/perfectionist.dmp"
+#incbin "SkillIcons/perfectionist.4bpp"
 
 ORG SkillIcon(PuissanceID)
-#incbin "SkillIcons/Puissance.dmp"
+#incbin "SkillIcons/Puissance.4bpp"
 
 ORG SkillIcon(BattleVeteranID)
-#incbin "SkillIcons/BattleVeteran.dmp"
+#incbin "SkillIcons/BattleVeteran.4bpp"
 
 ORG SkillIcon(HolyAuraID)
-#incbin "SkillIcons/HolyAura.dmp"
+#incbin "SkillIcons/HolyAura.4bpp"
 
 ORG SkillIcon(SilentPrideID)
-#incbin "SkillIcons/SilentPride.dmp"
+#incbin "SkillIcons/SilentPride.4bpp"
 
 ORG SkillIcon(LoyaltyID)
-#incbin "SkillIcons/Loyalty.dmp"
+#incbin "SkillIcons/Loyalty.4bpp"
 
 ORG SkillIcon(ThunderstormID)
-#incbin "SkillIcons/Thunderstorm.dmp"
+#incbin "SkillIcons/Thunderstorm.4bpp"
 
 ORG SkillIcon(OutriderID)
-#incbin "SkillIcons/Outrider.dmp"
+#incbin "SkillIcons/Outrider.4bpp"
 
 ORG SkillIcon(HeavyStrikesID)
-#incbin "SkillIcons/HeavyStrikes.dmp"
+#incbin "SkillIcons/HeavyStrikes.4bpp"
 
 ORG SkillIcon(ChargeID)
-#incbin "SkillIcons/Charge.dmp"
+#incbin "SkillIcons/Charge.4bpp"
 
 ORG SkillIcon(InfiltratorID)
-#incbin "SkillIcons/Infiltrator.dmp"
+#incbin "SkillIcons/Infiltrator.4bpp"
 
 ORG SkillIcon(VanityID)
-#incbin "SkillIcons/Vanity.dmp"
+#incbin "SkillIcons/Vanity.4bpp"
 
 ORG SkillIcon(MageSlayerID)
-#incbin "SkillIcons/MageSlayer.dmp"
+#incbin "SkillIcons/MageSlayer.4bpp"
 
 ORG SkillIcon(KnightAspirantID)
-#incbin "SkillIcons/KnightAspirant.dmp"
+#incbin "SkillIcons/KnightAspirant.4bpp"
 
 ORG SkillIcon(DisciplinePlusID)
-#incbin "SkillIcons/DisciplinePlus.dmp"
+#incbin "SkillIcons/DisciplinePlus.4bpp"
 
 ORG SkillIcon(WatchfulID)
-#incbin "SkillIcons/Watchful.dmp"
+#incbin "SkillIcons/Watchful.4bpp"
 
 ORG SkillIcon(HeroID)
-#incbin "SkillIcons/Hero.dmp"
+#incbin "SkillIcons/Hero.4bpp"
 
 ORG SkillIcon(BoonID)
-#incbin "SkillIcons/Boon.dmp"
+#incbin "SkillIcons/Boon.4bpp"
 
 ORG SkillIcon(ReMoveID)
-#incbin "SkillIcons/ReMove.dmp"
+#incbin "SkillIcons/ReMove.4bpp"
 
 ORG SkillIcon(PowerstaffID)
-#incbin "SkillIcons/Powerstaff.dmp"
+#incbin "SkillIcons/Powerstaff.4bpp"
 
 ORG SkillIcon(SealMagID)
-#incbin "SkillIcons/SealMag.dmp"
+#incbin "SkillIcons/SealMag.4bpp"
 
 ORG SkillIcon(DriveStrID)
-#incbin "SkillIcons/DriveStr.dmp"
+#incbin "SkillIcons/DriveStr.4bpp"
 
 ORG SkillIcon(DriveMagID)
-#incbin "SkillIcons/DriveMag.dmp"
+#incbin "SkillIcons/DriveMag.4bpp"
 
 ORG SkillIcon(DriveSpdID)
-#incbin "SkillIcons/DriveSpd.dmp"
+#incbin "SkillIcons/DriveSpd.4bpp"
 
 ORG SkillIcon(DriveDefID)
-#incbin "SkillIcons/DriveDef.dmp"
+#incbin "SkillIcons/DriveDef.4bpp"
 
 ORG SkillIcon(DriveResID)
-#incbin "SkillIcons/DriveRes.dmp"
+#incbin "SkillIcons/DriveRes.4bpp"
 
 ORG SkillIcon(BlossomID)
-#incbin "SkillIcons/Blossom.dmp"
+#incbin "SkillIcons/Blossom.4bpp"
 
 ORG SkillIcon(AptitudeID)
-#incbin "SkillIcons/Aptitude.dmp"
+#incbin "SkillIcons/Aptitude.4bpp"
 
 ORG SkillIcon(QuickRiposteID)
-#incbin "SkillIcons/QuickRiposte.dmp"
+#incbin "SkillIcons/QuickRiposte.4bpp"
 
 ORG SkillIcon(ResolveID)
-#incbin "SkillIcons/Resolve.dmp"
+#incbin "SkillIcons/Resolve.4bpp"
 
 ORG SkillIcon(InsightID)
-#incbin "SkillIcons/Insight.dmp"
+#incbin "SkillIcons/Insight.4bpp"
 
 ORG SkillIcon(VigilanceID)
-#incbin "SkillIcons/Vigilance.dmp"
+#incbin "SkillIcons/Vigilance.4bpp"
 
 ORG SkillIcon(DauntID)
-#incbin "SkillIcons/Daunt.dmp"
+#incbin "SkillIcons/Daunt.4bpp"
 
 ORG SkillIcon(BloodTideID)
-#incbin "SkillIcons/BloodTide.dmp"
+#incbin "SkillIcons/BloodTide.4bpp"
 
 ORG SkillIcon(WhitePoolID)
-#incbin "SkillIcons/WhitePool.dmp"
+#incbin "SkillIcons/WhitePool.4bpp"
 
 ORG SkillIcon(NightTideID)
-#incbin "SkillIcons/NightTide.dmp"
+#incbin "SkillIcons/NightTide.4bpp"
 
 ORG SkillIcon(PrescienceID)
-#incbin "SkillIcons/Prescience.dmp"
+#incbin "SkillIcons/Prescience.4bpp"
 
 ORG SkillIcon(DefiantAvoID)
-#incbin "SkillIcons/DefiantAvo.dmp"
+#incbin "SkillIcons/DefiantAvo.4bpp"
 
 ORG SkillIcon(DefiantCritID)
-#incbin "SkillIcons/DefiantCrit.dmp"
+#incbin "SkillIcons/DefiantCrit.4bpp"
 
 ORG SkillIcon(DefiantStrID)
-#incbin "SkillIcons/DefiantStr.dmp"
+#incbin "SkillIcons/DefiantStr.4bpp"
 
 ORG SkillIcon(DefiantMagID)
-#incbin "SkillIcons/DefiantMag.dmp"
+#incbin "SkillIcons/DefiantMag.4bpp"
 
 ORG SkillIcon(DefiantSklID)
-#incbin "SkillIcons/DefiantSkl.dmp"
+#incbin "SkillIcons/DefiantSkl.4bpp"
 
 ORG SkillIcon(DefiantSpdID)
-#incbin "SkillIcons/DefiantSpd.dmp"
+#incbin "SkillIcons/DefiantSpd.4bpp"
 
 ORG SkillIcon(DefiantLckID)
-#incbin "SkillIcons/DefiantLck.dmp"
+#incbin "SkillIcons/DefiantLck.4bpp"
 
 ORG SkillIcon(DefiantDefID)
-#incbin "SkillIcons/DefiantDef.dmp"
+#incbin "SkillIcons/DefiantDef.4bpp"
 
 ORG SkillIcon(DefiantResID)
-#incbin "SkillIcons/DefiantRes.dmp"
+#incbin "SkillIcons/DefiantRes.4bpp"
 
 ORG SkillIcon(BargainID)
-#incbin "SkillIcons/Bargain.dmp"
+#incbin "SkillIcons/Bargain.4bpp"
 
 ORG SkillIcon(ShortShieldID)
-#incbin "SkillIcons/ShortShield.dmp"
+#incbin "SkillIcons/ShortShield.4bpp"
 
 ORG SkillIcon(TowerShieldID)
-#incbin "SkillIcons/TowerShield.dmp"
+#incbin "SkillIcons/TowerShield.4bpp"
 
 ORG SkillIcon(TowerShieldPlusID)
-#incbin "SkillIcons/TowerShieldPlus.dmp"
+#incbin "SkillIcons/TowerShieldPlus.4bpp"
 
 ORG SkillIcon(VoidCurseID)
-#incbin "SkillIcons/VoidCurse.dmp"
+#incbin "SkillIcons/VoidCurse.4bpp"
 
 ORG SkillIcon(IndoorFighterID)
-#incbin "SkillIcons/IndoorFighter.dmp"
+#incbin "SkillIcons/IndoorFighter.4bpp"
 
 ORG SkillIcon(OutdoorFighterID)
-#incbin "SkillIcons/OutdoorFighter.dmp"
+#incbin "SkillIcons/OutdoorFighter.4bpp"
 
 ORG SkillIcon(TomeRangeUpID)
-#incbin "SkillIcons/TomeRangeUp.dmp"
+#incbin "SkillIcons/TomeRangeUp.4bpp"
 
 ORG SkillIcon(AlertStanceID)
-#incbin "SkillIcons/AlertStance.dmp"
+#incbin "SkillIcons/AlertStance.4bpp"
 
 ORG SkillIcon(AlertStancePlusID)
-#incbin "SkillIcons/AlertStancePlus.dmp"
+#incbin "SkillIcons/AlertStancePlus.4bpp"
 
 ORG SkillIcon(CoronaID)
-#incbin "SkillIcons/Corona.dmp"
+#incbin "SkillIcons/Corona.4bpp"
 
 ORG SkillIcon(FlareID)
-#incbin "SkillIcons/Flare.dmp"
+#incbin "SkillIcons/Flare.4bpp"
 
 ORG SkillIcon(TempestID)
-#incbin "SkillIcons/Tempest.dmp"
+#incbin "SkillIcons/Tempest.4bpp"
 
 ORG SkillIcon(SerenityID)
-#incbin "SkillIcons/Serenity.dmp"
+#incbin "SkillIcons/Serenity.4bpp"
 
 ORG SkillIcon(PetrifyID)
-#incbin "SkillIcons/Petrify.dmp"
+#incbin "SkillIcons/Petrify.4bpp"
 
 ORG SkillIcon(EnrageID)
-#incbin "SkillIcons/Enrage.dmp"
+#incbin "SkillIcons/Enrage.4bpp"
 
 ORG SkillIcon(PaviseID)
-#incbin "SkillIcons/Pavise.dmp"
+#incbin "SkillIcons/Pavise.4bpp"
 
 ORG SkillIcon(CaptureID)
-#incbin "SkillIcons/Capture.dmp"
+#incbin "SkillIcons/Capture.4bpp"
 
 ORG SkillIcon(BlackMagicID)
-#incbin "SkillIcons/BlackMagic.dmp"
+#incbin "SkillIcons/BlackMagic.4bpp"
 
 ORG SkillIcon(DeadeyeID)
-#incbin "SkillIcons/Deadeye.dmp"
+#incbin "SkillIcons/Deadeye.4bpp"
 
 ORG SkillIcon(DragonFangID)
-#incbin "SkillIcons/DragonFang.dmp"
+#incbin "SkillIcons/DragonFang.4bpp"
 
 ORG SkillIcon(FortuneID)
-#incbin "SkillIcons/Fortune.dmp"
+#incbin "SkillIcons/Fortune.4bpp"
 
 ORG SkillIcon(AssassinateID)
-#incbin "SkillIcons/Assassinate.dmp"
+#incbin "SkillIcons/Assassinate.4bpp"
 
 ORG SkillIcon(ArcaneBladeID)
-#incbin "SkillIcons/ArcaneBlade.dmp"
+#incbin "SkillIcons/ArcaneBlade.4bpp"
 
 ORG SkillIcon(PoiseID)
-#incbin "SkillIcons/Poise.dmp"
+#incbin "SkillIcons/Poise.4bpp"
 
 ORG SkillIcon(ResourcefulID)
-#incbin "SkillIcons/Resourceful.dmp"
+#incbin "SkillIcons/Resourceful.4bpp"
 
 ORG SkillIcon(CulturedID)
-#incbin "SkillIcons/Cultured.dmp"
+#incbin "SkillIcons/Cultured.4bpp"
 
 ORG SkillIcon(SkybreakerID)
-#incbin "SkillIcons/Skybreaker.dmp"
+#incbin "SkillIcons/Skybreaker.4bpp"
 
 ORG SkillIcon(ShadeID)
-#incbin "SkillIcons/Shade.dmp"
+#incbin "SkillIcons/Shade.4bpp"
 
 ORG SkillIcon(ShadePlusID)
-#incbin "SkillIcons/ShadePlus.dmp"
+#incbin "SkillIcons/ShadePlus.4bpp"
 
 ORG SkillIcon(BlueFlameID)
-#incbin "SkillIcons/BlueFlame.dmp"
+#incbin "SkillIcons/BlueFlame.4bpp"
 
 ORG SkillIcon(DoubleLionID)
-#incbin "SkillIcons/DoubleLion.dmp"
+#incbin "SkillIcons/DoubleLion.4bpp"
 
 ORG SkillIcon(PushStrID)
-#incbin "SkillIcons/PushStr.dmp"
+#incbin "SkillIcons/PushStr.4bpp"
 
 ORG SkillIcon(PushMagID)
-#incbin "SkillIcons/PushMag.dmp"
+#incbin "SkillIcons/PushMag.4bpp"
 
 ORG SkillIcon(PushSklID)
-#incbin "SkillIcons/PushSkl.dmp"
+#incbin "SkillIcons/PushSkl.4bpp"
 
 ORG SkillIcon(PushSpdID)
-#incbin "SkillIcons/PushSpd.dmp"
+#incbin "SkillIcons/PushSpd.4bpp"
 
 ORG SkillIcon(PushDefID)
-#incbin "SkillIcons/PushDef.dmp"
+#incbin "SkillIcons/PushDef.4bpp"
 
 ORG SkillIcon(PushResID)
-#incbin "SkillIcons/PushRes.dmp"
+#incbin "SkillIcons/PushRes.4bpp"
 
 ORG SkillIcon(LullStrID)
-#incbin "SkillIcons/LullStr.dmp"
+#incbin "SkillIcons/LullStr.4bpp"
 
 ORG SkillIcon(LullMagID)
-#incbin "SkillIcons/LullMag.dmp"
+#incbin "SkillIcons/LullMag.4bpp"
 
 ORG SkillIcon(LullSklID)
-#incbin "SkillIcons/LullSkl.dmp"
+#incbin "SkillIcons/LullSkl.4bpp"
 
 ORG SkillIcon(LullSpdID)
-#incbin "SkillIcons/LullSpd.dmp"
+#incbin "SkillIcons/LullSpd.4bpp"
 
 ORG SkillIcon(LullLckID)
-#incbin "SkillIcons/LullLck.dmp"
+#incbin "SkillIcons/LullLck.4bpp"
 
 ORG SkillIcon(LullResID)
-#incbin "SkillIcons/LullRes.dmp"
+#incbin "SkillIcons/LullRes.4bpp"
 
 ORG SkillIcon(LullDefID)
-#incbin "SkillIcons/LullDef.dmp"
+#incbin "SkillIcons/LullDef.4bpp"
 
 ORG SkillIcon(LullSpectrumID)
-#incbin "SkillIcons/LullSpectrum.dmp"
+#incbin "SkillIcons/LullSpectrum.4bpp"
 
 ORG SkillIcon(ImbueID)
-#incbin "SkillIcons/Imbue.dmp"
+#incbin "SkillIcons/Imbue.4bpp"
 
 ORG SkillIcon(ThotslayerID)
-#incbin "SkillIcons/Thotslayer.dmp"
+#incbin "SkillIcons/Thotslayer.4bpp"
 
 ORG SkillIcon(ThighdeologyID)
-#incbin "SkillIcons/Thighdeology.dmp"
+#incbin "SkillIcons/Thighdeology.4bpp"
 
 ORG SkillIcon(CorrosionID)
-#incbin "SkillIcons/Corrosion.dmp"
+#incbin "SkillIcons/Corrosion.4bpp"
 
 ORG SkillIcon(KeepUpID)
-#incbin "SkillIcons/KeepUp.dmp"
+#incbin "SkillIcons/KeepUp.4bpp"
 
 ORG SkillIcon(IndoorMarchID)
-#incbin "SkillIcons/IndoorMarch.dmp"
+#incbin "SkillIcons/IndoorMarch.4bpp"
 
 ORG SkillIcon(NatureRushID)
-#incbin "SkillIcons/NatureRush.dmp"
+#incbin "SkillIcons/NatureRush.4bpp"
 
 ORG SkillIcon(AmischeID)
-#incbin "SkillIcons/Amische.dmp"
+#incbin "SkillIcons/Amische.4bpp"
 
 ORG SkillIcon(GlaciesID)
-#incbin "SkillIcons/Glacies.dmp"
+#incbin "SkillIcons/Glacies.4bpp"
 
 ORG SkillIcon(GridmasterID)
-#incbin "SkillIcons/Gridmaster.dmp"
+#incbin "SkillIcons/Gridmaster.4bpp"
 
 ORG SkillIcon(TriAdeptPlusID)
-#incbin "SkillIcons/TriangleAdeptB.dmp"
+#incbin "SkillIcons/TriangleAdeptB.4bpp"
 
 ORG SkillIcon(GreatShieldID)
-#incbin "SkillIcons/GreatShield.dmp"
+#incbin "SkillIcons/GreatShield.4bpp"
 
 ORG SkillIcon(VengeanceID)
-#incbin "SkillIcons/Vengeance.dmp"
+#incbin "SkillIcons/Vengeance.4bpp"
 
 ORG SkillIcon(SynchronizeID)
-#incbin "SkillIcons/Synchronize.dmp"
+#incbin "SkillIcons/Synchronize.4bpp"
 
 ORG SkillIcon(SwarpID)
-#incbin "SkillIcons/Swarp.dmp"
+#incbin "SkillIcons/Swarp.4bpp"
 
 ORG SkillIcon(EclipseID)
-#incbin "SkillIcons/Eclipse.dmp"
+#incbin "SkillIcons/Eclipse.4bpp"
 
 ORG SkillIcon(MoonlightID)
-#incbin "SkillIcons/Moonlight.dmp"
+#incbin "SkillIcons/Moonlight.4bpp"
 
 ORG SkillIcon(ChargePlusID)
-#incbin "SkillIcons/ChargePlus.dmp"
+#incbin "SkillIcons/ChargePlus.4bpp"
 
 ORG SkillIcon(SkyguardID)
-#incbin "SkillIcons/Skyguard.dmp"
+#incbin "SkillIcons/Skyguard.4bpp"
 
 ORG SkillIcon(HorseguardID)
-#incbin "SkillIcons/Horseguard.dmp"
+#incbin "SkillIcons/Horseguard.4bpp"
 
 ORG SkillIcon(ArmorboostID)
-#incbin "SkillIcons/Armorboost.dmp"
+#incbin "SkillIcons/Armorboost.4bpp"
 
 ORG SkillIcon(TriangleAttackID)
-#incbin "SkillIcons/TriangleAttack.dmp"
+#incbin "SkillIcons/TriangleAttack.4bpp"
 
 ORG SkillIcon(HeavyBladeID)
-#incbin "SkillIcons/HeavyBlade.dmp"
+#incbin "SkillIcons/HeavyBlade.4bpp"
 
 ORG SkillIcon(DancingBladeID)
-#incbin "SkillIcons/DancingBlade.dmp"
+#incbin "SkillIcons/DancingBlade.4bpp"
 
 ORG SkillIcon(WindBoostID)
-#incbin "SkillIcons/WindBoost.dmp"
+#incbin "SkillIcons/WindBoost.4bpp"
 
 ORG SkillIcon(WaterBoostID)
-#incbin "SkillIcons/WaterBoost.dmp"
+#incbin "SkillIcons/WaterBoost.4bpp"
 
 ORG SkillIcon(EarthBoostID)
-#incbin "SkillIcons/EarthBoost.dmp"
+#incbin "SkillIcons/EarthBoost.4bpp"
 
 ORG SkillIcon(FireBoostID)
-#incbin "SkillIcons/FireBoost.dmp"
+#incbin "SkillIcons/FireBoost.4bpp"
 
 ORG SkillIcons+0x8000
 
