@@ -9,7 +9,7 @@ SnowSkyConfig:
 
 ALIGN 4
 SnowSkyPalette:
-#incbin "Tilesets/SnowSky/SnowSky.pal"
+#incbin "Tilesets/SnowSky/SnowSkyObjects.pal"
 
 //SnowFields
 ALIGN 4

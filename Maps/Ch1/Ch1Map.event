@@ -26,6 +26,6 @@ ALIGN 4
 MapData:
   #incbin "Ch1Map_data.dmp"
 
-SetChapterData(0x0, SnowSkyObjectID, 0, SnowSkyPaletteID, SnowSkyConfigID, 0x4, MapData, 0, 0, 0)
+SetChapterData(0x0, SnowSkyObjectID, 0, SnowSkyPaletteID, SnowSkyConfigID, 0x4, MapData, SnowFieldsAnimationID, SnowFieldsAnim2ID, 0)
 
 }
