@@ -16,9 +16,6 @@
 //Steal with full inventory
 #include "ASM/StealWithFullInv/Installer.event"
 
-//Res terrain window
-#include "ASM/ResTerrainWindow/Installer.event"
-
 //Modular Minimug Box
 #include "ASM/ModularMinimugBox/Installers/MMBInstallerBpat2.event"
 
@@ -36,9 +33,6 @@
 
 //Terrain Window
 #include "C/TerrainWindow/TerrainWindow.lyn.event"
-
-//ItemHealAmount
-#include "C/ItemHealAmount/ItemHealAmount.lyn.event"
 
 //GroupAI
 #include "ASM/GroupAI/GroupAI.event"
