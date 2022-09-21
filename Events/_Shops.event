@@ -11,3 +11,7 @@ SHLI IronSword IronBlade IronLance Javelin IronAxe HandAxe IronBow Fire Lightnin
 ALIGN 4
 Chap3ArmoryList:
 SHLI SteelSword SteelBlade SteelLance Greatlance Javelin SteelAxe Hammer HandAxe SteelBow Longbow
+
+ALIGN 4
+Chap3VendorList:
+SHLI Vulnerary PureWater RoundShield Thunder

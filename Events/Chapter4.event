@@ -39,16 +39,17 @@ ALIGN 4
 TurnBasedEvents:
 TurnEventPlayer(0, CallThief, 4)
 TurnEventPlayer(0, CallReinforcements_1, 5)
-TurnEventPlayer(Reinforcements2_Completion_Flag, CallReinforcements_2, 0, 256)
+TurnEventPlayer(Reinforcements2_Completion_Flag, CallReinforcements_2, 1, 255)
+TurnEventPlayer(0, RandomSnowEvent, 1, 255)
 END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
 Seize(15,1)
 Door(2,1)
-Chest(Flagpole,9,5)
-Chest(KillingEdge,12,4)
-Chest(Greatlance,0,6)
+Chest(KillingEdge,9,5)
+Chest(Sash,12,4)
+Chest(Flagpole,0,6)
 END_MAIN
 
 CharacterBasedEvents:
@@ -143,7 +144,7 @@ UNIT Ronni BowKnight_F Devan Level(1,Player,0) [4,0] 0x0 0x0 0x0 0x1 [IronBow, H
 UNIT //Tells the game that the unit list has ended
 
 EnemyUnits:
-UNIT Bazba Hero Bazba Level(3,Enemy,0) [15,1] 0x0 0x0 0x0 0x1 [SteelBlade, HandAxe] NeverMoveAI
+UNIT Bazba Hero Bazba Level(6,Enemy,0) [15,1] 0x0 0x0 0x0 0x1 [SteelBlade, HandAxe] NeverMoveAI
 
 //Southern welcoming committee
 UNIT 0x80 Archer Bazba Level(4,Enemy,1) [10,16] 0x0 0x0 0x0 0x1 [IronBow] AttackInRangeAI

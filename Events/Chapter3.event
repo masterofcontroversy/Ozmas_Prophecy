@@ -38,6 +38,7 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventPlayer(0, RandomSnowEvent, 1, 255)
 TurnEventPlayer(0, CallBandits_1, 3)
 TurnEventPlayer(0, CallBandits_2, 4)
 
@@ -45,10 +46,11 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
-Village(VillageID1,DummyEvent,1,15)
-Village(VillageID2,DummyEvent,14,9)
-Village(VillageID3,DummyEvent,16,1)
+Village(VillageID1,Village1Event,1,15)
+Village(VillageID2,Village2Event,14,9)
+Village(VillageID3,Village3Event,16,1)
 Armory(Chap3ArmoryList,17,13)
+Vendor(Chap3VendorList,2,6)
 END_MAIN
 
 CharacterBasedEvents:
@@ -78,8 +80,20 @@ EndingScene:
 MNC2 0x3
 ENDA
 
-DummyEvent:
-NoFade
+Village1Event:
+//Text
+SetGold(2000)
+GiveGold
+ENDA
+
+Village2Event:
+//Text
+GiveItem(Hammer, ACTIVEUNIT)
+ENDA
+
+Village3Event:
+//Text
+GiveItem(Elixir, ACTIVEUNIT)
 ENDA
 
 PlayerUnits:
@@ -127,7 +141,7 @@ UNIT 0x80 Fighter Bone Level(3,Enemy,1) [2,17] 0x0 0x0 0x0 0x1 [IronAxe] AttackI
 UNIT 0x80 Mage Bone Level(3,Enemy,1) [0,16] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
 
 //Around the inn
-UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [10,13] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [10,13] 0x0 0x0 0x0 0x1 [SteelLance] NeverMoveAI
 UNIT 0x80 Myrmidon Bone Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
 UNIT 0x80 Fighter Bone Level(3,Enemy,1) [13,14] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
 UNIT 0x80 Archer Bone Level(3,Enemy,1) [11,10] 0x0 0x0 0x0 0x1 [SteelBow] AttackInRangeAI
@@ -135,7 +149,7 @@ UNIT 0x80 Archer Bone Level(3,Enemy,1) [11,10] 0x0 0x0 0x0 0x1 [SteelBow] Attack
 
 /*Stationaries*/
 UNIT 0x80 Soldier Bone Level(3,Enemy,1) [12,3] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
-UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [12,4] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+UNIT 0x80 ArmorKnight Bone Level(3,Enemy,1) [12,4] 0x0 0x0 0x0 0x1 [SteelLance] NeverMoveAI
 
 UNIT 0x80 Shaman Bone Level(3,Enemy,1) [6,9] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
 UNIT 0x80 Fighter Bone Level(3,Enemy,1) [7,9] 0x0 0x0 0x0 0x1 [HandAxe] NeverMoveAI
@@ -149,7 +163,7 @@ UNIT 0x80 DracoRider Bone Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x1 [IronLance] M
 UNIT
 
 LucyUnit:
-UNIT Lucy Mage_F Devan Level(3,Player,0) [7,3] 0x0 0x0 0x0 0x1 [Fire] NoAI
+UNIT Lucy Mage_F Devan Level(3,Player,0) [7,3] 0x0 0x0 0x0 0x1 [Fire, KiteShield] NoAI
 
 UNIT
 

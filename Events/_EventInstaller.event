@@ -35,7 +35,7 @@ RandomSnowEvent:
 //Random chance to start/stop snow
 COUNTER_CHECK s7
 SADD s1 sC s0
-RANDOMNUMBER 6
+RANDOMNUMBER 5
 BLT 0x9000 s1 sC
 //Check if it's already snowing
 ASMC CheckWeather|1
@@ -46,7 +46,7 @@ COUNTER_SET s7 0
 GOTO 0x9001
 
 LABEL 0x9002
-WEATHER SnowStorm
+WEATHER Clear
 COUNTER_SET s7 0
 GOTO 0x9001
 
@@ -58,6 +58,9 @@ LABEL 0x9001
 NoFade
 ENDA
 
+DummyEvent:
+NoFade
+ENDA
 
 //ChapterJumpEvents
 #ifdef __DEBUG__
@@ -89,7 +92,7 @@ UNIT Alexandra Lord Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Ra
 UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
 UNIT Absalom Fighter Alexandra Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
 
-UNIT Holly Cleric Devan Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Mend, Sleep] NoAI
+UNIT Holly Cleric Devan Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Heal] NoAI
 
 UNIT
 
