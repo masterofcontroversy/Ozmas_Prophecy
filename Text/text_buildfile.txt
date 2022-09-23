@@ -115,24 +115,12 @@ Cost[X]
 A scroll that teaches[N]
 a skill when used.[X]
 
+## ShieldTypeText
+Shield[X]
+
 #include "skilldesc_text.txt"
 
 #include "unitinfo_text.txt"
-
-## CaptureFortsGoalText
-Capture forts[X]
-
-## FirstFortText
-[MidRight][LoadFace][CurrentPortrait]
-First fort.[A][X]
-
-## SecondFortText
-[MidRight][LoadFace][CurrentPortrait]
-Second fort.[A][X]
-
-## ThirdFortText
-[MidRight][LoadFace][CurrentPortrait]
-Third fort.[A][X]
 
 ## EquipEquipmentDescription
 Ready this equipment.[X]

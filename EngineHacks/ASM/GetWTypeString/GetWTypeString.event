@@ -11,10 +11,10 @@ WeaponTypeTextIDTable:
 /*02*/ SHORT 0x0507
 /*03*/ SHORT 0x0508
 /*04*/ SHORT 0x0509
-/*05*/ SHORT StormTypeText
-/*06*/ SHORT TundraTypeText
-/*07*/ SHORT MagmaTypeText
+/*05*/ SHORT 0x050A
+/*06*/ SHORT 0x050B
+/*07*/ SHORT 0x050C
 /*08*/ SHORT 0x050D
-/*09*/ SHORT 0x050E
+/*09*/ SHORT ShieldTypeText
 /*0A*/ SHORT 0x050F
-/*0B*/ SHORT LightTypeText
+/*0B*/ SHORT 0x0510

@@ -2,6 +2,8 @@
 ALIGN 4
 
 #include "src/Equip.lyn.event"
+#include "src/Addons/ShieldPreview.lyn.event"
+#include "src/Addons/ShieldPreviewWrapper.lyn.event"
 
 ALIGN 4
 EquipmentList:
@@ -59,6 +61,12 @@ add POIN GetEquipmentSkill to both skillTesterOriginal lit pools in Internals/Sk
 /*
 Add POIN IncrementAttackCount to battle proc loop
 */
+
+//Shield Preview
+PUSH
+ORG $1E800
+jumpToHack(ShieldPreviewWrapper)
+POP
 
 // Battle Struct: Changing STRB on 0x7E to STRH to also clear 0x7F
 PUSH

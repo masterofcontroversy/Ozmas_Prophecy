@@ -2483,6 +2483,7 @@ SET_FUNC StatScreenBGVPosManager_Loop, 0x8088921
 SET_FUNC StartStatScreen, 0x808894D
 SET_FUNC StartStatScreenHelpTextBubble, 0x80889A1
 SET_FUNC StartHelpTextBubble, 0x8089165
+SET_FUNC GetItemHelpTextType, 0x80892D1
 SET_FUNC Loop6C_8A00B20_UpdateOAMData, 0x808948D
 SET_FUNC LoadChapterTitleGfx, 0x8089625
 SET_FUNC LoadDialogueBoxGfx, 0x8089805

@@ -16,6 +16,9 @@
 //Steal with full inventory
 #include "ASM/StealWithFullInv/Installer.event"
 
+//Weapon type strings
+#include "ASM/GetWTypeString/GetWTypeString.event"
+
 //Modular Minimug Box
 #include "ASM/ModularMinimugBox/Installers/MMBInstallerBpat2.event"
 
@@ -31,8 +34,8 @@
 //Modular Goal Window
 #include "C/ModularGoalWindow/MGW.event"
 
-//Terrain Window
-#include "C/TerrainWindow/TerrainWindow.lyn.event"
+//Item R Text type
+#include "C/RTextType/RTextType.lyn.event"
 
 //GroupAI
 #include "ASM/GroupAI/GroupAI.event"

@@ -74,7 +74,7 @@ void DrawGoalWindow(GoalWindowProc* proc) {
 }
 
 //Ease of use function for inserting numbers in textHandles
-void InsertNumber(TextHandle* handle, int xCursor, int color, int number) {
+static void InsertNumber(TextHandle* handle, int xCursor, int color, int number) {
     Text_SetXCursor(handle, xCursor); //XCursor is how far to the right your text is located
     Text_SetColorId(handle, color);   //Color of the text
     Text_DrawNumber(handle, number);  //Adding number text to the text handle

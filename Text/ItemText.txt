@@ -160,51 +160,6 @@ Void[X]
 ## BlackHoleName
 Black Hole[X]
 
-## HealName
-Heal[X]
-
-## MendName
-Mend[X]
-
-## RecoverName
-Recover[X]
-
-## PhysicName
-Physic[X]
-
-## FortifyName
-Fortify[X]
-
-## RestoreName
-Restore[X]
-
-## SilenceName
-Silence[X]
-
-## SleepName
-Sleep[X]
-
-## BerserkName
-Berserk[X]
-
-## WarpName
-Warp[X]
-
-## RescueName
-Rescue[X]
-
-## TorchName
-Torch[X]
-
-## HammerneName
-Hammerne[X]
-
-## UnlockName
-Unlock[X]
-
-## BarrierName
-Barrier[X]
-
 ## RoundShieldName
 Round Shield[X]
 

@@ -57,42 +57,45 @@ CalcHit:
 .type CalcAS, %function
 
 CalcAS:
-    push {r4-r6, lr}
+    push {r4-r5, lr}
     mov  r4, r0
     add  r0, #0x4A
     ldrh r0, [r0]
 
-    @save the item data for later
-    mov  r5, r0
-
     blh  GetItemWeight, r3
 
-    @save the item weight for later
-    mov  r6, r0
+    @save the weapon weight for later
+    mov  r5, r0
 
-    @r4=attacker data, r5=equipped weapon before use, r6=weapon weight
+    @get equipped item weight
+    mov  r0, r4
+    blh  GetUnitEquippedItem, r3
+    blh  GetItemWeight, r3
+    add  r5, r0
 
-    SubtractWeight:
-    @get unit's speed
-    mov  r0, r6
-    mov  r1, r4
-    mov  r2, #0x0
-    add  r1, #0x16
-    ldsb r1, [r1, r2]
+    @subtract weight from constitution
+    mov  r0, #0x1A
+    ldsb r0, [r4, r0] @con bonus
+    sub  r5, r0
+    cmp  r5, #0x0
+    @floor con
+    bge  SubAS
+    mov  r5, #0x0
 
-    @subtract weight from speed, and floor it at 0
-    sub  r0, r1, r0
+    @subtract excess weight from speed
+    SubAS:
+    mov  r0, #0x16
+    ldsb r0, [r4, r0] @speed
+    sub  r0, r5
     cmp  r0, #0x0
     bge  StoreAS
-        mov  r0, #0x0
+    mov  r0, #0x0
 
-    @store the result in the unit's AS
     StoreAS:
     mov  r1, #0x5E
-    add  r1, r4
-    strh r0, [r1]
+    strh r0, [r4, r1]
 
-    pop  {r4-r6}
+    pop  {r4-r5}
     pop  {r0}
     bx   r0
 
