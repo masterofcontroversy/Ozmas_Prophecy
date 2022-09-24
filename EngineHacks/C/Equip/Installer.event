@@ -2,8 +2,8 @@
 ALIGN 4
 
 #include "src/Equip.lyn.event"
-#include "src/Addons/ShieldPreview.lyn.event"
-#include "src/Addons/ShieldPreviewWrapper.lyn.event"
+#include "src/Addons/EquipPreview/EquipPreview.lyn.event"
+#include "src/Addons/EquipPreview/EquipPreviewWrapper.lyn.event"
 
 ALIGN 4
 EquipmentList:
@@ -65,7 +65,7 @@ Add POIN IncrementAttackCount to battle proc loop
 //Shield Preview
 PUSH
 ORG $1E800
-jumpToHack(ShieldPreviewWrapper)
+jumpToHack(EquipPreviewWrapper)
 POP
 
 // Battle Struct: Changing STRB on 0x7E to STRH to also clear 0x7F

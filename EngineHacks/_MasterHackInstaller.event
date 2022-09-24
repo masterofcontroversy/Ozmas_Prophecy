@@ -34,9 +34,6 @@
 //Modular Goal Window
 #include "C/ModularGoalWindow/MGW.event"
 
-//Item R Text type
-#include "C/RTextType/RTextType.lyn.event"
-
 //GroupAI
 #include "ASM/GroupAI/GroupAI.event"
 

@@ -2,20 +2,13 @@
 
 extern void SetupBattleStructUnitWeapon(Unit* unit, u16 item);
 
-/*
-* Check if unit can use shield to decide text color.
-* Set up a temp battle struct to put new changes on for comparison.
-* Apply numbers and place text.
-* Set arrows accordingly.
-*/
-
 static void InsertNumber(TextHandle* handle, int xCursor, int color, int number) {
     Text_SetXCursor(handle, xCursor); //XCursor is how far to the right your text is located
     Text_SetColorId(handle, color);   //Color of the text
     Text_DrawNumber(handle, number);  //Adding number text to the text handle
 }
 
-void MakeShieldPreview(Unit* unit, u16 item) {
+void MakeEquipPreview(Unit* unit, u16 item) {
     //Always equip for preview
     bool UnitNotEquipped = (unit->state & US_UNEQUIPMENT);
 	unit->state &= ~US_UNEQUIPMENT;
@@ -30,9 +23,9 @@ void MakeShieldPreview(Unit* unit, u16 item) {
 		.tileWidth = 12
 	};
 	Text_Clear(&topHandle);
-	Text_InsertString(&topHandle, 0x2, TEXT_COLOR_NORMAL, "Atk");
+	Text_InsertString(&topHandle, 0x2, TEXT_COLOR_NORMAL, GetStringFromIndex(0x04F3)); // attack
 	InsertNumber(&topHandle, 0x24, TEXT_COLOR_BLUE, gBattleActor.battleAttack);
-    Text_InsertString(&topHandle, 0x32, TEXT_COLOR_NORMAL, "Crit");
+    Text_InsertString(&topHandle, 0x32, TEXT_COLOR_NORMAL, GetStringFromIndex(0x501)); // crit
 	InsertNumber(&topHandle, 0x54, TEXT_COLOR_BLUE, gBattleActor.battleCritRate);
 	Text_Display(&topHandle, gBg0MapBuffer + TILEMAP_INDEX(16, 14));
 
@@ -41,9 +34,9 @@ void MakeShieldPreview(Unit* unit, u16 item) {
 		.tileWidth = 12
 	};
     Text_Clear(&bottomHandle);
-	Text_InsertString(&bottomHandle, 0x2, TEXT_COLOR_NORMAL, "Hit");
+	Text_InsertString(&bottomHandle, 0x2, TEXT_COLOR_NORMAL, GetStringFromIndex(0x4F4)); // hit
 	InsertNumber(&bottomHandle, 0x24, TEXT_COLOR_BLUE, gBattleActor.battleHitRate);
-    Text_InsertString(&bottomHandle, 0x32, TEXT_COLOR_NORMAL, "Avoid");
+    Text_InsertString(&bottomHandle, 0x32, TEXT_COLOR_NORMAL, GetStringFromIndex(0x04F5)); // avoid
 	InsertNumber(&bottomHandle, 0x54, TEXT_COLOR_BLUE, gBattleActor.battleAvoidRate);
     Text_Display(&bottomHandle, gBg0MapBuffer + TILEMAP_INDEX(16, 16));
 

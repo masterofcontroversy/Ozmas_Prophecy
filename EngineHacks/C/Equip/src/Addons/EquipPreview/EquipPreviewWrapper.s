@@ -10,15 +10,15 @@
 .equ GetItemUseDescTextIndex,0x8017531
 .equ String_GetFromIndex,0x800a241
 
-.global ShieldPreviewWrapper
-.type ShieldPreviewWrapper, %function
+.global EquipPreviewWrapper
+.type EquipPreviewWrapper, %function
 
 @r4=item short
-ShieldPreviewWrapper: @hook at 801E800
+EquipPreviewWrapper: @hook at 801E800
     mov r0, r4
     blh IsItemEquipment
     cmp r0, #0x0
-    bne ShieldPreview
+    bne EquipPreview
 
     @do vanilla thing
 	VanillaReturn:
@@ -33,10 +33,10 @@ ShieldPreviewWrapper: @hook at 801E800
     .ltorg
     .align
 
-    ShieldPreview:
+    EquipPreview:
     mov r0, r9
     mov r1, r4
-    blh MakeShieldPreview
+    blh MakeEquipPreview
 
 	ldr r3,=0x801EA1D @return location
 	

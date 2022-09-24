@@ -2,15 +2,15 @@
 
 ALIGN 4
 RoundShieldBonus:
-StatBonus(0,0,0,0,(-1),2,0,0,0,0)
+StatBonus(0,0,0,0,0,2,0,0,0,0)
 
 ALIGN 4
 KiteShieldBonus:
-StatBonus(0,0,0,0,(-2),4,0,0,0,0)
+StatBonus(0,0,0,0,0,4,0,0,0,0)
 
 ALIGN 4
 GreatshieldBonus:
-StatBonus(0,0,0,0,(-4),6,0,0,0,0)
+StatBonus(0,0,0,0,0,6,0,0,0,0)
 
 ALIGN 4
 SashBonus:
