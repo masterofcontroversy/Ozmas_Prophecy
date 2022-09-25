@@ -2487,6 +2487,7 @@ SET_FUNC GetItemHelpTextType, 0x80892D1
 SET_FUNC Loop6C_8A00B20_UpdateOAMData, 0x808948D
 SET_FUNC LoadChapterTitleGfx, 0x8089625
 SET_FUNC LoadDialogueBoxGfx, 0x8089805
+SET_FUNC SetupWeaponHelpText, 0x8089C41
 SET_FUNC SetDialogueBoxConfig, 0x808A519
 SET_FUNC GetDialogueBoxConfig, 0x808A525
 SET_FUNC BoxDialogueInterpreter_Main, 0x808B179
@@ -3335,6 +3336,7 @@ SET_DATA gMapAnimData, 0x203E1F0
 SET_DATA gSomeUnitId, 0x203E765
 SET_DATA gSomeTextRelatedStuff, 0x203E768
 SET_DATA gHelpTextOriginTile, 0x203E788
+SET_DATA gHelpTextHandles, 0x203E7AC
 SET_DATA gBWLDataArray, 0x203E884
 SET_DATA gBoolSramWorking, 0x203E88E
 SET_DATA gpBWLSaveTarget, 0x203E890
