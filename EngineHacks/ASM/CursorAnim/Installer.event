@@ -1,0 +1,6 @@
+PUSH
+ORG 0x15AE0
+jumpToHack(CursorAnim)
+POP
+
+#include "CursorAnim.lyn.event"

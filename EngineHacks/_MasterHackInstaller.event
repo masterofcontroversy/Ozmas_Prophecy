@@ -31,8 +31,14 @@
 //For different spell animations at a distance
 #include "ASM/SpellLoader/Installer.event"
 
+//Status screen palette by allegiance
+#include "ASM/StatScreenAlleg/Installer.event"
+
 //Modular Goal Window
 #include "C/ModularGoalWindow/MGW.event"
+
+//Sync cursor anim to map sprite anims
+#include "ASM/CursorAnim/Installer.event"
 
 //GroupAI
 #include "ASM/GroupAI/GroupAI.event"
@@ -71,9 +77,9 @@ AutoPromoteTestEvents:
     NoFade
     ENDA
 
+//ASMCs
+#include "ASM/ASMC/CheckWeather/CheckWeather.lyn.event"
+
 #ifdef __DEBUG__
     #include "DebugTools/ChapterJump/ChapterJump.event"
 #endif
-
-//ASMCs
-#include "ASM/ASMC/CheckWeather/CheckWeather.lyn.event"

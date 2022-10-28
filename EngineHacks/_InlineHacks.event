@@ -7,30 +7,36 @@ SHORT $2000 //modified to: "mov r0,0x0" so all units are treated as unpromoted
 ORG $2C3B4 //original: "orr r0,0x0"
 SHORT $2000 //modified to: "mov r0,0x0" so all units are treated as unpromoted
 
+//Don't reset level on promotion
+// By 7743
+ORG 0x2BE70
+BYTE 0x00 0x00 0x00 0x00
+
+ORG 0x736DA
+BYTE 0x18 0x7A
+
 //Don't add 9 auto levels to enemy units
-PUSH
-  ORG 0x18136
-  SHORT $E007
-POP
+ORG 0x18136
+SHORT $E007
 
 //Faster Level ups
-#define Time_Between_Stats 10 //default is 20
-PUSH
+#define Time_Between_Stats 12 //default is 20
 ORG $7F464
 BYTE Time_Between_Stats
 ORG $741E0
 BYTE Time_Between_Stats+1
-POP
 
 //AI display target frames
+// By Vesly
 ORG $39EAE 
-BYTE 0x21 // Vanilla default 
+BYTE 0x21 //Long enough for one animation cycle
 
 //Prevent goal window values from causing chapters to end with no enemies present
 ORG 0x83ED6
 SHORT 0xE01F //Ignore chapter ID
 
-//AI heatmap caching/optimization (7743)
+//AI heatmap caching/optimization
+// By 7743
 ORG $3E320
 BYTE $F0 $B5 $5F $46 $56 $46 $4D $46 $44 $46 $F0 $B4 $33 $4C $A2 $46 $33 $48 $00 $68 $83 $46 $54 $46 $20 $68 $00 $28 $52 $D0 $C2 $68 $30 $4B $1A $42 $4E $D1 $58 $46 $C0 $7A $E1 $7A $E6 $F7 $1E $FD $00 $28 $47 $D1 $00 $20 $81 $46 $1E $21 $65 $18 $0A $21 $6E $18 $07 $1C $80 $46 $29 $88 $00 $29 $10 $D0 $88 $46 $20 $1C $D8 $F7 $01 $F9 $01 $28 $06 $D1 $40 $46 $D9 $F7 $30 $F9 $B8 $42 $01 $DB $07 $1C $C1 $46 $B5 $42 $01 $DA $02 $35 $EB $E7 $48 $46 $00 $28 $28 $D0 $58 $46 $21 $1C $4A $46 $FC $F7 $7A $FC $01 $28 $21 $D1 $20 $1C $49 $46 $FD $F7 $D8 $F8 $20 $1C $DA $F7 $01 $FF $3F $18 $7F $10 $15 $48 $04 $68 $15 $48 $05 $68 $15 $4B $18 $88 $80 $46 $5E $88 $00 $2E $0E $D0 $01 $3E $43 $46 $00 $2B $F9 $D0 $01 $3B $B2 $00 $A0 $58 $C0 $5C $00 $28 $F7 $D0 $A8 $58 $C1 $5C $C9 $19 $C1 $54 $F2 $E7 $48 $20 $82 $44 $0A $48 $82 $45 $A3 $DB $FF $BC $80 $46 $89 $46 $92 $46 $9B $46 $01 $BC $00 $47 $4C $BE $02 $02 $50 $4E $00 $03 $0D $10 $00 $00 $E4 $E4 $02 $02 $F0 $E4 $02 $02 $D4 $E4 $02 $02 $B4 $E3 $02 $02
 
@@ -73,8 +79,6 @@ SHORT 0x46C0 0x46C0
 ORG 0x2FEC6 // Change vulnerary heal amount
 BYTE 15
 
-
-
 //Fixed autolevels by StanHash
 //Replace GetAutoleveledStatIncrease with asm below
 ORG $02B9C4
@@ -82,6 +86,7 @@ ORG $02B9C4
 
 
 //Weather priorities
+// By Zane
 ORG 0x030366; BYTE 0xC0 //change 80 to 80/A0/C0/E0 light snow
 ORG 0x03066D; BYTE 0x18 //change 10 to 10/14/18/1C heavy snow
 ORG 0x59D95F; BYTE 0x18
