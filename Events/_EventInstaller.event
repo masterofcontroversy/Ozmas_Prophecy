@@ -88,7 +88,7 @@ UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronBow, H
 UNIT Anthony Mercenary Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
 UNIT Kenneth Cavalier Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
 
-UNIT Alexandra Lord Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
 UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
 UNIT Absalom Fighter Alexandra Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
 

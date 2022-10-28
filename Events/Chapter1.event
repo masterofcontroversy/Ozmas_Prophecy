@@ -34,6 +34,7 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventPlayer(0, BossCharge, 6)
 END_MAIN
 
 ALIGN 4
@@ -74,7 +75,7 @@ UNIT Kenneth Cavalier Devan Level(1,Player,0) [15,1] 0x0 0x0 0x0 0x1 [IronLance,
 UNIT //Tells the game that the unit list has ended
 
 EnemyUnits:
-UNIT ONeill Dragoon 0x0 Level(3,Enemy,0) [3,12] 0x0 0x0 0x0 0x1 [IronLance] NeverMoveAI
+UNIT ONeill Dragoon 0x0 Level(3,Enemy,0) [3,12] 0x0 0x0 0x0 0x1 [IronLance] AttackInRangeAI
 
 //Turn one enemies
 UNIT 0x80 Soldier 0x0 Level(1,Enemy,1) [13,7] 0x0 0x0 0x0 0x1 [IronLance] NoAI
@@ -105,3 +106,12 @@ UNIT 0x80 Myrmidon 0x0 Level(1,Enemy,1) [8,7] 0x0 0x0 0x0 0x1 [IronSword] NeverM
 //UNIT 0x80 PegasusKnight 0x0 Level(1,Enemy,1) [1,0] 0x0 0x0 0x0 0x1 [SteelSword] MoveIn2TurnsAI
 
 UNIT
+
+BossCharge:
+//Boss text
+SVAL s1 0x0
+CHAI ONeill
+CHAI [2,14]
+CHAI [2,11]
+NoFade
+ENDA

@@ -163,7 +163,7 @@ UNIT 0x80 DracoRider Bone Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x1 [IronLance] M
 UNIT
 
 LucyUnit:
-UNIT Lucy Mage_F Devan Level(3,Player,0) [7,3] 0x0 0x0 0x0 0x1 [Fire, KiteShield] NoAI
+UNIT Lucy Mage_F Devan Level(3,Player,0) [7,3] 0x0 0x0 0x0 0x1 [Fire] NoAI
 
 UNIT
 

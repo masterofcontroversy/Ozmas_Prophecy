@@ -71,7 +71,7 @@ MNC2 0x2
 ENDA
 
 Village1Event:
-GiveItem(RoundShield, ACTIVEUNIT)
+GiveItem(IronShield, ACTIVEUNIT)
 NoFade
 ENDA
 
@@ -81,7 +81,7 @@ UNIT Ronni BowKnight_F Devan Level(1,Player,False) [2,4] 0x0 0x0 0x0 0x1 [IronBo
 UNIT Anthony Mercenary Devan Level(1,Player,False) [2,5] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
 UNIT Kenneth Cavalier Devan Level(1,Player,False) [2,3] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
 
-UNIT Alexandra Lord Devan Level(1,Player,False) [3,5] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,False) [3,5] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
 UNIT Evelyn FalcoKnight Alexandra Level(10,Player,False) [1,4] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
 UNIT Absalom Fighter Alexandra Level(2,Player,False) [3,3] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
 
