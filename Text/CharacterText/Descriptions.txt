@@ -18,7 +18,7 @@ to earn his knighthood.[X]
 The crown princess of Tolva.[NL]
 Determined, but naive.[X]
 
-## EveylnDesc
+## EvelynDesc
 A dutiful Tolvan knight in service[NL]
 to Alexandra. Despises slackers.[X]
 
@@ -28,7 +28,7 @@ His happy attitude hides a dark past.[X]
 
 ## HollyDesc
 A highly outspoken priestess[NL]
-willing to evangelize anyone.[X]
+who's ready to evangelize anyone.[X]
 
 ## LucyDesc
 A gifted mage from Duramontis.[NL]

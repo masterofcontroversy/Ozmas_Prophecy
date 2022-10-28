@@ -255,7 +255,7 @@
 #define KnightSword      0x12
 #define ManSword         0x13
 #define Rapier           0x14
-//#define Free           0x15
+#define Swiftblade       0x15
 //#define Free           0x16
 #define IronLance        0x17
 #define SteelLance       0x18
@@ -323,9 +323,9 @@
 #define Void             0xce
 #define BlackHole        0xcf
 
-#define RoundShield 0xd5
-#define KiteShield 0xd6
-#define Greatshield 0xd7
+#define IronShield 0xd5
+#define SteelShield 0xd6
+#define SilverShield 0xd7
 #define Sash 0xd8
 #define Clover 0xd9
 #define MagicShield 0xda

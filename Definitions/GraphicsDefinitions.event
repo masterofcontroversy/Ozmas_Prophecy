@@ -80,6 +80,9 @@ blue * 0x400
 #define EclipseIcon          0x46
 #define FenrirIcon           0x47
 #define VoidIcon             0x48
+#define IronShieldIcon       0x49
+#define SteelShieldIcon      0x4A
+#define SilverShieldIcon     0x4B
 
 #define BlackHoleIcon        0xA1
 
@@ -182,7 +185,7 @@ blue * 0x400
 #define CavalierBow          0x32
 #define CavalierUnarmed      0x33
 #define CavalierFSword       0x34
-#define CavalierFLance       0x35
+//#define CavalierFLance       0x35
 #define CavalierFBow         0x36
 #define CavalierFUnarmed     0x37
 #define PaladinSword         0x38

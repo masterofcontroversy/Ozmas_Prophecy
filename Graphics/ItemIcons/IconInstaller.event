@@ -6,14 +6,13 @@
 #endif
 
 PUSH
-ORG IconTable
 
 SetIcon(IronSwordIcon)
-#incbin "Images/Swords/IronSword.4bpp"
+#incbin "Images/Swords/Custom/IronSword.4bpp"
 SetIcon(SteelSwordIcon)
-#incbin "Images/Swords/SteelSword.4bpp"
+#incbin "Images/Swords/Custom/SteelSword.4bpp"
 SetIcon(SilverSwordIcon)
-#incbin "Images/Swords/SilverSword.4bpp"
+#incbin "Images/Swords/Custom/SilverSword.4bpp"
 SetIcon(KillingEdgeIcon)
 #incbin "Images/Swords/KillingEdge.4bpp"
 SetIcon(BraveSwordIcon)
@@ -35,11 +34,11 @@ SetIcon(RapierIcon)
 
 
 SetIcon(IronLanceIcon)
-#incbin "Images/Lances/IronLance.4bpp"
+#incbin "Images/Lances/Custom/IronLance.4bpp"
 SetIcon(SteelLanceIcon)
-#incbin "Images/Lances/SteelLance.4bpp"
+#incbin "Images/Lances/Custom/SteelLance.4bpp"
 SetIcon(SilverLanceIcon)
-#incbin "Images/Lances/SilverLance.4bpp"
+#incbin "Images/Lances/Custom/SilverLance.4bpp"
 SetIcon(KillerLanceIcon)
 #incbin "Images/Lances/KillerLance.4bpp"
 SetIcon(BraveLanceIcon)
@@ -92,5 +91,12 @@ SetIcon(GreatbowIcon)
 #incbin "Images/Bows/Greatbow.4bpp"
 SetIcon(HuntingBowIcon)
 #incbin "Images/Bows/HuntingBow.4bpp"
+
+SetIcon(IronShieldIcon)
+#incbin "Images/Items/IronShield.4bpp"
+SetIcon(SteelShieldIcon)
+#incbin "Images/Items/SteelShield.4bpp"
+SetIcon(SilverShieldIcon)
+#incbin "Images/Items/SilverShield.4bpp"
 
 POP

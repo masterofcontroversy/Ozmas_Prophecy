@@ -31,6 +31,9 @@ Armor Slayer[X]
 ## RapierName
 Rapier[X]
 
+## SwiftbladeName
+Swiftblade[X]
+
 ## LancereaverName
 Lancereaver[X]
 
@@ -160,14 +163,14 @@ Void[X]
 ## BlackHoleName
 Black Hole[X]
 
-## RoundShieldName
-Round Shield[X]
+## IronShieldName
+Iron Shield[X]
 
-## KiteShieldName
-Kite Shield[X]
+## SteelShieldName
+Steel Shield[X]
 
-## GreatshieldName
-Greatshield[X]
+## SilverShieldName
+Silver Shield[X]
 
 ## CloverName
 Lucky Clover[X]
@@ -175,13 +178,13 @@ Lucky Clover[X]
 ## SashName
 Sash[X]
 
-## RoundShieldDesc
+## IronShieldDesc
 +2 defense, -1 speed.[X]
 
-## KiteShieldDesc
+## SteelShieldDesc
 +4 defense, -2 speed.[X]
 
-## GreatshieldDesc
+## SilverShieldDesc
 +6 defense, -4 speed.[X]
 
 ## SashDesc
@@ -205,6 +208,9 @@ Effective against calvalry.[X]
 
 ## RapierDesc
 Effective against calvary and armors.[X]
+
+## SwiftbladeDesc
+Follow-ups occur before counter attacks.[X]
 
 ## KillerDesc
 Allows for critical hits.[X]
