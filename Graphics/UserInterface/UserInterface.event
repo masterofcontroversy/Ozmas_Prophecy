@@ -10,3 +10,26 @@ POIN MenuTiles
 POIN MenuTiles
 POIN MenuTiles
 POP
+
+//Change background palettes
+PUSH
+//Prep screen
+ORG 0x86C40
+WORD 0x8B175CC
+
+//Shops
+ORG 0xB4E14
+WORD 0x8B175CC
+
+//Options menu
+ORG 0x86DAC
+WORD 0x8B175CC
+
+//Status menu
+ORG 0x8E194
+WORD 0x8B175CC
+
+//idk (debug startup menu uses this)
+ORG 0x86BF8
+WORD 0x8B175CC
+POP
