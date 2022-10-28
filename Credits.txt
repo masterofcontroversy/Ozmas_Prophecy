@@ -1,5 +1,10 @@
 Tech:
-Skillsystems: (Make the list later. It's big)
+Skillsystem:
+    Circleseverywhere, for creating and releasing the original system.
+    Crazycolorz5, for debuffs, freeze and Dragon's Veins.
+    Primefusion, for the test map.
+    Kirb, for implementing the Str/Mag split into FE8 based off Tequila's original FE7 version.
+
 Cloud fix: Tequila and Random Wizard
 Autopromote: HyperSpacesGamma, Tequila, Snakey1 (and the next person to be the original maker)
 Fates EXP: Circles
@@ -15,7 +20,7 @@ Repointed battle platforms: Zane
 Droppable item display: Mkol
 Spell Loader: Kao
 ModularMinimugBox: Zane
-ModularMinimugBox Template: Bpat
+ModularMinimugBox icons: 2WB
 Steal With Full Inventory: Vesly
 Nos/Resire Dynamic Palette: Sme
 Forced Deployment Swapping: AuraWolf
@@ -25,15 +30,16 @@ Secondary Equipment: Pikmin1211
 
 
 Icons:
-All swords except Brave Sword: Zane
+All swords except Iron, Steel, Silver, and Brave Swords: Zane
 Brave Sword: Lisandra Brave
-Iron, Steel, Silver, Killer Lances and Heavy Spear: Zane
+Killer Lance and Heavy Spear: Zane
 DragonSpear: Beansy
 Greatlance and Knight Greatlance: George Reds
 Javelin: LordGlenn
 Spear: Orihara Saki
 Brave Lance: Ereshkigal
 Axereaver: 2WB
+Shields: cardcafe
 
 Tomahawk: LordGlenn
 All other axes: Lisandra Brave
@@ -51,16 +57,19 @@ Bow Knight by flasuban
 Heavy Cavalier by Team SALVAGED
 Valkyrie by Permafrost
 Light Mage by Leo_Link, L95
-Storm Mages by Ash3wl, L95, Dominus_Vobiscum
-Male Tundra Sage by Devisian_Nights
-Female Tundra Mage by Teraspark
-Female Tundra Sage by Seal
+Mages by Ash3wl, L95, Dominus_Vobiscum
+Female Acolyte by Teraspark
+Oracle by Seal
 Female DracoRider by Flasuban
 Female DracoKnight by Blood
 Male DracoRider by Flasuban
 Male DracoKnight by ArcaneEli
 Dragoon by Pikmin1211, Unknown
+Armor Knight by Team SALVAGED
+Torch by FE7if
 
+Portraits:
+Kenneth by Bloopy
 
 Spell Animations:
 Frostbite by Struedelmuffin
@@ -82,13 +91,13 @@ Pegasus Knight Repalette by Flasuban
 Myrmidons by Iscaneus, Leo_Link
 Mercenary by Team SALVAGED
 Female Mercenary by Team SALVAGED, Jey the Count, Pushwall
-ArmorKnight by Team SALVAGED
+Armor Knight by Team SALVAGED
 Swordmaster by TheBlindArcher, Greentea, Kenpuhu
 Female Swordmaster by RedBean, Jj09
 Heroes by Nuramon, Sax-Marine
 Archers by DerTheVaporeon
 Deserter by Alusq
-TheBlindArcher, DerTheVaporeon, Nuramon, The_Big_Dededester, DerTheVaporeon
+General by TheBlindArcher, DerTheVaporeon, Nuramon, The_Big_Dededester
 Female Shaman Fix by Shin19
 Snipers by Nuramon
 Soldier by Alusq
@@ -114,5 +123,6 @@ Pirate by DerTheVaporeon
 Tilesets:
 Updated FE6 Snow Fields: N426
 Snowy Bern / Snowy Peaks: ZoramineFae, Vennobennu
+Village V2: flasuban, N426, ZoramineFae, Vennobennu
 
 Special Thanks:
