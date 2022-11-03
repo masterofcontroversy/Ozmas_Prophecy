@@ -18,7 +18,7 @@ POIN BtlLoopList
 
 ALIGN 4
 BtlLoopList:
-POIN BC_DefRes BC_Power BC_ASpd CalcHit BC_Avo BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
+POIN BC_DefRes BC_Power CalcAS CalcHit BC_Avo BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
 POIN CalcCrit //Custom base calcs
 POIN InitializePreBattleLoop //Must go before aura skills
 POIN Lull //This is effectively a stat modifier routine, so it has to go first

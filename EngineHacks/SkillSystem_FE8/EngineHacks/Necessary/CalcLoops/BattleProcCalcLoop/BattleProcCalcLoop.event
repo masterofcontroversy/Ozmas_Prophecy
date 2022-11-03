@@ -37,6 +37,8 @@ POIN Proc_Corona Proc_Flare
 //Wrath goes here. Don't screw up
 POIN Wrath
 
+POIN EyeForAnEye
+
 //Equip hack stuff
 POIN IncrementAttackCount
 
