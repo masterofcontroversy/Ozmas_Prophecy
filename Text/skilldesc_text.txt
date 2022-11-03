@@ -903,9 +903,10 @@ Quick Riposte: If defending and[N]
 HP is 50% or higher, unit doubles[N]
 and attacker does not double.[X]
 
-## SD_Resolve
-Resolve: When HP < 50%,[N]
-gain 1.5x Str, Skl, & Spd.[X]
+## SD_EyeForAnEye
+Eye For An Eye: Foe always attacks first.[N]
+Half of Damage taken last hit[NL]
+is added to Max's counterattack.[X]
 
 ## SD_Insight
 Insight: Hit +20.[X]
