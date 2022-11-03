@@ -905,7 +905,7 @@ and attacker does not double.[X]
 
 ## SD_EyeForAnEye
 Eye For An Eye: Foe always attacks first.[N]
-Half of Damage taken last hit[NL]
+Half of damage taken last hit[NL]
 is added to Max's counterattack.[X]
 
 ## SD_Insight
