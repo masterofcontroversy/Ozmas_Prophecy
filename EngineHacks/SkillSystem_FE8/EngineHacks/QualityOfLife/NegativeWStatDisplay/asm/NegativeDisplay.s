@@ -56,7 +56,7 @@ DrawHelpBoxWeaponStats_Hook:
 	add r4, #8
 
 	draw_from_function GetItemMight, #32
-	draw_from_function GetItemHit, #81
+	draw_from_function GetItemHit, #79
 	draw_from_function GetItemCrit, #129
 
 	@ epilogue
