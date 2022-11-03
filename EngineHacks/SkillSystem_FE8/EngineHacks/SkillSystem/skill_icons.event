@@ -650,8 +650,8 @@ ORG SkillIcon(AptitudeID)
 ORG SkillIcon(QuickRiposteID)
 #incbin "SkillIcons/QuickRiposte.4bpp"
 
-ORG SkillIcon(ResolveID)
-#incbin "SkillIcons/Resolve.4bpp"
+ORG SkillIcon(EyeForAnEyeID)
+#incbin "SkillIcons/EyeForAnEye.4bpp"
 
 ORG SkillIcon(InsightID)
 #incbin "SkillIcons/Insight.4bpp"

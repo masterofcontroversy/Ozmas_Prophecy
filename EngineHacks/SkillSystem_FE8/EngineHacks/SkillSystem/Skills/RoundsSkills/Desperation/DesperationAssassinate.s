@@ -33,13 +33,7 @@ ldr r3, [sp]
 
 ldr r0, =0x203a4ec @no vantage + desp shenanigans, that's unfair lol
 cmp r3, r0
-bne NoSkill 
-
-ldrb r0, [r3,#0x12] @max
-ldrb r1, [r3, #0x13] @curr
-lsr r0, #1
-cmp r1, r0
-bgt NoSkill
+bne NoSkill
 
 @now check if attacker has desperation
 ldr r0, SkillTester

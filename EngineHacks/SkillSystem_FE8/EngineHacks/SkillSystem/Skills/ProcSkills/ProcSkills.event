@@ -135,6 +135,11 @@ POIN SkillTester
 WORD BlackMagicID
 POIN BlackMagicTable
 
+EyeForAnEye:
+#incbin "EyeForAnEye/EyeForAnEye.dmp"
+POIN SkillTester
+WORD EyeForAnEyeID
+
 //Bytes are status id, percent chance
 //MAKE SURE THE PERCENTAGES SUM UP TO 100%
 BlackMagicTable:

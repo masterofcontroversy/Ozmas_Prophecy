@@ -811,9 +811,9 @@
 #define DefiantDefID 255
 #define DefiantResID 255
 
-//Resolve: When HP < 50%, gain 1.5x Str, Skl, & Spd.
-//By Sme
-#define ResolveID 153
+//Eye For an Eye: Always attack second and add damage taken in last hit to your own
+//By Contro
+#define EyeForAnEyeID 153
 
 //Fortress Defense: +5 Def, -3 Str/Mag
 //By Leonarth
