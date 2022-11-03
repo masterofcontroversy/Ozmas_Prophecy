@@ -323,12 +323,12 @@
 #define Void             0xce
 #define BlackHole        0xcf
 
-#define IronShield 0xd5
-#define SteelShield 0xd6
-#define SilverShield 0xd7
-#define Sash 0xd8
-#define Clover 0xd9
-#define MagicShield 0xda
+#define IronShield       0xd5
+#define SteelShield      0xd6
+#define SilverShield     0xd7
+#define Sash             0xd8
+#define Clover           0xd9
+#define MagicShield      0xda
 
 
 //Type Definitions

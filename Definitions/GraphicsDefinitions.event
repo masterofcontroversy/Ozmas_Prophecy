@@ -80,11 +80,11 @@ blue * 0x400
 #define EclipseIcon          0x46
 #define FenrirIcon           0x47
 #define VoidIcon             0x48
-#define IronShieldIcon       0x49
-#define SteelShieldIcon      0x4A
-#define SilverShieldIcon     0x4B
 
 #define BlackHoleIcon        0xA1
+#define IronShieldIcon       0xA2
+#define SteelShieldIcon      0xA3
+#define SilverShieldIcon     0xA4
 
 
 //staves start at 0x49
