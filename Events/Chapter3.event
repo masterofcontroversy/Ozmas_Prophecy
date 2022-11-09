@@ -158,7 +158,7 @@ UNIT 0x80 Fighter Bone Level(3,Enemy,1) [7,9] 0x0 0x0 0x0 0x1 [HandAxe] NeverMov
 /*Charging enemies*/
 UNIT 0x80 MageKnight Bone Level(3,Enemy,1) [18,9] 0x0 0x0 0x0 0x1 [Fire] MoveIn2TurnsAI
 
-UNIT 0x80 DracoRider Bone Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x1 [IronLance] MoveIn2TurnsAI
+UNIT 0x80 DracoRider Bone Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI
 
 UNIT
 

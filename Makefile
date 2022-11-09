@@ -58,8 +58,8 @@ $(TARGET_ROM): directories $(MAIN_EVENT) $(EVENT_DEPENDS) $(SOURCE_ROM)
 	@$(SYMCOMBO) $(TARGET_SYM) $(TARGET_SYM) $(VANILLASYM)
 
 directories:
-	mkdir -p $(PORTRAIT_DMPS)
-	mkdir -p $(MAPSPRITES_DMPS)
+	@mkdir -p $(PORTRAIT_DMPS)
+	@mkdir -p $(MAPSPRITES_DMPS)
 
 %.event: %.csv %.nmm
 	@echo | $(C2EA) -csv $*.csv -nmm $*.nmm -out $*.event $(SOURCE_ROM) > /dev/null
