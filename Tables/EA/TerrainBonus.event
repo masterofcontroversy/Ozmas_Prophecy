@@ -1,0 +1,24 @@
+PUSH
+ORG TerrainAvoBonus + 0xC //Forest
+BYTE 10
+ORG TerrainDefBonus + 0xC //Forest
+BYTE 2
+ORG TerrainAvoBonus + 0xA //Fort
+BYTE 15
+ORG TerrainDefBonus + 0xA //Fort
+BYTE 2
+ORG TerrainAvoBonus + 0x11 //Mountain
+BYTE 20
+ORG TerrainDefBonus + 0x11 //Mountain
+BYTE 2
+ORG TerrainAvoBonus + 0x1A //Throne
+BYTE 10
+ORG TerrainDefBonus + 0x1A //Throne
+BYTE 3
+ORG TerrainResBonus + 0x1A //Throne
+BYTE 3
+ORG TerrainAvoBonus + 0xB //Gate
+BYTE 10
+ORG TerrainDefBonus + 0xB //Gate
+BYTE 2
+POP

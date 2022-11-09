@@ -54,8 +54,12 @@ Map Sprites:
 Duke by Snewping
 Deserter by Alusq
 Bow Knight by flasuban
-Heavy Cavalier by Team SALVAGED
-Valkyrie by Permafrost
+Male Cavalier by Team SALVAGED
+Female Cavaler by Team SALVAGED, Flasuban
+Male Axe and Sword Paladin by RobertFPY
+Male Lance Paladin by Pikmin1211
+Female Axe and Lance Paladin by L95
+Female Sword Paladin by RobertFPY
 Light Mage by Leo_Link, L95
 Mages by Ash3wl, L95, Dominus_Vobiscum
 Female Acolyte by Teraspark
@@ -79,6 +83,8 @@ Combat Animations:
 Duke by Nuramon
 Cavalier by Team SALVAGED
 Female Cavalier by Team SALVAGED, Flasuban, Epicer
+Paladin by Team SALVAGED, Obsidian_Daddy
+Female Paladin by Team SALVAGED, HGS, Levin64, RJ_Exists, Obsidian_Daddy
 DracoKnight axe edit by TheBlindArcher
 DracoRiders by eCut, Flasuban
 Female DracoRider by eCut, Flasuban

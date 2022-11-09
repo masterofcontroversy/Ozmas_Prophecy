@@ -180,8 +180,8 @@ UNIT 0x80 Mage Bazba Level(4,Enemy,1) [13,4] 0x0 0x0 0x0 0x1 [Fire] AttackInRang
 //Throne room
 
 //Start charging from throne room enterance
-UNIT 0x80 Cavalier Bazba Level(4,Enemy,1) [21,7] 0x0 0x0 0x0 0x1 [IronLance] NoAI
-UNIT 0x80 HeavyCavalier Bazba Level(4,Enemy,1) [21,8] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT 0x80 LanceCavalier Bazba Level(4,Enemy,1) [21,7] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 AxeCavalier Bazba Level(4,Enemy,1) [21,8] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 
 //Stationaries
 
@@ -202,15 +202,15 @@ UNIT
 
 //Turn 4 or 5 reinforcements
 Reinforcements_1:
-UNIT 0x80 Cavalier Bazba Level(4,Enemy,1) [11,17] 0x0 0x0 0x0 0x1 [IronLance] NoAI
-UNIT 0x80 HeavyCavalier Bazba Level(4,Enemy,1) [10,17] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT 0x80 LanceCavalier Bazba Level(4,Enemy,1) [11,17] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 AxeCavalier Bazba Level(4,Enemy,1) [10,17] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 
 UNIT
 
 //Northern area reinforcements
 Reinforcements_2:
 UNIT 0x80 MageKnight Bazba Level(4,Enemy,1) [9,0] 0x0 0x0 0x0 0x1 [Thunder] NoAI
-UNIT 0x80 HeavyCavalier Bazba Level(4,Enemy,1) [12,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT 0x80 AxeCavalier Bazba Level(4,Enemy,1) [12,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 
 UNIT
 

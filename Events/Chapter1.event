@@ -34,7 +34,7 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
-TurnEventPlayer(0, BossCharge, 6)
+TurnEventPlayer(0, BossCharge, 5)
 END_MAIN
 
 ALIGN 4
@@ -70,7 +70,7 @@ PlayerUnits:
 UNIT Devan Duke Devan Level(1,Player,0) [14,3] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
 UNIT Ronni BowKnight_F Devan Level(1,Player,0) [15,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
 UNIT Anthony Mercenary Devan Level(1,Player,0) [14,2] 0x0 0x0 0x0 0x1 [IronSword, IronBlade, Vulnerary] NoAI
-UNIT Kenneth Cavalier Devan Level(1,Player,0) [15,1] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
+UNIT Kenneth LanceCavalier Devan Level(1,Player,0) [15,1] 0x0 0x0 0x0 0x1 [IronLance, Vulnerary] NoAI
 
 UNIT //Tells the game that the unit list has ended
 
@@ -90,11 +90,11 @@ UNIT 0x80 Mercenary 0x0 Level(1,Enemy,1) [13,11] 0x0 0x0 0x0 0x1 [IronBlade] Att
 UNIT 0x80 Myrmidon 0x0 Level(1,Enemy,1) [10,13] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
 
 //Near boss
-UNIT 0x80 Cavalier 0x0 Level(1,Enemy,1) [2,14] 0x0 0x0 0x0 0x1 [IronSword] GroupOneAI
+UNIT 0x80 SwordCavalier 0x0 Level(1,Enemy,1) [2,14] 0x0 0x0 0x0 0x1 [IronSword] GroupOneAI
 UNIT 0x80 Archer 0x0 Level(1,Enemy,1) [2,11] 0x0 0x0 0x0 0x1 [IronBow] GroupOneAI
 
 //Upper-left
-UNIT 0x80 HeavyCavalier 0x0 Level(1,Enemy,1) [1,5] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI
+UNIT 0x80 AxeCavalier 0x0 Level(1,Enemy,1) [1,5] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI
 
 /*Stationaries*/
 UNIT 0x80 Soldier 0x0 Level(1,Enemy,1) [11,11] DropItem 0x0 0x0 0x1 [Javelin] NeverMoveAI

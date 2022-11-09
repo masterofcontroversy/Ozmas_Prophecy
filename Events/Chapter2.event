@@ -79,10 +79,10 @@ PlayerUnits:
 UNIT Devan Duke Devan Level(1,Player,False) [3,4] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
 UNIT Ronni BowKnight_F Devan Level(1,Player,False) [2,4] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
 UNIT Anthony Mercenary Devan Level(1,Player,False) [2,5] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
-UNIT Kenneth Cavalier Devan Level(1,Player,False) [2,3] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
+UNIT Kenneth LanceCavalier Devan Level(1,Player,False) [2,3] 0x0 0x0 0x0 0x1 [IronLance, Vulnerary] NoAI
 
 UNIT Alexandra Lord Devan Level(1,Player,False) [3,5] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
-UNIT Evelyn FalcoKnight Alexandra Level(10,Player,False) [1,4] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(10,Player,False) [1,4] 0x0 0x0 0x0 0x1 [SilverSword, IronSword, Heal, Vulnerary] NoAI
 UNIT Absalom Fighter Alexandra Level(2,Player,False) [3,3] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
 
 UNIT //Tells the game that the unit list has ended
@@ -107,7 +107,7 @@ UNIT 0x80 ArmorKnight Breguet Level(2,Enemy,True) [8,4] 0x0 0x0 0x0 0x1 [Javelin
 
 UNIT 0x80 Myrmidon Breguet Level(2,Enemy,True) [16,3] DropItem 0x0 0x0 0x1 [SteelSword] GroupOneAI
 UNIT 0x80 Soldier Breguet Level(2,Enemy,True) [14,2] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
-UNIT 0x80 HeavyCavalier Breguet Level(2,Enemy,True) [16,2] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI
+UNIT 0x80 AxeCavalier Breguet Level(2,Enemy,True) [16,2] 0x0 0x0 0x0 0x1 [IronAxe] MoveIn2TurnsAI
 
 UNIT 0x80 Mercenary Breguet Level(2,Enemy,True) [11,9] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
 UNIT 0x80 Archer Breguet Level(2,Enemy,True) [11,10] 0x0 0x0 0x0 0x1 [IronBow] NoAI
@@ -117,7 +117,7 @@ UNIT 0x80 Acolyte Breguet Level(2,Enemy,True) [13,8] 0x0 0x0 0x0 0x1 [Lightning]
 
 UNIT 0x80 PegasusKnight Breguet Level(2,Enemy,True) [9,11] 0x0 0x0 0x0 0x1 [IronSword] MoveIn2TurnsAI
 
-UNIT 0x80 Cavalier Breguet Level(2,Enemy,True) [18,10] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 LanceCavalier Breguet Level(2,Enemy,True) [18,10] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 
 UNIT
 

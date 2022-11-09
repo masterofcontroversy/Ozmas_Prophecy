@@ -104,7 +104,7 @@ UNIT 0x80 DracoKnight ONeill Level(2,Enemy,1) [21,16] 0x0 0x0 0x0 0x1 [IronAxe] 
 UNIT 0x80 Myrmidon ONeill Level(2,Enemy,1) [19,14] 0x0 0x0 0x0 0x1 [IronSword] MoveIn2TurnsAI
 
 //Units guarding the forts
-UNIT 0x80 HeavyCavalier ONeill Level(4,Enemy,1) [18,15] 0x0 0x0 0x0 0x1 [SteelAxe] NeverMoveAI
+UNIT 0x80 AxeCavalier ONeill Level(4,Enemy,1) [18,15] 0x0 0x0 0x0 0x1 [SteelAxe] NeverMoveAI
 UNIT 0x80 Myrmidon ONeill Level(4,Enemy,1) [8,3] 0x0 0x0 0x0 0x1 [SteelSword] NeverMoveAI
 UNIT 0x80 ArmorKnight ONeill Level(4,Enemy,1) [16,7] 0x0 0x0 0x0 0x1 [SteelLance, Javelin] NeverMoveAI
 

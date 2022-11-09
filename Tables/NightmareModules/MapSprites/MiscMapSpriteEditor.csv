@@ -3,10 +3,10 @@ Duke,DukeMoving|IsPointer,0x81c3d7c
 Lord,0x81c3ed4,0x81c46cc
 Arch Duke,0x81c4824,0x81c52b4
 Great Lord,0x81c5414,0x81c5e84
-Cavalier,0x81c5fe4,0x81c692c
-Cavalier_F,0x81c5fe4,0x81c692c
-Paladin,0x81c6a84,0x81c7428
-Paladin_F,PaladinFMoving|IsPointer,0x81c7428
+Lance Cavalier,LanceCavalierMoving|IsPointer,NormalAP
+Sword Cavalier,SwordCavalierMoving|IsPointer,NormalAP
+Lance Paladin,LancePaladinMoving|IsPointer,NormalAP
+Sword Paladin,SwordPaladinMoving|IsPointer,NormalAP
 Armor Knight,LanceArmorMoving|IsPointer,NormalAP
 Armour Knight (F),0x81c7580,0x81c7e74
 General,0x81c7fcc,0x81c8a80
@@ -33,8 +33,8 @@ Dragon Knight,DracoKnightMoving|IsPointer,WyvernRiderAP
 Dragon Knight_F,DracoKnightFMoving|IsPointer,WyvernKnightAP
 Dragon Master,DracoMasterMoving|IsPointer,WyvernRiderAP
 Dragon Master_F,DracoMasterFMoving|IsPointer,WyvernKnightAP
-Wyvern Knight,0x81d6ec4,0x81d7cc8
-Wyvern Knight (F),0x81d6ec4,0x81d7cc8
+Sword Cavalier_F,SwordCavalierFMoving|IsPointer,NormalAP
+Sword Paladin_F,SwordPaladinFMoving|IsPointer,NormalAP
 Mage,MageMoving|IsPointer,0x81d8668
 Mage_F,0x81d87c0,0x81d908c
 Sage,0x81d91e4,0x81d9b58
@@ -51,10 +51,10 @@ Summoner,0x81de41c,0x81dec38
 Summoner (F),0x81de41c,0x81dec38
 Rogue,0x81ded90,0x81df548
 Gorgon Egg,0x81df6a0,0x81dfacc
-Great Knight,0x81dfc24,0x81e058c
-Great Knight (F),0x81dfc24,0x81e058c
-Recruit (2),0x81e06e4,0x81e0e40
-Journeyman (3),0x81e0f98,0x81e173c
+Axe Cavalier,AxeCavalierMoving|IsPointer,NormalAP
+Axe Paladin,AxePaladinMoving|IsPointer,NormalAP
+Lance Cavalier_F,LanceCavalierFMoving|IsPointer,NormalAP
+Lance Paladin_F,LancePaladinFMoving|IsPointer,NormalAP
 Pupil (3),0x81e189c,0x81e2088
 Recruit (3),0x81e06e4,0x81e0e40
 Manakete,0x81e21e0,0x81e2f34
@@ -66,7 +66,7 @@ Warrior,0x81e4498,0x81e4ea4
 Brigand,0x81e4ffc,0x81e582c
 Pirate,0x81e5984,0x81e62b4
 Berserker,0x81e640c,0x81e6df4
-Monk,0x81e6f4c,0x81e7638
+Acolyte,0x81e6f4c,0x81e7638
 Priest,0x81e7790,0x81e7f58
 Bard,0x81e80b0,0x81e8840
 Recruit (1),0x81e06e4,0x81e0e40
@@ -86,9 +86,9 @@ Arch Knight,0x81f0830,0x81f1080
 Arch Knight_F,0x81f11d8,0x81f1a54
 Soldier_F,0x81f1bac,0x81f249c
 Dragoon,DragoonMoving|IsPointer,NormalAP
-Heavy Cavalier,HeavyCavalierMoving|IsPointer,0x81c692c
-Elder Bael,0x81f38ec,0x81f3fa0
-Cyclops,0x81f40f8,0x81f49b8
+Axe Cavalier_F,AxeCavalierFMoving|IsPointer,NormalAP
+Axe Paladin_F,AxePaladinFMoving|IsPointer,NormalAP
+Acolyte_F,0x81f40f8,0x81f49b8
 Mauthe Doog,0x81f4b18,0x81f5468
 Gwyllgi,0x81f55c0,0x81f607c
 Tarvos,0x81f61d4,0x81f6ad0

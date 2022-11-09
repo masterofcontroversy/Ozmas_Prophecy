@@ -4,7 +4,6 @@
 
 
 #define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
-
 {
 #include "_Animations/Cavalier_SwordInstaller.event"
 #include "_Animations/Cavalier_LanceInstaller.event"
@@ -15,6 +14,9 @@
 }
 {
 #include "_Animations/Cavalier_F_SwordInstaller.event"
+#include "_Animations/Cavalier_F_LanceInstaller.event"
+#include "_Animations/Cavalier_F_AxeInstaller.event"
+#include "_Animations/Cavalier_F_HandaxeInstaller.event"
 #include "_Animations/Cavalier_F_BowInstaller.event"
 #include "_Animations/Cavalier_F_UnarmedInstaller.event"
 }
@@ -72,12 +74,16 @@
 {
 #include "_Animations/Paladin_F_SwordInstaller.event"
 #include "_Animations/Paladin_F_LanceInstaller.event"
+#include "_Animations/Paladin_F_AxeInstaller.event"
+#include "_Animations/Paladin_F_HandaxeInstaller.event"
 #include "_Animations/Paladin_F_BowInstaller.event"
 #include "_Animations/Paladin_F_UnarmedInstaller.event"
 }
 {
 #include "_Animations/Paladin_SwordInstaller.event"
 #include "_Animations/Paladin_LanceInstaller.event"
+#include "_Animations/Paladin_AxeInstaller.event"
+#include "_Animations/Paladin_HandaxeInstaller.event"
 #include "_Animations/Paladin_BowInstaller.event"
 #include "_Animations/Paladin_UnarmedInstaller.event"
 }
@@ -203,8 +209,6 @@
 }
 {
 #include "_Animations/Lord_SwordInstaller.event"
-}
-{
 #include "_Animations/Lord_UnarmedInstaller.event"
 }
 {

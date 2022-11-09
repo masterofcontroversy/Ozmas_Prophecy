@@ -10,23 +10,23 @@ Lord[X]
 ## GreatLordName
 Great Lord[X]
 
-## CavalierName
-Cavalier[X]
+## SwordCavalierName
+Sword Cav.[X]
 
-## PaladinName
-Paladin[X]
+## LanceCavalierName
+Lance Cav.[X]
 
-## TroubadourName
-Troubadour[X]
+## AxeCavalierName
+Axe Cav.[X]
 
-## ValkyrieName
-Valkyrie[X]
+## SwordPaladinName
+Sword Pal.[X]
 
-## HeavyCavalierName
-Heavy Cav.[X]
+## LancePaladinName
+Lance Pal.[X]
 
-## GreatKnightName
-Great Knight[X]
+## AxePaladinName
+Axe Pal.[X]
 
 ## BowKnightName
 Bow Knight[X]
@@ -141,7 +141,7 @@ Great LordDesc[X]
 
 ## CavalierDesc
 Mounted knights with high mobility[NL]
-and good allaround combat ability.[X]
+and good all around combat ability.[X]
 
 ## PaladinDesc
 PaladinDesc[X]
@@ -152,10 +152,6 @@ magic staves and swords.[X]
 
 ## ValkyrieDesc
 ValkyrieDesc[X]
-
-## HeavyCavalierDesc
-Mounted knights who are tougher but[NL]
-slower than their counterparts.[X]
 
 ## GreatKnightDesc
 Great KnightDesc[X]
@@ -224,7 +220,7 @@ Masters of the skies who[NL]
 fear no magical attack.[X]
 
 ## DracoKnightDesc
-Tough airborne knights who's only[NL]
+Tough airborne knights whose only[NL]
 weaknesses are bows and magic.[X]
 
 ## DracoMasterDesc

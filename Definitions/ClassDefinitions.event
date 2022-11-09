@@ -1,22 +1,35 @@
 //Class Definitions
 
-#define Duke          0x1
-#define Lord          0x2
-#define ArchDuke      0x3
-#define GreatLord     0x4
-#define ArmorKnight   0x9
-#define BowKnight     0x1D
-#define BowKnight_F   0x1E
-#define DracoRider    0x1F
-#define DracoMaster   0x20
-#define DracoRider_F  0x21
-#define DracoMaster_F 0x22
-#define Acolyte       0x44
-#define Acolyte_F     0x59
-#define Thief_F       0x52
-#define Rogue_F       0x53
-#define ArchKnight    0x54
-#define ArchKnight_F  0x55
-#define Soldier_F     0x56
-#define Dragoon       0x57
-#define HeavyCavalier 0x58
+#define Duke            0x1
+#define Lord            0x2
+#define ArchDuke        0x3
+#define GreatLord       0x4
+#define LanceCavalier   0x5
+#define SwordCavalier   0x6
+#define SwordPaladin    0x7
+#define LancePaladin    0x8
+#define ArmorKnight     0x9
+#define BowKnight       0x1D
+#define BowKnight_F     0x1E
+#define DracoRider      0x1F
+#define DracoMaster     0x20
+#define DracoRider_F    0x21
+#define DracoMaster_F   0x22
+#define SwordCavalier_F 0x23
+#define SwordPaladin_F  0x24
+#define AxeCavalier     0x35
+#define AxePaladin      0x36
+#define LanceCavalier_F 0x37
+#define LancePaladin_F  0x38
+#define Acolyte         0x44
+#define Acolyte_F       0x5A
+#define Thief_F         0x52
+#define Rogue_F         0x53
+#define ArchKnight      0x54
+#define ArchKnight_F    0x55
+#define Soldier_F       0x56
+#define Dragoon         0x57
+#define AxeCavalier_F   0x58
+#define AxePaladin_F    0x59
+
+

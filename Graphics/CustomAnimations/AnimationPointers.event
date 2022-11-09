@@ -20,6 +20,10 @@ EndClassAnimation
 CavalierAnimPoint:
 AddClassAnimation(CavalierSword,Sword,0x1)
 AddClassAnimation(CavalierLance,Lance,0x1)
+AddClassAnimation(CavalierAxe,Axe,0x1)
+AddClassAnimation(CavalierHandaxe,HandAxe,0x0)
+AddClassAnimation(CavalierHandaxe,Tomahawk,0x0)
+AddClassAnimation(CavalierBow,Bow,0x1)
 AddClassAnimation(CavalierUnarmed,Unarmed,0x1)
 EndClassAnimation
 
@@ -27,16 +31,33 @@ EndClassAnimation
 PaladinAnimPoint:
 AddClassAnimation(PaladinSword,Sword,0x1)
 AddClassAnimation(PaladinLance,Lance,0x1)
+AddClassAnimation(PaladinAxe,HandAxe,0x1)
+AddClassAnimation(PaladinHandaxe,HandAxe,0x0)
+AddClassAnimation(PaladinHandaxe,Tomahawk,0x0)
+AddClassAnimation(PaladinBow,Bow,0x1)
 AddClassAnimation(PaladinUnarmed,Unarmed,0x1)
 EndClassAnimation
 
 
-HeavyCavalierAnimPoint:
-AddClassAnimation(CavalierLance,Lance,0x1)
-AddClassAnimation(CavalierAxe,Axe,0x1)
-AddClassAnimation(CavalierHandaxe,HandAxe,0x0)
-AddClassAnimation(CavalierHandaxe,Tomahawk,0x0)
-AddClassAnimation(CavalierUnarmed,Unarmed,0x1)
+CavalierFAnimPoint:
+AddClassAnimation(CavalierFSword,Sword,0x1)
+AddClassAnimation(CavalierFLance,Lance,0x1)
+AddClassAnimation(CavalierFAxe,Axe,0x1)
+AddClassAnimation(CavalierFHandaxe,HandAxe,0x0)
+AddClassAnimation(CavalierFHandaxe,Tomahawk,0x0)
+AddClassAnimation(CavalierFBow,Bow,0x1)
+AddClassAnimation(CavalierFUnarmed,Unarmed,0x1)
+EndClassAnimation
+
+
+PaladinFAnimPoint:
+AddClassAnimation(PaladinFSword,Sword,0x1)
+AddClassAnimation(PaladinFLance,Lance,0x1)
+AddClassAnimation(PaladinFAxe,HandAxe,0x1)
+AddClassAnimation(PaladinFHandaxe,HandAxe,0x0)
+AddClassAnimation(PaladinFHandaxe,Tomahawk,0x0)
+AddClassAnimation(PaladinFBow,Bow,0x1)
+AddClassAnimation(PaladinFUnarmed,Unarmed,0x1)
 EndClassAnimation
 
 
@@ -46,19 +67,6 @@ AddClassAnimation(GreatKnightAxe,Axe,0x1)
 AddClassAnimation(GreatKnightHandaxe,HandAxe,0x0)
 AddClassAnimation(GreatKnightHandaxe,Tomahawk,0x0)
 AddClassAnimation(GreatKnightUnarmed,Unarmed,0x1)
-EndClassAnimation
-
-
-TroubadourAnimPoint:
-AddClassAnimation(CavalierFSword,Sword,0x1)
-AddClassAnimation(CavalierFUnarmed,Unarmed,0x1)
-EndClassAnimation
-
-
-ValkyrieAnimPoint:
-AddClassAnimation(PaladinFSword,Sword,0x1)
-AddClassAnimation(PaladinFLance,Lance,0x1)
-AddClassAnimation(PaladinFUnarmed,Unarmed,0x1)
 EndClassAnimation
 
 

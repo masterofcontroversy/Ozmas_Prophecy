@@ -86,10 +86,10 @@ Chapter3DebugUnits:
 UNIT Devan Duke Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
 UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
 UNIT Anthony Mercenary Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
-UNIT Kenneth Cavalier Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronLance, IronSword, Vulnerary] NoAI
+UNIT Kenneth Cavalier Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronLance, Vulnerary] NoAI
 
 UNIT Alexandra Lord Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
-UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronSword, Heal, Vulnerary] NoAI
 UNIT Absalom Fighter Alexandra Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
 
 UNIT Holly Cleric Devan Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Heal] NoAI

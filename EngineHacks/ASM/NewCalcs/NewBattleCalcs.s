@@ -27,8 +27,7 @@ CalcHit:
     @okay, get skill, triple it, and add it to weapon hit
     mov  r1, #0x15
     ldsb r1, [r4, r1]
-    lsl  r2, r1, #0x1
-    add  r1, r2
+    lsl  r1, #0x1
     add  r0, r1
 
     @get luck

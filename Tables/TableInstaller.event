@@ -73,3 +73,5 @@
 #include "EA/DeathQuotes.event"
 
 #include "EA/ThiefEscapeCoords.event"
+
+#include "EA/TerrainBonus.event"

@@ -7,6 +7,15 @@ SHORT $2000 //modified to: "mov r0,0x0" so all units are treated as unpromoted
 ORG $2C3B4 //original: "orr r0,0x0"
 SHORT $2000 //modified to: "mov r0,0x0" so all units are treated as unpromoted
 
+//Fix MNC2 Freezing glitch (breaks skirmishes!)
+// By Kirb
+ORG $BD070
+SHORT $E0B8
+ORG $897B2
+SHORT $0 $0
+ORG $897C4
+SHORT $200E $5620
+
 //Don't reset level on promotion
 // By 7743
 ORG 0x2BE70
@@ -14,6 +23,11 @@ BYTE 0x00 0x00 0x00 0x00
 
 ORG 0x736DA
 BYTE 0x18 0x7A
+
+//Make Normal mode grant bonus levels
+// By Shuusuke
+ORG 0x180FA
+BYTE 0xFF 0xF7 0x63 0xFF
 
 //Don't add 9 auto levels to enemy units
 ORG 0x18136

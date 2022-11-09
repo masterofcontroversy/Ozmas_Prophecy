@@ -185,22 +185,22 @@ blue * 0x400
 #define CavalierBow          0x32
 #define CavalierUnarmed      0x33
 #define CavalierFSword       0x34
-//#define CavalierFLance       0x35
-#define CavalierFBow         0x36
-#define CavalierFUnarmed     0x37
-#define PaladinSword         0x38
-#define PaladinLance         0x39
-#define PaladinBow           0x3A
-#define PaladinUnarmed       0x3B
-#define PaladinFSword        0x3C
-#define PaladinFLance        0x3D
-#define PaladinFBow          0x3E
-#define PaladinFUnarmed      0x3F //Shared with ArchKnightF
-//#define PaladinFUnarmed    0x40
-#define ArmorKnightSword     0x41
-#define ArmorKnightLance     0x42
-#define ArmorKnightUnarmed   0x43
-#define ArmorKnightHandaxe   0x44
+#define CavalierFLance       0x35
+#define CavalierFAxe         0x36
+#define CavalierFHandaxe     0x37
+#define CavalierFBow         0x38
+#define CavalierFUnarmed     0x39
+#define ArmorKnightSword     0x3A
+#define ArmorKnightLance     0x3B
+#define ArmorKnightUnarmed   0x3C
+#define PaladinSword         0x3D
+#define PaladinLance         0x3E
+#define PaladinAxe           0x3F
+#define PaladinHandaxe       0x40
+#define PaladinBow           0x41
+#define PaladinUnarmed       0x42
+//#define Free               0x43
+//#define Free               0x44
 #define GeneralSword         0x45
 #define GeneralLance         0x46
 #define GeneralAxe           0x47
@@ -277,7 +277,7 @@ blue * 0x400
 #define ThiefFKnife          0x8E
 #define RogueSword           0x8F
 #define RogueUnarmed         0x90
-#define DancerRefresh        0x91 //Leave this alone for now
+#define DancerRefresh        0x91
 #define RogueKnife           0x92
 #define RogueFSword          0x93
 #define RogueFUnarmed        0x94
@@ -304,3 +304,9 @@ blue * 0x400
 #define PegasusKnightSword   0xA8
 #define MageKnightSword      0xA9
 #define MageKnightFSword     0xAA
+#define PaladinFSword        0xAB
+#define PaladinFLance        0xAC
+#define PaladinFAxe          0xAD
+#define PaladinFHandaxe      0xAE
+#define PaladinFBow          0xAF
+#define PaladinFUnarmed      0xB0

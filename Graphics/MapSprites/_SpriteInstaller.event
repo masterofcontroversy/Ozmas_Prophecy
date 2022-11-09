@@ -26,28 +26,115 @@ ALIGN 4
 BowKnightFMoving:
 #incbin "dmp/BowKnightFMoving.mpsprite"
 
-
-//PaladinF
+//Lance Cavalier
 ALIGN 4
-PaladinFStanding:
-#incbin "dmp/PaladinFStanding.mpsprite"
-
-ALIGN 4
-PaladinFMoving:
-#incbin "dmp/PaladinFMoving.mpsprite"
-
-
-//Heavy Cavalier
-ALIGN 4
-HeavyCavalierStanding:
-#incbin "dmp/HeavyCavalierStanding.mpsprite"
+LanceCavalierStanding:
+#incbin "dmp/LanceCavalierStanding.mpsprite"
 
 ALIGN 4
-HeavyCavalierMoving:
-#incbin "dmp/HeavyCavalierMoving.mpsprite"
+LanceCavalierMoving:
+#incbin "dmp/LanceCavalierMoving.mpsprite"
 
+//Sword Cavalier
+ALIGN 4
+SwordCavalierStanding:
+#incbin "dmp/SwordCavalierStanding.mpsprite"
 
-//Storm Mage
+ALIGN 4
+SwordCavalierMoving:
+#incbin "dmp/SwordCavalierMoving.mpsprite"
+
+//Axe Cavalier
+ALIGN 4
+AxeCavalierStanding:
+#incbin "dmp/AxeCavalierStanding.mpsprite"
+
+ALIGN 4
+AxeCavalierMoving:
+#incbin "dmp/AxeCavalierMoving.mpsprite"
+
+//Lance CavalierF
+ALIGN 4
+LanceCavalierFStanding:
+#incbin "dmp/LanceCavalierFStanding.mpsprite"
+
+ALIGN 4
+LanceCavalierFMoving:
+#incbin "dmp/LanceCavalierFMoving.mpsprite"
+
+//Sword CavalierF
+ALIGN 4
+SwordCavalierFStanding:
+#incbin "dmp/SwordCavalierFStanding.mpsprite"
+
+ALIGN 4
+SwordCavalierFMoving:
+#incbin "dmp/SwordCavalierFMoving.mpsprite"
+
+//Axe CavalierF
+ALIGN 4
+AxeCavalierFStanding:
+#incbin "dmp/AxeCavalierFStanding.mpsprite"
+
+ALIGN 4
+AxeCavalierFMoving:
+#incbin "dmp/AxeCavalierFMoving.mpsprite"
+
+//Lance Paladin
+ALIGN 4
+LancePaladinStanding:
+#incbin "dmp/LancePaladinStanding.mpsprite"
+
+ALIGN 4
+LancePaladinMoving:
+#incbin "dmp/LancePaladinMoving.mpsprite"
+
+//Sword Paladin
+ALIGN 4
+SwordPaladinStanding:
+#incbin "dmp/SwordPaladinStanding.mpsprite"
+
+ALIGN 4
+SwordPaladinMoving:
+#incbin "dmp/SwordPaladinMoving.mpsprite"
+
+//Axe Paladin
+ALIGN 4
+AxePaladinStanding:
+#incbin "dmp/AxePaladinStanding.mpsprite"
+
+ALIGN 4
+AxePaladinMoving:
+#incbin "dmp/AxePaladinMoving.mpsprite"
+
+//Lance PaladinF
+ALIGN 4
+LancePaladinFStanding:
+#incbin "dmp/LancePaladinFStanding.mpsprite"
+
+ALIGN 4
+LancePaladinFMoving:
+#incbin "dmp/LancePaladinFMoving.mpsprite"
+
+//Sword PaladinF
+ALIGN 4
+SwordPaladinFStanding:
+#incbin "dmp/SwordPaladinFStanding.mpsprite"
+
+ALIGN 4
+SwordPaladinFMoving:
+#incbin "dmp/SwordPaladinFMoving.mpsprite"
+
+//Axe PaladinF
+ALIGN 4
+AxePaladinFStanding:
+#incbin "dmp/AxePaladinFStanding.mpsprite"
+
+ALIGN 4
+AxePaladinFMoving:
+#incbin "dmp/AxePaladinFMoving.mpsprite"
+
+//Mage Mage
 ALIGN 4
 MageStanding:
 #incbin "dmp/MageStanding.mpsprite"
@@ -61,7 +148,7 @@ MageFStanding:
 #incbin "dmp/MageFStanding.mpsprite"
 
 
-//Tundra Mage
+//Acolyte Mage
 ALIGN 4
 AcolyteFStanding:
 #incbin "dmp/AcolyteFStanding.mpsprite"
