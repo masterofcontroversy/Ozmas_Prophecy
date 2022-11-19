@@ -27,6 +27,7 @@ Forced Deployment Swapping: AuraWolf
 Faster AI targetting display: Vesly
 Faster Level-ups: Tequila
 Secondary Equipment: Pikmin1211
+Background Image Setup: Devisian_Nights
 
 
 Icons:
@@ -130,5 +131,7 @@ Tilesets:
 Updated FE6 Snow Fields: N426
 Snowy Bern / Snowy Peaks: ZoramineFae, Vennobennu
 Village V2: flasuban, N426, ZoramineFae, Vennobennu
+
+FE9-10 BG rips by Runa
 
 Special Thanks:

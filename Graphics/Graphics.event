@@ -1,6 +1,7 @@
 #include "Portraits/_PortraitInstaller.event"
 #include "MapSprites/_SpriteInstaller.event"
 #include "ItemIcons/IconInstaller.event"
+#include "Backgrounds/_BackgroundInstaller.event"
 
 #include "SpellAnimations/MasterSpellAnimationInstaller.event"
 
