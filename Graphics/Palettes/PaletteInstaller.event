@@ -1,5 +1,3 @@
-#include "BattleBG/BattleBG.event"
-
 ALIGN 4
 PaletteTable:
 FILL 0x200 * 0x10

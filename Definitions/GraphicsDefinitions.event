@@ -205,6 +205,77 @@ blue * 0x400
 
 #define BlackBG                 0x35
 
+//Battle Backgrounds
+#define TownBBG 0x1
+#define CastleFloorBBG 0x2
+#define PlainBBG 0x3
+#define RiverBBG 0x4
+#define LakeBBG 0x5
+#define MountainBBG 0x6
+#define FlatBBG 0x7
+#define DesertBBG 0x8
+#define PeakBBG 0x9
+#define CopyTownBBG 0xA
+#define OutdoorGateBBG 0xB
+#define ThicketBBG 0xC
+#define SeaBBG 0xD
+#define ThroneBBG 0xE
+#define HealFloorBBG 0xF
+#define VallyBBG 0x10
+#define SnowTownBBG 0x11
+#define SnowPlainBBG 0x12
+#define SnowRiverBBG 0x13
+#define SnowLakeBBG 0x14
+#define SnowMountainBBG 0x15
+#define SnowPeakBBG 0x16
+#define SnowOutdoorGateBBG 0x17
+#define SnowThicketBBG 0x18
+#define CastleFloor2BBG 0x19
+#define Throne2BBG 0x1A
+#define NightThicketBBG 0x1B
+#define NightForestBBG 0x1C
+#define SunsetThicketBBG 0x1D
+#define SunsetForestBBG 0x1E
+#define DarklingThicketBBG 0x1F
+#define ForestBBG 0x20
+#define ShrineBBG 0x21
+#define RuinBBG 0x22
+#define NightRuinBBG 0x23
+#define DarklingPlainBBG 0x24
+#define BrightPlainBBG 0x25
+#define NightPlainBBG 0x26
+#define SunsetPlainBBG 0x27
+#define NightTownBBG 0x28
+#define CastleFloor3BBG 0x29 //Using this for snow
+#define NightCastleFloorBBG 0x2A
+#define Throne3BBG 0x2B
+#define DarklingThroneBBG 0x2C
+#define DarklingSeaBBG 0x2D
+#define OldThroneBBG 0x2E
+#define FortFloorBBG 0x2F
+#define RuinFloorBBG 0x30
+#define BrightRiverBBG 0x31
+#define NightRiverBBG 0x32
+#define DarklingRiverBBG 0x33
+#define CopyTown2BBG 0x34
+#define FieldBBG 0x35
+#define NightPeakBBG 0x36
+#define NightOutdoorGateBBG 0x37
+#define VolcanoBBG 0x38
+#define DarklingForestBBG 0x39
+#define DarklingFloorBBG 0x3A
+#define VillageBBG 0x3B
+#define PromotionScreenBBG 0x3C
+#define GradoFloorBBG 0x3D
+#define OldThrone2BBG 0x3E
+#define Throne4BBG 0x3F
+#define SwampRiverBBG 0x40
+#define Throne5BBG 0x41
+#define CopyTown3BBG 0x42
+#define DarklingRiver2BBG 0x43
+#define DarklingLakeBBG 0x44
+#define DarklingShrineBBG 0x45
+
 //Animation Definitions (Why do I hate myself?)
 #define UseMap               0x00
 #define LordSword            0x01
