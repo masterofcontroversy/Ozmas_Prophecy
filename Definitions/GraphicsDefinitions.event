@@ -130,6 +130,80 @@ blue * 0x400
 //#define Free               0x97
 #define AngelCC              0x98
 
+//Conversation Background Definitions
+#define Village1BG              0x0
+#define Village2BG              0x1
+#define VillageGateBG1          0x2
+#define VillageGateBG2          0x3
+#define VillageNightBG          0x4
+#define SnowVillageBG           0x5
+#define WinterVillageDawnBG     0x6
+#define TownBG                  0x7
+
+#define InsideHouse1BG          0x8
+#define InsideHouse2BG          0x9
+#define InsideHouseNightBG      0xA
+#define SnowHouseBG             0xB
+#define OutsideHouseBG          0xC
+
+#define ForestBG1               0xD
+#define ForestBG2               0xE
+#define ForestWinterBG          0xF
+#define ForestOutSkirtsBG       0x10
+#define ForestOutskirtsWinterBG 0x11
+#define SparseForestBG          0x12
+#define ForestMorningBG         0x13
+#define TallForestBG            0x14
+#define ForestPathBG            0x15
+#define ForestOpeningBG         0x16
+#define WoodsBG                 0x17
+
+#define MountainNightBG         0x18
+#define SnowMountainBG          0x19
+
+#define ArmyCampBG              0x1A
+#define ArmyWinterCampBG        0x1B
+#define SnowCampBG              0x1C
+#define SnowCampfireBG          0x1D
+#define CampsiteBG              0x1E
+#define WarriorTentBG           0x1F
+#define HealerTentBG            0x20
+#define CaravanBG               0x21
+
+#define WinterDawnBG            0x22
+#define LakesideBG              0x23
+#define SnowMeltingBG           0x24
+#define WetlandsBG              0x25
+#define HillsNightBG            0x26
+
+#define FortNightBG             0x27
+#define FortInteriorBG          0x28
+#define Temple1BG               0x29
+#define Temple2BG               0x2A
+#define AltarBG                 0x2B
+#define RuinsBG                 0x2C
+#define TavernBG                0x2D
+
+#define BedroomBG               0x2E
+#define BedroomNightBG          0x2F
+#define ThroneRoomBG            0x30
+#define ThroneRoomNightBG       0x31
+#define MeetingRoomBG           0x32
+#define OfficeBG                0x33
+#define DiningRoomBG            0x34
+#define DungeonBG               0x36
+#define InteriorBG              0x37
+
+
+#define OutsideCastleBG         0x38
+#define WinterCastleBG          0x39
+#define SnowCastleBG            0x3A
+#define CastleHallwayBG         0x3B
+#define CastleBalconyBG         0x3C
+#define CastleInteriorBG        0x3D
+#define CastleRuinsBG           0x3E
+
+#define BlackBG                 0x35
 
 //Animation Definitions (Why do I hate myself?)
 #define UseMap               0x00
