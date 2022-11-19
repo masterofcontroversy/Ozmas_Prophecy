@@ -7,6 +7,9 @@
 //Equip hack
 #include "C/Equip/Installer.event"
 
+//Experence formula
+#include "C/NewExpFormula/NewExpFormula.lyn.event"
+
 //Danger map optimizations
 #include "ASM/DecideOnDangerMap/DecideOnDangerMap.event"
 
@@ -54,9 +57,6 @@
 
 //Conditional nosferatu palette
 #include "ASM/NosResire/NosResire.event"
-
-//Fates exp
-//#include "ASM/FatesExp/Installer.event"
 
 //New Calculations
 #include "ASM/NewCalcs/NewBattleCalcs.lyn.event"
