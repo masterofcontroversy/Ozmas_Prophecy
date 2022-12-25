@@ -31,7 +31,7 @@ EndClassAnimation
 PaladinAnimPoint:
 AddClassAnimation(PaladinSword,Sword,0x1)
 AddClassAnimation(PaladinLance,Lance,0x1)
-AddClassAnimation(PaladinAxe,HandAxe,0x1)
+AddClassAnimation(PaladinAxe,Axe,0x1)
 AddClassAnimation(PaladinHandaxe,HandAxe,0x0)
 AddClassAnimation(PaladinHandaxe,Tomahawk,0x0)
 AddClassAnimation(PaladinBow,Bow,0x1)
