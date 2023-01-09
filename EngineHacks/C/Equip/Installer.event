@@ -4,6 +4,7 @@ ALIGN 4
 #include "src/Equip.lyn.event"
 #include "src/Addons/EquipPreview/EquipPreview.lyn.event"
 #include "src/Addons/EquipPreview/EquipPreviewWrapper.lyn.event"
+#include "src/Addons/EquipPreview/EquipmentColorHook.lyn.event"
 
 ALIGN 4
 EquipmentList:
@@ -66,6 +67,15 @@ Add POIN IncrementAttackCount to battle proc loop
 PUSH
 ORG $1E800
 jumpToHack(EquipPreviewWrapper)
+POP
+
+//Equip Menu Text Color
+PUSH
+ORG $1685C
+jumpToHack(EquipmentColorHook)
+
+ORG $233A8
+jumpToHack(ItemSelectMenu_TextDrawHook)
 POP
 
 // Battle Struct: Changing STRB on 0x7E to STRH to also clear 0x7F

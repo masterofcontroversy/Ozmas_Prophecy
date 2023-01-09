@@ -10,6 +10,9 @@
 //Experence formula
 #include "C/NewExpFormula/NewExpFormula.lyn.event"
 
+//Set/Unset Condition
+#include "ASM/SetCondition/SetCondition.event"
+
 //Danger map optimizations
 #include "ASM/DecideOnDangerMap/DecideOnDangerMap.event"
 
@@ -23,7 +26,7 @@
 #include "ASM/GetWTypeString/GetWTypeString.event"
 
 //Modular Minimug Box
-#include "ASM/ModularMinimugBox/Installers/MMBInstallerBpat2.event"
+#include "ASM/ModularMinimugBox/Installers/MMBInstallerOzma.event"
 
 //Icons for enemies with droppable items
 #include "ASM/DisplayDroppableItem/DisplayDroppableItem.event"

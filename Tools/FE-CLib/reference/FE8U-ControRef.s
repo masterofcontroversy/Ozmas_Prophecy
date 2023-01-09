@@ -20,6 +20,7 @@ SET_FUNC sub_8004B0C, 0x8004B0D
 
 SET_DATA gAttackerSkillBuffer, 0x02026BB0
 SET_DATA gDefenderSkillBuffer, 0x02026C00
+SET_DATA gGenericSkillBuffer, 0x02026C20
 SET_DATA gTempSkillBuffer, 0x02026B90
 SET_DATA gAuraSkillBuffer, 0x02027200
 SET_DATA gUnitRangeBuffer, 0x0202764C
@@ -2482,6 +2483,7 @@ SET_FUNC DrawStatScreen, 0x8088671
 SET_FUNC StatScreenBGVPosManager_Loop, 0x8088921
 SET_FUNC StartStatScreen, 0x808894D
 SET_FUNC StartStatScreenHelpTextBubble, 0x80889A1
+SET_FUNC SetConditionDesc, 0x8088A2D
 SET_FUNC StartHelpTextBubble, 0x8089165
 SET_FUNC GetItemHelpTextType, 0x80892D1
 SET_FUNC Loop6C_8A00B20_UpdateOAMData, 0x808948D

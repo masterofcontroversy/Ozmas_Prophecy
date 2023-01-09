@@ -6,7 +6,7 @@ Skillsystem:
     Kirb, for implementing the Str/Mag split into FE8 based off Tequila's original FE7 version.
 
 Cloud fix: Tequila and Random Wizard
-Autopromote: HyperSpacesGamma, Tequila, Snakey1 (and the next person to be the original maker)
+Autopromote: HyperGammaSpaces, Tequila, Snakey1 (and the next person to be the original maker)
 Fates EXP: Circles
 MNC2 fix: Kirb
 Base Promotion: Pikmin1211
@@ -24,7 +24,7 @@ ModularMinimugBox icons: 2WB
 Steal With Full Inventory: Vesly
 Nos/Resire Dynamic Palette: Sme
 Forced Deployment Swapping: AuraWolf
-Faster AI targetting display: Vesly
+Faster AI targeting display: Vesly
 Faster Level-ups: Tequila
 Secondary Equipment: Pikmin1211
 Background Image Setup: Devisian_Nights
