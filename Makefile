@@ -96,8 +96,8 @@ $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(ALL_TEXTFILES)
 	$(NOTIFY_PROCESS)
 	@echo | $(TMX2EA) $< > /dev/null
 
-#%.dmp:
-#	: do nothing for $@
+%.dmp:
+	: do nothing for $@
 %.bin:
 	: do nothing for $@
 
