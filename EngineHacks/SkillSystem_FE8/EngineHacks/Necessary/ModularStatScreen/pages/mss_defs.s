@@ -132,7 +132,7 @@
   bx      r0 
 .endm
 
-.macro draw_textID_at tile_x, tile_y, textID=0, width=3, colour=3, growth_func=-1        @growth func is # of growth getter in growth_getters_table; 0=hp, 1=str, 2=skl, etc
+.macro draw_textID_at tile_x, tile_y, textID=0, width=3, colour=3, growth_func=-1, xCursor=0        @growth func is # of growth getter in growth_getters_table; 0=hp, 1=str, 2=skl, etc
   mov r3, r7
   mov r1, #\width
   @r3 is current buffer location, r1 is width.
@@ -166,7 +166,7 @@
   .endif
   mov r0, r7
   ldr r1, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
-  mov r3, #0
+  mov r3, #\xCursor
   blh DrawTextInline, r4
   .ifge \growth_func
   ldr r1, [sp, #0x14]
@@ -717,6 +717,7 @@
 .endm
 
 .macro draw_stats_box showBallista=0
+  /*
   ldr     r0, =#0x8A02204     @box TSA
   ldr     r4, =gGenericBuffer
   mov     r1, r4
@@ -728,6 +729,7 @@
   blh     BgMap_ApplyTsa
   ldr     r0, =#0x8205A24     @map of text labels and positions
   blh     DrawStatscreenTextMap
+  */
   ldr     r6, =StatScreenStruct
   ldr     r0, [r6, #0xC]
   blh     DrawUnitEquippedItem
@@ -811,34 +813,59 @@
   ldr     r4, =#0x200407C     @bgmap offset
   ldr     r6, =gActiveBattleUnit
   mov     r0, r6
-  add     r0, #0x5A         @load battle atk
+  add     r0, #BattleUnitAttack         @load battle atk
   mov     r1, #0x0
   ldsh    r2, [r0, r1]
   mov     r0, r4
+  sub     r0, #0x6
   mov     r1, #0x2
   blh     DrawDecNumber
   mov     r0, r4
-  add     r0, #0x80
+  add     r0, #0x7A
   mov     r1, r6
-  add     r1, #0x60         @load battle hit
+  add     r1, #BattleUnitHit            @load battle hit
   mov     r3, #0x0
   ldsh    r2, [r1, r3]
   mov     r1, #0x2
   blh     DrawDecNumber
   mov     r0, r4
-  add     r0, #0xE
+  add     r0, #0x90
   mov     r1, r6
-  add     r1, #0x66         @load battle crit
+  add     r1, #BattleUnitCrit           @load battle crit
   mov     r3, #0x0
   ldsh    r2, [r1, r3]
   mov     r1, #0x2
   blh     DrawDecNumber
-  add     r4, #0x8E
-  mov     r0, r6
-  add     r0, #0x62         @load battle avoid
-  mov     r6, #0x0
-  ldsh    r2, [r0, r6]
   mov     r0, r4
+  add     r0, #0x86
+  mov     r1, r6
+  add     r1, #BattleUnitAvoid          @load battle avoid
+  mov     r2, #0x0
+  ldsh    r2, [r1, r2]
+  mov     r1, #0x2
+  blh     DrawDecNumber
+  mov     r0, r4
+  add     r0, #0x6
+  mov     r1, r6
+  add     r1, #UnitDefense              @load battle protection
+  mov     r2, #0x0
+  ldsb    r2, [r1, r2]
+  mov     r1, #0x2
+  blh     DrawDecNumber
+  mov     r0, r4
+  add     r0, #0x10
+  mov     r1, r6
+  add     r1, #UnitResistance           @load battle resiliance
+  mov     r2, #0x0
+  ldsb    r2, [r1, r2]
+  mov     r1, #0x2
+  blh     DrawDecNumber
+  mov     r0, r4
+  sub     r0, #0x70
+  mov     r1, r6
+  add     r1, #BattleUnitAttackSpeed    @load battle attack speed
+  mov     r2, #0x0
+  ldsh    r2, [r1, r2]
   mov     r1, #0x2
   blh     DrawDecNumber
   b       SS_DrawItemBox_RangeText
@@ -892,7 +919,8 @@
   add     r6, #0x40
   add     r1, r0, r6
   
-  @i think this loop just clears a gfx buffer
+  @Displays Equipped graphic
+  /*
   loc_0x8087660:
   add     r0, r4, r5
   strh    r0, [r2]
@@ -903,7 +931,7 @@
   add     r4, #0x1
   cmp     r4, #0x7
   ble     loc_0x8087660
-  
+  */
   b SkipPool
   .ltorg
   SkipPool:
@@ -1401,4 +1429,43 @@
     .short 0xF800
     mov    r0, r7 @ Next "blank" TextHandle.
   SkipGaidenDraw:
+.endm
+
+.macro draw_weapon_range_at, tile_x, tile_y
+  @r6 = Unit pointer
+  push {r4}
+  ldr  r1, =gActiveBattleUnit
+  mov  r0, #BattleUnitWeaponBefore
+  ldrh r0, [r0, r1]
+  mov  r4, r0 @r4 = Equipped weapon
+
+  cmp  r0, #0x0
+  beq  NoWeapon
+    blh  GetItemMaxRange
+    draw_number_at \tile_x, \tile_y
+
+    ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x-1))
+    mov  r1, #Blue
+    mov  r2, #20
+    blh  DrawSpecialUiChar
+
+    mov  r0, r4
+    blh  GetItemMinRange
+    draw_number_at \tile_x-3, \tile_y
+    b    DrawWeaponEnd
+
+  NoWeapon:
+    ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
+    mov  r1, #Blue
+    mov  r2, #20
+    blh  DrawSpecialUiChar
+    
+    ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x-1))
+    mov  r1, #Blue
+    mov  r2, #20
+    blh  DrawSpecialUiChar
+  
+  DrawWeaponEnd:
+  pop  {r4}
+
 .endm

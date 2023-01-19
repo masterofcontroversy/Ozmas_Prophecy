@@ -5,6 +5,9 @@
 # 0x0094
 HP Bars[.][X]
 
+# 0x04F5
+Avo[X]
+
 # 0x00B2
 Set health bar display[X]
 
@@ -48,6 +51,12 @@ Sirius[X]
 
 ## nameZeke
 Zeke[X]
+
+## Protection
+Prt[X]
+
+## Resiliance
+Rsl[X]
 
 ## StairsNameText
  Stairs[X]

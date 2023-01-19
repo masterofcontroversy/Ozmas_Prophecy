@@ -9,14 +9,22 @@
 #ifdef _FE8_
 
   #define Skl_Arrow_X 0x78
-  #define Skl_Arrow_Y 0x28
+  #define Skl_Arrow_Y 104
   #define Spd_Arrow_X 0x78
-  #define Spd_Arrow_Y 0x38
+  #define Spd_Arrow_Y 120
   #define Trv_Icon_X 0xB8
-  #define Trv_Icon_Y 0x2E
+  #define Trv_Icon_Y 141
   
   #include "DisplayGrowthsOptions/DisplayGrowthsOptions.event"
   #include "WeaponRankStatScreen/WeaponRankStatScreen.event"
+
+  PUSH
+  ORG $88620
+  POIN RemoveGlowy
+  POP
+
+  RemoveGlowy:
+  #incbin "RemoveGlowy.lz77"
  
   PUSH
     ORG 0x205b24 //24 for stat screen
@@ -133,6 +141,12 @@
   ALIGN 4
   BiorhythmTextIDLink:
   SHORT SS_BiorhythmText
+  ALIGN 4
+  ProtectionIDLink:
+  SHORT Protection
+  ALIGN 4
+  ResilianceIDLink:
+  SHORT Resiliance
   
   #ifndef USE_STRMAG_SPLIT
   

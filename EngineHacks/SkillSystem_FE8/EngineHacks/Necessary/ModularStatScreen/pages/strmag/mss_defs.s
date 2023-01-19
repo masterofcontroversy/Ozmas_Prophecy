@@ -675,7 +675,7 @@
   blh     WriteStatusText
   mov     r3, r0     
   mov     r0, r4 
-  mov     r1, #0x16        @16 if status, otherwise 18???
+  mov     r1, #0x18        @16 if status, otherwise 18???
   mov     r2, #\colour   
   blh     Text_InsertString, r4
   mov     r1, r8
