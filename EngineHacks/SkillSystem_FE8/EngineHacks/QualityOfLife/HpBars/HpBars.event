@@ -49,7 +49,7 @@
 
   ALIGN 4
   HPBarGraphic:
-    #incbin "bin/WarningHpSheet.dmp" 
+    #incbin "bin/WarningHpSheet.lz77" 
 	
   ALIGN 4
   WS_FrameData: //should be the OAM data

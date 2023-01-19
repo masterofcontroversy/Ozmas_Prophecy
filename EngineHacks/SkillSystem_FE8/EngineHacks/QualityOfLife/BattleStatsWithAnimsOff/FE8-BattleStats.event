@@ -63,17 +63,17 @@
 	ALIGN 4
 	Battle_Name_Graphics:
 	//#incext Png2Dmp "New_Stat_Names.png" --lz77
-	#incbin "New_Stat_Names.dmp"
+	#incbin "New_Stat_Names.lz77"
 	
 	ALIGN 4
 	Battle_Name_Palette:
 	//#incext Png2Dmp "New_Stat_Names.png" --palette-only
-	#incbin "New_Stat_Names_pal.dmp"
+	#incbin "New_Stat_Names.pal"
 	
 	ALIGN 4
 	New_Numbers:
 	//#incext Png2Dmp "new_numbers.png" --lz77
-	#incbin "new_numbers.dmp"
+	#incbin "new_numbers.lz77"
 	
 // #else
 // 	ERROR "You're not assembling FE8 events!"

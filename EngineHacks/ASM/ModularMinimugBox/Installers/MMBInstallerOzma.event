@@ -720,7 +720,7 @@ After each set of module options are definitions that you can use to adjust the 
 	// ATK label
 	#define MMBATKLabelX 11
 	#define MMBATKLabelY 1
-	#define MMBATKLabelVRAMTile 0x102
+	#define MMBATKLabelVRAMTile 0x101
 	#define MMBATKLabelPaletteIndex 2
 	#define MMBATKLabelTileCount 1
 
@@ -748,7 +748,7 @@ After each set of module options are definitions that you can use to adjust the 
 	// DEF label
 	#define MMBDEFLabelX 11
 	#define MMBDEFLabelY 3
-	#define MMBDEFLabelVRAMTile 0x10A
+	#define MMBDEFLabelVRAMTile 0x102
 	#define MMBDEFLabelPaletteIndex 2
 	#define MMBDEFLabelTileCount 1
 
@@ -783,7 +783,7 @@ After each set of module options are definitions that you can use to adjust the 
 	// RES label
 	#define MMBRESLabelX 11
 	#define MMBRESLabelY 4
-	#define MMBRESLabelVRAMTile 0x164
+	#define MMBRESLabelVRAMTile 0x103
 	#define MMBRESLabelPaletteIndex 2
 	#define MMBRESLabelTileCount 1
 

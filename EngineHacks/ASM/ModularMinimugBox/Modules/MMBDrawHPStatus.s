@@ -176,7 +176,7 @@ SkipDashedCurrentHP:
 
 	bllr
 
-	add		r6, r6, #25
+	add		r6, r6, #23
 
 	mov		r0, r5
 	ldr		r1, =GetMaxHP
