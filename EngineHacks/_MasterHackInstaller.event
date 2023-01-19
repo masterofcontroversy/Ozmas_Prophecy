@@ -38,7 +38,7 @@
 #include "ASM/SpellLoader/Installer.event"
 
 //Status screen palette by allegiance
-#include "ASM/StatScreenAlleg/Installer.event"
+//#include "ASM/StatScreenAlleg/Installer.event"
 
 //Modular Goal Window
 #include "C/ModularGoalWindow/MGW.event"

@@ -1,0 +1,25 @@
+PUSH
+
+ORG 0x88638
+POIN StatScreenImage
+
+ORG 0x88640
+POIN StatScreenPalette
+
+ORG 0x88644
+POIN StatScreenTSA
+
+POP
+
+//TODO: Make a system to properly compress these graphics pre-build
+ALIGN 4
+StatScreenImage:
+#incbin "StatScreenImage.dmp"
+
+ALIGN 4
+StatScreenPalette:
+#incbin "StatScreen.pal"
+
+ALIGN 4
+StatScreenTSA:
+#incbin "StatScreen_TSA.dmp"
