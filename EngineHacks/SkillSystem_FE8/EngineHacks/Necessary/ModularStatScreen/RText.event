@@ -26,6 +26,8 @@
 
   //#include "EAstdlib.event"
 
+  #include "RTextGetters/RTextGetters.event"
+
   #define RMenu(up,down,left,right,xcoord,ycoord,TID) "POIN up down left right;BYTE xcoord ycoord; SHORT TID; WORD 0 0;"
   #define RMenu(up,down,left,right,xcoord,ycoord,TID,Getter) "POIN up down left right; BYTE xcoord ycoord; SHORT TID; POIN 0 Getter|1"
   #define RMenu(up,down,left,right,xcoord,ycoord,SlotID,Looper,Getter) "POIN up down left right; BYTE xcoord ycoord; SHORT SlotID; POIN Looper|1 Getter|1"
@@ -78,7 +80,7 @@ RTextPage1:
 ALIGN 4
 
 ST_Con:
-  RMenu(ST_Luck,ST_Aid,ST_Spd,0,MSSRightColumnX,120,0x54e)
+  RMenu(ST_Luck,ST_Aid,ST_Spd,0,MSSRightColumnX,120,0x54e,ConHPDescGetter)
 ST_Aid:
   RMenu(ST_Con,0,ST_Mov,0,MSSRightColumnX,136,0x54F)
 ST_Cond:
@@ -120,10 +122,10 @@ ST_Skill6:
 #endif  // QOL_STAT_SCREEN_BALLISTA
 #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
   PersonalDataRText:
-    RMenu(0,ST_Str,ST_Name,0,0x76,0x4,PersonalDataDesc1)
+    RMenu(0,ST_Cond,ST_Name,0,0x76,0x4,PersonalDataDesc1)
 #else
   PersonalDataRText:
-    RMenu(0,ST_Str,ST_Name,0,0x76,0x4,PersonalDataDesc2)
+    RMenu(0,ST_Cond,ST_Name,0,0x76,0x4,PersonalDataDesc2)
 #endif
 PUSH
   // Display an R-button text about pressing Select, since I can't seem to fit it nicely, and make that the default

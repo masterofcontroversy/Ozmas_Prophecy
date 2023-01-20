@@ -1,0 +1,16 @@
+
+#define ConDesc 0x054E
+#define HPDesc  0x0544
+
+ALIGN 4
+ConHPDescGetter:
+#incbin "ConHPDescGetter/ConHPDescGetter.dmp"
+WORD ConDesc
+WORD HPDesc
+
+ALIGN 4
+SkillDescGetter: //given skill number, get description text ID
+#incbin "SkillDescGetter/SkillDescGetter.dmp"
+POIN SkillDescTable
+POIN Skill_Getter
+WORD SS_SkillsDefaultRText
