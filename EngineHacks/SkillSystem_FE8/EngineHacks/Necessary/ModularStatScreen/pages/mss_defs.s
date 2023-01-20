@@ -844,6 +844,9 @@
   ldsh    r2, [r1, r2]
   mov     r1, #0x2
   blh     DrawDecNumber
+
+  //TODO: Account for protection and resilience modifiers
+
   mov     r0, r4
   add     r0, #0x6
   mov     r1, r6
@@ -855,7 +858,7 @@
   mov     r0, r4
   add     r0, #0x10
   mov     r1, r6
-  add     r1, #UnitResistance           @load battle resiliance
+  add     r1, #UnitResistance           @load battle Resilience
   mov     r2, #0x0
   ldsb    r2, [r1, r2]
   mov     r1, #0x2

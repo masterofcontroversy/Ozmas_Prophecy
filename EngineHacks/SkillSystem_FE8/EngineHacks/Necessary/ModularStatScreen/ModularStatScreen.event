@@ -85,11 +85,6 @@
     ORG $888BC //Stores byte to store 1 before stat screen struct
       callHack_r3(Store_Page)
 
-    // Display an R-button text about pressing Select, since I can't seem to fit it nicely, and make that the default
-
-    ORG $889D8
-      POIN PersonalDataRText
-
     // HP name color
 	// This now gets called from within the left stat screen page
     //ORG $86ED4
@@ -145,8 +140,8 @@
   ProtectionIDLink:
   SHORT Protection
   ALIGN 4
-  ResilianceIDLink:
-  SHORT Resiliance
+  ResilienceIDLink:
+  SHORT Resilience
   
   #ifndef USE_STRMAG_SPLIT
   

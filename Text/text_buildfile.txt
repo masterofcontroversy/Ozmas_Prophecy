@@ -55,7 +55,7 @@ Zeke[X]
 ## Protection
 Prt[X]
 
-## Resiliance
+## Resilience
 Rsl[X]
 
 ## StairsNameText
@@ -139,6 +139,8 @@ Unequip[X]
 
 ## UnequipEquipmentDescription
 Remove this equipment.[X]
+
+#include "MenuText.txt"
 
 #include "CharacterText/Names.txt"
 

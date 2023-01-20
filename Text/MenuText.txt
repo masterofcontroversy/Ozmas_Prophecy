@@ -1,0 +1,12 @@
+## ProtectionDesc
+Protection.[NL]
+Total resistence to physical attacks.[X]
+
+## AttackSpeedDesc
+Attack Speed.[NL]
+Speed after equipment burden[NL]
+is accounted for.[X]
+
+## ResilienceDesc
+Resilience.[NL]
+Total resistence to Magic attacks.[X]

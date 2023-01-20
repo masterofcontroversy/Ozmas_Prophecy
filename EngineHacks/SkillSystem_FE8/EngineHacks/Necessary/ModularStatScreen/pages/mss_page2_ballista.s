@@ -32,9 +32,9 @@ ldr r0,=ProtectionIDLink
 ldrh r0, [r0]
 draw_textID_at 18, 15, colour=Yellow, xCursor=4 @protection
 
-ldr r0,=ResilianceIDLink
+ldr r0,=ResilienceIDLink
 ldrh r0, [r0]
-draw_textID_at 24, 15, colour=Yellow, xCursor=4 @resiliance
+draw_textID_at 24, 15, colour=Yellow, xCursor=4 @Resilience
 
 draw_items_text showBallista=1
 
