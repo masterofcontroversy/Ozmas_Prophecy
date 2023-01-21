@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="19" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="19" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="1">
  <tileset firstgid="1" name="VillageSnow" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="../Tilesets/ImprovedVillage/VillageSnow.png" width="512" height="512"/>
  </tileset>
@@ -16,7 +16,7 @@
    <property name="TileConfig" value="SnowVillageConfigID"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxdlNlvT1EQx8+5N1TE2ugTiagljdjpg/AibeLFnkgktSW8KwmJiKXViO2nReq9i6CI+hfsa4uE4s0ShIb+iAYvfCbz/eVeffhk5sw5d2bOzJxbGUNIoD2E0AmD6DEJIYVy9Dpsm2Az1LLugF/sTUxDaMW2BbZCjXykyEfIqPVLZBtyAXIfcj8cgCbWg/hZj5/nyL3YDsIh2MbeD7iEPgC34CEch2NwG57Cs+CxVnF2tVijuCMU1+IsTNzfDdaP4SKMYT0aLqB/kn1cdL87otOl9Xv4Hv1OK4L7O4t+Hv1ocD9dwfOdjj478b3P6M1iFPRg226x2f/Gejl6M4yHFviivOyendHrPwP97ZA7dkfP9Qj24VCeeO+uwXzoVi/vwj2ojF7/r1BU3c9Ep5r693PmHRTsHHuHrW7qZS9yWPQaWI0s5gDrsYnHnpR6D5dAH7bG4HW/o/w6lMtl+BC8TidU65nRffzhu7o0m4X8XLUr7gPOFoLnvphzvxPX67GfUr9Mz+di987P1X3F/Qgb2J+smKVvWnK+TK9I/f69mjObn7LoM1iqyUrYyLm/mmV7FwX1ZVbiedsMzbHZRK6FdarjPM241aQMqkKWj7E09dmMudntUV/rYSfssrVmy97xaeQEqIAXid/L/JRqb+/3pmbaZnSu6mGzWlR9LOeT6NdhEVSH/3vSpjm2eo5UbtanZfqXvFGtrkSPa2/C3rDZfw7pSaPmw3Iqqi7mo0H/GvP7KufXuCrb7iSb0ydW85j1xd5MVfR3ZDFfS07FPk3va4ps5meP3pD1oz9kfWnSfUt3tO8boBZqpJu/Pvlqxc85+AdyIq+8
+   eJxdlNlvT1EQx8+5N1TE2ugTibSWlNjpg/AimnixJxJJbQ/elYRExNJqxPbTIvXeRVBE/Qv2tUVC8WYJQkN/RIMXPpP5/nKvPnwyc+acOzNnZs6tiiEk0B5C6IRB9JiEkEI5eh22zbAFall3wC/2JqYhtGLbCtugKnUfKfuPkFE+XyLbkAuQ+5D74QA0sR7Ezwa+e47ci+0gHIJKbD/Yv4Q+ALfgIRyHY3AbnsKz4LFWc3aNWKu4IxR3Br4WJu7vBuvHcBHGsB4NF9A/yT4uut8d0enS+j18t7sjVwb3d5b1efSjwf10Bc93GvrsxPc+ozeLUdCDbbvFZv8b6xXozTAeWuCL8rJ7dkav/3T0t0Pu2B091yPYh0N54r27BvOhW728C/esN9Hr/xWKqvuZ6NRQn37OvIOCnWPvsPVHvexFDoteA6uRxRxgPTbx2JNS7+ES6MPWGLzud5Rfh3K5DB+C1+mEaj0zuo8/fFeXZrOQn6t2xX3A2ULw3Bdz7nfiej32U+qX6flc7N75ubqvuB9hI/uTFbP0TUvOl+kVqd+/V3Nm81MWfQZLNVkFmzj3V7Ns76KgvsxKPG+boTk2m8h1sF51nKcZt5qUQXXI8jGWpj6bMTe7PeprPeyEXbbWbNk7Po2cABXwIvF7mZ9S7e393tRM24zOVT1sVouqj+V8Ev06LIKa8H9P2jTHVs+Rys36tEz/kjeq1ZXoce1N2Bs2+88hPWnUfFhORdXFfDToX2N+X+X8Gldl251kc/rEah6zvtibqY7+jizma8kp2KfqfVXKZn726A1ZP/pD1pcm3bd0R/u+AWphuXTz1ydfrfg5B/8AthKvpQ==
   </data>
  </layer>
  <layer id="6" name="DestroyedVillage1" width="19" height="18" visible="0">
