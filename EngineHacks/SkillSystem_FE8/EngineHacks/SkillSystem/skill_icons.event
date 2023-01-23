@@ -113,8 +113,8 @@ ORG SkillIcon(CounterMagicID)
 ORG SkillIcon(MiracleID)
 #incbin "SkillIcons/Miracle.4bpp"
 
-ORG SkillIcon(SwordfaireID)
-#incbin "SkillIcons/Swordfaire.4bpp"
+ORG SkillIcon(ShieldfaireID)
+#incbin "SkillIcons/Shieldfaire.4bpp"
 
 ORG SkillIcon(LancefaireID)
 #incbin "SkillIcons/Lancefaire.4bpp"

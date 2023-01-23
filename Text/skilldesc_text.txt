@@ -158,9 +158,9 @@ when attacked at 1-2 range.[X]
 Miracle: Survive a lethal[N]
 attack if HP > 50%.[X]
 
-## SD_Swordfaire
-Swordfaire: +4 damage[N]
-when equipping a sword.[X]
+## SD_Shieldfaire
+Shieldfaire:[NL]
+Shield weight reduced by 2. Floors at 0.[X]
 
 ## SD_Lancefaire
 Lancefaire: +4 damage[N]
@@ -904,7 +904,7 @@ HP is 50% or higher, unit doubles[N]
 and attacker does not double.[X]
 
 ## SD_EyeForAnEye
-Eye For An Eye: Foe always attacks first.[N]
+Eye^{ }For^{ }An^{ }Eye: Foe always attacks first.[N]
 Half of damage taken last hit[NL]
 is added to Max's counterattack.[X]
 

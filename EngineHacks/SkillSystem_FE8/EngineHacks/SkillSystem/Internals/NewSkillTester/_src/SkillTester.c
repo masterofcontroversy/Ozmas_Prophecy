@@ -4,6 +4,7 @@
 static int  absolute(int value)        {return value < 0 ? -value : value;}
 static bool IsSkillIDValid(u8 skillID) {return skillID != 0 && skillID != 255;}
 static bool IsBattleReal()             {return gBattleStats.config & 3;}
+u8* GetUnitsInRange(Unit* unit, int allyOption, int range);
 
 //Checks if given unit is on the field
 static bool IsUnitOnField(Unit* unit) {
@@ -128,11 +129,12 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
 
 //Creates an aura skill buffer with skill coordinates relative to a unit
 AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
-    SkillBuffer* buffer = gAttackerSkillBuffer;
+    SkillBuffer* buffer = gGenericSkillBuffer;
     u8 count = 0;
     u8 distance = 0;
+    u8* unitsInRange = GetUnitsInRange(unit, 4, 6);
 
-    for (int i = 0; i < 0x100; ++i) {
+    for (int i = 0; unitsInRange[i]; ++i) {
         Unit* other = gUnitLookup[i];
 
         if (!IsUnitOnField(other) || unit->index == i) {

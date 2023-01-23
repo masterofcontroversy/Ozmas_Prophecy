@@ -1,0 +1,9 @@
+#include "BattleStatCalculations.lyn.event"
+
+ALIGN 4
+gShieldfaireID:
+WORD ShieldfaireID
+
+ALIGN 4
+gCriticalSkillID:
+WORD CritUpID

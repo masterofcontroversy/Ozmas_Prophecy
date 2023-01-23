@@ -10,7 +10,8 @@ MMBRESGetter:
 
 	push	{lr}
 
-	ldr		r3, =GetRes
+	ldr		r0, =BattleBufAttacker
+	ldr		r3, =GetUnitResilience
 	mov		lr, r3
 	bllr
 

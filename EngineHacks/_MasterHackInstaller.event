@@ -7,8 +7,14 @@
 //Equip hack
 #include "C/Equip/Installer.event"
 
-//Experence formula
+//Experience formula
 #include "C/NewExpFormula/NewExpFormula.lyn.event"
+
+//Modular Goal Window
+#include "C/ModularGoalWindow/MGW.event"
+
+//Battle stat calculations
+#include "C/BattleStatCalculations/BattleStatCalculations.event"
 
 //Set/Unset Condition
 #include "ASM/SetCondition/SetCondition.event"
@@ -40,9 +46,6 @@
 //Status screen palette by allegiance
 //#include "ASM/StatScreenAlleg/Installer.event"
 
-//Modular Goal Window
-#include "C/ModularGoalWindow/MGW.event"
-
 //Sync cursor anim to map sprite anims
 #include "ASM/CursorAnim/Installer.event"
 
@@ -60,10 +63,6 @@
 
 //Conditional nosferatu palette
 #include "ASM/NosResire/NosResire.event"
-
-//New Calculations
-#include "ASM/NewCalcs/NewBattleCalcs.lyn.event"
-WORD CritUpID
 
 //Narrowfont
 #include "ASM/NarrowFont/NarrowFontInstaller.event"

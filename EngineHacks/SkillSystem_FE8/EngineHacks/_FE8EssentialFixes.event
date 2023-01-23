@@ -20,10 +20,7 @@ PUSH
 //    BYTE 0xD2
 POP
 */
-//Fix MNC2 Freezing glitch (breaks skirmishes!)
-  ORG $BD070
-  SHORT $E0B8
-  
+
 // Remove hardcoded checks for chapter 5x (by Stan)
     
 	// do not display 0 gold in 5x

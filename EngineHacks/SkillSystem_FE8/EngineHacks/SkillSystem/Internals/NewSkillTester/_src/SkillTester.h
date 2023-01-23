@@ -15,7 +15,7 @@ extern u8 GetEquipmentSkill(Unit* unit);
 
 struct SkillBuffer {
 /*00*/  u8 lastUnitChecked;
-/*01*/  u8 skills[11];
+/*01*/  u8 skills[12];
 };
 
 struct BWLData {
@@ -34,6 +34,7 @@ extern struct BWLData gBWLDataArray[];
 
 extern SkillBuffer gAttackerSkillBuffer[];
 extern SkillBuffer gDefenderSkillBuffer[];
+extern SkillBuffer gGenericSkillBuffer[];
 extern AuraSkillBuffer gAuraSkillBuffer[];
 extern u8 gTempSkillBuffer[];
 extern u8 gUnitRangeBuffer[];

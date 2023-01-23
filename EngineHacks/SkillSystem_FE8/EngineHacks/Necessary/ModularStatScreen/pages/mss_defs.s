@@ -845,22 +845,18 @@
   mov     r1, #0x2
   blh     DrawDecNumber
 
-  //TODO: Account for protection and resilience modifiers
-
+  mov     r0, r6
+  blh     GetUnitProtection
+  mov     r2, r0 @r2 = unit protection
   mov     r0, r4
   add     r0, #0x6
-  mov     r1, r6
-  add     r1, #UnitDefense              @load battle protection
-  mov     r2, #0x0
-  ldsb    r2, [r1, r2]
   mov     r1, #0x2
   blh     DrawDecNumber
+  mov     r0, r6
+  blh     GetUnitResilience
+  mov     r2, r0 @r2 = unit resilience
   mov     r0, r4
   add     r0, #0x10
-  mov     r1, r6
-  add     r1, #UnitResistance           @load battle Resilience
-  mov     r2, #0x0
-  ldsb    r2, [r1, r2]
   mov     r1, #0x2
   blh     DrawDecNumber
   mov     r0, r4

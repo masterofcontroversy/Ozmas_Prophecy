@@ -10,7 +10,8 @@ MMBDEFGetter:
 
 	push	{lr}
 
-	ldr		r3, =GetDef
+	ldr		r0, =BattleBufAttacker
+	ldr		r3, =GetUnitProtection
 	mov		lr, r3
 	bllr
 
