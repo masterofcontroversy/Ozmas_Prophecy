@@ -134,10 +134,17 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
     u8 distance = 0;
     u8* unitsInRange = GetUnitsInRange(unit, 4, 6);
 
-    for (int i = 0; unitsInRange[i]; ++i) {
-        Unit* other = gUnitLookup[i];
+    //If no units are nearby, end early
+    if (!unitsInRange) {
+        buffer->lastUnitChecked = 0;
+        gAuraSkillBuffer[count++].skillID = 0;
+        return gAuraSkillBuffer;
+    }
 
-        if (!IsUnitOnField(other) || unit->index == i) {
+    for (int i = 0; unitsInRange[i]; ++i) {
+        Unit* other = GetUnit(unitsInRange[i]);
+
+        if (!IsUnitOnField(other) || unit->index == unitsInRange[i]) {
             continue;
         }
 
@@ -158,7 +165,7 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
 
                 //No need to `& 0x3F` because of the limit
                 gAuraSkillBuffer[count].distance = distance;
-                 //Shifting for storage
+                //Shifting for storage
                 gAuraSkillBuffer[count].faction = UNIT_FACTION(other) >> 6;
                 ++count;
             }

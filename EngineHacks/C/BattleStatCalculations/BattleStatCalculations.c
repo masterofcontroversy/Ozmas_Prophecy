@@ -25,6 +25,9 @@ void CalculateUnitCrit(BattleUnit* unit) {
     if (SkillTester((Unit*) unit, gCriticalSkillID)) {
         unit->battleCritRate = GetItemCrit(unit->weaponBefore) + (unit->unit.skl);
     }
+    else {
+        unit->battleCritRate = 0;
+    }
 }
 
 void CalculateUnitAttackSpeed(BattleUnit* unit) {
