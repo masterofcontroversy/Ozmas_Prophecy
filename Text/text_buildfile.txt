@@ -8,6 +8,9 @@ HP Bars[.][X]
 # 0x04F5
 Avo[X]
 
+# 0x04EE
+Lck[X]
+
 # 0x00B2
 Set health bar display[X]
 
