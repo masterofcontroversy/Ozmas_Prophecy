@@ -29,10 +29,10 @@
 	#define mGlyphEntry(mGlyphEntry,mGlyphLoc) "PUSH; ORG menuGlyphTable+mGlyphEntry*0x04; POIN mGlyphLoc; POP"
 	#define tGlyphEntry(tGlyphEntry,tGlyphLoc) "PUSH; ORG tGlyphTable+tGlyphEntry*0x04; POIN tGlyphLoc; POP"
 
-	#include "SerifLowercase/LowercaseSerif.txt" // includes text bubble icons and short space
-	#include "SerifUppercase/UppercaseSerif.txt"
-	#include "MenuLowercase/LowercaseMenu.txt"
-	#include "MenuUppercase/UppercaseMenu.txt"	
+	#include "SerifLowercase/_LowercaseSerif.event" // includes text bubble icons and short space
+	#include "SerifUppercase/_UppercaseSerif.event"
+	#include "MenuLowercase/_LowercaseMenu.event"
+	#include "MenuUppercase/_UppercaseMenu.event"	
 		
 		
 		

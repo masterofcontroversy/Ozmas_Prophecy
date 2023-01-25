@@ -17,8 +17,7 @@ TABLES				:= $(abspath .)/Tables
 TEXT_FOLDER 		:= $(abspath .)/Text
 TEXT_INSTALLER 		:= $(abspath .)/Text/InstallTextData.event
 TEXT_MAIN			:= $(abspath .)/Text/text_buildfile.txt
-ALL_TEXTFILES		:= $(wildcard Text/*.txt)
-ALL_TEXTFILES 		+= $(wildcard Text/**/*.txt)
+ALL_TEXTFILES		:= $(shell $(EADEP) $(TEXT_MAIN) --add-missings)
 TEXT_DEFINITIONS	:= $(abspath .)/Text/TextDefinitions.event
 
 # Making sure we are using python 3
@@ -54,7 +53,7 @@ $(TARGET_ROM): directories $(MAIN_EVENT) $(EVENT_DEPENDS) $(SOURCE_ROM)
 	@[ -d $(DIST_FOLDER) ] || mkdir $(DIST_FOLDER)
 	@cp -f "$(SOURCE_ROM)" "$(TARGET_ROM)" || exit 2
 	@cd "$(EA)"
-	@$(COLORZCORE) A FE8 "-output:$(TARGET_ROM)" "-input:$(MAIN_EVENT)" "--nocash-sym:$(TARGET_SYM)"
+	@$(COLORZCORE) A FE8 "-output:$(TARGET_ROM)" "-input:$(MAIN_EVENT)" "--nocash-sym:$(TARGET_SYM)" --build-times
 	@$(SYMCOMBO) $(TARGET_SYM) $(TARGET_SYM) $(VANILLASYM)
 
 directories:
@@ -66,6 +65,10 @@ directories:
 
 %.4bpp: %.png
 	$(PNG2DMP) $< -o $@
+
+%.fontchar: %.png
+	cd $(dir $<) && grit $< -gu 16 -gb -gB 2 -p! -m! -ft bin -fh!
+	@mv $(basename $<).img.bin $@
 
 %.lz77: %.png
 	$(PNG2DMP) --lz77 $< -o $@
@@ -112,6 +115,7 @@ clean:
 	@find . -name *.lz77 -type f -delete
 	@find . -name *.4bpp -type f -delete
 	@find EngineHacks/ -name "*.lyn.event" -type f -delete
+	@find . -name *.fontchar -type f -delete
 
 	@echo All clean!
 
