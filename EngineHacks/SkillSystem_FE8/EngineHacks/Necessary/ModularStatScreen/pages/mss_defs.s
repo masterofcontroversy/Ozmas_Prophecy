@@ -1412,25 +1412,28 @@
 .endm
 
 .macro draw_weapon_range_at, tile_x, tile_y
-  @r6 = Unit pointer
   push {r4}
-  ldr  r1, =gActiveBattleUnit
-  mov  r0, #BattleUnitWeaponBefore
-  ldrh r0, [r0, r1]
-  mov  r4, r0 @r4 = Equipped weapon
+  ldr  r0, =gActiveBattleUnit
+  mov  r1, #BattleUnitWeaponBefore
+  ldrh r1, [r0, r1]
+  mov  r4, r1 @r4 = Equipped weapon
 
-  cmp  r0, #0x0
+  cmp  r1, #0x0
   beq  NoWeapon
-    blh  GetItemMaxRange
+    @Max range
+    blh  GetItemRangeMax
     draw_number_at \tile_x, \tile_y
 
+    @Dividing dash
     ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x-1))
     mov  r1, #Blue
     mov  r2, #20
     blh  DrawSpecialUiChar
 
-    mov  r0, r4
-    blh  GetItemMinRange
+    @Min range
+    ldr  r0, =gActiveBattleUnit
+    mov  r1, r4
+    blh  GetItemRangeMin
     draw_number_at \tile_x-3, \tile_y
     b    DrawWeaponEnd
 
