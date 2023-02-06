@@ -17,9 +17,6 @@
       // BYTE $20
       BYTE $18
 
-    //ORG $156ac // Repoint loaded image
-    //  POIN HPBarGraphic
-
     ORG $35718 // Force Subtitle Help (option replaced by hp bars toggle)
       SHORT $46C0
   POP
@@ -46,10 +43,6 @@
   ALIGN 4
   HPBarsOnMapHack:
     #include "asm/WarningAndHpBars.lyn.event"
-
-  ALIGN 4
-  HPBarGraphic:
-    #incbin "bin/WarningHpSheet.lz77" 
 	
   ALIGN 4
   WS_FrameData: //should be the OAM data

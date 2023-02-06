@@ -1,0 +1,8 @@
+PUSH
+    ORG 0x156ac // Repoint loaded image
+    POIN SystemIconGraphic
+POP
+
+ALIGN 4
+SystemIconGraphic:
+#incbin "SystemIconGraphic.lz77" 

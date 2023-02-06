@@ -2,7 +2,9 @@
 #include "MapSprites/_SpriteInstaller.event"
 #include "ItemIcons/IconInstaller.event"
 #include "Backgrounds/_BackgroundInstaller.event"
+#include "BattleBackgrounds/_BattleBackgroundsInstaller.event"
 #include "StatScreen/Installer.event"
+#include "SystemIcons/SystemIcons.event"
 
 #include "SpellAnimations/MasterSpellAnimationInstaller.event"
 

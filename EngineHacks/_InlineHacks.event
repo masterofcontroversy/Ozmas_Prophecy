@@ -22,7 +22,7 @@ BYTE 0x18 0x7A
 ORG 0x180FA
 BYTE 0xFF 0xF7 0x63 0xFF
 
-//Don't add 9 auto levels to enemy units
+//Don't add 9 auto levels to promoted enemy units
 ORG 0x18136
 SHORT $E007
 
@@ -90,6 +90,11 @@ BYTE 15
 ORG $02B9C4
     WORD $30324348 $4B012164 $46C04718 $80D167D
 
+//Battle conversations for any action
+ORG 0x8351A         //Anims off
+SHORT 0x46C0 0x46C0 //Skip attack action branch
+ORG 0x834CA         //Anims on
+SHORT 0x46C0 0x46C0 //Skip attack action branch
 
 //Weather priorities
 // By Zane

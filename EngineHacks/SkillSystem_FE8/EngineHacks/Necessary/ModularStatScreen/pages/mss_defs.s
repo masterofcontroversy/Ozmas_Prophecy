@@ -810,63 +810,44 @@
   cmp     r0, #Deny_Statscreen_Class_Lo
   beq     SS_DrawItemBox_Unarmed
   
+  @Draw battle stats
   ldr     r4, =#0x200407C     @bgmap offset
   ldr     r6, =gActiveBattleUnit
-  mov     r0, r6
-  add     r0, #BattleUnitAttack         @load battle atk
-  mov     r1, #0x0
-  ldsh    r2, [r0, r1]
-  mov     r0, r4
-  sub     r0, #0x6
-  mov     r1, #0x2
-  blh     DrawDecNumber
-  mov     r0, r4
-  add     r0, #0x7A
-  mov     r1, r6
-  add     r1, #BattleUnitHit            @load battle hit
-  mov     r3, #0x0
-  ldsh    r2, [r1, r3]
-  mov     r1, #0x2
-  blh     DrawDecNumber
-  mov     r0, r4
-  add     r0, #0x90
-  mov     r1, r6
-  add     r1, #BattleUnitCrit           @load battle crit
-  mov     r3, #0x0
-  ldsh    r2, [r1, r3]
-  mov     r1, #0x2
-  blh     DrawDecNumber
-  mov     r0, r4
-  add     r0, #0x86
-  mov     r1, r6
-  add     r1, #BattleUnitAvoid          @load battle avoid
-  mov     r2, #0x0
-  ldsh    r2, [r1, r2]
-  mov     r1, #0x2
-  blh     DrawDecNumber
 
+  @Attack
+  mov     r0, #BattleUnitAttack
+  ldsh    r0, [r6, r0]
+  draw_number_at 17, 13
+
+  @Hit
+  mov     r0, #BattleUnitHit
+  ldsh    r0, [r6, r0]
+  draw_number_at 28, 13
+
+  @Avoid
+  mov     r0, #BattleUnitAvoid
+  ldsh    r0, [r6, r0]
+  draw_number_at 28, 15
+
+  @Attack Speed
+  mov     r0, #BattleUnitAttackSpeed
+  ldsh    r0, [r6, r0]
+  draw_number_at 17, 15
+
+  @Crit
+  mov     r0, #BattleUnitCrit
+  ldsh    r0, [r6, r0]
+  draw_number_at 17, 17
+
+  @Protection
   mov     r0, r6
   blh     GetUnitProtection
-  mov     r2, r0 @r2 = unit protection
-  mov     r0, r4
-  add     r0, #0x6
-  mov     r1, #0x2
-  blh     DrawDecNumber
+  draw_number_at 22, 13
+
+  @Resilience
   mov     r0, r6
   blh     GetUnitResilience
-  mov     r2, r0 @r2 = unit resilience
-  mov     r0, r4
-  add     r0, #0x10
-  mov     r1, #0x2
-  blh     DrawDecNumber
-  mov     r0, r4
-  sub     r0, #0x70
-  mov     r1, r6
-  add     r1, #BattleUnitAttackSpeed    @load battle attack speed
-  mov     r2, #0x0
-  ldsh    r2, [r1, r2]
-  mov     r1, #0x2
-  blh     DrawDecNumber
+  draw_number_at 22, 15
   b       SS_DrawItemBox_RangeText
   
   SS_DrawItemBox_Unarmed:
