@@ -6,7 +6,7 @@
 #include "StatScreen/Installer.event"
 #include "SystemIcons/SystemIcons.event"
 
-#include "SpellAnimations/MasterSpellAnimationInstaller.event"
+//#include "SpellAnimations/MasterSpellAnimationInstaller.event"
 
 #include "BattlePlatforms/BattlePlatformInstaller.event"
 #include "UserInterface/UserInterface.event"

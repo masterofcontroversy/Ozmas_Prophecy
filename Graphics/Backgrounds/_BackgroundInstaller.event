@@ -13,906 +13,1114 @@ POP
 
 ALIGN 4
 ConvoBackgroundTable:
-FILL 0xC * 0x50 //0x50 entries
-
-#define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
+FILL 0xC * BackgroundEntryCount
 
 {
-ALIGN 4
-SparseForestImage:
-#incbin "Image/SparseForestImage.bin"
-
-ALIGN 4
-SparseForestTSA:
-#incbin "TSA/SparseForestTSA.bin"
-
-ALIGN 4
-SparseForestPalette:
-#incbin "Palette/SparseForestPalette.bin"
-
-ALIGN 4
-VillageGateImage:
-#incbin "Image/VillageGateImage.bin"
-
-ALIGN 4
-VillageGateTSA:
-#incbin "TSA/VillageGateTSA.bin"
-
-ALIGN 4
-VillageGatePalette:
-#incbin "Palette/VillageGatePalette.bin"
-
-ALIGN 4
-ForestOutskirtsImage:
-#incbin "Image/ForestOutskirtsImage.bin"
-
-ALIGN 4
-ForestOutskirtsTSA:
-#incbin "TSA/ForestOutskirtsTSA.bin"
-
-ALIGN 4
-ForestOutskirtsPalette:
-#incbin "Palette/ForestOutskirtsPalette.bin"
-
-ALIGN 4
-InsideBrightHouseImage:
-#incbin "Image/InsideBrightHouseImage.bin"
-
-ALIGN 4
-InsideBrightHouseTSA:
-#incbin "TSA/InsideBrightHouseTSA.bin"
-
-ALIGN 4
-InsideBrightHousePalette:
-#incbin "Palette/InsideBrightHousePalette.bin"
-
-ALIGN 4
-LakesideImage:
-#incbin "Image/LakesideImage.bin"
-
-ALIGN 4
-LakesideTSA:
-#incbin "TSA/LakesideTSA.bin"
-
-ALIGN 4
-LakesidePalette:
-#incbin "Palette/LakesidePalette.bin"
-
-ALIGN 4
-InsideBrightHouse2Image:
-#incbin "Image/InsideBrightHouse2Image.bin"
-
-ALIGN 4
-InsideBrightHouse2TSA:
-#incbin "TSA/InsideBrightHouse2TSA.bin"
-
-ALIGN 4
-InsideBrightHouse2Palette:
-#incbin "Palette/InsideBrightHouse2Palette.bin"
-
-ALIGN 4
-ForestPathImage:
-#incbin "Image/ForestPathImage.bin"
-
-ALIGN 4
-ForestPathTSA:
-#incbin "TSA/ForestPathTSA.bin"
-
-ALIGN 4
-ForestPathPalette:
-#incbin "Palette/ForestPathPalette.bin"
-
-ALIGN 4
-FortInteriorImage:
-#incbin "Image/FortInteriorImage.bin"
-
-ALIGN 4
-FortInteriorTSA:
-#incbin "TSA/FortInteriorTSA.bin"
-
-ALIGN 4
-FortInteriorPalette:
-#incbin "Palette/FortInteriorPalette.bin"
-
-ALIGN 4
-OutsideHouseImage:
-#incbin "Image/OutsideHouseImage.bin"
-
-ALIGN 4
-OutsideHouseTSA:
-#incbin "TSA/OutsideHouseTSA.bin"
-
-ALIGN 4
-OutsideHousePalette:
-#incbin "Palette/OutsideHousePalette.bin"
-
-ALIGN 4
-BlackImage:
-#incbin "Image/BlackImage.bin"
-
-ALIGN 4
-BlackTSA:
-#incbin "TSA/BlackTSA.bin"
-
-ALIGN 4
-BlackPalette:
-#incbin "Palette/BlackPalette.bin"
-
-ALIGN 4
-FortRealImage:
-#incbin "Image/ForRealFortInsideImage.bin"
-
-ALIGN 4
-FortRealTSA:
-#incbin "TSA/ForRealFortInsideTSA.bin"
-
-ALIGN 4
-FortRealPalette:
-#incbin "Palette/ForRealFortInsidePalette.bin"
-
-ALIGN 4
-ArmyCampImage:
-#incbin "Image/ArmyCampImage.bin"
-
-ALIGN 4
-ArmyCampTSA:
-#incbin "TSA/ArmyCampTSA.bin"
-
-ALIGN 4
-ArmyCampPalette:
-#incbin "Palette/ArmyCampPalette.bin"
-
-ALIGN 4
-VillageImage:
-#incbin "Image/VillageImage.bin"
-
-ALIGN 4
-VillageTSA:
-#incbin "TSA/VillageTSA.bin"
 
-ALIGN 4
-VillagePalette:
-#incbin "Palette/VillagePalette.bin"
-
-ALIGN 4
-WarriorTentImage:
-#incbin "Image/WarriorTentImage.bin"
-
-ALIGN 4
-WarriorTentTSA:
-#incbin "TSA/WarriorTentTSA.bin"
-
-ALIGN 4
-WarriorTentPalette:
-#incbin "Palette/WarriorTentPalette.bin"
-
-ALIGN 4
-Village2Image:
-#incbin "Image/Village2Image.bin"
-
-ALIGN 4
-Village2TSA:
-#incbin "TSA/Village2TSA.bin"
-
-ALIGN 4
-Village2Palette:
-#incbin "Palette/Village2Palette.bin"
+#define OriginalBgBlockStart 0x8D2700
+#define OriginalBgBlockEnd   0x95DD0C
 
-ALIGN 4
-ForestMorningImage:
-#incbin "Image/ForestMorningImage.bin"
-
-ALIGN 4
-ForestMorningTSA:
-#incbin "TSA/ForestMorningTSA.bin"
-
-ALIGN 4
-ForestMorningPalette:
-#incbin "Palette/ForestMorningPalette.bin"
-
-ALIGN 4
-TavernImage:
-#incbin "Image/TavernImage.bin"
-
-ALIGN 4
-TavernTSA:
-#incbin "TSA/TavernTSA.bin"
-
-ALIGN 4
-TavernPalette:
-#incbin "Palette/TavernPalette.bin"
-
-ALIGN 4
-ThroneRoomNightImage:
-#incbin "Image/ThroneRoomNightImage.bin"
+PUSH
+ORG OriginalBgBlockStart
 
 ALIGN 4
-ThroneRoomNightTSA:
-#incbin "TSA/ThroneRoomNightTSA.bin"
+ArmoryImage:
+#incbin "png/Armory.lz77"
 
 ALIGN 4
-ThroneRoomNightPalette:
-#incbin "Palette/ThroneRoomNightPalette.bin"
+ArmoryPalette:
+#incbin "png/Armory.pal"
 
 ALIGN 4
-ForestImage:
-#incbin "Image/ForestImage.bin"
+ArmyCamp10DayImage:
+#incbin "png/ArmyCamp10Day.lz77"
 
 ALIGN 4
-ForestTSA:
-#incbin "TSA/ForestTSA.bin"
+ArmyCamp10DayPalette:
+#incbin "png/ArmyCamp10Day.pal"
 
 ALIGN 4
-ForestPalette:
-#incbin "Palette/ForestPalette.bin"
+ArmyCamp2EveningImage:
+#incbin "png/ArmyCamp2Evening.lz77"
 
 ALIGN 4
-HealerTentImage:
-#incbin "Image/HealerTentImage.bin"
+ArmyCamp2EveningPalette:
+#incbin "png/ArmyCamp2Evening.pal"
 
 ALIGN 4
-HealerTentTSA:
-#incbin "TSA/HealerTentTSA.bin"
+ArmyCamp2NightImage:
+#incbin "png/ArmyCamp2Night.lz77"
 
 ALIGN 4
-HealerTentPalette:
-#incbin "Palette/HealerTentPalette.bin"
+ArmyCamp2NightPalette:
+#incbin "png/ArmyCamp2Night.pal"
 
 ALIGN 4
-CaravanImage:
-#incbin "Image/CaravanImage.bin"
+ArmyCamp3DayaltImage:
+#incbin "png/ArmyCamp3Dayalt.lz77"
 
 ALIGN 4
-CaravanTSA:
-#incbin "TSA/CaravanTSA.bin"
+ArmyCamp3DayaltPalette:
+#incbin "png/ArmyCamp3Dayalt.pal"
 
 ALIGN 4
-CaravanPalette:
-#incbin "Palette/CaravanPalette.bin"
+ArmyCamp3DayImage:
+#incbin "png/ArmyCamp3Day.lz77"
 
 ALIGN 4
-FortNightImage:
-#incbin "Image/FortNightImage.bin"
+ArmyCamp3DayPalette:
+#incbin "png/ArmyCamp3Day.pal"
 
 ALIGN 4
-FortNightTSA:
-#incbin "TSA/FortNightTSA.bin"
+ArmyCamp3EveningImage:
+#incbin "png/ArmyCamp3Evening.lz77"
 
 ALIGN 4
-FortNightPalette:
-#incbin "Palette/FortNightPalette.bin"
+ArmyCamp3EveningPalette:
+#incbin "png/ArmyCamp3Evening.pal"
 
 ALIGN 4
-ForestNightImage:
-#incbin "Image/ForestNightImage.bin"
+ArmyCamp3NightImage:
+#incbin "png/ArmyCamp3Night.lz77"
 
 ALIGN 4
-ForestNightTSA:
-#incbin "TSA/ForestNightTSA.bin"
+ArmyCamp3NightPalette:
+#incbin "png/ArmyCamp3Night.pal"
 
 ALIGN 4
-ForestNightPalette:
-#incbin "Palette/ForestNightPalette.bin"
+ArmyCamp3WinterDayImage:
+#incbin "png/ArmyCamp3WinterDay.lz77"
 
 ALIGN 4
-HillsNightImage:
-#incbin "Image/HillsNightImage.bin"
+ArmyCamp3WinterDayPalette:
+#incbin "png/ArmyCamp3WinterDay.pal"
 
 ALIGN 4
-HillsNightTSA:
-#incbin "TSA/HillsNightTSA.bin"
+ArmyCamp3WinterNightImage:
+#incbin "png/ArmyCamp3WinterNight.lz77"
 
 ALIGN 4
-HillsNightPalette:
-#incbin "Palette/HillsNightPalette.bin"
+ArmyCamp3WinterNightPalette:
+#incbin "png/ArmyCamp3WinterNight.pal"
 
 ALIGN 4
-ForestWinterImage:
-#incbin "Image/ForestWinterImage.bin"
+ArmyCamp4DayImage:
+#incbin "png/ArmyCamp4Day.lz77"
 
 ALIGN 4
-ForestWinterTSA:
-#incbin "TSA/ForestWinterTSA.bin"
+ArmyCamp4DayPalette:
+#incbin "png/ArmyCamp4Day.pal"
 
 ALIGN 4
-ForestWinterPalette:
-#incbin "Palette/ForestWinterPalette.bin"
+ArmyCamp4EveningImage:
+#incbin "png/ArmyCamp4Evening.lz77"
 
 ALIGN 4
-ForestOutskirtsWinterImage:
-#incbin "Image/ForestOutskirtsWinterImage.bin"
+ArmyCamp4EveningPalette:
+#incbin "png/ArmyCamp4Evening.pal"
 
 ALIGN 4
-ForestOutskirtsWinterTSA:
-#incbin "TSA/ForestOutskirtsWinterTSA.bin"
+ArmyCamp4NightImage:
+#incbin "png/ArmyCamp4Night.lz77"
 
 ALIGN 4
-ForestOutskirtsWinterPalette:
-#incbin "Palette/ForestOutskirtsWinterPalette.bin"
+ArmyCamp4NightPalette:
+#incbin "png/ArmyCamp4Night.pal"
 
 ALIGN 4
-ArmyCampWinterNightImage:
-#incbin "Image/ArmyCampWinterNightImage.bin"
+ArmyCamp4WinterDayImage:
+#incbin "png/ArmyCamp4WinterDay.lz77"
 
 ALIGN 4
-ArmyCampWinterNightTSA:
-#incbin "TSA/ArmyCampWinterNightTSA.bin"
+ArmyCamp4WinterDayPalette:
+#incbin "png/ArmyCamp4WinterDay.pal"
 
 ALIGN 4
-ArmyCampWinterNightPalette:
-#incbin "Palette/ArmyCampWinterNightPalette.bin"
+ArmyCamp6DayImage:
+#incbin "png/ArmyCamp6Day.lz77"
 
 ALIGN 4
-InsideHouseNightImage:
-#incbin "Image/InsideHouseNightImage.bin"
+ArmyCamp6DayPalette:
+#incbin "png/ArmyCamp6Day.pal"
 
 ALIGN 4
-InsideHouseNightTSA:
-#incbin "TSA/InsideHouseNightTSA.bin"
+ArmyCamp7DayImage:
+#incbin "png/ArmyCamp7Day.lz77"
 
 ALIGN 4
-InsideHouseNightPalette:
-#incbin "Palette/InsideHouseNightPalette.bin"
+ArmyCamp7DayPalette:
+#incbin "png/ArmyCamp7Day.pal"
 
 ALIGN 4
-AltarImage:
-#incbin "Image/AltarImage.bin"
+ArmyCamp8DayImage:
+#incbin "png/ArmyCamp8Day.lz77"
 
 ALIGN 4
-AltarTSA:
-#incbin "TSA/AltarTSA.bin"
+ArmyCamp8DayPalette:
+#incbin "png/ArmyCamp8Day.pal"
 
 ALIGN 4
-AltarPalette:
-#incbin "Palette/AltarPalette.bin"
+ArmyCamp8WinterDayImage:
+#incbin "png/ArmyCamp8WinterDay.lz77"
 
 ALIGN 4
-TownImage:
-#incbin "Image/TownImage.bin"
+ArmyCamp8WinterDayPalette:
+#incbin "png/ArmyCamp8WinterDay.pal"
 
 ALIGN 4
-TownTSA:
-#incbin "TSA/TownTSA.bin"
+ArmyCamp9DayImage:
+#incbin "png/ArmyCamp9Day.lz77"
 
 ALIGN 4
-TownPalette:
-#incbin "Palette/TownPalette.bin"
+ArmyCamp9DayPalette:
+#incbin "png/ArmyCamp9Day.pal"
 
 ALIGN 4
-OutsideCastleImage:
-#incbin "Image/OutsideCastleImage.bin"
+ArmyCampDayAltImage:
+#incbin "png/ArmyCampDayAlt.lz77"
 
 ALIGN 4
-OutsideCastleTSA:
-#incbin "TSA/OutsideCastleTSA.bin"
+ArmyCampDayAltPalette:
+#incbin "png/ArmyCampDayAlt.pal"
 
 ALIGN 4
-OutsideCastlePalette:
-#incbin "Palette/OutsideCastlePalette.bin"
+ArmyCampDayImage:
+#incbin "png/ArmyCampDay.lz77"
 
 ALIGN 4
-CastleHallwayImage:
-#incbin "Image/CastleHallwayImage.bin"
+ArmyCampDayPalette:
+#incbin "png/ArmyCampDay.pal"
 
 ALIGN 4
-CastleHallwayTSA:
-#incbin "TSA/CastleHallwayTSA.bin"
+BedroomDaytimeImage:
+#incbin "png/BedroomDaytime.lz77"
 
 ALIGN 4
-CastleHallwayPalette:
-#incbin "Palette/CastleHallwayPalette.bin"
+BedroomDaytimePalette:
+#incbin "png/BedroomDaytime.pal"
 
 ALIGN 4
 BedroomNightImage:
-#incbin "Image/BedroomNightImage.bin"
-
-ALIGN 4
-BedroomNightTSA:
-#incbin "TSA/BedroomNightTSA.bin"
+#incbin "png/BedroomNight.lz77"
 
 ALIGN 4
 BedroomNightPalette:
-#incbin "Palette/BedroomNightPalette.bin"
+#incbin "png/BedroomNight.pal"
 
 ALIGN 4
-MeetingRoomImage:
-#incbin "Image/MeetingRoomImage.bin"
+Campsite2NightImage:
+#incbin "png/Campsite2Night.lz77"
 
 ALIGN 4
-MeetingRoomTSA:
-#incbin "TSA/MeetingRoomTSA.bin"
+Campsite2NightPalette:
+#incbin "png/Campsite2Night.pal"
 
 ALIGN 4
-MeetingRoomPalette:
-#incbin "Palette/MeetingRoomPalette.bin"
+CampsiteNighttimeImage:
+#incbin "png/CampsiteNighttime.lz77"
 
 ALIGN 4
-WetlandsImage:
-#incbin "Image/WetlandsImage.bin"
+CampsiteNighttimePalette:
+#incbin "png/CampsiteNighttime.pal"
 
 ALIGN 4
-WetlandsTSA:
-#incbin "TSA/WetlandsTSA.bin"
+CampsiteWinterImage:
+#incbin "png/CampsiteWinter.lz77"
 
 ALIGN 4
-WetlandsPalette:
-#incbin "Palette/WetlandsPalette.bin"
+CampsiteWinterPalette:
+#incbin "png/CampsiteWinter.pal"
 
 ALIGN 4
-MountainNightImage:
-#incbin "Image/MountainNightImage.bin"
+CaravanDayImage:
+#incbin "png/CaravanDay.lz77"
 
 ALIGN 4
-MountainNightTSA:
-#incbin "TSA/MountainNightTSA.bin"
+CaravanDayPalette:
+#incbin "png/CaravanDay.pal"
 
 ALIGN 4
-MountainNightPalette:
-#incbin "Palette/MountainNightPalette.bin"
+Castle2DayImage:
+#incbin "png/Castle2Day.lz77"
 
 ALIGN 4
-OutsideGateImage:
-#incbin "Image/OutsideGateImage.bin"
+Castle2DayPalette:
+#incbin "png/Castle2Day.pal"
 
 ALIGN 4
-OutsideGateTSA:
-#incbin "TSA/OutsideGateTSA.bin"
+Castle2EveningImage:
+#incbin "png/Castle2Evening.lz77"
 
 ALIGN 4
-OutsideGatePalette:
-#incbin "Palette/OutsideGatePalette.bin"
+Castle2EveningPalette:
+#incbin "png/Castle2Evening.pal"
 
 ALIGN 4
-WoodsImage:
-#incbin "Image/WoodsImage.bin"
+Castle2WinterDayImage:
+#incbin "png/Castle2WinterDay.lz77"
 
 ALIGN 4
-WoodsTSA:
-#incbin "TSA/WoodsTSA.bin"
+Castle2WinterDayPalette:
+#incbin "png/Castle2WinterDay.pal"
 
 ALIGN 4
-WoodsPalette:
-#incbin "Palette/WoodsPalette.bin"
+Castle3DayImage:
+#incbin "png/Castle3Day.lz77"
 
 ALIGN 4
-BedroomImage:
-#incbin "Image/BedroomImage.bin"
+Castle3DayPalette:
+#incbin "png/Castle3Day.pal"
 
 ALIGN 4
-BedroomTSA:
-#incbin "TSA/BedroomTSA.bin"
+Castle4DayImage:
+#incbin "png/Castle4Day.lz77"
 
 ALIGN 4
-BedroomPalette:
-#incbin "Palette/BedroomPalette.bin"
+Castle4DayPalette:
+#incbin "png/Castle4Day.pal"
 
 ALIGN 4
-CampsiteImage:
-#incbin "Image/CampsiteImage.bin"
+CastleCourtyardDayImage:
+#incbin "png/CastleCourtyardDay.lz77"
 
 ALIGN 4
-CampsiteTSA:
-#incbin "TSA/CampsiteTSA.bin"
+CastleCourtyardDayPalette:
+#incbin "png/CastleCourtyardDay.pal"
 
 ALIGN 4
-CampsitePalette:
-#incbin "Palette/CampsitePalette.bin"
+CastleCourtyardEveningImage:
+#incbin "png/CastleCourtyardEvening.lz77"
 
 ALIGN 4
-CastleRuinsImage:
-#incbin "Image/CastleRuinsImage.bin"
+CastleCourtyardEveningPalette:
+#incbin "png/CastleCourtyardEvening.pal"
 
 ALIGN 4
-CastleRuinsTSA:
-#incbin "TSA/CastleRuinsTSA.bin"
+CastleDayImage:
+#incbin "png/CastleDay.lz77"
 
 ALIGN 4
-CastleRuinsPalette:
-#incbin "Palette/CastleRuinsPalette.bin"
+CastleDayPalette:
+#incbin "png/CastleDay.pal"
 
 ALIGN 4
-DiningRoomImage:
-#incbin "Image/DiningRoomImage.bin"
+CastleDiningRoomImage:
+#incbin "png/CastleDiningRoom.lz77"
 
 ALIGN 4
-DiningRoomTSA:
-#incbin "TSA/DiningRoomTSA.bin"
+CastleDiningRoomPalette:
+#incbin "png/CastleDiningRoom.pal"
 
 ALIGN 4
-DiningRoomPalette:
-#incbin "Palette/DiningRoomPalette.bin"
+CastleInterior1NighttimeImage:
+#incbin "png/CastleInterior1Nighttime.lz77"
 
 ALIGN 4
-ForestOpeningImage:
-#incbin "Image/ForestOpeningImage.bin"
+CastleInterior1NighttimePalette:
+#incbin "png/CastleInterior1Nighttime.pal"
 
 ALIGN 4
-ForestOpeningTSA:
-#incbin "TSA/ForestOpeningTSA.bin"
+CastleInterior2EveningImage:
+#incbin "png/CastleInterior2Evening.lz77"
 
 ALIGN 4
-ForestOpeningPalette:
-#incbin "Palette/ForestOpeningPalette.bin"
+CastleInterior2EveningPalette:
+#incbin "png/CastleInterior2Evening.pal"
 
 ALIGN 4
-OfficeImage:
-#incbin "Image/OfficeImage.bin"
+CastleInterior3EveningImage:
+#incbin "png/CastleInterior3Evening.lz77"
 
 ALIGN 4
-OfficeTSA:
-#incbin "TSA/OfficeTSA.bin"
+CastleInterior3EveningPalette:
+#incbin "png/CastleInterior3Evening.pal"
 
 ALIGN 4
-OfficePalette:
-#incbin "Palette/OfficePalette.bin"
+CastleInterior3WinterDayImage:
+#incbin "png/CastleInterior3WinterDay.lz77"
 
 ALIGN 4
-RuinsImage:
-#incbin "Image/RuinsImage.bin"
+CastleInterior3WinterDayPalette:
+#incbin "png/CastleInterior3WinterDay.pal"
 
 ALIGN 4
-RuinsTSA:
-#incbin "TSA/RuinsTSA.bin"
+CastleInterior4EveningImage:
+#incbin "png/CastleInterior4Evening.lz77"
 
 ALIGN 4
-RuinsPalette:
-#incbin "Palette/RuinsPalette.bin"
+CastleInterior4EveningPalette:
+#incbin "png/CastleInterior4Evening.pal"
 
 ALIGN 4
-TallForestImage:
-#incbin "Image/TallForestImage.bin"
+CastleInterior5Image:
+#incbin "png/CastleInterior5.lz77"
 
 ALIGN 4
-TallForestTSA:
-#incbin "TSA/TallForestTSA.bin"
+CastleInterior5Palette:
+#incbin "png/CastleInterior5.pal"
 
-ALIGN 4
-TallForestPalette:
-#incbin "Palette/TallForestPalette.bin"
-
-ALIGN 4
-ThroneRoomImage:
-#incbin "Image/ThroneRoomImage.bin"
-
-ALIGN 4
-ThroneRoomTSA:
-#incbin "TSA/ThroneRoomTSA.bin"
-
-ALIGN 4
-ThroneRoomPalette:
-#incbin "Palette/ThroneRoomPalette.bin"
-
-ALIGN 4
-VillageGate2Image:
-#incbin "Image/VillageGate2Image.bin"
-
-ALIGN 4
-VillageGate2TSA:
-#incbin "TSA/VillageGate2TSA.bin"
-
-ALIGN 4
-VillageGate2Palette:
-#incbin "Palette/VillageGate2Palette.bin"
-
-ALIGN 4
-VillageNightImage:
-#incbin "Image/VillageNightImage.bin"
-
-ALIGN 4
-VillageNightTSA:
-#incbin "TSA/VillageNightTSA.bin"
-
-ALIGN 4
-VillageNightPalette:
-#incbin "Palette/VillageNightPalette.bin"
-
-ALIGN 4
-InsideHouseClosedImage:
-#incbin "Image/InsideHouseClosedImage.bin"
-
-ALIGN 4
-InsideHouseClosedTSA:
-#incbin "TSA/InsideHouseClosedTSA.bin"
-
-ALIGN 4
-InsideHouseClosedPalette:
-#incbin "Palette/InsideHouseClosedPalette.bin"
-ALIGN 4
-
-ALIGN 4
-SnowCastleImage:
-#incbin "Image/SnowCastleImage.bin"
-
-ALIGN 4
-SnowCastleTSA:
-#incbin "TSA/SnowCastleTSA.bin"
-
-ALIGN 4
-SnowCastlePalette:
-#incbin "Palette/SnowCastlePalette.bin"
-ALIGN 4
-
-ALIGN 4
-SnowCampImage:
-#incbin "Image/SnowCampImage.bin"
-
-ALIGN 4
-SnowCampTSA:
-#incbin "TSA/SnowCampTSA.bin"
-
-ALIGN 4
-SnowCampPalette:
-#incbin "Palette/SnowCampPalette.bin"
-ALIGN 4
-
-ALIGN 4
-SnowCampfireImage:
-#incbin "Image/SnowCampfireImage.bin"
-
-ALIGN 4
-SnowCampfireTSA:
-#incbin "TSA/SnowCampfireTSA.bin"
-
-ALIGN 4
-SnowCampfirePalette:
-#incbin "Palette/SnowCampfirePalette.bin"
-ALIGN 4
-
-ALIGN 4
-SnowMountainImage:
-#incbin "Image/SnowMountainImage.bin"
-
-ALIGN 4
-SnowMountainTSA:
-#incbin "TSA/SnowMountainTSA.bin"
-
-ALIGN 4
-SnowMountainPalette:
-#incbin "Palette/SnowMountainPalette.bin"
-ALIGN 4
-
-ALIGN 4
-SnowVillageImage:
-#incbin "Image/SnowVillageImage.bin"
-
-ALIGN 4
-SnowVillageTSA:
-#incbin "TSA/SnowVillageTSA.bin"
-
-ALIGN 4
-SnowVillagePalette:
-#incbin "Palette/SnowVillagePalette.bin"
-ALIGN 4
-
-ALIGN 4
-SnowHouseImage:
-#incbin "Image/SnowHouseImage.bin"
-
-ALIGN 4
-SnowHouseTSA:
-#incbin "TSA/SnowHouseTSA.bin"
-
-ALIGN 4
-SnowHousePalette:
-#incbin "Palette/SnowHousePalette.bin"
-ALIGN 4
+//WARNING currentOffset - OriginalBgBlockStart
+ASSERT OriginalBgBlockEnd - currentOffset
 
-ALIGN 4
-WinterDawnImage:
-#incbin "Image/WinterDawnImage.bin"
-
-ALIGN 4
-WinterDawnTSA:
-#incbin "TSA/WinterDawnTSA.bin"
-
-ALIGN 4
-WinterDawnPalette:
-#incbin "Palette/WinterDawnPal.bin"
-ALIGN 4
-
-ALIGN 4
-WinterVillageDawnImage:
-#incbin "Image/WinterVillageDawnImage.bin"
-
-ALIGN 4
-WinterVillageDawnTSA:
-#incbin "TSA/WinterVillageDawnTSA.bin"
-
-ALIGN 4
-WinterVillageDawnPalette:
-#incbin "Palette/WinterVillageDawnPal.bin"
-ALIGN 4
-
-ALIGN 4
-Forest2Image:
-#incbin "Image/Forest2Image.bin"
-
-ALIGN 4
-Forest2TSA:
-#incbin "TSA/Forest2TSA.bin"
+POP
 
 ALIGN 4
-Forest2Palette:
-#incbin "Palette/Forest2Pal.bin"
-ALIGN 4
-
-ALIGN 4
-SnowMeltingImage:
-#incbin "Image/SnowMeltingImage.bin"
+CastleInterior6NightImage:
+#incbin "png/CastleInterior6Night.lz77"
 
 ALIGN 4
-SnowMeltingTSA:
-#incbin "TSA/SnowMeltingTSA.bin"
+CastleInterior6NightPalette:
+#incbin "png/CastleInterior6Night.pal"
 
 ALIGN 4
-SnowMeltingPalette:
-#incbin "Palette/SnowMeltingPal.bin"
+CastleInterior6RainyImage:
+#incbin "png/CastleInterior6Rainy.lz77"
 
 ALIGN 4
-DungeonImage:
-#incbin "Image/DungeonImage.bin"
+CastleInterior6RainyPalette:
+#incbin "png/CastleInterior6Rainy.pal"
 
 ALIGN 4
-DungeonTSA:
-#incbin "TSA/DungeonTSA.bin"
+CastleInteriorDayImage:
+#incbin "png/CastleInteriorDay.lz77"
 
 ALIGN 4
-DungeonPalette:
-#incbin "Palette/DungeonPalette.bin"
-ALIGN 4
+CastleInteriorDayPalette:
+#incbin "png/CastleInteriorDay.pal"
 
 ALIGN 4
-WinterCastleImage:
-#incbin "Image/WinterCastleImage.bin"
+CastleInteriorEveningImage:
+#incbin "png/CastleInteriorEvening.lz77"
 
 ALIGN 4
-WinterCastleTSA:
-#incbin "TSA/WinterCastleTSA.bin"
+CastleInteriorEveningPalette:
+#incbin "png/CastleInteriorEvening.pal"
 
 ALIGN 4
-WinterCastlePalette:
-#incbin "Palette/WinterCastlePal.bin"
-ALIGN 4
+CastleInteriorNight2Image:
+#incbin "png/CastleInteriorNight2.lz77"
 
 ALIGN 4
-WinterNVillageImage:
-#incbin "Image/WinterNVillageImage.bin"
+CastleInteriorNight2Palette:
+#incbin "png/CastleInteriorNight2.pal"
 
 ALIGN 4
-WinterNVillageTSA:
-#incbin "TSA/WinterNVillageTSA.bin"
+CastleInteriorNightImage:
+#incbin "png/CastleInteriorNight.lz77"
 
-ALIGN 4
-WinterNVillagePalette:
-#incbin "Palette/WinterNVillagePal.bin"
 ALIGN 4
+CastleInteriorNightPalette:
+#incbin "png/CastleInteriorNight.pal"
 
 ALIGN 4
 CastleInteriorImage:
-#incbin "Image/CastleInteriorImage.bin"
+#incbin "png/CastleInterior.lz77"
 
 ALIGN 4
-CastleInteriorTSA:
-#incbin "TSA/CastleInteriorTSA.bin"
+CastleInteriorPalette:
+#incbin "png/CastleInterior.pal"
 
 ALIGN 4
-CastleInteriorPal:
-#incbin "Palette/CastleInteriorPal.bin"
-ALIGN 4
+CastleViewDayImage:
+#incbin "png/CastleViewDay.lz77"
 
 ALIGN 4
-InteriorImage:
-#incbin "Image/InteriorImage.bin"
+CastleViewDayPalette:
+#incbin "png/CastleViewDay.pal"
 
 ALIGN 4
-InteriorTSA:
-#incbin "TSA/InteriorTSA.bin"
+ChiefsTent2Image:
+#incbin "png/ChiefsTent2.lz77"
 
 ALIGN 4
-InteriorPal:
-#incbin "Palette/InteriorPal.bin"
-ALIGN 4
+ChiefsTent2Palette:
+#incbin "png/ChiefsTent2.pal"
 
 ALIGN 4
-CastleBalconyImage:
-#incbin "Image/CastleBalconyImage.bin"
+ChiefTentInteriorImage:
+#incbin "png/ChiefTentInterior.lz77"
 
 ALIGN 4
-CastleBalconyTSA:
-#incbin "TSA/CastleBalconyTSA.bin"
+ChiefTentInteriorPalette:
+#incbin "png/ChiefTentInterior.pal"
 
 ALIGN 4
-CastleBalconyPalette:
-#incbin "Palette/CastleBalconyPal.bin"
-ALIGN 4
+DaytimeInsideHouse1Image:
+#incbin "png/DaytimeInsideHouse1.lz77"
 
 ALIGN 4
-Temple1Image:
-#incbin "Image/Temple1Image.bin"
+DaytimeInsideHouse1Palette:
+#incbin "png/DaytimeInsideHouse1.pal"
 
 ALIGN 4
-Temple1TSA:
-#incbin "TSA/Temple1TSA.bin"
+DaytimeTavern1Image:
+#incbin "png/DaytimeTavern1.lz77"
 
 ALIGN 4
-Temple1Palette:
-#incbin "Palette/Temple1Pal.bin"
+DaytimeTavern1Palette:
+#incbin "png/DaytimeTavern1.pal"
+
 ALIGN 4
+DesertDayImage:
+#incbin "png/DesertDay.lz77"
+
+ALIGN 4
+DesertDayPalette:
+#incbin "png/DesertDay.pal"
+
+ALIGN 4
+DesertEveningImage:
+#incbin "png/DesertEvening.lz77"
+
+ALIGN 4
+DesertEveningPalette:
+#incbin "png/DesertEvening.pal"
+
+ALIGN 4
+DesertMorningImage:
+#incbin "png/DesertMorning.lz77"
+
+ALIGN 4
+DesertMorningPalette:
+#incbin "png/DesertMorning.pal"
+
+ALIGN 4
+DesertNightImage:
+#incbin "png/DesertNight.lz77"
+
+ALIGN 4
+DesertNightPalette:
+#incbin "png/DesertNight.pal"
+
+ALIGN 4
+DesertRuinsDayImage:
+#incbin "png/DesertRuinsDay.lz77"
+
+ALIGN 4
+DesertRuinsDayPalette:
+#incbin "png/DesertRuinsDay.pal"
+
+ALIGN 4
+DesertStoreroomImage:
+#incbin "png/DesertStoreroom.lz77"
+
+ALIGN 4
+DesertStoreroomPalette:
+#incbin "png/DesertStoreroom.pal"
+
+ALIGN 4
+DiningRoomImage:
+#incbin "png/DiningRoom.lz77"
+
+ALIGN 4
+DiningRoomPalette:
+#incbin "png/DiningRoom.pal"
+
+ALIGN 4
+Dungeon2Image:
+#incbin "png/Dungeon2.lz77"
+
+ALIGN 4
+Dungeon2Palette:
+#incbin "png/Dungeon2.pal"
+
+ALIGN 4
+Dungeon3Image:
+#incbin "png/Dungeon3.lz77"
+
+ALIGN 4
+Dungeon3Palette:
+#incbin "png/Dungeon3.pal"
+
+ALIGN 4
+Dungeon4Image:
+#incbin "png/Dungeon4.lz77"
+
+ALIGN 4
+Dungeon4Palette:
+#incbin "png/Dungeon4.pal"
+
+ALIGN 4
+DungeonImage:
+#incbin "png/Dungeon.lz77"
+
+ALIGN 4
+DungeonPalette:
+#incbin "png/Dungeon.pal"
+
+ALIGN 4
+EstateDayImage:
+#incbin "png/EstateDay.lz77"
+
+ALIGN 4
+EstateDayPalette:
+#incbin "png/EstateDay.pal"
+
+ALIGN 4
+EstateEveningImage:
+#incbin "png/EstateEvening.lz77"
+
+ALIGN 4
+EstateEveningPalette:
+#incbin "png/EstateEvening.pal"
+
+ALIGN 4
+Forest1DaytimeImage:
+#incbin "png/Forest1Daytime.lz77"
+
+ALIGN 4
+Forest1DaytimePalette:
+#incbin "png/Forest1Daytime.pal"
+
+ALIGN 4
+Forest1EveningImage:
+#incbin "png/Forest1Evening.lz77"
+
+ALIGN 4
+Forest1EveningPalette:
+#incbin "png/Forest1Evening.pal"
+
+ALIGN 4
+Forest2DayImage:
+#incbin "png/Forest2Day.lz77"
+
+ALIGN 4
+Forest2DayPalette:
+#incbin "png/Forest2Day.pal"
+
+ALIGN 4
+Forest2EveningImage:
+#incbin "png/Forest2Evening.lz77"
+
+ALIGN 4
+Forest2EveningPalette:
+#incbin "png/Forest2Evening.pal"
+
+ALIGN 4
+Forest2NightImage:
+#incbin "png/Forest2Night.lz77"
+
+ALIGN 4
+Forest2NightPalette:
+#incbin "png/Forest2Night.pal"
+
+ALIGN 4
+Forest3NightImage:
+#incbin "png/Forest3Night.lz77"
+
+ALIGN 4
+Forest3NightPalette:
+#incbin "png/Forest3Night.pal"
+
+ALIGN 4
+Forest3WinterDayImage:
+#incbin "png/Forest3WinterDay.lz77"
+
+ALIGN 4
+Forest3WinterDayPalette:
+#incbin "png/Forest3WinterDay.pal"
+
+ALIGN 4
+Forest5DayImage:
+#incbin "png/Forest5Day.lz77"
+
+ALIGN 4
+Forest5DayPalette:
+#incbin "png/Forest5Day.pal"
+
+ALIGN 4
+Forest6DayImage:
+#incbin "png/Forest6Day.lz77"
+
+ALIGN 4
+Forest6DayPalette:
+#incbin "png/Forest6Day.pal"
+
+ALIGN 4
+Forest6NightImage:
+#incbin "png/Forest6Night.lz77"
+
+ALIGN 4
+Forest6NightPalette:
+#incbin "png/Forest6Night.pal"
+
+ALIGN 4
+ForestMorningImage:
+#incbin "png/ForestMorning.lz77"
+
+ALIGN 4
+ForestMorningPalette:
+#incbin "png/ForestMorning.pal"
+
+ALIGN 4
+ForestOutskirts1WinterDayImage:
+#incbin "png/ForestOutskirts1WinterDay.lz77"
+
+ALIGN 4
+ForestOutskirts1WinterDayPalette:
+#incbin "png/ForestOutskirts1WinterDay.pal"
+
+ALIGN 4
+ForestOutskirts2WinterDayImage:
+#incbin "png/ForestOutskirts2WinterDay.lz77"
+
+ALIGN 4
+ForestOutskirts2WinterDayPalette:
+#incbin "png/ForestOutskirts2WinterDay.pal"
+
+ALIGN 4
+ForestOutskirts4winterDayImage:
+#incbin "png/ForestOutskirts4winterDay.lz77"
+
+ALIGN 4
+ForestOutskirts4winterDayPalette:
+#incbin "png/ForestOutskirts4winterDay.pal"
+
+ALIGN 4
+ForestOutskirtsWinterDayImage:
+#incbin "png/ForestOutskirtsWinterDay.lz77"
+
+ALIGN 4
+ForestOutskirtsWinterDayPalette:
+#incbin "png/ForestOutskirtsWinterDay.pal"
+
+ALIGN 4
+ForestOutskirtsWinterEveningImage:
+#incbin "png/ForestOutskirtsWinterEvening.lz77"
+
+ALIGN 4
+ForestOutskirtsWinterEveningPalette:
+#incbin "png/ForestOutskirtsWinterEvening.pal"
+
+ALIGN 4
+InsideFortNightImage:
+#incbin "png/InsideFortNight.lz77"
+
+ALIGN 4
+InsideFortNightPalette:
+#incbin "png/InsideFortNight.pal"
+
+ALIGN 4
+InsideFortressDayImage:
+#incbin "png/InsideFortressDay.lz77"
+
+ALIGN 4
+InsideFortressDayPalette:
+#incbin "png/InsideFortressDay.pal"
+
+ALIGN 4
+InsideHouse2DaytimeImage:
+#incbin "png/InsideHouse2Daytime.lz77"
+
+ALIGN 4
+InsideHouse2DaytimePalette:
+#incbin "png/InsideHouse2Daytime.pal"
+
+ALIGN 4
+InsideHouse2NighttimeImage:
+#incbin "png/InsideHouse2Nighttime.lz77"
+
+ALIGN 4
+InsideHouse2NighttimePalette:
+#incbin "png/InsideHouse2Nighttime.pal"
+
+ALIGN 4
+InsideHouse3NightImage:
+#incbin "png/InsideHouse3Night.lz77"
+
+ALIGN 4
+InsideHouse3NightPalette:
+#incbin "png/InsideHouse3Night.pal"
+
+ALIGN 4
+InsideHouse3Image:
+#incbin "png/InsideHouse3.lz77"
+
+ALIGN 4
+InsideHouse3Palette:
+#incbin "png/InsideHouse3.pal"
+
+ALIGN 4
+InsideHouse4DayImage:
+#incbin "png/InsideHouse4Day.lz77"
+
+ALIGN 4
+InsideHouse4DayPalette:
+#incbin "png/InsideHouse4Day.pal"
+
+ALIGN 4
+InsideTent2Image:
+#incbin "png/InsideTent2.lz77"
+
+ALIGN 4
+InsideTent2Palette:
+#incbin "png/InsideTent2.pal"
+
+ALIGN 4
+InsideTent3DayImage:
+#incbin "png/InsideTent3Day.lz77"
+
+ALIGN 4
+InsideTent3DayPalette:
+#incbin "png/InsideTent3Day.pal"
+
+ALIGN 4
+InsideTent3Image:
+#incbin "png/InsideTent3.lz77"
+
+ALIGN 4
+InsideTent3Palette:
+#incbin "png/InsideTent3.pal"
+
+ALIGN 4
+InsideTent4Image:
+#incbin "png/InsideTent4.lz77"
+
+ALIGN 4
+InsideTent4Palette:
+#incbin "png/InsideTent4.pal"
+
+ALIGN 4
+InsideTent6Image:
+#incbin "png/InsideTent6.lz77"
+
+ALIGN 4
+InsideTent6Palette:
+#incbin "png/InsideTent6.pal"
+
+ALIGN 4
+InsideTent7Image:
+#incbin "png/InsideTent7.lz77"
+
+ALIGN 4
+InsideTent7Palette:
+#incbin "png/InsideTent7.pal"
+
+ALIGN 4
+InsideTentImage:
+#incbin "png/InsideTent.lz77"
+
+ALIGN 4
+InsideTentPalette:
+#incbin "png/InsideTent.pal"
+
+ALIGN 4
+LakesideWinterDayImage:
+#incbin "png/LakesideWinterDay.lz77"
+
+ALIGN 4
+LakesideWinterDayPalette:
+#incbin "png/LakesideWinterDay.pal"
+
+ALIGN 4
+MountainsideWinterDayImage:
+#incbin "png/MountainsideWinterDay.lz77"
+
+ALIGN 4
+MountainsideWinterDayPalette:
+#incbin "png/MountainsideWinterDay.pal"
+
+ALIGN 4
+OutsideCastleWinterDayImage:
+#incbin "png/OutsideCastleWinterDay.lz77"
+
+ALIGN 4
+OutsideCastleWinterDayPalette:
+#incbin "png/OutsideCastleWinterDay.pal"
+
+ALIGN 4
+OutsideHouseDayImage:
+#incbin "png/OutsideHouseDay.lz77"
+
+ALIGN 4
+OutsideHouseDayPalette:
+#incbin "png/OutsideHouseDay.pal"
+
+ALIGN 4
+OutsideHouseNightImage:
+#incbin "png/OutsideHouseNight.lz77"
+
+ALIGN 4
+OutsideHouseNightPalette:
+#incbin "png/OutsideHouseNight.pal"
+
+ALIGN 4
+OutsideHouseWinterDayImage:
+#incbin "png/OutsideHouseWinterDay.lz77"
+
+ALIGN 4
+OutsideHouseWinterDayPalette:
+#incbin "png/OutsideHouseWinterDay.pal"
+
+ALIGN 4
+SkyEveningImage:
+#incbin "png/SkyEvening.lz77"
+
+ALIGN 4
+SkyEveningPalette:
+#incbin "png/SkyEvening.pal"
+
+ALIGN 4
+StorageRoomnightImage:
+#incbin "png/StorageRoomnight.lz77"
+
+ALIGN 4
+StorageRoomnightPalette:
+#incbin "png/StorageRoomnight.pal"
+
+ALIGN 4
+StorageRoomImage:
+#incbin "png/StorageRoom.lz77"
+
+ALIGN 4
+StorageRoomPalette:
+#incbin "png/StorageRoom.pal"
+
+ALIGN 4
+Tavern2Image:
+#incbin "png/Tavern2.lz77"
+
+ALIGN 4
+Tavern2Palette:
+#incbin "png/Tavern2.pal"
 
 ALIGN 4
 Temple2Image:
-#incbin "Image/Temple2Image.bin"
-
-ALIGN 4
-Temple2TSA:
-#incbin "TSA/Temple2TSA.bin"
+#incbin "png/Temple2.lz77"
 
 ALIGN 4
 Temple2Palette:
-#incbin "Palette/Temple2Pal.bin"
-ALIGN 4
+#incbin "png/Temple2.pal"
 
-SetConvoBackground(InsideHouse1BG, InsideBrightHouseImage, InsideBrightHouseTSA, InsideBrightHousePalette)
-SetConvoBackground(InsideHouse2BG, InsideBrightHouse2Image, InsideBrightHouse2TSA, InsideBrightHouse2Palette)
-SetConvoBackground(OutsideHouseBG, OutsideHouseImage, OutsideHouseTSA, OutsideHousePalette)
-SetConvoBackground(WinterDawnBG, WinterDawnImage, WinterDawnTSA, WinterDawnPalette)
-SetConvoBackground(ForestWinterBG, ForestWinterImage, ForestWinterTSA, ForestWinterPalette)
-SetConvoBackground(ForestOutskirtsWinterBG, ForestOutskirtsWinterImage, ForestOutskirtsWinterTSA, ForestOutskirtsWinterPalette)
-SetConvoBackground(ArmyCampBG, ArmyCampImage, ArmyCampTSA, ArmyCampPalette)
-SetConvoBackground(ArmyWinterCampBG, ArmyCampWinterNightImage, ArmyCampWinterNightTSA, ArmyCampWinterNightPalette)
-SetConvoBackground(SparseForestBG, SparseForestImage, SparseForestTSA, SparseForestPalette)
-SetConvoBackground(ForestOutSkirtsBG, ForestOutskirtsImage, ForestOutskirtsTSA, ForestOutskirtsPalette)
-SetConvoBackground(VillageGateBG1, VillageGateImage, VillageGateTSA, VillageGatePalette)
-SetConvoBackground(VillageGateBG2, VillageGate2Image, VillageGate2TSA, VillageGate2Palette)
-SetConvoBackground(LakesideBG, LakesideImage, LakesideTSA, LakesidePalette)
-SetConvoBackground(ForestPathBG, ForestPathImage, ForestPathTSA, ForestPathPalette)
-SetConvoBackground(FortInteriorBG, FortInteriorImage, FortInteriorTSA, FortInteriorPalette)
-SetConvoBackground(BlackBG, BlackImage, BlackTSA, BlackPalette)
-SetConvoBackground(Village1BG, VillageImage, VillageTSA, VillagePalette)
-SetConvoBackground(Village2BG, Village2Image, Village2TSA, Village2Palette)
-SetConvoBackground(WarriorTentBG, WarriorTentImage, WarriorTentTSA, WarriorTentPalette)
-SetConvoBackground(ForestMorningBG, ForestMorningImage, ForestMorningTSA, ForestMorningPalette)
-SetConvoBackground(TavernBG, TavernImage, TavernTSA, TavernPalette)
-SetConvoBackground(ThroneRoomBG, ThroneRoomImage, ThroneRoomTSA, ThroneRoomPalette)
-SetConvoBackground(ThroneRoomNightBG, ThroneRoomNightImage, ThroneRoomNightTSA, ThroneRoomNightPalette)
-SetConvoBackground(ForestBG1, ForestImage, ForestTSA, ForestPalette)
-SetConvoBackground(ForestBG2, Forest2Image, Forest2TSA, Forest2Palette)
-SetConvoBackground(HealerTentBG, HealerTentImage, HealerTentTSA, HealerTentPalette)
-SetConvoBackground(CaravanBG, CaravanImage, CaravanTSA, CaravanPalette)
-SetConvoBackground(FortNightBG, FortNightImage, FortNightTSA, FortNightPalette)
-SetConvoBackground(HillsNightBG, HillsNightImage, HillsNightTSA, HillsNightPalette)
-SetConvoBackground(InsideHouseNightBG, InsideHouseNightImage, InsideHouseNightTSA, InsideHouseNightPalette)
-SetConvoBackground(AltarBG, AltarImage, AltarTSA, AltarPalette)
-SetConvoBackground(TownBG, TownImage, TownTSA, TownPalette)
-SetConvoBackground(OutsideCastleBG, OutsideCastleImage, OutsideCastleTSA, OutsideCastlePalette)
-SetConvoBackground(CastleHallwayBG, CastleHallwayImage, CastleHallwayTSA, CastleHallwayPalette)
-SetConvoBackground(BedroomBG, BedroomImage, BedroomTSA, BedroomPalette)
-SetConvoBackground(BedroomNightBG, BedroomNightImage, BedroomNightTSA, BedroomNightPalette)
-SetConvoBackground(MeetingRoomBG, MeetingRoomImage, MeetingRoomTSA, MeetingRoomPalette)
-SetConvoBackground(WetlandsBG, WetlandsImage, MeetingRoomTSA, MeetingRoomPalette)
-SetConvoBackground(MountainNightBG, MountainNightImage, MountainNightTSA, MountainNightPalette)
-SetConvoBackground(WoodsBG, WoodsImage, WoodsTSA, WoodsPalette)
-SetConvoBackground(CampsiteBG, CampsiteImage, CampsiteTSA, CampsitePalette)
-SetConvoBackground(CastleRuinsBG, CastleRuinsImage, CastleRuinsTSA, CastleRuinsPalette)
-SetConvoBackground(DiningRoomBG, DiningRoomImage, DiningRoomTSA, DiningRoomPalette)
-SetConvoBackground(ForestOpeningBG, ForestOpeningImage, ForestOpeningTSA, ForestOpeningPalette)
-SetConvoBackground(OfficeBG, OfficeImage, OfficeTSA, OfficePalette)
-SetConvoBackground(RuinsBG, RuinsImage, RuinsTSA, RuinsPalette)
-SetConvoBackground(TallForestBG, TallForestImage, TallForestTSA, TallForestPalette)
-SetConvoBackground(VillageNightBG, VillageNightImage, VillageNightTSA, VillageNightPalette)
-SetConvoBackground(SnowCastleBG, SnowCastleImage, SnowCastleTSA, SnowCastlePalette)
-SetConvoBackground(SnowCampBG, SnowCampImage, SnowCampTSA, SnowCampPalette)
-SetConvoBackground(SnowCampfireBG, SnowCampfireImage, SnowCampfireTSA, SnowCampfirePalette)
-SetConvoBackground(SnowMountainBG, SnowMountainImage, SnowMountainTSA, SnowMountainPalette)
-SetConvoBackground(SnowVillageBG, SnowVillageImage, SnowVillageTSA, SnowVillagePalette)
-SetConvoBackground(SnowHouseBG, SnowHouseImage, SnowHouseTSA, SnowHousePalette)
-SetConvoBackground(WinterVillageDawnBG, WinterVillageDawnImage, WinterVillageDawnTSA, WinterVillageDawnPalette)
-SetConvoBackground(SnowMeltingBG, SnowMeltingImage, SnowMeltingTSA, SnowMeltingPalette)
-SetConvoBackground(DungeonBG, DungeonImage, DungeonTSA, DungeonPalette)
-SetConvoBackground(WinterCastleBG, WinterCastleImage, WinterCastleTSA, WinterCastlePalette)
-SetConvoBackground(CastleInteriorBG, CastleInteriorImage, CastleInteriorTSA, CastleInteriorPal)
-SetConvoBackground(InteriorBG, InteriorImage, InteriorTSA, InteriorPal)
-SetConvoBackground(CastleBalconyBG, CastleBalconyImage, CastleBalconyTSA, CastleBalconyPalette)
-SetConvoBackground(Temple1BG, Temple1Image, Temple1TSA, Temple1Palette)
-SetConvoBackground(Temple2BG, Temple2Image, Temple2TSA, Temple2Palette)
+ALIGN 4
+TempleImage:
+#incbin "png/Temple.lz77"
+
+ALIGN 4
+TemplePalette:
+#incbin "png/Temple.pal"
+
+ALIGN 4
+ThroneRoom3Image:
+#incbin "png/ThroneRoom3.lz77"
+
+ALIGN 4
+ThroneRoom3Palette:
+#incbin "png/ThroneRoom3.pal"
+
+ALIGN 4
+Village2DaytimeImage:
+#incbin "png/Village2Daytime.lz77"
+
+ALIGN 4
+Village2DaytimePalette:
+#incbin "png/Village2Daytime.pal"
+
+ALIGN 4
+Village2NightImage:
+#incbin "png/Village2Night.lz77"
+
+ALIGN 4
+Village2NightPalette:
+#incbin "png/Village2Night.pal"
+
+ALIGN 4
+Village2RainyImage:
+#incbin "png/Village2Rainy.lz77"
+
+ALIGN 4
+Village2RainyPalette:
+#incbin "png/Village2Rainy.pal"
+
+ALIGN 4
+Village2WinterDayImage:
+#incbin "png/Village2WinterDay.lz77"
+
+ALIGN 4
+Village2WinterDayPalette:
+#incbin "png/Village2WinterDay.pal"
+
+ALIGN 4
+Village2WinterNightImage:
+#incbin "png/Village2WinterNight.lz77"
+
+ALIGN 4
+Village2WinterNightPalette:
+#incbin "png/Village2WinterNight.pal"
+
+ALIGN 4
+Village3DaytimeImage:
+#incbin "png/Village3Daytime.lz77"
+
+ALIGN 4
+Village3DaytimePalette:
+#incbin "png/Village3Daytime.pal"
+
+ALIGN 4
+Village5DayImage:
+#incbin "png/Village5Day.lz77"
+
+ALIGN 4
+Village5DayPalette:
+#incbin "png/Village5Day.pal"
+
+ALIGN 4
+Village6DayImage:
+#incbin "png/Village6Day.lz77"
+
+ALIGN 4
+Village6DayPalette:
+#incbin "png/Village6Day.pal"
+
+ALIGN 4
+Village6NightImage:
+#incbin "png/Village6Night.lz77"
+
+ALIGN 4
+Village6NightPalette:
+#incbin "png/Village6Night.pal"
+
+ALIGN 4
+Village6WinterDayImage:
+#incbin "png/Village6WinterDay.lz77"
+
+ALIGN 4
+Village6WinterDayPalette:
+#incbin "png/Village6WinterDay.pal"
+
+ALIGN 4
+BlackImage:
+#incbin "png/Black.lz77"
+
+ALIGN 4
+BlackPalette:
+#incbin "png/Black.pal"
+
+ALIGN 4
+BGTSA:
+#incbin "BackgroundTSA.dmp"
+
+#define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
+SetConvoBackground(ArmoryBG,ArmoryImage,BGTSA,ArmoryPalette)
+SetConvoBackground(ArmyCamp10DayBG,ArmyCamp10DayImage,BGTSA,ArmyCamp10DayPalette)
+SetConvoBackground(ArmyCamp2EveningBG,ArmyCamp2EveningImage,BGTSA,ArmyCamp2EveningPalette)
+SetConvoBackground(ArmyCamp2NightBG,ArmyCamp2NightImage,BGTSA,ArmyCamp2NightPalette)
+SetConvoBackground(ArmyCamp3DayaltBG,ArmyCamp3DayaltImage,BGTSA,ArmyCamp3DayaltPalette)
+SetConvoBackground(ArmyCamp3DayBG,ArmyCamp3DayImage,BGTSA,ArmyCamp3DayPalette)
+SetConvoBackground(ArmyCamp3EveningBG,ArmyCamp3EveningImage,BGTSA,ArmyCamp3EveningPalette)
+SetConvoBackground(ArmyCamp3NightBG,ArmyCamp3NightImage,BGTSA,ArmyCamp3NightPalette)
+SetConvoBackground(ArmyCamp3WinterDayBG,ArmyCamp3WinterDayImage,BGTSA,ArmyCamp3WinterDayPalette)
+SetConvoBackground(ArmyCamp3WinterNightBG,ArmyCamp3WinterNightImage,BGTSA,ArmyCamp3WinterNightPalette)
+SetConvoBackground(ArmyCamp4DayBG,ArmyCamp4DayImage,BGTSA,ArmyCamp4DayPalette)
+SetConvoBackground(ArmyCamp4EveningBG,ArmyCamp4EveningImage,BGTSA,ArmyCamp4EveningPalette)
+SetConvoBackground(ArmyCamp4NightBG,ArmyCamp4NightImage,BGTSA,ArmyCamp4NightPalette)
+SetConvoBackground(ArmyCamp4WinterDayBG,ArmyCamp4WinterDayImage,BGTSA,ArmyCamp4WinterDayPalette)
+SetConvoBackground(ArmyCamp6DayBG,ArmyCamp6DayImage,BGTSA,ArmyCamp6DayPalette)
+SetConvoBackground(ArmyCamp7DayBG,ArmyCamp7DayImage,BGTSA,ArmyCamp7DayPalette)
+SetConvoBackground(ArmyCamp8DayBG,ArmyCamp8DayImage,BGTSA,ArmyCamp8DayPalette)
+SetConvoBackground(ArmyCamp8WinterDayBG,ArmyCamp8WinterDayImage,BGTSA,ArmyCamp8WinterDayPalette)
+SetConvoBackground(ArmyCamp9DayBG,ArmyCamp9DayImage,BGTSA,ArmyCamp9DayPalette)
+SetConvoBackground(ArmyCampDayAltBG,ArmyCampDayAltImage,BGTSA,ArmyCampDayAltPalette)
+SetConvoBackground(ArmyCampDayBG,ArmyCampDayImage,BGTSA,ArmyCampDayPalette)
+SetConvoBackground(BedroomDaytimeBG,BedroomDaytimeImage,BGTSA,BedroomDaytimePalette)
+SetConvoBackground(BedroomNightBG,BedroomNightImage,BGTSA,BedroomNightPalette)
+SetConvoBackground(Campsite2NightBG,Campsite2NightImage,BGTSA,Campsite2NightPalette)
+SetConvoBackground(CampsiteNighttimeBG,CampsiteNighttimeImage,BGTSA,CampsiteNighttimePalette)
+SetConvoBackground(CampsiteWinterBG,CampsiteWinterImage,BGTSA,CampsiteWinterPalette)
+SetConvoBackground(CaravanDayBG,CaravanDayImage,BGTSA,CaravanDayPalette)
+SetConvoBackground(Castle2DayBG,Castle2DayImage,BGTSA,Castle2DayPalette)
+SetConvoBackground(Castle2EveningBG,Castle2EveningImage,BGTSA,Castle2EveningPalette)
+SetConvoBackground(Castle2WinterDayBG,Castle2WinterDayImage,BGTSA,Castle2WinterDayPalette)
+SetConvoBackground(Castle3DayBG,Castle3DayImage,BGTSA,Castle3DayPalette)
+SetConvoBackground(Castle4DayBG,Castle4DayImage,BGTSA,Castle4DayPalette)
+SetConvoBackground(CastleCourtyardDayBG,CastleCourtyardDayImage,BGTSA,CastleCourtyardDayPalette)
+SetConvoBackground(CastleCourtyardEveningBG,CastleCourtyardEveningImage,BGTSA,CastleCourtyardEveningPalette)
+SetConvoBackground(CastleDayBG,CastleDayImage,BGTSA,CastleDayPalette)
+SetConvoBackground(CastleDiningRoomBG,CastleDiningRoomImage,BGTSA,CastleDiningRoomPalette)
+SetConvoBackground(CastleInterior1NighttimeBG,CastleInterior1NighttimeImage,BGTSA,CastleInterior1NighttimePalette)
+SetConvoBackground(CastleInterior2EveningBG,CastleInterior2EveningImage,BGTSA,CastleInterior2EveningPalette)
+SetConvoBackground(CastleInterior3EveningBG,CastleInterior3EveningImage,BGTSA,CastleInterior3EveningPalette)
+SetConvoBackground(CastleInterior3WinterDayBG,CastleInterior3WinterDayImage,BGTSA,CastleInterior3WinterDayPalette)
+SetConvoBackground(CastleInterior4EveningBG,CastleInterior4EveningImage,BGTSA,CastleInterior4EveningPalette)
+SetConvoBackground(CastleInterior5BG,CastleInterior5Image,BGTSA,CastleInterior5Palette)
+SetConvoBackground(CastleInterior6NightBG,CastleInterior6NightImage,BGTSA,CastleInterior6NightPalette)
+SetConvoBackground(CastleInterior6RainyBG,CastleInterior6RainyImage,BGTSA,CastleInterior6RainyPalette)
+SetConvoBackground(CastleInteriorDayBG,CastleInteriorDayImage,BGTSA,CastleInteriorDayPalette)
+SetConvoBackground(CastleInteriorEveningBG,CastleInteriorEveningImage,BGTSA,CastleInteriorEveningPalette)
+SetConvoBackground(CastleInteriorNight2BG,CastleInteriorNight2Image,BGTSA,CastleInteriorNight2Palette)
+SetConvoBackground(CastleInteriorNightBG,CastleInteriorNightImage,BGTSA,CastleInteriorNightPalette)
+SetConvoBackground(CastleInteriorBG,CastleInteriorImage,BGTSA,CastleInteriorPalette)
+SetConvoBackground(CastleViewDayBG,CastleViewDayImage,BGTSA,CastleViewDayPalette)
+SetConvoBackground(ChiefsTent2BG,ChiefsTent2Image,BGTSA,ChiefsTent2Palette)
+SetConvoBackground(ChiefTentInteriorBG,ChiefTentInteriorImage,BGTSA,ChiefTentInteriorPalette)
+SetConvoBackground(DaytimeInsideHouse1BG,DaytimeInsideHouse1Image,BGTSA,DaytimeInsideHouse1Palette)
+SetConvoBackground(DaytimeTavern1BG,DaytimeTavern1Image,BGTSA,DaytimeTavern1Palette)
+SetConvoBackground(DesertDayBG,DesertDayImage,BGTSA,DesertDayPalette)
+SetConvoBackground(DesertEveningBG,DesertEveningImage,BGTSA,DesertEveningPalette)
+SetConvoBackground(DesertMorningBG,DesertMorningImage,BGTSA,DesertMorningPalette)
+SetConvoBackground(DesertNightBG,DesertNightImage,BGTSA,DesertNightPalette)
+SetConvoBackground(DesertRuinsDayBG,DesertRuinsDayImage,BGTSA,DesertRuinsDayPalette)
+SetConvoBackground(DesertStoreroomBG,DesertStoreroomImage,BGTSA,DesertStoreroomPalette)
+SetConvoBackground(DiningRoomBG,DiningRoomImage,BGTSA,DiningRoomPalette)
+SetConvoBackground(Dungeon2BG,Dungeon2Image,BGTSA,Dungeon2Palette)
+SetConvoBackground(Dungeon3BG,Dungeon3Image,BGTSA,Dungeon3Palette)
+SetConvoBackground(Dungeon4BG,Dungeon4Image,BGTSA,Dungeon4Palette)
+SetConvoBackground(DungeonBG,DungeonImage,BGTSA,DungeonPalette)
+SetConvoBackground(EstateDayBG,EstateDayImage,BGTSA,EstateDayPalette)
+SetConvoBackground(EstateEveningBG,EstateEveningImage,BGTSA,EstateEveningPalette)
+SetConvoBackground(Forest1DaytimeBG,Forest1DaytimeImage,BGTSA,Forest1DaytimePalette)
+SetConvoBackground(Forest1EveningBG,Forest1EveningImage,BGTSA,Forest1EveningPalette)
+SetConvoBackground(Forest2DayBG,Forest2DayImage,BGTSA,Forest2DayPalette)
+SetConvoBackground(Forest2EveningBG,Forest2EveningImage,BGTSA,Forest2EveningPalette)
+SetConvoBackground(Forest2NightBG,Forest2NightImage,BGTSA,Forest2NightPalette)
+SetConvoBackground(Forest3NightBG,Forest3NightImage,BGTSA,Forest3NightPalette)
+SetConvoBackground(Forest3WinterDayBG,Forest3WinterDayImage,BGTSA,Forest3WinterDayPalette)
+SetConvoBackground(Forest5DayBG,Forest5DayImage,BGTSA,Forest5DayPalette)
+SetConvoBackground(Forest6DayBG,Forest6DayImage,BGTSA,Forest6DayPalette)
+SetConvoBackground(Forest6NightBG,Forest6NightImage,BGTSA,Forest6NightPalette)
+SetConvoBackground(ForestMorningBG,ForestMorningImage,BGTSA,ForestMorningPalette)
+SetConvoBackground(ForestOutskirts1WinterDayBG,ForestOutskirts1WinterDayImage,BGTSA,ForestOutskirts1WinterDayPalette)
+SetConvoBackground(ForestOutskirts2WinterDayBG,ForestOutskirts2WinterDayImage,BGTSA,ForestOutskirts2WinterDayPalette)
+SetConvoBackground(ForestOutskirts4winterDayBG,ForestOutskirts4winterDayImage,BGTSA,ForestOutskirts4winterDayPalette)
+SetConvoBackground(ForestOutskirtsWinterDayBG,ForestOutskirtsWinterDayImage,BGTSA,ForestOutskirtsWinterDayPalette)
+SetConvoBackground(ForestOutskirtsWinterEveningBG,ForestOutskirtsWinterEveningImage,BGTSA,ForestOutskirtsWinterEveningPalette)
+SetConvoBackground(InsideFortNightBG,InsideFortNightImage,BGTSA,InsideFortNightPalette)
+SetConvoBackground(InsideFortressDayBG,InsideFortressDayImage,BGTSA,InsideFortressDayPalette)
+SetConvoBackground(InsideHouse2DaytimeBG,InsideHouse2DaytimeImage,BGTSA,InsideHouse2DaytimePalette)
+SetConvoBackground(InsideHouse2NighttimeBG,InsideHouse2NighttimeImage,BGTSA,InsideHouse2NighttimePalette)
+SetConvoBackground(InsideHouse3NightBG,InsideHouse3NightImage,BGTSA,InsideHouse3NightPalette)
+SetConvoBackground(InsideHouse3BG,InsideHouse3Image,BGTSA,InsideHouse3Palette)
+SetConvoBackground(InsideHouse4DayBG,InsideHouse4DayImage,BGTSA,InsideHouse4DayPalette)
+SetConvoBackground(InsideTent2BG,InsideTent2Image,BGTSA,InsideTent2Palette)
+SetConvoBackground(InsideTent3DayBG,InsideTent3DayImage,BGTSA,InsideTent3DayPalette)
+SetConvoBackground(InsideTent3BG,InsideTent3Image,BGTSA,InsideTent3Palette)
+SetConvoBackground(InsideTent4BG,InsideTent4Image,BGTSA,InsideTent4Palette)
+SetConvoBackground(InsideTent6BG,InsideTent6Image,BGTSA,InsideTent6Palette)
+SetConvoBackground(InsideTent7BG,InsideTent7Image,BGTSA,InsideTent7Palette)
+SetConvoBackground(InsideTentBG,InsideTentImage,BGTSA,InsideTentPalette)
+SetConvoBackground(LakesideWinterDayBG,LakesideWinterDayImage,BGTSA,LakesideWinterDayPalette)
+SetConvoBackground(MountainsideWinterDayBG,MountainsideWinterDayImage,BGTSA,MountainsideWinterDayPalette)
+SetConvoBackground(OutsideCastleWinterDayBG,OutsideCastleWinterDayImage,BGTSA,OutsideCastleWinterDayPalette)
+SetConvoBackground(OutsideHouseDayBG,OutsideHouseDayImage,BGTSA,OutsideHouseDayPalette)
+SetConvoBackground(OutsideHouseNightBG,OutsideHouseNightImage,BGTSA,OutsideHouseNightPalette)
+SetConvoBackground(OutsideHouseWinterDayBG,OutsideHouseWinterDayImage,BGTSA,OutsideHouseWinterDayPalette)
+SetConvoBackground(SkyEveningBG,SkyEveningImage,BGTSA,SkyEveningPalette)
+SetConvoBackground(StorageRoomnightBG,StorageRoomnightImage,BGTSA,StorageRoomnightPalette)
+SetConvoBackground(StorageRoomBG,StorageRoomImage,BGTSA,StorageRoomPalette)
+SetConvoBackground(Tavern2BG,Tavern2Image,BGTSA,Tavern2Palette)
+SetConvoBackground(Temple2BG,Temple2Image,BGTSA,Temple2Palette)
+SetConvoBackground(TempleBG,TempleImage,BGTSA,TemplePalette)
+SetConvoBackground(ThroneRoom3BG,ThroneRoom3Image,BGTSA,ThroneRoom3Palette)
+SetConvoBackground(Village2DaytimeBG,Village2DaytimeImage,BGTSA,Village2DaytimePalette)
+SetConvoBackground(Village2NightBG,Village2NightImage,BGTSA,Village2NightPalette)
+SetConvoBackground(Village2RainyBG,Village2RainyImage,BGTSA,Village2RainyPalette)
+SetConvoBackground(Village2WinterDayBG,Village2WinterDayImage,BGTSA,Village2WinterDayPalette)
+SetConvoBackground(Village2WinterNightBG,Village2WinterNightImage,BGTSA,Village2WinterNightPalette)
+SetConvoBackground(Village3DaytimeBG,Village3DaytimeImage,BGTSA,Village3DaytimePalette)
+SetConvoBackground(Village5DayBG,Village5DayImage,BGTSA,Village5DayPalette)
+SetConvoBackground(Village6DayBG,Village6DayImage,BGTSA,Village6DayPalette)
+SetConvoBackground(Village6NightBG,Village6NightImage,BGTSA,Village6NightPalette)
+SetConvoBackground(Village6WinterDayBG,Village6WinterDayImage,BGTSA,Village6WinterDayPalette)
+SetConvoBackground(BlackBG,BlackImage,BGTSA,BlackPalette)
+
 }
