@@ -49,16 +49,17 @@ hack: $(TARGET_ROM)
 
 .PHONY: hack %.dmp
 
-$(TARGET_ROM): directories $(MAIN_EVENT) $(EVENT_DEPENDS) $(SOURCE_ROM)
+$(TARGET_ROM): $(PORTRAIT_DMPS) $(MAPSPRITES_DMPS) $(MAIN_EVENT) $(EVENT_DEPENDS) $(SOURCE_ROM)
 	@[ -d $(DIST_FOLDER) ] || mkdir $(DIST_FOLDER)
 	@cp -f "$(SOURCE_ROM)" "$(TARGET_ROM)" || exit 2
-	@cd "$(EA)"
 	@$(COLORZCORE) A FE8 "-output:$(TARGET_ROM)" "-input:$(MAIN_EVENT)" "--nocash-sym:$(TARGET_SYM)" --build-times
 	@$(SYMCOMBO) $(TARGET_SYM) $(TARGET_SYM) $(VANILLASYM)
 
-directories:
-	@mkdir -p $(PORTRAIT_DMPS)
-	@mkdir -p $(MAPSPRITES_DMPS)
+$(MAPSPRITES_DMPS):
+	mkdir $@
+
+$(PORTRAIT_DMPS):
+	mkdir $@
 
 %.event: %.csv %.nmm
 	@echo | $(C2EA) -csv $*.csv -nmm $*.nmm -out $*.event $(SOURCE_ROM) > /dev/null

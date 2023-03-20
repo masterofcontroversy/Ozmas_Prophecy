@@ -27,9 +27,6 @@ SOURCE_FILES := $(patsubst %.c,%.lyn.event,$(wildcard EngineHacks/C/*.c))
 sources:
 	$(MAKE) $(SOURCE_FILES)
 
-reference:
-	$(MAKE) $(LYNREF)
-
 # C to ASM rule
 %.s: %.c
 	$(CC) $(CFLAGS) -S $< -I $(HEADER_FILES) -o $@ -fverbose-asm -mlong-calls
@@ -39,7 +36,7 @@ reference:
 	$(AS) $(ARCH) $< -I $(dir $<) $(ASSEMBLY_HEADERS)  -o $@
 
 # OBJ to EVENT rule
-%.lyn.event: %.o
+%.lyn.event: %.o $(LYNREF)
 	$(LYN) $< $(LYNREF) > $@
 
 # .PRECIOUS: %.s

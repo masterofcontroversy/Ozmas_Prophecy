@@ -88,7 +88,7 @@ struct CharacterData {
 
 struct CharacterMagicData {
 	/* 00 */ s8 baseMag;
-	/* 01 */ s8 growthMag;
+	/* 01 */ u8 growthMag;
 };
 
 struct ClassData {

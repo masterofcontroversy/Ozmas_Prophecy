@@ -60,8 +60,8 @@
 
 @The following is battle unit exclusive
 
-    .equ BattleUnitWeaponBefore,        0x48 @Unsigned Short
-    .equ BattleUnitWeaponAfter,         0x4A @Unsigned Short
+    .equ BattleUnitWeaponAfter,         0x48 @Unsigned Short
+    .equ BattleUnitWeaponBefore,        0x4A @Unsigned Short
     .equ BattleUnitWeaponAbilities,     0x4C @Bitfield Word
     .equ BattleUnitWeaponType,          0x50 @Unsigned Byte
     .equ BattleUnitWeaponSlot,          0x51 @Unsigned Byte
