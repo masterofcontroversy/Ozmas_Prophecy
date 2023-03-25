@@ -143,8 +143,9 @@ Desperation: If HP < 50%,[N]
 double attacks occur immediately.[X]
 
 ## SD_Wrath
-Wrath: If HP < 50%,[N]
-deal 2x damage[X]
+Wrath: If HP < 50%,[NL]
+and enemy can counter,[N]
+deal 2x damage.[X]
 
 ## SD_Counter
 Counter: Reflect physical damage[N]
@@ -159,8 +160,9 @@ Miracle: Survive a lethal[N]
 attack if HP > 50%.[X]
 
 ## SD_Shieldfaire
-Shieldfaire:[NL]
-Shield weight reduced by 2. Floors at 0.[X]
+Shieldfaire: Shield weight is lowered by 2.[NL]
+If base shield weight is 2 or less,[NL]
+it is negated.[X]
 
 ## SD_Lancefaire
 Lancefaire: +4 damage[N]
@@ -179,7 +181,8 @@ Tomefaire: +4 damage[N]
 when equipping a tome.[X]
 
 ## SD_CritUp
-Critical: Allows unit to critical hit.[X]
+Critical: If crit is unlocked,[NL]
+skill is added to crit.[X]
 
 ## SD_Slayer
 Slayer: Deal effective damage[N]

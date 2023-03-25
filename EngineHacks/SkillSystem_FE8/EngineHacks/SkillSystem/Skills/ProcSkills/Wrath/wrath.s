@@ -23,6 +23,12 @@ ldrb r1, [r4, #0x13] @currhp
 cmp r1, r0
 bgt End
 
+@enemy can counter
+mov r0, #0x52
+ldrb r0, [r5, r0]
+cmp r0, #0x0
+beq End
+
 @has Wrath
 ldr r0, SkillTester
 mov lr, r0

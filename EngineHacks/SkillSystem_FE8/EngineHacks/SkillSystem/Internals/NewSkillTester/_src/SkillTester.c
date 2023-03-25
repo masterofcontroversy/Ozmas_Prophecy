@@ -64,12 +64,13 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     }
 
     //Learned skills (In BWL data)
-    if (unitNum < 0x46) {
+    BWLData* unitBWL = BWL_GetEntry(unitNum);
+    if (unitBWL) {
         for (int i = 0; i < 4; ++i) {
-            if (!IsSkillIDValid(gBWLDataArray[unitNum].skills[i])) {
+            if (!IsSkillIDValid(unitBWL->skills[i])) {
                 break;
             }
-            buffer->skills[count++] = gBWLDataArray[unitNum].skills[i];
+            buffer->skills[count++] = unitBWL->skills[i];
         }
     }
 
@@ -132,7 +133,7 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
     SkillBuffer* buffer = gGenericSkillBuffer;
     u8 count = 0;
     u8 distance = 0;
-    u8* unitsInRange = GetUnitsInRange(unit, 4, 6);
+    u8* unitsInRange = GetUnitsInRange(unit, 4, 3);
 
     //If no units are nearby, end early
     if (!unitsInRange) {
@@ -159,11 +160,6 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
                 distance = absolute(other->xPos - unit->xPos) +
                            absolute(other->yPos - unit->yPos);
 
-                if (distance > 63) {
-                    distance = 63;
-                }
-
-                //No need to `& 0x3F` because of the limit
                 gAuraSkillBuffer[count].distance = distance;
                 //Shifting for storage
                 gAuraSkillBuffer[count].faction = UNIT_FACTION(other) >> 6;
@@ -257,37 +253,43 @@ void InitializePreBattleLoop(Unit* attacker, Unit* defender) {
         MakeSkillBuffer(&gBattleTarget.unit, gDefenderSkillBuffer);
     }
 }
-
 //Finds units in a radius and returns a list of matching unit's indexes
 u8* GetUnitsInRange(Unit* unit, int allyOption, int range) {
     const s8(*pAllegianceChecker)(int, int) = ((allyOption & 1) ? AreAllegiancesAllied : AreAllegiancesEqual);
+    int x = unit->xPos;
+    int y = unit->yPos;
 
     int count = 0;
     int check = 0;
 
-    for (int i = 0; i < 0x100; ++i) {
-        Unit* other = gUnitLookup[i];
+    for (int yLoop = y - range; yLoop <= y + range; yLoop++) {
+        for (int xLoop = x - range; xLoop <= x + range; xLoop++) {
+            if (!gMapUnit[yLoop][xLoop]) {
+                continue;
+            }
+            Unit* other = GetUnit(gMapUnit[yLoop][xLoop]);
 
-        if (!IsUnitOnField(other) || unit->index == i) {
-            continue;
-        }
+            if (!IsUnitOnField(other) || unit->index == other->index) {
+                continue;
+            }
 
-        //Check if other matches allyOption's criteria
-        if (allyOption & 2) {
-            check = !pAllegianceChecker(unit->index, other->index);
-        }
-        else {
-            check =  pAllegianceChecker(unit->index, other->index);
-        }
+            //Check if other matches allyOption's criteria
+            if (allyOption & 2) {
+                check = !pAllegianceChecker(unit->index, other->index);
+            }
+            else {
+                check =  pAllegianceChecker(unit->index, other->index);
+            }
 
-        if (check || (allyOption & 4)) {
-            if ((absolute(other->xPos - unit->xPos)
-               + absolute(other->yPos - unit->yPos)) <= range) {
-                gUnitRangeBuffer[count++] = i;
+            if (check || (allyOption & 4)) {
+                if ((absolute(other->xPos - unit->xPos)
+                   + absolute(other->yPos - unit->yPos)) <= range) {
+                    gUnitRangeBuffer[count++] = other->index;
+                }
             }
         }
     }
-
+    
     //Terminator
     gUnitRangeBuffer[count++] = 0;
     if (!gUnitRangeBuffer[0])

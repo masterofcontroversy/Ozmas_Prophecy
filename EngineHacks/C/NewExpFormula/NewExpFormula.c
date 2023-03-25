@@ -32,15 +32,22 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target) {
 }
 
 int GetHitExpGain(BattleUnit* actor, BattleUnit* target) {
+    int result;
     int actorLevel = actor->unit.level;
     int targetLevel = target->unit.level;
 
     if (actorLevel >= targetLevel) {
-        return 10 - absolute(actorLevel - targetLevel) * 2;
+        result = 10 - absolute(actorLevel - targetLevel) * 2;
     }
     else {
-        return 10 + absolute(actorLevel - targetLevel) * 2;
+        result = 10 + absolute(actorLevel - targetLevel) * 2;
     }
+
+    if (result > 20) {
+        result = 20;
+    }
+
+    return result;
 }
 
 int GetKillExpGain(BattleUnit* actor, BattleUnit* target) {

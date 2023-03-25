@@ -409,13 +409,12 @@
 
 //Faire Skills: +4 damage when equipping a weapon of the specified type.
 //Author Unknown (Initial Commit)
-#define SwordfaireID 255
-#define LancefaireID 255
-#define AxefaireID 255
-#define BowfaireID 255
-#define TomefaireID 255
-
 #define ShieldfaireID 195
+#define LancefaireID 196
+#define AxefaireID 197
+#define BowfaireID 198
+#define TomefaireID 199
+
 
 //Fiery Blood: +4 damage when HP is not at max.
 //Author Unknown (Initial Commit)

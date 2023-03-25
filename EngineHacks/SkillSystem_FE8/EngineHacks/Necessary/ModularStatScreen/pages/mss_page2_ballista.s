@@ -17,12 +17,12 @@ MSS_page2:
 
 page_start
 
-draw_textID_at 13, 13, AtkID, Yellow, xCursor=0     @Atk
-draw_textID_at 24, 13, HitID, Yellow, xCursor=0     @Hit
-draw_textID_at 24, 15, AvoID, Yellow, xCursor=0     @Avo
-draw_textID_at 13, 17, CritID, Yellow, xCursor=0    @Crit
-draw_textID_at 13, 15, ASID, Yellow, xCursor=0      @AS
-draw_textID_at 24, 17, RngID, Yellow, xCursor=0     @Rng
+draw_textID_at 13, 13, AtkID     @Atk
+draw_textID_at 24, 13, HitID     @Hit
+draw_textID_at 24, 15, AvoID     @Avo
+draw_textID_at 13, 17, CritID    @Crit
+draw_textID_at 13, 15, ASID      @AS
+draw_textID_at 24, 17, RngID     @Rng
 
 ldr  r0,=ProtectionIDLink
 ldrh r0, [r0]

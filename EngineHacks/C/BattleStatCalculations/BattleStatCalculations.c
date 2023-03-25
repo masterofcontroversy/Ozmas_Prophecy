@@ -13,7 +13,7 @@ int GetUnitResilience(BattleUnit* unit) {
     return unit->terrainResistance + unit->unit.res;
 }
 
-void CalculateUnitHit(BattleUnit* unit) {
+void ComputeBattleUnitHitRate(BattleUnit* unit) {
     int hit = GetItemHit(unit->weaponBefore);
     hit += unit->wTriangleHitBonus;
     hit += (unit->unit.skl * 2) + (unit->unit.lck);
@@ -21,16 +21,21 @@ void CalculateUnitHit(BattleUnit* unit) {
     unit->battleHitRate = hit;
 }
 
-void CalculateUnitCrit(BattleUnit* unit) {
-    if (SkillTester((Unit*) unit, gCriticalSkillID)) {
-        unit->battleCritRate = GetItemCrit(unit->weaponBefore) + (unit->unit.skl);
-    }
-    else {
-        unit->battleCritRate = 0;
+void ComputeBattleUnitCritRate(BattleUnit* unit) {
+    unit->battleCritRate = GetItemCrit(unit->weaponBefore);
+    if (unit->battleCritRate && SkillTester((Unit*) unit, gCriticalSkillID)) {
+        unit->battleCritRate += unit->unit.skl;
     }
 }
 
-void CalculateUnitAttackSpeed(BattleUnit* unit) {
+void ComputeBattleUnitAvoidRate(struct BattleUnit* unit) {
+    unit->battleAvoidRate = unit->battleSpeed + unit->terrainAvoid + unit->unit.lck;
+
+    if (unit->battleAvoidRate < 0)
+        unit->battleAvoidRate = 0;
+}
+
+void ComputeBattleUnitSpeed(BattleUnit* unit) {
     int weaponWeight = GetItemWeight(unit->weaponBefore);
     int equipmentWeight = 0;
     int effectiveWeight = 0;
@@ -54,5 +59,22 @@ void CalculateUnitAttackSpeed(BattleUnit* unit) {
     unit->battleSpeed = (unit->unit.spd) - effectiveWeight;
     if (unit->battleSpeed < 0) {
         unit->battleSpeed = 0;
+    }
+}
+
+void ComputeBattleUnitSupportBonuses(BattleUnit* unit) {
+    if (!(gBattleStats.config & BATTLE_CONFIG_ARENA) || gChapterData.weather) {
+        struct SupportBonuses tmpBonuses;
+
+        GetUnitSupportBonuses(&unit->unit, &tmpBonuses);
+
+        unit->battleAttack    += tmpBonuses.bonusAttack;
+        unit->battleDefense   += tmpBonuses.bonusDefense;
+        unit->battleHitRate   += tmpBonuses.bonusHit;
+        unit->battleAvoidRate += tmpBonuses.bonusAvoid;
+        if (unit->battleCritRate) {
+            unit->battleCritRate  += tmpBonuses.bonusCrit;
+        }
+        //unit->battleDodgeRate += tmpBonuses.bonusDodge;
     }
 }
