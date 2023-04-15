@@ -9,8 +9,7 @@ endif
 # Including devkitARM tool definitions
 include $(DEVKITARM)/base_tools
 
-# defining path of lyn
-LYN := $(abspath .)/Tools/FE-CLib/utility/lyn
+# defining path of lyn reference
 LYNREF :=$(abspath .)/Tools/FE-CLib/reference/FE8U-ControRef.o
 
 # setting up compilation flags
@@ -37,6 +36,6 @@ sources:
 
 # OBJ to EVENT rule
 %.lyn.event: %.o $(LYNREF)
-	$(LYN) $< $(LYNREF) > $@
+	@$(LYN) $< $(LYNREF) > $@
 
 # .PRECIOUS: %.s
