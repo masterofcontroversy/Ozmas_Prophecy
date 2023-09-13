@@ -39,6 +39,8 @@ GrislyWoundIDLink:
 BYTE GrislyWoundID
 #include "PoisonStrikeGrislyWound/PSGWEvent.event"
 
+#include "SlyMovement/SlyMovement.lyn.event"
+WORD SlyMovementID
 
 ALIGN 4
 Despoil:
@@ -76,7 +78,7 @@ POIN GaleforceEvent
 
 ALIGN 4
 Canto:
-#incbin "Canto/canto.dmp"
+#include "Canto/canto.lyn.event"
 POIN SkillTester
 WORD CantoID
 WORD ENABLE_LEGACY_CANTO
@@ -88,12 +90,10 @@ POIN SkillTester
 WORD CantoPlusID
 
 ALIGN 4
-ReMove:
-#incbin "ReMove/remove.dmp"
+SecondWind:
+#include "SecondWind/SecondWind.lyn.event"
 POIN SkillTester
-WORD ReMoveID
-POIN ReMoveEvent
-#include "ReMove/ReMoveEvent.event"
+WORD SecondWindID
 
 ALIGN 4
 Powerstaff:

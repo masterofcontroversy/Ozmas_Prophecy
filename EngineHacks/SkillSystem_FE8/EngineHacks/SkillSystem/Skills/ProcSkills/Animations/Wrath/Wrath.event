@@ -1,0 +1,163 @@
+//Generated with Skill Animation Creator.
+
+#incbin skillanimtemplate.dmp
+POIN Frames
+POIN TSAList
+POIN GraphicsList
+POIN PalettesList
+WORD 0x0119 //sound id
+
+Frames:    //SHORT image duration
+SHORT 0 2
+SHORT 1 2
+SHORT 2 20
+SHORT 3 2
+SHORT 1 2
+SHORT 4 2
+SHORT 5 2
+SHORT 6 2
+SHORT 7 2
+SHORT 2 2
+SHORT 8 2
+SHORT 9 2
+SHORT 2 2
+SHORT 10 2
+SHORT 0 2
+SHORT 1 2
+SHORT 9 2
+SHORT 2 2
+SHORT 10 2
+SHORT 0xFFFF
+ALIGN 4
+
+TSAList:
+POIN TSA_Wrath_g000
+POIN TSA_Wrath_g001
+POIN TSA_Wrath_g002
+POIN TSA_Wrath_g003
+POIN TSA_Wrath_g001
+POIN TSA_Wrath_g004
+POIN TSA_Wrath_g005
+POIN TSA_Wrath_g006
+POIN TSA_Wrath_g007
+POIN TSA_Wrath_g002
+POIN TSA_Wrath_g008
+POIN TSA_Wrath_g009
+POIN TSA_Wrath_g002
+POIN TSA_Wrath_g010
+POIN TSA_Wrath_g000
+POIN TSA_Wrath_g001
+POIN TSA_Wrath_g009
+POIN TSA_Wrath_g002
+POIN TSA_Wrath_g010
+
+GraphicsList:
+POIN Graphics_Wrath_g000
+POIN Graphics_Wrath_g001
+POIN Graphics_Wrath_g002
+POIN Graphics_Wrath_g003
+POIN Graphics_Wrath_g001
+POIN Graphics_Wrath_g004
+POIN Graphics_Wrath_g005
+POIN Graphics_Wrath_g006
+POIN Graphics_Wrath_g007
+POIN Graphics_Wrath_g002
+POIN Graphics_Wrath_g008
+POIN Graphics_Wrath_g009
+POIN Graphics_Wrath_g002
+POIN Graphics_Wrath_g010
+POIN Graphics_Wrath_g000
+POIN Graphics_Wrath_g001
+POIN Graphics_Wrath_g009
+POIN Graphics_Wrath_g002
+POIN Graphics_Wrath_g010
+
+PalettesList:
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+POIN Pal_Wrath_g000
+
+TSA_Wrath_g000:
+#incbin "Wrath_g000.map.bin"
+TSA_Wrath_g001:
+#incbin "Wrath_g001.map.bin"
+TSA_Wrath_g002:
+#incbin "Wrath_g002.map.bin"
+TSA_Wrath_g003:
+#incbin "Wrath_g003.map.bin"
+TSA_Wrath_g004:
+#incbin "Wrath_g004.map.bin"
+TSA_Wrath_g005:
+#incbin "Wrath_g005.map.bin"
+TSA_Wrath_g006:
+#incbin "Wrath_g006.map.bin"
+TSA_Wrath_g007:
+#incbin "Wrath_g007.map.bin"
+TSA_Wrath_g008:
+#incbin "Wrath_g008.map.bin"
+TSA_Wrath_g009:
+#incbin "Wrath_g009.map.bin"
+TSA_Wrath_g010:
+#incbin "Wrath_g010.map.bin"
+
+Graphics_Wrath_g000:
+#incbin "Wrath_g000.img.bin"
+Graphics_Wrath_g001:
+#incbin "Wrath_g001.img.bin"
+Graphics_Wrath_g002:
+#incbin "Wrath_g002.img.bin"
+Graphics_Wrath_g003:
+#incbin "Wrath_g003.img.bin"
+Graphics_Wrath_g004:
+#incbin "Wrath_g004.img.bin"
+Graphics_Wrath_g005:
+#incbin "Wrath_g005.img.bin"
+Graphics_Wrath_g006:
+#incbin "Wrath_g006.img.bin"
+Graphics_Wrath_g007:
+#incbin "Wrath_g007.img.bin"
+Graphics_Wrath_g008:
+#incbin "Wrath_g008.img.bin"
+Graphics_Wrath_g009:
+#incbin "Wrath_g009.img.bin"
+Graphics_Wrath_g010:
+#incbin "Wrath_g010.img.bin"
+
+Pal_Wrath_g000:
+#incbin "Wrath_g000.pal.bin"
+Pal_Wrath_g001:
+#incbin "Wrath_g001.pal.bin"
+Pal_Wrath_g002:
+#incbin "Wrath_g002.pal.bin"
+Pal_Wrath_g003:
+#incbin "Wrath_g003.pal.bin"
+Pal_Wrath_g004:
+#incbin "Wrath_g004.pal.bin"
+Pal_Wrath_g005:
+#incbin "Wrath_g005.pal.bin"
+Pal_Wrath_g006:
+#incbin "Wrath_g006.pal.bin"
+Pal_Wrath_g007:
+#incbin "Wrath_g007.pal.bin"
+Pal_Wrath_g008:
+#incbin "Wrath_g008.pal.bin"
+Pal_Wrath_g009:
+#incbin "Wrath_g009.pal.bin"
+Pal_Wrath_g010:
+#incbin "Wrath_g010.pal.bin"

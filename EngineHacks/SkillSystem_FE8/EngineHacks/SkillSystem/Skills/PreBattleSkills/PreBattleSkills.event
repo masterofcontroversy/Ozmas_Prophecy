@@ -24,8 +24,7 @@ WORD BattleVeteranID
 
 ALIGN 4
 Charge:
-#incbin "Charge/Charge.dmp"
-POIN SkillTester
+#include "Charge/Charge.lyn.event"
 WORD ChargeID
 
 #include "CriticalSkills/CriticalSkills.event"

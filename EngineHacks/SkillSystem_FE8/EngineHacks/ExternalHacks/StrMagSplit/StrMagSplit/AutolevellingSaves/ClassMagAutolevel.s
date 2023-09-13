@@ -10,7 +10,7 @@ mov		r14,r0
 ldr		r0,[r4,#0x4]
 ldrb	r0,[r0,#0x4]		@class number
 lsl		r0,#0x2
-ldr		r1,MagClassGrowth
+ldr		r1,=MagClassTable
 add		r0,r1
 ldrb	r0,[r0,#0x1]
 mov		r1,r5
@@ -28,7 +28,6 @@ asr		r0 ,r0 ,#0x18
 pop		{r1}
 bx		r1
 
-.align
+.ltorg
 GetGrowthChance:
 .long 0x0802B9C4
-MagClassGrowth:

@@ -53,7 +53,7 @@
 
 //Focus: +10 Critical if there are no allies within 3 tiles.
 //Author Unknown (Initial Commit)
-#define FocusID 203
+#define FocusID 255
 
 //Gentilhomme: Female allies within 2 tiles receive -2 damage.
 //Author Unknown (Initial Commit)
@@ -302,7 +302,9 @@
 
 //Re-Move: Luck% chance to get another action at end of turn.
 //By Sme
-#define ReMoveID 119
+#define SecondWindID 119
+
+#define AccostID 203
 
 //Savage Blow: After attacking, enemies within 2 tiles take 20% damage.
 //By circleseverywhere
@@ -1056,10 +1058,12 @@
 #define SerenityID 255 //Requires Biorhythm
 
 
+#define SlyMovementID 115
+
 //Display-Only Skills
 
 #define CunningID 4
-#define NiceThighsID 115
+#define NiceThighsID 255
 #define PersonalityID 116
 
 

@@ -28,6 +28,6 @@ bx		r0
 goto_r3:
 bx		r3
 
-.align
+.ltorg
 GetCharStruct:
 .long 0x08019430+1

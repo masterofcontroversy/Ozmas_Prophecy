@@ -5,6 +5,9 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(AccostID)
+#incbin "SkillIcons/Accost.4bpp"
+
 ORG SkillIcon(AcrobatID)
 #incbin "SkillIcons/Acrobat.4bpp"
 
@@ -151,6 +154,9 @@ ORG SkillIcon(RenewalID)
 
 ORG SkillIcon(NiceThighsID)
 #incbin "SkillIcons/NiceThighs.4bpp"
+
+ORG SkillIcon(SlyMovementID)
+#incbin "SkillIcons/Pass.4bpp"
 
 ORG SkillIcon(DemoiselleID)
 #incbin "SkillIcons/Demoiselle.4bpp"
@@ -617,8 +623,8 @@ ORG SkillIcon(HeroID)
 ORG SkillIcon(BoonID)
 #incbin "SkillIcons/Boon.4bpp"
 
-ORG SkillIcon(ReMoveID)
-#incbin "SkillIcons/ReMove.4bpp"
+ORG SkillIcon(SecondWindID)
+#incbin "SkillIcons/SecondWind.4bpp"
 
 ORG SkillIcon(PowerstaffID)
 #incbin "SkillIcons/Powerstaff.4bpp"

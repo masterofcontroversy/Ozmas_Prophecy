@@ -1,5 +1,5 @@
 
-DukeSkillList:
+CountSkillList:
 BYTE 00 00
 ALIGN 4
 
@@ -7,7 +7,7 @@ LordSkillList:
 BYTE 00 00
 ALIGN 4
 
-ArchDukeSkillList:
+MargraveSkillList:
 BYTE 1 SupplyID
 BYTE 00 00
 ALIGN 4
@@ -33,7 +33,7 @@ BYTE 00 00
 ALIGN 4
 
 ThiefSkillList:
-BYTE 1 StealID
+BYTE 1|00100000b SlyMovementID
 BYTE 00 00
 ALIGN 4
 

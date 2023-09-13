@@ -57,9 +57,6 @@ PUSH
   ORG $23662
     BYTE $14 // right x coord (go back 4)
 
-  ORG $22884
-    BYTE $14 // right x coord (go back 5)
-
 POP
 
 ALIGN 4         //Insert new commands where you want them to appear in the menu

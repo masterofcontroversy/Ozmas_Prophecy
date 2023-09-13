@@ -42,5 +42,7 @@ SkillAnimation(CorrosionID,SureShotAnim)
 SkillAnimation(GlaciesID,IgnisAnim)
 SkillAnimation(GreatShieldID,PaviseAnim)
 SkillAnimation(VengeanceID,ImpaleAnim)
+SkillAnimation(EyeForAnEyeID,EyeForAnEyeAnim)
+SkillAnimation(WrathID, WrathAnim)
 
 ORG SkillAnimationTable+1024

@@ -1,0 +1,20 @@
+S0119 #play sound SE:Bolting sparks
+2 Wrath_g000.png
+2 Wrath_g001.png
+20 Wrath_g002.png
+2 Wrath_g003.png
+2 Wrath_g001.png
+2 Wrath_g004.png
+2 Wrath_g005.png
+2 Wrath_g006.png
+2 Wrath_g007.png
+2 Wrath_g002.png
+2 Wrath_g008.png
+2 Wrath_g009.png
+2 Wrath_g002.png
+2 Wrath_g010.png
+2 Wrath_g000.png
+2 Wrath_g001.png
+2 Wrath_g009.png
+2 Wrath_g002.png
+2 Wrath_g010.png

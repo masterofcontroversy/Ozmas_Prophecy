@@ -1036,7 +1036,6 @@
 .macro clear_buffers
   blh     Text_InitFont
   blh     _ResetIconGraphics
-  @ blh     Statscreen_ClearBuffer
   blh     DontBlinkLeft
   @ blh     MovingMapSprite_EndAll
   @ ldr     r4, =StatScreenStruct

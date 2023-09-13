@@ -243,8 +243,8 @@ bool NewAuraSkillCheck(Unit* unit, u8 skillID, int allyOption, int maxRange) {
     return FALSE;
 }
 
-//Initializes buffers
-void InitializePreBattleLoop(Unit* attacker, Unit* defender) {
+//Prepares for prebattle calc loop
+void InitializePreBattleLoop(Unit* attacker) {
     MakeAuraSkillBuffer(attacker);
     MakeSkillBuffer(attacker, gAttackerSkillBuffer);
     gDefenderSkillBuffer->lastUnitChecked = 0;
@@ -253,6 +253,13 @@ void InitializePreBattleLoop(Unit* attacker, Unit* defender) {
         MakeSkillBuffer(&gBattleTarget.unit, gDefenderSkillBuffer);
     }
 }
+
+//Sets skill buffers to refresh next skill test
+void InitSkillBuffers() {
+    gAttackerSkillBuffer->lastUnitChecked = 0;
+    gDefenderSkillBuffer->lastUnitChecked = 0;
+}
+
 //Finds units in a radius and returns a list of matching unit's indexes
 u8* GetUnitsInRange(Unit* unit, int allyOption, int range) {
     const s8(*pAllegianceChecker)(int, int) = ((allyOption & 1) ? AreAllegiancesAllied : AreAllegiancesEqual);

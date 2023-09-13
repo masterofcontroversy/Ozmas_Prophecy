@@ -1,0 +1,59 @@
+//Generated with Skill Animation Creator.
+
+#incbin skillanimtemplate.dmp
+POIN Frames
+POIN TSAList
+POIN GraphicsList
+POIN PalettesList
+WORD 0x02D8 //play sound SE:Weird charging sound //sound id
+
+Frames:    //SHORT image duration
+SHORT 0 3
+SHORT 1 2
+SHORT 0 3
+SHORT 2 2
+SHORT 0 3
+SHORT 0xFFFF
+ALIGN 4
+
+TSAList:
+POIN TSA_skill_A9_Occult_Magic_g000
+POIN TSA_skill_A9_Occult_Magic_g002
+POIN TSA_skill_A9_Occult_Magic_g000
+POIN TSA_skill_A9_Occult_Magic_g005
+POIN TSA_skill_A9_Occult_Magic_g000
+
+GraphicsList:
+POIN Graphics_skill_A9_Occult_Magic_g000
+POIN Graphics_skill_A9_Occult_Magic_g002
+POIN Graphics_skill_A9_Occult_Magic_g000
+POIN Graphics_skill_A9_Occult_Magic_g005
+POIN Graphics_skill_A9_Occult_Magic_g000
+
+PalettesList:
+POIN Pal_skill_A9_Occult_Magic_g000
+POIN Pal_skill_A9_Occult_Magic_g002
+POIN Pal_skill_A9_Occult_Magic_g000
+POIN Pal_skill_A9_Occult_Magic_g005
+POIN Pal_skill_A9_Occult_Magic_g000
+
+TSA_skill_A9_Occult_Magic_g000:
+#incbin "skill_A9_Occult_Magic_g000.map.bin"
+TSA_skill_A9_Occult_Magic_g002:
+#incbin "skill_A9_Occult_Magic_g002.map.bin"
+TSA_skill_A9_Occult_Magic_g005:
+#incbin "skill_A9_Occult_Magic_g005.map.bin"
+
+Graphics_skill_A9_Occult_Magic_g000:
+#incbin "skill_A9_Occult_Magic_g000.img.bin"
+Graphics_skill_A9_Occult_Magic_g002:
+#incbin "skill_A9_Occult_Magic_g002.img.bin"
+Graphics_skill_A9_Occult_Magic_g005:
+#incbin "skill_A9_Occult_Magic_g005.img.bin"
+
+Pal_skill_A9_Occult_Magic_g000:
+#incbin "skill_A9_Occult_Magic_g000.pal.bin"
+Pal_skill_A9_Occult_Magic_g002:
+#incbin "skill_A9_Occult_Magic_g002.pal.bin"
+Pal_skill_A9_Occult_Magic_g005:
+#incbin "skill_A9_Occult_Magic_g005.pal.bin"

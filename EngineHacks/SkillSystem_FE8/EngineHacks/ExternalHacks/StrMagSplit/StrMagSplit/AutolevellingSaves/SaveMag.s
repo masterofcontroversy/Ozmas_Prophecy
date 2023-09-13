@@ -27,7 +27,7 @@ pop		{r5-r7}
 pop		{r0}
 bx		r0
 
-.align
+.ltorg
 GetCharStruct:
 .long 0x08019430
 MagSaveTable:

@@ -1,0 +1,6 @@
+S02D8 #play sound SE:Weird charging sound
+3 skill_A9_Occult_Magic_g000.png
+2 skill_A9_Occult_Magic_g002.png
+3 skill_A9_Occult_Magic_g000.png
+2 skill_A9_Occult_Magic_g005.png
+3 skill_A9_Occult_Magic_g000.png

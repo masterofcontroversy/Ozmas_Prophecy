@@ -48,6 +48,10 @@ after certain actions.[X]
 Cunning: Can steal items, pick[N]
 locks, and see in darkness.[X]
 
+## SD_SlyMovement
+Sly Movement: Move up to two spaces[N]
+after stealing or picking locks.[X]
+
 ## SD_Lethality
 Lethality: Instantly kill opponent.[N]
 (Skill/2 % activation)[X]
@@ -825,8 +829,8 @@ Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
 
 ## SD_Charge
-Charge: Gain +1 damage for[N]
-every two squares moved.[X]
+Charge: +2 attack for[N]
+every space moved.[X]
 
 ## SD_Infiltrator
 Infiltrator: If within 2 spaces[N]
@@ -857,7 +861,7 @@ rate when HP is below 50%.[X]
 Boon: Cure bad status effects[N]
 at the beginning of each turn.[X]
 
-## SD_ReMove
+## SD_SecondWind
 Re-Move: Luck% chance to get[N]
 another action at end of turn.[X]
 
@@ -907,9 +911,14 @@ HP is 50% or higher, unit doubles[N]
 and attacker does not double.[X]
 
 ## SD_EyeForAnEye
-Eye^{ }For^{ }An^{ }Eye: Foe always attacks first.[N]
+Eye^{ }for^{ }an^{ }Eye: Foe always attacks first.[N]
 Half of damage taken last hit[NL]
 is added to Max's counterattack.[X]
+
+## SD_Accost
+Accost:
+Start a second round of combat if[N]
+HP and AS is greater than opponent's.[X]
 
 ## SD_Insight
 Insight: Hit +20.[X]
@@ -1001,8 +1010,8 @@ Outdoor Fighter: +10 Hit and[N]
 Avo when fighting outdoors.[X]
 
 ## SD_TomeRangeUp
-Distant Magic: Max tome range[NL]
-is at least 2.[NL]
+Distant Magic:[NL]
+Max tome range is at least 2.[NL]
 Does not apply to locked tomes.[X]
 
 ## SD_AlertStance

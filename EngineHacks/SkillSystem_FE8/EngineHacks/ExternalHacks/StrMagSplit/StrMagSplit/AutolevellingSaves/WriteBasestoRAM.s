@@ -5,14 +5,14 @@
 
 @r0,r5, are free, r3 is free but needs to be 0 at the end
 ldrb	r0,[r1,#0x4]		@char num
-ldr		r3,MagCharTable
+ldr		r3,=MagCharTable
 lsl		r0,#0x1
 add		r0,r3
 mov		r3,#0x0
 ldsb	r0,[r0,r3]			@char base
 ldrb	r5,[r2,#0x4]		@class num
 lsl		r5,#0x2
-ldr		r3,MagCharTable+4	@MagClassTable
+ldr		r3,=MagClassTable
 add		r5,r3
 mov		r3,#0x0
 ldsb	r5,[r5,r3]			@class base
@@ -30,4 +30,3 @@ ldrb 	r2, [r1, #0x11]
 bx		r14
 
 .align
-MagCharTable:
