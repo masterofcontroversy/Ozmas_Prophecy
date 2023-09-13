@@ -1,6 +1,6 @@
 .thumb
-@.global GetItemSkill
-@.type GetItemSkill, %function
+.global GetItemSkill
+.type GetItemSkill, %function
 
 .macro _blh to, reg=r3
 	ldr \reg, =\to

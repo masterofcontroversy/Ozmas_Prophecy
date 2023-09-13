@@ -1,8 +1,8 @@
 INLINE ClassLevelUpSkillTable,Skill Pointer
 None,0x0
-Duke,0x0
+Count,0x0
 Lord,0x0
-Arch Duke,ArchDukeSkillList|IsPointer
+Margrave,0x0
 Great Lord,GreatLordSkillList|IsPointer
 Cavalier,0x0
 Cavalier_F,0x0
@@ -12,7 +12,7 @@ Armor Knight,0x0
 Armour Knight (F),0x0
 General,0x0
 General (F),0x0
-Thief,0x0
+Thief,ThiefSkillList|IsPointer
 Manakete,0x0
 Mercenary,0x0
 Mercenary_F,0x0

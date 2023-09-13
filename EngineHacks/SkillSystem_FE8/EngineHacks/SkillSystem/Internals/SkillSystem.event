@@ -357,6 +357,8 @@ GetUnitLevelSkills:
 	POIN ClassLevelUpSkillTable
 	POIN CharLevelUpSkillTable
 
+#include "ItemSkillGetter.lyn.event"
+
 RTextLoop:
 #incbin "rtextloop.dmp"
 POIN Skill_Getter
