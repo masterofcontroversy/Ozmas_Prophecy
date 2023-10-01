@@ -9,4 +9,5 @@ PUSH
 POP
 ALIGN 4
 FOG:
-#incbin "asm/DroppableItem.dmp"
+#include "asm/DroppableItem.lyn.event"
+#include "asm/StealableItemCheck.lyn.event"

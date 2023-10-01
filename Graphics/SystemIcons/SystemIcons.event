@@ -1,8 +1,15 @@
 PUSH
-    ORG 0x156ac // Repoint loaded image
-    POIN SystemIconGraphic
+    ORG 0x156ac
+    POIN MiscIcons
+
+    ORG 0x88650
+    POIN StatScreenIcons
 POP
 
 ALIGN 4
-SystemIconGraphic:
-#incbin "SystemIconGraphic.lz77" 
+MiscIcons:
+#incbin "MiscIcons.lz77" 
+
+ALIGN 4
+StatScreenIcons:
+#incbin "StatScreenIcons.lz77"
