@@ -33,9 +33,9 @@
 @0x01 instead of 0x19
 .long       0x00000001
 @Pointer to empty string (name of spell?)
-.long       origin + EmptyString
+.long       EmptyString
 .long       0x00000003
-.long       origin + Processor + 1
+.long       Processor+1
 EmptyString:
 .long       0x00000000
 .long       0x00000000
@@ -64,7 +64,7 @@ bx  r7      @
 
 .align        2
 PC_Array_Ref:
-.long       origin + PC_Array
+.long       PC_Array
 PC_Array:
 .long       0x0805A16C + 1
 .long       0x08055160 + 1
@@ -377,8 +377,12 @@ beq       TERMINATOR_PASS_ladder
   beq       COMMAND_1A
   cmp r1, #0x53   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
   beq       COMMAND_53
+  cmp r1, #0x81
+  beq       COMMAND_81_LADDER
+  cmp r1, #0x82
+  beq       COMMAND_82_LADDER
   cmp r1, #0x08   @
-  bne       COMMAND_DEFAULT
+  bne       COMMAND_DEFAULT_LADDER
 
     COMMAND_08:
     COMMAND_1A:
@@ -506,6 +510,15 @@ beq       TERMINATOR_PASS_ladder
 
     b       COMMAND_COMPLETE
 
+    COMMAND_DEFAULT_LADDER:
+    b COMMAND_DEFAULT
+
+    COMMAND_81_LADDER:
+    b COMMAND_81
+
+    COMMAND_82_LADDER:
+    b COMMAND_82
+
     FRAME_TYPE_86_Ladder: @@@@@@@@@@@exists because branch was out of range
     b FRAME_TYPE_86
 
@@ -553,8 +566,21 @@ beq       TERMINATOR_PASS_ladder
     H_BLANK_BS:
     .long       0x030030F4
     SCREEN_STRETCH_PC:
-    .long       origin + H_BLANK_HANDLER + 1
+    .long       H_BLANK_HANDLER+1
 
+    COMMAND_81:
+    mov r1, r6
+    ldr r2, Command81_Func_Pointer
+    mov lr, r2
+    .short 0xF800
+    b  COMMAND_COMPLETE
+
+    COMMAND_82:
+    mov r1, r6
+    ldr r2, Command82_Func_Pointer
+    mov lr, r2
+    .short 0xF800
+    b  COMMAND_COMPLETE
 
     COMMAND_DEFAULT:
     cmp r1, #0x13   @
@@ -866,7 +892,13 @@ UNZIP_BG_TO_BUFFER:
     TERMINATOR_CODE:
     .long 0x80000100
 
-.long       origin + Dim_Constructor + 1
-.long       origin + No_Dim_Constructor + 1
+Command81_Func_Pointer:
+.long Command81_Func
+Command82_Func_Pointer:
+.long Command82_Func
+
+.long       Dim_Constructor+1
+.long       No_Dim_Constructor+1
+
 AnimationDataBase:
 @ add the offset after the incbin

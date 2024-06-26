@@ -86,6 +86,7 @@
 #define Vendor(offset,shopX,shopY)              "SHOP 0 offset [shopX,shopY] 0x17"
 #define SecretShop(offset,shopX,shopY)          "SHOP 0 offset [shopX,shopY] 0x18"
 #define Chest(item,chestX,chestY)               "CHES 0 item [chestX,chestY] 0x14"
+#define Chest(eventID, item,chestX,chestY)      "CHES eventID item [chestX,chestY] 0x14"
 #define ChestMoney(amountOfMoney,chestX,chestY)     "CHES 0 0x77+amountOfMoney*0x10000 [chestX,chestY] 0x14"
 #define Door(doorX,doorY)                       "DOOR 0 [doorX,doorY] 0x12"
 #define Seize(seizeX,seizeY)                        "LOCA 3 [seizeX,seizeY] 0x11"
@@ -117,7 +118,7 @@
 #ifdef _FE8_
 #define CauseGameOverIfLordDies "AFEV 0 0x592104 0x65"
 #define DefeatBoss(offset) "AFEV 3 offset 2"
-#define DefeatAll(offset) "AFEV 0 offset 6"
+#define DefeatAll(offset) "AFEV 3 offset 6"
 #define NoFade "EVBIT_T 0x7"
 #endif
 

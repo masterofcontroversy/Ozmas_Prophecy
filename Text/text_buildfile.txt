@@ -8,11 +8,21 @@ HP Bars[.][X]
 # 0x04F5 AvoidText
 Avo[X]
 
-# 0x04EE LuckText
-Lck[X]
+# 0x04EC TechText
+Tech[X]
+
+# 0x0548 TechDesc
+Technique. A higher number[NL]
+improves the unit's hit %.[X]
 
 # 0x0500 RangeText
 R^{ng}[X]
+
+# 0x0879
+Select which character's Technique to bolster.[X]
+
+# 0x06CB
+Visit a village or a building.[X]
 
 # 0x00B2
 Set health bar display[X]
@@ -147,6 +157,8 @@ Unequip[X]
 Remove this equipment.[X]
 
 #include "MenuText.txt"
+
+#include "ChapterText/_ChapterTextInstaller.txt"
 
 #include "CharacterText/Names.txt"
 

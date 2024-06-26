@@ -1,58 +1,102 @@
 ## DevanDeathQuote
 [MidRight][LoadDevan]
-So this[Beat]is it[Beat] I failed[Beat][NL]
-I'm so sorry, Veronica[Beat][A][SlowCloseEyes][X]
+So this[Beat]is it[Beat] I failed[BeatSmooth][NL]
+I'm so sorry, Veronica[BeatSmooth][A][SlowCloseEyes][X]
 
 ## RonniDeathQuote
 [MidRight][LoadRonni]
-Ouch! Sorry, everyone,[NL]
-but I need to fall back.[X]
+Ouch![.5] Sorry, everyone.[NL]
+I need to fall back.[A][X]
 
 ## AnthonyDeathQuote
 [MidRight][LoadAnthony]
-Ah, *cough*. Sorry, Abby... Looks[NL]
-like daddy won't be coming home...[A][SlowCloseEyes][X]
+Ah, *cough*.[.5] Sorry, Abby[BeatSmooth][A][NL]
+Looks like daddy won't[NL]
+be coming home[BeatSmooth][A][SlowCloseEyes][X]
 
 ## KennethDeathQuote
 [MidRight][LoadKenneth]
-I...I did good, didn't I?[A][SlowCloseEyes][X]
+I[BeatSmooth]I did good, didn't I?[A][SlowCloseEyes][X]
 
 ## AlexandraDeathQuote
 [MidRight][LoadAlexandra]
-It's so...cold...[NL]
-Apis, I'll be with you soon...[A][SlowCloseEyes][X]
+Am[BeatSmooth]am I dying[BeatSmooth]?[A]
+[ClearFace]
+
+[MidLeft][LoadEvelyn]
+Alexandra?[.6] Alexandra![A]
+[ClearFace]
+
+[MidRight][LoadAlexandra]
+I guess I really[NL]
+am a failure[BeatSmooth][A]
+[SlowCloseEyes][X]
 
 ## EvelynDeathQuote
 [MidRight][LoadEvelyn]
-Ugh! How embarrassing.[NL]
+Ugh![.4] How embarrassing.[NL]
 As much as I hate to say it,[A][NL]
 I won't be any use if I'm dead.[NL]
-...Let's go, Natasha.[A][X]
+[BeatSmooth]Let's go, Natasha.[A][X]
 
 ## AbsalomDeathQuote
 [MidRight][LoadAbsalom]
-Gah! Look at all this blood...[NL]
+Gah! Look at all this blood[BeatSmooth][NL]
 I wish I could stay,[A][NL]
 but I've got a promise to keep[NL]
 and I can't do that if I'm dead.[A][X]
 
 ## HollyDeathQuote
 [MidRight][LoadHolly]
-Ahh! I didn't think I'd be[NL]
-joining the gods so soon...[A][NL]
-Please have mercy on Thaddius...[A][SlowCloseEyes][X]
+Ahh![.5] I didn't think I'd be[NL]
+joining the Specters so soon[Beat][A][NL]
+Please have mercy on Thaddius[BeatSmooth][A][SlowCloseEyes][X]
 
 ## LucyDeathQuote
 [MidRight][LoadLucy]
-Aiee! Someone, please help me![NL]
-...Hello? ...Anyone?[A][SlowCloseEyes][X]
+Aiee![.5] Someone, please help me![NL]
+[BeatSmooth]Hello? [BeatSmooth]Anyone?[A][SlowCloseEyes][X]
+
+## Ch4x_LucyDeathQuote
+[MidRight][LoadLucy]
+Ahh![A][ClearFace]
+
+//Colton
+[MidLeft][LoadColton]
+Hang on, Lucy![.5][NL]
+I'm on my way![A][ClearFace]
+
+//Lucy
+[MidRight][LoadLucy]
+I[Beat] messed up again.[.5][NL]
+I'm sorry, Colton[BeatSmooth][A][SlowCloseEyes]
+[X]
 
 ## ColtonDeathQuote
 [MidRight][LoadColton]
-I can't die yet...[NL]
-I still have so much...I need to...[A][SlowCloseEyes][X]
+I can't die yet[BeatSmooth][NL]
+I still have so much[Beat]I need to[BeatSmooth][A][SlowCloseEyes][X]
+
+## Ch4x_ColtonDeathQuote
+[MidRight][LoadColton]
+Ugh.[.5] Dammit.[.5] [CloseEyes]*cough*[A]
+[ClearFace]
+
+[MidLeft][LoadLucy]
+Colton![A][ClearFace]
+
+[MidRight][LoadColton]
+Just when I thought my[NL]
+luck was turning around[Beat][ANL]
+Take care, Lucy.[NL]
+I hope you find a family.[A][SlowCloseEyes]
+[ClearFace]
+
+[MidLeft][LoadLucy]
+Colton!!![A][ClearFace]
+[X]
 
 ## MaxDeathQuote
 [MidRight][LoadMax]
-It's about time ...I only hope[NL]
-I'll be wherever Sasha is...[A][SlowCloseEyes][X]
+[BeatSmooth]I couldn't avenge you, Janice.[NL]
+I've failed[BeatSmooth][A][SlowCloseEyes][X]

@@ -23,13 +23,30 @@
 .global EquipmentColorHook
 .type EquipmentColorHook, %function
 
-@r5 = TextHandle proc state
+@r5 = TextHandle
 @r6 = Item Short
 @r7 = Bg0MapBuffer + currentRow
 @r8 = CanUnitUseItem bool
 
 @Hooks 801685C
 EquipmentColorHook:
+	@Check if we're in preps
+	ldr  r0, =gGameState
+	ldrb r0, [r0, #0x4] @r0 = State bits
+	mov  r1, #0x10 @In prep screen bit
+	tst  r0, r1
+	bne  CannotEquip
+
+	@Check if we're doing anything other than using the item menu
+	ldr  r0, =gActionData
+	ldrb r0, [r0, #0x11]
+    cmp  r0, #0x1D
+    beq  SetGray
+    cmp  r0, #0x1B
+    beq  SetGray
+	cmp  r0, #0x0
+	bne  CannotEquip
+
     ldr  r0, =gActiveUnit
     ldr  r0, [r0]
     mov  r1, r6     @r1 = Item Short
@@ -55,9 +72,17 @@ EquipmentColorHook:
         mov  r2, #White
         b    SetTextArguments
 
+    SetGray:
+    mov  r0, r6
+    bl   IsItemEquipment
+    cmp  r0, #0x0
+    beq  CannotEquip
+        mov  r2, #Grey   @Equipment in the trade menu. Can't trade
+        b    SetTextArguments
+
     CannotEquip:
     @This is either not equipment, or equipment we can't use.
-    @This means we should treat this as an that has the use command
+    @This means we should treat this as an item that has the use command
     @like a vulnerary, so we now check if CanUnitUseItem is set.
 
     mov  r2, #White   @Assume unit can use item

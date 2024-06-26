@@ -1,7 +1,17 @@
-#include "_Shops.event"
+//Global events
+#include "GlobalEvents/QuoteEvents.event"
+#include "GlobalEvents/MiscEvents.event"
+
+#include "REDAs.event"
+#include "Shops.event"
+
+//ChapterJumpEvents
+#ifdef __DEBUG__
+    #include "Debug.event"
+#endif //__DEBUG__
 
 PUSH
-//Skip very begining world map
+//Skip very beginning world map
 ORG $A39768
 EVBIT_MODIFY 0x1
 SKIPWN
@@ -18,87 +28,17 @@ SkirmishChapter(0x5, 0xFF)
 //Events
 ALIGN 4
 {
-#include "Chapter1.event"
+#include "ChapterEvents/Chapter1.event"
 }
 {
-#include "Chapter2.event"
+#include "ChapterEvents/Chapter2.event"
 }
 {
-#include "Chapter3.event"
+#include "ChapterEvents/Chapter3.event"
 }
 {
-#include "Chapter4.event"
+#include "ChapterEvents/Chapter4.event"
 }
-
-ALIGN 4
-RandomSnowEvent:
-//Random chance to start/stop snow
-COUNTER_CHECK s7
-SADD s1 sC s0
-RANDOMNUMBER 5
-BLT 0x9000 s1 sC
-//Check if it's already snowing
-ASMC CheckWeather|1
-SVAL s1 Snow
-BEQ 0x9002 s1 sC
-WEATHER Snow
-COUNTER_SET s7 0
-GOTO 0x9001
-
-LABEL 0x9002
-WEATHER Clear
-COUNTER_SET s7 0
-GOTO 0x9001
-
-//Weather chance didn't proc
-LABEL 0x9000
-COUNTER_INC s7
-
-LABEL 0x9001
-NoFade
-ENDA
-
-DummyEvent:
-NoFade
-ENDA
-
-//ChapterJumpEvents
-#ifdef __DEBUG__
-ALIGN 4
-Chapter3DebugEvent:
-LOAD1 0 Chapter3DebugUnits
-ENUN
-NoFade
-ENDA
-
-ALIGN 4
-Chapter4DebugEvent:
-LOAD1 0 Chapter3DebugUnits
-ENUN
-LOAD1 0 Chpater4DebugUnits
-ENUN
-NoFade
-ENDA
-
-
-ALIGN 4
-Chapter3DebugUnits:
-UNIT Devan Duke Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
-UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
-UNIT Anthony Mercenary Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Longsword, Vulnerary] NoAI
-UNIT Kenneth Cavalier Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronLance, Vulnerary] NoAI
-
-UNIT Alexandra Lord Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
-UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronSword, Heal, Vulnerary] NoAI
-UNIT Absalom Fighter Alexandra Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
-
-UNIT Holly Cleric Devan Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Heal] NoAI
-
-UNIT
-
-Chpater4DebugUnits:
-UNIT Colton Thief Devan Level(4,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Lucy Mage_F Devan Level(3,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Fire] NoAI
-
-
-#endif //__DEBUG__
+{
+#include "ChapterEvents/Chapter4x.event"
+}

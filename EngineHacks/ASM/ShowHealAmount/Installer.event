@@ -1,0 +1,23 @@
+//Show Heal Amount (FE8)
+//By Tequila
+
+#ifndef __SHOW_HEAL_AMOUNT__
+
+	#define __SHOW_HEAL_AMOUNT__
+	#define Arrow_Text_ID ArrowReplacement //currently just a hyphen; make a text id with '->' and put it here (DON'T CHANGE THE VANILLA ONE)
+		
+	#include "Extensions/Hack Installation.txt"
+		
+	PUSH
+		
+	ORG $24670
+	jumpToHack(FE8_Show_Heal_Amount)
+		
+	POP
+		
+	ALIGN 4
+	FE8_Show_Heal_Amount:
+	#include "FE8_ShowHealAmount.lyn.event"
+	WORD Arrow_Text_ID
+	
+#endif

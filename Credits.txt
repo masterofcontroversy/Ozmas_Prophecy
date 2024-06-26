@@ -7,7 +7,7 @@ Skillsystem:
 
 Cloud fix: Tequila and Random Wizard
 Autopromote: HyperGammaSpaces, Tequila, Snakey1 (and the next person to be the original maker)
-Fates EXP: Circles
+Fates EXP: Circleseverywhere
 MNC2 fix: Kirb
 Base Promotion: Pikmin1211
 Set/Unset condition: Tequila
@@ -19,20 +19,27 @@ Class Anim Substitution: Stan
 Repointed battle platforms: Zane
 Droppable item display: Mkol
 Spell Loader: Kao
-ModularMinimugBox: Zane
-ModularMinimugBox icons: 2WB
+Modular Minimug Box: Zane
 Steal With Full Inventory: Vesly
 Nos/Resire Dynamic Palette: Sme
 Forced Deployment Swapping: AuraWolf
 Faster AI targeting display: Vesly
 Faster Level-ups: Tequila
 Secondary Equipment: Pikmin1211
-Background Image Setup: Devisian_Nights
+Background Image Setup: Deviso
+Show Heal Amount: Tequila
+AI Extension: Stan
+Change Battle BGM: 7743
+Extend Weapon Desc Box: Vesly
+Decide on Danger Map: Vesly
+Cannot Trade: Circleseverywhere, Vesly
 
 
 Icons:
-All swords except Iron, Steel, Silver, and Brave Swords: Zane
+Iron, steel, Silver Blades: Zane
+Killing Edge, Longsword, Armorslayer: Zane
 Brave Sword: Lisandra Brave
+Swiftblade: Ereshkigal
 Killer Lance and Heavy Spear: Zane
 DragonSpear: Beansy
 Greatlance and Knight Greatlance: George Reds
@@ -41,18 +48,19 @@ Spear: Orihara Saki
 Brave Lance: Ereshkigal
 Axereaver: 2WB
 Shields: cardcafe
+Vigor Stone: LordGlenn
 
 Tomahawk: LordGlenn
 All other axes: Lisandra Brave
 
 Bows: Ereshkigal
 
-Storm, Magma Tomes: Leif
-Tundra, Light Tomes: Ereshkigal
-
 
 Map Sprites:
-Duke by Snewping
+Count by Vyland
+Margrave by Snewping
+Lord by BatimaTheBat. Edit by VelvetKitsune
+Soldiers by FireEmblemier, flasuban
 Deserter by Alusq
 Bow Knight by flasuban
 Male Cavalier by Team SALVAGED
@@ -71,17 +79,50 @@ Male DracoRider by Flasuban
 Male DracoKnight by ArcaneEli
 Dragoon by Pikmin1211, Unknown
 Armor Knight by Team SALVAGED
-Torch by FE7if
+Iron Mage by Flasuban
+Arcanist (Tactician) by Team SALVAGED
+Priests by Flasuban
+Fighter by L95
 
 Portraits:
+Devan by Levin Claude
+Alexandra by Levin Claude
+Evelyn by Struedelmuffin
+Max by claire45
 Kenneth by Bloopy
+Absalom by Struedelmuffin, HusbandoEmblem
+Holly edits by HusbandoEmblem
+Lazarus by RandomWizard
+Caius by Epicer
+Hendrick by LaurentLacroix
+Dominic by MeatOfJustice
 
 Spell Animations:
-Frostbite by Struedelmuffin
+Sariel by Struedelmuffin
+Shade by Struedelmuffin
 
+Class Cards:
+Male Cavaliers by RobertFPY
+Male Sword, Lance, Axe Cavaliers by RobertFPY
+Male Bow Cavalier by RobertFPY, Flasuban
+Female Cavaliers by Flasuban, RobertFPY
+Sword And Axe Paladins by Shtick, Team SALVAGED
+Lance Paladins by Flasuban, RobertFPY
+Male Bow Paladin by Sir_Dadou
+Female Bow Paladin by VelvetKitsune, Sir_Dadou, RobertFPY
+Soldiers by Flasuban
+Deserter by Rasdel
+Male Fighter by Flasuban
+Female Fighter by Pikmin, flasuban, Jj09
+Knight by Team SALVAGED
+Dracoriders by Flasuban
+Arcanist (Tactician) by Team SALVAGED
 
 Combat Animations:
-Duke by Nuramon
+Ephraim Lord Repalette (Count) by Nuramon. Cape edit by Vyland
+Margrave by Nuramon
+Lord base by Teraspark. Reanimation by PlantAcademy, ZoramineFae, Struedelmuffin. Merged by Vyland
+Great Lord by St jack
 Cavalier by Team SALVAGED
 Female Cavalier by Team SALVAGED, Flasuban, Epicer
 Paladin by Team SALVAGED, Obsidian_Daddy
@@ -112,12 +153,9 @@ Dragoon by Mercenary Lord, NYZGamer, Pikmin1211, Maiser6
 Female Soldier by Alusq, Maiser6, JeyTheCount
 Acolyte Recolor by Teraspark
 Female Acolyte by Teraspark
-Tundra Sage by Devisian_Nights
-Female Tundra Sage by GabrielKnight, Seal, Sacred War
 Great Knight by Nuramon
+Pegasus Knight (repal) by Flasuban
 FalcoKnight (improvement) by Flasuban
-Lord by Teraspark
-Great Lord by St jack
 Rogue knife by Orihara_Saki
 Mage by GabrielKnight
 Female Mage by Solum
@@ -126,14 +164,45 @@ Female Sage (fix) by Shin19
 MageKnights sword by Aruka, Kenpuhu
 Berserker (improved) by BwdYeti, Shadowofchaos, Red
 Pirate by DerTheVaporeon
+Iron Mage by Nuramon
+Arcanist (Tactician) by Team SALVAGED
+
+Skill animations:
+Wrath by Struedelmuffin
+Eye For An Eye: Struedelmuffin
+
+Misc. Graphics:
+Modular Minimug Box icons: 2WB
+Updated system icons: Alusq
+FE9-10 BG rips: Runa
+Statscreen background: Struedelmuffin
+Ice cave battle background palette: Epicer
+
+Music:
+Starfall Instruments: Alusq
+Battle Theme EX: Saxor the Nobody
+Combat Adversity: Kaidras
+FeldschlactIII: Saxor the Nobody
+Snow Battle: SilverKnight
+Maria Sortie: Saxor the Nobody
+Wall of Defense: Deviso
+Cry A Live: Random Wizard
+Event Battle: Sme
+Nightfall: Pandan
+Forbidden Forest: Alusq
+Pride of the Imperial Troops in Mind: Alusq
+Memories of Green: Sme
+Nuclear Fusion: Dr Green
+Redial: Sme
+Queens: LemonTart
+Warriors of Dawn: Sme
+Sortie Formation: Saxor the Nobody
+Wind Scene: Pandan
 
 Tilesets:
 Updated FE6 Snow Fields: N426
 Snowy Bern / Snowy Peaks: ZoramineFae, Vennobennu
 Village V2: flasuban, N426, ZoramineFae, Vennobennu
-
-FE9-10 BG rips by Runa
-
-Statscreen background by Struedelmuffin
+Ice Cave Palette: N426
 
 Special Thanks:

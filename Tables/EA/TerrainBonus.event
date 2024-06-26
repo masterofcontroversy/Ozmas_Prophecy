@@ -1,24 +1,27 @@
 PUSH
-ORG TerrainAvoBonus + 0xC //Forest
-BYTE 10
-ORG TerrainDefBonus + 0xC //Forest
-BYTE 2
-ORG TerrainAvoBonus + 0xA //Fort
-BYTE 15
-ORG TerrainDefBonus + 0xA //Fort
-BYTE 2
-ORG TerrainAvoBonus + 0x11 //Mountain
-BYTE 20
-ORG TerrainDefBonus + 0x11 //Mountain
-BYTE 2
-ORG TerrainAvoBonus + 0x1A //Throne
-BYTE 10
-ORG TerrainDefBonus + 0x1A //Throne
-BYTE 3
-ORG TerrainResBonus + 0x1A //Throne
-BYTE 3
-ORG TerrainAvoBonus + 0xB //Gate
-BYTE 10
-ORG TerrainDefBonus + 0xB //Gate
-BYTE 2
+
+//Defense
+ORG TerrainDefBonus + TerrainFort;      BYTE 3
+ORG TerrainDefBonus + TerrainForest;    BYTE 2
+ORG TerrainDefBonus + TerrainMountain;  BYTE 2
+ORG TerrainDefBonus + TerrainPillar;    BYTE 2
+ORG TerrainDefBonus + TerrainThrone;    BYTE 3
+ORG TerrainDefBonus + TerrainGate;      BYTE 3
+
+//Avoid
+ORG TerrainAvoBonus + TerrainFort;      BYTE 10
+ORG TerrainAvoBonus + TerrainGate;      BYTE 10
+ORG TerrainAvoBonus + TerrainForest;    BYTE 15
+ORG TerrainAvoBonus + TerrainMountain;  BYTE 25
+ORG TerrainAvoBonus + TerrainPillar;    BYTE 15
+ORG TerrainAvoBonus + TerrainThrone;    BYTE 10
+
+//Resistance
+ORG TerrainResBonus + TerrainThrone;    BYTE 0
+
+//Healing
+ORG TerrainHealAmount + TerrainChurch;  BYTE 50
+ORG TerrainHealAmount + TerrainThrone;  BYTE 0
+ORG TerrainHealAmount + TerrainGate;    BYTE 0
+
 POP

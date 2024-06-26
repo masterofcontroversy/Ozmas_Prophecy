@@ -1,8 +1,8 @@
 PUSH
 
 //Seal Skills
-ORG $2c088
-jumpToHack(SealSkills)
+//ORG $2c088
+//jumpToHack(SealSkills)
 
 POP
 

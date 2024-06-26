@@ -18,8 +18,8 @@ prSubstractOne:
 
 prAdjustAidIfMounted:
 {
-	rIfUnitHasAttribute(CA_MOUNTEDAID)
-		rCallSequence(_prNegate _prAddBaseMountedAidBonus)
+rIfUnitHasAttribute(CA_MOUNTEDAID)
+	rCallSequence(_prNegate _prAddBaseMountedAidBonus)
 
 _prNegate:
 	rMinus(rCurrent)

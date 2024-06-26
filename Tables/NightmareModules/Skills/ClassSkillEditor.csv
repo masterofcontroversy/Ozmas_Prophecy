@@ -1,13 +1,13 @@
 INLINE ClassSkillTable,Skill
 None,0x0
-Duke,SupplyID
+Count,SupplyID
 Lord,SupplyID
-Arch Duke,CantoID
+Arch Count,CantoID
 Great Lord,CantoID
-Cavalier,CantoID
-Cavalier_F,CantoID
-Paladin,CantoID
-Paladin_F,CantoID
+Lance Cavalier,CantoID
+Sword Cavalier,CantoID
+Lance Paladin,CantoID
+Sword Paladin,CantoID
 Armor Knight,0x0
 Armour Knight (F),0x0
 General,0x0
@@ -34,8 +34,8 @@ Dragon Knight,CantoID
 Dragon Knight_F,CantoID
 Dragon Master,CantoID
 Dragon Master_F,CantoID
-Wyvern Knight,CantoID
-Wyvern Knight (F),CantoID
+Sword Cavalier_F,CantoID
+Sword Paladin_F,CantoID
 Mage,TomeRangeUpID
 Mage_F,TomeRangeUpID
 Sage,TomeRangeUpID
@@ -52,10 +52,10 @@ Summoner,0x0
 Summoner (F),0x0
 Rogue,CunningID
 Gorgon Egg,0x0
-Great Knight,0x0
-Great Knight (F),0x0
-Recruit (2),0x0
-Journeyman (3),0x0
+Axe Cavalier,CantoID
+Axe Paladin,CantoID
+Lance Cavalier_F,CantoID
+Lance Paladin_F,CantoID
 Pupil (3),0x0
 Recruit (3),0x0
 Manakete,0x0
@@ -87,9 +87,9 @@ Arch Knight,CantoID
 Arch Knight_F,CantoID
 Soldier_F,0x0
 Dragoon,0x0
-Heavy Cavalier,CantoID
-Elder Bael,0x0
-Cyclops,0x0
+Axe Cavalier_F,CantoID
+Axe Paladin_F,0x0
+Acolyte_F,0x0
 Mauthe Doog,0x0
 Gwyllgi,0x0
 Tarvos,0x0

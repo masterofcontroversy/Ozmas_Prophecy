@@ -114,8 +114,23 @@ INLINE BattlePlatformTable,##UNKNOWN##,Platform Graphic Pointer,Platform Palette
 0x70 Mountain Dark,0x31616d6179,MountainPlatform,MountainDark,0x0
 0x71 Peak Dark,0x31616d617969616b6174,PeakPlatform,PeakDark,0x0
 0x72 Lake Dark Purple,0x31696d7569757a696d,LakePlatform,LakeDarkPurple,0x0
-0x73 Custom 1,0x0,0x0,0x0,0x0
-0x74 Custom 2,0x0,0x0,0x0,0x0
-0x75 Custom 3,0x0,0x0,0x0,0x0
-0x76 Custom 4,0x0,0x0,0x0,0x0
-0x77 Custom 5,0x0,0x0,0x0,0x0
+0x73 Plains Snow Night,0x31696863696568,PlainsPlatform,PlainsSnowNightPlatformPalette|IsPointer,0x0
+0x74 Stairs Snow Night,0x316e6f6d756f796a,StairsPlatform,GateSnowNightPlatformPalette|IsPointer,0x0
+0x75 Armory Snow Night,0x316179696b7562,ArmoryPlatform,ArmorySnowNightPlatformPalette|IsPointer,0x0
+0x76 Cliff Snow Night,0x31656b6167,CliffPlatform,CliffSnowNightPlatformPalette|IsPointer,0x0
+0x77 Ruins Snow Night,0x316f796b696168,RuinsPlatform,RuinsSnowNightPlatformPalette|IsPointer,0x0
+0x78 Bridge Snow Night,0x3169736168,BridgePlatform,BridgeSnowNightPlatformPalette|IsPointer,0x0
+0x79 River Snow Night,0x316177616b,RiverPlatform,RiverSnowNightPlatformPalette|IsPointer,0x0
+0x7A Village Snow Night,0x316172756d,VillagePlatform,VillageSnowNightPlatformPalette|IsPointer,0x0
+0x7B Lake Snow Night,0x31696d7569757a696d,LakePlatform,LakeSnowNightPlatformPalette|IsPointer,0x0
+0x7C Shop Snow Night,0x3161797567756f64,ShopPlatform,VendorSnowNightPlatformPalette|IsPointer,0x0
+0x7D Thicket Snow Night,0x3169726f6d69616b7566,ThicketPlatform,ThicketSnowNightPlatformPalette|IsPointer,0x0
+0x7E Road Snow Night,0x31696863696d,RoadPlatform,RoadSnowNightPlatformPalette|IsPointer,0x0
+0x7F House Snow Night,0x31616b6e696d,HousePlatform,HouseSnowNightPlatformPalette|IsPointer,0x0
+0x80 Forest Snow Night,0x3169726f6d,ForestPlatform,ForestSnowNightPlatformPalette|IsPointer,0x0
+0x81 Peak Snow Night,0x31616d617969616b6174,PeakPlatform,PeaksSnowNightPlatformPalette|IsPointer,0x0
+0x82 Arena Snow Night,0x31756f6a6967756f74,ArenaPlatform,ArenaSnowNightPlatformPalette|IsPointer,0x0
+0x83 Mountain Snow Night,0x31616d6179,MountainPlatform,HillSnowNightPlatformPalette|IsPointer,0x0
+0x84 Killer Wasteland Snow Night,0x69686365726172656c6c696b,KillerwastelandPlatform,BallistaSnowNightPlatformPalette|IsPointer,0x0
+0x85 Fort Snow Night,0x31656469726f74,FortPlatform,FortSnowNightPlatformPalette|IsPointer,0x0
+0x86 River Snow Night,0x316177616b,RiverPlatform,RiverSnowNightPlatformPalette|IsPointer,0x0

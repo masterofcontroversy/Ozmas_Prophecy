@@ -107,7 +107,7 @@
 //#undef TorchStaff
 //#undef Hammerne
 //#undef Unlock
-//#undef Barrier
+#undef Barrier
 //#undef DragonAxe
 //#undef AngelicRobe
 //#undef EnergyRing
@@ -232,7 +232,7 @@
 //#undef JunaFruit
 //#undef _150G
 //#undef _200G
-//#undef BlackGem
+#undef BlackGem
 //#undef GoldGem
 
 #define IronSword        0x1
@@ -252,7 +252,7 @@
 #define Armorslayer      0xf
 #define AstraSword       0x10
 #define LunaSword        0x11
-#define KnightSword      0x12
+#define StrikerBlade     0x12
 #define ManSword         0x13
 #define Rapier           0x14
 #define Swiftblade       0x15
@@ -305,6 +305,9 @@
 #define FarFrost         0x44
 #define Bolting          0x45
 
+#define Finesse          0x59
+
+#define TealGem          0xba
 
 #define Lightning        0xbe
 #define Shine            0xbf
@@ -322,13 +325,18 @@
 #define Eclipse          0xcd
 #define Void             0xce
 #define BlackHole        0xcf
+#define Sariel           0xd0
 
 #define IronShield       0xd5
 #define SteelShield      0xd6
 #define SilverShield     0xd7
-#define Sash             0xd8
+#define Whetstone             0xd8
 #define Clover           0xd9
 #define MagicShield      0xda
+#define VigorStone       0xdb
+#define AccostBand       0xdc
+#define RajinArrow       0xdd
+#define Labrys           0xde
 
 
 //Type Definitions

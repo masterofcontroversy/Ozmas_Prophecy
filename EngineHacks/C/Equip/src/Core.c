@@ -24,6 +24,11 @@ bool CanUnitEquipItem (Unit* unit, u16 item){
 
 	// Can add extra conditionals here
 
+	//Rajin arrow
+	if (GetItemIndex(item) == 0xdd && GetItemType(GetUnitEquippedWeapon(unit)) != ITYPE_BOW) {
+		return false;
+	}
+
 	return true;
 }
 
@@ -55,4 +60,11 @@ int GetUnitEquippedItemSlot (Unit* unit){
 	}
 
 	return 0xFF;
+}
+
+void SetEquipmentAttributes (BattleUnit* bu){
+	u16 equip = GetUnitEquippedItem(&bu->unit);
+	if (equip) {
+		bu->weaponAttributes |= GetItemAttributes(equip);
+	}
 }

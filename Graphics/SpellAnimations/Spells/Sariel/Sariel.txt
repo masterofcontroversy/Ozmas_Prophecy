@@ -1,0 +1,326 @@
+C000040
+C02C848
+C011029
+O Sariel_o_000.png
+B Sariel_b_001.png
+1
+
+C011029
+O Sariel_o_000.png
+B Sariel_b_002.png
+1
+
+C051029
+O Sariel_o_000.png
+B Sariel_b_003.png
+1
+
+C091029
+O Sariel_o_000.png
+B Sariel_b_004.png
+1
+
+C0D1029
+O Sariel_o_000.png
+B Sariel_b_005.png
+1
+
+C101029
+C000015
+O Sariel_o_006.png
+B Sariel_b_007.png
+1
+
+O Sariel_o_006.png
+B Sariel_b_008.png
+1
+
+O Sariel_o_009.png
+B Sariel_b_010.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_011.png
+2
+
+O Sariel_o_000.png
+B Sariel_b_012.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_013.png
+1
+
+C000015
+O Sariel_o_014.png
+B Sariel_b_015.png
+1
+
+O Sariel_o_014.png
+B Sariel_b_016.png
+1
+
+O Sariel_o_017.png
+B Sariel_b_018.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_011.png
+2
+
+O Sariel_o_000.png
+B Sariel_b_019.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_020.png
+1
+
+C000015
+O Sariel_o_021.png
+B Sariel_b_022.png
+1
+
+O Sariel_o_021.png
+B Sariel_b_023.png
+1
+
+O Sariel_o_024.png
+B Sariel_b_025.png
+1
+
+O Sariel_o_026.png
+B Sariel_b_027.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_028.png
+1
+
+C000015
+O Sariel_o_014.png
+B Sariel_b_029.png
+1
+
+O Sariel_o_017.png
+B Sariel_b_030.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_031.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_032.png
+1
+
+C000015
+O Sariel_o_000.png
+B Sariel_b_033.png
+1
+
+C0D1029
+O Sariel_o_000.png
+B Sariel_b_034.png
+1
+
+C091029
+O Sariel_o_000.png
+B Sariel_b_035.png
+1
+
+C011029
+O Sariel_o_000.png
+B Sariel_b_036.png
+1
+
+C011029
+O Sariel_o_000.png
+B Sariel_b_037.png
+9
+
+C18FF81
+C18FF82
+C013948
+O Sariel_o_038.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_039.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_040.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_041.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_042.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_043.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_044.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_045.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_046.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_047.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_048.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_049.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_050.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_051.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_049.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_050.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_051.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_049.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_050.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_051.png
+B Sariel_b_037.png
+2
+
+O Sariel_o_052.png
+B Sariel_b_037.png
+1
+
+C101029
+C000015
+O Sariel_o_053.png
+B Sariel_b_054.png
+1
+
+C011029
+O Sariel_o_055.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_056.png
+B Sariel_b_037.png
+1
+
+O Sariel_o_057.png
+B Sariel_b_037.png
+1
+
+C101029
+O Sariel_o_058.png
+B Sariel_b_059.png
+1
+
+C011029
+O Sariel_o_060.png
+B Sariel_b_037.png
+1
+
+C101029
+O Sariel_o_061.png
+B Sariel_b_062.png
+1
+
+C011029
+O Sariel_o_063.png
+B Sariel_b_037.png
+1
+
+C000015
+O Sariel_o_064.png
+B Sariel_b_037.png
+1
+
+C101029
+O Sariel_o_065.png
+B Sariel_b_066.png
+1
+
+C011029
+C000015
+C00F548
+C000051
+O Sariel_o_067.png
+B Sariel_b_037.png
+4
+
+C090629
+C000014
+C00001A
+~~~
+C00001F
+O Sariel_o_000.png
+B Sariel_b_068.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_069.png
+1
+
+C03D648
+O Sariel_o_000.png
+B Sariel_b_070.png
+1
+
+C000014
+O Sariel_o_000.png
+B Sariel_b_071.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_072.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_073.png
+1
+
+C000014
+O Sariel_o_000.png
+B Sariel_b_074.png
+1
+
+O Sariel_o_000.png
+B Sariel_b_075.png
+1
+
+/// - End of animation

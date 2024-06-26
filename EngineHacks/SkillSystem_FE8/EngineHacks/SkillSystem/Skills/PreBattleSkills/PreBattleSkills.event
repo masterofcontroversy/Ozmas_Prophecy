@@ -23,6 +23,10 @@ WORD BattleVeteranID
 #include "BreakerSkills/BreakerSkills.event"
 
 ALIGN 4
+gpGenericBuffer:
+WORD 0x2020188
+
+ALIGN 4
 Charge:
 #include "Charge/Charge.lyn.event"
 WORD ChargeID

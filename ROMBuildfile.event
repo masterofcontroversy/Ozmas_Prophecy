@@ -11,8 +11,6 @@
     #include "Text/InstallTextData.event"
     MESSAGE Used text space ends at currentOffset
 
-    #include "AnimationTable.event"
-
     //CSV tables
     #include "Tables/TableInstaller.event"
     MESSAGE Used table space ends at currentOffset
@@ -30,10 +28,16 @@
     //Graphics
     #include "Graphics/Graphics.event"
 
+    //Music
+    #include "MusicInstaller/music_installer.event"
+
     //Maps
     #include "Maps/Tilesets/Animations/TileAnimationInstaller.event"
     #include "Maps/TilesetInstaller.event"
     #include "Maps/_MapInstaller.event"
+
+    //To prevent any patch weirdness
+    FILL 0x10
 
     MESSAGE Free Space ends at currentOffset Additions size is (currentOffset - FreeSpace)
 #else

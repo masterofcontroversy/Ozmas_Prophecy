@@ -1,0 +1,67 @@
+ALIGN 4
+
+//Randomly switches between snowy and clear weather
+//Intended to be used every turn
+#define SnowCounter s7
+
+RandomSnowEvent: {
+    COUNTER_CHECK SnowCounter
+    SADD s1 sC s0
+    RANDOMNUMBER 5   //SnowCounter in 5 chance of changing weather
+    BLT LabelDest(RandomSnowEvent, IncCounter) s1 sC
+        //Weather check passed, now check if it's already snowing
+        ASMC CheckWeather|1
+        SVAL s1 Snow
+        BEQ LabelDest(RandomSnowEvent, ClearWeather) s1 sC
+            //It isn't snowing. Make it snow
+            WEATHER Snow
+            COUNTER_SET SnowCounter 0
+            GOTO LabelDest(RandomSnowEvent, End)
+
+        //It is snowing. Make it clear
+        ClearWeather:
+        SetLabel(RandomSnowEvent)
+            WEATHER Clear
+            COUNTER_SET SnowCounter 0
+            GOTO LabelDest(RandomSnowEvent, End)
+
+    //Weather check didn't pass. Add 1 to counter to incease the odds next time
+    IncCounter:
+    SetLabel(RandomSnowEvent);
+        COUNTER_INC SnowCounter
+
+    End:
+    SetLabel(RandomSnowEvent);
+    NoFade
+    ENDA
+}
+
+//Triggers when Max enters combat with Dominic
+MaxDominicBattleEvent: {
+    SET_ACTIVE 0
+    StartBattle
+    CriticalHit(0,34)
+    EndAttack
+    FIGHT Max Dominic Sariel 0
+    ASMC ASMC_UpdateUnitsFromEventBattle
+    KILL Dominic
+    AWAIT_KILL Dominic
+    REMOVEALL_RED
+    SVAL s1 0x42
+    SET_CONDITION Max
+    ENUT SeizeID
+    NoFade
+    ENDA
+}
+
+StartChapterJumpEvent:
+    SetBackground(BlackBG)
+    SVAL sC 0
+    ASMC Jump_StartArbitrary
+    FADI 10
+
+    BEQ 0x9000 sC s0
+        ENDB
+
+    LABEL 0x9000
+    ENDA

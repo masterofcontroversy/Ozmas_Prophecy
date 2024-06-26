@@ -1,0 +1,34 @@
+#include "Chapter1.txt"
+#include "Chapter2.txt"
+#include "Chapter3.txt"
+#include "Chapter4.txt"
+#include "Chapter4x.txt"
+#include "Objectives.txt"
+
+//Misc
+## LazarusOfficeText
+Lazarus' office[X]
+
+## TheNextDayText
+The next day[X]
+
+## MasaintKeepText
+Masaint Keep[X]
+
+## TestText
+[MidLeft]
+I dunno what to say.[NL]
+I'm just the test guy.[A]
+[CloseSpeechSlow]
+[X]
+
+## CloverFound1
+[MidLeft][LoadAlexandra]
+Hmm?[.4] What's this?[A]
+[X]
+
+## CloverFound2
+[MidLeft][LoadAlexandra][ToggleSmile]
+Oh my! A four-leaf clover![ANL]
+How lucky![A]
+[X]

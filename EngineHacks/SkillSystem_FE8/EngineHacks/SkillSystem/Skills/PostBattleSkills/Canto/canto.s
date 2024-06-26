@@ -12,6 +12,12 @@ ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
 
+@check if enemy or not
+ldrb r0, [r4,#0x0B]
+lsr r0,r0,#6
+cmp r0,#0 @only Canto if player unit
+bne End
+
 @check if moved all the squares
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
@@ -40,10 +46,10 @@ beq	End
 
 @check if attacked this turn
 ldrb  r0, [r6,#0x11]  @action taken this turn
-cmp r0, #0x04 @check if staff or attack was used
-blo End
 cmp r0, #0x1E @check if found enemy in the fog
 beq End
+cmp r0, #0x01
+ble End
 ldrb  r0, [r6,#0x0C]  @allegiance byte of the current character taking action
 ldrb  r1, [r4,#0x0B]  @allegiance byte of the character we are checking
 cmp r0, r1    @check if same character

@@ -341,7 +341,7 @@
   mov     r3, #0x19
   ldsb    r3, [r1, r3]     
   str     r0, [sp]     
-  mov     r0, #0x1e  @cap is always 30
+  mov     r0, #25  @cap is always 25
   str     r0, [sp, #0x4]    
   mov     r0, #0x6   
   mov     r1, #(\bar_x-11)
@@ -358,18 +358,15 @@
 .endm
 
 .macro draw_growth_at, bar_x, bar_y
-  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r14, r0       @r0 = growth getter to bl to
   mov     r0, r8
-  .short  0xF800        @returns total growth in r0, base growth in r1
-  sub     r0, r0, r1    @difference between total and base
-  str     r0, [sp, #0x10]
-  mov     r2, r1        @base in r2
-  mov     r1, #0x2        @palette index
+  .short  0xF800        @r0 = growth total
+  bl      GetGrowthChar @r0 = character to display
+  mov     r2, r0
+
+  mov     r1, #Blue     @r1 = palette index
   ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
-  blh     DrawDecNumber
-  ldr     r0, [sp, #0x10]    @difference from earlier
-  ldr     r1, =(tile_origin+(0x20*2*\bar_y)+(2*(\bar_x+1)))
-  blh     DrawStatScreenBonusNumber
+  blh     DrawSpecialUiChar
 .endm
 
 .macro draw_move_bar_at, bar_x, bar_y
@@ -592,12 +589,19 @@
 
 .macro draw_aid_icon_at tile_x, tile_y
   mov     r0, r8
-  ldr     r1, [r0]
-  ldr     r2, [r0, #4]
-  ldr     r0, [r1, #0x28]
-  ldr     r1, [r2, #0x28]
-  orr     r0, r1
   blh     MountedIconHelper
+  mov     r1, #3 @sheet ID
+  lsl     r1, r1, #8 @shifted 8 bits left
+  orr     r1, r0
+  mov     r2, #0xA0
+  lsl     r2, #7
+  ldr     r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
+  blh     DrawIcon
+.endm
+
+.macro draw_second_aid_icon_at tile_x, tile_y
+  mov     r0, r8
+  blh     GetUnitSecondAidIconId
   mov     r1, #3 @sheet ID
   lsl     r1, r1, #8 @shifted 8 bits left
   orr     r1, r0
@@ -726,8 +730,8 @@
   lsl     r2, r2, #0x6
   mov     r1, r4
   blh     BgMap_ApplyTsa
-  ldr r0, [r6, #0xC]
-  blh DrawUnitEquippedItem
+  ldr     r0, [r6, #0xC]
+  blh     DrawUnitEquippedItem
   ldr     r0, =#0x8205A24     @map of text labels and positions
   blh     DrawStatscreenTextMap
   ldr     r6, =StatScreenStruct
@@ -1038,12 +1042,12 @@
   @ blh     MovingMapSprite_CreateForUI
   @ str     r0, [r4, #0x10]
   blh     Statscreen_StartLeftPanel
-  mov     r0, #0
-  str     r0, [sp]
-  mov     r0, sp
-  ldr     r1, =0x6001380
-  ldr     r2, =0x1000a68
-  swi     0xC @clear vram
+  @mov     r0, #0
+  @str     r0, [sp]
+  @mov     r0, sp
+  @ldr     r1, =0x6001380
+  @ldr     r2, =0x1000a68
+  @swi     0xC @clear vram
 .endm
 
 

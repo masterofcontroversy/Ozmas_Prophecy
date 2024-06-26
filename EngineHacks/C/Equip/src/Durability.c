@@ -75,6 +75,9 @@ bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
 
 void DecrementItemSlotDurability(Unit* unit, int itemSlot, int amount){
 	u16 item = unit->items[itemSlot];
+	if ((GetItemAttributes(item) & IA_UNBREAKABLE)){
+		return;
+	}
 	if ((item >> 0x8) > amount){
 		item -= (amount << 8);
 	}
@@ -138,6 +141,7 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 	}
 
 	unit->maxHP += battleUnit->changeHP;
+	unit->curHP += battleUnit->changeHP;
 	unit->pow   += battleUnit->changePow;
 	unit->mag   += battleUnit->changeMag;
 	unit->skl   += battleUnit->changeSkl;

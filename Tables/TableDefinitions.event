@@ -49,8 +49,8 @@
 #define CannotUse 0x00010000
 #define NegateDef 0x00020000
 #ifdef _FE8_
-  #define EirikaLock 0x00040000
-  #define EphraimLock 0x00080000
+  #define RonniLock 0x00040000
+  #define CavalryLock 0x00080000
   #define WeaponLock3 0x00100000
   #define WeaponLock4 0x00200000
 #endif
@@ -112,8 +112,8 @@
 #endif
 #ifdef _FE8_
   #define Summoning 0x08000000
-  #define UnlockEirika 0x10000000
-  #define UnlockEphraim 0x20000000
+  #define UnlockRonni 0x10000000
+  #define UnlockCavalry 0x20000000
   #define UnlockLock3 0x40000000
   #define UnlockLock4 0x80000000
 #endif

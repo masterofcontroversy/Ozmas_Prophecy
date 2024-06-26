@@ -8,12 +8,17 @@
 #define DoNotMoveAI [0x0, DoNotMove, 0x4, DefaultAI4]
 #define MoveIn2TurnsAI [0x00, 0x6, 0x4, DefaultAI4]
 
-//Useful event definitions
+#define SetLabel(parentLabel) "LABEL (currentOffset - parentLabel)"
+#define LabelDest(parentLabel, destLabel) "(destLabel - parentLabel)"
 
 //Event every X turns
 #define EveryXTurns(whatTurn) "CHECK_TURNS; SVAL 0xA whatTurn; SMOD 0xAC1;"
 #define Every2Turns(CondID1,CondID2,EventID,Pointer) "CHECK_EVENTID EventID;BNE CondID1 0x0 0xC;CALL Pointer;ENUT EventID;GOTO CondID2;LABEL CondID1;ENUF EventID;LABEL CondID2"
 #define Every3Turns(CondID1,CondID2,CondID3,CondID4,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
+
+//Coordinate definitions
+#define SVAL_COORD(slot, srcX, srcY) "SVAL slot srcX|(srcY<<16);"
+#define MoveByCoords(speed, srcX, srcY, destX, destY) "SVAL sB srcX|(srcY<<16); MOVE speed UnitAtCoordsSlotB [destX, destY]"
 
 //Gold and Items
 #define SetGold(Amount) "SVAL 0x3 Amount;"
@@ -22,12 +27,81 @@
 
 #define EndConvo "CALL $9EE2C4"
 
+//Generic always event macro
+#define AlwaysEvent(completionFlag, eventOffset, triggerFlag) "AFEV completionFlag eventOffset triggerFlag"
+
+//Vanilla ASMCs
+#define EndMMS "ASMC 0x80790A5" //MU_EndAll //deselect unit
+
 //Because Ally isn't clear enough
 #define Player 0
 #define AutoLevelTrue 1
 #define AutoLevelFalse 0
-#define ACTIVEUNIT 0xFFFF
+
+#define ACTIVEUNIT ActiveUnit
+
+#define CancelEvent "CALL 0x9EE1D4"
 
 //The following unset the event flag if they return false
 #define ContinueIfIDMatch(UnitID) "SVAL 0x2 UnitID; CALL 0x9EE19C"
 #define ContinueIfFactionMatch(AllegianceID) "SVAL 0x2 AllegianceID; CALL 0x9EE1B8"
+
+#define ShowMap "CALL 0x8592140"
+
+//Global flags
+#define Max_DominicFlag 103
+
+/*Plist definitions*/
+
+//Main chapter definitions
+#define Ch1_ChapterID 0x0
+#define Ch1_MapID 0x4
+#define Ch1_TileChangesID 0x6
+#define Ch2_ChapterID 0x1
+#define Ch2_MapID 0x8
+#define Ch2_TileChangesID 0x9
+#define Ch3_ChapterID 0x2
+#define Ch3_MapID 0xB
+#define Ch3_TileChangesID 0xC
+#define Ch4_ChapterID 0x3
+#define Ch4_MapID 0x11
+#define Ch4_TileChangesID 0x13
+#define Ch4x_ChapterID 0x4
+#define Ch4x_MapID 0x15
+#define Ch4x_TileChangesID 0x16
+#define Ch5_ChapterID 0x5
+
+//Cutscene chapter definitions
+#define Ch1_OpeningChapterID 0x4D
+#define Ch1_OpeningMapID 0x9A
+#define Ch1_CutsceneChapterID 0x4E
+#define Ch1_CutsceneMapID 0xA5
+#define Ch1_CutsceneMapTileChangesID 0xA6
+#define Ch3_CutsceneChapterID 0x4C
+#define Ch3_CutsceneMapID 0x9B
+#define Ch3_CutsceneTileChangesID 0x9C
+#define Ch4_CutsceneChapterID 0x4B
+#define Ch4_CutsceneMapID 0x9D
+#define Ch4_CutsceneTileChangesID 0x9E
+
+//Tilesets and palettes
+#define SnowSkyObjectID 0x88
+#define SnowSkyConfigID 0x89
+
+#define SnowFieldsObjectID 0x42
+#define SnowFieldsPaletteID 0x43
+#define SnowFieldsConfigID 0x44
+
+#define SnowFieldsAnim2ID 0x54
+#define SnowFieldsAnimationID 0xE6
+
+#define SnowVillageObjectID 0x8B
+#define SnowVillagePaletteID 0x8C
+#define SnowVillageConfigID 0x8D
+
+#define VillageAnimationID 0x12
+
+#define SnowPeaksObjectID 0x8E
+#define SnowPeaksPaletteID 0x8F
+#define SnowPeaksPaletteNightID 0x90
+#define SnowPeaksConfigID 0x91

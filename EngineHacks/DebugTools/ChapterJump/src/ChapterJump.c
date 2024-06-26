@@ -5,6 +5,18 @@ int Jump_OnSelect(MenuProc* menu, MenuCommandProc* command) {
     ChapterJumpProc* proc = (void*) ProcStart(Proc_ChapterJump, ROOT_PROC_3);
 
     proc->menuIndex = 0;
+    Text_InitClear(&command->text, 12);
+
+    StartMenuChild(&ChapterJump_MenuDefinition, (void*) proc);
+
+    return ME_DISABLE | ME_END | ME_PLAY_BEEP | ME_CLEAR_GFX;
+}
+
+//Initializes menu. Called from event
+int Jump_StartArbitrary(Proc* parent) {
+    ChapterJumpProc* proc = (void*) ProcStartBlocking(Proc_ChapterJump, parent);
+
+    proc->menuIndex = 0;
 
     StartMenuChild(&ChapterJump_MenuDefinition, (void*) proc);
 
@@ -53,6 +65,7 @@ static int JumpEffect(MenuProc* menu, MenuCommandProc* command) {
 
     //Run the event
     CallMapEventEngine(gRAMChapterJumpEvent, 1);
+    gEventSlot[0xC] = 1;
 
     return ME_END;
 }

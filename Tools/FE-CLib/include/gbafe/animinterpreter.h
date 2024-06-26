@@ -31,6 +31,8 @@ struct AnimationInterpreter {
 	/* 34 */ struct AnimationInterpreter* pPrev;
 	/* 38 */ struct AnimationInterpreter* pNext;
 
+	/* 3C */ const void* pSpriteData;
+
 	/* 40 */ const void* pUnk40;
 	/* 44 */ const void* pUnk44;
 };

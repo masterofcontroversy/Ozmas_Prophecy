@@ -1,0 +1,13 @@
+#define jumpToHack_r1(offset) "SHORT 0x4900 0x4708 ; POIN (offset|1)"
+
+PUSH
+
+ORG 0x15C20
+jumpToHack_r1(CameraSpeedInitSpeed)
+
+ORG 0x15C88
+jumpToHack_r1(CameraSpeedVelocity)
+
+POP
+
+#include "CameraSpeed.lyn.event"

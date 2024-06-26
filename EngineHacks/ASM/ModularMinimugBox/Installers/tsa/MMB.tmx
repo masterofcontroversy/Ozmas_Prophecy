@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="15" height="6" tilewidth="8" tileheight="8" infinite="0" nextlayerid="2" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="16" height="6" tilewidth="8" tileheight="8" infinite="0" nextlayerid="2" nextobjectid="1">
  <tileset firstgid="1" name="MenuTiles" tilewidth="8" tileheight="8" tilecount="128" columns="16">
   <image source="MenuTiles.png" width="128" height="64"/>
  </tileset>
- <layer id="1" name="Tile Layer 1" width="15" height="6">
+ <layer id="1" name="Tile Layer 1" width="16" height="6">
   <data encoding="csv">
-18,19,20,4,4,4,4,4,4,4,4,4,4,5,6,
-25,26,15,15,15,15,15,15,15,15,15,15,15,81,82,
-15,15,15,15,15,15,15,15,15,15,15,15,81,83,84,
-15,15,15,15,15,15,15,15,15,15,15,81,83,85,86,
-15,15,15,15,15,15,15,15,15,15,81,83,85,87,88,
-28,29,29,29,29,29,29,29,29,29,29,29,30,31,32
+20,4,4,4,4,4,4,4,4,4,4,4,4,4,5,6,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,81,82,
+15,15,15,15,100,101,101,101,101,101,102,15,15,81,83,84,
+15,15,15,15,15,15,15,15,15,15,15,15,81,83,85,86,
+15,15,15,15,15,15,15,15,15,15,15,81,83,85,87,88,
+28,29,29,29,29,29,29,29,29,29,29,29,29,30,31,32
 </data>
  </layer>
 </map>

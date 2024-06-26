@@ -31,7 +31,10 @@ SetIcon(LancereaverIcon)
 //#incbin "Images/Swords/lanceraver.4bpp"
 SetIcon(RapierIcon)
 #incbin "Images/Swords/Rapier.4bpp"
-
+SetIcon(SwiftbladeIcon)
+#incbin "Images/Swords/Swiftblade.4bpp"
+SetIcon(StrikerBladeIcon)
+#incbin "Images/Swords/Custom/StrikerBlade.4bpp"
 
 SetIcon(IronLanceIcon)
 #incbin "Images/Lances/Custom/IronLance.4bpp"
@@ -74,6 +77,8 @@ SetIcon(HalberdIcon)
 #incbin "Images/Axes/Halberd.4bpp"
 SetIcon(HammerIcon)
 #incbin "Images/Axes/Hammer.4bpp"
+SetIcon(LabrysIcon)
+#incbin "Images/Axes/Labrys.4bpp"
 
 SetIcon(IronBowIcon)
 #incbin "Images/Bows/IronBow.4bpp"
@@ -92,11 +97,22 @@ SetIcon(GreatbowIcon)
 SetIcon(HuntingBowIcon)
 #incbin "Images/Bows/HuntingBow.4bpp"
 
+SetIcon(FinesseIcon)
+#incbin "Images/Staves/Finesse.4bpp"
+
 SetIcon(IronShieldIcon)
 #incbin "Images/Items/IronShield.4bpp"
 SetIcon(SteelShieldIcon)
 #incbin "Images/Items/SteelShield.4bpp"
 SetIcon(SilverShieldIcon)
 #incbin "Images/Items/SilverShield.4bpp"
+SetIcon(TealGemIcon)
+#incbin "Images/Items/TealGem.4bpp"
+SetIcon(VigorStoneIcon)
+#incbin "Images/Items/VigorStone.4bpp"
+SetIcon(AccostBandIcon)
+#incbin "Images/Items/AccostBand.4bpp"
+SetIcon(CloverIcon)
+#incbin "Images/Items/Clover.4bpp"
 
 POP

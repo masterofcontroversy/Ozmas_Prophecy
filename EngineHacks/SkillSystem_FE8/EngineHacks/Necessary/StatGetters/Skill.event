@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pSkillModifiers: // Skill
-	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing prDebuffSkl prAddEquipSkill prEquipmentBonusSkl prItemPassiveSkl prRallySkl prDefiantSkl prPushSkl
+	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing prDebuffSkl prAddEquipSkill prAddPureWaterBarrierMod prEquipmentBonusSkl prItemPassiveSkl prRallySkl prDefiantSkl prPushSkl
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -18,6 +18,9 @@ prAddEquipSkill:
 
 prEquipmentBonusSkl:
 	rEquipmentBonus(SklBonus)
+
+prAddPureWaterBarrierMod: // Upper part of byte 0x31 in unit struct is current pure water/barrier bonus duration
+	rAdd(rUpperHalfByteOf(rUByteAt(0x31)))
 
 prDebuffSkl:
 	#include "_asm/DebuffSkl.lyn.event"

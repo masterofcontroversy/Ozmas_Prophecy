@@ -1,0 +1,6 @@
+PUSH
+    ORG 0x22E64
+    jumpToHack(BattleForecast_OnBPress)
+POP
+
+#include "BattleForecastFix.lyn.event"

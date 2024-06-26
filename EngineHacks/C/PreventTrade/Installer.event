@@ -1,0 +1,17 @@
+#include "PreventTrade.lyn.event"
+
+PUSH
+    //Send to Convoy
+    ORG 0x59C44C + 0xC; POIN SendToConvoyMenu_Usability
+    ORG 0x59C44C + 0x24 + 0xC; POIN SendToConvoyMenu_Usability
+    ORG 0x59C44C + 0x48 + 0xC; POIN SendToConvoyMenu_Usability
+    ORG 0x59C44C + 0x6C + 0xC; POIN SendToConvoyMenu_Usability
+    ORG 0x59C44C + 0x90 + 0xC; POIN SendToConvoyMenu_Usability
+
+    //Item submenu trade
+    ORG 0x59C608; POIN ItemSubMenu_TradeUsability
+POP
+
+ALIGN 4
+gTradeErrorMessage:
+SHORT TradeErrorMessage

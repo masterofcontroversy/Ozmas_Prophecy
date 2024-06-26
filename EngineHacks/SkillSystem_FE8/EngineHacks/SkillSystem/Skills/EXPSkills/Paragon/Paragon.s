@@ -3,6 +3,9 @@
 
 .equ ParagonID, SkillTester+4
 
+.global Paragon
+.type Paragon, %function
+
 Paragon: @ Edited to fit the EXPCalcLoop. - Snek
 @ This is called once per battle struct by the EXPCalcLoop.
 @ r0 = current EXP, r1 = this battle struct, r2 = enemy battle struct. Return modified EXP.

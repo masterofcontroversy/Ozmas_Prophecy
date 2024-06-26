@@ -57,6 +57,9 @@ __pycache__
 *.fontchar
 *.o
 *.btlpal
+*.battlebackgroundtsa.lz77
+*.battlebackgroundpal
+*.bgtsa.lz77
 Dist/*
 EngineHacks/**/*.lyn.event
 

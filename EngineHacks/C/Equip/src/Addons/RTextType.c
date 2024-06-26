@@ -1,6 +1,17 @@
 #include "gbafe.h"
 
 extern TextHandle gHelpTextHandles[3];
+extern u8 EquipmentRTextList[];
+
+bool IsItemRTextEquipment(u16 item) {
+    int itemID = (item & 0xFF);
+    for (int i = 0; EquipmentRTextList[i]; ++i) {
+        if (itemID == EquipmentRTextList[i]) {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
 
 int GetItemHelpTextType(u16 item) {
     if (item == 0xFFFE) {
@@ -9,7 +20,7 @@ int GetItemHelpTextType(u16 item) {
     if (GetItemAttributes(item) & IA_LOCK_1) {
         return 1;
     }
-    if ((GetItemAttributes(item) & IA_WEAPON) || IsItemEquipment(item)) {
+    if ((GetItemAttributes(item) & IA_WEAPON) || IsItemRTextEquipment(item)) {
         return 1;
     }
     if (GetItemAttributes(item) & IA_STAFF) {
@@ -26,7 +37,7 @@ int SetupWeaponHelpText(u16 item) {
     Text_InsertString(&gHelpTextHandles[0], 0x61, 0x8, GetStringFromIndex(0x502)); //weight
 
     Text_InsertString(&gHelpTextHandles[1], 0x0, 0x8, GetStringFromIndex(0x503)); //might
-    if (IsItemEquipment(item)) {
+    if (IsItemRTextEquipment(item)) {
         Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x04EF)); //def
         Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x04F0)); //res
     }

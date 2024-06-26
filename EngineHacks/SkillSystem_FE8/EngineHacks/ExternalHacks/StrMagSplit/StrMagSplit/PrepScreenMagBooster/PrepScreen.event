@@ -10,8 +10,8 @@
 	BYTE 0x70
 	
 	//Move R-button text down
-	ORG $94F74
-	WORD 0x202BD70
+	//ORG $94F74
+	//WORD 0x202BD70
 	
 	//Display the stat names in their new position
 	ORG $9BF2E

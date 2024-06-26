@@ -1,0 +1,119 @@
+#define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
+
+ALIGN 4
+ArmorKnightClassCardImage:
+#incbin "ArmorKnight.lz77"
+
+ALIGN 4
+ArmorKnightClassCardPalette:
+#incbin "ArmorKnight.pal"
+
+ALIGN 4
+FighterClassCardImage:
+#incbin "Fighter.lz77"
+
+ALIGN 4
+FighterClassCardPalette:
+#incbin "Fighter.pal"
+
+ALIGN 4
+SoldierClassCardImage:
+#incbin "Soldier.lz77"
+
+ALIGN 4
+SoldierClassCardPalette:
+#incbin "Soldier.pal"
+
+ALIGN 4
+DracoRiderClassCardImage:
+#incbin "DracoRider.lz77"
+
+ALIGN 4
+DracoRiderClassCardPalette:
+#incbin "DracoRider.pal"
+
+ALIGN 4
+LanceCavalierClassCardImage:
+#incbin "LanceCavalier.lz77"
+
+ALIGN 4
+LanceCavalierClassCardPalette:
+#incbin "LanceCavalier.pal"
+
+ALIGN 4
+SwordCavalierClassCardImage:
+#incbin "SwordCavalier.lz77"
+
+ALIGN 4
+SwordCavalierClassCardPalette:
+#incbin "SwordCavalier.pal"
+
+ALIGN 4
+AxeCavalierClassCardImage:
+#incbin "AxeCavalier.lz77"
+
+ALIGN 4
+AxeCavalierClassCardPalette:
+#incbin "AxeCavalier.pal"
+
+ALIGN 4
+BowCavalierClassCardImage:
+#incbin "BowCavalier.lz77"
+
+ALIGN 4
+BowCavalierClassCardPalette:
+#incbin "BowCavalier.pal"
+
+ALIGN 4
+LancePaladinClassCardImage:
+#incbin "LancePaladin.lz77"
+
+ALIGN 4
+LancePaladinClassCardPalette:
+#incbin "LancePaladin.pal"
+
+ALIGN 4
+SwordPaladinClassCardImage:
+#incbin "SwordPaladin.lz77"
+
+ALIGN 4
+SwordPaladinClassCardPalette:
+#incbin "SwordPaladin.pal"
+
+ALIGN 4
+AxePaladinClassCardImage:
+#incbin "AxePaladin.lz77"
+
+ALIGN 4
+AxePaladinClassCardPalette:
+#incbin "AxePaladin.pal"
+
+ALIGN 4
+BowPaladinClassCardImage:
+#incbin "BowPaladin.lz77"
+
+ALIGN 4
+BowPaladinClassCardPalette:
+#incbin "BowPaladin.pal"
+
+ALIGN 4
+ArcanistClassCardImage:
+#incbin "Arcanist.lz77"
+
+ALIGN 4
+ArcanistClassCardPalette:
+#incbin "Arcanist.pal"
+
+setCardEntry(ArmorKnightCC,ArmorKnightClassCardImage,ArmorKnightClassCardPalette)
+setCardEntry(FighterCC,FighterClassCardImage,FighterClassCardPalette)
+setCardEntry(SoldierCC,SoldierClassCardImage,SoldierClassCardPalette)
+setCardEntry(DracoRiderCC,DracoRiderClassCardImage,DracoRiderClassCardPalette)
+setCardEntry(LanceCavalierCC,LanceCavalierClassCardImage,LanceCavalierClassCardPalette)
+setCardEntry(SwordCavalierCC,SwordCavalierClassCardImage,SwordCavalierClassCardPalette)
+setCardEntry(AxeCavalierCC,AxeCavalierClassCardImage,AxeCavalierClassCardPalette)
+setCardEntry(BowCavalierCC,BowCavalierClassCardImage,BowCavalierClassCardPalette)
+setCardEntry(LancePaladinCC,LancePaladinClassCardImage,LancePaladinClassCardPalette)
+setCardEntry(SwordPaladinCC,SwordPaladinClassCardImage,SwordPaladinClassCardPalette)
+setCardEntry(AxePaladinCC,AxePaladinClassCardImage,AxePaladinClassCardPalette)
+setCardEntry(BowPaladinCC,BowPaladinClassCardImage,BowPaladinClassCardPalette)
+setCardEntry(ArcanistCC,ArcanistClassCardImage,ArcanistClassCardPalette)

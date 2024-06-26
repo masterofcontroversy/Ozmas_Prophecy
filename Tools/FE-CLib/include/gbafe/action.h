@@ -30,6 +30,11 @@ struct ActionData {
 	/* 15 */ u8 trapType;
 
 	/* 16 */ u8 suspendPointType;
+
+	/* 18 */ struct BattleHit* scriptedBattleHits;
+
+	/* 1C */ u8 attackerTookDamage : 1;
+	/* 1C */ u8 defenderTookDamage : 1;
 };
 
 enum {
@@ -60,7 +65,7 @@ enum {
 	// 0x18?
 	UNIT_ACTION_ARENA = 0x19,
 	UNIT_ACTION_USE_ITEM = 0x1A,
-	// 0x1B?
+	UNIT_ACTION_DID_TRADE = 0x1B,
 	// 0x1C?
 	UNIT_ACTION_TRADED = 0x1D,
 	// 0x1E?

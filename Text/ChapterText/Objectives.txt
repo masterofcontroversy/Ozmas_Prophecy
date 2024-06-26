@@ -1,0 +1,25 @@
+## SeizeFortText
+Seize fort[X]
+
+## Chapter1_Objective
+Defeat all Eastern[NL]
+Duramontis soldiers[X]
+
+## Chapter2_Objective
+Seize the fort at the[NL]
+end of the valley[X]
+
+## Chapter3_Objective
+Clear the town of all[NL]
+enemy soldiers[X]
+
+## Chapter4_Objective
+Keep Max alive[NL]
+and seize the throne[X]
+
+## Chapter4x_GoalWindowA
+Open chests[X]
+
+## Chapter4x_Objective
+Rob the Stonemasons[NL]
+of their stolen goods[X]

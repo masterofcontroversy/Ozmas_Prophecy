@@ -3,6 +3,13 @@ ALIGN 4
 GroupAI:
 #incbin "GroupAI.dmp"
 
+#define AIGroupOne      0x1
+#define AIGroupTwo      0x2
+#define AIGroupThree    0x3
+#define AIGroupFour     0x4
+#define AIGroupFive     0x5
+#define AIGroupSix      0x6
+
 #define GroupOneAI 					[0x00,0x03,0x09,0x01]
 #define GroupTwoAI 					[0x00,0x03,0x09,0x02]
 #define GroupThreeAI				[0x00,0x03,0x09,0x03]

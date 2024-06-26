@@ -9,22 +9,20 @@
 #ifdef _FE8_
 
   #define Skl_Arrow_X 0x78
-  #define Skl_Arrow_Y 104
+  #define Skl_Arrow_Y 56
   #define Spd_Arrow_X 0x78
-  #define Spd_Arrow_Y 120
+  #define Spd_Arrow_Y 72
   #define Trv_Icon_X 0xB8
-  #define Trv_Icon_Y 141
+  #define Trv_Icon_Y 93
   
   #include "DisplayGrowthsOptions/DisplayGrowthsOptions.event"
   #include "WeaponRankStatScreen/WeaponRankStatScreen.event"
 
+  //Disable glowy
   PUSH
-  ORG $88620
-  POIN RemoveGlowy
+  ORG $88590
+  WORD 0 
   POP
-
-  RemoveGlowy:
-  #incbin "RemoveGlowy.lz77"
  
   PUSH
     ORG 0x205b24 //24 for stat screen
@@ -143,6 +141,8 @@
   ResilienceIDLink:
   SHORT Resilience
   
+  #include "asm/GetGrowthChar.lyn.event"
+
   #ifndef USE_STRMAG_SPLIT
   
   #ifdef LEADERSHIP_STARS

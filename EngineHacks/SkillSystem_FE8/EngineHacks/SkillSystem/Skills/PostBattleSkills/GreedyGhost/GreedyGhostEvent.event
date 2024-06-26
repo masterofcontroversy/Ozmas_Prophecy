@@ -1,0 +1,11 @@
+GreedyGhostEvent:
+CAM1 0xFFFF
+SOUN 0x88
+SVAL s1 gRallySpeedPalette|IsPointer
+ASMC ASMC_StartAuraFX
+STAL 30
+SVAL s1 0x42
+UNSET_CONDITION ActiveUnit
+ASMC ASMC_EndAuraFX
+NoFade
+ENDA

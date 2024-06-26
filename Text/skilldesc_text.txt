@@ -41,16 +41,17 @@ Frenzy: For every 4 damage[N]
 taken, +1 to damage dealt.[X]
 
 ## SD_Canto
-Canto: Can move again[N]
-after certain actions.[X]
+Canto: Use remaining movement[NL]
+after performing any action.[X]
 
 ## SD_Cunning
 Cunning: Can steal items, pick[N]
 locks, and see in darkness.[X]
 
-## SD_SlyMovement
-Sly Movement: Move up to two spaces[N]
-after stealing or picking locks.[X]
+## SD_GreedyGhost
+Greedy Ghost: When Colton steals or[N]
+picks locks, he gains a new turn.[N]
+He may pass enemies during this turn.[X]
 
 ## SD_Lethality
 Lethality: Instantly kill opponent.[N]
@@ -147,7 +148,7 @@ Desperation: If HP < 50%,[N]
 double attacks occur immediately.[X]
 
 ## SD_Wrath
-Wrath: If HP < 50%,[NL]
+Wrath: If HP <= 50%,[NL]
 and enemy can counter,[N]
 deal 2x damage.[X]
 
@@ -185,8 +186,7 @@ Tomefaire: +4 damage[N]
 when equipping a tome.[X]
 
 ## SD_CritUp
-Critical: If crit is unlocked,[NL]
-skill is added to crit.[X]
+Critical: Tech is added to Crit.[X]
 
 ## SD_Slayer
 Slayer: Deal effective damage[N]
@@ -916,9 +916,9 @@ Half of damage taken last hit[NL]
 is added to Max's counterattack.[X]
 
 ## SD_Accost
-Accost:
-Start a second round of combat if[N]
-HP and AS is greater than opponent's.[X]
+Accost: Start a second round[N]
+of combat if HP and AS are greater[N]
+than opponent's when combat starts.[X]
 
 ## SD_Insight
 Insight: Hit +20.[X]

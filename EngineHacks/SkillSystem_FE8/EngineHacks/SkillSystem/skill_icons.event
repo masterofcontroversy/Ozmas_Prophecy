@@ -155,7 +155,7 @@ ORG SkillIcon(RenewalID)
 ORG SkillIcon(NiceThighsID)
 #incbin "SkillIcons/NiceThighs.4bpp"
 
-ORG SkillIcon(SlyMovementID)
+ORG SkillIcon(GreedyGhostID)
 #incbin "SkillIcons/Pass.4bpp"
 
 ORG SkillIcon(DemoiselleID)

@@ -1,0 +1,460 @@
+EventPointerTable(0x14,ThisChapter)
+
+#define Reinforcements2_Triggered_Flag 0x8
+#define Reinforcements2_Completion_Flag 0x9
+#define MaxRonniTalk_Flag 0xA
+#define MaxDevanTalk_Flag 0xB
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(0, CallThief, 4)
+TurnEventPlayer(0, CallReinforcements_1, 4)
+TurnEventPlayer(Reinforcements2_Completion_Flag, CallReinforcements_2, 1, 255)
+TurnEventPlayer(0, RandomSnowEvent, 1, 255)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Seize(15,1)
+Door(2,1)
+Door(10,12)
+Door(11,12)
+Chest(KillingEdge,9,5)
+Chest(Rescue,12,4)
+DurabilityChest(SkillScroll,AccostID,0,6)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(MaxDevanTalk_Flag, MaxDevanConversation, Max, Devan)
+CharacterEventBothWays(MaxRonniTalk_Flag, MaxRonniConversation, Max, Ronni)
+END_MAIN
+
+MiscBasedEvents:
+AREA Reinforcements2_Triggered_Flag TriggerReinforcements_2 [7,3] [14,6]
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+    //Will be set to false if a player unit is in the treasure room
+    ENUT Reinforcements2_Completion_Flag
+
+    CALL OpeningCutscenes
+
+    MUSIC CricketsChirping
+    WEATHER Snow
+    LOAD1 1 MaxUnit
+    LOAD1 0 EnemyUnits
+    FADU 10
+
+    BROWNBOXTEXT MasaintKeepText [8,8]
+    LOAD1 1 ColtonUnit
+    STAL 20
+    MOVE 3 Colton [5,1]
+    MoveByCoords(3, 6,9, 5,7)
+    STAL 50
+    MOVE 10 Colton [6,0];ENUN
+    STAL 50
+    MoveByCoords(3, 5,7, 6,9);ENUN
+
+    MOVE 7 Colton [3,1];ENUN
+    STAL 20
+    SOUN 0x00B1
+    TILECHANGE 0
+
+    //Colton walks into Max's cell door and they talk
+    MOVE 7 Colton [1,1];ENUN
+    STAL 20
+
+    SetBackground(CastleInterior5BG)
+    Text(Ch4_BattleTransition_Part1)
+    EndConvo
+    FACTION_BLUE Max
+
+    MoveByCoords(7, 7,10, 4,6)
+    STAL 30
+
+    MOVE 7 Colton [4,1]
+    MOVE 7 Max [3,1]
+    ENUN
+    STAL 30
+    MUSIC NuclearFusion_BGM
+    Text(Ch4_BattleTransition_Part2)
+    MoveByCoords(7, 0,7, 3,6)
+
+    CAM1 [2,15]
+    Text(Ch4_BattleTransition_Part3)
+    LOAD1 2 LordsUnits;ENUN
+    FADI 20
+    PREP
+
+NoFade
+ENDA
+
+EndingScene:
+FADI 10
+CAMERA [21,0]
+REMOVEALL_RED
+REMOVEALL_BLUE
+LOAD1 2 CutsceneUnits2
+FADU 10
+
+
+//CHECK_FLAG Max_DominicFlag
+//BEQ 0x9000 sC s0
+EVBIT_F 9
+MUSIC NoBGM
+Text(Ch4_AfterBattle_B_Part1)
+MOVE 10 Max [1,8]; STAL 10
+MUSIC CryALive_BGM
+MOVE 10 Ronni [15,4]
+Text(Ch4_AfterBattle_B_Part2)
+ENUN
+MOVE 10 Ronni [2,8]; STAL 5
+MOVE 10 Devan [3,8]; STAL 10
+
+CURSOR Alexandra
+STAL 60
+REMOVE_CURSORS
+Text(Ch4_AfterBattle_B_Part3)
+MOVE 10 Absalom [22,7]; STAL 10
+Text(Ch4_AfterBattle_B_Part4)
+
+FADI 10
+REMOVEPORTRAITS
+BACG CastleInteriorNight2BG
+FADU 10
+Text(Ch4_AfterBattle_B_Part5)
+GOTO 0x9001
+
+LABEL 0x9000
+
+LABEL 0x9001
+SetBackground(CastleInteriorDayBG)
+Text(Ch4_Scene5)
+Text(Ch4_Scene6_B)
+
+FADI 7
+CLEAN
+REMOVEALL_BLUE
+CAMERA [0,9]
+SVAL s1 SnowPeaksPaletteID
+ASMC ASMC_SetMapPalette
+FADU 7
+
+EVBIT_F 9
+LOAD 2 CutsceneUnits3
+MOVE 5 Devan [6,9]
+MOVE 5 Alexandra [5,9]
+STAL 110
+
+Text(Ch4_Scene7)
+
+LOAD 2 MaxUnit2
+MOVE 5 Max [5,8]; ENUN
+TEXTSTART
+TEXTSHOW Ch4_Scene8
+TEXTEND
+MOVE 5 Max [5,0]
+TEXTCONT
+TEXTEND
+REMA
+STAL 90
+
+//Check gaiden requirement and go to gaiden if it's fulfilled
+CHECK_ALIVE Colton
+BEQ 0x9002 sC s0
+    CHECK_ALIVE Lucy
+    BEQ 0x9003 sC s0
+        //Both are alive. Go to the Gaiden
+        CALL SetupLucyColtonScene
+        Text(Ch4_ColtonLucyGaidenText_Part1)
+        Text(Ch4_ColtonLucyGaidenText_Part2)
+        GOTO 0x9004 //MNC2 Gaiden
+
+LABEL 0x9003
+//Colton's alive and Lucy is "dead"
+SVAL s1 Lucy
+ASMC ASMC_GetCharDeathChapter
+SVAL s1 Ch4_ChapterID
+BNE 0x9004 s1 sC
+    //Okay, Lucy is dead dead. Start the text
+    CALL SetupLucyColtonScene
+    Text(Ch4_ColtonGrieves)
+    GOTO 0x9004
+
+LABEL 0x9002
+//Colton's dead. Is Lucy alive?
+CHECK_ALIVE Lucy
+BEQ 0x9004 sC s0
+    //Lucy's alive. Do the event
+    CALL SetupLucyColtonScene
+    Text(Ch4_LucyGrieves)
+
+LABEL 0x9004
+NoFade
+ENDA
+
+OpeningCutscenes:
+    LOMA Ch4_CutsceneChapterID
+
+    MUSIC MemoriesofGreen_BGM
+    SetBackground(BedroomDaytimeBG)
+    Text(Ch4_Scene1)
+    EndConvo
+
+    MUSIC OutsideBirdsChirping
+    LOAD1 2 CutsceneUnits1
+    MOVE 3 Devan [12,6]
+    STAL 7
+    MOVE 3 Alexandra [11,6]
+    Text(Ch4_Scene2_Part1)
+    ENUN
+    TEXTSTART
+    TEXTSHOW Ch4_Scene2_Part2
+    TEXTEND
+    LOAD1 2 LucyUnit; ENUN
+    TEXTCONT
+    TEXTEND
+    REMA
+
+    MUSIC NoticeofDeath_BGM
+    SetBackground(InsideHouse3BG)
+    Text(Ch4_Scene3)
+
+    FADI 10
+    MUSIC OutsideBirdsChirping
+    LOMA Ch3_ChapterID
+    CAMERA [5,15]
+    MOVE (-1) Devan [7,17]
+    MOVE (-1) Alexandra [6,17]
+    ENUN
+    FADU 10
+
+    MOVE 3 Devan [7,16]
+    STAL 7
+    MOVE 3 Alexandra [6,16]
+    ENUN
+    Text(Ch4_Scene4)
+
+    FADI 10
+    REMOVEALL_BLUE
+    LOMA Ch4_ChapterID
+NoFade
+ENDA
+
+SetupLucyColtonScene:
+EVBIT_T 9
+CAMERA [21,8]
+CURSOR Colton
+CURSOR Lucy
+STAL 60
+REMOVE_CURSORS
+SetBackground(OutsideCastleWinterDayBG)
+NoFade
+ENDA
+
+PlayerUnits:
+//Forced Squad A
+UNIT Devan Count Devan Level(1,Player,0) [4,15] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [4,16] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+
+//Forced Squad B
+UNIT Colton Thief Devan Level(4,Player,0) [3,1] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Max Shaman Devan Level(4,NPC,0) [4,1] 0x0 0x0 0x0 0x1 [Flux] NoAI
+
+//Squad A
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,15] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,15] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,16] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,16] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+
+//Squad B
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [5,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [4,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+
+UNIT //Tells the game that the unit list has ended
+
+EnemyUnits:
+UNIT Dominic Hero Dominic Level(6,Enemy,0) [15,1] 0x0 0x0 0x0 0x1 [SteelBlade, HandAxe] NeverMoveAI
+
+//Northern welcoming committee
+UNIT EastDuramontis Mercenary Dominic Level(4,Enemy,1) [7,10] 0x0 0x0 0x0 0x1 [IronBlade, TealGem] NoAI
+UNIT EastDuramontis Fighter Dominic Level(4,Enemy,1) [2,7] 0x0 0x0 0x0 0x1 [Labrys] NoAI
+
+//Southern welcoming committee
+UNIT EastDuramontis Archer Dominic Level(4,Enemy,1) [9,16] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+UNIT EastDuramontis Fighter Dominic Level(4,Enemy,1) [8,17] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT EastDuramontis Soldier Dominic Level(4,Enemy,1) [7,15] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+
+//Slightly to the east of the welcoming committee
+UNIT EastDuramontis Arcanist Dominic Level(4,Enemy,1) [14,15] 0x0 0x0 0x0 0x1 [Flux] NoAI
+UNIT EastDuramontis Myrmidon Dominic Level(4,Enemy,1) [13,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+
+//Guys right after
+UNIT EastDuramontis Myrmidon Dominic Level(4,Enemy,1) [5,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT EastDuramontis ArmorKnight Dominic Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x1 [Javelin] NeverMoveAI
+UNIT EastDuramontis Soldier Dominic Level(4,Enemy,1) [8,9] 0x0 0x0 0x0 0x1 [SteelLance] [AttackInRange, 0x12, NoRecovery, DefaultAI4]
+
+//Center guys
+UNIT EastDuramontis IronMage Dominic Level(4,Enemy,1) [14,8] 0x0 0x0 0x0 0x1 [Fire] GroupOneAI
+UNIT EastDuramontis Mercenary Dominic Level(4,Enemy,1) [16,10] 0x0 0x0 0x0 0x1 [IronBlade] GroupOneAI
+
+//Before the throne room
+UNIT EastDuramontis Soldier Dominic Level(4,Enemy,1) [17,8] 0x0 0x0 0x0 0x1 [SteelLance] GroupTwoAI
+UNIT EastDuramontis Myrmidon Dominic Level(4,Enemy,1) [19,9] 0x0 0x0 0x0 0x1 [IronSword] GroupTwoAI
+UNIT EastDuramontis Archer Dominic Level(4,Enemy,1) [19,7] 0x0 0x0 0x0 0x1 [IronBow] GroupTwoAI
+
+//Treasure room
+UNIT EastDuramontis Soldier Dominic Level(4,Enemy,1) [8,4] 0x0 0x0 0x0 0x1 [IronLance] AttackInRangeAI
+UNIT EastDuramontis Mage Dominic Level(4,Enemy,1) [13,4] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
+
+//Throne room
+UNIT EastDuramontis Fighter Dominic Level(4,Enemy,1) [16,1] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+UNIT EastDuramontis Mercenary Dominic Level(4,Enemy,1) [20,2] 0x0 0x0 0x0 0x1 [SteelBlade] GroupThreeAI
+
+//Start charging from throne room entrance
+UNIT EastDuramontis Fighter Dominic Level(4,Enemy,1) [18,7] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT EastDuramontis Soldier Dominic Level(4,Enemy,1) [19,8] 0x0 0x0 0x0 0x1 [SteelLance] NoAI
+
+//Stationaries
+
+//Main gate
+//UNIT EastDuramontis ArmorKnight Dominic Level(4,Enemy,1) [10,14] 0x0 0x0 0x0 0x1 [IronBlade] NeverMoveAI
+UNIT EastDuramontis ArmorKnight Dominic Level(4,Enemy,1) [11,14] DropItem 0x0 0x0 0x1 [IronLance, DoorKey] NeverMoveAI
+
+//Treasure room
+UNIT EastDuramontis Shaman Dominic Level(4,Enemy,1) [10,7] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT EastDuramontis Shaman Dominic Level(4,Enemy,1) [11,7] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+
+//Throne room
+UNIT EastDuramontis ArmorKnight 0x0 Level(4,Enemy,1) [17,5] 0x0 0x0 0x0 0x1 [Javelin] [AttackInPlace, NoAI2, NoRecovery, GuardTile|AIGroupThree]
+UNIT EastDuramontis Shaman Dominic Level(4,Enemy,1) [18,5] 0x0 0x0 0x0 0x1 [Flux] [AttackInPlace, NoAI2, NoRecovery, GuardTile|AIGroupThree]
+
+UNIT
+
+//Turn 4 or 5 reinforcements
+Reinforcements_1:
+UNIT EastDuramontis SwordCavalier Dominic Level(4,Enemy,1) [4,0] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
+UNIT EastDuramontis AxeCavalier Dominic Level(4,Enemy,1) [5,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+UNIT
+
+//Northern area reinforcements
+Reinforcements_2:
+UNIT EastDuramontis MageKnight Dominic Level(4,Enemy,1) [9,0] 0x0 0x0 0x0 0x1 [Fire] NoAI
+UNIT EastDuramontis AxeCavalier Dominic Level(4,Enemy,1) [12,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+UNIT
+
+ThiefUnit:
+UNIT EastDuramontis Thief 0x0 Level(4,Enemy,1) [10,0] 0x0 0x0 0x0 0x1 [IronSword, ChestKey, ChestKey] LootingThiefAI
+UNIT
+
+MaxUnit:
+UNIT Max Shaman Devan Level(4,NPC,0) [0,1] 0x0 0x0 0x0 0x1 [ShadeTome] NoAI
+UNIT
+
+MaxUnit2:
+UNIT Max Shaman Devan Level(4,Player,0) [5,1] 0x0 0x0 0x0 0x1 [ShadeTome] NoAI
+UNIT
+
+ColtonUnit:
+UNIT Colton Thief Devan Level(4,Player,0) [6,0] 0x0 0x0 0x0 0x1 [IronSword, Vulnerary] NoAI
+UNIT
+
+LordsUnits:
+UNIT Devan Count Devan Level(1,Player,0) [0,14] 0x0 0x0 0x1 REDA1R14 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [0,15] 0x0 0x0 0x1 REDA1R15 [IronSword, Rapier, Vulnerary] NoAI
+UNIT
+
+CutsceneUnits1:
+UNIT Devan Count Devan Level(1,Player,0) [3,0] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [2,0] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT
+
+CutsceneUnits2:
+UNIT Max Shaman Devan Level(1,Player,0) [15,2] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Devan Count Devan Level(1,Player,0) [16,3] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [17,3] 0x0 0x0 0x0 0x1 [0x0] NoAI
+
+UNIT Alexandra Lord Devan Level(1,Player,0) [19,3] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(1,Player,0) [20,3] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Absalom Fighter Alexandra Level(1,Player,0) [19,4] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
+
+CutsceneUnits3:
+UNIT Devan Count Devan Level(1,Player,0) [5,0] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [4,0] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT Colton Thief Devan Level(4,Player,0) [18,9] 0x0 0x0 0x0 0x1 [IronSword, Vulnerary] NoAI
+UNIT Lucy Mage_F Devan Level(3,Player,0) [17,9] 0x0 0x0 0x0 0x1 [Fire, Vulnerary] NoAI
+UNIT
+
+LucyUnit:
+UNIT Lucy Mage_F Devan Level(3,Player,0) [12,5] 0x0 0x0 0x0 0x1 [Fire, Vulnerary] NoAI
+UNIT
+
+
+CallThief:
+LoadReinforcements(ThiefUnit)
+NoFade
+ENDA
+
+ALIGN 4
+CallReinforcements_1:
+LoadReinforcements(Reinforcements_1)
+STAL 30
+
+CHECK_ALIVE Holly
+BEQ 0x9000 sC s0
+    CAM1 Devan
+    Text(Ch4_Reinforcements)
+
+LABEL 0x9000
+NoFade
+ENDA
+
+ALIGN 4
+TriggerReinforcements_2:
+ContinueIfFactionMatch(Player)
+    ENUF Reinforcements2_Completion_Flag
+    NoFade
+    ENDA
+
+ALIGN 4
+CallReinforcements_2:
+LoadReinforcements(Reinforcements_2)
+NoFade
+ENDA
+
+MaxRonniConversation:
+ConvoEvent(Ch4_MaxRonniConversation)
+
+MaxDevanConversation:
+ConvoEvent(Ch4_MaxDevanConversation)
+
+#undef Reinforcements2_Triggered_Flag
+#undef Reinforcements2_Completion_Flag
+#undef MaxRonniTalk_Flag
+#undef MaxDevanTalk_Flag

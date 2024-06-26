@@ -19,13 +19,13 @@ PUSH
     BYTE $01 // left x coord (open 1)
 
   ORG $1d4fc
-    BYTE $14 // right x coord (open 1)
+    BYTE $15 // right x coord (open 1)
 
   ORG $1D44E
     BYTE $01 // left x coord (open 2)
 
   ORG $1D450
-    BYTE $14 // right x coord (open 2)
+    BYTE $15 // right x coord (open 2)
 
   /*
 
@@ -37,25 +37,25 @@ PUSH
   */
 
   ORG $22884
-    BYTE $14 // right x coord (go back 1)
+    BYTE $15 // right x coord (go back 1)
 
   ORG $22818
     BYTE $01 // left x coord (go back 2)
 
   ORG $2281A
-    BYTE $14 // right x coord (go back 2)
+    BYTE $15 // right x coord (go back 2)
 
   ORG $22772
     BYTE $01 // left x coord (go back 3)
 
   ORG $22774
-    BYTE $14 // right x coord (go back 3)
+    BYTE $15 // right x coord (go back 3)
 
   ORG $23660
     BYTE $01 // left x coord (go back 4)
 
   ORG $23662
-    BYTE $14 // right x coord (go back 4)
+    BYTE $15 // right x coord (go back 4)
 
 POP
 

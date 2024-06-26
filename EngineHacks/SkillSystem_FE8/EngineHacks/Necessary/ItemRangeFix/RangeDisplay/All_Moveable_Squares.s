@@ -5,6 +5,7 @@
 push	{r4-r7,r14}
 mov		r7,r8
 push	{r7}
+sub     sp,#0x4 @Fourth argument for later
 cmp		r1,#0x0
 beq		NoBallistaAbility
 ldr		r1,[r0]
@@ -18,7 +19,7 @@ cmp		r1,#0x0
 beq		NoBallistaAbility
 mov		r1,#0x1
 NoBallistaAbility:
-mov		r12,r1					@r12 has ballista check flag
+str     r1,[sp]					@sp+0 has ballista check flag
 mov		r1,#0x1
 neg		r1,r1
 @ldr		r3,GetRangeBitfield
@@ -83,6 +84,7 @@ ldr		r1,CanMoveMap
 ldr		r1,[r1]
 ldr		r0,UnknownPtr
 str		r1,[r0]
+add     sp, #0x4
 pop		{r7}
 mov		r8,r7
 pop		{r4-r7}

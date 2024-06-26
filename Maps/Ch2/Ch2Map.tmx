@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="21" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="21" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
  <tileset firstgid="1" name="SnowFields" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="../Tilesets/SnowFields/SnowFields.png" width="512" height="512"/>
  </tileset>
@@ -7,16 +7,16 @@
   <properties>
    <property name="Anims1" value="SnowFieldsAnimationID"/>
    <property name="Anims2" value="SnowFieldsAnim2ID"/>
-   <property name="ChapterID" value="0x1"/>
+   <property name="ChapterID" value="Ch2_ChapterID"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="0x9"/>
-   <property name="MapID" value="0x8"/>
+   <property name="MapChangesID" value="Ch2_MapID"/>
+   <property name="MapID" value="Ch2_TileChangesID"/>
    <property name="ObjectType" value="SnowFieldsObjectID"/>
    <property name="PaletteID" value="SnowFieldsPaletteID"/>
    <property name="TileConfig" value="SnowFieldsConfigID"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxNkzkvRVEQx889Vygk8ohPYImIXaKWkBcEsTQkRBTWkoZGgYeIpfAJbM9SkNCgthYSns9gSxQaiej8JjM37xW/zLnnzvnfmf+cOxU61wvdkIIt2PXO7cGdc66fOAO3rA8trw4qoBKqQs09gVnog2n2XmAK8uHaq+aO17XQAPvwju4zORPEdmIHdMIbz8mMvHr7bsrqk3Mx1knigdPvRLXe8FwDo5CCM9iATcgKnJsjZxDirNfgif1xaIVcnnOgFfIC3Y90l+39PXE60O9Lz43Wt+SJlx+8P4fsQOuoIH5bbMvQHQ5VbwyqYSJIeyj9zBMTXn0U3WbOlJJTCI+sj0KtQXTLYAW27fmScwNQ7FTvlv0WOA51ruJj5Kn4JzX/uLTvd+ZXzHwVv7attvUg7dc1fJruIutF8cnruU7Lkfx8uyfRXSixOYjeq/UV+SW5cp9EV/Q+vXrRxLtV6IFych+ICRhx6o14N2TeJTJmv2d3IWZ6W+ChAD5gwWud56HOJ25eisYFe1ewZHuvXmuN7ofkSO9NoiF3CiZNW3yQ/+CLnErzQO7rL/EPusyvBZtz5hyl9w72ikxX4mmgupJfa7O7sb6j2YjeBmyaZsJ6S5K7T/wHVIJyjQ==
+   eJxNk00vXVEUhvfZRxg0aS7pL6CNNLSlibGk0iCIMkF0YNKWIRMmHZRbDcXg/gJfFx2QMDL3UQMJ12/QkhiY9Af0ebPWybmDJ2vvfdZ+997vWmc6DWEYPkAFSrAZQ9iC8xDCKHEWzhjvel47tEArvEotdx/mYARmWLuBaaiHk2iaG9HGogO24S+61+RMEvuI/TAAf5iXq/Le+rkVv5/2FRiXiTvBzsnuesr8DXyCChzCKqxBTRLCV3I+wnvGP+GK9S/QA0+Y10EPPE1sPdNd9O+/iTOJna83d/q7lScv7/h+BLWJ3aOF+Oixt0p3IjW9z/AaJpPcQ73nG7EYzUfpdrHnBTnP4JLxXmp3kG4z/IB1nx+zbxyagumdsd4Nv1Krq3zMPJV/uvO/kPt+7n4V3Ff5te53W0lyv07gnpwlWGC8IJ+i7RvwHOXXe59kvfDc6yC9W39X5pdy1U/Sld59zL1Y4vsQvCT3glgMVr8uH4+5d8Wq2m95LxRcrwQRGuAO5qPd8yi1+qgvlqEUzFPV6bv7exvtrll/6Bx5+k4a6imYcm35oP/ggZxW90B9IJ9Up0H3a97fVl1Hvb2ftUbXVTxITFf5bV479fp2yPtGequw5ppFf1s5tbz/WfVyIw==
   </data>
  </layer>
  <layer id="2" name="ClosedVillage" width="21" height="12" visible="0">

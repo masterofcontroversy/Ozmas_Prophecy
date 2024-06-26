@@ -92,7 +92,7 @@ add r3, r3, #1
 cmp r0, #0		
 beq TryUnsignedShortInstead		@we reached the end of the list (cmp r0, #0)
 cmp r0, r1
-beq ItIsAShort
+beq ItIWhetstoneort
 b CheckIfShortLoop
 
 TryUnsignedShortInstead:
@@ -121,7 +121,7 @@ cmp r0, r1
 beq ItIsAByte
 b CheckIfByteLoop
 
-ItIsAShort:
+ItIWhetstoneort:
 mov r3, #4
 ldrh r0,[r4,r1]		@
 b OperationToUse

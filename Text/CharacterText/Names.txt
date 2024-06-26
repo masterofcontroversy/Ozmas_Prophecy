@@ -25,11 +25,38 @@ Colton[X]
 ## LucyName
 Lucy[X]
 
-## MaxName ^
-Maximillion[X]
+## MaxName
+Max[X]
 
-## AlexandraName ^
+## AlexandraName
 Alexandra[X]
+
+## AlexandraName_Fivetile
+Alex^{a}nd^{ra}[X]
 
 ## EvelynName
 Evelyn[X]
+
+
+//Bosses
+## CharlesName
+Charles[X]
+
+## HendrickName
+Hendrick[X]
+
+## DominicName
+Dominic[X]
+
+//Factions
+## EastDuramontisName
+East Army[X]
+
+## CassisName
+Cassis[X]
+
+## StonemasonName
+Mason[X]
+
+## RaiderName
+Raider[X]

@@ -39,8 +39,9 @@ GrislyWoundIDLink:
 BYTE GrislyWoundID
 #include "PoisonStrikeGrislyWound/PSGWEvent.event"
 
-#include "SlyMovement/SlyMovement.lyn.event"
-WORD SlyMovementID
+#include "GreedyGhost/GreedyGhost.lyn.event"
+WORD GreedyGhostID
+#include "GreedyGhost/GreedyGhostEvent.event"
 
 ALIGN 4
 Despoil:

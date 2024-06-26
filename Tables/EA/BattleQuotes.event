@@ -3,9 +3,17 @@ ORG 0x846AC
 POIN BattleQuoteList
 POP
 
-#define BattleQuoteEntry(Unit1, Unit2, ChapterID, CompletionFlag, TextID, QuoteEvent) "SHORT Unit1 Unit2 ChapterID CompletionFlag TextID 0x0000; WORD QuoteEvent"
+#define BattleQuoteEntry(Unit1, Unit2, ChapterID, CompletionFlag, TextID, QuoteEvent) "SHORT Unit1 Unit2 ChapterID CompletionFlag TextID 0x0000; POIN QuoteEvent"
+#define BattleQuoteEntryBothWays(Unit1, Unit2, ChapterID, CompletionFlag, TextID, QuoteEvent) "BattleQuoteEntry(Unit1, Unit2, ChapterID, CompletionFlag, TextID, QuoteEvent); BattleQuoteEntry(Unit2, Unit1, ChapterID, CompletionFlag, TextID, QuoteEvent)"
 
 ALIGN 4
 BattleQuoteList:
+BattleQuoteEntryBothWays(Charles, 0x0, 0x0, BossQuoteID, 0x0000, CharlesBossQuoteEvent)
+BattleQuoteEntry(Evelyn, Absalom, Ch2_ChapterID, 0x9, Ch2_Evelyn_Absalom_Heal, 0x0)
+BattleQuoteEntryBothWays(Hendrick, Alexandra, Ch2_ChapterID, 0xA, Ch2_HendrickAlexandraQuote, 0x0)
+BattleQuoteEntryBothWays(Hendrick, 0x0, Ch2_ChapterID, BossQuoteID, Ch2_HendrickQuote, 0x0)
+BattleQuoteEntryBothWays(Dominic, 0x0, Ch4_ChapterID, BossQuoteID, DominicBattleQuote, 0x0)
+
+BattleQuoteEntryBothWays(Max, Dominic, Ch4_ChapterID, Max_DominicFlag, Ch4_MaxDominicQuote, 0x0)
 
 BYTE 0xFF 0xFF 0x00 0x00 0x43 0x0C 0x00 0x00 0x00 0x00 0xFF 0xFF //TERMINATOR

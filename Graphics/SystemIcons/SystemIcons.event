@@ -4,6 +4,15 @@ PUSH
 
     ORG 0x88650
     POIN StatScreenIcons
+
+	ORG 0x8D898
+	POIN SelectToMenuGfx
+
+	ORG 0x95E28
+	POIN PrepMenuLabelsGfx
+
+    ORG 0x88664
+    POIN SkillsLabel
 POP
 
 ALIGN 4
@@ -13,3 +22,15 @@ MiscIcons:
 ALIGN 4
 StatScreenIcons:
 #incbin "StatScreenIcons.lz77"
+
+ALIGN 4
+SelectToMenuGfx:
+#incbin "SelectToMenu.lz77"
+
+ALIGN 4
+PrepMenuLabelsGfx:
+#incbin "PrepMenuLabels.lz77"
+
+ALIGN 4
+SkillsLabel:
+#incbin "SkillsLabel.lz77"

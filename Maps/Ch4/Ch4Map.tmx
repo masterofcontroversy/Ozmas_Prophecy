@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="22" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="22" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
  <tileset firstgid="1" name="SnowPeaks" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="../Tilesets/SnowPeaks/SnowPeaks.png" width="512" height="512"/>
  </tileset>
@@ -7,19 +7,19 @@
   <properties>
    <property name="Anims1" value="0x0"/>
    <property name="Anims2" value="0x0"/>
-   <property name="ChapterID" value="0x3"/>
+   <property name="ChapterID" value="Ch4_ChapterID"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="0x13"/>
-   <property name="MapID" value="0x11"/>
+   <property name="MapChangesID" value="Ch4_TileChangesID"/>
+   <property name="MapID" value="Ch4_MapID"/>
    <property name="ObjectType" value="SnowPeaksObjectID"/>
-   <property name="PaletteID" value="SnowPeaksPaletteID"/>
+   <property name="PaletteID" value="SnowPeaksPaletteNightID"/>
    <property name="TileConfig" value="SnowPeaksConfigID"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJx9VMtOU1EU3ZerXDSGjyjQWyPRPyA0QSiEhAKfILFNcGAd+AP4CsQEGfADhEcMMfwCA9Awd+YEDZEwceSMAWvlrJOzraWDlX3O7tlrr/24LTOzGaCWm12a2SHsb9gqfG9x3gO+A/vwXQBLFvxDwKJsAbzTuz383iIQ/xwYzgLvU9hBx7mN81/YOuwo0Lag4RtsR3YM/l2Xg6jxLfBEvFXpLx3nijSQ85ml2sjH9+QYE1jvVwvcD4E5vW3o7aryE/eBCfgmgXvOF/s17fhZ7xDQwu/t/P/+1lyNURfrqljQQ18pX9WB/XsEbArreeov8/H+QPMgV9QW+SLHutPN83getDLmCPYzcAKcsj+68/dSuttOG/nmNdcYF2O2NV9qvYa9gj3UXBYs3Xf7aHrt4lZcDGf8Jw/4wT3AvQmUwLKF3Wr10dSwFPPYwu5S15SlnaZm8hwoX+H2ytfCc0e5y6539Sx9M6+004XuzEEtjJkD3ks7NTUUz7wx/6jrd9y/l/BtZcF2sttztLu+i7rbp8JxRY7NLHzztJ/65OCsyPfG0v714ooc1HIXOHE6euXonlsvrmNxxP+dD+qh7x9x7Oo4c7w8e11N9Z/7sAHcYe/ywO1nG/nXVHfc5Vn2QOeP2q8l1/cX1DqQNP0EflmaTaEcDdVRSE/M3bR/9+sCXDtABfnOHV8FtYy4Hnv93KV9xX/RuezKHftGzgw8A+K7AR0TqJM=
+   eJx9VMtOFFEQrabRBkL8iBGmh0jkD4yT+GiIiQN+gsSZRBIcFvyAD8wYEzSRHyAMhBDjL7DgEfbs3KghGjeyYeeCc3LPTRfjOIuTqlt969SpujWTJ2YPgVpq9svM9mB/wlYRew2/C5wC24idAQsW4o+AeWAEyIA3utfF9yaB/GfAjSTw3oe97jg34F/A1mEngJYFDcewbdlJxLdcDaLGu8CMeKvSn+PbJ3EuSgM5nwKFeiMf75NjUmC/Rxb6mQLmdLfQ3efqlRrGgDuI3QVGXSzO64HjZ78jQBPfW+m/8625HqMu9lWxoIexXLGqA+d3C1gXOmk5X9bjeVzvQa6oLfJFjo7TTX86DVqZ8wV2FzgADjkfnfk9l+6W0xb3oevyYs6G3pda/8L+ht3Tuzy2cOZebQ3QtOryFq30+cZ/4J8DX7kHODeAHHhioW5zgKbCypzbFnaXuu5ZudPUzB3dUb3M7ZXvhX5btfOee3U3oxXtdKb9YQ1qYc4csCbt1FQon3Vj/QnHFffvBWIfk2Dbyf9rtHp+F3W3T5njihzrSXgb2g8DavCtlpmblvvXjytyUMs14MDp6Fej9936ce2LI/7vvNUM/fyIfdfHieOl73U1NH/uwztgmLNLA7d/28j/EnjldnkWtiP/vfZrwc19iVqHSk3fgR9Wvk2mGoX6yKQn1m7Y1f06A9cmUEG9b46vgl5uuhl7/dylbeV/lp/31I5zI2cCniHxXQI/E6ne
   </data>
  </layer>
- <layer id="2" name="CellDoor1" width="22" height="18" visible="0">
+ <layer id="2" name="CellDoor1" width="22" height="18">
   <properties>
    <property name="Height" value="3"/>
    <property name="ID" value="0"/>
@@ -28,7 +28,19 @@
    <property name="Y" value="0"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYIAAd2YGmgBVRgYGD0bqm6tOI/eOglEwCkbBKMAOADe/AOQ=
+   eJxjYIAAd2YGmgBVRgYGD0bqm6sOdO9z6hs7CkbBKBgFowAHAAAjtgHL
+  </data>
+ </layer>
+ <layer id="7" name="FrontGate" width="22" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALKQDIQtwy0I0YBzQEAvIcA6A==
   </data>
  </layer>
  <layer id="4" name="Chest1" width="22" height="18" visible="0">

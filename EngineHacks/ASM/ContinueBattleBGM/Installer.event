@@ -1,0 +1,11 @@
+#ifndef jumpToHack_r3
+    #define jumpToHack_r3(offset) "SHORT 0x4B00 0x4718 ; POIN (offset|1)"
+#endif
+
+PUSH
+    ORG 0x71A68
+    jumpToHack_r3(ContinueBattleBGM)
+POP
+
+ContinueBattleBGM:
+#include "ContinueBattleBGM.lyn.event"

@@ -3,5 +3,5 @@ ROM hack of Fire Emblem the Sacred Stones USA
 
 ## build dependencies (Linux)
 - mono runtime (For ColorzCore)
-- grit (For font processing)
+- devkitpro (For code compilation and image processing)
 - python pillow (For TSAGenerator)

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="SnowPeaks" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Tilesets/SnowPeaks/SnowPeaks.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims1" value="VillageAnimationID"/>
+   <property name="Anims2" value="0x0"/>
+   <property name="ChapterID" value="Ch1_CutsceneChapterID"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="Ch1_CutsceneTileChangesID"/>
+   <property name="MapID" value="Ch1_CutsceneMapID"/>
+   <property name="ObjectType" value="SnowPeaksObjectID"/>
+   <property name="PaletteID" value="SnowPeaksPaletteID"/>
+   <property name="TileConfig" value="SnowPeaksConfigID"/>
+  </properties>
+  <data encoding="csv">
+356,227,292,99,901,809,983,849,984,844,902,356,198,99,99,
+194,291,47,901,934,975,1015,881,1016,975,933,902,230,83,292,
+901,844,776,934,975,1008,1007,1007,1008,1007,912,933,775,776,902,
+934,201,268,912,1007,940,911,1007,1008,940,911,912,266,205,933,
+912,298,300,1007,1007,972,976,1008,1007,972,976,1007,298,300,912,
+1007,1007,1008,1007,1008,1007,1007,1007,1008,1007,1007,1008,1007,1007,1007,
+965,967,840,943,1007,940,911,1007,1007,940,911,1007,840,965,967,
+359,328,906,844,902,972,976,1007,1008,972,901,844,906,232,359,
+326,359,938,871,933,902,944,1008,1007,901,934,871,938,232,34,
+358,34,200,34,871,840,943,1008,1007,840,406,200,293,34,200
+</data>
+ </layer>
+</map>

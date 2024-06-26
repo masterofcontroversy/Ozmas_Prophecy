@@ -326,11 +326,6 @@ BYTE SaviorID//works, but changes are not displayed in the pre-battle numbers (t
 BYTE ForeignPrincessID
 */
 BYTE 0x00//terminator
-ALIGN 4
-
-ALIGN 4
-SkillAdder: //given chardata in r0, skill in r1, add skill if possible
-#incbin addSkill.dmp
 
 ALIGN 4
 HookUnitLoading:

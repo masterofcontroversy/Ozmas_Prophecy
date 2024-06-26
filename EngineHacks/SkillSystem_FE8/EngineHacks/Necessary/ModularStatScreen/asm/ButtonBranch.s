@@ -7,6 +7,7 @@
 .endm
 
 .equ Text_ResetTileAllocation, 0x8003D21
+.equ IsFirstPlaythrough, 0x8030CC1
 
 mov		r1,#0x80
 lsl		r1,r1,#0x1
@@ -21,7 +22,10 @@ ldr		r0,StatScreenStruct
 ldr		r1,ReturnRButton
 bx		r1
 SelectButton:
-blh     Text_ResetTileAllocation, r0
+//blh   IsFirstPlaythrough, r0
+//cmp   r0, #0x0
+//bne   NotStatScreen
+blh   Text_ResetTileAllocation, r0
 ldr		r1,StatScreenStruct
 ldrb	r0,[r1]
 cmp		r0,#0x0				@stat screen

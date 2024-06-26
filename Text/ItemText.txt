@@ -37,6 +37,9 @@ Swiftblade[X]
 ## LancereaverName
 Lancereaver[X]
 
+## StrikerBladeName
+Striker Blade[X]
+
 ## IronLanceName
 Iron Lance[X]
 
@@ -80,7 +83,7 @@ Brave Axe[X]
 Killer Axe[X]
 
 ## HandAxeName
-Handaxe[X]
+Hand Axe[X]
 
 ## TomahawkName
 Tomahawk[X]
@@ -90,6 +93,9 @@ Hammer[X]
 
 ## HalberdName
 Halberd[X]
+
+## LabrysName
+Labrys[X]
 
 ## SwordreaverName
 Swordreaver[X]
@@ -163,6 +169,12 @@ Void[X]
 ## BlackHoleName
 Black Hole[X]
 
+## SarielName
+Sariel[X]
+
+## FinesseName
+Finesse[X]
+
 ## IronShieldName
 Iron Shield[X]
 
@@ -175,8 +187,26 @@ Silver Shield[X]
 ## CloverName
 Lucky Clover[X]
 
-## SashName
-Sash[X]
+## WhetstoneName
+Whetstone[X]
+
+## VigorStoneName
+Vigor Stone[X]
+
+## TealGemName
+Teal Gem[X]
+
+## AccostBandName
+Accost Band[X]
+
+## RajinArrowName
+Rajin Arrow[X]
+
+## BowDesc
+3x Might vs [PegasusIcon].[X]
+
+## HuntingBowDesc
+3x Might vs [HorseIcon][PegasusIcon].[X]
 
 ## IronShieldDesc
 +2 defense, -1 speed.[X]
@@ -187,39 +217,56 @@ Sash[X]
 ## SilverShieldDesc
 +6 defense, -4 speed.[X]
 
-## SashDesc
+## WhetstoneDesc
 +2 strength, -2 defense.[X]
 
 ## CloverDesc
-So lucky, it grew[NL]
-in the middle of winter.[X]
+It must be lucky if it grew in[NL]
+Duramontis. +7 Luck when held.[X]
+
+## CloverOtherDesc
+Boosts Luck by[NL]
+7 when held.[X]
+
+## VigorStoneDesc
+Allows equipped unit to move up to[NL]
+two spaces after attacking.[X]
+
+## TealGemDesc
+A common gemstone[NL]
+worth 1,000 gold.[X]
 
 ## GreatlanceDesc
-+1 attack per space moved.[X]
+[HorseIcon] only. Cannot follow-up.[NL]
++2 Attack per Move consumed.[X]
 
 ## HPDrainDesc
-Restores HP equal to damage delt.[X]
+Restores HP equal to damage dealt.[X]
 
 ## ArmorEffectiveDesc
-Effective against armored units.[X]
+3x Might vs [ArmorIcon].[X]
 
 ## HorseEffectiveDesc
-Effective against calvalry.[X]
+3x Might vs [HorseIcon].[X]
 
 ## RapierDesc
-Effective against calvary and armors.[X]
+3x Might vs [HorseIcon][ArmorIcon].[X]
 
 ## SwiftbladeDesc
-Follow-ups occur before counter attacks.[X]
+Follow-ups occur before counterattacks.[X]
+
+## StrikerBladeDesc
+Enemy always attacks first.[NL]
++1 strike at the end of round.[X]
 
 ## KillerDesc
-Allows for critical hits.[X]
-
-## BladeDesc
-Strong, but heavy.[X]
+Unlocks crit.[X]
 
 ## BraveDesc
 Double attack count.[X]
+
+## BraveBowDesc
+Double attack count. 3x Might vs [PegasusIcon][X]
 
 ## ReaverDesc
 Reverses and doubles weapon triangle.[X]
@@ -228,22 +275,34 @@ Reverses and doubles weapon triangle.[X]
 Effective against infantry sword users.[X]
 
 ## HealDesc
-Restores 10 + mag HP to an ally.[X]
+Restores 10 + Mag HP to an ally.[X]
 
 ## MendDesc
-Restores 20 + mag HP to an ally.[X]
+Restores 20 + Mag HP to an ally.[X]
 
 ## RecoverDesc
 Restores all HP to an ally.[X]
 
 ## PhysicDesc
-Restores 10 + mag HP to a distant ally.[X]
+Restores 10 + Mag HP to a distant ally.[X]
 
 ## FortifyDesc
-Restores 10 + mag HP to nearby allies.[X]
+Restores 10 + Mag HP to nearby allies.[X]
 
 ## RestoreDesc
 Removes negative status effects.[X]
+
+## FinesseDesc
+Temporarily boosts ally Tech by 7.[N]
+The effect grows weaker each turn.[X]
+
+## FinesseOtherDesc
+Raises Tech by 7.[N]
+The effect grows[NL]
+weaker each turn.[X]
+
+## FrostbiteDesc
++5 atk while it's snowing.[X]
 
 ## RescueDesc
 Moves distant ally to adjacent tile.[X]
@@ -253,3 +312,17 @@ Moves adjacent ally to a distant tile.[X]
 
 ## HammerneDesc
 Restores a weapon to new condition.[X]
+
+## VulneraryDesc
+A medicinal solution that[NL]
+restores 15 HP when used.[X]
+
+## AccostBandDesc
+Start a second round of combat[NL]
+if HP and AS are greater than[NL]
+opponent's when combat starts.[X]
+
+## RajinArrowDesc
+Makes bows deal magic damage.[NL]
+Attack power increases with magic[NL]
+instead of strength.[X]

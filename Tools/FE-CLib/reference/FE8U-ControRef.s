@@ -18,12 +18,46 @@ SET_FUNC __aeabi_idivmod, __modsi3
 
 SET_FUNC sub_8004B0C, 0x8004B0D
 
-SET_DATA gAttackerSkillBuffer, 0x03005350
-SET_DATA gDefenderSkillBuffer, 0x03005360
-SET_DATA gGenericSkillBuffer, 0x03005370
-SET_DATA gTempSkillBuffer, 0x03005380
+SET_DATA gAttackerSkillBuffer, 0x03003750
+SET_DATA gDefenderSkillBuffer, 0x03003760
+SET_DATA gGenericSkillBuffer, 0x03003770
+SET_DATA gTempSkillBuffer, 0x03003780
 SET_DATA gAuraSkillBuffer, 0x02027200
 SET_DATA gUnitRangeBuffer, 0x0202764C
+SET_DATA pExtraItemOrSkill, 0x0202BCDE
+
+SET_DATA gCloudFreeByte, 0x020271F0
+SET_FUNC LoadBattleAnimePalette, 0x80599E9
+SET_FUNC InitMainAnims, 0x8059d29
+SET_FUNC AnimClearAll, 0x8004eb9
+SET_FUNC AnimSort, 0x8004fad
+
+//New Skill System hit buffer
+SET_DATA gNewBattleHitArray, 0x203AAC0
+
+@ Morale
+SET_DATA gMoraleScore, 0x202bd25
+
+@ PreventTrade
+SET_FUNC DisplayFrozenUiHand, 0x804E849
+SET_FUNC TradeMenu_ApplyItemSwap, 0x802d72d
+SET_FUNC TradeMenu_UpdateTutorial, 0x802df09
+SET_FUNC TradeMenu_UpdateSelection, 0x802d5e9
+SET_FUNC TradeMenu_GetAdjustedRow, 0x802d439
+SET_FUNC TradeMenu_OnLoopUnselected, 0x802d835
+SET_FUNC StartLockingHelpBox_Unused, 0x8089455
+SET_FUNC GetUiHandPrevDisplayX, 0x804e86d
+SET_FUNC GetUiHandPrevDisplayY, 0x804e879
+SET_FUNC StartHelpBox, 0x8088de1
+SET_FUNC CloseHelpBox, 0x8089019
+SET_FUNC sub_809E7A8, 0x809E7A9
+SET_FUNC ShowSysHandCursor, 0x80ad51d
+SET_FUNC sub_8097F98, 0x8097F99
+SET_FUNC StartPrepErrorHelpbox, 0x8097da9
+SET_FUNC PrepItemSupply_GiveItemToSupply, 0x809e85d
+SET_FUNC PrepItemSupply_Loop_UnitInvKeyHandler, 0x809e975
+SET_FUNC StartItemHelpBox, 0x8088E61
+SET_FUNC ItemSubMenu_IsTradeAvailable, 0x8022f35
 
 @ Equip
 SET_DATA idkAddr, 0x3003060
@@ -1130,6 +1164,7 @@ SET_FUNC AttackCommandUsability, 0x80249AD
 SET_FUNC AttackBallistaCommandUsability, 0x8024A29
 SET_FUNC nullsub_26, 0x8024BF5
 SET_FUNC GetPhaseAbleUnitCount, 0x8024CED
+SET_FUNC CountUnitsInState, 0x8024D51
 SET_FUNC AreAllegiancesAllied, 0x8024D8D
 SET_FUNC AreAllegiancesEqual, 0x8024DA5
 SET_FUNC GetCurrentPhase, 0x8024DBD
@@ -1342,6 +1377,7 @@ SET_FUNC HasBattleUnitGainedWeaponLevel, 0x802C1B1
 SET_FUNC UpdateUnitFromBattle, 0x802C1ED
 SET_FUNC UpdateUnitDuringBattle, 0x802C2D5
 SET_FUNC BattleApplyBallistaUpdates, 0x802C301
+SET_FUNC NullSomeStuff, 0x802C335
 SET_FUNC GetUnitExpLevel, 0x802C345
 SET_FUNC GetUnitRoundExp, 0x802C369
 SET_FUNC GetUnitPowerLevel, 0x802C399
@@ -1454,6 +1490,7 @@ SET_FUNC LockGameGraphicsLogic, 0x8030185
 SET_FUNC UnlockGameGraphicsLogic, 0x80301B9
 SET_FUNC AllocWeatherParticles, 0x80301F5
 SET_FUNC nullsub_12, 0x8030711
+SET_FUNC WeatherUpdate_Clouds 0x8030B01
 SET_FUNC SetupWeatherGraphics_Maybe, 0x8030B35
 SET_FUNC UpdateWeatherGraphics, 0x8030BA5
 SET_FUNC SetupWeather, 0x8030C7D

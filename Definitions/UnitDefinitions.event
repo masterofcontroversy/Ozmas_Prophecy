@@ -12,7 +12,13 @@
 #define Alexandra 0xF
 #define Evelyn 0x10
 
+#define Charles 0x68
+#define Hendrick 0x46
+#define Dominic 0x48
+
 #define Duramontis 0xCD
 #define Cassis 0xC0
-#define Tolva 0x80
+#define EastDuramontis 0x80
+#define EastDuramontis2 0x81
 #define Raider 0x64
+#define Stonemason 0x65

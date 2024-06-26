@@ -1,0 +1,22 @@
+PUSH
+    ORG 0x2D0B0
+    jumpToHack(EventBattleExp)
+
+    //Prevent mystery function from clearing
+    ORG 0x120C4
+    SHORT 0x46C0
+    ORG 0x120CA
+    SHORT 0x46C0
+POP
+
+#include "ScriptedBattles.lyn.event"
+#include "EventBattleExp.lyn.event"
+
+#define BattleEventListEntry(attacker, defender, flag, event) "BYTE attacker defender; SHORT flag; POIN event"
+#define BattleEventListTerminator "WORD 0x0 0x0"
+
+ALIGN 4
+gBattleEventList:
+    BattleEventListEntry(Max, Dominic, 0x0, MaxDominicBattleEvent)
+    BattleEventListEntry(Dominic, Max, 0x0, MaxDominicBattleEvent)
+BattleEventListTerminator

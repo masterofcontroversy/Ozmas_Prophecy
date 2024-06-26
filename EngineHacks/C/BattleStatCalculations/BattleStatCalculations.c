@@ -2,6 +2,7 @@
 
 extern bool SkillTester(Unit* unit, u8 skillID);
 extern int  GetUnitEquippedItem(Unit* unit);
+extern int  GetCombatCount(Unit* unit);
 extern u8   gShieldfaireID;
 extern u8   gCriticalSkillID;
 
@@ -23,13 +24,14 @@ void ComputeBattleUnitHitRate(BattleUnit* unit) {
 
 void ComputeBattleUnitCritRate(BattleUnit* unit) {
     unit->battleCritRate = GetItemCrit(unit->weaponBefore);
-    if (unit->battleCritRate && SkillTester((Unit*) unit, gCriticalSkillID)) {
+    if (SkillTester((Unit*) unit, gCriticalSkillID)) {
         unit->battleCritRate += unit->unit.skl;
     }
 }
 
 void ComputeBattleUnitAvoidRate(struct BattleUnit* unit) {
-    unit->battleAvoidRate = unit->battleSpeed + unit->terrainAvoid + unit->unit.lck;
+    unit->battleAvoidRate = unit->battleSpeed + (unit->battleSpeed / 2);
+    unit->battleAvoidRate += unit->terrainAvoid + unit->unit.lck;
 
     if (unit->battleAvoidRate < 0)
         unit->battleAvoidRate = 0;
@@ -42,13 +44,6 @@ void ComputeBattleUnitSpeed(BattleUnit* unit) {
     
     if (GetUnitEquippedItem((Unit*) unit)) {
         equipmentWeight = GetItemWeight(GetUnitEquippedItem((Unit*) unit));
-    }
-
-    if (SkillTester((Unit*) unit, gShieldfaireID)) {
-        equipmentWeight -= 2;
-        if (equipmentWeight < 0) {
-            equipmentWeight = 0;
-        }
     }
 
     effectiveWeight = (weaponWeight + equipmentWeight) - unit->unit.conBonus;
@@ -72,9 +67,16 @@ void ComputeBattleUnitSupportBonuses(BattleUnit* unit) {
         unit->battleDefense   += tmpBonuses.bonusDefense;
         unit->battleHitRate   += tmpBonuses.bonusHit;
         unit->battleAvoidRate += tmpBonuses.bonusAvoid;
-        if (unit->battleCritRate) {
-            unit->battleCritRate  += tmpBonuses.bonusCrit;
-        }
+        unit->battleCritRate  += tmpBonuses.bonusCrit;
         //unit->battleDodgeRate += tmpBonuses.bonusDodge;
+    }
+}
+
+void ApplyFrostbiteBonus(BattleUnit* unit) {
+    if (GetItemIndex(unit->weaponBefore) == 0x42) {
+        if (gChapterData.weather == WEATHER_SNOW ||
+            gChapterData.weather == WEATHER_SNOWSTORM) {
+            unit->battleAttack += 5;
+        }
     }
 }

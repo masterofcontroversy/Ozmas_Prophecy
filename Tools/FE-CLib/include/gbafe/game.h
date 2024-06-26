@@ -20,9 +20,12 @@ struct BattleMapState {
 	/* 1C */ struct Vec2u _unk1C;
 	/* 20 */ struct Vec2u cursorDisplayRealPos;
 	/* 24 */ struct Vec2 _unk24;
-	/* 28 */ u8 _pad28[0x3C - 0x28];
+    /* 2C */ u16 um_tmp_item;
+	/* 2E */ u8 _pad28[0x3C - 0x2E];
 	/* 3C */ u8 boolHasJustResumed;
 	/* 3D */ u8 partialActionTaken; // bits
+    /* 3E */ u8 unk3E;
+    /* 3F */ s8 unk3F;
 };
 
 enum {

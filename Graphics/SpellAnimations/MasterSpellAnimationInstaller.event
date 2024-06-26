@@ -3,30 +3,44 @@
 #define setCSATable(index, framedata, RTLFG, LTRFG, RTLBG, LTRBG) "PUSH; ORG CSATable+(index*20); POIN framedata RTLFG LTRFG RTLBG LTRBG; POP"
 #define setCustomSpell_dim(index) "PUSH; ORG SpellTable+(index*4); POIN CSAEngine_Dim|1; POP"
 #define setCustomSpell_nodim(index) "PUSH; ORG SpellTable+(index*4); POIN CSAEngine_NoDim|1; POP"
+#define CustomSpellCount 20
 
 ALIGN 4
 #inctext lyn "SpellFix.elf" "SpellFixHook.elf" //Fix dodge to front glitch (thanks Snakey1)
 
-#ifdef _FE8_
-  #define SpellTable $5d4e60
+SpellTable:
+#incbin "RepointedSpellTable.dmp"
+FILL 0x20 * CustomSpellCount
+
+PUSH
+  ORG $5B3F8
+  POIN SpellTable
+POP
 
   CSATable:
   #incbin BlankCSATable.dmp
   
-  PUSH
+PUSH
   ORG $95d780
   CSAEngine:
-  #incbin "CSASystem_fe8.dmp" //the custom spell engine. All custom spells point here.
+  #include "CSASystem_fe8.lyn.event" //the custom spell engine. All custom spells point here.
   POIN CSATable //needed for the routine
-  POP
+POP
 
-  #define CSAEngine_Dim $95d7ec
-  #define CSAEngine_NoDim $95d898 //the last word in the dmp, this should be updated if you edit the engine.
-#endif
+#include "CSA_Additions_fe8.lyn.event"
+
+#define CSAEngine_Dim $95d7ec
+#define CSAEngine_NoDim $95d898 //the last word in the dmp, this should be updated if you edit the engine.
 
 //animations go here
 
 //#include "My Spells/Some Spell.event" //for example
 {
-#include "frostbite/frostbiteranged/frostbite.event"
+#include "Spells/frostbite/frostbite.event"
+}
+{
+#include "Spells/Sariel/Sariel.event"
+}
+{
+#include "Spells/Miasma/Miasma.event"
 }

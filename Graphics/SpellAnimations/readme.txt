@@ -119,5 +119,11 @@ Command list
   module packages.
   Argument XXYY is a 16 bit music ID.
 0x49 through 0x52 - passed to attacker's animation; see note above for commands 0x14 through 0x28
-0x53 through 0xFF - Ignored/unused
+0x53 through 0x80 - Ignored/unused
+0x80 - Preserved for Mikey's camera pan (https://feuniverse.us/t/fe6-7-8-circles-spell-animation-creator-updated-to-v1-1/1946/33)
+0x81 - Shifts spell object by XX pixels towards opponent
+  Argument XX is the offset to scroll by
+0x81 - Shifts spell background (layer 1) by XX pixels towards opponent
+  Argument XX is the offset to scroll by
+0x82 through 0xFF - Ignored/unused
 

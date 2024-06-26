@@ -5,9 +5,9 @@ PlaceholderAnimPoint:
 EndClassAnimation
 EndClassAnimation
 
-DukeAnimPoint:
-AddClassAnimation(DukeLance,Lance,0x1)
-AddClassAnimation(DukeUnarmed,Unarmed,0x1)
+CountAnimPoint:
+AddClassAnimation(CountLance,Lance,0x1)
+AddClassAnimation(CountUnarmed,Unarmed,0x1)
 EndClassAnimation
 
 
@@ -413,6 +413,15 @@ AddClassAnimation(BerserkerHandaxe,Tomahawk,0x0)
 AddClassAnimation(BerserkerUnarmed,Unarmed,0x1)
 EndClassAnimation
 
+IronMageAnimPoint:
+AddClassAnimation(IronMageMagic,Anima,0x1)
+AddClassAnimation(IronMageMagic,Unarmed,0x1)
+EndClassAnimation
+
+ArcanistAnimPoint:
+AddClassAnimation(ArcanistMagic,Dark,0x1)
+AddClassAnimation(ArcanistMagic,Unarmed,0x1)
+EndClassAnimation
 
 //Priest
 //Cleric

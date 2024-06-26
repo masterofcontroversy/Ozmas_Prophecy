@@ -1,0 +1,80 @@
+
+ALIGN 4
+ArenaSnowNightPlatformPalette:
+#incbin "png/ArenaSnowNightPlatform.pal"
+
+ALIGN 4
+BallistaSnowNightPlatformPalette:
+#incbin "png/BallistaSnowNightPlatform.pal"
+
+ALIGN 4
+BridgeSnowNightPlatformPalette:
+#incbin "png/BridgeSnowNightPlatform.pal"
+
+ALIGN 4
+CliffSnowNightPlatformPalette:
+#incbin "png/CliffSnowNightPlatform.pal"
+
+ALIGN 4
+ForestSnowNightPlatformPalette:
+#incbin "png/ForestSnowNightPlatform.pal"
+
+ALIGN 4
+FortSnowNightPlatformPalette:
+#incbin "png/FortSnowNightPlatform.pal"
+
+ALIGN 4
+GateSnowNightPlatformPalette:
+#incbin "png/GateSnowNightPlatform.pal"
+
+ALIGN 4
+GlacierSnowNightPlatformPalette:
+#incbin "png/GlacierSnowNightPlatform.pal"
+
+ALIGN 4
+HillSnowNightPlatformPalette:
+#incbin "png/HillSnowNightPlatform.pal"
+
+ALIGN 4
+HouseSnowNightPlatformPalette:
+#incbin "png/HouseSnowNightPlatform.pal"
+
+ALIGN 4
+LakeSnowNightPlatformPalette:
+#incbin "png/LakeSnowNightPlatform.pal"
+
+ALIGN 4
+PeaksSnowNightPlatformPalette:
+#incbin "png/PeaksSnowNightPlatform.pal"
+
+ALIGN 4
+PlainsSnowNightPlatformPalette:
+#incbin "png/PlainsSnowNightPlatform.pal"
+
+ALIGN 4
+RiverSnowNightPlatformPalette:
+#incbin "png/RiverSnowNightPlatform.pal"
+
+ALIGN 4
+RoadSnowNightPlatformPalette:
+#incbin "png/RoadSnowNightPlatform.pal"
+
+ALIGN 4
+RuinsSnowNightPlatformPalette:
+#incbin "png/RuinsSnowNightPlatform.pal"
+
+ALIGN 4
+ThicketSnowNightPlatformPalette:
+#incbin "png/ThicketSnowNightPlatform.pal"
+
+ALIGN 4
+VendorSnowNightPlatformPalette:
+#incbin "png/VendorSnowNightPlatform.pal"
+
+ALIGN 4
+VillageSnowNightPlatformPalette:
+#incbin "png/VillageSnowNightPlatform.pal"
+
+ALIGN 4
+ArmorySnowNightPlatformPalette:
+#incbin "png/ArmorySnowNightPlatform.pal"

@@ -191,7 +191,7 @@ ALIGN 4
 ALIGN 4
 #ifdef ExpandedLevelUpScreen
 	Growths_Anims_Off_Stat_Name_Table:
-	StatNameLevelUp(9,0,0xA01158) // Level
+	StatNameLevelUp(10,0,0xA01158) // Level
 	StatNameLevelUp(1,4,0xA01160) // HP
 	StatNameLevelUp(1,6,0xA01164) // Strength
 	StatNameLevelUp(1,8,0xA01168) // Magic
@@ -205,7 +205,7 @@ ALIGN 4
 	SHORT 0xFFFF
 #else
 	Growths_Anims_Off_Stat_Name_Table:
-	StatNameLevelUp(9,0,0xA01158) // Level
+	StatNameLevelUp(10,0,0xA01158) // Level
 	StatNameLevelUp(1,4,0xA01160) // HP
 	StatNameLevelUp(1,6,0xA01164) // Strength
 	StatNameLevelUp(1,8,0xA01168) // Magic

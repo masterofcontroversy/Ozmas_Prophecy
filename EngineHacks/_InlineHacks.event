@@ -9,6 +9,30 @@ SHORT $0 $0
 ORG $897C4
 SHORT $200E $5620
 
+ORG 0x73800
+BYTE 0x9
+ORG 0x73848
+BYTE 0xE8
+
+//Map level up
+ORG 0x9a3ed4 //lvl text X offset
+BYTE 0xB
+ORG 0x7EB56
+SHORT 0x1C02
+
+//Make map animation level up stat labels not be centered
+ORG 0x7EB5C
+SHORT 0x46C0; WORD2 0xFC6DF795
+
+//Replace prep Armory command with Sell
+//(by making the game act like it's in the world map)
+ORG 0x9941E //Text
+    SHORT 0x46C0
+ORG 0x99724 //Help text
+    SHORT 0x46C0
+ORG 0x99872 //Effect
+    SHORT 0x46C0
+
 //Don't reset level on promotion
 // By 7743
 ORG 0x2BE70
@@ -21,6 +45,14 @@ BYTE 0x18 0x7A
 // By Shuusuke
 ORG 0x180FA
 BYTE 0xFF 0xF7 0x63 0xFF
+
+//Characters who LOAD2 always load
+ORG 0x9ED674
+BYTE Ronni Evelyn Absalom
+
+//Use Select Button to leave map preview
+ORG 0x33A42
+BYTE 0x4
 
 //Don't add 9 auto levels to promoted enemy units
 ORG 0x18136
@@ -73,8 +105,34 @@ ORG 0x78DD4
 POIN MovementSoundsTable
 
 //Prevent item losing durability when promoting
-ORG 0x189A2
-SHORT 0xE005
+//ORG 0x189A2
+//SHORT 0xE005
+
+//Move BWL text down
+ORG 0x86FE6
+SHORT 0x46C0 //Ignore cleared save check
+ORG 0x870B8
+WORD 0x20040F2
+
+//Change Luck cap
+ORG 0x0872AE; BYTE 25
+ORG 0x02C016; BYTE 25
+ORG 0x02C01C; BYTE 25
+ORG 0x018250; BYTE 25
+ORG 0x018254; BYTE 25
+ORG 0x0926FC; BYTE 25
+ORG 0x09C154; BYTE 25
+ORG 0x09C31C; BYTE 25
+
+//Allow Visit from any tile except Ruins (HyperGammaSpaces)
+ORG $23070
+SHORT $2825 $D021 $E00C
+
+//Faster status screen
+ORG 0xA00A48
+PROC_13
+ORG 0xA00A60
+PROC_13
 
 //Allow each animation table entry to have its own palette
 ORG 0x59A34
@@ -96,6 +154,33 @@ SHORT 0x46C0 0x46C0 //Skip attack action branch
 ORG 0x834CA         //Anims on
 SHORT 0x46C0 0x46C0 //Skip attack action branch
 
+//Disable reverse check for battle conversations
+ORG 0x846CE
+SHORT 0xE001
+
+//Mystery trading
+ORG 0x22F50
+SHORT 0x46C0 //Skip partial action check
+
+//Prep screen name text width
+ORG 0x99554 //Prep screen item menu selected pixel width
+BYTE 0x2B
+ORG 0x9878C //Prep screen item menu selected tile width
+BYTE 0x6
+ORG 0x9A820 //Prep screen item menu tile width
+BYTE 0x6
+ORG 0x98728 //Prep screen pick units tile width
+BYTE 0x6
+ORG 0x9EF18 //List menu tile width
+BYTE 0x6
+
+
+//Stat screen class name tile width
+ORG 0xA00708
+BYTE 9
+
+
+
 //Weather priorities
 // By Zane
 ORG 0x030366; BYTE 0xC0 //change 80 to 80/A0/C0/E0 light snow
@@ -104,11 +189,6 @@ ORG 0x59D95F; BYTE 0x18
 ORG 0x59D967; BYTE 0x18 //change 10 to 10/14/18/1C rain
 ORG 0x0309B2; BYTE 0xA8 //change A0 to A0/A4/A8/AC BBQ
 ORG 0x03053D; BYTE 0x18 //change 10 to 10/14/18/1C sandstorm
-//ORG 0x030B31; BYTE 0xA8 //change AC to A0/A4/A8/AC clouds
-
-//Experimental stuff for cloud fog effects
-//ORG 0x08D01C; BYTE 0xB
-//ORG 0x08D01E; BYTE 0x5
-//ORG 0x08D026; BYTE 0x10 //layer for alpha blend
+ORG 0x030B31; BYTE 0xAC //change AC to A0/A4/A8/AC clouds
 
 POP

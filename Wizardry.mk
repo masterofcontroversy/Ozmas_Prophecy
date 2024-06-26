@@ -14,7 +14,7 @@ LYNREF :=$(abspath .)/Tools/FE-CLib/reference/FE8U-ControRef.o
 
 # setting up compilation flags
 ARCH	:= -mcpu=arm7tdmi -mthumb -mthumb-interwork
-CFLAGS	:= $(ARCH) -Wall -Os -mtune=arm7tdmi
+CFLAGS	:= $(ARCH) -Wall -O2 -mtune=arm7tdmi
 
 # header files location
 HEADER_FILES := $(abspath .)/Tools/FE-CLib/include
@@ -32,7 +32,7 @@ sources:
 
 # ASM to OBJ
 %.o: %.s
-	$(AS) $(ARCH) $< -I $(dir $<) $(ASSEMBLY_HEADERS)  -o $@
+	@$(AS) $(ARCH) $< -I $(dir $<) $(ASSEMBLY_HEADERS)  -o $@
 
 # OBJ to EVENT rule
 %.lyn.event: %.o $(LYNREF)

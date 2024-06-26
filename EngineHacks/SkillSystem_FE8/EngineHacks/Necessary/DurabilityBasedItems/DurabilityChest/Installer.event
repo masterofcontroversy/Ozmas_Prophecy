@@ -21,6 +21,8 @@ GiveItemWithDurability:
 #incbin "GiveItemWithDurability.dmp"
 
 #define DurabilityChest(item,durability,chestX,chestY) "CHES 0 item|(durability<<8) [chestX,chestY] 0x14"
+#define DurabilityChest(eventID,item,durability,chestX,chestY) "CHES eventID item|(durability<<8) [chestX,chestY] 0x14"
+
 
 #define GiveItemWithDurability(Item,Durability,Character) "SVAL 0xC Durability; ASMC GiveItemWithDurability|1; CALL $591F40; SMOV 0x3 (Durability<<8)|Item ; GIVEITEMTO Character"
 

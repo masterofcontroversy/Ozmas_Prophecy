@@ -5,11 +5,7 @@ SnowSkyObjects:
 
 ALIGN 4
 SnowSkyConfig:
-#incext compress "Tilesets/SnowSky/SnowSkyConfig.mapchip"
-
-ALIGN 4
-SnowSkyPalette:
-#incbin "Tilesets/SnowSky/SnowSkyObjects.pal"
+#incbin "Tilesets/SnowSky/SnowSkyConfig.mapchip.dmp"
 
 //SnowFields
 ALIGN 4
@@ -18,7 +14,7 @@ SnowFieldsObjects:
 
 ALIGN 4
 SnowFieldsConfig:
-#incext compress "Tilesets/SnowFields/SnowFieldsConfig.mapchip"
+#incbin "Tilesets/SnowFields/SnowFieldsConfig.mapchip.dmp"
 
 ALIGN 4
 SnowFieldsPalette:
@@ -31,7 +27,7 @@ SnowVillageObjects:
 
 ALIGN 4
 SnowVillageConfig:
-#incext compress "Tilesets/ImprovedVillage/ImprovedVillageConfig.mapchip"
+#incbin "Tilesets/ImprovedVillage/ImprovedVillageConfig.mapchip.dmp"
 
 ALIGN 4
 SnowVillagePalette:
@@ -43,38 +39,23 @@ SnowPeaksObjects:
 
 ALIGN 4
 SnowPeaksConfig:
-#incext compress "Tilesets/SnowPeaks/SnowPeaksConfig.mapchip"
+#incbin "Tilesets/SnowPeaks/SnowPeaksConfig.mapchip.dmp"
 
 ALIGN 4
 SnowPeaksPalette:
 #incbin "Tilesets/SnowPeaks/SnowPeaksObjects.pal"
 
+ALIGN 4
+SnowPeaksPaletteNight:
+#incbin "Tilesets/SnowPeaks/SnowPeaksObjectsNight.pal"
 
-#define SnowSkyObjectID 0x50
-#define SnowSkyPaletteID 0x51
-#define SnowSkyConfigID 0x52
-
-#define SnowFieldsObjectID 0x42
-#define SnowFieldsPaletteID 0x43
-#define SnowFieldsConfigID 0x44
-
-#define SnowFieldsAnim2ID 0x54
-#define SnowFieldsAnimationID 0xE6
-
-#define SnowVillageObjectID 0x8B
-#define SnowVillagePaletteID 0x8C
-#define SnowVillageConfigID 0x8D
-
-#define VillageAnimationID 0x12
-
-#define SnowPeaksObjectID 0x8E
-#define SnowPeaksPaletteID 0x8F
-#define SnowPeaksConfigID 0x90
+ALIGN 4
+IceCavePalette:
+#incbin "Tilesets/IceCave/IceCaveObjects.pal"
 
 EventPointerTable(SnowFieldsAnimationID, SnowFieldsAnimationLabel)
 
 EventPointerTable(SnowSkyObjectID, SnowSkyObjects)
-EventPointerTable(SnowSkyPaletteID, SnowSkyPalette)
 EventPointerTable(SnowSkyConfigID, SnowSkyConfig)
 
 EventPointerTable(SnowFieldsObjectID, SnowFieldsObjects)
@@ -91,4 +72,7 @@ EventPointerTable(VillageAnimationID, VillageAnimationLabel)
 
 EventPointerTable(SnowPeaksObjectID, SnowPeaksObjects)
 EventPointerTable(SnowPeaksPaletteID, SnowPeaksPalette)
+EventPointerTable(SnowPeaksPaletteNightID, SnowPeaksPaletteNight)
 EventPointerTable(SnowPeaksConfigID, SnowPeaksConfig)
+
+EventPointerTable(0x51, IceCavePalette)

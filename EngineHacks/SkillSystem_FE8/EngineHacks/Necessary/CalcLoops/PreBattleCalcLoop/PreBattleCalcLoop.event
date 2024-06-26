@@ -18,11 +18,12 @@ POIN BtlLoopList
 
 ALIGN 4
 BtlLoopList:
+POIN SetEquipmentAttributes
 POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
 POIN InitializePreBattleLoop //Must go before aura skills
 POIN Lull //This is effectively a stat modifier routine, so it has to go first
 POIN BreakerCheck MageSlayer
-POIN DefendingCheck
+//POIN DefendingCheck
 //POIN FaireCheck
 
 #ifdef LEADERSHIP_STARS
@@ -33,7 +34,7 @@ POIN DefendingCheck
 #endif //BIORHYTHM
 
 
-POIN Charm Inspiration Loyalty
+POIN Charm Inspiration Loyalty ApplyFrostbiteBonus
 POIN SpurStr SpurMag SpurSpd SpurDef SpurRes Charge
 /*
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes

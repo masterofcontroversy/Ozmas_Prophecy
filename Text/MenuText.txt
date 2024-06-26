@@ -1,6 +1,6 @@
 ## ProtectionDesc
 Protection.[NL]
-Total resistence to physical attacks.[X]
+Total resistance to physical attacks.[X]
 
 ## AttackSpeedDesc
 Attack Speed.[NL]
@@ -9,4 +9,17 @@ is accounted for.[X]
 
 ## ResilienceDesc
 Resilience.[NL]
-Total resistence to Magic attacks.[X]
+Total resistance to magic attacks.[X]
+
+## ArrowReplacement
+->[X]
+
+## ClearChapterText
+ Clear Ch.[X]
+
+## ClearChapterDesc
+Clears the current chapter[X]
+
+## TradeErrorMessage
+Off-hand equipment cannot[N]
+be transferred mid-battle.[X]

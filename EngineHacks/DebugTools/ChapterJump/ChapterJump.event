@@ -1,5 +1,4 @@
 #include "src/ChapterJump.lyn.event"
-#include "ChapterMenu.event"
 
 //remove if table is defined elsewhere
 #include "DebugEventTable/DebugEvent.event"

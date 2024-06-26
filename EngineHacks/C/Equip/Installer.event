@@ -8,19 +8,23 @@ ALIGN 4
 
 ALIGN 4
 EquipmentList:
-BYTE IronShield SteelShield SilverShield Sash MagicShield
+BYTE IronShield SteelShield SilverShield Whetstone MagicShield VigorStone AccostBand RajinArrow Clover
 BYTE 0x00 //terminator
 
 // Defense equipemnt loses durability on each hit taken
 ALIGN 4
 DefenseEquipmentList:
-BYTE IronShield SteelShield SilverShield MagicShield
+//BYTE IronShield SteelShield SilverShield MagicShield
 BYTE 0x00 // terminator
 
 // Offense equipment loses durability on each attack made
 ALIGN 4
 OffenseEquipmentList:
-BYTE Sash
+//BYTE AccostBand RajinArrow
+BYTE 0x00 // terminator
+
+EquipmentRTextList:
+BYTE IronShield SteelShield SilverShield Whetstone MagicShield
 BYTE 0x00 // terminator
 
 // Equipment in neither list doesn't decrement durability
@@ -131,8 +135,9 @@ ItemUnitMenu:
 IUM_Use
 IUM_Equip
 MenuCommand($697, EquipEquipmentDescription, GreenText, EquipEquipmentUsability, EquipEquipment)
-MenuCommand(UnequipName, UnequipEquipmentDescription, GreenText, UnequipEquipmentUsability, UnequipEquipment)
-IUM_Trade
+//MenuCommand(UnequipName, UnequipEquipmentDescription, GreenText, UnequipEquipmentUsability, UnequipEquipment)
+//IUM_Trade
+MenuCommand(0x698, 0x6D4, GreenText, ItemSubMenu_TradeUsability, 0x8023838|1)
 IUM_Discard
 
 

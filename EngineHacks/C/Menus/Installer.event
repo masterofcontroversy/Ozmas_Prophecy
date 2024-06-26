@@ -1,0 +1,5 @@
+#include "Menus.lyn.event"
+
+ALIGN 4
+ArrowReplacementLink:
+SHORT ArrowReplacement

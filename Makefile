@@ -18,6 +18,11 @@ else
   export PYTHON3 := python3
 endif
 
+# Making sure devkitpro exists and is set up.
+ifeq ($(strip $(DEVKITPRO)),)
+	$(error "Please set DEVKITPRO in your environment. export DEVKITPRO=<path to>devkitPRO")
+endif
+
 SOURCE_ROM			:= $(realpath .)/FE8_clean.gba
 TARGET_ROM			:= $(realpath .)/Dist/Build_0.gba
 TARGET_SYM			:= $(realpath .)/Dist/Build_0.sym
@@ -30,16 +35,16 @@ COLORZCORE 			:= $(realpath .)/Tools/EventAssembler/ColorzCore$(EXE)
 # text
 TEXT_FOLDER 		:= $(realpath .)/Text
 TEXT_INSTALLER 		:= $(TEXT_FOLDER)/InstallTextData.event
-TEXT_MAIN			:= $(realpath .)/Text/text_buildfile.txt
+TEXT_MAIN			:= $(TEXT_FOLDER)/text_buildfile.txt
 ALL_TEXTFILES		:= $(shell $(EADEP) $(TEXT_MAIN) --add-missings)
-TEXT_DEFINITIONS	:= $(realpath .)/Text/TextDefinitions.event
+TEXT_DEFINITIONS	:= $(TEXT_FOLDER)/Text/TextDefinitions.event
 
 PORTRAIT_DMPS		:= $(realpath .)/Graphics/Portraits/dmp
 MAPSPRITES_DMPS		:= $(realpath .)/Graphics/MapSprites/dmp
 
 # tools
-GRIT 				:= $(realpath .)/Tools/grit/grit$(EXE)
-LYN 				:= $(abspath .)/Tools/EventAssembler/Tools/lyn$(EXE)
+GRIT 				:= $(DEVKITPRO)/tools/bin/grit$(EXE)
+LYN 				:= $(realpath .)/Tools/EventAssembler/Tools/lyn$(EXE)
 PORTRAITFORMATTER 	:= $(realpath .)/Tools/EventAssembler/Tools/PortraitFormatter$(EXE)
 COMPRESS			:= $(realpath .)/Tools/EventAssembler/Tools/compress$(EXE)
 PARSEFILE			:= $(realpath .)/Tools/EventAssembler/Tools/ParseFile$(EXE)
@@ -49,11 +54,16 @@ TEXT_PROCESS		:= $(PYTHON3) $(realpath .)/Tools/TextProcess/textprocess-classic-
 SYMCOMBO			:= $(PYTHON3) $(realpath .)/Tools/sym/SymCombo.py
 PALETTECONDENSER	:= $(PYTHON3) $(realpath .)/Tools/PaletteCondenser/PaletteCondenser.py
 TSAGENERATOR		:= $(PYTHON3) $(realpath .)/Tools/TSAGenerator/TSAGenerator.py
+S2EA				:= $(PYTHON3) $(realpath .)/Tools/s2ea.py
+
+TSAGENERATOR_BGARGS := --header --reverse
 
 GRITLZ77ARGS		:= -gu 16 -gzl -gB 4 -p! -m! -ft bin -fh!
+GRIT8BPPLZ77ARGS	:= -gu 16 -gzl -gB 8 -p! -m! -ft bin -fh!
 GRIT4BPPARGS		:= -gu 16 -gB 4 -p! -m! -ft bin -fh!
 GRIT2BPPARGS		:= -gu 16 -gb -gB 2 -p! -m! -ft bin -fh!
 GRITPALETTEARGS		:= -g! -m! -p -ft bin -fh!
+GRIT10PALETTEARGS	:= -g! -m! -p -pe 159 -ft bin -fh!
 
 VANILLASYM			:= $(realpath .)/Tools/sym/VanillaOffsets.sym
 
@@ -83,6 +93,10 @@ $(PORTRAIT_DMPS):
 	cd $(dir $<) && $(GRIT) $< $(GRIT4BPPARGS)
 	@mv $(basename $<).img.bin $@
 
+%.8bpp.lz77: %.png
+	cd $(dir $<) && $(GRIT) $< $(GRIT8BPPLZ77ARGS)
+	@mv $(basename $<).img.bin $@
+
 %.fontchar: %.png
 	cd $(dir $<) && $(GRIT) $< $(GRIT2BPPARGS)
 	@mv $(basename $<).img.bin $@
@@ -95,12 +109,21 @@ $(PORTRAIT_DMPS):
 	cd $(dir $<) && $(GRIT) $< $(GRITPALETTEARGS)
 	@mv $(basename $<).pal.bin $@
 
+%.battlebackgroundpal: %.png
+	cd $(dir $<) && $(GRIT) $< $(GRIT10PALETTEARGS)
+	@mv $(basename $<).pal.bin $@
+	$(COMPRESS) $@ $@
+
+%.battlebackgroundtsa.lz77: %.png
+	$(TSAGENERATOR) $< --output $@
+	$(COMPRESS) $@ $@
+
 %.btlpal: %.pal
 	$(PALETTECONDENSER) $< $@
 	$(COMPRESS) $@ $@
 
 %.bgtsa.lz77: %.png
-	$(TSAGENERATOR) $< $@
+	$(TSAGENERATOR) $< $(TSAGENERATOR_BGARGS) --output $@
 	$(COMPRESS) $@ $@
 
 %.mpsprite: ../img/%.png
@@ -123,6 +146,9 @@ $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(ALL_TEXTFILES)
 %.event %_data.dmp: %.tmx
 	$(NOTIFY_PROCESS)
 	@echo | $(TMX2EA) $< > /dev/null
+
+%.music.event: %.s
+	$(S2EA) $< $@
 
 %.dmp:
 	: do nothing for $@
@@ -147,4 +173,5 @@ clean:
 
 	@echo All clean!
 
+.DELETE_ON_ERROR: $(TARGET_ROM)
 .PHONY: clean

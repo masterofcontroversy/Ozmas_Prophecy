@@ -1,20 +1,20 @@
 INLINE MagCharTable,Base Magic,Magic Growth
 None,0,0
 0x01 Devan,0,0
-0x02 Veronica,2,15
+0x02 Veronica,3,25
 0x03 Anthony,0,5
 0x04 Kenneth,1,5
-0x05 Holly,3,40
+0x05 Holly,6,50
 0x06 Julianne,2,25
 0x07 Absalom,0,0
 0x08 Neimi,2,15
-0x09 Lucy,2,30
-0x0A Maximillion,2,45
+0x09 Lucy,0,35
+0x0A Maximillion,2,50
 0x0B Innes,1,10
 0x0C Lute,5,65
 0x0D Natasha,1,60
 0x0E Cormag,0,5
-0x0F Alexandra,0,15
+0x0F Alexandra,0,20
 0x10 Eveyln,1,20
 Kyle,0,10
 Amelia,2,25
@@ -99,7 +99,7 @@ Entombed (Monster Boss),3,5
 0,0,0
 0,0,0
 +AC0-0,0,0
-Hunter (Ch 16),3,10
+Hunter (Ch 16),0,0
 +AC0-0,0,0
 Brigand,0,0
 0,0,0

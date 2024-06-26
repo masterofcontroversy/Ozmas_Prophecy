@@ -777,16 +777,16 @@
   lsl     r4, r4, #0x1
   add     r0, r4, #1
   lsl     r0, r0, #0x6
-  ldr     r1, =#0x2003D4C
+  ldr     r1, =0x2003D4C
   add     r0, r0, r1
   mov     r1, #0x0
   mov     r2, #0x35            @the equip 'E'
   blh     DrawSpecialUiChar
   add     r0, r4, #2
   lsl     r0, r0, #0x6
-  ldr     r1, =#0x200472E
+  ldr     r1, =0x200472E
   add     r0, r0, r1
-  ldr     r1, =#0x8A02250     @TSA for highlight bar
+  ldr     r1, =0x8A02250     @TSA for highlight bar
   mov     r2, #0xC1
   lsl     r2, r2, #0x6
   blh     BgMap_ApplyTsa
@@ -888,6 +888,9 @@
   mov     r2, #0x2
   mov     r3, r5
   blh     Text_InsertString, r4
+
+  @Displays Equipped graphic
+  /*
   mov     r4, #0x0
   ldr     r0, =gpStatScreenPageBg0Map
   ldr     r3, =#0x7060
@@ -898,9 +901,6 @@
   mov     r3, r1
   add     r6, #0x40
   add     r1, r0, r6
-  
-  @Displays Equipped graphic
-  /*
   loc_0x8087660:
   add     r0, r4, r5
   strh    r0, [r2]
@@ -1045,12 +1045,12 @@
   @ blh     MovingMapSprite_CreateForUI
   @ str     r0, [r4, #0x10]
   blh     Statscreen_StartLeftPanel
-  mov     r0, #0
-  str     r0, [sp]
-  mov     r0, sp
-  ldr     r1, =0x6001380
-  ldr     r2, =0x1000a68
-  swi     0xC @clear vram
+  @mov     r0, #0
+  @str     r0, [sp]
+  @mov     r0, sp
+  @ldr     r1, =0x6001380
+  @ldr     r2, =0x1000a68
+  @swi     0xC @clear vram
 .endm
 
 
@@ -1361,12 +1361,12 @@
   blh     _ResetIconGraphics
   @blh     Statscreen_ClearBuffer
   blh     DontBlinkLeft
-  mov     r0, #0
-  str     r0, [sp]
-  mov     r0, sp
-  ldr     r1, =0x6001380
-  ldr     r2, =0x1000a68
-  swi     0xC @clear vram
+  @mov     r0, #0
+  @str     r0, [sp]
+  @mov     r0, sp
+  @ldr     r1, =0x6001380
+  @ldr     r2, =0x1000a68
+  @swi     0xC @clear vram
   ldr     r7, =0x2003BFC
   ldr     r0, =gBg0MapBuffer
   mov     r8, r0

@@ -1,0 +1,9 @@
+#include "BattleRounds.lyn.event"
+
+ALIGN 4
+DesperationIDLink:
+WORD DesperationID
+
+ALIGN 4
+AccostIDLink:
+WORD AccostID

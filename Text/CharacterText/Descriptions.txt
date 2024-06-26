@@ -1,22 +1,22 @@
 ## DevanDesc
-The Cynical duke of Tristis Nivis.[NL]
+The cynical count of Tristis Nivis.[NL]
 A quiet, but capable commander.[X]
 
 ## RonniDesc
-A young huntress from Silva with[NL]
-jovial attitude. Devan's best friend.[X]
+A sociable huntress from Duramontis[NL]
+who longs to see the world.[X]
 
 ## AnthonyDesc
 A miner who joined the army to support[NL]
 his family. Loves telling stories.[X]
 
 ## KennethDesc
-A runaway from Tolva seeking[NL]
+A runaway from Tirza seeking[NL]
 to earn his knighthood.[X]
 
 ## AlexandraDesc
-The crown princess of Tolva.[NL]
-Determined, but naive.[X]
+The second-born of a noble Tolvan family.[NL]
+Wishes to make a name for herself.[X]
 
 ## EvelynDesc
 A dutiful Tolvan knight in service[NL]
@@ -24,20 +24,51 @@ to Alexandra. Despises slackers.[X]
 
 ## AbsalomDesc
 A laid-back soldier from Tolva.[NL]
-His happy attitude hides a dark past.[X]
+As optimistic as his past is mysterious.[X]
 
 ## HollyDesc
 A highly outspoken priestess[NL]
-who's ready to evangelize anyone.[X]
+who's overeager to evangelize anyone.[X]
 
 ## LucyDesc
-A gifted mage from Duramontis.[NL]
-Assertive, but cracks under pressure.[X]
+An orphan from Duramontis searching[NL]
+for a family to call her own.[X]
 
 ## ColtonDesc
-A thief with a sense for gold, and[NL]
-a better sense of self-preservation.[X]
+A jaded thief with an eye for riches.[NL]
+Has walked the world many times over.[X]
 
 ## MaxDesc
-A retired lord of Duramontis[NL]
+A widowed count of Duramontis[NL]
 with many regrets.[X]
+
+
+//Bosses
+## CharlesDesc
+An Eastern Duramontis scout tasked[NL]
+with patrolling the border ridges.[X]
+
+## HendrickDesc
+A captain stationed at Gelida Valley[NL]
+who wants more out of life.[X]
+
+## DominicDesc
+An overconfident captain[NL]
+of Margrave Alister.[X]
+
+//Factions
+## EastDuramontisDesc
+Soldiers of East Duramontis[NL]
+fighting for the rebellion.[X]
+
+## CassisDesc
+Soldiers in service of Cassis,[NL]
+the land of dragons.[X]
+
+## StonemasonDesc
+A member of the deserters[NL]
+known as the Stonemasons.[X]
+
+## RaiderDesc
+Outlaws who seek to plunder[NL]
+the land for all its worth.[X]

@@ -9,30 +9,54 @@ RonniPortrait:
 #incbin "dmp/Ronni.portraitdmp"
 
 //Anthony
-
 ALIGN 4
 AnthonyPortrait:
 #incbin "dmp/Anthony.portraitdmp"
 
-//Kenneth (More temporary than the others)
 ALIGN 4
 KennethPortrait:
 #incbin "dmp/Kenneth.portraitdmp"
 
-//Julianne
+//Evelyn
 ALIGN 4
-JuliannePortrait:
-#incbin "dmp/Julianne.portraitdmp"
+EvelynPortrait:
+#incbin "dmp/Evelyn.portraitdmp"
 
 //Alexandra
 ALIGN 4
 AlexandraPortrait:
 #incbin "dmp/Alexandra.portraitdmp"
 
+ALIGN 4
+AbsalomPortrait:
+#incbin "dmp/Absalom.portraitdmp"
+
+ALIGN 4
+HollyPortrait:
+#incbin "dmp/Holly.portraitdmp"
+
 //Lucy
 ALIGN 4
 LucyPortrait:
 #incbin "dmp/Lucy.portraitdmp"
+
+ALIGN 4
+ColtonPortrait:
+#incbin "dmp/Colton.portraitdmp"
+
+//Maximilion
+ALIGN 4
+MaxPortrait:
+#incbin "dmp/Max.portraitdmp"
+
+//Caius
+ALIGN 4
+CaiusPortrait:
+#incbin "dmp/Caius.portraitdmp"
+
+ALIGN 4
+LazarusPortrait:
+#incbin "dmp/Lazarus.portraitdmp"
 
 //Enemies
 
@@ -41,16 +65,33 @@ ALIGN 4
 HendrickPortrait:
 #incbin "dmp/Hendrick.portraitdmp"
 
+ALIGN 4
+DominicPortrait:
+#incbin "dmp/Dominic.portraitdmp"
+
+//Other
+ALIGN 4
+PriestPortrait:
+#incbin "dmp/Priest.portraitdmp"
 
 //setMugEntry(<mugindex>,<portrait label>,<mouth X>,<mouth Y>,<eye X>,<eye Y>)
-
-setMugEntry(0x02,DevanPortrait,3,5,3,3)
-setMugEntry(0x04,RonniPortrait,4,6,4,4)
-setMugEntry(0x05,AnthonyPortrait,3,5,3,3)
-setMugEntry(0x06,KennethPortrait,3,6,3,4)
-setMugEntry(0x08,JuliannePortrait,4,6,3,4)
-setMugEntry(0x14,AlexandraPortrait,3,6,3,4)
-setMugEntry(0xC,LucyPortrait,3,7,3,5)
+setMugEntry(DevanPortraitID,DevanPortrait,1,5,2,3)
+setMugEntry(RonniPortraitID,RonniPortrait,3,6,3,4)
+setMugEntry(AnthonyPortraitID,AnthonyPortrait,3,5,3,3)
+setMugEntry(KennethPortraitID,KennethPortrait,3,6,3,4)
+setMugEntry(EvelynPortraitID,EvelynPortrait,1,5,2,3)
+setMugEntry(AbsalomPortraitID,AbsalomPortrait,3,5,3,3)
+setMugEntry(HollyPortraitID,HollyPortrait,3,6,3,4)
+setMugEntry(MaxPortraitID,MaxPortrait,3,5,3,3)
+setMugEntry(AlexandraPortraitID,AlexandraPortrait,2,6,3,4)
+setMugEntry(LucyPortraitID,LucyPortrait,3,6,3,4)
+setMugEntry(ColtonPortraitID,ColtonPortrait,2,5,3,3)
+setMugEntry(CaiusPortraitID,CaiusPortrait,3,6,3,4)
+setMugEntry(LazarusPortraitID,LazarusPortrait,3,5,3,3)
 
 //Enemies
-setMugEntry(0x31,HendrickPortrait,3,5,3,3)
+setMugEntry(HendrickPortraitID,HendrickPortrait,3,5,3,3)
+setMugEntry(DominicPortraitID,DominicPortrait,2,4,3,2)
+
+//Other
+setMugEntry(PriestPortraitID,PriestPortrait,2,6,2,4)

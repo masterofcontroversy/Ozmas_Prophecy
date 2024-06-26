@@ -60,7 +60,7 @@ static const MenuCommandDefinition MenuCommands_Jump[] =
 
 static const MenuDefinition ChapterJump_MenuDefinition =
 {
-    .geometry = {7, 1, 16},
+    .geometry = {5, 1, 20},
     .commandList = MenuCommands_Jump,
 
     .onBPress = (void*) (0x080152F4+1), // Goes back to main game loop

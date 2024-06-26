@@ -35,7 +35,7 @@ After each set of module options are definitions that you can use to adjust the 
 	//#define MMBHeight 8
 	#define MMBHeight 6
 	//#define MMBWidth 16
-	#define MMBWidth 15
+	#define MMBWidth 16
 	#define MMBTilemapPaletteIndex 3
 
 	ALIGN 4
@@ -73,13 +73,13 @@ After each set of module options are definitions that you can use to adjust the 
 
 // Unit name modules
 
-	#define MMBName
+	//#define MMBName
 		/*
 		 * Draws the unit's name to [MMBNameX, MMBNameY]
 		 * using MMBNameColor.
 		 */
 
-	//#define MMBNameCentered
+	#define MMBNameCentered
 		/*
 		 * Draws the unit's name to [MMBNameX, MMBNameY]
 		 * using MMBNameColor, centering it within the
@@ -100,7 +100,6 @@ After each set of module options are definitions that you can use to adjust the 
 	//#define MMBNameColor TextBlack
 	#define MMBNameColor TextBlack
 	#define MMBNameX 4
-	//#define MMBNameY 3
 	#define MMBNameY 1
 
 // Minimug modules
@@ -630,11 +629,11 @@ After each set of module options are definitions that you can use to adjust the 
 	// Coordinates are for the rightmost digit
 
 	// AS Number
-	#define MMBASX 102
+	#define MMBASX 110
 	#define MMBASY 16
 
 	// ATK Number
-	#define MMBATKX 102
+	#define MMBATKX 110
 	#define MMBATKY 8
 
 	// AVO Number
@@ -650,7 +649,7 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBCRTY 40
 
 	// DEF Number
-	#define MMBDEFX 102
+	#define MMBDEFX 110
 	#define MMBDEFY 24
 
 	// DOD Number
@@ -670,7 +669,7 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBLevelY 32
 
 	// RES number
-	#define MMBRESX 102
+	#define MMBRESX 110
 	#define MMBRESY 32
 
 	// RTG number
@@ -715,14 +714,14 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBASLabelY 2
 	#define MMBASLabelVRAMTile 0x100
 	#define MMBASLabelPaletteIndex 2
-	#define MMBASLabelTileCount 1
+	#define MMBASLabelTileCount 2
 
 	// ATK label
 	#define MMBATKLabelX 11
 	#define MMBATKLabelY 1
-	#define MMBATKLabelVRAMTile 0x101
+	#define MMBATKLabelVRAMTile 0x102
 	#define MMBATKLabelPaletteIndex 2
-	#define MMBATKLabelTileCount 1
+	#define MMBATKLabelTileCount 2
 
 	// AVO label
 	#define MMBAVOLabelX 5
@@ -748,9 +747,9 @@ After each set of module options are definitions that you can use to adjust the 
 	// DEF label
 	#define MMBDEFLabelX 11
 	#define MMBDEFLabelY 3
-	#define MMBDEFLabelVRAMTile 0x102
+	#define MMBDEFLabelVRAMTile 0x106
 	#define MMBDEFLabelPaletteIndex 2
-	#define MMBDEFLabelTileCount 1
+	#define MMBDEFLabelTileCount 2
 
 	// DOD label
 	#define MMBDODLabelX 13
@@ -783,9 +782,9 @@ After each set of module options are definitions that you can use to adjust the 
 	// RES label
 	#define MMBRESLabelX 11
 	#define MMBRESLabelY 4
-	#define MMBRESLabelVRAMTile 0x103
+	#define MMBRESLabelVRAMTile 0x104
 	#define MMBRESLabelPaletteIndex 2
-	#define MMBRESLabelTileCount 1
+	#define MMBRESLabelTileCount 2
 
 	// RTG label
 	#define MMBRTGLabelX 9

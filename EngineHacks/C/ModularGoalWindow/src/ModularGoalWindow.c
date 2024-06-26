@@ -124,10 +124,10 @@ void CounterReadTemplate(GoalWindowProc* proc) {
     Text_Clear(&proc->textA);
     Text_Clear(&proc->textB);
 
-    Text_InsertString(&proc->textA, 0x4, TEXT_COLOR_NORMAL, GetStringFromIndex(textIndexA));
-    Text_InsertString(&proc->textB, 0xC, TEXT_COLOR_NORMAL, GetStringFromIndex(0x01C1));
+    Text_InsertString(&proc->textA, 0x8, TEXT_COLOR_NORMAL, GetStringFromIndex(textIndexA));
+    Text_InsertString(&proc->textB, 0x10, TEXT_COLOR_NORMAL, GetStringFromIndex(0x01C1));
 
-    InsertNumber(&proc->textB, 0x30, TEXT_COLOR_BLUE, (3 - gEventCounter[0]));
+    InsertNumber(&proc->textB, 0x30, TEXT_COLOR_BLUE, (gEventCounter[0]));
 
     proc->bottomPadding = 1;
 }

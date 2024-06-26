@@ -55,13 +55,16 @@ ALIGN 4
 ForcedDeploymentList: //Vanilla list at 0x9ED64C
 ForcedDeployment(Colton,LockedPosition,AllModes,3)
 ForcedDeployment(Max,LockedPosition,AllModes,3)
+ForcedDeployment(Lucy,UnlockedPosition,AllModes,2)
 ForcedDeployment(Devan,LockedPosition,AllModes,3)
 ForcedDeployment(Alexandra,LockedPosition,AllModes,3)
 
-ForcedDeployment(Devan,UnlockedPosition,AllModes,AllChapters)
-ForcedDeployment(Alexandra,UnlockedPosition,AllModes,AllChapters)
+ForcedDeployment(Colton,UnlockedPosition,1,Ch4x_ChapterID)
+ForcedDeployment(Lucy,UnlockedPosition,1,Ch4x_ChapterID)
+
+ForcedDeployment(Devan,UnlockedPosition,0,AllChapters)
+ForcedDeployment(Alexandra,UnlockedPosition,0,AllChapters)
 EndForcedDeploymentList
 
 DeploymentGroupChapterList:
 EndDeploymentGroupChapterList
-

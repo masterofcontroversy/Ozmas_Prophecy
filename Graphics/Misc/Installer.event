@@ -1,0 +1,4 @@
+PUSH
+    ORG 0x68DF5C
+    #incbin "BarrierPalette.pal"
+POP

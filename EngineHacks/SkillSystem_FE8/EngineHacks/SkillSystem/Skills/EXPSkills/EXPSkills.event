@@ -4,9 +4,7 @@ Blossom:
 POIN SkillTester
 WORD BlossomID
 
-ALIGN 4
-Paragon:
-#incbin "Paragon/Paragon.dmp"
+#include "Paragon/Paragon.lyn.event"
 POIN SkillTester
 WORD ParagonID
 

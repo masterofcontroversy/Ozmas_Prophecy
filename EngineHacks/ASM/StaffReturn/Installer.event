@@ -1,0 +1,45 @@
+#include "Extensions/ProcDefinitions.txt"
+
+PUSH
+    ORG 0x59D298+0x18 //Regular heal
+    POIN ReturnFromStaff
+    ORG 0x59D278+0x18 //Restore
+    POIN ReturnFromStaff
+    ORG 0x59D2F8+0x18 //Warp
+    POIN ReturnFromStaff
+    ORG 0x59D258+0x18 //Barrier
+    POIN ReturnFromStaff
+    ORG 0x59D238+0x18 //Offensive staff
+    POIN ReturnFromStaff
+    ORG 0x59D3B8+0x18 //Hammerne
+    POIN ReturnFromStaff
+    ORG 0x59D064+0x18 //Hammerne item select
+    POIN ReturnFromHammerne
+    ORG 0x2983C //Warp point select
+    POIN StaffReturnProcInstruction
+POP
+
+#include "StaffReturn.lyn.event"
+
+ALIGN 4
+StaffReturnProcInstruction:
+PROC_CALL_ROUTINE(0x8015360|1)  //LockGame
+PROC_WHILE_EXISTS(0x859E1B8)    //gProcScr_SubtitleHelp
+PROC_CALL_ROUTINE(0x8022E38|1)  //sub_8022E38
+PROC_WHILE_EXISTS(0x859E520)    //gProcScr_BKSEL
+PROC_WHILE_EXISTS(0x859A548)    //gProcScr_CamMove
+PROC_CALL_ROUTINE(ReopenStaffMenu)
+PROC_CALL_ROUTINE(0x8015370|1)  //UnlockGame
+PROC_END
+
+ALIGN 4
+HammerneReturnProcInstruction:
+PROC_CALL_ROUTINE(0x8015360|1)  //LockGame
+PROC_WHILE_EXISTS(0x859E1B8)    //gProcScr_SubtitleHelp
+PROC_CALL_ROUTINE(0x8022E38|1)  //sub_8022E38
+PROC_WHILE_EXISTS(0x85B64D0)    //sProc_Menu
+PROC_WHILE_EXISTS(0x859E520)    //gProcScr_BKSEL
+PROC_WHILE_EXISTS(0x859A548)    //gProcScr_CamMove
+PROC_CALL_ROUTINE(ReopenHammerneMenu)
+PROC_CALL_ROUTINE(0x8015370|1)  //UnlockGame
+PROC_END

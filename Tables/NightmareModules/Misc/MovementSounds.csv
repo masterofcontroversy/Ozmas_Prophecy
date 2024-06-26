@@ -1,13 +1,13 @@
 INLINE MovementSoundsTable,Footsteps
 None,NormalWalk
-Duke,NormalWalk
-Lord,HorseWalk
-Arch Duke,NormalWalk
+Count,NormalWalk
+Lord,NormalWalk
+Arch Count,NormalWalk
 Great Lord,HorseWalk
-Cavalier,HorseWalk
-Cavalier_F,HorseWalk
-Paladin,HorseWalk
-Paladin_F,HeavyWalk
+Lance Cavalier,HorseWalk
+Sword Cavalier,HorseWalk
+Lance Paladin,HorseWalk
+Sword Paladin,HorseWalk
 Armor Knight,HeavyWalk
 Armour Knight (F),HeavyWalk
 General,HeavyWalk
@@ -34,16 +34,16 @@ Dragon Knight,ManaketeWalk
 Dragon Knight_F,ManaketeWalk
 Dragon Master,ManaketeWalk
 Dragon Master_F,ManaketeWalk
-Wyvern Knight,ManaketeWalk
-Wyvern Knight (F),ManaketeWalk
+Sword Cavalier_F,ManaketeWalk
+Sword Paladin_F,ManaketeWalk
 Mage,NormalWalk
 Mage_F,NormalWalk
 Sage,NormalWalk
 Sage_F,NormalWalk
 Mage Knight,HorseWalk
 Mage Knight (F),HorseWalk
-Bishop,ManaketeWalk
-Bishop_F,ManaketeWalk
+Bishop,NormalWalk
+Bishop_F,NormalWalk
 Shaman,NormalWalk
 Shaman_F,NormalWalk
 Druid,NormalWalk
@@ -52,10 +52,10 @@ Summoner,NormalWalk
 Summoner (F),NormalWalk
 Rogue,NormalWalk
 Gorgon Egg,NormalWalk
-Great Knight,HorseWalk
-Great Knight (F),HorseWalk
-Recruit (2),NormalWalk
-Journeyman (3),NormalWalk
+Axe Cavalier,HorseWalk
+Axe Paladin,HorseWalk
+Lance Cavalier_F,NormalWalk
+Lance Paladin_F,NormalWalk
 Pupil (3),NormalWalk
 Recruit (3),NormalWalk
 Manakete,NormalWalk
@@ -87,19 +87,19 @@ Arch Knight,HorseWalk
 Arch Knight_F,HorseWalk
 Soldier_F,NormalWalk
 Dragoon,NormalWalk
-Heavy Cavalier,HorseWalk
+Axe Cavalier_F,HorseWalk
+Axe Paladin_F,HorseWalk
 Acolyte_F,NormalWalk
-Cyclops,NormalWalk
-Mauthe Doog,NormalWalk
-Gwyllgi,NormalWalk
-Tarvos,NormalWalk
+Iron Mage,HeavyWalk
+Baron,NormalWalk
+Arcanist,NormalWalk
 Maelduin,NormalWalk
 Mogall,NormalWalk
 Arch Mogall,NormalWalk
 Gorgon,NormalWalk
 Gorgon Egg,NormalWalk
 Gargoyle,NormalWalk
-Deathgoyle,NormalWalk
+Wagon,NormalWalk
 Dracozombie,NormalWalk
 Demon King,NormalWalk
 Archer on Ballista,NormalWalk

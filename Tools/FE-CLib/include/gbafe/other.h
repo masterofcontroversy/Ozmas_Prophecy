@@ -81,6 +81,7 @@ int __modsi3(int dividend, int divisor); // FE8U = (0x080D1B4C+1)
 
 int GetPartyGoldAmount(void);
 void SetPartyGoldAmount(int amt);
+void AddPartyGoldAmount(int amt);
 
 void* memcpy(void* dest, const void* src, unsigned int count); //! FE8U = (0x080D1C0C+1)
 void* memset(void* dest, int ch, unsigned int count); //! FE8U = (0x080D1C6C+1)

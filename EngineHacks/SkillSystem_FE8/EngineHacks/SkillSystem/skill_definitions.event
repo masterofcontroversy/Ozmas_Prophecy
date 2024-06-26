@@ -1058,7 +1058,7 @@
 #define SerenityID 255 //Requires Biorhythm
 
 
-#define SlyMovementID 115
+#define GreedyGhostID 115
 
 //Display-Only Skills
 

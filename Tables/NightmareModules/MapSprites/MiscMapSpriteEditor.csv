@@ -1,7 +1,7 @@
 0x9a2e00,Animation pointer,Another pointer
-Duke,DukeMoving|IsPointer,0x81c3d7c
+Count,CountMoving|IsPointer,0x81c3d7c
 Lord,0x81c3ed4,0x81c46cc
-Arch Duke,0x81c4824,0x81c52b4
+Margrave,MargraveMoving|IsPointer,0x81c3d7c
 Great Lord,0x81c5414,0x81c5e84
 Lance Cavalier,LanceCavalierMoving|IsPointer,NormalAP
 Sword Cavalier,SwordCavalierMoving|IsPointer,NormalAP
@@ -76,7 +76,7 @@ Cleric,0x81ea734,0x81eaea0
 Troubadour,0x81eaff8,0x81eb99c
 Valkyrie,0x81ebaf4,0x81ec4fc
 Dancer,0x81ec654,0x81ed1c8
-Soldier,0x81ed418,0x81edbc4
+Soldier,SoldierMoving|IsPointer,0x81edbc4
 Necromancer,0x81edd1c,0x81ee558
 Fleet,0x81ee6b0,0x81eec84
 Angel,0x81eedec,0x81ef5cc
@@ -84,21 +84,21 @@ Thief_F,0x81ef724,0x81efe70
 Rogue_F,0x81effc8,0x81f06d8
 Arch Knight,0x81f0830,0x81f1080
 Arch Knight_F,0x81f11d8,0x81f1a54
-Soldier_F,0x81f1bac,0x81f249c
+Soldier_F,SoldierFMoving|IsPointer,0x81edbc4
 Dragoon,DragoonMoving|IsPointer,NormalAP
 Axe Cavalier_F,AxeCavalierFMoving|IsPointer,NormalAP
 Axe Paladin_F,AxePaladinFMoving|IsPointer,NormalAP
 Acolyte_F,0x81f40f8,0x81f49b8
-Mauthe Doog,0x81f4b18,0x81f5468
-Gwyllgi,0x81f55c0,0x81f607c
-Tarvos,0x81f61d4,0x81f6ad0
+Iron Mage,IronMageMoving|IsPointer,NormalAP
+Baron,0x81f55c0,0x81f607c
+Arcanist,ArcanistMoving|IsPointer,NormalAP
 Maelduin,0x81f6c28,0x81f7570
 Mogall,0x81f76c8,0x81f7e28
 Arch Mogall,0x81f7f80,0x81f876c
 Gorgon,0x81f88c4,0x81f90a0
 Gorgon Egg,0x81f91f8,0x81f95f4
 Gargoyle,0x81f974c,0x81fa2b4
-Deathgoyle,0x81fa40c,0x81faf40
+Wagon,WagonMoving|IsPointer,NormalAP
 Dracozombie,0x81fb098,0x81fbe5c
 Demon King,0x81fbfbc,0x81fd028
 Archer on Ballista,0x81fd180,0x81fd808

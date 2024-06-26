@@ -1,12 +1,15 @@
 #include "Portraits/_PortraitInstaller.event"
+#include "ClassCards/_ClassCardInstaller.event"
 #include "MapSprites/_SpriteInstaller.event"
 #include "ItemIcons/IconInstaller.event"
 #include "Backgrounds/_BackgroundInstaller.event"
 #include "BattleBackgrounds/_BattleBackgroundsInstaller.event"
 #include "StatScreen/Installer.event"
 #include "SystemIcons/SystemIcons.event"
+#include "256ColorTitleBackground/titlebackgroundinstaller.event"
+#include "Misc/Installer.event"
 
-//#include "SpellAnimations/MasterSpellAnimationInstaller.event"
+#include "SpellAnimations/MasterSpellAnimationInstaller.event"
 
 #include "BattlePlatforms/BattlePlatformInstaller.event"
 #include "UserInterface/UserInterface.event"

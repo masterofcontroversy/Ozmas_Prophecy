@@ -1,0 +1,834 @@
+## Ch1_Scene1
+//Devan
+[FarFarRight][LoadDevan]
+[MoveRight]
+[BeatSmooth]
+[CloseSpeechSlow]
+[MoveMidLeft]
+
+//Ronni
+[FarFarRight][LoadRonni]
+[MoveFarRight]
+[BeatSmooth]
+[CloseSpeechSlow]
+[MoveMidRight]
+[BeatSmooth]
+[MoveMidRight]
+Ouch![A]
+
+//Devan
+[MidLeft]
+[ClearFace]
+[LoadDevan]
+[ToggleMouthMove]Hmm?[ToggleMouthMove][A]
+
+//Ronni
+[MidRight]
+There's a pebble in my boot.[NL]
+Can we stop for a sec?[A]
+
+//Devan
+[MidLeft]
+Sorry, Ronni.[.4] We need to keep moving.[NL]
+Just ride Bowie for a bit.[ANL]
+We're late enough as it stands, and it's[NL]
+unwise to make a general wait.[A]
+
+//Ronni
+[MidRight]
+I still can't believe[NL]
+Tolva sent one here.[A]
+
+//Devan
+[MidLeft]
+And I still don't want[NL]
+to think about it.[A]
+
+//Ronni
+[MidRight]
+Well,[.4] we do need the help.[ANL]
+The Rebellion's had us[NL]
+on the ropes for months.[ANL]
+Besides, we just need to[NL]
+report to the general, right?[A]
+
+//Devan
+[MidLeft]
+Right.[.5] With any luck[NL]
+he'll at least be agreeable.[ANL]
+And if not, at least Max and Lazarus[NL]
+will be dealing with him the most.[A]
+
+
+//Ronni
+[MidRight][ToggleSmile]//Smile ON
+It's been so long[NL]
+since we've seen them.[ANL]
+We have a lot to catch up on.[A]
+
+[ToggleSmileFar]// Smile OFF
+
+//Devan
+[MidLeft]
+We're going to a war meeting,[NL]
+Ronni,[.4] not a reunion.[A]
+
+[ToggleSmileFar]// Smile ON
+
+//Ronni
+[MidRight]
+There's no rule[NL]
+saying it can't be both.[A]
+
+//Devan
+[MidLeft]
+Let's just get there first.[A]
+
+[ToggleSmileFar]// Smile OFF
+
+//Ronni
+[MidRight]
+[Beat]Hold on.[A]
+
+//Devan
+[MidLeft]
+What?[A]
+
+//Ronni
+[MidRight]
+Look at these tracks.[ANL]
+They're fresh and they[NL]
+lead where we're going.[A][2NL]
+You don't suppose[BeatSmooth][A]
+
+//Devan
+[MidLeft]
+Maybe.[.5] We're in Lazarus'[NL]
+territory, so I doubt it.[ANL]
+Best alert the troops,[.4] just in case.[A]
+
+//Ronni
+[MidRight]
+Right.[A]
+[ClearFace]
+[X]
+
+
+## Ch1_Scene2
+[MidLeft][LoadAnthony]
+[MidRight][LoadKenneth]
+[SendToBack]
+
+//Anthony
+[MidLeft]
+[Beat]So then the boss got[NL]
+kicked by the workhorse.[ANL]
+After that, he put Jeb[NL]
+in charge. Big mistake.[ANL]
+
+//Kenneth
+[MidRight]
+Ouch! Poor guy.[NL]
+Why'd he pick Jeb?[A]
+
+//Anthony
+[MidLeft]
+The boss didn't know Jeb[NL]
+was embezzling funds and--[A]
+
+//Ronni
+[FarLeft][LoadRonni]
+Update from the count:[ANL]
+keep an eye out for any enemy troops.[NL]
+Looks like they're close.[A]
+
+//Kenneth
+[MidRight]
+They are?[.4] Is it a scouting team?[A]
+
+//Ronni
+[FarLeft]
+I hope so.[ANL]
+We really don't want to[NL]
+deal with any more than that.[A][2NL]
+You two mind spreading the word?[A]
+
+//Anthony
+[MidLeft]
+Sure.[A]
+
+//Ronni
+[FarLeft]
+Thanks.[A]
+[ClearFace]
+
+//Kenneth
+[MidRight]
+Ugh.[.4] I didn't think we'd run[NL]
+into any trouble here on the way.[ANL]
+We're in Western Duramontis.[.4] Why do we[NL]
+need to be on the lookout for the enemy?[A]
+
+//Anthony
+[MidLeft]
+That's how war goes, I guess.[ANL]
+Everyone's paranoid.[A]
+
+//Kenneth
+[MidRight]
+I know. [BeatSmooth]I just hope we[NL]
+make it to the base in one piece.[A]
+
+//Anthony
+[MidLeft]
+[ToggleSmile]// Smile ON
+Don't worry. I'm sure we will, kid.[A]
+
+//Kenneth
+[MidRight]
+Yeah[Beat] You're right.[A]
+[X]
+
+
+## Ch1_BattleTransition
+[FarRight][LoadRonni]
+[Right][LoadDevan]
+
+//Devan
+[Right]
+There they are.[A]
+
+//Ronni
+[FarRight]
+[SendToBack]
+[BeatSmooth]Do they know we're here?[A]
+
+//Devan
+[Right]
+Don't--[A]
+
+//Eastern Army
+[FarFarLeft]
+Enemy spotted![NL]
+Warn the captain![A]
+
+//Devan
+[Right]
+[Beat]Jinx it.[ANL]
+Everyone, get in formation![.4][NL]
+We're seeing some action![A]
+[X]
+
+## Ch1_ChargeText
+[MidLeft][LoadRedSoldier]
+[MidRight][LoadCharles]
+
+//Soldier
+[MidLeft]
+Sir![.4] They're still holding out.[A]
+
+//Charles
+[MidRight]
+Hmph.[.4] To me! We'll charge[NL]
+at them while they're distracted![A]
+[X]
+
+
+## Ch1_BossAttackedText
+//Charles
+[MidLeft][LoadCharles]
+Hah[BeatSmooth]hah[BeatSmooth][A]
+
+//Soldier
+[FarFarLeft]
+The captain is under attack![NL]
+Quick! Help him![A]
+
+//Charles
+[MidLeft][ToggleSmile]
+Looks like backup is on the way.[NL]
+Let's end this.[A]
+[X]
+
+## CharlesBossQuote_BeforeCharge
+[MidLeft][LoadCharles]
+Here already?[.4] You're brave.[.4][ANL]
+Shame the brave ones always[NL]
+die first.[A]
+[X]
+
+
+## CharlesBossQuote_AfterCharge
+[MidLeft][LoadCharles]
+Time's up, westerner.[.4][NL]
+Prepare to meet the Specters.[A]
+[X]
+
+
+## CharlesDeathQuote
+[MidLeft][LoadCharles]
+I--[.4] I lost?[A]
+[X]
+
+
+## Ch1_AfterBattle
+[MidLeft][LoadRonni]
+[MidRight][LoadDevan]
+
+//Ronni
+[MidLeft]
+Whew.[.4] I think that's all of them.[NL]
+What should we do now?[A]
+
+//Devan
+[MidRight]
+We'll take a few minutes rest[NL]
+before getting back on the road.[ANL]
+I don't feel comfortable sticking[NL]
+around any longer than we need to.[A][2NL]
+I guess we really will be late[Beat][A]
+
+//Ronni
+[MidLeft]
+Don't worry about it.[ANL]
+It's not like we[NL]
+planned to get attacked.[A]
+
+//Devan
+[MidRight]
+Yes, of course.[ANL]
+I'm sure the general will be very[NL]
+understanding when I tell him that.[A]
+
+[ToggleSmileFar]// Smile ON
+
+//Ronni
+[MidLeft]
+You worry too much.[A]
+
+[ToggleSmileFar]// Smile OFF
+
+//Devan
+[MidRight]
+Only to make up for[NL]
+your lack of concern.[A]
+
+[ToggleSmileFar]// Smile ON
+
+//Ronni
+[MidLeft]
+I prefer to call it[NL]
+[OpenQuote]living a relaxed lifestyle.[CloseQuote][A][CloseSpeechSlow][ToggleSmile]
+Oh.[.5] I should go give[NL]
+everyone the orders.[A]
+
+//Devan
+[MidRight]
+No, that's fine.[.5] I'll tell them.[ANL]
+It should give you enough[NL]
+time to get rid of that pebble.[ANL]
+
+//Ronni
+[MidLeft]
+Oh.[.5] Thanks.[A][CloseSpeechSlow]
+
+//Devan
+[MidRight][ClearFace]
+
+//Ronni
+[MidLeft][ToggleSmile]
+[NL][BeatSmooth]Guess he didn't notice me[NL]
+getting it out during the battle.[A]
+[X]
+
+
+## Ch1_Scene3_Part1
+[MidRight][LoadCaius]
+[MidLeft][LoadLazarus]
+
+//Lazarus
+[Beat]Which brings us[NL]
+where we are today.[A]
+
+//Caius
+[MidRight]
+What a complete mess[Beat][NL]
+How did this happen?[A]
+
+//Lazarus
+[MidLeft]
+I could give you a host of reasons,[NL]
+general, but they won't help us now.[A]
+
+//Caius
+[MidRight]
+Hmph.[.4] In any case,[NL]
+where's Count Silvare?[ANL]
+I thought he'd have[NL]
+been here by now.[A]
+
+//Lazarus
+[MidLeft]
+I'm sure there's a reason.[NL]
+I only hope nothing happened to him[Beat][A]
+
+//Caius
+[MidRight]
+If he doesn't show before the[NL]
+soldiers from Margos get here,[ANL]
+we'll have to start without him.[A]
+
+//Lazarus
+[MidLeft]
+Margos?[.5] Oh, that's right.[NL]
+Their heir is arriving.[ANL]
+I hear he's something of a prodigy?[A]
+
+//Caius
+[MidRight]
+Prodigy might be a strong word,[NL]
+but he's certainly a bright prospect.[ANL]
+If nothing else,[.4] I can trust[NL]
+him to carry out orders with success.[A]
+
+//Lazarus
+[MidLeft]
+Is that not a given?[A]
+
+//Caius
+[MidRight]
+Given present company, I'm unsure.[A]
+
+//Lazarus
+[MidLeft]
+[Beat][A]
+
+[X]
+
+## Ch1_Scene3_Part2
+[Left][LoadCaius]
+[FarLeft][LoadLazarus]
+[SendToBack]
+
+[FarFarRight]
+Who's that?[A][CloseSpeechSlow]
+[Event]
+Must be from Tolva.[A]
+
+//Caius
+[Left]
+Ah, that must be him now.[A]
+
+[X]
+
+## Ch1_Scene3_Part3
+[Left][LoadCaius]
+[FarLeft][LoadLazarus]
+[MidRight][LoadAlexandra]
+[SendToBack]
+
+//Caius
+[Left]
+[BeatSmooth][A]
+
+//Lazarus
+[FarLeft]
+And who do we have here?[A]
+
+//Alexandra
+[MidRight]
+Alexandra Quirin, sir.[NL]
+I bring with me soldiers from Margos.[A]
+
+//Caius
+[Left]
+I thought your brother[NL]
+was to represent Margos.[A]
+
+//Alexandra
+[MidRight]
+The battle on the main front picked up,[ANL]
+so he, and the majority of our[NL]
+soldiers, were reassigned there.[ANL]
+My grandfather wished to keep[NL]
+his promise for troops, so he sent me.[A]
+
+//Caius
+[Left]
+[Beat]How many are[NL]
+in your number?[A]
+
+//Alexandra
+[MidRight]
+One-hundred and three.[A]
+
+//Caius
+[Left]
+[Beat]So rather than the[NL]
+twelve-thousand men I was promised,[ANL]
+I was given a[NL]
+mere hundred led by a pup?[A]
+
+//Alexandra
+[MidRight]
+[Beat]Yes, sir.[A]
+
+//Caius
+[Left]
+Of all the--[.4] Just[Beat][NL]
+go stand with the others.[A]
+
+//Alexandra
+[MidRight]
+Yes, sir.[A]
+
+[X]
+
+## Ch1_Scene3_Part4
+[FarRight][LoadEvelyn]
+[Right][LoadAbsalom]
+[SendToBack]
+
+He sure seems friendly.[A]
+
+//Evelyn
+[FarRight]
+Hush![A]
+
+[X]
+
+
+## Ch1_Scene3_Part5
+[MidRight][LoadCaius]
+[MidLeft][LoadLazarus]
+
+//Lazarus
+[ToggleSmile]
+It seems you'll be relying[NL]
+on present company, general.[A]
+
+[ToggleSmileFar]
+
+//Caius
+[MidRight]
+Let's just get on[NL]
+with the meeting.[A]
+
+//Lazarus
+[MidLeft]
+Well[Beat] Alright.[ANL]
+I suppose we'll hear[NL]
+from Count Silvare later.[A]
+
+[X]
+
+## Ch1_Scene3_Part6
+[Left][LoadCaius]
+[MidRight][LoadDevan]
+[FarLeft][LoadLazarus]
+[SendToBack]
+
+//Lazarus
+Count Silvare, you're here![.5][NL]
+I was beginning to fear the worst![A]
+
+//Devan
+[MidRight]
+My apologies for being late.[ANL]
+I encountered some[NL]
+enemy scouts on the way here.[A]
+
+//Lazarus
+[FarLeft]
+So they've already[NL]
+made their first move.[ANL]
+It won't be long before[NL]
+the rebels march on us[Beat][A]
+
+//Caius
+[Left]
+We'll discuss that[NL]
+after the report.[.5] Silvare.[A]
+
+//Devan
+[MidRight]
+Yes, of course.[ANL]
+The northern counties have[NL]
+been able to fend off the rebels,[ANL]
+but it won't be long[NL]
+before we get overwhelmed.[ANL]
+As such, I was sent with a[NL]
+request for reinforcements.[A]
+
+//Lazarus
+[FarLeft]
+How long do you[NL]
+think you can last?[A]
+
+//Devan
+[MidRight]
+Should things stay the course,[NL]
+two or three months, Specters willing.[A]
+
+//Caius
+[Left]
+Then you'll have to wait.[.5][NL]
+Masaint should be our chief concern.[A]
+
+//Devan
+[MidRight]
+Why? What happened?[A]
+
+//Lazarus
+[FarLeft]
+Masaint was[NL]
+taken not long ago.[A]
+
+//Devan
+[MidRight]
+And its lords?[A]
+
+//Lazarus
+[FarLeft]
+Missing. The men I sent to seek[NL]
+them out have disappeared as well.[ANL]
+It seems greater[NL]
+measures will be needed.[A]
+
+//Caius
+[Left]
+No. Our manpower should be[NL]
+focused on securing the border.[ANL]
+We cannot waste resources looking[NL]
+for the count and his daughter.[A]
+
+//Lazarus
+[FarLeft]
+Count Varley is among the[NL]
+most influential of the loyalists.[ANL]
+Would you abandon one who has proved[NL]
+himself a useful hand of the emperor?[A]
+
+//Caius
+[Left]
+Were he as influential as you claim,[NL]
+None of us would be here now.[ANL]
+[Beat]However, suppose you're right.[NL]
+We should at least make an attempt.[ANL]
+But I won't spare any of my men for it.[A]
+
+
+//Lazarus
+[FarLeft]
+That's fine.[.5][NL]
+I'm sure I can think of someone.[ANL]
+[Beat]Actually, how long will you[NL]
+be in the south, Count Silvare.[A]
+
+//Devan
+[MidRight]
+Indefinitely.[.5][NL]
+Why do you ask?[A]
+
+//Lazarus
+[FarLeft]
+I'm half a mind to send you.[A]
+
+//Devan
+[MidRight]
+What?[A]
+
+//Caius
+[Left]
+The boy couldn't even[NL]
+arrive to a meeting on time.[ANL]
+What makes you think[NL]
+he's capable of a rescue?[A]
+
+//Lazarus
+[FarLeft]
+He was taught by one of the most[NL]
+well-respected commanders in Duramontis.[ANL]
+And that aside, he knows[NL]
+Masaint about as well as Tristis.[ANL]
+If you have anyone better[NL]
+in mind, I'm all ears.[A]
+
+//Caius
+[Left]
+[Beat]Fine.[.4] I'll leave it[NL]
+to your judgment.[A]
+
+//Lazarus
+[FarLeft]
+What do you say,[NL]
+Count Silvare?[A]
+
+//Devan
+[MidRight]
+Well, if you think I'm the[NL]
+right choice, I'll do it.[A]
+
+//Lazarus
+[FarLeft]
+Then it's settled.[ANL]
+The safest path into Masaint[NL]
+should be Gelida Valley.[ANL]
+You shouldn't have[NL]
+any trouble passing it.[A]
+
+//Caius
+[Left]
+Well, aside from the[NL]
+enemy garrison there.[A]
+
+//Lazarus
+[FarLeft]
+It's a checkpoint on the border;[.5][NL]
+we'll be taking it regardless.[ANL]
+Count Silvare only needs to accompany[NL]
+whoever will capture and hold it.[A]
+
+//Caius
+[Left]
+[BeatSmooth]Yes, that's right.[ANL]
+I believe I have someone[NL]
+in mind for that task.[ANL]
+[Beat]Miss Quirin, step forward.[A]
+
+[X]
+
+## Ch1_Scene3_Part7
+[Left][LoadCaius]
+[FarLeft][LoadLazarus]
+[MidRight][LoadAlexandra]
+[SendToBack]
+
+//Caius
+[Left]
+You are to capture Gelida Valley.[.5][NL]
+Count Silvare will assist you.[ANL]
+Once the valley is under your control,[NL]
+you are to stay put until further notice.[ANL]
+Is that satisfactory, Cray?[A]
+
+//Lazarus
+[FarLeft]
+Quite.[A]
+
+//Caius
+[Left]
+Good.[.5] With that settled, perhaps[NL]
+we can focus on the task at hand.[ANL]
+The other border checkpoints[BeatSmooth][A]
+
+[X]
+
+## Ch1_Scene4
+[MidLeft][LoadAbsalom]
+[Right][LoadEvelyn]
+[FarRight][LoadAlexandra]
+[SendToBack]
+
+//Absalom
+[MidLeft]
+Whew![.4] We're finally free![.5][NL]
+That meeting took forever.[A]
+
+//Evelyn
+[Right]
+Stop exaggerating.[.4][NL]
+It was only two hours.[A]
+
+//Absalom
+[MidLeft]
+Yeah, [OpenQuote]only.[CloseQuote][.5][ToggleSmile] At least I[NL]
+managed to catch a nap in there.[A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Evelyn
+[Right]
+You what?[A]
+
+[ToggleSmileFar]//Smile ON
+
+//Absalom
+[MidLeft]
+Anyway, it's pretty cool we[NL]
+got a mission that fast, eh?[ANL]
+After Caius' reaction,[NL]
+I didn't think we would.[A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Evelyn
+[Right]
+Absalom![A]
+
+//Alexandra
+[FarRight]
+It's fine, Evelyn.[ANL]
+It's not surprising that the general[NL]
+was less than pleased by my arrival.[Left][FarRight][ANL]
+Were he not undermanned,[NL]
+we might not have been given anything.[A]
+
+//Evelyn
+[Right]
+Let's not dwell on that detail.[.5][ANL]
+We have our assignment;[NL]
+it should be our chief concern.[A]
+
+//Absalom
+[Left][ToggleSmile]//Smile ON
+Or we could take a[NL]
+load off and swing by town.[A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Evelyn
+[Right]
+We're given our first task and[NL]
+your first instinct is to lollygag?[A]
+
+//Absalom
+[MidLeft]
+Believe it or not,[.4] people get tired[NL]
+after being on their feet since dawn.[A]
+
+//Evelyn
+[Right]
+Lady Alexandra and I are fine.[A]
+
+//Absalom
+[MidLeft]
+Only because you took turns[NL]
+on that flying horse of yours.[A]
+
+//Evelyn
+[Right]
+For the last time,[NL]
+Natasha is a falicorn![A]
+
+//Alexandra
+[FarRight]
+That's enough, you two.[ANL]
+Before anything else,[NL]
+we'll find our lodgings.[ANL]
+Afterwards, you'll both have the[NL]
+rest of the day to do what you wish.[A]
+
+//Absalom
+[MidLeft][ToggleSmile]
+Sounds good.[A]
+
+[ToggleSmileFar]
+
+//Alexandra
+[FarRight]
+Then let's be on our way.[ANL]
+[Beat]And please, no[NL]
+talking until we get there.[A]
+
+[X]

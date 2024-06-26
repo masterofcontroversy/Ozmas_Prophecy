@@ -1,0 +1,471 @@
+## Ch4x_Scene1
+[Left][LoadAbsalom]
+[FarLeft][LoadRonni]
+[MidRight][LoadColton]
+[SendToBack]
+
+//Absalom
+[Left]
+Whew.[.5] How much further?[A]
+
+//Colton
+[MidRight]
+Won't be long now.[ANL]
+Keep your eyes peeled for[NL]
+the mouth of the cave.[A]
+
+//Absalom
+[Left]
+Masons living in a cave, huh?[ANL]
+Say, how did they end up[NL]
+doing the bandit thing?[ANL]
+Couldn't get enough[NL]
+work as carving rock?[A]
+
+//Ronni
+[FarLeft]
+Most of them are deserters from[NL]
+some military force or another.[ANL]
+Their leader used to be[NL]
+one of Max's captains.[A]
+
+//Absalom
+[Left]
+Wait, then why are they[NL]
+called the Stonemasons?[A]
+
+//Ronni
+[FarLeft][ToggleSmile]
+You don't know?[A]
+
+[ToggleSmileFar]
+
+//Absalom
+[Left]
+No.[.4] That's why I asked.[.5][NL]
+C'mon, tell me.[A]
+
+[ToggleSmileFar]
+
+//Ronni
+[FarLeft]
+[Beat]Nah.[.5] I think I'll let[NL]
+you see for yourself.[A][2NL]
+It's funnier that way.[A]
+
+[ToggleSmileFar]
+
+//Absalom
+[Left]
+Thanks a lot[Beat] Colton?[A]
+
+[ToggleSmileFar]
+
+//Colton
+[MidRight]
+You think I'm going to pass up on a[NL]
+chance to see you notice first-hand?[A]
+
+[ToggleSmileFar]
+
+//Absalom
+[Left]
+At least give me a hint.[ANL]
+Does it have something[NL]
+to do with rocks?[A]
+
+[ToggleSmileFar]
+
+//Ronni
+[FarLeft]
+You'll see.[A]
+
+[ToggleSmileFar]
+
+//Absalom
+[Left]
+Grr[Beat][A]
+[X]
+
+## Ch4x_Scene2
+[MidLeft][LoadEvelyn]
+[MidRight][LoadLucy]
+
+//Lucy
+[Beat]What was that?[A]
+
+//Evelyn
+[MidLeft]
+It was just a rabbit.[ANL]
+You don't need[NL]
+to be so on-edge.[ANL]
+We're all keeping[NL]
+an eye out for danger.[A]
+
+//Lucy
+[MidRight]
+Right, right.[.5] I just don't to get[NL]
+run off again like last time.[A]
+
+//Evelyn
+[MidLeft]
+What did happen last time?[A]
+
+//Lucy
+[MidRight]
+Well, I was doing pretty good.[ANL]
+I found this neat tome on ice magic[NL]
+and ducked behind a pillar.[ANL]
+But then I sneezed right[NL]
+when a Mason was walking by.[A]
+
+//Evelyn
+[MidLeft]
+I see.[A]
+
+//Lucy
+[MidRight]
+They started chasing[NL]
+me and I ran away.[ANL]
+That's when I met you guys.[A]
+
+//Evelyn
+[MidLeft]
+Well, I can assure you there[NL]
+won't be any need to run this time.[ANL]
+Just stay close to the rest of[NL]
+the group and you'll be fine.[A]
+
+//Lucy
+[MidRight]
+Thanks.[.5] Beats having another[NL]
+chance to let Colton down again.[A]
+
+//Evelyn
+[MidLeft]
+He shouldn't have put a girl your[NL]
+age up to such a task to begin with.[ANL]
+If he has you doing anything else[NL]
+of that nature, let me know.[A]
+
+//Lucy
+[MidRight]
+No, no.[.5] It's okay.[.5][NL]
+He really does a lot for me.[A]
+
+//Evelyn
+[MidLeft]
+Like nearly getting[NL]
+you killed by deserters?[A]
+
+//Lucy
+[MidRight]
+But I asked him to let me.[ANL]
+I wanted to help him[NL]
+back at least a little.[A]
+
+//Evelyn
+[MidLeft]
+What did he do to earn[NL]
+such loyalty from you?[A]
+
+//Lucy
+[MidRight]
+Oh.[.5] Well[Beat][NL]
+Can you keep a secret?[A]
+
+//Evelyn
+[MidLeft]
+That depends on what[NL]
+you're about to tell me.[A]
+
+//Lucy
+[MidRight]
+[Beat]When I was really young,[NL]
+my parents were in a lot of debt.[ANL]
+After a while, they decided they[NL]
+could pay it off by selling me.[A][2NL]
+[Beat]At least, that's what I was told.[A]
+
+//Evelyn
+[MidLeft]
+You poor thing[Beat][A]
+
+//Lucy
+[MidRight]
+I got through it okay.[ANL]
+It was rough at first when I was missing[NL]
+spots while cleaning or dropping things.[ANL][ToggleSmile]
+But then I got better and didn't[NL]
+get in as much trouble anymore.[A]
+
+[ToggleSmileFar]
+
+//Evelyn
+[MidLeft]
+Either way, it's a[NL]
+relief you're here now.[ANL]
+[Beat]Relatively speaking.[A]
+
+[ToggleSmileFar]
+
+//Lucy
+[MidRight]
+Tell me about it.[A]
+
+[ToggleSmileFar]
+
+//Evelyn
+[MidLeft]
+So, how does Colton[NL]
+fit into this?[A]
+
+//Lucy
+[MidRight]
+Oh.[.5] Right.[.5] A few months ago--[A]
+
+//Colton
+[FarFarRight]
+Get a move on![NL]
+We're here![A]
+
+//Lucy
+[MidRight]
+Oop![A]
+[ClearFace]
+
+//Evelyn
+[MidLeft]
+Later, then[Beat][A]
+[X]
+
+## Ch4x_BeforeBattle
+[Right][LoadColton]
+[FarRight][LoadLucy]
+[MidLeft][LoadAbsalom]
+[SendToBack]
+
+//Colton
+[Right]
+Here we are.[A]
+
+//Lucy
+[FarRight]
+Uh[Beat] Colton?[ANL]
+They're looking right at us.[NL]
+Did they see us coming?[A]
+
+//Colton
+[Right]
+Of course they did.[ANL]
+Our chatterboxes made sure of that.[A]
+
+//Absalom
+[MidLeft]
+Didn't you just[NL]
+yell two minutes ago?[A]
+
+//Colton
+[Right]
+To tell you to shut up![ANL]
+Anyway, without the element of surprise,[NL]
+we'll need to fight our way through.[A]
+
+//Absalom
+[MidLeft]
+Lemme guess.[.5] We'll do all the fighting[NL]
+while you slink off to the treasure.[A]
+
+//Colton
+[Right][ToggleSmile]
+Bingo.[A]
+[X]
+
+## Ch4x_Briefing
+[MidRight][LoadLucy]
+[MidLeft][LoadColton]
+
+//Colton
+Hey, Lucy.[.5] Catch.[A]
+
+//Lucy
+[MidRight]
+Huh? A key?[A]
+
+//Colton
+[MidLeft]
+It should open those chests.[.5][NL]
+It's my last one, so don't lose it.[ANL]
+Actually, on second thought,[NL]
+you should give it to someone else.[A]
+
+//Lucy
+[MidRight]
+I'll be fine, Colton.[NL]
+You can trust me.[A]
+
+//Colton
+[MidLeft]
+I did.[ANL]
+With the skeleton key.[ANL]
+The one you lost.[A]
+
+//Lucy
+[MidRight]
+I was being chased![A]
+
+//Colton
+[MidLeft]
+Whatever.[.5] Just hold on to[NL]
+the thing this time, will ya?[A]
+[ClearFace]
+
+//Lucy
+[MidRight]
+[Beat][A]
+[X]
+
+## Ch4x_AfterBattle
+[Right][LoadColton]
+[FarRight][LoadLucy]
+[Right][LoadEvelyn]
+[FarRight][LoadRonni]
+[SendToBack]
+
+//Colton
+[Right]
+And that's that.[.5][NL][ToggleSmile]
+We scored a pretty good haul.[A]
+
+//Lucy
+[FarRight]
+Whew.[.5] It's finally over[Beat][A]
+
+[ToggleSmileFar]
+
+//Colton
+[Right]
+You pack this side.[.5][NL]
+I'll handle the one over there.[A]
+[ClearFace]
+
+//Ronni
+[FarLeft]
+How're you holding up, Lucy?[A]
+
+//Lucy
+[FarRight]
+I'll be fine.[ANL][ToggleSmile]
+I think I'm starting to get[NL]
+used to this fighting thing.[A]
+
+[ToggleSmileFar]
+
+//Evelyn
+[Left]
+I wouldn't be so[NL]
+happy about that[Beat][A]
+
+//Ronni
+[FarLeft][ToggleSmile]
+Happy to hear it.[ANL]
+I'm gonna go keep an eye on Colton.[NL]
+Don't want him taking more than his share.[A]
+
+[ToggleSmileFar]
+
+//Lucy
+[FarRight]
+Aw, Colton wouldn't--[.5][NL]
+you know what?[.5] That's a good idea.[A]
+
+//Evelyn
+[Left]
+Do you want any help?[A]
+
+//Ronni
+[FarLeft]
+I'll be fine.[.5] I know how to[NL]
+deal with guys like him.[A]
+[ClearFace]
+
+//Evelyn
+[Left]
+[Beat]Speaking of Colton, you[NL]
+never got to finish your story.[A]
+
+//Lucy
+[FarRight]
+Right. Colton robbed the house[NL]
+I was in and unlocked my room door.[A]
+
+//Evelyn
+[Left]
+Why would he do that?[A]
+
+//Lucy
+[FarRight]
+When I caught up to him, he said he[NL]
+thought he'd find something valuable.[ANL]
+He left the door unlocked[NL]
+because he wanted a distraction.[A]
+
+//Evelyn
+[Left]
+And he's been letting you[NL]
+tag along with him ever since.[A]
+
+//Lucy
+[FarRight]
+That's right.[ANL]
+Oh![.5] I should get to work[NL]
+before Colton yells at me.[A][CloseSpeechSlow]
+Later, Miss Evelyn.[A]
+[ClearFace]
+
+//Evelyn
+[Left]
+So he at least has[NL]
+something resembling a heart.[A]
+[X]
+
+## Ch4x_LucyKeyFound_Part1
+[MidRight][LoadLucy]
+Wait a second.[.5][NL]
+This is that pillar[Beat][A]
+[X]
+
+## Ch4x_LucyKeyFound_Part2
+[MidRight][LoadLucy]
+[ToggleSmile]
+Ah hah![.5] My skeleton key![ANL]
+I can't wait to see the look[NL]
+on Colton's face when he sees this.[A]
+[X]
+
+## Ch4x_ColtonKeyFound_Part1
+[MidRight][LoadColton]
+Hold on.[.5] What's this?[A]
+[X]
+
+## Ch4x_ColtonKeyFound_Part2
+[MidRight][LoadColton]
+[ToggleSmile]
+Well, well, well.[NL]
+I think I'll hold on to this.[A]
+[X]
+
+## Ch4x_EvelynKeyFound_Part1
+[MidRight][LoadEvelyn]
+She said she had just[NL]
+picked up an ice tome.[ANL]
+The tome was found[NL]
+over there, so[Beat][A]
+[X]
+
+## Ch4x_EvelynKeyFound_Part2
+[MidRight][LoadEvelyn]
+[ToggleSmile]
+There we go.[.5] Lucy will[NL]
+be pleased to see this.[A]
+[X]

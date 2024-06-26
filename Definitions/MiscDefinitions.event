@@ -27,12 +27,13 @@
 #define DemonKingAP     $81FD028
 
 //Vanilla terrain bonus tables
-#define TerrainAvoBonus  $80c479
-#define TerrainDefBonus  $80c4ba
-#define TerrainResBonus  $80c4fb
-#define FlierDefBonus    $80c53c
-#define FlierAvoBonus    $80c57d
-#define FlierResBonus    $80c5be
+#define TerrainAvoBonus     $80c479
+#define TerrainDefBonus     $80c4ba
+#define TerrainResBonus     $80c4fb
+#define FlierDefBonus       $80c53c
+#define FlierAvoBonus       $80c57d
+#define FlierResBonus       $80c5be
+#define TerrainHealAmount   $80C744
 
 //Vanilla movement tables
 #define FootMovCost      $80b808
@@ -45,3 +46,43 @@
 #define BerserkerMovCost $80b90c
 #define MageMovCost      $80ba10
 #define FlierMovCost     $80bb96
+
+//Terrain type IDs
+#define TerrainFort     0xA
+#define TerrainGate     0xB
+#define TerrainForest   0xC
+#define TerrainMountain 0x11
+#define TerrainPeak     0x12
+#define TerrainPillar   0x1D
+#define TerrainThrone   0x1F
+#define TerrainChurch   0x24
+
+//Track IDs
+#define NoBGM                   0
+#define BattleThemeEX_BGM       9
+#define SnowBattle_BGM          10
+#define WallofDefense_BGM       11
+#define FeldschlactIII_BGM      12
+#define CombatAdversity_BGM     13
+#define BGM16_BGM               27
+#define MarisaSortie_BGM        28
+#define NuclearFusion_BGM       37
+#define Queens_BGM              39
+#define Kanna_BGM               40
+#define CryALive_BGM            41
+#define EventBattle_BGM         42
+#define Nightfall_BGM           43
+#define ForbiddenForest_BGM     44
+#define NoticeofDeath_BGM       45
+#define PrideoftheImperial_BGM  46
+#define KannaArmy_BGM           49
+#define MemoriesofGreen_BGM     50
+#define SortieFormation_BGM     52
+#define Redial_BGM              53
+#define GoldenrodGameCorner_BGM 54
+
+//Background noise IDs
+#define CricketsChirping        74
+#define BirdsChirping           76
+#define OutsideBirdsChirping    82
+#define WindBlowing             78

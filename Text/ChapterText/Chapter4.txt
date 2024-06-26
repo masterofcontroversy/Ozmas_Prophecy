@@ -1,0 +1,1800 @@
+## Ch4_Scene1
+[SendToBack]
+[MidLeft][LoadDevan]
+
+//Ronni
+[MidRight][LoadRonni][HalfCloseEyes]
+[Beat]That's the third copy.[NL]
+Do we need any more?[A]
+
+//Devan
+[MidLeft]
+No, that should do for now.[A]
+
+//Ronni
+[MidRight]
+Then I'm taking a break.[ANL]
+I think we'll need to break[NL]
+out the coffee for this one.[A]
+[ClearFace]
+
+//Devan
+[MidLeft]
+You can just sleep if you want.[.5][NL]
+I can handle myself for a few hours.[A]
+
+//Ronni
+[FarFarLeft]
+You're one to talk.[ANL]
+If anyone needs[NL]
+sleep, it's you.[A]
+
+//Devan
+[MidLeft]
+Perhaps, but I never[NL]
+make good use of it.[A]
+
+
+//Door
+[FarFarRight]
+*Knock*[A][CloseSpeechSlow]
+Count Silvare?[NL]
+Are you awake?[A]
+
+//Devan
+[MidLeft]
+Hm?[A][CloseSpeechSlow]
+[MoveMidRight][.6][MoveLeft]
+
+//Alexandra
+[MidRight][LoadAlexandra]
+Good morning.[ANL]
+[Beat]My, you look dreadful.[NL]
+Are you alright?[A]
+
+//Devan
+[Left]
+Peachy.[.5] What do you want?[A]
+
+//Alexandra
+[MidRight]
+I came to discuss our[NL]
+next course of action.[A]
+
+//Devan
+[Left]
+Pardon?[A]
+
+//Alexandra
+[MidRight]
+We're going to rescue[NL]
+Count Varley, yes?[A]
+
+//Devan
+[Left]
+[OpenQuote]We?[CloseQuote][A]
+
+//Alexandra
+[MidRight]
+Yes, [OpenQuote]we.[CloseQuote][.5] Is there a problem?[A]
+
+//Devan
+[Left]
+You've done as you promised --[.4][NL]
+to your detriment, I'll add.[ANL]
+Why risk both your well-being[NL]
+and your standing with Caius?[A]
+
+//Alexandra
+[MidRight]
+Is it truly so difficult to believe I simply[NL]
+wish to ensure the rescue's success?[A]
+
+//Devan
+[Left]
+Not without something to gain.[ANL]
+How do I know that[NL]
+something won't cost me?[A]
+
+[FarLeft][LoadRonni]
+The water's on.[NL]
+[Beat]Did I miss something?[A]
+
+//Devan
+[Left]
+Nothing important.[ANL]
+[Beat]If you really want to help,[NL]
+Miss Quirin, guard Glasswater.[A]
+
+//Alexandra
+[MidRight]
+I just offered you more than[NL]
+double your number of men,[ANL]
+and your first instinct[NL]
+is to disregard them?[A]
+
+//Devan
+[Left]
+I need someone to keep the[NL]
+town safe and distract the Masons.[A]
+
+//Ronni
+[FarLeft]
+Besides, we can't have too many[NL]
+people on a stealth misson.[A]
+
+//Alexandra
+[MidRight]
+Stealth mission?[.4] So that's[NL]
+what these maps are for.[A]
+
+//Devan
+[Left]
+Ronni[Beat][A]
+
+//Ronni
+[FarLeft]
+It doesn't hurt[NL]
+to say, right?[A]
+
+//Devan
+[Left]
+[Beat]Go ahead.[A]
+
+//Ronni
+[FarLeft]
+There's a tunnel system[NL]
+under Masaint Keep.[ANL]
+We'll use that to sneak[NL]
+in and get Max out.[A]
+
+//Alexandra
+[MidRight]
+Very clever.[.5] Though I can't[NL]
+imagine the escape being easy.[A]
+
+//Devan
+[Left]
+That's exactly why you're staying.[ANL]
+You Tolvans aren't used to these[NL]
+conditions.[.5] You'd slow us down.[A]
+
+//Alexandra
+[MidRight]
+Slow you down for what?[ANL]
+Your escape through snow the[NL]
+rebels will use to track you?[ANL]
+What if you're found out[N]
+before you escape the keep?[A]
+
+//Devan
+[Left]
+Then we'll provide the count the[NL]
+time and cover he needs to escape.[A]
+
+//Alexandra
+[MidRight]
+If you're likely to fight anyway,[NL]
+you might as well start with an ambush.[A]
+
+//Devan
+[Left]
+This task is already suicidal enough.[.4][NL]
+Why would we make it more perilous?[A]
+
+//Alexandra
+[MidRight]
+You're considering it without[NL]
+taking my men into account.[ANL]
+We already have the element of surprise.[NL]
+With my help, you'll have better odds.[ANL]
+It would also mean Masaint would[NL]
+start on the road to recovery sooner.[A]
+
+//Devan
+[Left]
+Or we could come face to face with[NL]
+a roused army and get ourselves killed.[A]
+
+//Alexandra
+[MidRight]
+What makes praying for inattentive[NL]
+guards and a swift getaway any better?[A]
+
+//Ronni
+[FarLeft]
+Well, none of it really[NL]
+matters if we can't get Max out.[a]
+
+//Devan
+[Left]
+[Beat]Right.[.4] Any suggestions?[A]
+
+//Ronni
+[FarLeft]
+Hmm[Beat] Breaking the door would[NL]
+take too long and be too noisy[Beat][ANL]
+We could pick the lock.[A]
+
+//Alexandra
+[MidRight]
+You have a locksmith in your ranks?[A]
+
+//Ronni
+[FarLeft]
+No, but there are[NL]
+some thieves in town.[A]
+
+//Devan
+[Left]
+You mean the ones that caught[NL]
+the attention of the Masons?[A]
+
+//Ronni
+[FarLeft]
+Got any better ideas?[A]
+
+//Devan
+[Left]
+[Beat]Alright. I'll look into it.[.5][NL]
+Do either of you know where Lucy went?[A]
+
+//Alexandra
+[MidRight]
+The south side of town, I believe.[A]
+
+//Devan
+[Left]
+Then I'll start there.[.4] You coming?[A]
+
+//Alexandra
+[MidRight]
+I--[A]
+
+//Ronni
+[FarLeft]
+Nah.[.5] If we're getting someone else,[NL]
+I should detail the maps some more.[A]
+[Left][ClearFace]
+
+//Alexandra
+[MidRight]
+Hey![.5] Wait a moment![A]
+[Clear]
+[X]
+
+## Ch4_Scene2_Part1
+[MidLeft][LoadAlexandra]
+[MidRight][LoadDevan]
+
+//Devan
+[Beat]Don't you have something[NL]
+better to do than shadow me?[A]
+
+//Alexandra
+[MidLeft]
+I was the last one to see Lucy.[NL]
+It makes sense that I help you find her.[A]
+
+//Devan
+[MidRight]
+Well, I don't need your help.[NL]
+This is the house.[A]
+
+//Alexandra
+[MidLeft]
+Then if I already came this[NL]
+far, I might as well stay.[A]
+[X]
+
+## Ch4_Scene2_Part2
+[Right][LoadDevan]
+[FarRight][LoadAlexandra]
+[SendToBack]
+
+//Devan
+[Right]
+I'm starting to look[NL]
+forward to leaving you here.[A][CloseSpeechSlow]
+
+[MoveMidLeft]
+[FarFarLeft]
+*Knock*[A][CloseSpeechSlow]
+[MidLeft][MoveRight]
+
+[Event]
+
+//Lucy
+[MidLeft][LoadLucy]
+Yes?[.5] Oh![.4] It's you two![.5][NL]
+[Beat]Wait how did you find us?[A]
+
+//Devan
+[Right]
+You're not hard to track down.[A]
+
+//Colton
+[FarFarLeft]
+Who's at the door?[ANL]
+You better not have[NL]
+led the Masons to us.[A]
+
+//Lucy
+[MidLeft]
+No.[.4] It's Count Silvare[NL]
+and the blonde girl.[A]
+
+//Colton
+[FarFarLeft]
+Let them in.[A]
+[X]
+
+## Ch4_Scene3
+[Right][LoadColton]
+[FarRight][LoadLucy]
+[Left][LoadDevan]
+[FarLeft][LoadAlexandra]
+[SendToBack]
+
+//Colton
+[Right]
+Why if it isn't the town's heroes.[ANL]
+What brings you to my[NL]
+little corner of the world?[A]
+
+//Devan
+[Left]
+We hear you're skilled[NL]
+at traveling undetected?[A]
+
+//Colton
+[Right]
+Sure, whenever Lucy's not around.[A]
+
+//Lucy
+[FarRight]
+Hey![A]
+
+//Devan
+[Left]
+Then I'd like to hire your services.[ANL]
+I need you to enter Masaint Keep,[NL]
+free Count Varley, and escape with him.[A]
+
+//Colton
+[Right]
+Masaint Keep?[ANL]
+The one that's heavily guarded[NL]
+by men armed to the teeth?[ANL]
+I think I'll pass. Don't feel[NL]
+like turning into a stain.[A]
+
+//Devan
+[Left]
+I'm willing to pay[NL]
+you very handsomely.[A]
+
+//Colton
+[Right]
+You're a Duramontan. A noble,[NL]
+sure, but still a Duramontan.[ANL]
+Your best offer is about as[NL]
+handsome as a sleep-deprived goat.[A]
+
+//Alexandra
+[FarLeft]
+We rescued your friend.[NL]
+That must count for something.[A]
+
+//Colton
+[Right]
+I'm happy you helped Lucy, I really am,[ANL]
+but there's no way you're talking[NL]
+me into entering that deathtrap.[A]
+
+//Alexandra
+[FarLeft]
+Everyone has their price.[A]
+
+//Colton
+[Right]
+That might be true, little lady,[NL]
+but mine's above the clouds.[A][CloseSpeechSlow]
+[Beat]Wait[Beat] You're the[NL]
+Quirin girl, aren't you?[A]
+
+//Alexandra
+[FarLeft]
+How do you know me?[A]
+
+//Colton
+[Right]
+That's not important.[ANL]
+What's important is I might[NL]
+be willing to help you.[ANL]
+[Beat]As long as you[NL]
+promise me a favor.[A]
+
+//Devan
+[Left]
+Don't bother.[.5][NL]
+We'll find a recourse.[A]
+
+//Colton
+[Right]
+Then good luck finding someone else[NL]
+able and willing to pull this off.[A]
+
+//Alexandra
+[FarLeft]
+What is this favor?[A]
+
+//Colton
+[Right]
+I'll let you know[NL]
+when I need it.[A]
+
+//Alexandra
+[FarLeft]
+You expect me to accept[NL]
+such a condition?[A]
+
+//Colton
+[Right]
+Then I guess you[NL]
+don't want my help.[A]
+
+//Alexandra
+[FarLeft]
+[Beat]Fine.[.4] You'll have your favor.[ANL]
+But if it brings any harm to myself or my[NL]
+family, I'll have your head on a pike.[A]
+
+//Colton
+[Right]
+I'm glad we understand each other.[ANL]
+I'll get ready to leave right away.[NL]
+You two can go now.[A]
+
+//Devan
+[Left]
+[Beat]Let's go.[A]
+[ClearFace][FarLeft][ClearFace]
+
+//Colton
+[Right]
+Didn't think I'd find a Quirin here.[NL]
+And she's in my debt, too.[ANL][ToggleSmile]
+I guess the Specters smile[NL]
+on even me from time to time.[A]
+
+[ToggleSmileFar]
+
+//Lucy
+[FarRight]
+Do you know her?[A]
+
+//Colton
+[Right]
+In a way, but it's[NL]
+not important now.[ANL]
+Get ready to leave --[NL]
+and don't pack lightly.[ANL]
+I don't think we'll[NL]
+be coming back.[A]
+[X]
+
+## Ch4_Scene4
+[MidRight][LoadDevan]
+[MidLeft][LoadAlexandra]
+
+[Beat][A]
+
+//Devan
+[MidRight]
+That was quite the agreement.[A]
+
+//Alexandra
+[MidLeft]
+Did you see any other recourse?[ANL]
+If we're to ensure this mission's[NL]
+success, we cannot make compromises.[A]
+
+//Devan
+[MidRight]
+It seems to me you just[NL]
+made a sizable one.[A]
+
+//Alexandra
+[MidLeft]
+I suppose you wish to[NL]
+interrogate me over it?[A]
+
+//Devan
+[MidRight]
+Do you want me to?[A]
+
+//Alexandra
+[MidLeft]
+I'll pass, thank you.[ANL]
+[Beat]Speaking of compromises, have[NL]
+you given my suggestion any thought?[A]
+
+//Devan
+[MidRight]
+This again?[A]
+
+//Alexandra
+[MidLeft]
+You must admit it's a sound idea.[ANL]
+If you truly wish to improve your chances,[NL]
+you should at least consider it.[A]
+
+//Devan
+[MidRight]
+[Beat]I suppose it's worth entertaining,[NL]
+but only if we know for sure it's safe.[ANL]
+Even with my troops and your elites,[NL]
+we could still be at a disadvantage.[A]
+
+//Alexandra
+[MidLeft]
+That's why we should all--[A]
+
+//Devan
+[MidRight]
+Again, someone needs to guard the town.[ANL]
+And that aside, if the Masons notice our[NL]
+absence, they might warn of our arrival.[A]
+
+//Alexandra
+[MidLeft]
+[Beat]Alright, I suppose[NL]
+I can leave some behind.[ANL]
+But taking most of my[NL]
+men would be better.[A]
+
+//Devan
+[MidRight]
+For an attack, sure, but it's likely[NL]
+we'll need to flee as planned.[A]
+
+//Alexandra
+[MidLeft]
+Oh, alright.[.5] Anything else?[A]
+
+//Devan
+[MidRight]
+Plenty.[.5] I want to run this[NL]
+through with a fine-toothed comb.[ANL]
+But only after we[NL]
+discuss Glaswater's defense.[A]
+
+//Alexandra
+[MidLeft]
+So be it.[A]
+[X]
+
+## Ch4_BattleTransition_Part1
+[MidLeft][LoadMax]
+[ToggleMouthMove]Hmm?[ToggleMouthMove][.5] A little early to[NL]
+move me, isn't it?[A]
+
+//Colton
+[MidRight][LoadColton]
+I'd say I'm just in time.[.5][NL]
+Come on. I'm getting you out of here.[A]
+
+//Max
+[MidLeft]
+Who are you?[A]
+
+//Colton
+[MidRight]
+I was hired to help you escape.[.5][NL]
+Now let's get moving.[A]
+
+//Max
+[MidLeft]
+No.[.4] Leave me.[A]
+
+//Colton
+[MidRight]
+If you don't get out of here,[NL]
+I don't get paid.[.5] You're going.[A]
+
+//Max
+[MidLeft]
+[BeatSmooth][OpenEyes]Who hired you?[A]
+
+//Colton
+[MidRight]
+Some count in desperate[NL]
+need of a new cape.[A]
+
+//Max
+[MidLeft]
+Devan?[.5] Devan's here?[A]
+
+//Colton
+[MidRight]
+Yeah.[.5] He came all this[NL]
+way to break you out.[A]
+
+//Max
+[MidLeft]
+That fool[BeatSmooth][A]
+
+//Colton
+[MidRight]
+So do you want out or not?[A]
+
+//Max
+[MidLeft]
+[Beat]Fine, take me him.[A]
+
+//Colton
+[MidRight][ToggleSmile]//Smile ON
+Finally. Let's get moving.[ANL]
+Here.[.5] I'm supposed to hand you this.[NL]
+You can use these, right?[A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Max
+[MidLeft]
+Yes, thank you.[A]
+
+//Colton
+[MidRight]
+Let's get going.[.5][NL]
+Step lightly.[A]
+[X]
+
+## Ch4_BattleTransition_Part2
+[FarRight][LoadRedSoldier]
+Halt![A]
+[ClearFace]
+
+[FarLeft][LoadMax]
+[Left][LoadColton]
+[SendToBack]
+
+//Colton
+Dammit.[.4] Not again[Beat][A]
+
+//Max
+[FarLeft]
+You mean to imply this[NL]
+has happened before?[A]
+
+//Colton
+[Left]
+Come on out, guys![.5][NL]
+It's show time![A]
+[X]
+
+## Ch4_BattleTransition_Part3
+[Left][LoadDevan]
+[FarLeft][LoadAlexandra]
+[SendToBack]
+
+//Guard
+[FarFarRight]
+Don't let them escape![A]
+
+//Alexandra
+[FarLeft]
+It seems we've[NL]
+been discovered.[A]
+
+//Devan
+[Left]
+Earlier than I would have liked,[NL]
+but this will have to do.[ANL]
+To arms! Quickly, before[NL]
+they gather themselves![A]
+[X]
+
+## Ch4_Reinforcements
+//Devan
+[MidRight][LoadDevan]
+Great.[.5] Cavalry.[.5] Sister![A]
+
+//Holly
+[MidLeft][LoadHolly]
+Yes?[A]
+
+//Devan
+[MidRight]
+You're a seer,[.4] yes?[ANL]
+Can you warn us when enemy[NL]
+reinforcements will appear?[A]
+
+//Holly
+[MidLeft]
+I'm afraid not.[.5] Seers typically have[NL]
+one vision in their lifetimes.[ANL]
+It would be nothing short of a miracle[NL]
+if I were to receive another one.[A]
+
+//Devan
+[MidRight]
+I see.[.5] Thank you for the explanation.[A]
+[MidLeft][ClearFace]
+[MidRight]
+[CloseSpeechSlow]
+The one time I actually[NL]
+want their help[BeatSmooth][A]
+[X]
+
+## Ch4_MaxRonniConversation
+[MidRight][LoadMax]
+[MidLeft][LoadRonni]
+
+//Ronni
+[ToggleSmile]//Smile ON
+Max![A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Max
+[MidRight]
+Hello, Veronica.[A]
+
+[ToggleSmileFar]//Smile ON
+
+//Ronni
+[MidLeft]
+I'm so glad you're okay.[.5][NL]
+We were worried sick.[A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Max
+[MidRight]
+While I appreciate the concern,[ANL]
+the reunion should wait[NL]
+until the battle is over.[A]
+
+[ToggleSmileFar]//Smile ON
+
+//Ronni
+[MidLeft]
+Okay.[.5] I'm right behind you.[A]
+
+[ToggleSmileFar]//Smile OFF
+
+//Max
+[MidRight]
+[Beat]It would be better to[NL]
+rely on someone else for cover.[ANL]
+I'm[Beat] ill-suited for the role.[A]
+[ClearFace]
+
+//Ronni
+[MidLeft]
+Max[Beat][A]
+[X]
+
+## Ch4_MaxDevanConversation
+[MidRight][LoadDevan]
+[MidLeft][LoadMax]
+
+//Max
+Devan.[A]
+
+//Devan
+[MidRight]
+Max![.5] There you are.[NL]
+Are you alright?[A]
+
+//Max
+[MidLeft]
+As much as I can be,[.4] I suppose.[.5][NL]
+What are you doing here?[A]
+
+//Devan
+[MidRight]
+Is it not obvious?[.5][NL]
+We're mounting a rescue.[A]
+
+//Max
+[MidLeft]
+A little late, aren't you?[ANL]
+The only person here[NL]
+worth rescuing died weeks ago.[A]
+
+//Devan
+[MidRight]
+[BeatSmooth]I'm sorry, Max.[A]
+
+//Max
+[MidLeft]
+[BeatSmooth]No,[.4] I shouldn't have said that.[AN]
+Alister is the one responsible.[NL]
+[Beat]Do you know where he went?[A]
+
+//Devan
+[MidRight]
+All I know is he[NL]
+left recently.[A]
+
+//Max
+[MidLeft]
+I see[Beat][A]
+
+//Devan
+[MidRight]
+[Beat]We can discuss him later.[.5][NL]
+It's not safe to talk right now.[A]
+
+//Max
+[MidLeft][OpenEyes]
+Yes,[.4] of course.[.5][NL]
+You go ahead.[ANL]
+[MidRight][ClearFace]
+
+//Max
+[MidLeft]
+[Beat]It seems I'll have to learn[NL]
+where Alister is some other way.[A]
+[X]
+
+## Ch4_MaxDominicQuote
+[MidLeft][LoadDominic]
+Well look who we have here.[A]
+[ClearFace]
+
+[MidRight][LoadMax]
+You[Beat] Where is he?[A]
+[ClearFace]
+
+[MidLeft][LoadDominic]
+What are you on about?[A]
+[ClearFace]
+
+[MidRight][LoadMax]
+Alister![.5] Where is he!?[A]
+[ClearFace]
+
+[MidLeft][LoadDominic]
+Do you really[NL]
+think I'll tell you?[A]
+[ClearFace]
+
+[MidRight][LoadMax]
+[BeatSmooth]This is your last chance[NL]
+before I burn you to ashes.[A]
+[ClearFace]
+
+[MidLeft][LoadDominic]
+Yeah right.[NL]
+You don't scare me, old man.[ANL]
+Especially after your[NL]
+shameful display last time.[A]
+[ClearFace]
+
+[MidRight][LoadMax][ToggleColorInvert]
+SILENCE![A]
+[X]
+
+## DominicBattleQuote
+[MidLeft][LoadDominic]
+Alright. You made it this[NL]
+far; I'll give you that.[ANL]
+But don't think I'll lose[NL]
+to some Tolvan lapdogs.[A]
+[X]
+
+## DominicDeathQuote
+[MidLeft][LoadDominic]
+Ugh[Beat] How did this[Beat]happen[Beat]?[A]
+[X]
+
+## Ch4_AfterBattle_B_Part1
+[MidLeft][LoadMax]
+Hah[Beat] Hah[Beat][A]
+
+[FarRight][LoadDevan]
+[Beat]Max?[A]
+
+[MidLeft]
+[Beat]Excuse me.[A]
+[X]
+
+## Ch4_AfterBattle_B_Part2
+[Right][LoadDevan]
+[FarRight][LoadRonni]
+[MoveMidLeft]
+Max![A]
+
+//Devan
+[Right]
+Miss Quirin, check the[NL]
+area for stragglers.[A][CloseSpeechSlow]
+Let's go, Ronni.[A]
+[X]
+
+## Ch4_AfterBattle_B_Part3
+[SendToBack]
+[Right][LoadEvelyn]
+[FarRight][LoadAbsalom]
+[MidLeft][LoadAlexandra]
+
+//Evelyn
+[Right]
+What horrifying power[Beat][A]
+
+//Absalom
+[FarRight]
+That tome Count Silvare[NL]
+gave him sure packs a punch.[A]
+
+//Alexandra
+[MidLeft]
+I don't believe it was a tome.[ANL]
+I read that dark mages can conjure[NL]
+their own magic using their emotions.[A]
+
+//Absalom
+[FarRight]
+Guess we better stay[NL]
+on his good side, huh?[A]
+
+//Evelyn
+[Right]
+I get the feeling it would be[NL]
+difficult to enrage him that much.[A][2NL]
+In any case, we'd best get to work.[A]
+
+//Absalom
+[FarRight]
+Right.[A]
+[ClearFace]
+[X]
+
+## Ch4_AfterBattle_B_Part4
+[MidRight][LoadEvelyn]
+[MidLeft][LoadAlexandra]
+
+//Alexandra
+[ToggleMouthMove]
+(What did she do to[NL]
+be cherished so[Beat]?)[A]
+
+//Evelyn
+[MidRight][ToggleMouthMove]
+Lady Alexandra?[A]
+
+//Alexandra
+[MidLeft]
+[Beat]Hm? Oh.[.4] Yes, let's go.[A]
+[X]
+
+## Ch4_AfterBattle_B_Part5
+[MidLeft][LoadMax]
+[Beat][A]
+
+//Devan
+[Right][LoadRonni]
+[FarRight][LoadDevan]
+[SendToBack]
+
+//Devan
+There you are.[A]
+
+//Max
+[MidLeft][CloseEyes]
+Leave me be.[A]
+
+//Ronni
+[Right]
+No way.[ANL]
+We can't just leave you.[NL]
+Especially not now.[A]
+
+//Max
+[MidLeft]
+I mean it, Veronica.[.4][NL]
+I have no desire to talk.[A]
+
+//Devan
+[FarRight]
+We're not asking you to.[ANL]
+We just need you someplace[NL]
+safe for the moment.[A]
+
+//Max
+[MidLeft]
+What's the point?[.5] I don't[NL]
+have anything to go back to.[A]
+
+//Ronni
+[Right]
+You know that's not true.[ANL]
+You have us and[NL]
+everyone in Masaint.[A]
+
+//Max
+[MidLeft]
+[Beat][A]
+
+//Devan
+[FarRight]
+You helped us through painful losses.[NL]
+Let us return the favor.[A]
+
+//Max
+[MidLeft]
+[Beat]Fine.[A]
+[ClearFace]
+
+//Ronni
+[Right]
+[Beat]I think I'll[NL]
+go sit with him.[A]
+
+//Devan
+[FarRight]
+Good idea.[.5] I'll join you when[NL]
+we know the coast is clear.[A]
+
+//Ronni
+[Right]
+Alright. [Beat]Do you[NL]
+think he'll be okay?[A]
+
+//Devan
+[FarRight]
+[Beat]I don't know.[A]
+[X]
+
+## Ch4_Scene5
+[Left][LoadCaius]
+[FarLeft][LoadLazarus]
+[Right][LoadDevan]
+[FarRight][LoadAlexandra]
+[SendToBack]
+
+//Devan
+[Right]
+[Beat]And that concludes my report.[A]
+
+//Caius
+[Left]
+I see.[.5] I'm surprised, Silvare.[.5][NL]
+You've done far more than I expected.[ANL]
+Unfortunately, you aren't the only one[Beat][A]
+
+//Alexandra
+[FarRight]
+[Beat][A]
+
+//Caius
+[Left]
+Miss Quirin, you were explicitly[NL]
+told to stay in Gelida valley.[ANL]
+And rather than obey your orders,[NL]
+you shirked them immediately.[A]
+
+//Alexandra
+[FarRight]
+[Beat][A]
+
+//Devan
+[Right]
+Well, in all fairness,[ANL]
+I might not have been able to[NL]
+rescue Count Varley without her.[ANL]
+Much less reclaim Masaint Keep.[A]
+
+//Lazarus
+[FarLeft]
+Yes.[.5] From what I've heard among the[NL]
+troops, she's something of a hero.[A]
+
+//Caius
+[Left]
+Hmph.[.4] Is that so?[A][CloseSpeechSlow]
+[Beat]Cray, what have your scouts[NL]
+learned about the margrave?[A]
+
+//Lazarus
+[FarLeft]
+Not much, I'm afraid.[.5][NL]
+Only that he went north.[A]
+
+//Caius
+[Left]
+Do you have any idea why?[A]
+
+//Lazarus
+[FarLeft]
+I'm afraid not.[ANL]
+It could be anything from simply[NL]
+going homeward to planning an assault.[A]
+
+//Caius
+[Left]
+I see. [Beat]Silvare, you[NL]
+requested reinforcements?[ANL]
+Miss Quirin's troops will[NL]
+be the first among them.[ANL]
+See to it that she doesn't[NL]
+run off again on her way there.[ANL]
+I'll also make my way there[NL]
+once my business here is done.[A][CloseSpeechSlow]
+Miss Quirin, you're under the[NL]
+authority of the general in the north.[ANL]
+Perhaps he'll have better luck[NL]
+quelling your rebelliousness.[A]
+
+//Alexandra
+[FarRight]
+[Beat]Yes, sir.[A]
+
+//Caius
+[Left]
+Now get out of here.[NL]
+You're both dismissed.[A]
+[X]
+
+## Ch4_Scene6_B
+[Right][LoadLazarus]
+[FarRight][LoadCaius]
+[MidLeft][LoadMax]
+[SendToBack]
+
+//Lazarus
+[Right]
+That only leaves the matter of Masaint.[ANL]
+With the rebels gone, it should be safe[NL]
+to leave it in Count Varley's hands.[A]
+
+//Max
+[MidLeft]
+I think not.[A]
+
+//Lazarus
+[Right]
+What?[.4] Why do you say that?[A]
+
+//Max
+[MidLeft]
+I'm the reason for Masaint's troubles,[NL]
+and the people won't soon forget.[ANL]
+And discounting that,[NL]
+I haven't got the heart for it.[A]
+
+//Caius
+[FarRight]
+I didn't go through all that trouble[NL]
+so you could lie about all day, Varley.[A]
+
+//Max
+[MidLeft]
+I said no such thing.[.5][NL]
+I fully intend on contributing.[A]
+
+//Lazarus
+[Right]
+You don't mean[Beat][A]
+
+//Max
+[MidLeft]
+I do.[.5] I'll be heading[NL]
+north as well.[A]
+
+//Lazarus
+[Right]
+What about Masaint?[A]
+
+//Max
+[MidLeft]
+I have a few people in mind[NL]
+to govern it in my absence.[A]
+
+//Lazarus
+[Right]
+You really think abandoning[NL]
+them is for the best?[A]
+
+//Max
+[MidLeft]
+[Beat][A]
+
+//Caius
+[FarRight]
+No, he has a point.[.5] We don't want[NL]
+a repeat of what happened last time.[ANL]
+And that aside, it would be easier[NL]
+to use his influence this way.[ANL]
+Count Varley fighting in the name of his[NL]
+slain daughter makes for a good story.[A][CloseSpeechSlow]
+Now if that's all I[NL]
+must prepare to depart.[ANL]
+I'll let you decide among[NL]
+yourselves the fate of Masaint.[A]
+[Clear]
+
+//Lazarus
+[Right]
+Max, you know you[NL]
+shouldn't do this.[A]
+
+//Max
+[MidLeft]
+My mind's made up, Lazarus.[NL]
+It's better this way.[A]
+
+//Lazarus
+[Right]
+Max, give it some time.[ANL]
+You're not in the[NL]
+right state of mind.[A]
+
+//Max
+[MidLeft]
+I'm fine.[A]
+
+//Lazarus
+[Right]
+That explosion in the throne room[NL]
+I heard about says otherwise.[ANL]
+Would Janice have wanted you to[NL]
+throw your life away for revenge?[A]
+
+//Max
+[MidLeft]
+[BeatSmooth]She wanted to use her[NL]
+magic for so many great things.[ANL]
+Cure illnesses, provide for the needy,[NL]
+bring hope and wonder to the depressed.[ANL]
+Why, we even joked that she could[NL]
+be the emperor's magister some day.[ANL]
+[CloseEyes][Beat]And now, because of me, she'll[NL]
+never get the chance to do any of it.[ANL]
+
+//Lazarus
+[Right]
+[Beat][A]
+
+//Max
+[MidLeft]
+I don't need your approval, Lazarus.[.5][NL]
+I'm going whether you like it or not.[ANL]
+[OpenEyes]But if you like, you can help me[NL]
+prepare Masaint for my departure.[A]
+
+//Lazarus
+[Right]
+*sigh*[.5] Alright.[A]
+[X]
+
+## Ch4_Scene7
+[FarFarLeft][LoadDevan][MoveLeft][.6][MoveMidRight][.4]
+[FarFarLeft][LoadAlexandra][MoveMidLeft]
+
+//Alexandra
+[Beat][A]
+
+//Devan
+[MidRight]
+Get ready to leave.[ANL]
+I want to arrive[NL]
+by the month's end.[A]
+
+//Alexandra
+[MidLeft]
+[Beat]You challenged[NL]
+the general for me.[.5] Why?[A]
+
+//Devan
+[MidRight]
+I only spoke the truth.[ANL]
+Though it seems I got more[NL]
+than I bargained for[Beat][A]
+
+//Alexandra
+[MidLeft]
+I suppose I owe[NL]
+you my thanks.[A]
+
+//Devan
+[MidRight][ClearFace][LoadDevan]
+There's really no need.[.5][NL]
+Consider it a debt repaid.[A]
+
+//Alexandra
+[MidLeft]
+Alright, then.[ANL]
+So, where exactly are we going?[NL]
+General Caius never specified.[A]
+
+//Devan
+[MidRight]
+Unless Isaac moved, he should be in[NL]
+Tristis, so that's where we're going.[A]
+
+//Alexandra
+[MidLeft]
+Tristis[Beat] I remember[NL]
+hearing you hail from there?[A]
+
+//Devan
+[MidRight]
+Correct.[.5] It's three or[NL]
+four days north of here.[A]
+
+//Alexandra
+[MidLeft]
+Then it won't be long[NL]
+before we meet the general.[ANL]
+[Beat]If he's in Tristis, you must[NL]
+have met him. What is he like?[A]
+
+//Devan
+[MidRight]
+Hm.[.4] I never had to put it to words.[ANL]
+[Beat]He's patient, honorable,[NL]
+popular, and very competent.[A]
+
+//Alexandra
+[MidLeft]
+Sounds like a difficult[NL]
+man to impress.[A]
+
+//Devan
+[MidRight]
+You don't know the half of it.[A]
+
+//Alexandra
+[MidLeft]
+You speak from experience?[A]
+
+//Devan
+[MidRight]
+You might say that.[.5][NL]
+He's my uncle.[A]
+
+//Alexandra
+[MidLeft]
+[Beat]The general I must[NL]
+report to is your uncle.[A]
+
+//Devan
+[MidRight][ToggleSmile]
+Correct.[A]
+
+[ToggleSmileFar]
+
+//Alexandra
+[MidLeft]
+I don't suppose you could--[A]
+
+//Devan
+[MidRight]
+Nope. Not a chance.[.5][NL]
+Wouldn't work anyway.[ANL]
+An endorsement from me won't[NL]
+get you anywhere with him.[ANL]
+Neither will warnings for that matter,[NL]
+so you should have a chance.[A]
+
+//Alexandra
+[MidLeft]
+Encouraging words as always[Beat][A]
+
+//Devan
+[MidRight]
+I try.[A]
+
+[FarFarLeft]
+There you are.[A]
+[X]
+
+
+## Ch4_Scene8
+[Right][LoadAlexandra]
+[FarRight][LoadDevan]
+[MidLeft][LoadMax]
+
+[SendToBack]
+
+//Max
+I was afraid I had missed you.[A]
+
+//Devan
+[FarRight]
+Did you need something?[A]
+
+//Max
+[MidLeft]
+Only to inform you that[NL]
+I'll be accompanying you.[A]
+
+//Devan
+[FarRight]
+You will?[.5] What about Masaint?[A]
+
+//Max
+[MidLeft]
+Lazarus and I already discussed it.[ANL]
+It[Beat] would be better for me to get[NL]
+out for a bit.[.5] Take my mind off things.[ANL]
+Besides, somebody needs to keep[NL]
+you and Veronica out of trouble.[A]
+
+//Devan
+[FarRight]
+Max, this is Ronni and[NL]
+I you're talking about.[A]
+
+//Max
+[MidLeft]
+Good point.[.5] I'll TRY to[NL]
+keep you out of trouble.[A][2NL]
+When do we depart?[A]
+
+//Devan
+[FarRight]
+Hmm[Beat] The morning after next.[A]
+
+//Max
+[MidLeft]
+Alright.[.5] I'll make ready.[A]
+[ClearFace][CloseSpeechSlow]
+
+[Event]
+[.5]
+
+//Alexandra
+[Right]
+He seems to be doing better.[A]
+
+//Devan
+[FarRight]
+Here's hoping it[NL]
+stays that way.[A]
+[X]
+
+## Ch4_ColtonLucyGaidenText_Part1
+[MidLeft][LoadLucy]
+[MidRight][LoadColton]
+
+//Colton
+Nope.[.5] Not happening.[A]
+
+//Lucy
+[MidLeft]
+But how else will we[NL]
+get the stuff back?[A]
+
+//Colton
+[MidRight]
+Easy.[.4] We won't.[A]
+
+//Lucy
+[MidLeft]
+But we said we would.[A]
+
+//Colton
+[MidRight]
+We said we'd try, and we did.[A]
+
+//Lucy
+[MidLeft]
+What if we ask Count Silvare[NL]
+and Miss Quirin for help?[A]
+
+//Colton
+[MidRight]
+Not a chance;[.5] they're nobility.[ANL]
+If, by some miracle, they do help us,[NL]
+it'll cost us an arm and a leg.[A]
+
+//Lucy
+[MidLeft]
+I don't think they'd do that.[A]
+
+//Devan
+[FarFarLeft]
+Do what?[A]
+[X]
+
+## Ch4_ColtonLucyGaidenText_Part2
+[Left][LoadDevan]
+[FarLeft][LoadAlexandra]
+[Right][LoadLucy]
+[FarRight][LoadColton]
+[SendToBack]
+
+//Lucy
+[Right]
+Ah! You're here![.5][NL]
+Well, Colton?[A]
+
+//Colton
+[FarRight]
+Fine.[.5] Go ahead.[A]
+
+//Lucy
+[Right]
+We could use your help finishing[NL]
+a job we got from Glasswater.[A]
+
+//Alexandra
+[FarLeft]
+Oh that's right.[ANL]
+You were tasked with recovering[NL]
+some stolen items, yes?[A]
+
+//Lucy
+[Right]
+Yeah, but it didn't go that well.[A]
+
+//Colton
+[FarRight]
+No clue how that happened.[A]
+
+//Lucy
+[Right]
+[Beat][A]
+
+//Devan
+[Left]
+Do you know where[NL]
+the items are?[A]
+
+//Lucy
+[Right]
+Yeah.[.5] In a cave around the[NL]
+mountains where we first met.[A]
+
+//Devan
+[Left]
+Alright.[.5] We'll help.[A]
+
+//Colton
+[FarRight]
+It can't be that easy.[A]
+
+//Devan
+[Left]
+[Beat]However, we'll be taking[NL]
+a share of the bounty.[A]
+
+//Colton
+[FarRight]
+See what I mean?[.5][NL]
+They're bigger crooks than us.[A]
+
+//Devan
+[Left]
+Well, I could do it myself[NL]
+and not give you a cut.[A]
+
+//Lucy
+[Right]
+We accept![.5][NL]
+Let's go, Colton.[A]
+
+//Colton
+[FarRight]
+Yeah[Beat] Sure[Beat][A]
+[ClearFace]
+[Right][ClearFace][.5]
+
+//Alexandra
+[FarLeft]
+They couldn't have[NL]
+more than a pittance.[A][2NL]
+I doubt it's worth the effort.[A]
+
+//Devan
+[Left]
+It is to the villagers.[A]
+
+//Alexandra
+[FarLeft]
+I see.[A]
+[X]
+
+## Ch4_LucyGrieves
+[MidRight][LoadLucy]
+[Beat]Oh, Colton[Beat] *sniff*[A]
+
+[Left][LoadDevan]
+[FarLeft][LoadAlexandra]
+[SendToBack]
+
+//Devan
+[Left]
+Hello, Lucy.[.5][NL]
+How are you holding up?[A]
+
+//Lucy
+[MidRight]
+[Beat]I don't know.[ANL]
+I don't even know[NL]
+where to go now.[A]
+
+//Devan
+[Left]
+You can come with us,[NL]
+if you'd like.[A]
+
+//Lucy
+[MidRight]
+Huh?[A]
+
+//Devan
+[Left]
+I can't promise much, but we can[NL]
+offer you food, shelter, and company.[A]
+
+//Lucy
+[MidRight]
+You'd[Beat] do that?[.5] For me?[A]
+
+//Devan
+[Left]
+Of course.[.5] It wouldn't[NL]
+do to just leave you.[A]
+
+//Lucy
+[MidRight]
+I[Beat] I[Beat][A]
+
+//Devan
+[Left]
+Or, if you prefer, I could give[NL]
+you the money I offered earlier.[ANL]
+We'll be leaving in two days,[NL]
+so tell me before then.[A]
+
+//Lucy
+[MidRight]
+No! No, I'll go with you.[A]
+
+//Devan
+[Left]
+Good.[.4] Go find Ronni.[.5][NL]
+She'll get you squared away.[A]
+
+//Lucy
+[MidRight]
+Yes, sir.[A]
+[ClearFace]
+
+//Alexandra
+[FarLeft]
+Color me surprised.[ANL]
+I think this is my first[NL]
+time seeing you compassionate.[A]
+
+//Devan
+[Left]
+I have my moments.[ANL]
+Besides, were it not for me,[NL]
+she wouldn't have lost Colton.[A]
+
+//Alexandra
+[FarLeft]
+It's probably for the best.[.5][NL]
+He wasn't the good sort.[A]
+
+//Devan
+[Left]
+Perhaps.[.5] I can't say for certain.[.5][NL]
+He did take care of Lucy.[A]
+
+//Alexandra
+[FarLeft]
+He cornered me into a perilous deal.[ANL]
+Honestly, I'm relieved that[NL]
+I won't have to deal with him.[A]
+
+//Devan
+[Left]
+I figured you would say that.[A]
+[X]
+
+## Ch4_ColtonGrieves
+[MidRight][LoadColton]
+
+//Colton
+[Beat][A]
+
+[Left][LoadDevan]
+[FarLeft][LoadAlexandra]
+[SendToBack]
+
+//Devan
+[Left]
+Colton.[A]
+
+//Colton
+[MidRight]
+What do you want?[A]
+
+//Devan
+[Left]
+Just checking up on you.[A]
+
+//Colton
+[MidRight]
+Yeah? Well don't bother.[ANL]
+She's dead and there's[NL]
+nothing I can do about it.[ANL]
+Might as well move on.[A]
+
+//Devan
+[Left]
+Rather heartless outlook,[NL]
+don't you think?[A]
+
+//Colton
+[MidRight]
+Rich words coming from[NL]
+the man who killed her.[A]
+
+//Devan
+[Left]
+[Beat][A]
+
+//Colton
+[MidRight]
+[Beat]So we're leaving[NL]
+in two days?[A]
+
+//Alexandra
+[FarLeft]
+You were eavesdropping?[A]
+
+//Colton
+[MidRight]
+It's what I do.[A]
+
+//Alexandra
+[FarLeft]
+Well, it's of no import to you.[ANL]
+Just state your favor so I can grant it,[NL]
+and we'll be done with each other.[A]
+
+//Colton
+[MidRight]
+Not yet. I'll just follow[NL]
+you until I'm ready.[A]
+
+//Alexandra
+[FarLeft]
+How long do you[NL]
+intend on waiting?[A]
+
+//Colton
+[MidRight]
+[Beat]Until the time is right.[.5][NL]
+I'll let you know.[A]
+[ClearFace]
+
+//Alexandra
+[FarLeft]
+Never before have I met a man who[NL]
+so closely resembles a snake.[ANL]
+Well, I'd best get ready myself.[NL]
+I'll see you in two days, Count Silvare.[A][CloseSpeechSlow]
+[Beat]Count Silvare?[A]
+
+//Devan
+[Left]
+Hm?[.5] Oh, yes.[.5] Of course.[.5][NL]
+I'll see you then.[A]
+
+[FarLeft][Clear]
+
+//Devan
+[Left][CloseEyes][CloseSpeechSlow]
+[Beat]I'm sorry.[A]
+[X]

@@ -13,11 +13,20 @@ ldr   r0,GetCharData
 mov   r14,r0
 ldrb  r0,[r3,#0xA]
 .short  0xF800      @returns char data pointer of moving unit
+mov   r6, r0
 ldr   r1,SkillTester
 mov   r14,r1
 ldr   r1,PassID
 .short  0xF800
 cmp   r0,#0x1     @set z flag if unit has Pass
+bne   GoBack
+@check if already galeforced this turn
+ldr	r0, [r6,#0x0C]	@status bitfield
+mov	r1, #0x04
+lsl	r1, #0x08
+and	r0, r1
+ldr r1, GaleforeceBit
+cmp	r0, r1
 GoBack:
 pop   {r0-r6}
 pop   {r4}
@@ -30,6 +39,8 @@ GetCharData:
 .long 0x08019430
 GoBackAddress:
 .long 0x03003D34    @note that we need to switch back to arm
+GaleforeceBit:
+.long 0x400
 SkillTester:
 @POIN SkillTester
 @WORD PassID

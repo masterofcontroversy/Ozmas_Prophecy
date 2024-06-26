@@ -1,0 +1,213 @@
+EventPointerTable(0x0A,ThisChapter)
+
+#define VillageID1 0x8
+#define ChurchEventID 0x9
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(0, RandomSnowEvent, 1, 255)
+TurnEventEnemy(0, HendrickLoadEvent, 1)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+House(0, ChurchEvent, 17, 5)
+Village(VillageID1, Village1Event, 15, 1)
+Seize(19,11)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+    WEATHER Snow
+    LOAD1 0 EnemyUnits; ENUN
+    MUSIC MemoriesofGreen_BGM
+    SetBackground(InsideTent2BG)
+    Text(Ch2_Scene1)
+    FADI 7
+    REMOVEPORTRAITS
+    BACG StorageRoomBG
+    FADU 7
+    Text(Ch2_Scene2)
+    
+    MUSIC OutsideBirdsChirping
+    FADI 5
+    CLEAN
+    FADU 5
+    
+    BROWNBOXTEXT TheNextDayText [8,8]
+    CAM1 [19,11]
+    CURSOR [19,11]
+    STAL 90
+    REMOVE_CURSORS
+
+    MUSIC BirdsChirping
+    SetBackground(InsideFortressDayBG)
+    Text(Ch2_Scene3)
+
+    MUSIC OutsideBirdsChirping
+    SetBackground(Forest3WinterDayBG)
+    Text(Ch2_Scene4)
+    MUSIC BattleThemeEX_BGM
+    FADI 7
+    CAM1 [0,0]
+    EndConvo
+
+    LOAD1 0 PlayerUnits; ENUN
+    Text(Ch2_BattleTransition)
+    NoFade
+ENDA
+
+EndingScene:
+    MUSIC ForbiddenForest_BGM
+    SetBackground(ForestOutskirts2WinterDayBG)
+    Text(Ch2_AfterBattle)
+    SetBackground(DungeonBG)
+    Text(Ch2_Scene5)
+
+    CHECK_ALIVE Kenneth
+    BEQ 0x9000 sC s0
+        MUSIC EventBattle_BGM
+        SetBackground(ForestOutskirts2WinterDayBG)
+        Text(Ch2_OptionalScene1)
+    LABEL 0x9000
+
+    MUSIC Nightfall_BGM
+    SetBackground(InsideTent2BG)
+    Text(Ch2_Scene6)
+
+    LOAD1 0 HollyUnit
+    MNC2 Ch3_ChapterID
+ENDA
+
+Village1Event:
+VillageEventItem(Ch2_Village,Village2WinterDayBG,IronShield)
+
+ChurchEvent:
+MUSI
+SetBackground(InsideHouse4DayBG)
+CHECK_FLAG ChurchEventID
+BNE 0x9000 sC s0
+    Text(Ch2_Church)
+    ENUT ChurchEventID
+    GOTO 0x9001
+
+LABEL 0x9000
+Text(Ch2_Church_Part2)
+
+LABEL 0x9001
+EndConvo
+MUNO
+NoFade
+ENDA
+
+HendrickLoadEvent:
+    CAM1 [19,11]
+    CURSOR [19,11]
+    STAL 50
+    REMOVE_CURSORS
+
+    SetBackground(InsideFortressDayBG)
+    MUSI
+    Text(Ch2_HendrickAlert)
+    EndConvo
+    MUNO
+
+    STAL 10
+    LOAD1 0 HendrickUnit
+    ENUN
+
+    STAL 20
+    Text(Ch2_HendrickDeclare)
+    TEXTEND
+    REMA
+
+    NoFade
+ENDA
+
+PlayerUnits:
+UNIT Devan Count Devan Level(1,Player,False) [0,3] 0x0 0x0 0x1 REDA3R4 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,False) [0,3] 0x0 0x0 0x1 REDA2R4 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(1,Player,False) [0,3] 0x0 0x0 0x1 REDA2R5 [IronSword, IronBlade, Vulnerary] NoAI
+UNIT Kenneth LanceCavalier Devan Level(1,Player,False) [0,3] 0x0 0x0 0x1 REDA2R3 [IronLance, Vulnerary] NoAI
+
+UNIT Alexandra Lord Devan Level(1,Player,False) [0,3] 0x0 0x0 0x1 REDA3R5 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(6,Player,False) [0,3] 0x0 0x0 0x1 REDA1R4 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(3,Player,False) [0,3] 0x0 0x0 0x1 REDA3R3 [IronAxe, HandAxe, Vulnerary] NoAI
+
+UNIT //Tells the game that the unit list has ended
+
+HollyUnit:
+UNIT Holly Cleric Devan Level(2,Player,0) [1,1] 0x0 0x0 0x0 0x1 [Heal, Finesse] NoAI
+UNIT
+
+EnemyUnits:
+UNIT EastDuramontis Mage Hendrick Level(2,Enemy,True) [18,11] 0x0 0x0 0x0 0x1 [Fire] GroupTwoAI
+UNIT EastDuramontis PegasusKnight Hendrick Level(2,Enemy,True) [20,11] 0x0 0x0 0x0 0x1 [IronLance] GroupTwoAI
+UNIT EastDuramontis Mercenary Hendrick Level(2,Enemy,True) [19,8] 0x0 0x0 0x0 0x1 [IronBlade] GroupTwoAI
+UNIT EastDuramontis ArmorKnight Hendrick Level(2,Enemy,True) [18,9] 0x0 0x0 0x0 0x1 [Javelin] NeverMoveAI
+
+UNIT EastDuramontis Fighter Hendrick Level(2,Enemy,True) [4,7] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT EastDuramontis Soldier Hendrick Level(2,Enemy,True) [6,6] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+
+UNIT EastDuramontis Acolyte Hendrick Level(2,Enemy,True) [6,3] 0x0 0x0 0x0 0x1 [Lightning] NoAI
+UNIT EastDuramontis Fighter Hendrick Level(2,Enemy,True) [13,4] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT EastDuramontis Mercenary Hendrick Level(2,Enemy,True) [11,5] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+
+UNIT EastDuramontis Myrmidon Hendrick Level(2,Enemy,True) [17,2] DropItem 0x0 0x0 0x1 [SteelSword] GroupOneAI
+UNIT EastDuramontis Soldier Hendrick Level(2,Enemy,True) [15,1] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
+
+UNIT Cassis DracoRider Hendrick Level(2,Enemy,True) [20,4] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+
+UNIT EastDuramontis Mercenary Hendrick Level(2,Enemy,True) [11,9] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+UNIT EastDuramontis Archer Hendrick Level(2,Enemy,True) [11,10] 0x0 0x0 0x0 0x1 [IronBow] AttackInRangeAI
+
+UNIT EastDuramontis Shaman Hendrick Level(2,Enemy,True) [13,9] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT EastDuramontis Acolyte Hendrick Level(2,Enemy,True) [17,5] 0x0 0x0 0x0 0x1 [Lightning] GroupOneAI
+
+UNIT EastDuramontis PegasusKnight Hendrick Level(2,Enemy,True) [9,11] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+
+UNIT EastDuramontis SwordCavalier Hendrick Level(2,Enemy,True) [17,10] 0x0 0x0 0x0 0x1 [IronSword] [0x0, 0xA, 0x0, 0x0]
+
+UNIT
+
+HendrickUnit:
+UNIT Hendrick Fighter Hendrick Level(4,Enemy,False) [19,11] DropItem 0x0 0x0 0x1 [IronAxe, HandAxe, VigorStone] NeverMoveAI
+UNIT
+
+AbsalomCutsceneUnit:
+UNIT Absalom Fighter Alexandra Level(2,Player,False) [7,9] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT
+
+CutsceneUnits:
+UNIT Alexandra Lord Devan Level(1,Player,False) [4,4] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(10,Player,False) [6,4] 0x0 0x0 0x0 0x1 [IronSword, Heal, Vulnerary] NoAI
+UNIT
+
+#undef VillageID1

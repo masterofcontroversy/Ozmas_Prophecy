@@ -6,6 +6,24 @@ blue * 0x400
 */
 #define PaletteShort(red, green, blue) "SHORT (red / 8) + (green * 4) + (blue * 0x80)"
 
+//Portrait ID Definitions
+#define DevanPortraitID     0x02
+#define RonniPortraitID     0x04
+#define AnthonyPortraitID   0x05
+#define KennethPortraitID   0x06
+#define EvelynPortraitID    0x16
+#define MaxPortraitID       0xE
+#define AlexandraPortraitID 0x14
+#define LucyPortraitID      0xC
+#define HollyPortraitID     0x7
+#define ColtonPortraitID    0xA
+#define AbsalomPortraitID   0x9
+#define HendrickPortraitID  0x31
+#define CaiusPortraitID     0x32
+#define LazarusPortraitID   0x33
+#define DominicPortraitID   0x34
+#define PriestPortraitID    0x35
+
 //Icon Definitions
 #define IronSwordIcon        0x0
 #define SteelSwordIcon       0x1
@@ -19,8 +37,8 @@ blue * 0x400
 #define ArmorslayerIcon      0x9
 #define LancereaverIcon      0xA
 #define RapierIcon           0xB
-//#define Free               0xC
-//#define Free               0xD
+#define StrikerBladeIcon     0xC
+#define SwiftbladeIcon       0xD
 //#define Free               0xE
 //#define Free               0xF
 #define IronLanceIcon        0xDF
@@ -48,7 +66,7 @@ blue * 0x400
 #define TomahawkIcon         0x26
 #define HalberdIcon          0x27
 #define HammerIcon           0x28
-//#define Free               0x29
+#define LabrysIcon           0x29
 //#define Free               0x2A
 //#define Free               0x2B
 //#define Free               0x2C
@@ -85,9 +103,14 @@ blue * 0x400
 #define IronShieldIcon       0xA2
 #define SteelShieldIcon      0xA3
 #define SilverShieldIcon     0xA4
+#define TealGemIcon          0xC8
+#define VigorStoneIcon       0xD1
+#define AccostBandIcon       0xD2
+#define CloverIcon           0xD3
 
 
 //staves start at 0x49
+#define FinesseIcon          0x57
 
 //Class Card Definitions
 #define MyrmidonCC           0x72
@@ -104,12 +127,12 @@ blue * 0x400
 #define SageCC               0x7D
 #define ShamanCC             0x7E
 #define DruidCC              0x7F
-#define CavalierCC           0x80
-#define PaladinCC            0x81
+#define LanceCavalierCC      0x80
+#define LancePaladinCC       0x81
 #define TroubadourCC         0x82
 #define ValkyrieCC           0x83
-#define BowKnightCC          0x84
-#define ArchKnightCC         0x85
+#define BowCavalierCC        0x84
+#define BowPaladinCC         0x85
 #define PegasusKnightCC      0x86
 #define FalcoKnightCC        0x87
 #define DracoRiderCC         0x88
@@ -123,12 +146,17 @@ blue * 0x400
 #define MercenaryCC          0x90
 #define HeroCC               0x91
 #define FleetCC              0x92
-//#define Free               0x93
+#define ArcanistCC           0x93
 #define RogueCC              0x94
-//#define Free               0x95
+#define MageKnightCC         0x95
 #define GreatKnightCC        0x96
 //#define Free               0x97
 #define AngelCC              0x98
+#define SwordCavalierCC      0x99
+#define SwordPaladinCC       0x9A
+#define AxeCavalierCC        0x9B
+#define AxePaladinCC         0x9C
+
 
 //Conversation Background Definitions
 #define BackgroundEntryCount 0x77
@@ -186,7 +214,7 @@ blue * 0x400
 #define ChiefsTent2BG 0x32
 #define ChiefTentInteriorBG 0x33
 #define DaytimeInsideHouse1BG 0x34
-#define DaytimeTavern1BG 0x35
+#define BlackBG 0x35
 #define DesertDayBG 0x36
 #define DesertEveningBG 0x37
 #define DesertMorningBG 0x38
@@ -253,8 +281,7 @@ blue * 0x400
 #define Village6DayBG 0x75
 #define Village6NightBG 0x76
 #define Village6WinterDayBG 0x77
-
-#define BlackBG 0x77
+#define DaytimeTavern1BG 0x78
 
 //Battle Backgrounds
 #define TownBBG 0x1
@@ -327,18 +354,31 @@ blue * 0x400
 #define DarklingLakeBBG 0x44
 #define DarklingShrineBBG 0x45
 
+//Battle animation palette definitions
+#define DevanCountPalette 0x01
+#define RonniBowKnightPalette 0x03
+#define RonniArchKnightPalette 0x04
+#define AnthonyMercenaryPalette 0x05
+#define KennethCavalierPalette 0x07
+#define AlexandraLordPalette 0x09
+#define EvelynFalconKnightPalette 0x0B
+#define LucyMagePalette 0x0D
+#define AbsalomFighterPalette 0x0F
+#define MaxShamanPalette 0x11
+#define ColtonThiefPalette 0x13
+
 //Animation Definitions (Why do I hate myself?)
 #define UseMap               0x00
 #define LordSword            0x01
 #define LordUnarmed          0x02
-#define DukeLance            0x03
-#define DukeUnarmed          0x04
+#define CountLance           0x03
+#define CountUnarmed         0x04
 #define GreatLordSword       0x05
 #define GreatLordUnarmed     0x06
-#define ArchDukeLance        0x07
-#define ArchDukeUnarmed      0x08
-#define EirikaClone          0x09
-#define Unused01             0x0A
+#define MargraveLance        0x07
+#define MargraveUnarmed      0x08
+#define SoldierFLance        0x09
+#define SoldierFUnarmed      0x0A
 #define MercenarySword       0x0B
 #define MercenaryUnarmed     0x0C
 #define HeroSword            0x0D
@@ -395,8 +435,8 @@ blue * 0x400
 #define PaladinHandaxe       0x40
 #define PaladinBow           0x41
 #define PaladinUnarmed       0x42
-//#define Free               0x43
-//#define Free               0x44
+#define DragoonLance         0x43
+#define DragoonUnarmed       0x44
 #define GeneralSword         0x45
 #define GeneralLance         0x46
 #define GeneralAxe           0x47
@@ -480,29 +520,27 @@ blue * 0x400
 #define RogueFKnife          0x95
 #define AcolyteFMagic        0x96
 //#define BishopFMagic       0x97
-#define SoldierLance         0x98
-#define SoldierUnarmed       0x99
-#define PirateAxe            0x9A
-#define PirateHandaxe        0x9B
-#define PirateUnarmed        0x9C
-#define NecromancerMagic     0x9D
-#define NecromancerStaff     0x9E
-#define ArcherBallista       0x9F
-//Monster Animations (First to be replaced)
-#define FighterFAxe          0xA0
-#define FighterFHandaxe      0xA1
-#define FighterFUnarmed      0xA2
-#define SoldierFLance        0xA3
-#define SoldierFUnarmed      0xA4
-#define DragoonLance         0xA5
-#define DragoonUnarmed       0xA6
+#define PirateAxe            0x98
+#define PirateHandaxe        0x99
+#define PirateUnarmed        0x9A
+#define NecromancerMagic     0x9B
+#define NecromancerStaff     0x9C
+#define ArcherBallista       0x9E
+#define FighterFAxe          0x9F
+#define FighterFHandaxe      0xA0
+#define FighterFUnarmed      0xA1
 //#define BishopMagic        0xA7
-#define PegasusKnightSword   0xA8
-#define MageKnightSword      0xA9
-#define MageKnightFSword     0xAA
-#define PaladinFSword        0xAB
-#define PaladinFLance        0xAC
-#define PaladinFAxe          0xAD
-#define PaladinFHandaxe      0xAE
-#define PaladinFBow          0xAF
-#define PaladinFUnarmed      0xB0
+#define PegasusKnightSword   0xA2
+#define MageKnightSword      0xA3
+#define MageKnightFSword     0xA4
+#define PaladinFSword        0xA5
+#define PaladinFLance        0xA6
+#define PaladinFAxe          0xA7
+#define PaladinFHandaxe      0xA8
+#define PaladinFBow          0xA9
+#define PaladinFUnarmed      0xAA
+#define SoldierLance         0xAB
+#define SoldierUnarmed       0xAC
+#define IronMageMagic        0xAD
+#define ArcanistMagic        0xAE
+#define MercenarySwordFollowup 0xAF

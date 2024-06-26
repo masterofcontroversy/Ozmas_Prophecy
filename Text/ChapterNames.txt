@@ -2,7 +2,13 @@
 Ch1: Among the Clouds[X]
 
 # 0x161 Chapter2Name
-Ch2: Stone Cold Valley[X]
+Ch2: The Silent Valley[X]
 
-# 0x162 Chpater3Name
-Ch3: Urban Warfare[X]
+# 0x162 Chapter3Name
+Ch3: A Rock and a Hard Place[X]
+
+# 0x163 Chapter4Name
+Ch4: Moonlit Rescue[X]
+
+# 0x164 Chapter4xName
+Ch4x: A Transaction Fulfilled[X]

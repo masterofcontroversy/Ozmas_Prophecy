@@ -266,6 +266,14 @@ BYTE 0x00 //always zero
 BYTE 0x00
 #incbin "sword.fontchar"
 
+Sglyph_interrobang:
+WORD 0x00000000 //empty pointer (no Shift-JIS)
+BYTE 0x00 //empty code-page # (no Shift-JIS)
+BYTE 0x6  //character width
+BYTE 0x00 //always zero
+BYTE 0x00
+#incbin "Interrobang.fontchar"
+
 Sglyph_shortspace:
 WORD 0x00000000 //empty pointer (no Shift-JIS)
 BYTE 0x00 //empty code-page # (no Shift-JIS)
@@ -308,8 +316,4 @@ tGlyphEntry(0xB8, Sglyph_anima)
 tGlyphEntry(0xB9, Sglyph_dark)
 tGlyphEntry(0xBA, Sglyph_staff)
 tGlyphEntry(0xBC, Sglyph_shortspace)
-
-
-
-
-
+tGlyphEntry(0xC3, Sglyph_interrobang)

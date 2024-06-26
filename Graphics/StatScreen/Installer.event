@@ -6,14 +6,18 @@ POIN StatScreenImage
 ORG 0x88644
 POIN StatScreenTSA
 
-ORG 0xA06460
-#incbin "StatScreen.pal"
+ORG 0x88640
+POIN StatScreenPalette
 
 POP
 
 ALIGN 4
 StatScreenImage:
 #incbin "StatScreen.lz77"
+
+ALIGN 4
+StatScreenPalette:
+#incbin "StatScreen.pal"
 
 ALIGN 4
 StatScreenTSA:

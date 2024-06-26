@@ -1,8 +1,8 @@
 //Class Definitions
 
-#define Duke            0x1
+#define Count           0x1
 #define Lord            0x2
-#define ArchDuke        0x3
+#define Margrave        0x3
 #define GreatLord       0x4
 #define LanceCavalier   0x5
 #define SwordCavalier   0x6
@@ -31,5 +31,8 @@
 #define Dragoon         0x57
 #define AxeCavalier_F   0x58
 #define AxePaladin_F    0x59
+#define IronMage        0x5B
+#define Arcanist        0x5D
+#define Wagon           0x64
 
 

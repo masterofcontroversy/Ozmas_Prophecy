@@ -1,8 +1,8 @@
-## DukeName
-Duke[X]
+## CountName
+Count[X]
 
-## ArchDukeName
-ArchDuke[X]
+## MargraveName
+Margrave[X]
 
 ## LordName
 Lord[X]
@@ -11,28 +11,28 @@ Lord[X]
 Great Lord[X]
 
 ## SwordCavalierName
-Sword Cav.[X]
+Swd.^{ }Cavalie^{r}[X]
 
 ## LanceCavalierName
-Lance Cav.[X]
+^{L}nc.^{ }Cavalier[X]
 
 ## AxeCavalierName
-Axe Cav.[X]
+Axe Cavalier[X]
 
 ## SwordPaladinName
-Sword Pal.[X]
+Swd.^{ }Paladin[X]
 
 ## LancePaladinName
-Lance Pal.[X]
+Lnc.^{ }Paladin[X]
 
 ## AxePaladinName
-Axe Pal.[X]
+Axe Paladin[X]
 
 ## BowKnightName
-Bow Knight[X]
+Bow Cavalier[X]
 
 ## ArchKnightName
-Arch Knight[X]
+Bow Paladin[X]
 
 ## SoldierName
 Soldier[X]
@@ -80,7 +80,7 @@ Rogue[X]
 Peg. Knight[X]
 
 ## FalcoKnightName
-Falcoknight[X]
+Falcon Knight[X]
 
 ## DracoKnightName
 Dracoknight[X]
@@ -122,19 +122,24 @@ Druid[X]
 priest[X]
 
 ## ClericName
-Cleric[X]
+Priestess[X]
 
+## IronMageName
+Iron Mage[X]
 
-## DukeDesc
-Leaders of the grand council[NL]
-with great talent in lancing.[X]
+## ArcanistName
+Arcanist[X]
 
-## ArchDukeDesc
-ArchDukeDesc[X]
+## CountDesc
+Masters of a ruling house[NL]
+with talent in lancing.[X]
+
+## MargraveDesc
+MargraveDesc[X]
 
 ## LordDesc
-Heirs to a ruling house who[NL]
-are skilled in fencing.[X]
+Heirs to a ruling house[NL]
+who are skilled in fencing.[X]
 
 ## GreatLordDesc
 Great LordDesc[X]
@@ -144,23 +149,23 @@ Mounted knights with high mobility[NL]
 and good all around combat ability.[X]
 
 ## PaladinDesc
-PaladinDesc[X]
+Expert horsemen who rule[NL]
+the open fields[X]
 
 ## TroubadourDesc
-Battle maidens skilled in[NL]
-magic staves and swords.[X]
+Battle maidens skilled with[NL]
+magic staves.[X]
 
 ## ValkyrieDesc
-ValkyrieDesc[X]
-
-## GreatKnightDesc
-Great KnightDesc[X]
+Troubadours granted their knighthood.[NL]
+They defend themselves with light magic.[X]
 
 ## BowKnightDesc
-Knights who use bows from horseback.[X]
+Archers who fight from horseback.[X]
 
 ## ArchKnightDesc
-Arch KnightDesc[X]
+Archers who have mastered[NL]
+the art of horseback archery.[X]
 
 ## SoldierDesc
 Foot soldiers armed with[NL]
@@ -171,34 +176,39 @@ Masterful lancers who [NL]
 can pierce any armor.[X]
 
 ## MyrmidonDesc
-Quick swordsmen[X]
+Skilled swordsmen swift in[NL]
+both mind and body.[X]
 
 ## SwordmasterDesc
 Lighting fast swordsmen who cut down[NL]
 their enemies before they can blink.[X]
 
 ## MercenaryDesc
-Experienced sellswords who time[NL]
-and again earn their pay.[X]
+Experienced sellswords who,[NL]
+time and again, earn their pay.[X]
 
 ## HeroDesc
-HeroDesc[X]
+Mercenaries whose top tier[NL]
+skills earn top coin.[X]
 
 ## FighterDesc
-FighterDesc[X]
+Strong combatants who use axes[NL]
+to cleave through their foes.[X]
 
 ## WarriorDesc
-WarriorDesc[X]
+Powerful fighters for whom[NL]
+the battlefield is a second home.[X]
 
 ## ArcherDesc
-ArcherDesc[X]
+Bow users armed with sharp arrows,[NL]
+and a sharper aim.[X]
 
 ## SniperDesc
-Expert marksmen who never[NL]
+Expert archers who never[NL]
 miss their mark.[X]
 
 ## ArmorKnightDesc
-Slow but bulky soldiers skilled in[NL]
+Slow, but sturdy soldiers skilled in[NL]
 swords and lances. Weak against magic.[X]
 
 ## GeneralDesc
@@ -206,10 +216,12 @@ Masters of warfare clad in near[NL]
 impenetrable armor.[X]
 
 ## ThiefDesc
-ThiefDesc[X]
+Quick deviants with the dexterity[NL]
+to pick locks and pockets alike.[X]
 
 ## RogueDesc
-RogueDesc[X]
+Master thieves for whom stealing[NL]
+is second nature.[X]
 
 ## PegasusKnightDesc
 Swift airborne knights with strong[NL]
@@ -228,37 +240,57 @@ Terrors of the skies known[NL]
 for constant rampages.[X]
 
 ## BrigandDesc
-BrigandDesc[X]
+Brutes who are no strangers to burning[NL]
+homes and terrorizing people.[X]
 
 ## PirateDesc
-PirateDesc[X]
+Bandits who have taken to the waters[NL]
+to plunder valuables from ships.[X]
 
 ## BerserkerDesc
-BerserkerDesc[X]
+Hulking bandits who cross almost any[NL]
+terrain on their mission to pillage.[X]
 
 ## DeserterDesc
-DeserterDesc[X]
+Former soldiers who have forsaken[NL]
+their oath to pursue riches.[X]
 
 ## MageDesc
-MageDesc[X]
+Magic users who call on[NL]
+nature to cast spells.[X]
 
 ## SageDesc
-SageDesc[X]
+Master mages with a true[NL]
+attunement to nature.[X]
 
 ## AcolyteDesc
-AcolyteDesc[X]
+Magic users who draw strength from[NL]
+their spirits to smite their foes.[X]
 
 ## BishopDesc
-BishopDesc[X]
+Masters of magic who[NL]
+wield blinding light.[X]
 
 ## ShamanDesc
-ShamanDesc[X]
+Mages who tap into their[NL]
+emotions to conjure dark magic.[X]
 
 ## DruidDesc
-DruidDesc[X]
+Dark masters who convert their[NL]
+emotions into torrents of dark energy.[X]
 
 ## PriestDesc
-PriestDesc[X]
+Men of the cloth who[NL]
+use their staves to heal.[X]
 
 ## ClericDesc
-ClericDesc[X]
+Women of the cloth who[NL]
+use their staves to heal.[X]
+
+## IronMageDesc
+Mages who traded their[NL]
+speed for protective armor.[X]
+
+## ArcanistDesc
+Wielders of arcane dark magic who[NL]
+use speed to overcome their opponents.[X]

@@ -1,0 +1,82 @@
+//Edit vanilla call to pass a unit pointer instead of a attribute bitfield
+PUSH
+    //Stat screen page 1
+    //This only applies to vanilla stat screens.
+    //Modular Stat Screen's page 1 must be edited, if you use MSS.
+    ORG 0x87362
+    SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+
+    //Rescue display
+    ORG 0x34AEA
+    SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+POP
+
+#include "TypeIcons.lyn.event"
+
+#define SetAidIcon(classID, iconID) "PUSH; ORG gAidIconTable + classID; BYTE iconID; POP"
+#define SetSecondAidIcon(classID, iconID) "PUSH; ORG gSecondAidIconTable + classID; BYTE iconID; POP"
+
+#define HorseIcon 0
+#define PegasusIcon 1
+#define WyvernIcon 2
+#define ArmorIcon 3
+#define MageIcon 4
+
+gAidIconTable:
+FILL 0x100 0xFF
+
+gSecondAidIconTable:
+FILL 0x100 0xFF
+
+SetAidIcon(LanceCavalier, HorseIcon)
+SetAidIcon(LanceCavalier_F, HorseIcon)
+SetAidIcon(AxeCavalier, HorseIcon)
+SetAidIcon(AxeCavalier_F, HorseIcon)
+SetAidIcon(SwordCavalier, HorseIcon)
+SetAidIcon(SwordCavalier_F, HorseIcon)
+SetAidIcon(BowKnight, HorseIcon)
+SetAidIcon(BowKnight_F, HorseIcon)
+SetAidIcon(LancePaladin, HorseIcon)
+SetAidIcon(LancePaladin_F, HorseIcon)
+SetAidIcon(AxePaladin, HorseIcon)
+SetAidIcon(AxePaladin_F, HorseIcon)
+SetAidIcon(SwordPaladin, HorseIcon)
+SetAidIcon(SwordPaladin_F, HorseIcon)
+SetAidIcon(ArchKnight, HorseIcon)
+SetAidIcon(ArchKnight_F, HorseIcon)
+SetAidIcon(MageKnight, HorseIcon)
+
+SetAidIcon(Mage, MageIcon)
+SetAidIcon(Mage_F, MageIcon)
+SetAidIcon(Acolyte, MageIcon)
+SetAidIcon(Acolyte_F, MageIcon)
+SetAidIcon(Shaman, MageIcon)
+SetAidIcon(Shaman_F, MageIcon)
+SetAidIcon(Sage, MageIcon)
+SetAidIcon(Sage_F, MageIcon)
+SetAidIcon(Bishop, MageIcon)
+SetAidIcon(Bishop_F, MageIcon)
+SetAidIcon(Druid, MageIcon)
+SetAidIcon(Druid_F, MageIcon)
+SetAidIcon(Priest, MageIcon)
+SetAidIcon(Cleric, MageIcon)
+
+SetAidIcon(ArmorKnight, ArmorIcon)
+SetAidIcon(General, ArmorIcon)
+SetAidIcon(IronMage, ArmorIcon)
+
+SetAidIcon(FalcoKnight, PegasusIcon)
+SetAidIcon(PegasusKnight, PegasusIcon)
+
+SetAidIcon(DracoRider, WyvernIcon)
+SetAidIcon(DracoMaster, WyvernIcon)
+SetAidIcon(DracoRider_F, WyvernIcon)
+SetAidIcon(DracoMaster_F, WyvernIcon)
+
+SetSecondAidIcon(IronMage, MageIcon)
+SetSecondAidIcon(MageKnight, MageIcon)
+
+SetSecondAidIcon(DracoRider, PegasusIcon)
+SetSecondAidIcon(DracoMaster, PegasusIcon)
+SetSecondAidIcon(DracoRider_F, PegasusIcon)
+SetSecondAidIcon(DracoMaster_F, PegasusIcon)

@@ -1,0 +1,285 @@
+EventPointerTable(0x07,ThisChapter)
+
+#define BossChargeFlag 0x7
+#define BossAttackedCompletionFlag 0x8
+
+ALIGN 4
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(BossChargeFlag, BossCharge, 5)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+DefeatAll(EndingScene)
+AlwaysEvent(BossAttackedCompletionFlag, BossAttacked, BossQuoteID)
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+    SVAL s1 0
+    ASMC ASMC_ChangeMode
+    
+    //Debug chapter jump
+    #ifdef __DEBUG__
+        SVAL s1 0x0200
+        ASMC ASMC_CheckPlayerHoldingKeys
+        BEQ 0x9000 sC s0
+            CALL StartChapterJumpEvent
+        LABEL 0x9000
+    #endif
+
+    SVAL s1 4000
+    ASMC ASMC_SilentSetGold|1
+    LOMA Ch1_OpeningChapterID
+    CAM1 [28,18]
+    MUSIC Kanna_BGM
+    WEATHER Clouds
+    EVBIT_F 8
+    ASMC ASMC_SetCloudsForeground|1
+    ASMC ASMC_FadeCloudToMap|1
+    STAL 10
+    CAM1 [11,13]
+
+    ASMC ASMC_CloudFadeToBlack|1
+    EVBIT_T 8
+    ASMC ASMC_SetCloudsBackground|1
+    CAM1 [10,3]
+    FADU 10
+
+    LOAD1 2 CutsceneUnits
+    MOVE 3 Devan [8,5]
+    STAL 10
+    MOVE 3 Ronni [8,6]
+    STAL 10
+    MOVE 3 Anthony [10,5]
+    STAL 10
+    MOVE 3 Kenneth [10,6]
+    STAL 120
+    FADI 10
+    ENUN
+    REMOVEALL_BLUE
+
+    SetBackground(MountainsideWinterDayBG)
+    Text(Ch1_Scene1)
+    Text(Ch1_Scene2)
+    FADI 10
+    LOMA Ch1_ChapterID
+    LOAD1 0 EnemyUnits
+    ENUN
+    FADU 10
+
+    MUSI
+    Text(Ch1_BattleTransition)
+    MUNO
+    
+    CAM1 [16,1]
+    LOAD1 0 PlayerUnits
+    ENUN
+    
+    NoFade
+ENDA
+
+EndingScene:
+    MUSIC KannaArmy_BGM
+    SetBackground(MountainsideWinterDayBG)
+    Text(Ch1_AfterBattle)
+
+    FADI 10
+    REMOVEALL_BLUE
+    REMOVEALL_RED
+    LOMA Ch1_CutsceneChapterID
+    LOAD1 2 CutsceneUnits2
+    MUSIC PrideoftheImperial_BGM
+    FADU 10
+
+    Text(Ch1_Scene3_Part1)
+
+    SOUN 0x0096
+    STAL 30
+    SOUN 0x0096
+    STAL 30
+    SOUN 0x0096
+    TEXTSTART
+    TEXTSHOW Ch1_Scene3_Part2
+    TEXTEND
+    SOUN 0x0096
+    STAL 30
+    SOUN 0x0096
+    STAL 30
+    SOUN 0x0096
+    STAL 30
+    SOUN 0x0096
+    TEXTCONT
+    TEXTEND
+    REMA
+
+    LOAD1 2 CutsceneUnits3
+    MOVE 7 Alexandra [7,4]
+    MOVE 7 Absalom [6,5]
+    MOVE 7 Evelyn [8,5]
+    ENUN
+    Text(Ch1_Scene3_Part3)
+
+    MOVE 7 Alexandra [9,5]
+    MOVE 7 Absalom [11,4]
+    MOVE 7 Evelyn [11,6]
+    ENUN
+    Text(Ch1_Scene3_Part4)
+    Text(Ch1_Scene3_Part5)
+
+    LOAD1 2 CutsceneUnits4
+    MOVE 7 Devan [7,4]
+    MOVE 7 Ronni [6,5]
+    ENUN
+    Text(Ch1_Scene3_Part6)
+
+    MOVE_1STEP 7 Alexandra left; ENUN
+    MOVE_1STEP 7 Alexandra up; ENUN
+    Text(Ch1_Scene3_Part7)
+    
+    FADI 5
+    REMOVEPORTRAITS
+    BACG ArmyCamp3EveningBG
+    FADU 5
+    MUSIC Queens_BGM
+    Text(Ch1_Scene4)
+
+    MNC2 Ch2_ChapterID
+ENDA
+
+PlayerUnits:
+UNIT Devan Count Devan Level(1,Player,0) [17,1] 0x0 0x0 0x1 REDA14R3 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [17,1] 0x0 0x0 0x1 REDA15R2 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(1,Player,0) [17,0] 0x0 0x0 0x1 REDA14R2 [IronBlade, StrikerBlade, Vulnerary] NoAI
+UNIT Kenneth LanceCavalier Devan Level(1,Player,0) [17,0] 0x0 0x0 0x1 REDA15R1 [IronLance, Greatlance Vulnerary] NoAI
+UNIT
+
+EnemyUnits:
+UNIT Charles Soldier 0x0 Level(3,Enemy,0) [4,12] 0x0 0x0 0x0 0x1 [IronLance] AttackInRangeAI
+
+//Turn one enemies
+UNIT 0x80 Soldier Charles Level(1,Enemy,1) [13,7] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT 0x80 Mercenary 0x0 Level(1,Enemy,1) [12,5] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+
+//Top path
+UNIT 0x80 Arcanist Charles Level(1,Enemy,1) [4,8] 0x0 0x0 0x0 0x1 [Flux] GroupTwoAI
+UNIT 0x80 AxeCavalier Charles Level(1,Enemy,1) [4,7] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+//Bottom path
+UNIT 0x80 Mercenary Charles Level(1,Enemy,1) [13,11] 0x0 0x0 0x0 0x1 [IronBlade] AttackInRangeAI
+UNIT 0x80 Fighter Charles Level(1,Enemy,1) [10,13] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
+
+//Near boss
+UNIT 0x80 SwordCavalier Charles Level(1,Enemy,1) [2,14] 0x0 0x0 0x0 0x1 [IronSword] GroupOneAI
+UNIT 0x80 Archer Charles Level(1,Enemy,1) [1,11] 0x0 0x0 0x0 0x1 [IronBow] GroupOneAI
+
+//Upper-left
+UNIT 0x80 LanceCavalier Charles Level(1,Enemy,1) [1,5] 0x0 0x0 0x0 0x1 [IronLance] MoveIn2TurnsAI
+
+//Stationaries
+UNIT 0x80 Soldier Charles Level(1,Enemy,1) [11,11] DropItem 0x0 0x0 0x1 [Javelin] NeverMoveAI
+UNIT 0x80 Myrmidon Charles Level(1,Enemy,1) [8,7] 0x0 0x0 0x0 0x1 [IronSword] [AttackInPlace, NoAI2, NoRecovery, GuardTile|AIGroupTwo]
+UNIT
+
+CutsceneUnits:
+UNIT Devan Count Devan Level(1,Player,0) [11,11] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [12,11] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Anthony Mercenary Devan Level(1,Player,0) [11,13] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Kenneth LanceCavalier Devan Level(1,Player,0) [12,13] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
+
+CutsceneUnits2:
+UNIT Duramontis LancePaladin 0x0 Level(1,NPC,0) [7,1] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Duramontis General 0x0 Level(1,NPC,0) [8,2] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Duramontis Peer 0x0 Level(1,NPC,0) [5,4] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Duramontis Peer 0x0 Level(1,NPC,0) [5,6] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Duramontis Peer 0x0 Level(1,NPC,0) [9,4] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Duramontis Peer 0x0 Level(1,NPC,0) [9,6] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
+
+CutsceneUnits3:
+UNIT Alexandra Lord Alexandra Level(1,Player,False) [7,9] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(6,Player,False) [8,9] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(3,Player,False) [6,9] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT
+
+CutsceneUnits4:
+UNIT Devan Count Devan Level(1,Player,0) [7,9] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [6,9] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
+
+BossAttacked:
+    CHECK_FLAG BossChargeFlag
+    BNE 0x9000 sC s0
+        //If not set, boss hasn't charged yet
+        SVAL s1 0x1
+        UNSET_CONDITION ActiveUnit
+        EndMMS
+        Text(Ch1_BossAttackedText)
+        TEXTEND
+        REMA
+
+        CALL HighlightAndCharge
+
+    LABEL 0x9000
+    NoFade
+ENDA
+
+BossCharge:
+    CHECK_FLAG BossQuoteID
+    BNE 0x9000 sC s0
+        Text(Ch1_ChargeText)
+        TEXTEND
+        REMA
+
+        CAM1 Charles
+        CALL HighlightAndCharge
+
+    LABEL 0x9000
+    NoFade
+ENDA
+
+HighlightAndCharge:
+    CURSOR_FLASHING Charles
+    CURSOR_FLASHING [2,14]
+    CURSOR_FLASHING [1,11]
+    STAL 90
+    REMOVE_CURSORS
+
+    SVAL s1 0x0
+    CHAI Charles
+    CHAI [2,14]
+    CHAI [1,11]
+    NoFade
+ENDA
+
+#undef BossChargeFlag
+#undef BossAttackedCompletionFlag

@@ -41,7 +41,7 @@
 	
 	ALIGN 4
 	Str_Or_Mag_Damage:
-	#incbin "StrorMagDamage.dmp"
+	#include "StrorMagDamage.lyn.event"
 		
 	ALIGN 4
 	Update_Magic:

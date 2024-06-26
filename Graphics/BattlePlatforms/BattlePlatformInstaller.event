@@ -22,6 +22,8 @@ ALIGN 4
 
 #include "BattlePlatformEditor.event"
 
+#include "NewPalettes.event"
+
 BattlePlatformGraphicsOffset:
 #include "BattlePlatformGraphics.event"
 

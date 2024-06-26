@@ -34,20 +34,20 @@ beq CheckVantage
 CheckVantage:
 ldr r0, SkillTester
 mov lr, r0
-mov r0, r5 @defender data
+mov r0, r4 @defender data
 ldr r1, VantageID
 .short 0xf800
 cmp r0, #0
 beq Normal
 
 @if vantage, check hp/2
-mov r2, #0x12
-ldsb r2, [r5, r2] @defender max hp
-lsr r2, #1 @halve it
-mov r3, #0x13
-ldsb r3, [r5,r3] @currhp
-cmp r3, r2
-bgt Normal
+@mov r2, #0x12
+@ldsb r2, [r5, r2] @defender max hp
+@lsr r2, #1 @halve it
+@mov r3, #0x13
+@ldsb r3, [r5,r3] @currhp
+@cmp r3, r2
+@bgt Normal
 
 Vantage:
 @swap them

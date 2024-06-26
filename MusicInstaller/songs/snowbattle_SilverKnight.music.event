@@ -1,0 +1,1803 @@
+//Generated with python s2ea
+        #include "MPlayDef.event"
+
+        #define    snowbattle_SilverKnight_grp voicegroup000
+        #define    snowbattle_SilverKnight_pri 0
+        #define    snowbattle_SilverKnight_rev 0
+        #define    snowbattle_SilverKnight_key 0
+
+        // .rodata
+        // snowbattle_SilverKnight
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+snowbattle_SilverKnight_0:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO  70/2
+        BYTE           VOICE  32
+        BYTE           VOL    51
+        BYTE           PAN    c_v+63
+        BYTE           N02    An0  v100
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+// 001   ----------------------------------------
+snowbattle_SilverKnight_0_LOOP:
+        BYTE           N02    An0  v100
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+// 002   ----------------------------------------
+snowbattle_SilverKnight_0_2:
+        BYTE           N02    An0  v100
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE   PEND
+// 003   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 006   ----------------------------------------
+snowbattle_SilverKnight_0_6:
+        BYTE           N02    Gn0  v100
+        BYTE   W04
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE                   Gn0
+        BYTE   W08
+        BYTE   PEND
+// 007   ----------------------------------------
+snowbattle_SilverKnight_0_7:
+        BYTE           N02    Fn0  v100
+        BYTE   W04
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE                   Fn0
+        BYTE   W08
+        BYTE   PEND
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 018   ----------------------------------------
+snowbattle_SilverKnight_0_18:
+        BYTE           N02    Dn0  v100
+        BYTE   W04
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE                   Dn0
+        BYTE   W08
+        BYTE   PEND
+// 019   ----------------------------------------
+snowbattle_SilverKnight_0_19:
+        BYTE           N02    En0  v100
+        BYTE   W04
+        BYTE                   En0
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En0
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W08
+        BYTE                   En0
+        BYTE   W08
+        BYTE   PEND
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_18
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_19
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 023   ----------------------------------------
+snowbattle_SilverKnight_0_23:
+        BYTE           N02    An0  v100
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE           N03    Fn0
+        BYTE   W08
+        BYTE           N05    Cn1
+        BYTE   W08
+        BYTE                   Fn1
+        BYTE   W08
+        BYTE           N03    En1
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   En1
+        BYTE   W04
+        BYTE           N02    Dn2
+        BYTE   W04
+        BYTE                   Cn2
+        BYTE   W04
+        BYTE                   An1
+        BYTE   W04
+        BYTE                   Fn1
+        BYTE   W04
+        BYTE                   Dn1
+        BYTE   W04
+        BYTE                   Bn0
+        BYTE   W04
+        BYTE   PEND
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+snowbattle_SilverKnight_1:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  32
+        BYTE           VOL    41
+        BYTE           PAN    c_v-64
+        BYTE           N02    An0  v100
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+// 001   ----------------------------------------
+snowbattle_SilverKnight_1_LOOP:
+        BYTE           N02    An0  v100
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE           N02
+        BYTE   W04
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W04
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+        BYTE                   An0
+        BYTE   W08
+// 002   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 003   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_6
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_7
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_18
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_19
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_18
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_19
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_2
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_0_23
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+snowbattle_SilverKnight_2:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  48
+        BYTE           VOL    46
+        BYTE   W96
+// 001   ----------------------------------------
+snowbattle_SilverKnight_2_LOOP:
+        BYTE           N48    En3  v100
+        BYTE   W56
+        BYTE           N07    An2
+        BYTE   W08
+        BYTE                   Cn3
+        BYTE   W08
+        BYTE           N11    En3
+        BYTE   W12
+        BYTE           N07    Cn4
+        BYTE   W08
+        BYTE           N03    Bn3
+        BYTE   W04
+// 002   ----------------------------------------
+        BYTE           N44    Gn3  v100  gtp3
+        BYTE   W48
+        BYTE           N07    Fn3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE   W08
+        BYTE           N15    An3
+        BYTE   W16
+        BYTE           N07    En3
+        BYTE   W08
+        BYTE                   Fn3
+        BYTE   W08
+// 003   ----------------------------------------
+        BYTE           N92    En3  v100  gtp3
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE           N48
+        BYTE   W56
+        BYTE           N07    An2
+        BYTE   W08
+        BYTE                   Cn3
+        BYTE   W08
+        BYTE           N11    En3
+        BYTE   W12
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE           N03    Gn3
+        BYTE   W04
+// 006   ----------------------------------------
+        BYTE           N44    En4  v100  gtp3
+        BYTE   W48
+        BYTE                   Bn3
+        BYTE   W48
+// 007   ----------------------------------------
+        BYTE           N03    Cn4
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE           N40    An3  v100  gtp1
+        BYTE   W40
+        BYTE           N23    Fn3
+        BYTE   W24
+        BYTE           N17    Gn3
+        BYTE   W16
+        BYTE           N07    Cn4
+        BYTE   W08
+// 008   ----------------------------------------
+        BYTE           N17    Bn3
+        BYTE   W16
+        BYTE           N11    Gn3
+        BYTE   W08
+        BYTE           N68    An3  v100  gtp3
+        BYTE   W72
+// 009   ----------------------------------------
+        BYTE           N07
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Cn4
+        BYTE   W08
+        BYTE           N23    Fn3
+        BYTE   W24
+        BYTE           N17    En4
+        BYTE   W16
+        BYTE                   Dn4
+        BYTE   W16
+        BYTE           N08    Bn3
+        BYTE   W08
+        BYTE           N11    Gn3
+        BYTE   W08
+// 010   ----------------------------------------
+        BYTE           N23    An3
+        BYTE   W24
+        BYTE           N07
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Cn4
+        BYTE   W08
+        BYTE           N17    En4
+        BYTE   W16
+        BYTE                   Dn4
+        BYTE   W16
+        BYTE           N08    Bn3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE   W08
+// 011   ----------------------------------------
+        BYTE           N23    An3
+        BYTE   W24
+        BYTE           N07
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Cn4
+        BYTE   W08
+        BYTE           N17    En4
+        BYTE   W16
+        BYTE                   Dn4
+        BYTE   W16
+        BYTE           N08    Bn3
+        BYTE   W08
+        BYTE           N11    Gn3
+        BYTE   W08
+// 012   ----------------------------------------
+        BYTE           N07    En4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE   W08
+        BYTE                   En4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE   W08
+        BYTE                   En4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE   W08
+// 013   ----------------------------------------
+        BYTE                   En4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE   W08
+        BYTE                   En4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE   W08
+        BYTE           N03    Bn3
+        BYTE   W04
+        BYTE                   Gn3
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   Gn3
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   Dn4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Fn4
+        BYTE   W04
+// 014   ----------------------------------------
+        BYTE           VOICE  49
+        BYTE           N44    An2  v100  gtp3
+        BYTE   W48
+        BYTE           N23    En2
+        BYTE   W24
+        BYTE                   Cn3
+        BYTE   W24
+// 015   ----------------------------------------
+        BYTE           N28    Bn2  v100  gtp1
+        BYTE   W32
+        BYTE           N07    Cn3
+        BYTE   W08
+        BYTE                   Dn3
+        BYTE   W08
+        BYTE           N23    Gn2
+        BYTE   W24
+        BYTE           N17    Cn3
+        BYTE   W16
+        BYTE           N05    Bn2
+        BYTE   W08
+// 016   ----------------------------------------
+        BYTE           N23    An2
+        BYTE   W24
+        BYTE           N07
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   Cn3
+        BYTE   W08
+        BYTE           N23
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE   W24
+// 017   ----------------------------------------
+        BYTE                   An2
+        BYTE   W24
+        BYTE           N15    Bn2
+        BYTE   W16
+        BYTE           N07    Cn3
+        BYTE   W08
+        BYTE           N23
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE                   Fn2
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W24
+// 019   ----------------------------------------
+        BYTE                   En2
+        BYTE   W24
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE                   Gn2
+        BYTE   W24
+// 020   ----------------------------------------
+        BYTE                   An2
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE   W24
+// 021   ----------------------------------------
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   En2
+        BYTE   W24
+// 022   ----------------------------------------
+        BYTE           TIE    An2
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W23
+        BYTE           EOT
+        BYTE   W72
+        BYTE   W01
+// 024   ----------------------------------------
+        BYTE           VOICE  48
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+snowbattle_SilverKnight_3:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  0
+        BYTE           VOL    42
+        BYTE           PAN    c_v-13
+        BYTE   W96
+// 001   ----------------------------------------
+snowbattle_SilverKnight_3_LOOP:
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W16
+        BYTE           N03    Cn5  v100
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   En3
+        BYTE   W36
+// 004   ----------------------------------------
+        BYTE                   Cn5
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   En3
+        BYTE   W52
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W16
+        BYTE                   Cn5
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   Fn3
+        BYTE   W36
+// 008   ----------------------------------------
+        BYTE                   Cn5
+        BYTE   W04
+        BYTE                   Gn4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   Gn4
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE                   Cn4
+        BYTE   W04
+        BYTE                   An3
+        BYTE   W04
+        BYTE                   Fn3
+        BYTE   W52
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE           N07    En5
+        BYTE           N07    Gn5
+        BYTE   W08
+        BYTE                   Bn4  v096
+        BYTE           N07    Dn5
+        BYTE   W08
+        BYTE                   Gn4  v091
+        BYTE           N07    Bn4
+        BYTE   W08
+        BYTE                   En4  v087
+        BYTE           N07    Gn4
+        BYTE   W08
+        BYTE                   Cn4  v082
+        BYTE           N07    En4
+        BYTE   W08
+        BYTE                   Bn3  v078
+        BYTE           N07    Dn4
+        BYTE   W08
+        BYTE                   An3  v073
+        BYTE           N07    Cn4
+        BYTE   W08
+        BYTE                   Gn3  v069
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   Fn3  v064
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   En3  v060
+        BYTE           N07    Gn3
+        BYTE   W08
+        BYTE                   Dn3  v055
+        BYTE           N07    Fn3
+        BYTE   W08
+        BYTE                   Cn3  v051
+        BYTE           N07    En3
+        BYTE   W08
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+snowbattle_SilverKnight_4:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  52
+        BYTE           VOL    30
+        BYTE           PAN    c_v+4
+        BYTE   W96
+// 001   ----------------------------------------
+snowbattle_SilverKnight_4_LOOP:
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W24
+        BYTE           N16    En3  v100
+        BYTE           N16    An3
+        BYTE   W24
+        BYTE                   Gn3
+        BYTE           N16    Bn3
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE           N16    Gn3
+        BYTE   W24
+// 005   ----------------------------------------
+        BYTE           N20    An3
+        BYTE           N21    En3
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+snowbattle_SilverKnight_4_14:
+        BYTE   W08
+        BYTE           N11    An3  v100
+        BYTE           N11    En3
+        BYTE   W16
+        BYTE           N07
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W56
+        BYTE   PEND
+// 015   ----------------------------------------
+        BYTE   W08
+        BYTE           N11    An3
+        BYTE           N11    En3
+        BYTE   W16
+        BYTE           N07    Dn3
+        BYTE           N07    Gn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    En3
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE           N07    Gn3
+        BYTE   W56
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_4_14
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_4_14
+// 019   ----------------------------------------
+        BYTE   W08
+        BYTE           N11    Gn3  v100
+        BYTE           N11    Bn3
+        BYTE   W16
+        BYTE           N07    Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE           N07    Dn4
+        BYTE   W56
+// 020   ----------------------------------------
+        BYTE   W08
+        BYTE           N11    Fn3
+        BYTE           N11    An3
+        BYTE   W16
+        BYTE           N07    Fn3
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W16
+        BYTE           N11    Fn3
+        BYTE           N11    An3
+        BYTE   W16
+        BYTE           N07    Fn3
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W08
+// 021   ----------------------------------------
+        BYTE   W08
+        BYTE           N11    Gn3
+        BYTE           N11    Bn3
+        BYTE   W16
+        BYTE           N07    Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE           N07    Dn4
+        BYTE   W08
+        BYTE           N44    Bn3  v100  gtp3
+        BYTE                   Dn4
+        BYTE   W48
+// 022   ----------------------------------------
+        BYTE           TIE    En3
+        BYTE           TIE    An3
+        BYTE   W96
+// 023   ----------------------------------------
+snowbattle_SilverKnight_4_23:
+        BYTE   W23
+        BYTE           EOT    En3
+        BYTE                   An3
+        BYTE   W72
+        BYTE   W01
+        BYTE   PEND
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_4_LOOP
+        BYTE   FINE
+
+//****************** Track 5 (Midi-Chn.5) ******************//
+
+snowbattle_SilverKnight_5:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  53
+        BYTE           VOL    21
+        BYTE           PAN    c_v+63
+        BYTE   W96
+// 001   ----------------------------------------
+snowbattle_SilverKnight_5_LOOP:
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W24
+        BYTE   W03
+        BYTE           N16    En3  v100
+        BYTE           N16    An3
+        BYTE   W24
+        BYTE                   Gn3
+        BYTE           N16    Bn3
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE           N16    Gn3
+        BYTE   W21
+// 005   ----------------------------------------
+        BYTE   W03
+        BYTE                   En3
+        BYTE           N16    An3
+        BYTE   W92
+        BYTE   W01
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+snowbattle_SilverKnight_5_14:
+        BYTE   W11
+        BYTE           N11    An3  v100
+        BYTE           N11    En3
+        BYTE   W16
+        BYTE           N07
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W52
+        BYTE   W01
+        BYTE   PEND
+// 015   ----------------------------------------
+        BYTE   W11
+        BYTE           N11    An3
+        BYTE           N11    En3
+        BYTE   W16
+        BYTE           N07    Gn3
+        BYTE           N07    Dn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    En3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W52
+        BYTE   W01
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_5_14
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_5_14
+// 019   ----------------------------------------
+        BYTE   W11
+        BYTE           N11    Gn3  v100
+        BYTE           N11    Bn3
+        BYTE   W16
+        BYTE           N07    Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE           N07    Dn4
+        BYTE   W52
+        BYTE   W01
+// 020   ----------------------------------------
+        BYTE   W11
+        BYTE           N11    Fn3
+        BYTE           N11    An3
+        BYTE   W16
+        BYTE           N07    Fn3
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W16
+        BYTE           N11    Fn3
+        BYTE           N11    An3
+        BYTE   W16
+        BYTE           N07    Fn3
+        BYTE           N07    An3
+        BYTE   W08
+        BYTE                   Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W05
+// 021   ----------------------------------------
+        BYTE   W11
+        BYTE           N11    Gn3
+        BYTE           N11    Bn3
+        BYTE   W16
+        BYTE           N07    Gn3
+        BYTE           N07    Bn3
+        BYTE   W08
+        BYTE                   An3
+        BYTE           N07    Cn4
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE           N07    Dn4
+        BYTE   W08
+        BYTE           N44    Bn3  v100  gtp3
+        BYTE                   Dn4
+        BYTE   W44
+        BYTE   W01
+// 022   ----------------------------------------
+        BYTE   W03
+        BYTE           TIE    En3
+        BYTE           TIE    An3
+        BYTE   W92
+        BYTE   W01
+// 023   ----------------------------------------
+        BYTE   W24
+        BYTE   W02
+        BYTE           EOT    En3
+        BYTE                   An3
+        BYTE   W68
+        BYTE   W02
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_5_LOOP
+        BYTE   FINE
+
+//****************** Track 6 (Midi-Chn.6) ******************//
+
+snowbattle_SilverKnight_6:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  60
+        BYTE           VOL    42
+        BYTE           PAN    c_v-25
+        BYTE   W96
+// 001   ----------------------------------------
+snowbattle_SilverKnight_6_LOOP:
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+snowbattle_SilverKnight_6_9:
+        BYTE           N92    Fn2  v100  gtp3
+        BYTE   W24
+        BYTE           N68    An2  v100  gtp3
+        BYTE   W72
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_6_9
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_6_9
+// 012   ----------------------------------------
+        BYTE           N23    Bn2  v100
+        BYTE           N23    Gn2
+        BYTE   W24
+        BYTE                   Cn3
+        BYTE           N23    An2
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE           N23    Bn2
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE           N23    Gn2
+        BYTE   W24
+// 013   ----------------------------------------
+        BYTE           N92    Gn2  v100  gtp3
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE           N44    An2  v100  gtp3
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE           TIE    Fn2
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W48
+        BYTE           N23    Fn3
+        BYTE           N23    Cn3
+        BYTE   W24
+        BYTE                   Fn3
+        BYTE           N23    Dn3
+        BYTE   W23
+        BYTE           EOT    Fn2
+        BYTE   W01
+// 018   ----------------------------------------
+        BYTE           N44    An2  v100  gtp3
+        BYTE                   Fn3
+        BYTE   W48
+        BYTE                   An3
+        BYTE   W48
+// 019   ----------------------------------------
+        BYTE           N24    Dn4
+        BYTE   W24
+        BYTE                   Cn4
+        BYTE   W24
+        BYTE           N17    Bn3
+        BYTE   W16
+        BYTE                   Gn3
+        BYTE   W16
+        BYTE           N11    En3
+        BYTE   W08
+        BYTE           N05    Gn3
+        BYTE   W08
+// 020   ----------------------------------------
+        BYTE           N92    Fn3  v100  gtp3
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W48
+        BYTE           N07    Cn4  v074
+        BYTE           N07    En4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE           N07    Fn4  v079
+        BYTE   W08
+        BYTE                   Dn4  v074
+        BYTE           N07    Fn4
+        BYTE   W08
+        BYTE                   Dn4
+        BYTE           N07    Fn4  v081
+        BYTE   W08
+        BYTE           N17    En4  v074
+        BYTE           N17    Gn4
+        BYTE   W16
+// 022   ----------------------------------------
+        BYTE           TIE    En3
+        BYTE           TIE    An3
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_4_23
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_6_LOOP
+        BYTE   FINE
+
+//****************** Track 7 (Midi-Chn.7) ******************//
+
+snowbattle_SilverKnight_7:
+        BYTE   KEYSH  snowbattle_SilverKnight_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE  123
+        BYTE           VOL    47
+        BYTE   W60
+        BYTE           N03    An1  v127
+        BYTE   W04
+        BYTE                   Gn1
+        BYTE   W04
+        BYTE                   Fn1
+        BYTE   W04
+        BYTE                   Dn1
+        BYTE   W04
+        BYTE                   Fs1  v056
+        BYTE   W04
+        BYTE                   Dn1  v127
+        BYTE   W04
+        BYTE                   Fs1  v056
+        BYTE   W04
+        BYTE                   Dn1  v127
+        BYTE   W04
+        BYTE                   Fs1  v056
+        BYTE   W04
+// 001   ----------------------------------------
+snowbattle_SilverKnight_7_LOOP:
+        BYTE           N03    Fs1  v056
+        BYTE           N23    Gn2  v127
+        BYTE           N15    Ds2  v072
+        BYTE   W04
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+// 002   ----------------------------------------
+snowbattle_SilverKnight_7_2:
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE   PEND
+// 003   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 004   ----------------------------------------
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Cn2  v111
+        BYTE   W08
+        BYTE                   Cn2
+        BYTE   W04
+        BYTE                   Bn1
+        BYTE   W08
+        BYTE                   An1
+        BYTE   W04
+        BYTE                   Gn1
+        BYTE   W04
+        BYTE                   Fn1
+        BYTE   W04
+        BYTE                   Fn1
+        BYTE   W04
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 013   ----------------------------------------
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N16    Dn1  v115
+        BYTE   W08
+        BYTE           N05    Bn1
+        BYTE   W08
+        BYTE           N02    Gn1
+        BYTE   W04
+        BYTE                   Fn1
+        BYTE   W04
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 015   ----------------------------------------
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N23    Dn1  v127
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N16    Dn1  v115
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   An1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Gn1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fn1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fn1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  snowbattle_SilverKnight_7_2
+// 023   ----------------------------------------
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N02    Cn2  v115
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N02    Cn2  v115
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE           N02    Bn1  v115
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE           N02    Bn1  v115
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE           N02    An1  v115
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fs1
+        BYTE   W04
+        BYTE                   An1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Gn1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fn1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+        BYTE                   Fn1  v111
+        BYTE           N03    Fs1  v056
+        BYTE   W04
+// 024   ----------------------------------------
+        BYTE   GoTo
+         POIN2  snowbattle_SilverKnight_7_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+snowbattle_SilverKnight:
+        BYTE   8                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   snowbattle_SilverKnight_pri // Priority
+        BYTE   snowbattle_SilverKnight_rev // Reverb
+
+        POIN2   snowbattle_SilverKnight_grp
+
+        POIN2   snowbattle_SilverKnight_0
+        POIN2   snowbattle_SilverKnight_1
+        POIN2   snowbattle_SilverKnight_2
+        POIN2   snowbattle_SilverKnight_3
+        POIN2   snowbattle_SilverKnight_4
+        POIN2   snowbattle_SilverKnight_5
+        POIN2   snowbattle_SilverKnight_6
+        POIN2   snowbattle_SilverKnight_7
+
+        

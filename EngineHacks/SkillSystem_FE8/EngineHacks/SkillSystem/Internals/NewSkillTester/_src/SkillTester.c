@@ -105,17 +105,7 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     }
 
     //Equipped weapon skill
-    //If unit is in combat, use the equipped weapon short
-    if (unit->index == gBattleActor.unit.index && IsBattleReal()) {
-        temp = GetItemData(gBattleActor.weaponBefore & 0xFF)->skill;
-    }
-    else if (unit->index == gBattleTarget.unit.index && IsBattleReal()) {
-        temp = GetItemData(gBattleTarget.weaponBefore & 0xFF)->skill;
-    }
-    //Otherwise, get the equipped weapon via a vanilla function
-    else {
-        temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
-    }
+    temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
 
     //Check if equipped weapon skill is valid
     if (IsSkillIDValid(temp)) {
@@ -243,6 +233,29 @@ bool NewAuraSkillCheck(Unit* unit, u8 skillID, int allyOption, int maxRange) {
     return FALSE;
 }
 
+//Adds skill to BWL data
+bool SkillAdder(Unit* unit, int skillID) {
+    int i = 0;
+    BWLData* unitBWL = BWL_GetEntry(unit->pCharacterData->number);
+
+    if (unitBWL) {
+        for (i = 0; i < 2; ++i) {
+            if (unitBWL->skills[i] == skillID) {
+                return FALSE;
+            }
+            if (unitBWL->skills[i] == 0) {
+                unitBWL->skills[i] = skillID;
+                return TRUE;
+            }
+        }
+
+        pExtraItemOrSkill = 0x8000|skillID;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 //Prepares for prebattle calc loop
 void InitializePreBattleLoop(Unit* attacker) {
     MakeAuraSkillBuffer(attacker);
@@ -276,7 +289,7 @@ u8* GetUnitsInRange(Unit* unit, int allyOption, int range) {
             }
             Unit* other = GetUnit(gMapUnit[yLoop][xLoop]);
 
-            if (!IsUnitOnField(other) || unit->index == other->index) {
+            if (!IsUnitOnField(other) || unit->index == (u8) other->index) {
                 continue;
             }
 

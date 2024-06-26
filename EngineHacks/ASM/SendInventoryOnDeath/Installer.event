@@ -5,6 +5,4 @@ ORG 0x18418
 jumpToHack(SendInventoryOnDeath)
 POP
 
-ALIGN 4
-SendInventoryOnDeath:
-#incbin "SendInventoryOnDeath.dmp"
+#include "SendInventoryOnDeath.lyn.event"

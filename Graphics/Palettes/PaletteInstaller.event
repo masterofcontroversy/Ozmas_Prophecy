@@ -20,26 +20,26 @@ POP
 
 #define setPalette(index, palette) "PUSH; ORG (PaletteTable + (index * 0x10)); POIN palette; POP"
 
-setPalette(0x01, DevanDukePal)
-setPalette(0x03, RonniBowKnightPal)
-setPalette(0x04, RonniArchKnightPal)
-setPalette(0x05, AnthonyMercenaryPal)
-setPalette(0x07, KennethCavalierPal)
+setPalette(DevanCountPalette, DevanCountPal)
+setPalette(RonniBowKnightPalette, RonniBowKnightPal)
+setPalette(AnthonyMercenaryPalette, AnthonyMercenaryPal)
+setPalette(KennethCavalierPalette, KennethCavalierPal)
+setPalette(AlexandraLordPalette, AlexandraLordPal)
+setPalette(EvelynFalconKnightPalette, EvelynFalconKnightPal)
+setPalette(LucyMagePalette, LucyMagePal)
+setPalette(AbsalomFighterPalette, AbsalomFighterPal)
+setPalette(MaxShamanPalette, MaxShamanPal)
+setPalette(ColtonThiefPalette, ColtonThiefPal)
 
-//Devan(Duke)
+//Devan(Count)
 ALIGN 4
-DevanDukePal:
-#incbin "Devan_Duke.btlpal"
+DevanCountPal:
+#incbin "Devan_Count.btlpal"
 
 //Ronni(Bow Knight)
 ALIGN 4
 RonniBowKnightPal:
 #incbin "Ronni_BowKnight.btlpal"
-
-//Ronni(Arch Knight)
-ALIGN 4
-RonniArchKnightPal:
-#incbin "Ronni_ArchKnight.btlpal"
 
 //Anthony(Mercenary)
 ALIGN 4
@@ -50,3 +50,31 @@ AnthonyMercenaryPal:
 ALIGN 4
 KennethCavalierPal:
 #incbin "Kenneth_Cavalier.btlpal"
+
+//Alexandra(Lord)
+ALIGN 4
+AlexandraLordPal:
+#incbin "Alexandra_Lord.btlpal"
+
+//Evelyn(FalcoKnight)
+ALIGN 4
+EvelynFalconKnightPal:
+#incbin "Evelyn_FalcoKnight.btlpal"
+
+//Absalom(Fighter)
+ALIGN 4
+AbsalomFighterPal:
+#incbin "Absalom_Fighter.btlpal"
+
+//Lucy(Mage)
+ALIGN 4
+LucyMagePal:
+#incbin "Lucy_Mage.btlpal"
+
+ALIGN 4
+MaxShamanPal:
+#incbin "Max_Shaman.btlpal"
+
+ALIGN 4
+ColtonThiefPal:
+#incbin "Colton_Thief.btlpal"

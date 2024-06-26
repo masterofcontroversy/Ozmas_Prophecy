@@ -1,0 +1,91 @@
+ALIGN 4
+Chapter3DebugEvent:
+ENUT FIXED_GROWTHS_FLAG_ID
+LOAD1 0 Chapter3DebugUnits; ENUN
+ENUF FIXED_GROWTHS_FLAG_ID
+NoFade
+ENDA
+
+ALIGN 4
+Chapter4DebugEvent:
+ENUT FIXED_GROWTHS_FLAG_ID
+LOAD1 0 Chpater4DebugUnits; ENUN
+ENUF FIXED_GROWTHS_FLAG_ID
+NoFade
+ENDA
+
+ALIGN 4
+Chapter4xDebugEvent:
+ENUT FIXED_GROWTHS_FLAG_ID
+LOAD1 0 Chpater4xDebugUnits; ENUN
+ENUF FIXED_GROWTHS_FLAG_ID
+
+SVAL s1 Javelin
+ASMC ASMC_PutItemInConvoy
+SVAL s1 SteelSword
+ASMC ASMC_PutItemInConvoy
+SVAL s1 VigorStone
+ASMC ASMC_PutItemInConvoy
+SVAL s1 IronShield
+ASMC ASMC_PutItemInConvoy
+SVAL s1 AccostBand
+ASMC ASMC_PutItemInConvoy
+SVAL s1 SteelLance
+ASMC ASMC_PutItemInConvoy
+SVAL s1 SteelBow
+ASMC ASMC_PutItemInConvoy
+SVAL s1 SteelAxe
+ASMC ASMC_PutItemInConvoy
+SVAL s1 Thunder
+ASMC ASMC_PutItemInConvoy
+NoFade
+ENDA
+
+
+ALIGN 4
+Chapter3DebugUnits:
+UNIT Devan Count Devan Level(3,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(3,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(3,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronBlade, StrikerBlade, Vulnerary] NoAI
+UNIT Kenneth Cavalier Devan Level(3,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronLance, Greatlance, Vulnerary] NoAI
+
+UNIT Alexandra Lord Devan Level(3,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(6,Player,1) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(3,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+
+UNIT Holly Cleric Devan Level(2,Player,1) [1,1] 0x0 0x0 0x0 0x1 [Heal, Finesse] NoAI
+
+UNIT
+
+Chpater4DebugUnits:
+UNIT Devan Count Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronBlade, StrikerBlade, Vulnerary] NoAI
+UNIT Kenneth Cavalier Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronLance, Greatlance, Vulnerary] NoAI
+
+UNIT Alexandra Lord Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(6,Player,1) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+
+UNIT Holly Cleric Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [Heal, Finesse] NoAI
+
+UNIT Lucy Mage_F Devan Level(4,Player,1) [1,1] 0x0 0x0 0x0 0x1 [Frostbite] NoAI
+UNIT
+
+Chpater4xDebugUnits:
+UNIT Devan Count Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Anthony Mercenary Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronBlade, StrikerBlade, Vulnerary] NoAI
+UNIT Kenneth Cavalier Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronLance, Greatlance, Vulnerary] NoAI
+
+UNIT Alexandra Lord Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Evelyn FalcoKnight Alexandra Level(7,Player,1) [1,1] 0x0 0x0 0x0 0x1 [SilverSword, IronLance, Heal, Vulnerary] NoAI
+UNIT Absalom Fighter Alexandra Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [IronAxe, HandAxe, Vulnerary] NoAI
+
+UNIT Holly Cleric Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [Heal, Finesse] NoAI
+
+UNIT Colton Thief Devan Level(5,Player,0) [3,1] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Lucy Mage_F Devan Level(5,Player,1) [1,1] 0x0 0x0 0x0 0x1 [Fire] NoAI
+
+UNIT Max Shaman Devan Level(5,Player,0) [4,1] 0x0 0x0 0x0 0x1 [ShadeTome] NoAI
+UNIT

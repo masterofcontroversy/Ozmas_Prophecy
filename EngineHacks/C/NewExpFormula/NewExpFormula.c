@@ -1,8 +1,9 @@
 #include "gbafe.h"
 
-static int  absolute(int value) {return value < 0 ? -value : value;}
 int GetKillExpGain(BattleUnit* actor, BattleUnit* target);
 int GetHitExpGain(BattleUnit* actor, BattleUnit* target);
+
+extern int Paragon(int expValue, Unit* unit);
 
 extern bool CanBattleUnitGainLevels(BattleUnit* bu);
 
@@ -36,15 +37,13 @@ int GetHitExpGain(BattleUnit* actor, BattleUnit* target) {
     int actorLevel = actor->unit.level;
     int targetLevel = target->unit.level;
 
-    if (actorLevel >= targetLevel) {
-        result = 10 - absolute(actorLevel - targetLevel) * 2;
-    }
-    else {
-        result = 10 + absolute(actorLevel - targetLevel) * 2;
-    }
+    result = 10 + ((targetLevel - actorLevel) * 2);
 
     if (result > 20) {
         result = 20;
+    }
+    else if (result < 1) {
+        result = 1;
     }
 
     return result;
@@ -55,15 +54,37 @@ int GetKillExpGain(BattleUnit* actor, BattleUnit* target) {
     int actorLevel = actor->unit.level;
     int targetLevel = target->unit.level;
 
-    if (actorLevel >= targetLevel) {
-        result = 25 - absolute(actorLevel - targetLevel) * 5;
+    int expCoefficient = 5;
+    if (targetLevel < actorLevel) {
+        expCoefficient = 6;
     }
-    else {
-        result = 25 + absolute(actorLevel - targetLevel) * 5;
+
+    result = 30 + ((targetLevel - actorLevel) * expCoefficient);
+
+    if (result < 3) {
+        result = 3;
     }
 
     if (UNIT_CATTRIBUTES(&target->unit) & CA_BOSS) {
         result += 40;
+    }
+
+    return result;
+}
+
+int GetBattleUnitStaffExp(BattleUnit* bu) {
+    int result;
+
+    if (!CanBattleUnitGainLevels(bu))
+        return 0;
+
+    if (gBattleHitArray->attributes & BATTLE_HIT_ATTR_MISS)
+        return 1;
+
+    result = Paragon(GetItemCrit(bu->weapon), &bu->unit);
+
+    if (result > 100) {
+        result = 100;
     }
 
     return result;

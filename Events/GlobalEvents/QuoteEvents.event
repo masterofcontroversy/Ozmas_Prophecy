@@ -1,0 +1,13 @@
+ALIGN 4
+CharlesBossQuoteEvent:
+CHECK_FLAG 0x7
+BEQ 0x9000 sC s0
+    Text(CharlesBossQuote_AfterCharge)
+    GOTO 0x9001
+
+LABEL 0x9000
+Text(CharlesBossQuote_BeforeCharge)
+
+LABEL 0x9001
+NoFade
+ENDA

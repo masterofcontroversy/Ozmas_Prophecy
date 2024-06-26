@@ -1,7 +1,26 @@
-//#ifndef ClassAnimTable
-//    #define ClassAnimTable (0xc00008)
-//#endif
+//Repointing Animation Table
+PUSH
 
+ORG $59BD8
+POIN ClassAnimTable
+ORG $5A600
+POIN ClassAnimTable
+ORG $5A694
+POIN ClassAnimTable
+ORG $5A82C
+POIN ClassAnimTable
+ORG $6F6A8
+POIN ClassAnimTable
+ORG $70940
+POIN ClassAnimTable
+ORG $70A60
+POIN ClassAnimTable
+
+POP
+
+ALIGN 4
+ClassAnimTable:
+FILL 0x20 * 0x200
 
 #define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
 {
@@ -57,6 +76,7 @@
 }
 {
 #include "_Animations/Mercenary_SwordInstaller.event"
+#include "_Animations/Mercenary_SwordFollowupInstaller.event"
 #include "_Animations/Mercenary_UnarmedInstaller.event"
 }
 {
@@ -189,8 +209,12 @@
 #include "_Animations/Sniper_F_UnarmedInstaller.event"
 }
 {
-#include "_Animations/Duke_LanceInstaller.event"
-#include "_Animations/Duke_UnarmedInstaller.event"
+#include "_Animations/Count_LanceInstaller.event"
+#include "_Animations/Count_UnarmedInstaller.event"
+}
+{
+#include "_Animations/Margrave_LanceInstaller.event"
+#include "_Animations/Margrave_UnarmedInstaller.event"
 }
 {
 #include "_Animations/FalcoKnight_LanceInstaller.event"
@@ -265,4 +289,10 @@
 #include "_Animations/Berserker_AxeInstaller.event"
 #include "_Animations/Berserker_HandaxeInstaller.event"
 #include "_Animations/Berserker_UnarmedInstaller.event"
+}
+{
+#include "_Animations/IronMage_MagicInstaller.event"
+}
+{
+#include "_Animations/Arcanist_MagicInstaller.event"
 }

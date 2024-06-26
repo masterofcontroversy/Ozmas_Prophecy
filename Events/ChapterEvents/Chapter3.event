@@ -1,0 +1,366 @@
+EventPointerTable(0x0D,ThisChapter)
+
+#define VillageID1 0x8
+#define VillageID2 0x9
+#define VillageID3 0xA
+#define CloverFlag 0xB
+#define HouseFlag  0xC
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(0, RandomSnowEvent, 1, 255)
+TurnEventPlayer(0, CallBandits1, 2)
+TurnEventPlayer(0, CallBandits2, 3)
+TurnEventPlayer(0, CallBandits3, 4)
+
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Village(VillageID1,Village1Event,1,15)
+Village(VillageID2,Village2Event,14,9)
+Village(VillageID3,Village3Event,16,1)
+House(0,HouseEvent,2,6)
+Armory(Chap3ArmoryList,11,12)
+Vendor(Chap3VendorList,9,1)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AFEV CloverFlag AlexandraCloverEvent 0x0
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+END_MAIN
+
+BeginningScene:
+MUSIC Nightfall_BGM
+SetBackground(InsideFortNightBG)
+Text(Ch3_Scene1)
+
+MUSIC NuclearFusion_BGM
+SetBackground(MountainsideWinterDayBG)
+Text(Ch3_Scene2_Part1)
+
+FADI 60
+LOMA Ch3_CutsceneChapterID
+FADU 10
+LOAD1 2 CutsceneUnits1; ENUN
+
+Text(Ch3_Scene2_Part2)
+LOAD1 2 LucyCutsceneUnit; ENUN
+MOVE 10 Lucy [5,5]
+STAL 20
+LOAD 2 BanditCutsceneUnit
+MOVE 10 Raider [7,5]
+STAL 30
+MOVE 10 Devan [6,5]
+ENUN
+Text(Ch3_Scene2_Part3)
+MOVE 10 Raider [15,5]
+ENUN
+DISA Raider
+
+Text(Ch3_Scene2_Part4)
+
+LOAD1 2 EvelynCutsceneUnit; ENUN
+MOVE 15 Evelyn [6,6]; ENUN
+Text(Ch3_Scene2_Part5)
+
+MOVE 10 Lucy [15,5]
+STAL 15
+MOVE 10 Devan [15,5]
+MOVE 10 Ronni [15,5]
+MOVE 10 Holly [15,5]
+ENUN
+Text(Ch3_Scene2_Part6)
+MOVE 10 Alexandra [15,5]
+STAL 10
+MOVE 10 Absalom [15,5]
+STAL 10
+MOVE 10 Evelyn [15,5]
+
+FADI 10
+ENUN
+REMOVEALL_BLUE
+LOMA Ch3_ChapterID
+FADU 10
+
+LOAD1 2 CutsceneUnits2; ENUN
+Text(Ch3_BattleTransition_Part1)
+
+LOAD1 2 MasonCutsceneUnit
+MOVE 10 Raider [5,5]
+ENUN
+Text(Ch3_BattleTransition_Part2)
+
+MOVE 10 Raider [7,10]
+ENUN
+DISA Raider
+Text(Ch3_BattleTransition_Part3)
+
+FADI 10
+LOAD1 0 LucyUnit
+LOAD1 0 EnemyUnits; ENUN
+PREP
+
+ENDA
+
+EndingScene:
+MUSIC KannaArmy_BGM
+SetBackground(Village2WinterDayBG)
+TEXTSTART
+TEXTSHOW Ch3_AfterBattle
+TEXTEND
+MUSIC NoBGM
+TEXTCONT
+TEXTEND
+MUSIC BirdsChirping
+TEXTCONT
+TEXTEND
+REMA
+MUSIC CryALive_BGM
+FADI 5
+REMOVEPORTRAITS
+BACG BedroomDaytimeBG
+FADU 5
+Text(Ch3_Scene4)
+
+FADI 5
+MUSIC NoticeofDeath_BGM
+LOMA Ch4_ChapterID
+SVAL s1 SnowPeaksPaletteID
+ASMC ASMC_SetMapPalette
+REMOVEALL_BLUE
+REMOVEALL_RED
+LOAD1 2 CutsceneUnits3
+FADU 5
+
+EVBIT_F 9
+MOVE 4 EastDuramontis [3,1];ENUN
+STAL 20
+SOUN 0x00B1
+TILECHANGE 0
+MOVE 4 EastDuramontis [1,1];ENUN
+
+Text(Ch3_Scene5_Part1)
+
+MOVE 4 EastDuramontis [3,1];ENUN
+STAL 20
+SOUN 0x00B1
+TILEREVERT 0
+
+EVBIT_T 9
+MOVE 4 EastDuramontis [7,9];ENUN
+TEXTSTART
+TEXTSHOW Ch3_Scene5_Part2
+TEXTEND
+EVBIT_F 9
+MOVE 4 EastDuramontis [16,9]
+TEXTCONT
+TEXTEND
+REMA
+FADI 10
+ENUN
+
+MNC2 Ch4_ChapterID
+ENDA
+
+Village1Event:
+//Text
+GiveItem(Mend, ActiveUnit)
+ENDA
+
+Village2Event:
+VillageEventItem(Ch3_Village2,InsideHouse4DayBG,Elixir)
+
+Village3Event:
+VillageEventItem(Ch3_Village3,InsideHouse4DayBG,SteelAxe)
+
+HouseEvent:
+MUSI
+SetBackground(InsideHouse4DayBG)
+CHECK_FLAG HouseFlag
+BNE 0x9000 sC s0
+    Text(Ch3_House)
+    ENUT HouseFlag
+    GOTO 0x9001
+
+LABEL 0x9000
+Text(Ch3_House_Part2)
+
+LABEL 0x9001
+EndConvo
+MUNO
+NoFade
+ENDA
+
+PlayerUnits:
+UNIT Devan Count Devan Level(1,Player,0) [4,2] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,3] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,2] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [4,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [3,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [1,1] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+
+UNIT
+
+EnemyUnits:
+
+//Turn one enemies
+UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [5,5] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [7,4] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Stonemason Shaman 0x0 Level(3,Enemy,1) [7,2] 0x0 0x0 0x0 0x1 [Flux] NoAI
+
+//In front of top house
+UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [13,3] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+//Side path
+UNIT Stonemason ArmorKnight 0x0 Level(3,Enemy,1) [16,10] 0x0 0x0 0x0 0x1 [Javelin] NeverMoveAI
+UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [16,6] 0x0 0x0 0x0 0x1 [SteelBow] GroupFiveAI
+UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [18,11] 0x0 0x0 0x0 0x1 [IronBlade] GroupTwoAI
+UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [17,9] 0x0 0x0 0x0 0x1 [SteelLance] GroupTwoAI
+
+//Main path
+UNIT Stonemason Myrmidon 0x0 Level(3,Enemy,1) [6,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Stonemason Acolyte 0x0 Level(3,Enemy,1) [2,8] 0x0 0x0 0x0 0x1 [Lightning] NoAI
+UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [5,14] 0x0 0x0 0x0 0x1 [IronLance] GroupFourAI
+UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [8,15] 0x0 0x0 0x0 0x1 [SteelBlade] GroupFourAI
+UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [3,15] 0x0 0x0 0x0 0x1 [SteelBow] GroupFourAI
+
+//Path to south-west house
+UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [3,17] 0x0 0x0 0x0 0x1 [IronBlade] GroupSixAI
+UNIT Stonemason Mage 0x0 Level(3,Enemy,1) [0,16] 0x0 0x0 0x0 0x1 [Fire] GroupSixAI
+
+//Around the armory
+UNIT Stonemason ArmorKnight 0x0 Level(3,Enemy,1) [10,13] 0x0 0x0 0x0 0x1 [IronBlade] NeverMoveAI
+UNIT Stonemason Myrmidon 0x0 Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [13,14] 0x0 0x0 0x0 0x1 [SteelAxe] GroupOneAI
+UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [13,13] 0x0 0x0 0x0 0x1 [IronBow] GroupOneAI
+
+//Stationaries
+UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [15,3] 0x0 0x0 0x0 0x1 [IronLance] [AttackInRange, Pursue, NoRecovery, AIGroupFive]
+UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [16,4] 0x0 0x0 0x0 0x1 [IronBlade] [AttackInRange, Pursue, NoRecovery, AIGroupFive]
+
+UNIT Stonemason IronMage 0x0 Level(3,Enemy,1) [6,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
+//UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [7,13] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+
+//Charging enemies
+UNIT Stonemason MageKnight 0x0 Level(3,Enemy,1) [18,9] 0x0 0x0 0x0 0x1 [SteelSword, Thunder] GroupFiveAI
+UNIT
+
+LucyUnit:
+UNIT Lucy Mage_F Devan Level(3,Player,0) [8,3] 0x0 0x0 0x0 0x1 [Fire, Vulnerary] NoAI
+UNIT
+
+//Bandits
+Bandits1:
+UNIT Raider Brigand 0x0 Level(3,Enemy,1) [18,0] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAttackInRangeAI
+UNIT
+
+Bandits2:
+UNIT Raider Brigand 0x0 Level(3,Enemy,1) [10,17] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAttackInRangeAI
+UNIT
+
+Bandits3:
+UNIT Raider Brigand 0x0 Level(3,Enemy,1) [11,17] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAttackInRangeAI
+UNIT
+
+CutsceneUnits1:
+UNIT Devan Count Devan Level(1,Player,0) [0,6] 0x0 0x0 0x1 REDA5R5 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [0,7] 0x0 0x0 0x1 REDA5R6 [IronSword, Swiftblade, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [0,6] 0x0 0x0 0x1 REDA5R4 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Holly Cleric Devan Level(2,Player,0) [0,6] 0x0 0x0 0x1 REDA3R4 [Heal] NoAI
+UNIT Absalom Fighter Alexandra Level(3,Player,0) [0,7] 0x0 0x0 0x1 REDA4R6 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT
+
+CutsceneUnits2:
+UNIT Devan Count Devan Level(1,Player,0) [0,0] 0x0 0x0 0x1 REDA4R2 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Lucy Mage_F Devan Level(3,Player,0) [1,0] 0x0 0x0 0x1 REDA3R3 [Fire, Vulnerary] NoAI
+UNIT
+
+CutsceneUnits3:
+UNIT Max Shaman Devan Level(4,NPC,0) [0,1] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Dominic Hero Dominic Level(6,Enemy,0) [7,10] 0x0 0x0 0x0 0x1 [SteelBlade, HandAxe] NoAI
+UNIT EastDuramontis Peer EastDuramontis Level(6,Enemy,0) [7,11] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
+
+LucyCutsceneUnit:
+UNIT Lucy Mage_F Devan Level(3,Player,0) [14,5] 0x0 0x0 0x0 0x1 [Fire, Vulnerary] NoAI
+UNIT
+
+EvelynCutsceneUnit:
+UNIT Evelyn FalcoKnight Alexandra Level(10,Player,0) [12,0] 0x0 0x0 0x0 0x1 [SilverSword, IronSword, Heal, Vulnerary] NoAI
+UNIT
+
+BanditCutsceneUnit:
+UNIT Raider Brigand 0x0 Level(3,Enemy,1) [14,5] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAttackInRangeAI
+UNIt
+
+MasonCutsceneUnit:
+UNIT Raider Soldier 0x0 Level(3,Enemy,1) [7,10] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIt
+
+CallBandits1:
+LoadReinforcements(Bandits1)
+NoFade
+ENDA
+
+CallBandits2:
+LoadReinforcements(Bandits2)
+NoFade
+ENDA
+
+CallBandits3:
+LoadReinforcements(Bandits3)
+NoFade
+ENDA
+
+AlexandraCloverEvent:
+    ContinueIfIDMatch(Alexandra)
+    RANDOMNUMBER 14
+    SVAL s1 14
+    BNE 0x9001 s1 sC
+        MUSI
+        Text(CloverFound1)
+        MUNO
+        GiveItem(Clover, Alexandra)
+        MUSI
+        Text(CloverFound2)
+        MUNO
+        GOTO 0x9000
+    LABEL 0x9001
+    CancelEvent
+
+LABEL 0x9000
+NoFade
+ENDA
+
+#undef VillageID1
+#undef VillageID2
+#undef VillageID3

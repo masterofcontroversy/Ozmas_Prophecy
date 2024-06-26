@@ -22,6 +22,7 @@ SET_DATA gDefenderSkillBuffer, 0x02026C00
 SET_DATA gTempSkillBuffer, 0x02026B90
 SET_DATA gAuraSkillBuffer, 0x02027200
 SET_DATA gUnitRangeBuffer, 0x0202764C
+SET_DATA pExtraItemOrSkill, 0x0202BCDE
 
 SET_FUNC GlobalIRQHandler, 0x80000FC
 SET_FUNC ARM_ClearOAMBuffer, 0x8000304

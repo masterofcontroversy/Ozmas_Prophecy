@@ -232,6 +232,18 @@ void AddMapAuraFxUnit(struct Unit* unit)
 	}
 }
 
+void ASMC_StartAuraFX(void) {
+    StartMapAuraFx();
+    SetMapAuraFxSpeed(32);
+    SetMapAuraFxBlend(8);
+    SetMapAuraFxPalette((u16*) gEventSlot[1]);
+    AddMapAuraFxUnit(gActiveUnit);
+}
+
+void ASMC_EndAuraFX(void) {
+    EndMapAuraFx();
+}
+
 #if MAP_AURA_FX_EXAMPLE
 
 // A trivial example

@@ -1,3 +1,7 @@
+#define PlayerOnlySkill     (1<<5)
+#define EnemyOnlySkill      (2<<5)
+#define NormalHardOnlySkill (3<<5)
+#define HardOnlySkill       (4<<5)
 
 CountSkillList:
 BYTE 00 00
@@ -33,7 +37,6 @@ BYTE 00 00
 ALIGN 4
 
 ThiefSkillList:
-BYTE 1|00100000b SlyMovementID
 BYTE 00 00
 ALIGN 4
 
