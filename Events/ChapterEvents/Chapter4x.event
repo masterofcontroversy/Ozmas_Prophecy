@@ -64,7 +64,7 @@ SVAL s1 1
 ASMC ASMC_ChangeMode
 
 COUNTER_SET ChestCounter 4
-LOAD1 0 EnemyUnits; ENUN
+//LOAD1 0 EnemyUnits; ENUN
 
 MUSIC GoldenrodGameCorner_BGM
 SetBackground(MountainsideWinterDayBG)
@@ -114,7 +114,7 @@ CHECK_ACTIVE
 SVAL s1 Lucy
 BNE 0x9000 s1 sC
     Text(Ch4x_LucyKeyFound_Part1)
-    GiveItem(_1G, ActiveUnit)
+    GiveItem(SkeletonKey, ActiveUnit)
     Text(Ch4x_LucyKeyFound_Part2)
     GOTO 0x9002
 
@@ -122,7 +122,7 @@ LABEL 0x9000
 SVAL s1 Colton
 BNE 0x9001 s1 sC
     Text(Ch4x_ColtonKeyFound_Part1)
-    GiveItem(_1G, ActiveUnit)
+    GiveItem(SkeletonKey, ActiveUnit)
     Text(Ch4x_ColtonKeyFound_Part2)
     GOTO 0x9002
 
@@ -133,7 +133,7 @@ BNE 0x9003 s1 sC
     ASMC ASMC_CheckTileChange
     BEQ 0x9003 s0 sC
         Text(Ch4x_EvelynKeyFound_Part1)
-        GiveItem(_1G, ActiveUnit)
+        GiveItem(SkeletonKey, ActiveUnit)
         Text(Ch4x_EvelynKeyFound_Part2)
         GOTO 0x9002
 

@@ -108,6 +108,12 @@ POIN MovementSoundsTable
 //ORG 0x189A2
 //SHORT 0xE005
 
+//Allow everyone to use lockpicks
+ORG 0x29174 //Usability's thief bit check in item menu
+SHORT 0x46C0
+ORG 0x16F4E //Nullify lockpick check in usability display
+SHORT 0xE001
+
 //Move BWL text down
 ORG 0x86FE6
 SHORT 0x46C0 //Ignore cleared save check

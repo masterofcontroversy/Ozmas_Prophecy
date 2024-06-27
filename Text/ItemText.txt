@@ -202,6 +202,9 @@ Accost Band[X]
 ## RajinArrowName
 Rajin Arrow[X]
 
+## SkeletonKeyName
+Skeleton Key[X]
+
 ## BowDesc
 3x Might vs [PegasusIcon].[X]
 
@@ -326,3 +329,7 @@ opponent's when combat starts.[X]
 Makes bows deal magic damage.[NL]
 Attack power increases with magic[NL]
 instead of strength.[X]
+
+## SkeletonKeyDesc
+A special key that opens[NL]
+both doors and chests.[X]

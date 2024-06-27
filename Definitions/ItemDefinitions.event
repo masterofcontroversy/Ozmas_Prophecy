@@ -338,6 +338,8 @@
 #define RajinArrow       0xdd
 #define Labrys           0xde
 
+#define SkeletonKey      Lockpick
+
 
 //Type Definitions
 #define Sword            0x00
