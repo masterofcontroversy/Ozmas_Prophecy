@@ -54,14 +54,16 @@ MaxDominicBattleEvent: {
     ENDA
 }
 
-StartChapterJumpEvent:
-    SetBackground(BlackBG)
-    SVAL sC 0
-    ASMC Jump_StartArbitrary
-    FADI 10
+#ifdef __DEBUG__
+    StartChapterJumpEvent:
+        SetBackground(BlackBG)
+        SVAL sC 0
+        ASMC Jump_StartArbitrary
+        FADI 10
 
-    BEQ 0x9000 sC s0
-        ENDB
+        BEQ 0x9000 sC s0
+            ENDB
 
-    LABEL 0x9000
-    ENDA
+        LABEL 0x9000
+        ENDA
+#endif

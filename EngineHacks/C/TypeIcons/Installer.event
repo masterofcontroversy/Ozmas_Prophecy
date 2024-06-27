@@ -16,7 +16,7 @@ POP
 #define SetAidIcon(classID, iconID) "PUSH; ORG gAidIconTable + classID; BYTE iconID; POP"
 #define SetSecondAidIcon(classID, iconID) "PUSH; ORG gSecondAidIconTable + classID; BYTE iconID; POP"
 
-#define HorseIcon 0
+#define CavalryIcon 0
 #define PegasusIcon 1
 #define WyvernIcon 2
 #define ArmorIcon 3
@@ -28,23 +28,23 @@ FILL 0x100 0xFF
 gSecondAidIconTable:
 FILL 0x100 0xFF
 
-SetAidIcon(LanceCavalier, HorseIcon)
-SetAidIcon(LanceCavalier_F, HorseIcon)
-SetAidIcon(AxeCavalier, HorseIcon)
-SetAidIcon(AxeCavalier_F, HorseIcon)
-SetAidIcon(SwordCavalier, HorseIcon)
-SetAidIcon(SwordCavalier_F, HorseIcon)
-SetAidIcon(BowKnight, HorseIcon)
-SetAidIcon(BowKnight_F, HorseIcon)
-SetAidIcon(LancePaladin, HorseIcon)
-SetAidIcon(LancePaladin_F, HorseIcon)
-SetAidIcon(AxePaladin, HorseIcon)
-SetAidIcon(AxePaladin_F, HorseIcon)
-SetAidIcon(SwordPaladin, HorseIcon)
-SetAidIcon(SwordPaladin_F, HorseIcon)
-SetAidIcon(ArchKnight, HorseIcon)
-SetAidIcon(ArchKnight_F, HorseIcon)
-SetAidIcon(MageKnight, HorseIcon)
+SetAidIcon(LanceCavalier, CavalryIcon)
+SetAidIcon(LanceCavalier_F, CavalryIcon)
+SetAidIcon(AxeCavalier, CavalryIcon)
+SetAidIcon(AxeCavalier_F, CavalryIcon)
+SetAidIcon(SwordCavalier, CavalryIcon)
+SetAidIcon(SwordCavalier_F, CavalryIcon)
+SetAidIcon(BowKnight, CavalryIcon)
+SetAidIcon(BowKnight_F, CavalryIcon)
+SetAidIcon(LancePaladin, CavalryIcon)
+SetAidIcon(LancePaladin_F, CavalryIcon)
+SetAidIcon(AxePaladin, CavalryIcon)
+SetAidIcon(AxePaladin_F, CavalryIcon)
+SetAidIcon(SwordPaladin, CavalryIcon)
+SetAidIcon(SwordPaladin_F, CavalryIcon)
+SetAidIcon(ArchKnight, CavalryIcon)
+SetAidIcon(ArchKnight_F, CavalryIcon)
+SetAidIcon(MageKnight, CavalryIcon)
 
 SetAidIcon(Mage, MageIcon)
 SetAidIcon(Mage_F, MageIcon)
