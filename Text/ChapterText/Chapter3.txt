@@ -145,8 +145,8 @@ What for?[A]
 
 //Devan
 [MidLeft]
-I might not know the reason,[NL]
-but I can tell she's ambitious.[ANL]
+I might not know exactly why,[NL]
+but this suits her ambitions.[ANL]
 And if I know anything about[NL]
 ambitious Tolvans, she's trouble.[A]
 [X]
@@ -427,6 +427,31 @@ push everything up on the schedule.[ANL]
 Ah well. Time to get torching.[A]
 [X]
 
+## Ch3_Village1
+[MidRight][LoadCurrentPortrait]
+[MidLeft][LoadVillageWoman1][ToggleSmile]
+You didn't come all this way to[NL]
+see little old me, did you?[ANL]
+
+That was sweet of you, dear,[NL]
+but the Masons don't bother me.[ANL]
+
+The only treasures I own are my[NL]
+memories and they can't steal that.[ANL]
+
+Well, them and my husband's staff.[NL]
+He was a man of the cloth, you know.[ANL]
+He could mend injuries with this thing,[NL][CloseEyes]
+but my, did he know how to heal a heart[Beat][ANL]
+
+[OpenEyes]
+Oh, I'm sorry. There I go rambling again.[NL]
+Say, why don't you take it with you?[ANL]
+
+I think he would enjoy knowing that[NL]
+it's being used to continue his work.[A]
+[X]
+
 ## Ch3_Village2
 [MidRight][LoadCurrentPortrait]
 [MidLeft][LoadVillageWoman3]
@@ -471,8 +496,13 @@ Even bandits avoid brown roof houses.[A]
 you anything for coming back.[ANL]
 [X]
 
+## Ch3_LucyDefeatQuote
+[MidRight][LoadLucy]
+Ow! Ow! Ow![.5][NL][CloseEyes]
+Oh[BeatSmooth][A]
+[X]
 
-## Ch3_AfterBattle
+## Ch3_AfterBattle_Part1
 [Left][LoadDevan]
 [FarLeft][LoadRonni]
 [Right][LoadAlexandra]
@@ -502,7 +532,135 @@ Excuse me.[A]
 //Devan
 [Left]
 [ToggleMouthMove]Hm?[ToggleMouthMove][A]
+[X]
 
+## Ch3_AfterBattle_Part1_Alt
+[FarRight][LoadDevan]
+[Right][LoadEvelyn]
+[Left][LoadLucy]
+[SendToBack]
+
+//Lucy
+Ugh[Beat] [CloseEyes][MoveLeft]Ow![A]
+
+//Evelyn
+[Right]
+Don't move your leg.[ANL]
+The sooner we can get it bandaged up,[NL]
+the sooner you can get some relief.[A]
+
+//Lucy
+[Left]
+[Beat][A]
+
+//Devan
+[FarRight]
+How is she?[A]
+
+//Evelyn
+[Right]
+All things considered, she's very fortunate.[.5][NL][CloseEyes]
+Had Lucy been hit a little to the right[Beat][ANL][OpenEyes]
+Well, the important thing is she'll recover.[NL]
+She won't be walking for a while, however.[A]
+
+//Lucy
+[Left][OpenEyes]
+Really[Beat]?[A]
+
+//Evelyn
+[Right]
+There.[.4] That's the[NL]
+best I can do for now.[ANL]
+This wound is beyond[NL]
+my magic, I'm afraid.[A]
+
+[FarFarLeft]
+There you are.[A]
+[CloseSpeechSlow]
+
+[FarLeft][LoadColton]
+What took you-- Huh?[.5][NL]
+What happened?[A]
+
+//Lucy
+[Left]
+Hi, Colton.[ANL]
+I, uh[Beat] ducked left when[NL]
+I should have ducked right.[A]
+
+//Colton
+[FarLeft]
+Of all the[Beat] See?[NL]
+What did I tell you would happen?[A][CloseSpeechSlow]
+Will she be okay?[A]
+
+//Evelyn
+[Right]
+With enough time and rest, yes.[.5][NL]
+Though she'll need somewhere to stay.[A]
+
+//Colton
+[FarLeft]
+I know a place.[A]
+
+//Devan
+[FarRight]
+Hold on.[.5] How do you know Lucy?[A]
+
+//Lucy
+[Left]
+It's fine.[.5] You can trust him.[A]
+
+//Devan
+[FarRight]
+You're sure?[A]
+
+//Lucy
+[Left]
+Uh huh.[A]
+
+//Devan
+[FarRight]
+[Beat]So be it.[A]
+
+//Evelyn
+[Right]
+Make sure to keep her leg[NL]
+secure at all times.[ANL]
+Redress her wound and[NL]
+change the bandages daily.[ANL]
+And be sure she gets[NL]
+plenty of nourishment.[A]
+
+//Colton
+[FarLeft]
+Lady, I think you[NL]
+forget where we are.[ANL]
+[Beat]But I'll see what[NL]
+I can do.[.5] C'mon, Lucy.[A]
+[ClearFace][Left][ClearFace]
+
+//Devan
+[FarRight]
+[Beat]Perhaps I should--[A]
+
+[FarFarRight]
+Excuse me.[A]
+
+//Devan
+[FarRight]
+What?[A]
+
+[ClearFace][Right][ClearFace]
+[Left][LoadDevan]
+[FarLeft][LoadRonni]
+[Right][LoadAlexandra]
+
+[X]
+
+## Ch3_AfterBattle_Part2
+[SendToBack]
 //Mayor
 [FarRight][LoadVillageMan1]
 Are you the leader[NL]

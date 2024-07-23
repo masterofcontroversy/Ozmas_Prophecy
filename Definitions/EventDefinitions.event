@@ -23,7 +23,7 @@
 //Gold and Items
 #define SetGold(Amount) "SVAL 0x3 Amount;"
 #define GiveGold "CALL $591F40; GIVEMONEY 0x1;"
-#define GiveItem(ItemID,CharID) "SVAL 0x3 ItemID; GIVEITEM CharID;"
+#define GiveItem(ItemID,CharID) "CALL $591F40; SVAL 0x3 ItemID; GIVEITEM CharID;"
 
 #define EndConvo "CALL $9EE2C4"
 

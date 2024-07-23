@@ -132,7 +132,17 @@ EndingScene:
 MUSIC KannaArmy_BGM
 SetBackground(Village2WinterDayBG)
 TEXTSTART
-TEXTSHOW Ch3_AfterBattle
+
+CHECK_ALIVE Lucy
+BEQ 0x9000 sC s0
+    TEXTSHOW Ch3_AfterBattle_Part1
+    GOTO 0x9001
+LABEL 0x9000
+    TEXTSHOW Ch3_AfterBattle_Part1_Alt
+LABEL 0x9001
+TEXTEND
+
+TEXTSHOW2 Ch3_AfterBattle_Part2
 TEXTEND
 MUSIC NoBGM
 TEXTCONT
@@ -141,6 +151,7 @@ MUSIC BirdsChirping
 TEXTCONT
 TEXTEND
 REMA
+
 MUSIC CryALive_BGM
 FADI 5
 REMOVEPORTRAITS
@@ -189,8 +200,7 @@ MNC2 Ch4_ChapterID
 ENDA
 
 Village1Event:
-//Text
-GiveItem(Mend, ActiveUnit)
+VillageEventItem(Ch3_Village1,InsideHouse4DayBG,Mend)
 ENDA
 
 Village2Event:
