@@ -6,14 +6,17 @@
 #include "Objectives.txt"
 
 //Misc
-## LazarusOfficeText
-Lazarus' office[X]
+## BetterTimesText
+During better times[X]
 
 ## TheNextDayText
 The next day[X]
 
 ## MasaintKeepText
 Masaint Keep[X]
+
+## SomeDaysLaterText
+Some time later[X]
 
 ## TestText
 [MidLeft]

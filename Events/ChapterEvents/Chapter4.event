@@ -55,7 +55,7 @@ AREA Reinforcements2_Triggered_Flag TriggerReinforcements_2 [7,3] [14,6]
 CauseGameOverIfLordDies
 END_MAIN
 
-BeginningScene:
+BeginningScene: {
     //Will be set to false if a player unit is in the treasure room
     ENUT Reinforcements2_Completion_Flag
 
@@ -107,115 +107,140 @@ BeginningScene:
     LOAD1 2 LordsUnits;ENUN
     FADI 20
     PREP
+    
+    NoFade
+    ENDA
+}
 
-NoFade
-ENDA
+EndingScene: {
+    #define LabelAnchor EndingScene
+    FADI 10
+    REMOVEALL_RED
+    REMOVEALL_BLUE
+    CHECK_FLAG Max_DominicFlag
+    BNE LabelDest(MaxKilledDominic) sC s0
+        SetBackground(CastleInteriorNight2BG)
+        Text(Ch4_AfterBattle_A_Part1)
+        Text(Ch4_AfterBattle_A_Part2)
+        SVAL s8 0x0
 
-EndingScene:
-FADI 10
-CAMERA [21,0]
-REMOVEALL_RED
-REMOVEALL_BLUE
-LOAD1 2 CutsceneUnits2
-FADU 10
+        GOTO LabelDest(ResumeScene)
 
+    MaxKilledDominic: SetLabel
+        CAMERA [21,0]
+        LOAD1 2 CutsceneUnits2
+        FADU 10
 
-//CHECK_FLAG Max_DominicFlag
-//BEQ 0x9000 sC s0
-EVBIT_F 9
-MUSIC NoBGM
-Text(Ch4_AfterBattle_B_Part1)
-MOVE 10 Max [1,8]; STAL 10
-MUSIC CryALive_BGM
-MOVE 10 Ronni [15,4]
-Text(Ch4_AfterBattle_B_Part2)
-ENUN
-MOVE 10 Ronni [2,8]; STAL 5
-MOVE 10 Devan [3,8]; STAL 10
+        EVBIT_F 9
+        MUSIC NoBGM
+        Text(Ch4_AfterBattle_B_Part1)
+        MOVE 10 Max [1,8]; STAL 10
+        MUSIC CryALive_BGM
+        MOVE 10 Ronni [15,4]
+        Text(Ch4_AfterBattle_B_Part2)
+        ENUN
+        MOVE 10 Ronni [2,8]; STAL 5
+        MOVE 10 Devan [3,8]; STAL 10
 
-CURSOR Alexandra
-STAL 60
-REMOVE_CURSORS
-Text(Ch4_AfterBattle_B_Part3)
-MOVE 10 Absalom [22,7]; STAL 10
-Text(Ch4_AfterBattle_B_Part4)
+        CURSOR Alexandra
+        STAL 60
+        REMOVE_CURSORS
+        Text(Ch4_AfterBattle_B_Part3)
+        MOVE 10 Absalom [22,7]; STAL 10
+        Text(Ch4_AfterBattle_B_Part4)
 
-FADI 10
-REMOVEPORTRAITS
-BACG CastleInteriorNight2BG
-FADU 10
-Text(Ch4_AfterBattle_B_Part5)
-GOTO 0x9001
+        FAWI 3
+        REMOVEPORTRAITS
+        BACG CastleInteriorDayBG //TODO: Sepia the whole scene
+        FAWU 3
+        BROWNBOXTEXT BetterTimesText [8,8]
+        TEXTSHOW Ch4_AfterBattle_B_Part5
+        TEXTEND
+        FAWI 3
+        FACE_SHOW 0 (-3)
+        FACE_SHOW 1 MaxPortraitID
+        BACG CastleInteriorNight2BG
+        FAWU 3
+        TEXTSHOW Ch4_AfterBattle_B_Part6
+        TEXTEND
+        REMA
+        SVAL s8 Ch4_Scene6_B
 
-LABEL 0x9000
+    ResumeScene: SetLabel
+    FADI 5
+    REMOVEPORTRAITS
+    BACG CastleInteriorDayBG
+    FADU 5
+    MUSIC PrideoftheImperial_BGM
+    BROWNBOXTEXT SomeDaysLaterText [8,8]
+    Text(Ch4_Scene5)
+    SADD s2 s8 s0
+    Text(ValueInSlot2)
 
-LABEL 0x9001
-SetBackground(CastleInteriorDayBG)
-Text(Ch4_Scene5)
-Text(Ch4_Scene6_B)
+    FADI 7
+    CLEAN
+    REMOVEALL_BLUE
+    CAMERA_CENTERED [0,7]
+    SVAL s1 SnowPeaksPaletteID
+    ASMC ASMC_SetMapPalette
+    FADU 7
 
-FADI 7
-CLEAN
-REMOVEALL_BLUE
-CAMERA [0,9]
-SVAL s1 SnowPeaksPaletteID
-ASMC ASMC_SetMapPalette
-FADU 7
+    EVBIT_F 9
+    LOAD 2 CutsceneUnits3
+    MOVE 5 Devan [6,9]
+    MOVE 5 Alexandra [5,9]
+    STAL 110
+    Text(Ch4_Scene7)
 
-EVBIT_F 9
-LOAD 2 CutsceneUnits3
-MOVE 5 Devan [6,9]
-MOVE 5 Alexandra [5,9]
-STAL 110
+    LOAD 2 MaxUnit2
+    MOVE 5 Max [5,8]; ENUN
+    TEXTSTART
+    TEXTSHOW Ch4_Scene8
+    TEXTEND
+    MOVE 5 Max [5,0]
+    TEXTCONT
+    TEXTEND
+    REMA
+    STAL 90
 
-Text(Ch4_Scene7)
+    //Check gaiden requirement and go to gaiden if it's fulfilled
+    CHECK_ALIVE Colton
+    BEQ LabelDest(ColtonDead) sC s0
+        CHECK_ALIVE Lucy
+        BEQ LabelDest(ColtonAlive) sC s0
+            //Both are alive. Go to the Gaiden
+            CALL SetupLucyColtonScene
+            Text(Ch4_ColtonLucyGaidenText_Part1)
+            MNC2 Ch4x_ChapterID
+            GOTO LabelDest(EndEvent) //MNC2 Gaiden
 
-LOAD 2 MaxUnit2
-MOVE 5 Max [5,8]; ENUN
-TEXTSTART
-TEXTSHOW Ch4_Scene8
-TEXTEND
-MOVE 5 Max [5,0]
-TEXTCONT
-TEXTEND
-REMA
-STAL 90
-
-//Check gaiden requirement and go to gaiden if it's fulfilled
-CHECK_ALIVE Colton
-BEQ 0x9002 sC s0
-    CHECK_ALIVE Lucy
-    BEQ 0x9003 sC s0
-        //Both are alive. Go to the Gaiden
+    ColtonAlive: SetLabel
+    //Colton's alive and Lucy is "dead"
+    SVAL s1 Lucy
+    ASMC ASMC_GetCharDeathChapter
+    SVAL s1 Ch4_ChapterID
+    BNE LabelDest(EndEvent) s1 sC
+        //Okay, Lucy is dead dead. Start the text
         CALL SetupLucyColtonScene
-        Text(Ch4_ColtonLucyGaidenText_Part1)
-        Text(Ch4_ColtonLucyGaidenText_Part2)
-        GOTO 0x9004 //MNC2 Gaiden
+        Text(Ch4_ColtonGrieves)
+        GOTO LabelDest(EndEvent)
 
-LABEL 0x9003
-//Colton's alive and Lucy is "dead"
-SVAL s1 Lucy
-ASMC ASMC_GetCharDeathChapter
-SVAL s1 Ch4_ChapterID
-BNE 0x9004 s1 sC
-    //Okay, Lucy is dead dead. Start the text
-    CALL SetupLucyColtonScene
-    Text(Ch4_ColtonGrieves)
-    GOTO 0x9004
+    ColtonDead: SetLabel
+    //Colton's dead. Is Lucy alive?
+    CHECK_ALIVE Lucy
+    BEQ LabelDest(EndEvent) sC s0
+        //Lucy's alive. Do the event
+        CALL SetupLucyColtonScene
+        Text(Ch4_LucyGrieves)
 
-LABEL 0x9002
-//Colton's dead. Is Lucy alive?
-CHECK_ALIVE Lucy
-BEQ 0x9004 sC s0
-    //Lucy's alive. Do the event
-    CALL SetupLucyColtonScene
-    Text(Ch4_LucyGrieves)
+    EndEvent: SetLabel
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
 
-LABEL 0x9004
-NoFade
-ENDA
-
-OpeningCutscenes:
+OpeningCutscenes: {
+    #define LabelAnchor OpeningCutscenes
     LOMA Ch4_CutsceneChapterID
 
     MUSIC MemoriesofGreen_BGM
@@ -233,21 +258,44 @@ OpeningCutscenes:
     TEXTSTART
     TEXTSHOW Ch4_Scene2_Part2
     TEXTEND
-    LOAD1 2 LucyUnit; ENUN
-    TEXTCONT
+
+    CHECK_ALIVE Lucy
+    BEQ LabelDest(ColtonAnswersDoor) sC s0
+        LOAD1 2 LucyUnit; ENUN
+        TEXTSHOW2 Ch4_Scene2_Part3_A
+        GOTO LabelDest(ShowHiringScene)
+    
+    ColtonAnswersDoor: SetLabel
+        TEXTSHOW2 Ch4_Scene2_Part3_B
+
+    ShowHiringScene: SetLabel
     TEXTEND
     REMA
 
     MUSIC NoticeofDeath_BGM
     SetBackground(InsideHouse3BG)
-    Text(Ch4_Scene3)
 
+    CHECK_ALIVE Lucy
+    BEQ LabelDest(ColtonLeavesLucy) sC s0
+        Text(Ch4_Scene3_A)
+        GOTO LabelDest(RestofEvent)
+    
+    ColtonLeavesLucy: SetLabel
+        Text(Ch4_Scene3_B_Part1)
+        FADI 5
+        REMOVEALL_BLUE
+        LOAD1 2 ColtonUnit2
+        CLEAN
+        FADU 5
+        Text(Ch4_Scene3_B_Part2)
+
+    RestofEvent: SetLabel
     FADI 10
+    REMOVEALL_BLUE
     MUSIC OutsideBirdsChirping
     LOMA Ch3_ChapterID
     CAMERA [5,15]
-    MOVE (-1) Devan [7,17]
-    MOVE (-1) Alexandra [6,17]
+    LOAD1 2 CutsceneUnits4
     ENUN
     FADU 10
 
@@ -260,19 +308,23 @@ OpeningCutscenes:
     FADI 10
     REMOVEALL_BLUE
     LOMA Ch4_ChapterID
-NoFade
-ENDA
 
-SetupLucyColtonScene:
-EVBIT_T 9
-CAMERA [21,8]
-CURSOR Colton
-CURSOR Lucy
-STAL 60
-REMOVE_CURSORS
-SetBackground(OutsideCastleWinterDayBG)
-NoFade
-ENDA
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
+
+SetupLucyColtonScene: {
+    EVBIT_T 9
+    CAMERA [21,8]
+    CURSOR Colton
+    CURSOR Lucy
+    STAL 60
+    REMOVE_CURSORS
+    SetBackground(OutsideCastleWinterDayBG)
+    NoFade
+    ENDA
+}
 
 PlayerUnits:
 //Forced Squad A
@@ -404,6 +456,11 @@ UNIT Evelyn FalcoKnight Alexandra Level(1,Player,0) [20,3] 0x0 0x0 0x0 0x1 [0x0]
 UNIT Absalom Fighter Alexandra Level(1,Player,0) [19,4] 0x0 0x0 0x0 0x1 [0x0] NoAI
 UNIT
 
+CutsceneUnits4:
+UNIT Devan Count Devan Level(1,Player,0) [7,17] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Alexandra Lord Devan Level(1,Player,0) [6,17] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
+UNIT
+
 CutsceneUnits3:
 UNIT Devan Count Devan Level(1,Player,0) [5,0] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
 UNIT Alexandra Lord Devan Level(1,Player,0) [4,0] 0x0 0x0 0x0 0x1 [IronSword, Rapier, Vulnerary] NoAI
@@ -415,6 +472,9 @@ LucyUnit:
 UNIT Lucy Mage_F Devan Level(3,Player,0) [12,5] 0x0 0x0 0x0 0x1 [Fire, Vulnerary] NoAI
 UNIT
 
+ColtonUnit2:
+UNIT Colton Thief Devan Level(4,Player,0) [12,5] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
 
 CallThief:
 LoadReinforcements(ThiefUnit)
@@ -422,31 +482,36 @@ NoFade
 ENDA
 
 ALIGN 4
-CallReinforcements_1:
-LoadReinforcements(Reinforcements_1)
-STAL 30
+CallReinforcements_1: {
+    #define LabelAnchor CallReinforcements_1
+    LoadReinforcements(Reinforcements_1)
+    STAL 30
 
-CHECK_ALIVE Holly
-BEQ 0x9000 sC s0
-    CAM1 Devan
-    Text(Ch4_Reinforcements)
+    CHECK_ALIVE Holly
+    BEQ LabelDest(EndEvent) sC s0
+        CAM1 Devan
+        Text(Ch4_Reinforcements)
 
-LABEL 0x9000
-NoFade
-ENDA
-
-ALIGN 4
-TriggerReinforcements_2:
-ContinueIfFactionMatch(Player)
-    ENUF Reinforcements2_Completion_Flag
+    EndEvent: SetLabel
     NoFade
     ENDA
+    #undef LabelAnchor
+}
 
 ALIGN 4
-CallReinforcements_2:
-LoadReinforcements(Reinforcements_2)
-NoFade
-ENDA
+TriggerReinforcements_2: {
+    ContinueIfFactionMatch(Player)
+        ENUF Reinforcements2_Completion_Flag
+        NoFade
+        ENDA
+}
+
+ALIGN 4
+CallReinforcements_2: {
+    LoadReinforcements(Reinforcements_2)
+    NoFade
+    ENDA
+}
 
 MaxRonniConversation:
 ConvoEvent(Ch4_MaxRonniConversation)
