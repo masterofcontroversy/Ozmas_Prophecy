@@ -8,8 +8,8 @@
 #define DoNotMoveAI [0x0, DoNotMove, 0x4, DefaultAI4]
 #define MoveIn2TurnsAI [0x00, 0x6, 0x4, DefaultAI4]
 
-#define SetLabel(parentLabel) "LABEL (currentOffset - parentLabel)"
-#define LabelDest(parentLabel, destLabel) "(destLabel - parentLabel)"
+#define SetLabel "LABEL (currentOffset - LabelAnchor)"
+#define LabelDest(destLabel) "(destLabel - LabelAnchor)"
 
 //Event every X turns
 #define EveryXTurns(whatTurn) "CHECK_TURNS; SVAL 0xA whatTurn; SMOD 0xAC1;"
@@ -34,11 +34,12 @@
 #define EndMMS "ASMC 0x80790A5" //MU_EndAll //deselect unit
 
 //Because Ally isn't clear enough
-#define Player 0
+#define Player Ally
 #define AutoLevelTrue 1
 #define AutoLevelFalse 0
 
 #define ACTIVEUNIT ActiveUnit
+#define ValueInSlot2 UnitInSlot2
 
 #define CancelEvent "CALL 0x9EE1D4"
 

@@ -5,35 +5,34 @@ ALIGN 4
 #define SnowCounter s7
 
 RandomSnowEvent: {
+    #define LabelAnchor RandomSnowEvent
     COUNTER_CHECK SnowCounter
     SADD s1 sC s0
     RANDOMNUMBER 5   //SnowCounter in 5 chance of changing weather
-    BLT LabelDest(RandomSnowEvent, IncCounter) s1 sC
+    BLT LabelDest(IncCounter) s1 sC
         //Weather check passed, now check if it's already snowing
         ASMC CheckWeather|1
         SVAL s1 Snow
-        BEQ LabelDest(RandomSnowEvent, ClearWeather) s1 sC
+        BEQ LabelDest(ClearWeather) s1 sC
             //It isn't snowing. Make it snow
             WEATHER Snow
             COUNTER_SET SnowCounter 0
-            GOTO LabelDest(RandomSnowEvent, End)
+            GOTO LabelDest(EndEvent)
 
         //It is snowing. Make it clear
-        ClearWeather:
-        SetLabel(RandomSnowEvent)
+        ClearWeather: SetLabel
             WEATHER Clear
             COUNTER_SET SnowCounter 0
-            GOTO LabelDest(RandomSnowEvent, End)
+            GOTO LabelDest(EndEvent)
 
     //Weather check didn't pass. Add 1 to counter to incease the odds next time
-    IncCounter:
-    SetLabel(RandomSnowEvent);
+    IncCounter: SetLabel
         COUNTER_INC SnowCounter
 
-    End:
-    SetLabel(RandomSnowEvent);
+    EndEvent: SetLabel
     NoFade
     ENDA
+    #undef LabelAnchor
 }
 
 //Triggers when Max enters combat with Dominic
@@ -55,15 +54,18 @@ MaxDominicBattleEvent: {
 }
 
 #ifdef __DEBUG__
-    StartChapterJumpEvent:
+    StartChapterJumpEvent: {
+        #define LabelAnchor RandomSnowEvent
         SetBackground(BlackBG)
         SVAL sC 0
         ASMC Jump_StartArbitrary
         FADI 10
 
-        BEQ 0x9000 sC s0
+        BEQ LabelDest(EndEventNormal) sC s0
             ENDB
 
-        LABEL 0x9000
+        EndEventNormal: SetLabel
         ENDA
+        #undef LabelAnchor
+    }
 #endif
