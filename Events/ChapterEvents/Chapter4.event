@@ -51,8 +51,8 @@ CharacterEventBothWays(MaxRonniTalk_Flag, MaxRonniConversation, Max, Ronni)
 END_MAIN
 
 MiscBasedEvents:
-AREA Reinforcements2_Triggered_Flag TriggerReinforcements_2 [7,3] [14,6]
 CauseGameOverIfLordDies
+AREA Reinforcements2_Triggered_Flag TriggerReinforcements_2 [7,3] [14,6]
 END_MAIN
 
 BeginningScene: {
@@ -119,11 +119,11 @@ EndingScene: {
     REMOVEALL_BLUE
     CHECK_FLAG Max_DominicFlag
     BNE LabelDest(MaxKilledDominic) sC s0
+        MUSIC Nightfall_BGM
         SetBackground(CastleInteriorNight2BG)
         Text(Ch4_AfterBattle_A_Part1)
         Text(Ch4_AfterBattle_A_Part2)
         SVAL s8 0x0
-
         GOTO LabelDest(ResumeScene)
 
     MaxKilledDominic: SetLabel
@@ -158,20 +158,20 @@ EndingScene: {
         TEXTEND
         FAWI 3
         FACE_SHOW 0 (-3)
-        FACE_SHOW 1 MaxPortraitID
+        TEXTSHOW Ch4_AfterBattle_MaxPortraitSetup
         BACG CastleInteriorNight2BG
         FAWU 3
-        TEXTSHOW Ch4_AfterBattle_B_Part6
+        TEXTSHOW2 Ch4_AfterBattle_B_Part6
         TEXTEND
         REMA
         SVAL s8 Ch4_Scene6_B
 
     ResumeScene: SetLabel
     FADI 5
+    MUSIC PrideoftheImperial_BGM
     REMOVEPORTRAITS
     BACG CastleInteriorDayBG
     FADU 5
-    MUSIC PrideoftheImperial_BGM
     BROWNBOXTEXT SomeDaysLaterText [8,8]
     Text(Ch4_Scene5)
     SADD s2 s8 s0

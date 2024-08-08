@@ -1534,8 +1534,12 @@ What? [Beat]Father![A]
 Hahahaha![A]
 [X]
 
+## Ch4_AfterBattle_MaxPortraitSetup
+[MidLeft][LoadMax]
+[X]
+
 ## Ch4_AfterBattle_B_Part6
-[MidLeft][CloseEyes]
+[MidLeft]
 [Beat][A]
 
 //Devan

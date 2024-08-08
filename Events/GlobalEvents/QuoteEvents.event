@@ -11,3 +11,9 @@ Text(CharlesBossQuote_BeforeCharge)
 LABEL 0x9001
 NoFade
 ENDA
+
+MaxDominicQuoteEvent:
+MUSIC MarisaSortie_BGM
+Text(Ch4_MaxDominicQuote)
+NoFade
+ENDA

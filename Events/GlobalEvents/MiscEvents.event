@@ -45,10 +45,8 @@ MaxDominicBattleEvent: {
     ASMC ASMC_UpdateUnitsFromEventBattle
     KILL Dominic
     AWAIT_KILL Dominic
-    REMOVEALL_RED
-    SVAL s1 0x42
-    SET_CONDITION Max
     ENUT SeizeID
+    CallEndEvent
     NoFade
     ENDA
 }

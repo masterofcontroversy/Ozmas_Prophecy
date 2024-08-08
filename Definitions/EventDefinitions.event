@@ -32,6 +32,7 @@
 
 //Vanilla ASMCs
 #define EndMMS "ASMC 0x80790A5" //MU_EndAll //deselect unit
+#define CallEndEvent "ASMC 0x8083281" //CallEndEvent
 
 //Because Ally isn't clear enough
 #define Player Ally
