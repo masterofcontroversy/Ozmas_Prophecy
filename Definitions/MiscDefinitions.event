@@ -77,9 +77,9 @@
 #define PrideoftheImperial_BGM  46
 #define KannaArmy_BGM           49
 #define MemoriesofGreen_BGM     50
+#define GoldenrodGameCorner_BGM 51
 #define SortieFormation_BGM     52
 #define Redial_BGM              53
-#define GoldenrodGameCorner_BGM 54
 
 //Background noise IDs
 #define CricketsChirping        74

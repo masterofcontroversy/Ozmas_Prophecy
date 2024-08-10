@@ -108,7 +108,7 @@ SongTable(KannaArmy_BGM,KannaArmy,MapMusicGroup)
 }
 
 {
-SongTable(SortieFormation_BGM,L_Sortie_Formation,MapMusicGroup)
+SongTable(SortieFormation_BGM,L_Sortie_Formation,BattleMusicGroup)
 #include "songs/Sortie_Formation_SaXor.music.event"
 }
 
