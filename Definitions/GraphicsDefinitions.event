@@ -159,8 +159,6 @@ blue * 0x400
 
 
 //Conversation Background Definitions
-#define BackgroundEntryCount 0x77
-
 #define ArmoryBG 0x0
 #define ArmyCamp10DayBG 0x1
 #define ArmyCamp2EveningBG 0x2
@@ -282,6 +280,9 @@ blue * 0x400
 #define Village6NightBG 0x76
 #define Village6WinterDayBG 0x77
 #define DaytimeTavern1BG 0x78
+#define CaveBG 0x79
+
+#define BackgroundEntryCount 0x79
 
 //Battle Backgrounds
 #define TownBBG 0x1

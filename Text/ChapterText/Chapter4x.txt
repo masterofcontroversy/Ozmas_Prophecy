@@ -6,21 +6,68 @@
 
 //Absalom
 [Left]
-Whew.[.5] How much further?[A]
+Man, this sure is some climb[Beat][A]
+
+//Ronni
+[FarLeft]
+Imagine how bad it is for the horses.[.5][NL]
+Hey, Colton, how much further?[A]
 
 //Colton
 [MidRight]
 Won't be long now.[ANL]
-Keep your eyes peeled for[NL]
-the mouth of the cave.[A]
+Keep a lookout for[NL]
+the cave's mouth.[A]
 
 //Absalom
 [Left]
-Masons living in a cave, huh?[ANL]
-Say, how did they end up[NL]
-doing the bandit thing?[ANL]
-Couldn't get enough[NL]
-work as carving rock?[A]
+A cave, huh?[.5] That's where the[NL]
+Masons are keeping the goods?[A]
+
+//Colton
+[MidRight]
+Yeah, if you[NL]
+can call them that.[ANL]
+They don't have anything[NL]
+worth the trouble.[A]
+
+//Ronni
+[FarLeft]
+Then why did you offer[NL]
+to steal it back?[A]
+
+//Colton
+[MidRight]
+I didn't.[.5] Lucy volunteered without[NL]
+asking me and I got wrapped up in it.[A]
+
+//Ronni
+[FarLeft]
+So that's what happened.[.5][NL]
+Makes sense.[ANL]
+I didn't think you'd[NL]
+be nice enough to do that.[A]
+
+//Colton
+[MidRight]
+It's called self-preservation.[ANL]
+No one in their right mind would[NL]
+deal with the Masons for peanuts.[A]
+
+//Ronni
+[FarLeft]
+Lucy did.[A]
+
+//Colton
+[MidRight]
+I said [OpenQuote]in their right mind[CloseQuote].[A]
+
+//Absalom
+[Left]
+Hey, speaking of the Masons,[NL]
+did they become a thing anyway?[ANL]
+Did masonry go out[NL]
+of style here or something?[A]
 
 //Ronni
 [FarLeft]
@@ -71,7 +118,7 @@ chance to see you notice first-hand?[A]
 //Absalom
 [Left]
 At least give me a hint.[ANL]
-Does it have something[NL]
+Does it have anything[NL]
 to do with rocks?[A]
 
 [ToggleSmileFar]
@@ -92,20 +139,26 @@ Grr[Beat][A]
 [MidRight][LoadLucy]
 
 //Lucy
-[Beat]What was that?[A]
+[Beat]Huh!?[.4] What was that?[A]
 
 //Evelyn
 [MidLeft]
-It was just a rabbit.[ANL]
-You don't need[NL]
-to be so on-edge.[ANL]
-We're all keeping[NL]
-an eye out for danger.[A]
+A hare.[A]
 
 //Lucy
 [MidRight]
-Right, right.[.5] I just don't to get[NL]
-run off again like last time.[A]
+Oh. [Beat]! And that?[A]
+
+//Evelyn
+[MidLeft]
+A hawk hunting the hare.[ANL]
+You needn't worry so much.[NL]
+We're all keeping our eyes out.[A]
+
+//Lucy
+[MidRight]
+Right, right.[.5] I just really don't[NL]
+want to get surprised like last time.[A]
 
 //Evelyn
 [MidLeft]
@@ -113,40 +166,44 @@ What did happen last time?[A]
 
 //Lucy
 [MidRight]
-Well, I was doing pretty good.[ANL]
-I found this neat tome on ice magic[NL]
-and ducked behind a pillar.[ANL]
-But then I sneezed right[NL]
-when a Mason was walking by.[A]
+Well, I was doing[NL]
+pretty good at first.[ANL]
+I even found this[NL]
+neat tome on ice magic.[ANL]
+[Beat]But right after I picked[NL]
+it up, someone walked in.[ANL]
+I hid behind a pillar, but[NL]
+right when he walked by, I[Beat][A]
 
 //Evelyn
 [MidLeft]
-I see.[A]
+You[Beat]?[A]
 
 //Lucy
 [MidRight]
-They started chasing[NL]
-me and I ran away.[ANL]
+I sneezed.[.5] Before I knew it,[NL]
+I was running for my life.[ANL]
 That's when I met you guys.[A]
 
 //Evelyn
 [MidLeft]
-Well, I can assure you there[NL]
-won't be any need to run this time.[ANL]
-Just stay close to the rest of[NL]
-the group and you'll be fine.[A]
+Well, Rest assured you won't[NL]
+have to go through that again.[ANL]
+Just make sure you stay near[NL]
+the group so we can assist you.[A]
 
 //Lucy
 [MidRight]
-Thanks.[.5] Beats having another[NL]
-chance to let Colton down again.[A]
+Yeah, that's what Colton told me.[ANL]
+I don't think he trusts[NL]
+me with doing this anymore.[A]
 
 //Evelyn
 [MidLeft]
-He shouldn't have put a girl your[NL]
-age up to such a task to begin with.[ANL]
-If he has you doing anything else[NL]
-of that nature, let me know.[A]
+He shouldn't have entrusted[NL]
+such a task to you to begin with.[ANL]
+If he has you doing anything[NL]
+else of that nature, let me know.[A]
 
 //Lucy
 [MidRight]
@@ -160,69 +217,29 @@ you killed by deserters?[A]
 
 //Lucy
 [MidRight]
-But I asked him to let me.[ANL]
-I wanted to help him[NL]
-back at least a little.[A]
+It's not really his fault.[.5][NL]
+I kinda made him let me.[ANL]
+I'm why he got dragged into the job,[NL]
+so I couldn't let him do it alone.[A]
 
 //Evelyn
 [MidLeft]
-What did he do to earn[NL]
-such loyalty from you?[A]
+How did one as kind as you fall[NL]
+in with a man so devoid of morals?[A]
 
 //Lucy
 [MidRight]
-Oh.[.5] Well[Beat][NL]
-Can you keep a secret?[A]
+He's not all bad.[ANL]
+He helped me out of a[NL]
+tight spot a while ago.[A]
 
 //Evelyn
 [MidLeft]
-That depends on what[NL]
-you're about to tell me.[A]
+And now he's making you repay him.[A]
 
 //Lucy
 [MidRight]
-[Beat]When I was really young,[NL]
-my parents were in a lot of debt.[ANL]
-After a while, they decided they[NL]
-could pay it off by selling me.[A][2NL]
-[Beat]At least, that's what I was told.[A]
-
-//Evelyn
-[MidLeft]
-You poor thing[Beat][A]
-
-//Lucy
-[MidRight]
-I got through it okay.[ANL]
-It was rough at first when I was missing[NL]
-spots while cleaning or dropping things.[ANL][ToggleSmile]
-But then I got better and didn't[NL]
-get in as much trouble anymore.[A]
-
-[ToggleSmileFar]
-
-//Evelyn
-[MidLeft]
-Either way, it's a[NL]
-relief you're here now.[ANL]
-[Beat]Relatively speaking.[A]
-
-[ToggleSmileFar]
-
-//Lucy
-[MidRight]
-Tell me about it.[A]
-
-[ToggleSmileFar]
-
-//Evelyn
-[MidLeft]
-So, how does Colton[NL]
-fit into this?[A]
-
-//Lucy
-[MidRight]
-Oh.[.5] Right.[.5] A few months ago--[A]
+No, no.[.5] He--[A]
 
 //Colton
 [FarFarRight]
@@ -328,17 +345,16 @@ the thing this time, will ya?[A]
 ## Ch4x_AfterBattle
 [Right][LoadColton]
 [FarRight][LoadLucy]
-[Right][LoadEvelyn]
-[FarRight][LoadRonni]
+[Left][LoadEvelyn]
+[FarLeft][LoadRonni]
 [SendToBack]
 
 //Colton
 [Right]
-And that's that.[.5][NL][ToggleSmile]
-We scored a pretty good haul.[A]
+And that's that.[A]
 
 //Lucy
-[FarRight]
+[FarRight][ToggleSmile]
 Whew.[.5] It's finally over[Beat][A]
 
 [ToggleSmileFar]
@@ -383,20 +399,60 @@ you know what?[.5] That's a good idea.[A]
 [Left]
 Do you want any help?[A]
 
+[ToggleSmileFar]
+
 //Ronni
 [FarLeft]
 I'll be fine.[.5] I know how to[NL]
 deal with guys like him.[A]
 [ClearFace]
 
+[ToggleSmile]
+
 //Evelyn
 [Left]
 [Beat]Speaking of Colton, you[NL]
-never got to finish your story.[A]
+did get to how you met him.[A]
 
 //Lucy
 [FarRight]
-Right. Colton robbed the house[NL]
+Right.[.4] Well[Beat] my parents were[NL]
+very poor and in a lot of debt.[ANL]
+They heard a local rich man needed[NL]
+a new maid, so they put me up to it.[ANL]
+They said they'd come back to get me,[NL]
+but that was years ago.[A]
+
+//Evelyn
+[Left]
+You poor thing[Beat][A]
+
+//Lucy
+[FarRight]
+I got through it okay.[.5][NL]
+It was kind of rough at first,[ANL]
+but I didn't get in trouble much[NL]
+after I stopped dropping things.[A]
+
+//Evelyn
+[Left]
+Either way, it's good you're here now.[NL]
+[Beat]Relatively speaking.[A]
+
+//Lucy
+[FarRight][ToggleSmile]
+Tell me about it.[A]
+
+[ToggleSmileFar]
+
+//Evelyn
+[Left]
+So, How does Colton[NL]
+fit into this?[A]
+
+//Lucy
+[FarRight]
+Right.[.5] Colton robbed the house[NL]
 I was in and unlocked my room door.[A]
 
 //Evelyn
@@ -419,9 +475,11 @@ tag along with him ever since.[A]
 [FarRight]
 That's right.[ANL]
 Oh![.5] I should get to work[NL]
-before Colton yells at me.[A][CloseSpeechSlow]
+before Colton yells at me.[A][CloseSpeechSlow][ToggleSmile]
 Later, Miss Evelyn.[A]
 [ClearFace]
+
+[ToggleSmile]
 
 //Evelyn
 [Left]
@@ -468,4 +526,273 @@ over there, so[Beat][A]
 [ToggleSmile]
 There we go.[.5] Lucy will[NL]
 be pleased to see this.[A]
+[X]
+
+## Ch4x_Scene3
+[Left][LoadDevan]
+[FarLeft][LoadAlexandra]
+[Right][LoadColton]
+[FarRight][LoadLucy]
+[SendToBack]
+
+//Colton
+[Right]
+That should be everything.[A]
+
+//Alexandra
+[FarLeft]
+It seems we were correct.[.5][NL]
+There isn't much of value here.[A]
+
+//Devan
+[Left]
+I wouldn't say that.[.5][NL]
+Look at this.[A]
+
+//Alexandra
+[FarLeft]
+Bags of[Beat] grain?[A]
+
+//Devan
+[Left]
+Along with medicine,[NL]
+and furs, among other things.[ANL]
+I thought the Masons[NL]
+would prioritize these.[A]
+
+//Alexandra
+[FarLeft]
+They raided all these[NL]
+towns for grain and furs?[A]
+
+//Colton
+[Right]
+Yeah. Not everyone here gets as[NL]
+much food as you do in Margos.[A]
+
+//Devan
+[Left]
+And with winter's fast approach,[NL]
+these supplies are especially desired.[A]
+
+//Alexandra
+[FarLeft]
+So that's why the people of Glasswater[NL]
+were desperate enough to hire you.[A]
+
+//Lucy
+[FarRight]
+Could you have maybe[NL]
+put that differently[Beat]?[A]
+
+//Devan
+[Left]
+I'll hand these supplies[NL]
+off to be distributed.[ANL]
+Once I'm finished,[NL]
+we'll depart for Tristis.[A]
+[ClearFace]
+
+//Alexandra
+[FarLeft]
+Now, Colton, there's a matter[NL]
+I need to discuss with you.[A]
+
+//Colton
+[Right]
+Uh huh?[A]
+
+//Alexandra
+[FarLeft]
+What is it you from me?[ANL]
+I wish to settle my debt[NL]
+as soon as possible.[A]
+
+//Colton
+[Right]
+Oh, I'll let you know[NL]
+when I'm ready to tell you.[ANL]
+Until then, we'll be tagging along.[A]
+
+//Lucy
+[FarRight]
+We are?[A]
+
+//Colton
+[Right]
+We need to make sure Miss Quirin[NL]
+here holds up her end of the bargain.[A]
+
+//Alexandra
+[FarLeft]
+You speak as though I[NL]
+consent to this arrangement.[A]
+
+//Colton
+[Right]
+I don't know why you wouldn't.[ANL]
+All we need is room, board, and a salary,[NL]
+and we'll work our magic for you.[A]
+
+//Alexandra
+[FarLeft][HalfCloseEyes]
+If anything, I would pay[NL]
+you to stay away from me.[A]
+
+//Colton
+[Right]
+Then you don't want someone who can[NL]
+get anywhere and has ears everywhere?[ANL]
+Sounds like a missed opportunity if[NL]
+you're trying to butter up dear old dad.[A]
+
+//Alexandra
+[FarLeft][OpenEyes]
+What makes you so[NL]
+certain that's my goal?[A]
+
+//Colton
+[Right]
+Why else would you be here?[ANL][ToggleSmile]
+The only thing as well-known as your[NL]
+brother is how much you play catch-up.[A]
+
+[ToggleSmileFar]
+
+//Alexandra
+[FarLeft]
+And I suppose your[NL]
+talents told you this?[A]
+
+[ToggleSmileFar]
+
+//Colton
+[Right]
+Nah.[.5] Just word on[NL]
+the streets of Tolva.[A]
+
+[ToggleSmileFar]
+
+//Alexandra
+[FarLeft][CloseEyes]
+I-I see.[ANL]
+[BeatSmooth][OpenEyes]Fine. I'll allow you to join[NL]
+my ranks under one condition:[ANL]
+You will obey my every order. Fail me once,[NL]
+and you can forget about your favor.[A]
+
+//Colton
+[Right]
+You have yourself a deal[Beat] boss.[.5][NL]
+C'mon, Lucy. Let's get ready to leave.[A]
+
+//Lucy
+[FarRight]
+Right.[A]
+[X]
+
+## Ch4x_Scene4
+[MidRight][LoadColton]
+[MidLeft][LoadLucy]
+
+//Lucy
+You sure weren't kidding when you[NL]
+said we'd be gone for a while.[A]
+
+//Colton
+[MidRight]
+Yup.[.4] If things go to plan,[NL]
+we'll end up in Tolva.[A]
+
+//Lucy
+[MidLeft]
+Hey, Colton?[A]
+
+//Colton
+[MidRight]
+Yeah?[A]
+
+//Lucy
+[MidLeft]
+What favor do you want[NL]
+from Miss Quirin?[A]
+
+//Colton
+[MidRight]
+That's for me to know[NL]
+and you to find out.[A]
+
+//Lucy
+[MidLeft]
+When will I find out?[A]
+
+//Colton
+[MidRight]
+When I make my request.[A]
+
+//Lucy
+[MidLeft]
+[Beat]When will that be?[A]
+
+//Colton
+[MidRight]
+Who knows?[.5] I'm in no rush.[ANL][ToggleSmile]
+It's a nice feeling having[NL]
+that lordling in my debt.[ANL]
+Besides, we might get to see more[NL]
+of the world.[.5] That'll be exciting.[A]
+
+//Lucy
+[MidLeft]
+Oh![.4] You think we might run[NL]
+into someone who'll[Beat] y'know[Beat][A]
+
+[ToggleSmileFar]
+
+//Colton
+[MidRight]
+Maybe.[.4] Don't get[NL]
+your hopes up, though.[ANL]
+A klutz who can fling fireballs[NL]
+is a hard sell for anyone.[A]
+
+//Lucy
+[MidLeft]
+Why do you always[NL]
+have to be so mean?[A]
+
+//Colton
+[MidRight]
+Not so fast.[.5][NL]
+You're clumsy, but we can work on that.[ANL][ToggleSmile]
+Then whoever takes you in won't have to[NL]
+worry about their house burning down.[A]
+
+[ToggleSmileFar]
+
+//Lucy
+[MidLeft]
+You'll help me?[A]
+
+[ToggleSmileFar]
+
+//Colton
+[MidRight]
+Sure.[.4] I got time.[ANL]
+Maybe we can get you better at not[NL]
+getting caught while we're at it.[A]
+
+//Lucy
+[MidLeft]
+You'd probably have to get[NL]
+past Miss Evelyn first.[A]
+
+//Colton
+[MidRight]
+Please.[.5] She can't even[NL]
+handle that musclehead.[A]
+
+//Lucy
+[MidLeft]
+Heehee.[.5] True.[A]
 [X]

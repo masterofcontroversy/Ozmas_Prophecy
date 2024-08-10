@@ -989,6 +989,14 @@ Village6WinterDayPalette:
 #incbin "png/Village6WinterDay.pal"
 
 ALIGN 4
+CaveImage:
+#incbin "png/Cave.lz77"
+
+ALIGN 4
+CavePalette:
+#incbin "png/Cave.pal"
+
+ALIGN 4
 BlackImage:
 #incbin "png/Black.lz77"
 
@@ -1121,6 +1129,7 @@ SetConvoBackground(Village5DayBG,Village5DayImage,BGTSA,Village5DayPalette)
 SetConvoBackground(Village6DayBG,Village6DayImage,BGTSA,Village6DayPalette)
 SetConvoBackground(Village6NightBG,Village6NightImage,BGTSA,Village6NightPalette)
 SetConvoBackground(Village6WinterDayBG,Village6WinterDayImage,BGTSA,Village6WinterDayPalette)
+SetConvoBackground(CaveBG,CaveImage,BGTSA,CavePalette)
 SetConvoBackground(BlackBG,BlackImage,BGTSA,BlackPalette)
 
 }

@@ -212,7 +212,6 @@ EndingScene: {
             CALL SetupLucyColtonScene
             Text(Ch4_ColtonLucyGaidenText_Part1)
             MNC2 Ch4x_ChapterID
-            GOTO LabelDest(EndEvent) //MNC2 Gaiden
 
     ColtonAlive: SetLabel
     //Colton's alive and Lucy is "dead"
@@ -234,6 +233,7 @@ EndingScene: {
         Text(Ch4_LucyGrieves)
 
     EndEvent: SetLabel
+    MNC2 Ch5_ChapterID
     NoFade
     ENDA
     #undef LabelAnchor
