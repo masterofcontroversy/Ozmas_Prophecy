@@ -16,7 +16,7 @@ No, that should do for now.[A]
 Then I'm taking a break.[ANL]
 I think we'll need to break[NL]
 out the coffee for this one.[A]
-[ClearFace]
+[MoveLeft][MoveFarFarLeft][ClearFace]
 
 //Devan
 [MidLeft]
@@ -801,7 +801,7 @@ while the people of Masaint suffer?[A]
 //Devan
 [MidRight]
 [Beat]I'll consider it if, and only if,[NL]
-the conditions are right.[A]
+the conditions are right.[ANL]
 Even with my troops and your elites,[NL]
 we could still be at a disadvantage.[A]
 
@@ -888,7 +888,7 @@ So do you want out or not?[A]
 
 //Max
 [MidLeft]
-[Beat]Fine, take me him.[A]
+[Beat]Fine, take me to him.[A]
 
 //Colton
 [MidRight][ToggleSmile]//Smile ON

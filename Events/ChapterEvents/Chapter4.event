@@ -212,28 +212,31 @@ EndingScene: {
             CALL SetupLucyColtonScene
             Text(Ch4_ColtonLucyGaidenText_Part1)
             MNC2 Ch4x_ChapterID
+            GOTO LabelDest(EndEvent)
 
     ColtonAlive: SetLabel
     //Colton's alive and Lucy is "dead"
     SVAL s1 Lucy
     ASMC ASMC_GetCharDeathChapter
     SVAL s1 Ch4_ChapterID
-    BNE LabelDest(EndEvent) s1 sC
+    BNE LabelDest(GoToChapter5) s1 sC
         //Okay, Lucy is dead dead. Start the text
         CALL SetupLucyColtonScene
         Text(Ch4_ColtonGrieves)
-        GOTO LabelDest(EndEvent)
+        GOTO LabelDest(GoToChapter5)
 
     ColtonDead: SetLabel
     //Colton's dead. Is Lucy alive?
     CHECK_ALIVE Lucy
-    BEQ LabelDest(EndEvent) sC s0
+    BEQ LabelDest(GoToChapter5) sC s0
         //Lucy's alive. Do the event
         CALL SetupLucyColtonScene
         Text(Ch4_LucyGrieves)
 
-    EndEvent: SetLabel
+    GoToChapter5: SetLabel
     MNC2 Ch5_ChapterID
+
+    EndEvent: SetLabel
     NoFade
     ENDA
     #undef LabelAnchor
