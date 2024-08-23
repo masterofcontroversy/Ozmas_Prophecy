@@ -1411,43 +1411,23 @@
 .endm
 
 .macro draw_weapon_range_at, tile_x, tile_y
-  push {r4}
+  draw_textID_at \tile_x, \tile_y, RngID, 7     @Rng
+  mov  r4, r7
+  sub  r4, #0x8
   ldr  r0, =gActiveBattleUnit
   mov  r1, #BattleUnitWeaponBefore
-  ldrh r1, [r0, r1]
-  mov  r4, r1 @r4 = Equipped weapon
+  ldrh r0, [r0, r1] @r4 = Equipped weapon
+  blh  GetItemDisplayRangeString, r1 @r0 = Item range text
+  mov  r5, r0
 
-  cmp  r1, #0x0
-  beq  NoWeapon
-    @Max range
-    blh  GetItemRangeMax
-    draw_number_at \tile_x, \tile_y
+  blh  Text_GetStringTextWidth
+  mov  r1, #0x3F
+  sub  r1, r0
 
-    @Dividing dash
-    ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x-1))
-    mov  r1, #Blue
-    mov  r2, #20
-    blh  DrawSpecialUiChar
-
-    @Min range
-    ldr  r0, =gActiveBattleUnit
-    mov  r1, r4
-    blh  GetItemRangeMin
-    draw_number_at \tile_x-3, \tile_y
-    b    DrawWeaponEnd
-
-  NoWeapon:
-    ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
-    mov  r1, #Blue
-    mov  r2, #20
-    blh  DrawSpecialUiChar
-    
-    ldr  r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x-1))
-    mov  r1, #Blue
-    mov  r2, #20
-    blh  DrawSpecialUiChar
-  
-  DrawWeaponEnd:
-  pop  {r4}
-
+  mov  r0, r4
+  sub  r0, #0x8
+  mov  r2, #Blue
+  mov  r3, r5
+  blh  Text_InsertString, r4
 .endm
+

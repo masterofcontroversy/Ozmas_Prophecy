@@ -18,6 +18,10 @@ bl 	Jumpr3
 .equ GetRangeText, OffsetList + 0x0
 .equ RangeText, OffsetList + 0x4
 
+.global ItemDescRangeDisplay
+.type ItemDescRangeDisplay, %function
+
+ItemDescRangeDisplay:
 @r0 has item id/uses short
 push	{r4-r5,r14}
 mov 	r5, r0

@@ -378,7 +378,6 @@ POP
 	//#incbin "StatScreenRange.dmp"
 	//POIN GetItemRangeM|1 MakeRangeText|1
 	
-	ItemDescRangeDisplay:
 	#include "RangeTextDisplay/Item_R_Button_Range.lyn.event"
 	//#incbin "Item R Button Range.dmp"
 	//POIN RangeTextGetter|1 MakeRangeText|1

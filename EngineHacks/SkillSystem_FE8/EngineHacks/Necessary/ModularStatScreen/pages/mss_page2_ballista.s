@@ -22,7 +22,6 @@ draw_textID_at 24, 13, HitID     @Hit
 draw_textID_at 24, 15, AvoID     @Avo
 draw_textID_at 13, 17, CritID    @Crit
 draw_textID_at 13, 15, ASID      @AS
-draw_textID_at 24, 17, RngID     @Rng
 
 ldr  r0,=ProtectionIDLink
 ldrh r0, [r0]
@@ -35,7 +34,7 @@ draw_textID_at 19, 15, colour=Yellow, xCursor=0     @Resilience
 draw_stats_box showBallista=1
 
 @Range
-draw_weapon_range_at 28, 17
+draw_weapon_range_at 24, 17
 
 draw_items_text showBallista=1
 

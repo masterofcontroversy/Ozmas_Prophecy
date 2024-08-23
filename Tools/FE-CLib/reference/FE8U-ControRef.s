@@ -2527,6 +2527,7 @@ SET_FUNC Loop6C_8A00B20_UpdateOAMData, 0x808948D
 SET_FUNC LoadChapterTitleGfx, 0x8089625
 SET_FUNC LoadDialogueBoxGfx, 0x8089805
 SET_FUNC SetupWeaponHelpText, 0x8089C41
+SET_FUNC DrawHelpBoxWeaponStats, 0x8089cd5
 SET_FUNC SetDialogueBoxConfig, 0x808A519
 SET_FUNC GetDialogueBoxConfig, 0x808A525
 SET_FUNC BoxDialogueInterpreter_Main, 0x808B179

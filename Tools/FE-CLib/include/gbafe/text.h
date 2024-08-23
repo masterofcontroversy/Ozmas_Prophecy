@@ -70,6 +70,7 @@ enum
 
 extern struct FontData gDefaultFontData;
 extern struct FontData* gpCurrentFont;
+extern TextHandle gHelpTextHandles[3];
 
 void Text_InitFont(void); //! FE8U = 0x8003C95
 void Text_InitFontExt(struct FontData* pData, void* pVRAMTileRoot, u16 tileBase, int palIndex); //! FE8U = 0x8003CB9
