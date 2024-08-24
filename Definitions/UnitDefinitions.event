@@ -15,6 +15,7 @@
 #define Charles 0x68
 #define Hendrick 0x46
 #define Dominic 0x48
+#define Mason 0x49
 
 #define Duramontis 0xCD
 #define Cassis 0xC0

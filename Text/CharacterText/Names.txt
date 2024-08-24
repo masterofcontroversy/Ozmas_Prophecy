@@ -48,6 +48,9 @@ Hendrick[X]
 ## DominicName
 Dominic[X]
 
+## MasonName
+Mason[X]
+
 //Factions
 ## EastDuramontisName
 East Army[X]

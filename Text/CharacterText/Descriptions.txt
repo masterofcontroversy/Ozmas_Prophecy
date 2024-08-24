@@ -56,6 +56,10 @@ who wants more out of life.[X]
 An overconfident captain[NL]
 of Margrave Alister.[X]
 
+## MasonDesc
+The former Masaint captain[NL]
+who founded the Stonemasons.[X]
+
 //Factions
 ## EastDuramontisDesc
 Soldiers of East Duramontis[NL]

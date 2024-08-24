@@ -23,6 +23,7 @@ blue * 0x400
 #define LazarusPortraitID   0x33
 #define DominicPortraitID   0x34
 #define PriestPortraitID    0x35
+#define MasonPortraitID     0x36
 
 //Icon Definitions
 #define IronSwordIcon        0x0

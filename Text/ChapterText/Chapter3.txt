@@ -523,7 +523,7 @@ She ran off during the battle.[A]
 
 //Devan
 [Left]
-Shame.[.5] I was curous about that[NL]
+Shame.[.5] I was curious about that[NL]
 theif the Mason mentioned.[A]
 
 [FarFarRight]
