@@ -1,0 +1,37 @@
+As it was explained to me, by AuraWolf
+
+For this, you need to edit correct unit module in SrcModules. Knowing whether StrMag Split is or isn't used is obvious, but if you're not sure if the Stair ASM is, you can check config. For any code examples I use, I'll be editing SaveUnitExpanded.s, which has neither the split or stairs asm. Once you've determined the correct unit module, open that up. We'll start with the edits there.
+
+At the top of the file, you should see a bunch of comments. The first bunch (under "GameSaveUnit") is helpful for understanding the current layout. If there's either something you're fine with replacing or some sort of unused padding, you can just do that. Just keep in mind the offset within unit save data that it has (e.g. if you wanted to replace conBonus, remember that 0x0A). Otherwise, you'll want to edit GameSaveUnit.size in an increment divisible by 4. In my case, I'll be changing the size from 0x2C to 0x30.
+Somewhere in PackGameSaveUnit, we then need to actually transfer the unit data into save data. It should look something like this:
+ldrb r2, [r1, #0x13] @r2 = Unit->curhp
+strb r2, [r0, #0x2C] @GameSaveUnit->curhp = Unit->curhp
+
+Since I freed up 0x2C to 0x2F because of the size increase, I'll be using #0x2C. If you're replacing something, use that I mentioned remembering (e.g. the 0x0A previously used by conBonus). You'll also want to comment out whatever was previously storing this information.
+As for where to put it, I would personally put it after state, which is just before the end, but you could put it with the other stats or something else.
+
+Next, we need to transfer in the other direction in UnpackGameSaveUnit. It should look something like this:
+ldrb r2, [r5, #0x2C] @ r2 = GameSaveUnit->curhp
+strb r2, [r4, #0x13] @  = GameSaveUnit->curhp
+
+Again, I would personally put it after state. If you're replacing something, make sure to comment that out to and to use the same value if it's not the 0x2C.
+
+In this very specific particular case (saving current hp for game units instead of only suspend units), there's one more thing we need to do. We need to comment out this section towards the end of UnpackGameSaveUnit:
+@ Set current hp to max
+
+ldr r3, =GetUnitMaxHp
+
+mov r0, r4 @ GetUnitMaxHp arg r0 = Unit
+
+bl  BXR3
+
+ldr r3, =SetUnitHp
+
+mov r1, r0 @ SetUnitHp arg r1 = Hp
+mov r0, r4 @ SetUnitHp arg r0 = Unit
+
+bl  BXR3
+After all of that, recompile the file. If you changed GameSaveUnit.size, you need to open up ExModularSave.event. Under gGameSaveChunks, you should find a chunk for save game units (ignore the very first chunk, which is just clearing units). There should be a comment explaining why that particular size for the chunk is used (something like // Save 62 blue units (62 * 0x2C = $0AA8) ). Do the math and change the number in the second parameter of the macro. If any other chunks are saved after this, you'll need to adjust the location in the save data (the first parameter of the macro) to account for this new shift. 
+
+That should be it. Existing saves will probably break if you changed GameSaveUnit.size.
+Oh, one last thing. Suspend game units "dealing" with current hp is now redundant with this. I don't think anything should go wrong because of that, but if you wanted to, you could comment out the unpacking/packing for those. There's a version of suspend packing and unpacking for player units and other factions, so you'll need to edit PackPlayerSuspendSaveUnit, UnpackPlayerSuspendSaveUnit, PackOtherSuspendSaveUnit, and UnpackOtherSuspendSaveUnit.

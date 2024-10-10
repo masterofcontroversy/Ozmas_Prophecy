@@ -38,7 +38,7 @@
 #define BATTLE_STATS
 
 //If uncommented, will enable Casual Mode (set by flag 0xB0).
-#define CASUAL_MODE
+//#define CASUAL_MODE
 
 //If uncommented, will enable Contemporary Talk & Support.
 #define CONTEMPORARY_TALK_SUPPORT

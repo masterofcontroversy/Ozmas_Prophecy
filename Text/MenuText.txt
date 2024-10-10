@@ -23,3 +23,27 @@ Clears the current chapter[X]
 ## TradeErrorMessage
 Off-hand equipment cannot[N]
 be transferred mid-battle.[X]
+
+## CasualModeMenuOption
+You have the favor[NL]
+of the Specters.[NL]
+They will bend fate[NL]
+itself to deliver[NL]
+you from peril.
+[X]
+
+## ClassicModeMenuOption
+The Specters won't[NL]
+hear your prayers.[NL]
+When Death calls[NL]
+your name,[NL]
+you will answer.
+[X]
+
+## GrimModeMenuOption
+The Specters have[NL]
+forsaken you.[NL]
+Time will refuse[NL]
+to heal wounds[NL]
+from battle.
+[X]

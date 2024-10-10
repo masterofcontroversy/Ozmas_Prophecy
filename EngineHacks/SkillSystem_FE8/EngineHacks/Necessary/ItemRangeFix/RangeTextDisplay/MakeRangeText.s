@@ -45,7 +45,7 @@ b		End
 DiffMinMax:
 mov		r1,#0x0
 strb	r1,[r0,#0x4]
-mov		r1,#0x7F
+mov		r1,#0x7E
 strb	r1,[r0,#0x1]
 cmp		r4,#0xA
 blt		MinNotDoubleDigits

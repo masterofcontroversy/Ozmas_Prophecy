@@ -1,0 +1,42 @@
+// written by Ysor
+
+#include "Extensions/Hack Installation.txt"
+
+#include "HpBetweenChapterHack.lyn.event"
+
+//Hook 1
+//ChapterEndUnitClear
+PUSH
+ORG 0x31274
+callHack_r3(RegainHpAfterChater)
+SHORT 0x46C0
+PROTECT 0x31274 currentOffset
+POP
+
+//Misc Hook
+//ResetAllPlayerUnits
+PUSH
+ORG 0x854A6
+SHORT 0x46C0 0x46C0
+POP
+
+
+//Configuration|Mode Behavior|
+#define DoNotRegain	0
+#define RegainXHp	1
+#define RegainAllHP 2
+//Configuration|Fixed heal
+#define FixedHp 15
+
+
+EasyBehaviorLink:
+BYTE RegainAllHP
+
+NormalBehaviorLink:
+BYTE RegainXHp
+
+HardBehaviorLink:
+BYTE DoNotRegain
+
+FixedHPAmmountLink:
+BYTE FixedHp

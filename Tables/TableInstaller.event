@@ -75,3 +75,5 @@
 #include "EA/ThiefEscapeCoords.event"
 
 #include "EA/TerrainBonus.event"
+
+#include "EA/RetreatQuotes.event"

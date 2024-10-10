@@ -1,0 +1,5 @@
+#define RetreatQuoteEntry(charID, chapterID, textID) "BYTE charID chapterID textID 0"
+
+ALIGN 4
+RetreatQuoteList:
+WORD 0

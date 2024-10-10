@@ -81,6 +81,9 @@
 
 #include "ASM/StaffReturn/Installer.event"
 
+#include "ASM/CasualMode/CasualModeInstaller.event"
+#include "ASM/HpBetweenChapterHack/Installer.event"
+
 #include "ASM/CameraSpeed/Installer.event"
 #include "ASM/ChangeBattleBGM/Installer.event"
 #include "ASM/ContinueBattleBGM/Installer.event"
