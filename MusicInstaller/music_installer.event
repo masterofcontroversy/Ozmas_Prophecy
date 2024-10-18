@@ -21,12 +21,6 @@
 
 // --------------- SONGS: MUSIC ---------------
 
-// 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
-{
-SongTable(0x1,ctest,0)
-#include "songs/ctest.event"
-}
-
 {
 SongTable(BattleThemeEX_BGM,song09,MapMusicGroup)
 #include "songs/BattleThemeEX_SaXor.music.event"
