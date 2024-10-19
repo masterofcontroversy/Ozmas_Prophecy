@@ -253,7 +253,7 @@ POP
 
 // --------------- VOICE TABLES ---------------
 
-MESSAGE main voice table begins at CURRENTOFFSET
+MESSAGE "main voice table begins at 0x{currentAddress:X8}"
 // if you want to use gba_mus_riper to make a soundfont of your voice table, uncomment the above message and use the offset it gives you
 // NOTE: remember to define -s13379 in the options or else the sampling rate will default to 22050 and drums will sound wrong
 
