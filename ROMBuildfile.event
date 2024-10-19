@@ -9,18 +9,18 @@
 
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
-    MESSAGE Used text space ends at currentOffset
+    MESSAGE "Used text space ends at 0x{currentAddress:X8}"
 
     //CSV tables
     #include "Tables/TableInstaller.event"
-    MESSAGE Used table space ends at currentOffset
+    MESSAGE "Used table space ends at 0x{currentAddress:X8}"
 
     //Item bonuses
     #include "ItemBuffs.event"
 
     //Engine Hacks
     #include "EngineHacks/_MasterHackInstaller.event"
-    MESSAGE Used hax space ends at currentOffset
+    MESSAGE "Used hax space ends at 0x{currentAddress:X8}"
 
     //Events
     #include "Events/_EventInstaller.event" 
@@ -38,8 +38,8 @@
 
     //To prevent any patch weirdness
     FILL 0x10
-
-    MESSAGE Free Space ends at currentOffset Additions size is (currentOffset - FreeSpace)
+    
+    MESSAGE "Free Space ends at 0x{currentAddress:X8} Additions size is 0x{currentOffset-FreeSpace:X8}"
 #else
     ERROR Not building events on FE8 is a pitfall! Try again on a FE8 ROM.
 #endif

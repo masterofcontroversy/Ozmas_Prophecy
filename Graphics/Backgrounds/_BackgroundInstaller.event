@@ -17,8 +17,8 @@ FILL 0xC * BackgroundEntryCount
 
 {
 
-#define OriginalBgBlockStart 0x8D2700
-#define OriginalBgBlockEnd   0x95DD0C
+#define OriginalBgBlockStart 0x88D2700
+#define OriginalBgBlockEnd   0x895DD0C
 
 PUSH
 ORG OriginalBgBlockStart

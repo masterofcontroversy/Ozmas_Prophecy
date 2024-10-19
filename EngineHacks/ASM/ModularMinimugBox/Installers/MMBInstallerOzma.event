@@ -2,7 +2,7 @@
 #ifndef MODULAR_MMB
 	#define MODULAR_MMB
 
-	MESSAGE MMB code begins at CURRENTOFFSET
+	MESSAGE "MMB code begins at 0x{currentAddress:X8}"
 
 /*
 
@@ -804,7 +804,7 @@ ALIGN 4
 
 #include "../MMBCore.event"
 
-MESSAGE MMB code ends at CURRENTOFFSET
+MESSAGE "MMB code ends at 0x{currentAddress:X8}"
 
 #endif // MODULAR_MMB
 
