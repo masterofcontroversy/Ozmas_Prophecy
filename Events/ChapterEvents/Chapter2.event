@@ -1,7 +1,7 @@
 EventPointerTable(0x0A,ThisChapter)
 
-#define VillageID1 0x8
-#define ChurchEventID 0x9
+VillageID1      := 0x8
+ChurchEventID   := 0x9
 
 ThisChapter:
 POIN TurnBasedEvents
@@ -44,7 +44,7 @@ MiscBasedEvents:
 CauseGameOverIfLordDies
 END_MAIN
 
-BeginningScene:
+BeginningScene: {
     WEATHER Snow
     LOAD1 0 EnemyUnits; ENUN
     MUSIC MemoriesofGreen_BGM
@@ -82,9 +82,11 @@ BeginningScene:
     LOAD1 0 PlayerUnits; ENUN
     Text(Ch2_BattleTransition)
     NoFade
-ENDA
+    ENDA
+}
 
-EndingScene:
+EndingScene: {
+    #define LabelAnchor EndingScene
     MUSIC ForbiddenForest_BGM
     SetBackground(ForestOutskirts2WinterDayBG)
     Text(Ch2_AfterBattle)
@@ -92,11 +94,11 @@ EndingScene:
     Text(Ch2_Scene5)
 
     CHECK_ALIVE Kenneth
-    BEQ 0x9000 sC s0
+    BEQ LabelDest(KennethDead) sC s0
         MUSIC EventBattle_BGM
         SetBackground(ForestOutskirts2WinterDayBG)
         Text(Ch2_OptionalScene1)
-    LABEL 0x9000
+    KennethDead: SetLabel
 
     MUSIC Nightfall_BGM
     SetBackground(InsideTent2BG)
@@ -104,30 +106,35 @@ EndingScene:
 
     LOAD1 0 HollyUnit
     MNC2 Ch3_ChapterID
-ENDA
+    ENDA
+    #undef LabelAnchor
+}
 
 Village1Event:
 VillageEventItem(Ch2_Village,Village2WinterDayBG,IronShield)
 
-ChurchEvent:
-MUSI
-SetBackground(InsideHouse4DayBG)
-CHECK_FLAG ChurchEventID
-BNE 0x9000 sC s0
-    Text(Ch2_Church)
-    ENUT ChurchEventID
-    GOTO 0x9001
+ChurchEvent: {
+    #define LabelAnchor ChurchEvent
+    MUSI
+    SetBackground(InsideHouse4DayBG)
+    CHECK_FLAG ChurchEventID
+    BNE LabelDest(AlreadyVisited) sC s0
+        Text(Ch2_Church)
+        ENUT ChurchEventID
+        GOTO LabelDest(EndEvent)
 
-LABEL 0x9000
-Text(Ch2_Church_Part2)
+    AlreadyVisited: SetLabel
+    Text(Ch2_Church_Part2)
 
-LABEL 0x9001
-EndConvo
-MUNO
-NoFade
-ENDA
+    EndEvent: SetLabel
+    EndConvo
+    MUNO
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
 
-HendrickLoadEvent:
+HendrickLoadEvent: {
     CAM1 [19,11]
     CURSOR [19,11]
     STAL 50
@@ -149,7 +156,8 @@ HendrickLoadEvent:
     REMA
 
     NoFade
-ENDA
+    ENDA
+}
 
 PlayerUnits:
 UNIT Devan Count Devan Level(1,Player,False) [0,3] 0x0 0x0 0x1 REDA3R4 [IronLance, SteelLance, Vulnerary] NoAI
@@ -186,7 +194,7 @@ UNIT EastDuramontis Soldier Hendrick Level(2,Enemy,True) [15,1] 0x0 0x0 0x0 0x1 
 UNIT Cassis DracoRider Hendrick Level(2,Enemy,True) [20,4] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
 
 UNIT EastDuramontis Mercenary Hendrick Level(2,Enemy,True) [11,9] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
-UNIT EastDuramontis Archer Hendrick Level(2,Enemy,True) [11,10] 0x0 0x0 0x0 0x1 [IronBow] AttackInRangeAI
+UNIT EastDuramontis Archer Hendrick Level(2,Enemy,True) [11,10] 0x0 0x0 0x0 0x1 [IronBow] DelayedAttackAI
 
 UNIT EastDuramontis Shaman Hendrick Level(2,Enemy,True) [13,9] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
 UNIT EastDuramontis Acolyte Hendrick Level(2,Enemy,True) [17,5] 0x0 0x0 0x0 0x1 [Lightning] GroupOneAI
@@ -209,5 +217,3 @@ CutsceneUnits:
 UNIT Alexandra Lord Devan Level(1,Player,False) [4,4] 0x0 0x0 0x0 0x1 [IronSword, Swiftblade, Vulnerary] NoAI
 UNIT Evelyn FalcoKnight Alexandra Level(10,Player,False) [6,4] 0x0 0x0 0x0 0x1 [IronSword, Heal, Vulnerary] NoAI
 UNIT
-
-#undef VillageID1

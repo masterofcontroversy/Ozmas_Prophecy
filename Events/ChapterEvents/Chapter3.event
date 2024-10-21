@@ -1,10 +1,11 @@
 EventPointerTable(0x0D,ThisChapter)
 
-#define VillageID1 0x8
-#define VillageID2 0x9
-#define VillageID3 0xA
-#define CloverFlag 0xB
-#define HouseFlag  0xC
+VillageID1  := 0x8
+VillageID2  := 0x9
+VillageID3  := 0xA
+CloverFlag  := 0xB
+HouseFlag   := 0xC
+Ch4_CellDoor_TileChange := 0x0
 
 ThisChapter:
 POIN TurnBasedEvents
@@ -55,177 +56,187 @@ CauseGameOverIfLordDies
 DefeatAll(EndingScene)
 END_MAIN
 
-BeginningScene:
-MUSIC Nightfall_BGM
-SetBackground(InsideFortNightBG)
-Text(Ch3_Scene1)
+BeginningScene: {
+    MUSIC Nightfall_BGM
+    SetBackground(InsideFortNightBG)
+    Text(Ch3_Scene1)
 
-MUSIC NuclearFusion_BGM
-SetBackground(MountainsideWinterDayBG)
-Text(Ch3_Scene2_Part1)
+    MUSIC NuclearFusion_BGM
+    SetBackground(MountainsideWinterDayBG)
+    Text(Ch3_Scene2_Part1)
 
-FADI 60
-LOMA Ch3_CutsceneChapterID
-FADU 10
-LOAD1 2 CutsceneUnits1; ENUN
+    FADI 60
+    LOMA Ch3_CutsceneChapterID
+    FADU 10
+    LOAD1 2 CutsceneUnits1; ENUN
 
-Text(Ch3_Scene2_Part2)
-LOAD1 2 LucyCutsceneUnit; ENUN
-MOVE 10 Lucy [5,5]
-STAL 20
-LOAD 2 BanditCutsceneUnit
-MOVE 10 Raider [7,5]
-STAL 30
-MOVE 10 Devan [6,5]
-ENUN
-Text(Ch3_Scene2_Part3)
-MOVE 10 Raider [15,5]
-ENUN
-DISA Raider
+    Text(Ch3_Scene2_Part2)
+    LOAD1 2 LucyCutsceneUnit; ENUN
+    MOVE 10 Lucy [5,5]
+    STAL 20
+    LOAD 2 BanditCutsceneUnit
+    MOVE 10 Raider [7,5]
+    STAL 30
+    MOVE 10 Devan [6,5]
+    ENUN
+    Text(Ch3_Scene2_Part3)
+    MOVE 10 Raider [15,5]
+    ENUN
+    DISA Raider
 
-Text(Ch3_Scene2_Part4)
+    Text(Ch3_Scene2_Part4)
 
-LOAD1 2 EvelynCutsceneUnit; ENUN
-MOVE 15 Evelyn [6,6]; ENUN
-Text(Ch3_Scene2_Part5)
+    LOAD1 2 EvelynCutsceneUnit; ENUN
+    MOVE 15 Evelyn [6,6]; ENUN
+    Text(Ch3_Scene2_Part5)
 
-MOVE 10 Lucy [15,5]
-STAL 15
-MOVE 10 Devan [15,5]
-MOVE 10 Ronni [15,5]
-MOVE 10 Holly [15,5]
-ENUN
-Text(Ch3_Scene2_Part6)
-MOVE 10 Alexandra [15,5]
-STAL 10
-MOVE 10 Absalom [15,5]
-STAL 10
-MOVE 10 Evelyn [15,5]
+    MOVE 10 Lucy [15,5]
+    STAL 15
+    MOVE 10 Devan [15,5]
+    MOVE 10 Ronni [15,5]
+    MOVE 10 Holly [15,5]
+    ENUN
+    Text(Ch3_Scene2_Part6)
+    MOVE 10 Alexandra [15,5]
+    STAL 10
+    MOVE 10 Absalom [15,5]
+    STAL 10
+    MOVE 10 Evelyn [15,5]
 
-FADI 10
-ENUN
-REMOVEALL_BLUE
-LOMA Ch3_ChapterID
-FADU 10
+    FADI 10
+    ENUN
+    REMOVEALL_BLUE
+    LOMA Ch3_ChapterID
+    FADU 10
 
-LOAD1 2 CutsceneUnits2; ENUN
-Text(Ch3_BattleTransition_Part1)
+    LOAD1 2 CutsceneUnits2; ENUN
+    Text(Ch3_BattleTransition_Part1)
 
-LOAD1 2 MasonCutsceneUnit
-MOVE 10 Raider [5,5]
-ENUN
-Text(Ch3_BattleTransition_Part2)
+    LOAD1 2 MasonCutsceneUnit
+    MOVE 10 Raider [5,5]
+    ENUN
+    Text(Ch3_BattleTransition_Part2)
 
-MOVE 10 Raider [7,10]
-ENUN
-DISA Raider
-Text(Ch3_BattleTransition_Part3)
+    MOVE 10 Raider [7,10]
+    ENUN
+    DISA Raider
+    Text(Ch3_BattleTransition_Part3)
 
-FADI 10
-LOAD1 0 LucyUnit
-LOAD1 0 EnemyUnits; ENUN
-PREP
+    FADI 10
+    LOAD1 0 LucyUnit
+    LOAD1 0 EnemyUnits; ENUN
+    PREP
+    ENDA
+}
 
-ENDA
+EndingScene: {
+    #define LabelAnchor EndingScene
+    MUSIC KannaArmy_BGM
+    SetBackground(Village2WinterDayBG)
+    TEXTSTART
 
-EndingScene:
-MUSIC KannaArmy_BGM
-SetBackground(Village2WinterDayBG)
-TEXTSTART
+    CHECK_ALIVE Lucy
+    BEQ LabelDest(LucyInjured) sC s0
+        TEXTSHOW Ch3_AfterBattle_Part1
+        GOTO LabelDest(EndLucyScene)
 
-CHECK_ALIVE Lucy
-BEQ 0x9000 sC s0
-    TEXTSHOW Ch3_AfterBattle_Part1
-    GOTO 0x9001
-LABEL 0x9000
-    TEXTSHOW Ch3_AfterBattle_Part1_Alt
-LABEL 0x9001
-TEXTEND
+    LucyInjured: SetLabel
+        TEXTSHOW Ch3_AfterBattle_Part1_Alt
 
-TEXTSHOW2 Ch3_AfterBattle_Part2
-TEXTEND
-MUSIC NoBGM
-TEXTCONT
-TEXTEND
-MUSIC BirdsChirping
-TEXTCONT
-TEXTEND
-REMA
+    EndLucyScene: SetLabel
+    TEXTEND
 
-MUSIC CryALive_BGM
-FADI 5
-REMOVEPORTRAITS
-BACG BedroomDaytimeBG
-FADU 5
-Text(Ch3_Scene4)
+    TEXTSHOW2 Ch3_AfterBattle_Part2
+    TEXTEND
+    MUSIC NoBGM
+    TEXTCONT
+    TEXTEND
+    MUSIC BirdsChirping
+    TEXTCONT
+    TEXTEND
+    REMA
 
-FADI 5
-MUSIC NoticeofDeath_BGM
-LOMA Ch4_ChapterID
-SVAL s1 SnowPeaksPaletteID
-ASMC ASMC_SetMapPalette
-REMOVEALL_BLUE
-REMOVEALL_RED
-LOAD1 2 CutsceneUnits3
-FADU 5
+    MUSIC CryALive_BGM
+    FADI 5
+    REMOVEPORTRAITS
+    BACG BedroomDaytimeBG
+    FADU 5
+    Text(Ch3_Scene4)
 
-EVBIT_F 9
-MOVE 4 EastDuramontis [3,1];ENUN
-STAL 20
-SOUN 0x00B1
-TILECHANGE 0
-MOVE 4 EastDuramontis [1,1];ENUN
+    FADI 5
+    MUSIC NoticeofDeath_BGM
+    LOMA Ch4_ChapterID
+    SVAL s1 SnowPeaksPaletteID
+    ASMC ASMC_SetMapPalette
+    REMOVEALL_BLUE
+    REMOVEALL_RED
+    LOAD1 2 CutsceneUnits3
+    FADU 5
 
-Text(Ch3_Scene5_Part1)
+    EVBIT_F 9
+    MOVE 4 EastDuramontis [3,1];ENUN
+    STAL 20
+    SOUN 0x00B1
+    TILECHANGE Ch4_CellDoor_TileChange
+    MOVE 4 EastDuramontis [1,1];ENUN
 
-MOVE 4 EastDuramontis [3,1];ENUN
-STAL 20
-SOUN 0x00B1
-TILEREVERT 0
+    Text(Ch3_Scene5_Part1)
 
-EVBIT_T 9
-MOVE 4 EastDuramontis [7,9];ENUN
-TEXTSTART
-TEXTSHOW Ch3_Scene5_Part2
-TEXTEND
-EVBIT_F 9
-MOVE 4 EastDuramontis [16,9]
-TEXTCONT
-TEXTEND
-REMA
-FADI 10
-ENUN
+    MOVE 4 EastDuramontis [3,1];ENUN
+    STAL 20
+    SOUN 0x00B1
+    TILEREVERT Ch4_CellDoor_TileChange
 
-MNC2 Ch4_ChapterID
-ENDA
+    EVBIT_T 9
+    MOVE 4 EastDuramontis [7,9];ENUN
+    TEXTSTART
+    TEXTSHOW Ch3_Scene5_Part2
+    TEXTEND
+    EVBIT_F 9
+    MOVE 4 EastDuramontis [16,9]
+    TEXTCONT
+    TEXTEND
+    REMA
+    FADI 10
+    ENUN
 
-Village1Event:
-VillageEventItem(Ch3_Village1,InsideHouse4DayBG,Mend)
-ENDA
+    MNC2 Ch4_ChapterID
+    ENDA
+    #undef LabelAnchor
+}
 
-Village2Event:
-VillageEventItem(Ch3_Village2,InsideHouse4DayBG,Elixir)
+Village1Event: {
+    VillageEventItem(Ch3_Village1,InsideHouse4DayBG,Mend)
+}
 
-Village3Event:
-VillageEventItem(Ch3_Village3,InsideHouse4DayBG,SteelAxe)
+Village2Event: {
+    VillageEventItem(Ch3_Village2,InsideHouse4DayBG,Elixir)
+}
 
-HouseEvent:
-MUSI
-SetBackground(InsideHouse4DayBG)
-CHECK_FLAG HouseFlag
-BNE 0x9000 sC s0
-    Text(Ch3_House)
-    ENUT HouseFlag
-    GOTO 0x9001
+Village3Event: {
+    VillageEventItem(Ch3_Village3,InsideHouse4DayBG,SteelAxe)
+}
 
-LABEL 0x9000
-Text(Ch3_House_Part2)
+HouseEvent: {
+    #define LabelAnchor HouseEvent
+    MUSI
+    SetBackground(InsideHouse4DayBG)
+    CHECK_FLAG HouseFlag
+    BNE LabelDest(AlreadyVisited) sC s0
+        Text(Ch3_House)
+        ENUT HouseFlag
+        GOTO LabelDest(EndEvent)
 
-LABEL 0x9001
-EndConvo
-MUNO
-NoFade
-ENDA
+    AlreadyVisited: SetLabel
+    Text(Ch3_House_Part2)
+
+    EndEvent: SetLabel
+    EndConvo
+    MUNO
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
 
 PlayerUnits:
 UNIT Devan Count Devan Level(1,Player,0) [4,2] 0x0 0x0 0x0 0x1 [IronLance, SteelLance, Vulnerary] NoAI
@@ -259,9 +270,12 @@ UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [17,9] 0x0 0x0 0x0 0x1 [SteelLance]
 //Main path
 UNIT Stonemason Myrmidon 0x0 Level(3,Enemy,1) [6,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Stonemason Acolyte 0x0 Level(3,Enemy,1) [2,8] 0x0 0x0 0x0 0x1 [Lightning] NoAI
-UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [5,14] 0x0 0x0 0x0 0x1 [IronLance] GroupFourAI
+UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [6,15] 0x0 0x0 0x0 0x1 [IronLance] GroupFourAI
 UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [8,15] 0x0 0x0 0x0 0x1 [SteelBlade] GroupFourAI
-UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [3,15] 0x0 0x0 0x0 0x1 [SteelBow] GroupFourAI
+UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [4,15] 0x0 0x0 0x0 0x1 [SteelBow] GroupFourAI
+UNIT Stonemason IronMage 0x0 Level(3,Enemy,1) [6,12] 0x0 0x0 0x0 0x1 [Thunder] NoAI
+UNIT Stonemason LanceCavalier 0x0 Level(3,Enemy,1) [7,14] 0x0 0x0 0x0 0x1 [SteelLance] DelayedAttackAI
+UNIT Stonemason SwordCavalier 0x0 Level(3,Enemy,1) [5,14] 0x0 0x0 0x0 0x1 [SteelSword] DelayedAttackAI
 
 //Path to south-west house
 UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [3,17] 0x0 0x0 0x0 0x1 [IronBlade] GroupSixAI
@@ -277,7 +291,6 @@ UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [13,13] 0x0 0x0 0x0 0x1 [IronBow] Gr
 UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [15,3] 0x0 0x0 0x0 0x1 [IronLance] [AttackInRange, Pursue, NoRecovery, AIGroupFive]
 UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [16,4] 0x0 0x0 0x0 0x1 [IronBlade] [AttackInRange, Pursue, NoRecovery, AIGroupFive]
 
-UNIT Stonemason IronMage 0x0 Level(3,Enemy,1) [6,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
 //UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [7,13] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 
 //Charging enemies
@@ -351,11 +364,12 @@ LoadReinforcements(Bandits3)
 NoFade
 ENDA
 
-AlexandraCloverEvent:
+AlexandraCloverEvent: {
+    #define LabelAnchor AlexandraCloverEvent
     ContinueIfIDMatch(Alexandra)
     RANDOMNUMBER 14
     SVAL s1 14
-    BNE 0x9001 s1 sC
+    BNE LabelDest(NoClover) s1 sC
         MUSI
         Text(CloverFound1)
         MUNO
@@ -363,14 +377,12 @@ AlexandraCloverEvent:
         MUSI
         Text(CloverFound2)
         MUNO
-        GOTO 0x9000
-    LABEL 0x9001
+        GOTO LabelDest(EndEvent)
+    NoClover: SetLabel
     CancelEvent
 
-LABEL 0x9000
-NoFade
-ENDA
-
-#undef VillageID1
-#undef VillageID2
-#undef VillageID3
+    EndEvent: SetLabel
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}

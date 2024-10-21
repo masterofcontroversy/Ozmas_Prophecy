@@ -54,6 +54,10 @@ MaxDominicBattleEvent: {
 #ifdef __DEBUG__
     StartChapterJumpEvent: {
         #define LabelAnchor RandomSnowEvent
+        SVAL s1 0x0200
+        ASMC ASMC_CheckPlayerHoldingKeys
+        BEQ LabelDest(EndEventNormal) sC s0
+
         SetBackground(BlackBG)
         SVAL sC 0
         ASMC Jump_StartArbitrary

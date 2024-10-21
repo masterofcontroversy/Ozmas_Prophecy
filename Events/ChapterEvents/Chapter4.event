@@ -1,9 +1,10 @@
 EventPointerTable(0x14,ThisChapter)
 
-#define Reinforcements2_Triggered_Flag 0x8
-#define Reinforcements2_Completion_Flag 0x9
-#define MaxRonniTalk_Flag 0xA
-#define MaxDevanTalk_Flag 0xB
+Reinforcements2_Triggered_Flag  := 0x8
+Reinforcements2_Completion_Flag := 0x9
+MaxRonniTalk_Flag               := 0xA
+MaxDevanTalk_Flag               := 0xB
+CellDoor_TileChange             := 0x0
 
 ThisChapter:
 POIN TurnBasedEvents
@@ -80,7 +81,7 @@ BeginningScene: {
     MOVE 7 Colton [3,1];ENUN
     STAL 20
     SOUN 0x00B1
-    TILECHANGE 0
+    TILECHANGE CellDoor_TileChange
 
     //Colton walks into Max's cell door and they talk
     MOVE 7 Colton [1,1];ENUN
@@ -436,7 +437,7 @@ UNIT Max Shaman Devan Level(4,Player,0) [5,1] 0x0 0x0 0x0 0x1 [ShadeTome] NoAI
 UNIT
 
 ColtonUnit:
-UNIT Colton Thief Devan Level(4,Player,0) [6,0] 0x0 0x0 0x0 0x1 [IronSword, Vulnerary] NoAI
+UNIT Colton Thief Devan Level(4,Player,0) [6,0] 0x0 0x0 0x0 0x1 [Shiv, IronSword, Vulnerary] NoAI
 UNIT
 
 LordsUnits:
@@ -521,8 +522,3 @@ ConvoEvent(Ch4_MaxRonniConversation)
 
 MaxDevanConversation:
 ConvoEvent(Ch4_MaxDevanConversation)
-
-#undef Reinforcements2_Triggered_Flag
-#undef Reinforcements2_Completion_Flag
-#undef MaxRonniTalk_Flag
-#undef MaxDevanTalk_Flag

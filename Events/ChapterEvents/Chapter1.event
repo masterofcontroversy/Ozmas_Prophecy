@@ -1,7 +1,7 @@
 EventPointerTable(0x07,ThisChapter)
 
-#define BossChargeFlag 0x7
-#define BossAttackedCompletionFlag 0x8
+BossChargeFlag              := 0x7
+BossAttackedCompletionFlag  := 0x8
 
 ALIGN 4
 ThisChapter:
@@ -27,7 +27,7 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
-TurnEventPlayer(BossChargeFlag, BossCharge, 5)
+TurnEventPlayer(BossChargeFlag, BossCharge, 4)
 END_MAIN
 
 ALIGN 4
@@ -43,17 +43,13 @@ AlwaysEvent(BossAttackedCompletionFlag, BossAttacked, BossQuoteID)
 CauseGameOverIfLordDies
 END_MAIN
 
-BeginningScene:
+BeginningScene: {
     SVAL s1 0
     ASMC ASMC_ChangeMode
     
     //Debug chapter jump
     #ifdef __DEBUG__
-        SVAL s1 0x0200
-        ASMC ASMC_CheckPlayerHoldingKeys
-        BEQ 0x9000 sC s0
-            CALL StartChapterJumpEvent
-        LABEL 0x9000
+        CALL StartChapterJumpEvent
     #endif
 
     SVAL s1 4000
@@ -105,9 +101,10 @@ BeginningScene:
     ENUN
     
     NoFade
-ENDA
+    ENDA
+}
 
-EndingScene:
+EndingScene: {
     MUSIC KannaArmy_BGM
     SetBackground(MountainsideWinterDayBG)
     Text(Ch1_AfterBattle)
@@ -173,7 +170,60 @@ EndingScene:
     Text(Ch1_Scene4)
 
     MNC2 Ch2_ChapterID
-ENDA
+    ENDA
+}
+
+BossAttacked: {
+    #define LabelAnchor BossAttacked
+    CHECK_FLAG BossChargeFlag
+    BNE LabelDest(EndEvent) sC s0
+        //If not set, boss hasn't charged yet
+        SVAL s1 0x1
+        UNSET_CONDITION ActiveUnit
+        EndMMS
+        Text(Ch1_BossAttackedText)
+        TEXTEND
+        REMA
+
+        CALL HighlightAndCharge
+
+    EndEvent: SetLabel
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
+
+BossCharge: {
+    #define LabelAnchor BossCharge
+    CHECK_FLAG BossQuoteID
+    BNE LabelDest(EndEvent) sC s0
+        Text(Ch1_ChargeText)
+        TEXTEND
+        REMA
+
+        CAM1 Charles
+        CALL HighlightAndCharge
+
+    EndEvent: SetLabel
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
+
+HighlightAndCharge: {
+    CURSOR_FLASHING Charles
+    CURSOR_FLASHING [2,14]
+    CURSOR_FLASHING [1,11]
+    STAL 90
+    REMOVE_CURSORS
+
+    SVAL s1 0x0
+    CHAI Charles
+    CHAI [2,14]
+    CHAI [1,11]
+    NoFade
+    ENDA
+}
 
 PlayerUnits:
 UNIT Devan Count Devan Level(1,Player,0) [17,1] 0x0 0x0 0x1 REDA14R3 [IronLance, SteelLance, Vulnerary] NoAI
@@ -235,51 +285,3 @@ CutsceneUnits4:
 UNIT Devan Count Devan Level(1,Player,0) [7,9] 0x0 0x0 0x0 0x1 [0x0] NoAI
 UNIT Ronni BowKnight_F Devan Level(1,Player,0) [6,9] 0x0 0x0 0x0 0x1 [0x0] NoAI
 UNIT
-
-BossAttacked:
-    CHECK_FLAG BossChargeFlag
-    BNE 0x9000 sC s0
-        //If not set, boss hasn't charged yet
-        SVAL s1 0x1
-        UNSET_CONDITION ActiveUnit
-        EndMMS
-        Text(Ch1_BossAttackedText)
-        TEXTEND
-        REMA
-
-        CALL HighlightAndCharge
-
-    LABEL 0x9000
-    NoFade
-ENDA
-
-BossCharge:
-    CHECK_FLAG BossQuoteID
-    BNE 0x9000 sC s0
-        Text(Ch1_ChargeText)
-        TEXTEND
-        REMA
-
-        CAM1 Charles
-        CALL HighlightAndCharge
-
-    LABEL 0x9000
-    NoFade
-ENDA
-
-HighlightAndCharge:
-    CURSOR_FLASHING Charles
-    CURSOR_FLASHING [2,14]
-    CURSOR_FLASHING [1,11]
-    STAL 90
-    REMOVE_CURSORS
-
-    SVAL s1 0x0
-    CHAI Charles
-    CHAI [2,14]
-    CHAI [1,11]
-    NoFade
-ENDA
-
-#undef BossChargeFlag
-#undef BossAttackedCompletionFlag

@@ -1,19 +1,23 @@
 ALIGN 4
-CharlesBossQuoteEvent:
-CHECK_FLAG 0x7
-BEQ 0x9000 sC s0
-    Text(CharlesBossQuote_AfterCharge)
-    GOTO 0x9001
+CharlesBossQuoteEvent: {
+    #define LabelAnchor CharlesBossQuoteEvent
+    CHECK_FLAG 0x7
+    BEQ LabelDest(HasNotCharged) sC s0
+        Text(CharlesBossQuote_AfterCharge)
+        GOTO LabelDest(EndEvent)
 
-LABEL 0x9000
-Text(CharlesBossQuote_BeforeCharge)
+    HasNotCharged: SetLabel
+    Text(CharlesBossQuote_BeforeCharge)
 
-LABEL 0x9001
-NoFade
-ENDA
+    EndEvent: SetLabel
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
 
-MaxDominicQuoteEvent:
-MUSIC MarisaSortie_BGM
-Text(Ch4_MaxDominicQuote)
-NoFade
-ENDA
+MaxDominicQuoteEvent: {
+    MUSIC MarisaSortie_BGM
+    Text(Ch4_MaxDominicQuote)
+    NoFade
+    ENDA
+}
