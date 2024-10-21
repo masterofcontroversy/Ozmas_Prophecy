@@ -50,6 +50,7 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     int unitNum = unit->pCharacterData->number;
     int count = 0, temp = 0;
     buffer->lastUnitChecked = unit->index;
+    buffer->isLocked = FALSE;
 
     //Personal skill
     temp = PersonalSkillTable[unitNum].skillID;
@@ -105,7 +106,9 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     }
 
     //Equipped weapon skill
+    buffer->isLocked = TRUE;
     temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
+    buffer->isLocked = FALSE;
 
     //Check if equipped weapon skill is valid
     if (IsSkillIDValid(temp)) {
@@ -165,22 +168,6 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
     return gAuraSkillBuffer;
 }
 
-//Checks for skills in an in progress buffer
-//Used by the weapon usability calc loop
-bool CheckSkillBuffer(Unit* unit, u8 skillID) {
-    if (skillID == 0)   {return TRUE;}
-    if (skillID == 255) {return FALSE;}
-
-    SkillBuffer* buffer = gAttackerSkillBuffer;
-
-    //lastUnitChecked is already set, so no need for extra checks
-    if (unit->index == gDefenderSkillBuffer->lastUnitChecked) {
-        buffer = gDefenderSkillBuffer;
-    }
-
-    return IsSkillInBuffer(buffer, skillID);
-}
-
 //Checks unit for a given skill.
 //If the unit tested is the same as last time, uses the previous skill buffer
 bool SkillTester(Unit* unit, u8 skillID) {
@@ -197,7 +184,7 @@ bool SkillTester(Unit* unit, u8 skillID) {
         buffer = gDefenderSkillBuffer;
     }
 
-    if (index != buffer->lastUnitChecked) {
+    if (index != buffer->lastUnitChecked && !buffer->isLocked) {
         MakeSkillBuffer(unit, buffer);
     }
 
