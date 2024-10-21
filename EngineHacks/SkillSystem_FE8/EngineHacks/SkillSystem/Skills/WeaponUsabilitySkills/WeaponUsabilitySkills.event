@@ -20,4 +20,9 @@ ALIGN 4
 IronWeaponsList:
 BYTE IronSword IronLance IronAxe IronBow
 BYTE 0 //terminator
+
 ALIGN 4
+gCunningID:
+WORD CunningID
+
+#include "SkillLockedUsability.lyn.event"

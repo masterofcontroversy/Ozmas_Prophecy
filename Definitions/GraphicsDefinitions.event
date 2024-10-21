@@ -40,7 +40,7 @@ blue * 0x400
 #define RapierIcon           0xB
 #define StrikerBladeIcon     0xC
 #define SwiftbladeIcon       0xD
-//#define Free               0xE
+#define ShivIcon             0xE
 //#define Free               0xF
 #define IronLanceIcon        0xDF
 #define SteelLanceIcon       0x11

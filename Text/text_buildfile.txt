@@ -11,6 +11,12 @@ Avo[X]
 # 0x04EC TechText
 Tech[X]
 
+# 0x0506
+Spear[X]
+
+# 0x0562
+Spear mastery level[X]
+
 # 0x0548 TechDesc
 Technique. A higher number[NL]
 improves the unit's hit %.[X]
@@ -142,6 +148,9 @@ a skill when used.[X]
 
 ## ShieldTypeText
 Shield[X]
+
+## KnifeTypeText
+Knife[X]
 
 #include "skilldesc_text.txt"
 

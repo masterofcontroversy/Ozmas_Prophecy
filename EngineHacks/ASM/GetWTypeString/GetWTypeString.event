@@ -16,5 +16,5 @@ WeaponTypeTextIDTable:
 /*07*/ SHORT 0x050C
 /*08*/ SHORT 0x050D
 /*09*/ SHORT ShieldTypeText
-/*0A*/ SHORT 0x050F
+/*0A*/ SHORT KnifeTypeText
 /*0B*/ SHORT 0x0510

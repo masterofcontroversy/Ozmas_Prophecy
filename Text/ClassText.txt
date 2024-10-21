@@ -11,28 +11,28 @@ Lord[X]
 Great Lord[X]
 
 ## SwordCavalierName
-Swd.^{ }Cavalie^{r}[X]
+Sword Knight[X]
 
 ## LanceCavalierName
-^{L}nc.^{ }Cavalier[X]
+Spear Knight[X]
 
 ## AxeCavalierName
-Axe Cavalier[X]
+Axe Knight[X]
 
 ## SwordPaladinName
-Swd.^{ }Paladin[X]
+Forrest Knight[X]
 
 ## LancePaladinName
-Lnc.^{ }Paladin[X]
+Duke Knight[X]
 
 ## AxePaladinName
-Axe Paladin[X]
+Great Knight[X]
 
 ## BowKnightName
-Bow Cavalier[X]
+Bow Knight[X]
 
 ## ArchKnightName
-Bow Paladin[X]
+Arch Knight[X]
 
 ## SoldierName
 Soldier[X]
@@ -209,7 +209,7 @@ miss their mark.[X]
 
 ## ArmorKnightDesc
 Slow, but sturdy soldiers skilled in[NL]
-swords and lances. Weak against magic.[X]
+swords and spears. Weak against magic.[X]
 
 ## GeneralDesc
 Masters of warfare clad in near[NL]

@@ -256,7 +256,7 @@
 #define ManSword         0x13
 #define Rapier           0x14
 #define Swiftblade       0x15
-//#define Free           0x16
+#define Shiv             0x16
 #define IronLance        0x17
 #define SteelLance       0x18
 #define SilverLance      0x19

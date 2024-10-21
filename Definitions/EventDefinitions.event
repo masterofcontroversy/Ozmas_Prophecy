@@ -3,8 +3,9 @@
 #undef  AttackInRangeAI
 
 #define BrigandAttackInRangeAI [AttackInRange, BrigandMove, 0x8, DefaultAI4]
-#define NoAI [0x0, 0x0, 0x8, DefaultAI4]
+#define NoAI [AttackInRange, Pursue, 0x8, DefaultAI4]
 #define AttackInRangeAI [0x0 0x3, 0x8, DefaultAI4]
+#define DelayedAttackAI [AttackInRange, 0x12, 0x8, DefaultAI4]
 #define DoNotMoveAI [0x0, DoNotMove, 0x4, DefaultAI4]
 #define MoveIn2TurnsAI [0x00, 0x6, 0x4, DefaultAI4]
 
@@ -72,6 +73,8 @@
 #define Ch4x_MapID 0x15
 #define Ch4x_TileChangesID 0x16
 #define Ch5_ChapterID 0x5
+#define Ch5_MapID 0x1B
+#define Ch5_TileChangesID 0x1D
 
 //Cutscene chapter definitions
 #define Ch1_OpeningChapterID 0x4D

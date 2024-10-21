@@ -34,7 +34,7 @@ POIN BreakerCheck MageSlayer
 #endif //BIORHYTHM
 
 
-POIN Charm Inspiration Loyalty ApplyFrostbiteBonus
+POIN Charm Inspiration Loyalty ApplyFrostbiteBonus ApplyFlankBonus
 POIN SpurStr SpurMag SpurSpd SpurDef SpurRes Charge
 /*
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes

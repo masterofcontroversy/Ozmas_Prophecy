@@ -47,6 +47,7 @@ Javelin: LordGlenn
 Spear: Orihara Saki
 Brave Lance: Ereshkigal
 Axereaver: 2WB
+Shiv: BatimaTheBat
 Shields: cardcafe
 Vigor Stone: LordGlenn
 

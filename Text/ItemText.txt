@@ -40,29 +40,32 @@ Lancereaver[X]
 ## StrikerBladeName
 Striker Blade[X]
 
-## IronLanceName
-Iron Lance[X]
+## ShivName
+Shiv[X]
 
-## SteelLanceName
-Steel Lance[X]
+## IronSpearName
+Iron Spear[X]
 
-## SilverLanceName
-Silver Lance[X]
+## SteelSpearName
+Steel Spear[X]
 
-## BraveLanceName
-Brave Lance[X]
+## SilverSpearName
+Silver Spear[X]
 
-## KillerLanceName
-Killer Lance[X]
+## BraveSpearName
+Brave Spear[X]
+
+## KillerSpearName
+Killer Spear[X]
 
 ## JavelinName
 Javelin[X]
 
-## SpearName
-Spear[X]
+## PilumName
+Pilum[X]
 
-## GreatlanceName
-Greatlance[X]
+## IronLanceName
+Iron Lance[X]
 
 ## AxereaverName
 Axereaver[X]
@@ -261,6 +264,10 @@ Follow-ups occur before counterattacks.[X]
 ## StrikerBladeDesc
 Enemy always attacks first.[NL]
 +1 strike at the end of round.[X]
+
+## ShivDesc
+Negates Def. +4 atk when ally[NL]
+is on opposite side of opponent.[X]
 
 ## KillerDesc
 Unlocks crit.[X]

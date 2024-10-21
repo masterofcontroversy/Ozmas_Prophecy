@@ -45,8 +45,8 @@ Canto: Use remaining movement[NL]
 after performing any action.[X]
 
 ## SD_Cunning
-Cunning: Can steal items, pick[N]
-locks, and see in darkness.[X]
+Cunning: Can steal items,[N]
+pick locks, and use knives.[X]
 
 ## SD_GreedyGhost
 Greedy Ghost: When Colton steals or[N]

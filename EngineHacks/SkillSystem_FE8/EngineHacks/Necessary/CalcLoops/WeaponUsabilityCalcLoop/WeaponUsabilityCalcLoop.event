@@ -26,7 +26,7 @@ ALIGN 4
 DoesUnitHaveWRank: //because of how it works, this both needs to be in the external calc loop and contain lumina/shadowgift
 #incbin "DoesUnitHaveWRank.dmp"
 POIN ItemTable
-POIN CheckSkillBuffer	//changed to skilltester2 to avoid indirect recursion (endlessly looping routine calls)
+POIN SkillTester	//changed to skilltester2 to avoid indirect recursion (endlessly looping routine calls)
 WORD ShadowgiftID
 WORD LuminaID
 WORD SHADOWGIFT_VIA_STAFF_RANK
@@ -39,5 +39,6 @@ WeaponLockLoop: //r0 = character pointer, r1 = item halfword, r2 = rank; functio
 #endif // ADV_WEAPON_LOCKS
 POIN Amische
 POIN DoesUnitHaveWRank //contains Lumina/Shadowgift
+POIN ShivUsabilityCheck
 WORD 0
 

@@ -340,6 +340,7 @@ EndClassAnimation
 
 ThiefAnimPoint:
 AddClassAnimation(ThiefSword,Sword,0x1)
+AddClassAnimation(ThiefSword,Shiv,0x0)
 AddClassAnimation(ThiefUnarmed,Unarmed,0x1)
 EndClassAnimation
 
