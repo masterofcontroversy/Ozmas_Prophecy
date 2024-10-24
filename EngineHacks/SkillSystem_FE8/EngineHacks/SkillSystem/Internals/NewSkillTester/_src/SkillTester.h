@@ -35,11 +35,6 @@ struct AuraSkillBuffer {
 
 extern struct BWLData gBWLDataArray[];
 
-enum MakeSkillBufferOptions {
-    DO_NOT_CHECK_WEAPON = 0,
-    CHECK_WEAPON        = 1,
-};
-
 extern SkillBuffer gAttackerSkillBuffer[];
 extern SkillBuffer gDefenderSkillBuffer[];
 extern SkillBuffer gGenericSkillBuffer[];
