@@ -123,7 +123,7 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
 
 //Creates an aura skill buffer with skill coordinates relative to a unit
 AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
-    SkillBuffer* buffer = gGenericSkillBuffer;
+    SkillBuffer* buffer = gAttackerSkillBuffer;
     u8 count = 0;
     u8 distance = 0;
     u8* unitsInRange = GetUnitsInRange(unit, 4, 3);
@@ -179,13 +179,8 @@ bool SkillTester(Unit* unit, u8 skillID) {
     //Default to the attacker buffer
     SkillBuffer* buffer = gAttackerSkillBuffer;
 
-    //If unit is the defender, use the defender buffer
-    if (index == gBattleTarget.unit.index && IsBattleReal()) {
-        buffer = gDefenderSkillBuffer;
-    }
-
     if (index != buffer->lastUnitChecked && !buffer->isLocked) {
-        MakeSkillBuffer(unit, buffer);
+        MakeSkillBuffer(unit, gAttackerSkillBuffer);
     }
 
     //Check if matching skill is in buffer
@@ -249,6 +244,7 @@ void InitializePreBattleLoop(Unit* attacker) {
     MakeSkillBuffer(attacker, gAttackerSkillBuffer);
     gDefenderSkillBuffer->lastUnitChecked = 0;
 
+    //Make defender skill buffer for Nihil to reference
     if (IsBattleReal()) {
         MakeSkillBuffer(&gBattleTarget.unit, gDefenderSkillBuffer);
     }
