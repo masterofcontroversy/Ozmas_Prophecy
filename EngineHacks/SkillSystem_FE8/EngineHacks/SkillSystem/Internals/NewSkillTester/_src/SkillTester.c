@@ -102,6 +102,8 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     }
 
     //Equipped weapon skill
+    //Setting isLocked to true so SkillTester won't call this function.
+    //This is to prevent a SkillTester -> MakeSkillBuffer -> GetUnitEquippedWeapon -> CanUnitUseWeapon -> SkillTester loop.
     buffer->isLocked = TRUE;
     temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
     buffer->isLocked = FALSE;
@@ -235,9 +237,9 @@ bool SkillAdder(Unit* unit, int skillID) {
 }
 
 //Prepares for prebattle calc loop
-void InitializePreBattleLoop(Unit* attacker, Unit* opponent) {
-    MakeAuraSkillBuffer(attacker);
-    MakeSkillBuffer(attacker, gAttackerSkillBuffer);
+void InitializePreBattleLoop(Unit* unit, Unit* opponent) {
+    MakeAuraSkillBuffer(unit);
+    MakeSkillBuffer(unit, gAttackerSkillBuffer);
 
     //Make defender skill buffer for Nihil to reference
     if (IsBattleReal()) {
