@@ -3,7 +3,7 @@
 /*Helper functions*/
 static int  absolute(int value)        {return value < 0 ? -value : value;}
 static bool IsSkillIDValid(u8 skillID) {return skillID != 0 && skillID != 255;}
-static bool IsBattleReal()             {return gBattleStats.config & 3;}
+static bool IsBattleReal()             {return gBattleStats.config & (BATTLE_CONFIG_REAL|BATTLE_CONFIG_SIMULATE);}
 u8* GetUnitsInRange(Unit* unit, int allyOption, int range);
 
 //Checks if given unit is on the field
@@ -31,12 +31,8 @@ bool IsSkillInBuffer(SkillBuffer* buffer, u8 skillID) {
 //If it is, the unit's opponent's skill buffer is searched through for nihil
 bool NihilTester(Unit* unit, u8 skillID) {
     //Check if in battle and if the skill in question can be negated
-    if ((gBattleStats.config & 3) && NegatedSkills[skillID]) {
-        SkillBuffer* buffer = gDefenderSkillBuffer;
-
-        //If unit is the defender, check the attacker skill buffer instead
-        if (unit->index == gBattleTarget.unit.index)
-            buffer = gAttackerSkillBuffer;
+    if (IsBattleReal() && NegatedSkills[skillID]) {
+        SkillBuffer* buffer = gOpponentSkillBuffer;
 
         return IsSkillInBuffer(buffer, NihilIDLink);
     }
@@ -239,21 +235,20 @@ bool SkillAdder(Unit* unit, int skillID) {
 }
 
 //Prepares for prebattle calc loop
-void InitializePreBattleLoop(Unit* attacker) {
+void InitializePreBattleLoop(Unit* attacker, Unit* opponent) {
     MakeAuraSkillBuffer(attacker);
     MakeSkillBuffer(attacker, gAttackerSkillBuffer);
-    gDefenderSkillBuffer->lastUnitChecked = 0;
 
     //Make defender skill buffer for Nihil to reference
     if (IsBattleReal()) {
-        MakeSkillBuffer(&gBattleTarget.unit, gDefenderSkillBuffer);
+        MakeSkillBuffer(opponent, gOpponentSkillBuffer);
     }
 }
 
 //Sets skill buffers to refresh next skill test
 void InitSkillBuffers() {
     gAttackerSkillBuffer->lastUnitChecked = 0;
-    gDefenderSkillBuffer->lastUnitChecked = 0;
+    gOpponentSkillBuffer->lastUnitChecked = 0;
 }
 
 //Finds units in a radius and returns a list of matching unit's indexes

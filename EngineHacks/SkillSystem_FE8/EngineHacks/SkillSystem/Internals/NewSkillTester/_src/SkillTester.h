@@ -36,7 +36,7 @@ struct AuraSkillBuffer {
 extern struct BWLData gBWLDataArray[];
 
 extern SkillBuffer gAttackerSkillBuffer[];
-extern SkillBuffer gDefenderSkillBuffer[];
+extern SkillBuffer gOpponentSkillBuffer[];
 extern SkillBuffer gGenericSkillBuffer[];
 extern AuraSkillBuffer gAuraSkillBuffer[];
 extern u8 gTempSkillBuffer[];
