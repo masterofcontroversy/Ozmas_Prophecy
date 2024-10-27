@@ -17,7 +17,8 @@ extern u8 GetEquipmentSkill(Unit* unit);
 
 struct SkillBuffer {
 /*00*/  u8 lastUnitChecked;
-/*01*/  u8 skills[12];
+/*01*/  bool isLocked; //Lets SkillTester know to not call MakeSkillBuffer and only reference what's in the skill buffer
+/*02*/  u8 skills[12];
 };
 
 struct BWLData {
@@ -35,7 +36,7 @@ struct AuraSkillBuffer {
 extern struct BWLData gBWLDataArray[];
 
 extern SkillBuffer gAttackerSkillBuffer[];
-extern SkillBuffer gDefenderSkillBuffer[];
+extern SkillBuffer gOpponentSkillBuffer[];
 extern SkillBuffer gGenericSkillBuffer[];
 extern AuraSkillBuffer gAuraSkillBuffer[];
 extern u8 gTempSkillBuffer[];

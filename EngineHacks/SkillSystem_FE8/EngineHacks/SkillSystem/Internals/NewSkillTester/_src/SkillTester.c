@@ -3,7 +3,7 @@
 /*Helper functions*/
 static int  absolute(int value)        {return value < 0 ? -value : value;}
 static bool IsSkillIDValid(u8 skillID) {return skillID != 0 && skillID != 255;}
-static bool IsBattleReal()             {return gBattleStats.config & 3;}
+static bool IsBattleReal()             {return gBattleStats.config & (BATTLE_CONFIG_REAL|BATTLE_CONFIG_SIMULATE);}
 u8* GetUnitsInRange(Unit* unit, int allyOption, int range);
 
 //Checks if given unit is on the field
@@ -31,12 +31,8 @@ bool IsSkillInBuffer(SkillBuffer* buffer, u8 skillID) {
 //If it is, the unit's opponent's skill buffer is searched through for nihil
 bool NihilTester(Unit* unit, u8 skillID) {
     //Check if in battle and if the skill in question can be negated
-    if ((gBattleStats.config & 3) && NegatedSkills[skillID]) {
-        SkillBuffer* buffer = gDefenderSkillBuffer;
-
-        //If unit is the defender, check the attacker skill buffer instead
-        if (unit->index == gBattleTarget.unit.index)
-            buffer = gAttackerSkillBuffer;
+    if (IsBattleReal() && NegatedSkills[skillID]) {
+        SkillBuffer* buffer = gOpponentSkillBuffer;
 
         return IsSkillInBuffer(buffer, NihilIDLink);
     }
@@ -50,6 +46,7 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     int unitNum = unit->pCharacterData->number;
     int count = 0, temp = 0;
     buffer->lastUnitChecked = unit->index;
+    buffer->isLocked = FALSE;
 
     //Personal skill
     temp = PersonalSkillTable[unitNum].skillID;
@@ -105,7 +102,11 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     }
 
     //Equipped weapon skill
+    //Setting isLocked to true so SkillTester won't call this function.
+    //This is to prevent a SkillTester -> MakeSkillBuffer -> GetUnitEquippedWeapon -> CanUnitUseWeapon -> SkillTester loop.
+    buffer->isLocked = TRUE;
     temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
+    buffer->isLocked = FALSE;
 
     //Check if equipped weapon skill is valid
     if (IsSkillIDValid(temp)) {
@@ -120,7 +121,7 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
 
 //Creates an aura skill buffer with skill coordinates relative to a unit
 AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
-    SkillBuffer* buffer = gGenericSkillBuffer;
+    SkillBuffer* buffer = gAttackerSkillBuffer;
     u8 count = 0;
     u8 distance = 0;
     u8* unitsInRange = GetUnitsInRange(unit, 4, 3);
@@ -165,22 +166,6 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
     return gAuraSkillBuffer;
 }
 
-//Checks for skills in an in progress buffer
-//Used by the weapon usability calc loop
-bool CheckSkillBuffer(Unit* unit, u8 skillID) {
-    if (skillID == 0)   {return TRUE;}
-    if (skillID == 255) {return FALSE;}
-
-    SkillBuffer* buffer = gAttackerSkillBuffer;
-
-    //lastUnitChecked is already set, so no need for extra checks
-    if (unit->index == gDefenderSkillBuffer->lastUnitChecked) {
-        buffer = gDefenderSkillBuffer;
-    }
-
-    return IsSkillInBuffer(buffer, skillID);
-}
-
 //Checks unit for a given skill.
 //If the unit tested is the same as last time, uses the previous skill buffer
 bool SkillTester(Unit* unit, u8 skillID) {
@@ -192,13 +177,8 @@ bool SkillTester(Unit* unit, u8 skillID) {
     //Default to the attacker buffer
     SkillBuffer* buffer = gAttackerSkillBuffer;
 
-    //If unit is the defender, use the defender buffer
-    if (index == gBattleTarget.unit.index && IsBattleReal()) {
-        buffer = gDefenderSkillBuffer;
-    }
-
-    if (index != buffer->lastUnitChecked) {
-        MakeSkillBuffer(unit, buffer);
+    if (index != buffer->lastUnitChecked && !buffer->isLocked) {
+        MakeSkillBuffer(unit, gAttackerSkillBuffer);
     }
 
     //Check if matching skill is in buffer
@@ -257,20 +237,20 @@ bool SkillAdder(Unit* unit, int skillID) {
 }
 
 //Prepares for prebattle calc loop
-void InitializePreBattleLoop(Unit* attacker) {
-    MakeAuraSkillBuffer(attacker);
-    MakeSkillBuffer(attacker, gAttackerSkillBuffer);
-    gDefenderSkillBuffer->lastUnitChecked = 0;
+void InitializePreBattleLoop(Unit* unit, Unit* opponent) {
+    MakeAuraSkillBuffer(unit);
+    MakeSkillBuffer(unit, gAttackerSkillBuffer);
 
+    //Make defender skill buffer for Nihil to reference
     if (IsBattleReal()) {
-        MakeSkillBuffer(&gBattleTarget.unit, gDefenderSkillBuffer);
+        MakeSkillBuffer(opponent, gOpponentSkillBuffer);
     }
 }
 
 //Sets skill buffers to refresh next skill test
 void InitSkillBuffers() {
     gAttackerSkillBuffer->lastUnitChecked = 0;
-    gDefenderSkillBuffer->lastUnitChecked = 0;
+    gOpponentSkillBuffer->lastUnitChecked = 0;
 }
 
 //Finds units in a radius and returns a list of matching unit's indexes
