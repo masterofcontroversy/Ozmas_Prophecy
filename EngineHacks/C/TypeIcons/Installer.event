@@ -67,6 +67,7 @@ SetAidIcon(IronMage, ArmorIcon)
 
 SetAidIcon(FalcoKnight, PegasusIcon)
 SetAidIcon(PegasusKnight, PegasusIcon)
+SetAidIcon(GriffonRider, PegasusIcon)
 
 SetAidIcon(DracoRider, WyvernIcon)
 SetAidIcon(DracoMaster, WyvernIcon)
