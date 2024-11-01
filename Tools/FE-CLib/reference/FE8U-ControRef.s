@@ -21,7 +21,7 @@ SET_FUNC sub_8004B0C, 0x8004B0D
 SET_DATA gAttackerSkillBuffer, 0x02026BC0
 SET_DATA gOpponentSkillBuffer, 0x02026C00
 SET_DATA gGenericSkillBuffer, 0x03003770
-SET_DATA gTempSkillBuffer, 0x02026B90
+SET_DATA gTempSkillBuffer, 0x02026C20
 SET_DATA gAuraSkillBuffer, 0x02027200
 SET_DATA gUnitRangeBuffer, 0x0202764C
 SET_DATA pExtraItemOrSkill, 0x0202BCDE
