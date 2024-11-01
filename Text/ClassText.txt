@@ -130,6 +130,9 @@ Iron Mage[X]
 ## ArcanistName
 Arcanist[X]
 
+## GriffonRiderName
+Griffon Knight[X]
+
 ## CountDesc
 Masters of a ruling house[NL]
 with talent in lancing.[X]
@@ -294,3 +297,6 @@ speed for protective armor.[X]
 ## ArcanistDesc
 Wielders of arcane dark magic who[NL]
 use speed to overcome their opponents.[X]
+
+## GriffonRiderDesc
+GriffonRiderDesc[X]

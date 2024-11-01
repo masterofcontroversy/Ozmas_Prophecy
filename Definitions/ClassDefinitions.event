@@ -33,6 +33,5 @@
 #define AxePaladin_F    0x59
 #define IronMage        0x5B
 #define Arcanist        0x5D
+#define GriffonRider    0x5E
 #define Wagon           0x64
-
-

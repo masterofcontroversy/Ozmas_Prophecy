@@ -324,3 +324,19 @@ TorchStanding:
 ALIGN 4
 TorchMoving:
 #incbin "dmp/TorchMoving.mpsprite"
+
+ALIGN 4
+GriffonRiderStanding:
+#incbin "dmp/GriffonRiderStanding.mpsprite"
+
+ALIGN 4
+GriffonRiderMoving:
+#incbin "dmp/GriffonRiderMoving.mpsprite"
+
+ALIGN 4
+CrateStanding:
+#incbin "dmp/CrateStanding.mpsprite"
+
+ALIGN 4
+CrateMoving:
+#incbin "dmp/CrateMoving.mpsprite"

@@ -104,6 +104,14 @@ ALIGN 4
 ArcanistClassCardPalette:
 #incbin "Arcanist.pal"
 
+ALIGN 4
+GriffonRiderClassCardImage:
+#incbin "GriffonRider.lz77"
+
+ALIGN 4
+GriffonRiderClassCardPalette:
+#incbin "GriffonRider.pal"
+
 setCardEntry(ArmorKnightCC,ArmorKnightClassCardImage,ArmorKnightClassCardPalette)
 setCardEntry(FighterCC,FighterClassCardImage,FighterClassCardPalette)
 setCardEntry(SoldierCC,SoldierClassCardImage,SoldierClassCardPalette)
@@ -117,3 +125,4 @@ setCardEntry(SwordPaladinCC,SwordPaladinClassCardImage,SwordPaladinClassCardPale
 setCardEntry(AxePaladinCC,AxePaladinClassCardImage,AxePaladinClassCardPalette)
 setCardEntry(BowPaladinCC,BowPaladinClassCardImage,BowPaladinClassCardPalette)
 setCardEntry(ArcanistCC,ArcanistClassCardImage,ArcanistClassCardPalette)
+setCardEntry(GriffonRiderCC,GriffonRiderClassCardImage,GriffonRiderClassCardPalette)

@@ -36,16 +36,17 @@
 #define TerrainHealAmount   $80C744
 
 //Vanilla movement tables
-#define FootMovCost      $80b808
-#define ArmorMovCost     $80b88a
-#define CavMovCost       $80ba92
-#define PaladinMovCost   $80bad3
-#define FighterMovCost   $80b8cb
-#define BrigandMovCost   $80b94d
-#define PirateMovCost    $80b98e
-#define BerserkerMovCost $80b90c
-#define MageMovCost      $80ba10
-#define FlierMovCost     $80bb96
+#define FootMovCost      $880b808
+#define ArmorMovCost     $880b88a
+#define CavMovCost       $880ba92
+#define PaladinMovCost   $880bad3
+#define FighterMovCost   $880b8cb
+#define BrigandMovCost   $880b94d
+#define PirateMovCost    $880b98e
+#define BerserkerMovCost $880b90c
+#define MageMovCost      $880ba10
+#define FlierMovCost     $880bb96
+#define FlierSnowMovCost $880C3F7
 
 //Terrain type IDs
 #define TerrainFort     0xA

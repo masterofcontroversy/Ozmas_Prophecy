@@ -26,13 +26,12 @@ Forced Deployment Swapping: AuraWolf
 Faster AI targeting display: Vesly
 Faster Level-ups: Tequila
 Secondary Equipment: Pikmin1211
-Background Image Setup: Deviso
+Background Image Setup: Devisio
 Show Heal Amount: Tequila
 AI Extension: Stan
 Change Battle BGM: 7743
 Extend Weapon Desc Box: Vesly
 Decide on Danger Map: Vesly
-Cannot Trade: Circleseverywhere, Vesly
 
 
 Icons:
@@ -84,6 +83,8 @@ Iron Mage by Flasuban
 Arcanist (Tactician) by Team SALVAGED
 Priests by Flasuban
 Fighter by L95
+Griffons by Devisio
+Crate by Topazlight
 
 Portraits:
 Devan by Levin Claude
@@ -118,6 +119,7 @@ Female Fighter by Pikmin, flasuban, Jj09
 Knight by Team SALVAGED
 Dracoriders by Flasuban
 Arcanist (Tactician) by Team SALVAGED
+Griffon Rider by EldritchAbomination, N426, Jj09
 
 Combat Animations:
 Ephraim Lord Repalette (Count) by Nuramon. Cape edit by Vyland
@@ -186,7 +188,7 @@ Combat Adversity: Kaidras
 FeldschlactIII: Saxor the Nobody
 Snow Battle: SilverKnight
 Maria Sortie: Saxor the Nobody
-Wall of Defense: Deviso
+Wall of Defense: Devisio
 Cry A Live: Random Wizard
 Event Battle: Sme
 Nightfall: Pandan

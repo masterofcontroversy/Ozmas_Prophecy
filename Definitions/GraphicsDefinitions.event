@@ -151,7 +151,7 @@ blue * 0x400
 #define RogueCC              0x94
 #define MageKnightCC         0x95
 #define GreatKnightCC        0x96
-//#define Free               0x97
+#define GriffonRiderCC       0x97
 #define AngelCC              0x98
 #define SwordCavalierCC      0x99
 #define SwordPaladinCC       0x9A

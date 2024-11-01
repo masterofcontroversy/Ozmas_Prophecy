@@ -92,7 +92,7 @@ Acolyte_F,0x81f40f8,0x81f49b8
 Iron Mage,IronMageMoving|IsPointer,NormalAP
 Baron,0x81f55c0,0x81f607c
 Arcanist,ArcanistMoving|IsPointer,NormalAP
-Maelduin,0x81f6c28,0x81f7570
+Maelduin,GriffonRiderMoving,NormalAP
 Mogall,0x81f76c8,0x81f7e28
 Arch Mogall,0x81f7f80,0x81f876c
 Gorgon,0x81f88c4,0x81f90a0
