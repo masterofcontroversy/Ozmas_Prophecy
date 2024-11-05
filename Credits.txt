@@ -32,6 +32,7 @@ AI Extension: Stan
 Change Battle BGM: 7743
 Extend Weapon Desc Box: Vesly
 Decide on Danger Map: Vesly
+CHAI Fix: HyperGammaSpaces
 
 
 Icons:
@@ -55,123 +56,126 @@ All other axes: Lisandra Brave
 
 Bows: Ereshkigal
 
+Knife type icon: Devisio and Card
+
 
 Map Sprites:
-Count by Vyland
-Margrave by Snewping
-Lord by BatimaTheBat. Edit by VelvetKitsune
-Soldiers by FireEmblemier, flasuban
-Deserter by Alusq
-Bow Knight by flasuban
-Male Cavalier by Team SALVAGED
-Female Cavaler by Team SALVAGED, Flasuban
-Male Axe and Sword Paladin by RobertFPY
-Male Lance Paladin by Pikmin1211
-Female Axe and Lance Paladin by L95
-Female Sword Paladin by RobertFPY
-Light Mage by Leo_Link, L95
-Mages by Ash3wl, L95, Dominus_Vobiscum
-Female Acolyte by Teraspark
-Oracle by Seal
-Female DracoRider by Flasuban
-Female DracoKnight by Blood
-Male DracoRider by Flasuban
-Male DracoKnight by ArcaneEli
-Dragoon by Pikmin1211, Unknown
-Armor Knight by Team SALVAGED
-Iron Mage by Flasuban
-Arcanist (Tactician) by Team SALVAGED
-Priests by Flasuban
-Fighter by L95
-Griffons by Devisio
-Crate by Topazlight
+Count: Vyland
+Margrave: Snewping
+Lord: BatimaTheBat. Edit: VelvetKitsune
+Soldiers: FireEmblemier, flasuban
+Deserter: Alusq
+Bow Knight: flasuban
+Male Cavalier: Team SALVAGED
+Female Cavaler: Team SALVAGED, Flasuban
+Male Axe and Sword Paladin: RobertFPY
+Male Lance Paladin: Pikmin1211
+Female Axe and Lance Paladin: L95
+Female Sword Paladin: RobertFPY
+Light Mage: Leo_Link, L95
+Mages: Ash3wl, L95, Dominus_Vobiscum
+Female Acolyte: Teraspark
+Oracle: Seal
+Female DracoRider: Flasuban
+Female DracoKnight: Blood
+Male DracoRider: Flasuban
+Male DracoKnight: ArcaneEli
+Dragoon: Pikmin1211, Unknown
+Armor Knight: Team SALVAGED
+Iron Mage: Flasuban
+Arcanist (Tactician): Team SALVAGED
+Priests: Flasuban
+Fighter: L95
+Griffons: Devisio
+Crate: Topazlight
 
 Portraits:
-Devan by Levin Claude
-Alexandra by Levin Claude
-Evelyn by Struedelmuffin
-Max by claire45
-Kenneth by Bloopy
-Absalom by Struedelmuffin
-Lazarus by RandomWizard
-Caius by Epicer
-Hendrick by LaurentLacroix
-Dominic by MeatOfJustice
-Mason by JiroPaiPai
+Devan: Levin Claude
+Alexandra: Levin Claude
+Evelyn: Struedelmuffin
+Max: claire45
+Kenneth: Bloopy
+Absalom: Struedelmuffin
+Lazarus: RandomWizard
+Caius: Epicer
+Hendrick: LaurentLacroix
+Dominic: MeatOfJustice
+Mason: JiroPaiPai
 
 Spell Animations:
-Sariel by Struedelmuffin
-Shade by Struedelmuffin
+Sariel: Struedelmuffin
+Shade: Struedelmuffin
 
 Class Cards:
-Male Cavaliers by RobertFPY
-Male Sword, Lance, Axe Cavaliers by RobertFPY
-Male Bow Cavalier by RobertFPY, Flasuban
-Female Cavaliers by Flasuban, RobertFPY
-Sword And Axe Paladins by Shtick, Team SALVAGED
-Lance Paladins by Flasuban, RobertFPY
-Male Bow Paladin by Sir_Dadou
-Female Bow Paladin by VelvetKitsune, Sir_Dadou, RobertFPY
-Soldiers by Flasuban
-Deserter by Rasdel
-Male Fighter by Flasuban
-Female Fighter by Pikmin, flasuban, Jj09
-Knight by Team SALVAGED
-Dracoriders by Flasuban
-Arcanist (Tactician) by Team SALVAGED
-Griffon Rider by EldritchAbomination, N426, Jj09
+Male Cavaliers: RobertFPY
+Male Sword, Lance, Axe Cavaliers: RobertFPY
+Male Bow Cavalier: RobertFPY, Flasuban
+Female Cavaliers: Flasuban, RobertFPY
+Sword And Axe Paladins: Shtick, Team SALVAGED
+Lance Paladins: Flasuban, RobertFPY
+Male Bow Paladin: Sir_Dadou
+Female Bow Paladin: VelvetKitsune, Sir_Dadou, RobertFPY
+Soldiers: Flasuban
+Deserter: Rasdel
+Male Fighter: Flasuban
+Female Fighter: Pikmin, flasuban, Jj09
+Knight: Team SALVAGED
+Dracoriders: Flasuban
+Arcanist (Tactician): Team SALVAGED
+Griffon Rider: EldritchAbomination, N426, Jj09
+Crate: Laurent Lacroix
 
 Combat Animations:
-Ephraim Lord Repalette (Count) by Nuramon. Cape edit by Vyland
-Margrave by Nuramon
-Lord base by Teraspark. Reanimation by PlantAcademy, ZoramineFae, Struedelmuffin. Merged by Vyland
-Great Lord by St jack
-Cavalier by Team SALVAGED
-Female Cavalier by Team SALVAGED, Flasuban, Epicer
-Paladin by Team SALVAGED, Obsidian_Daddy
-Female Paladin by Team SALVAGED, HGS, Levin64, RJ_Exists, Obsidian_Daddy
-DracoKnight axe edit by TheBlindArcher
-DracoRiders by eCut, Flasuban
-Female DracoRider by eCut, Flasuban
-Fighter by MK404
-Thieves by Pikmin1211, Maiser6, Skitty, GabrielKnight
+Ephraim Lord Repalette (Count): Nuramon. Cape edit: Vyland
+Margrave: Nuramon
+Lord base: Teraspark. Reanimation by PlantAcademy, ZoramineFae, Struedelmuffin. Merged by Vyland
+Great Lord: St jack
+Cavalier: Team SALVAGED
+Female Cavalier: Team SALVAGED, Flasuban, Epicer
+Paladin: Team SALVAGED, Obsidian_Daddy
+Female Paladin: Team SALVAGED, HGS, Levin64, RJ_Exists, Obsidian_Daddy
+DracoKnight axe edit: TheBlindArcher
+DracoRiders: eCut, Flasuban
+Female DracoRider: eCut, Flasuban
+Fighter: MK404
+Thieves: Pikmin1211, Maiser6, Skitty, GabrielKnight
 Female Fighter MK404, Maiser6, Pikmin1211
-Female Warrior by Temp
-Female Rogue by Pikmin1211, Maiser6, Ukelele, SD9k, Temp, Black Mage, Wan, Sme
-Pegasus Knight Repalette by Flasuban
-Myrmidons by Iscaneus, Leo_Link
-Mercenary by Team SALVAGED
-Female Mercenary by Team SALVAGED, Jey the Count, Pushwall
-Armor Knight by Team SALVAGED
-Swordmaster by TheBlindArcher, Greentea, Kenpuhu
-Female Swordmaster by RedBean, Jj09
-Heroes by Nuramon, Sax-Marine
-Archers by DerTheVaporeon
-Deserter by Alusq
-General by TheBlindArcher, DerTheVaporeon, Nuramon, The_Big_Dededester
-Female Shaman Fix by Shin19
-Snipers by Nuramon
-Soldier by Alusq
-Dragoon by Mercenary Lord, NYZGamer, Pikmin1211, Maiser6
-Female Soldier by Alusq, Maiser6, JeyTheCount
-Acolyte Recolor by Teraspark
-Female Acolyte by Teraspark
-Great Knight by Nuramon
-Pegasus Knight (repal) by Flasuban
-FalcoKnight (improvement) by Flasuban
-Rogue knife by Orihara_Saki
-Mage by GabrielKnight
-Female Mage by Solum
-Sage by Levin64, HyperGammaSpaces
-Female Sage (fix) by Shin19
-MageKnights sword by Aruka, Kenpuhu
-Berserker (improved) by BwdYeti, Shadowofchaos, Red
-Pirate by DerTheVaporeon
-Iron Mage by Nuramon
-Arcanist (Tactician) by Team SALVAGED
+Female Warrior: Temp
+Female Rogue: Pikmin1211, Maiser6, Ukelele, SD9k, Temp, Black Mage, Wan, Sme
+Pegasus Knight Repalette: Flasuban
+Myrmidons: Iscaneus, Leo_Link
+Mercenary: Team SALVAGED
+Female Mercenary: Team SALVAGED, Jey the Count, Pushwall
+Armor Knight: Team SALVAGED
+Swordmaster: TheBlindArcher, Greentea, Kenpuhu
+Female Swordmaster: RedBean, Jj09
+Heroes: Nuramon, Sax-Marine
+Archers: DerTheVaporeon
+Deserter: Alusq
+General: TheBlindArcher, DerTheVaporeon, Nuramon, The_Big_Dededester
+Female Shaman Fix: Shin19
+Snipers: Nuramon
+Soldier: Alusq
+Dragoon: Mercenary Lord, NYZGamer, Pikmin1211, Maiser6
+Female Soldier: Alusq, Maiser6, JeyTheCount
+Acolyte Recolor: Teraspark
+Female Acolyte: Teraspark
+Great Knight: Nuramon
+Pegasus Knight (repal): Flasuban
+FalcoKnight (improvement): Flasuban
+Rogue knife: Orihara_Saki
+Mage: GabrielKnight
+Female Mage: Solum
+Sage: Levin64, HyperGammaSpaces
+Female Sage (fix): Shin19
+MageKnights sword: Aruka, Kenpuhu
+Berserker (improved): BwdYeti, Shadowofchaos, Red
+Pirate: DerTheVaporeon
+Iron Mage: Nuramon
+Arcanist (Tactician): Team SALVAGED
 
 Skill animations:
-Wrath by Struedelmuffin
+Wrath: Struedelmuffin
 Eye For An Eye: Struedelmuffin
 
 Misc. Graphics:
