@@ -1,4 +1,3 @@
-
 .thumb
 .global SpellEngineFix
 .type SpellEngineFix, %function

@@ -5,8 +5,12 @@
 #define setCustomSpell_nodim(index) "PUSH; ORG SpellTable+(index*4); POIN CSAEngine_NoDim|1; POP"
 #define CustomSpellCount 20
 
-ALIGN 4
-#inctext lyn "SpellFix.elf" "SpellFixHook.elf" //Fix dodge to front glitch (thanks Snakey1)
+#include "SpellEngineFix.lyn.event" //Fix dodge to front glitch (thanks Snakey1)
+
+PUSH
+  ORG $4E9C
+  jumpToHack(SpellEngineFix)
+POP
 
 SpellTable:
 #incbin "RepointedSpellTable.dmp"
