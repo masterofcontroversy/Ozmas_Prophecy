@@ -93,7 +93,7 @@ Iron Mage,IronMageMoving|IsPointer,NormalAP
 Baron,0x81f55c0,0x81f607c
 Arcanist,ArcanistMoving|IsPointer,NormalAP
 Maelduin,GriffonRiderMoving,NormalAP
-Mogall,0x81f76c8,0x81f7e28
+Crate,CrateMoving,NormalAP
 Arch Mogall,0x81f7f80,0x81f876c
 Gorgon,0x81f88c4,0x81f90a0
 Gorgon Egg,0x81f91f8,0x81f95f4

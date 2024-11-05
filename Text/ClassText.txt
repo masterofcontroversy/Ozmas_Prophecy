@@ -133,6 +133,9 @@ Arcanist[X]
 ## GriffonRiderName
 Griffon Knight[X]
 
+## CrateName
+Crate[X]
+
 ## CountDesc
 Masters of a ruling house[NL]
 with talent in lancing.[X]
@@ -300,3 +303,7 @@ use speed to overcome their opponents.[X]
 
 ## GriffonRiderDesc
 GriffonRiderDesc[X]
+
+## CrateDesc
+A strong, sturdy box for storage.[NL]
+...Or sitting, if you're lazy.[X]

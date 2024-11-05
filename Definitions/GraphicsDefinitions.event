@@ -157,6 +157,7 @@ blue * 0x400
 #define SwordPaladinCC       0x9A
 #define AxeCavalierCC        0x9B
 #define AxePaladinCC         0x9C
+#define CrateCC              0x9D
 
 
 //Conversation Background Definitions
@@ -368,6 +369,9 @@ blue * 0x400
 #define AbsalomFighterPalette 0x0F
 #define MaxShamanPalette 0x11
 #define ColtonThiefPalette 0x13
+
+//MapSprites
+#define MapMarkerSpriteStandID 0x66
 
 //Animation Definitions (Why do I hate myself?)
 #define UseMap               0x00

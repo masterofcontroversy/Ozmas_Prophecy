@@ -340,3 +340,7 @@ CrateStanding:
 ALIGN 4
 CrateMoving:
 #incbin "dmp/CrateMoving.mpsprite"
+
+ALIGN 4
+MarkerStanding:
+#incbin "dmp/MarkerStanding.mpsprite"
