@@ -29,10 +29,10 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
-TurnEventPlayer(0, CallThief, 4)
-TurnEventPlayer(0, CallReinforcements_1, 4)
+TurnEventPlayer(NoID, CallThief, 4)
+TurnEventPlayer(NoID, CallReinforcements_1, 4)
 TurnEventPlayer(Reinforcements2_Completion_Flag, CallReinforcements_2, 1, 255)
-TurnEventPlayer(0, RandomSnowEvent, 1, 255)
+TurnEventPlayer(NoID, RandomSnowEvent, 1, 255)
 END_MAIN
 
 ALIGN 4
@@ -374,7 +374,7 @@ UNIT EastDuramontis ArmorKnight Dominic Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x1 [
 UNIT EastDuramontis Soldier Dominic Level(4,Enemy,1) [8,9] 0x0 0x0 0x0 0x1 [SteelLance] [AttackInRange, 0x12, NoRecovery, DefaultAI4]
 
 //Center guys
-UNIT EastDuramontis IronMage Dominic Level(4,Enemy,1) [14,8] 0x0 0x0 0x0 0x1 [Fire] GroupOneAI
+UNIT EastDuramontis IronMage Dominic Level(4,Enemy,1) [14,9] 0x0 0x0 0x0 0x1 [Fire] GroupOneAI
 UNIT EastDuramontis Mercenary Dominic Level(4,Enemy,1) [16,10] 0x0 0x0 0x0 0x1 [IronBlade] GroupOneAI
 
 //Before the throne room

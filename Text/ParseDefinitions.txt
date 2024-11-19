@@ -90,6 +90,7 @@
 [LoadCharles] = [LoadFace][0x30][0x1]
 [LoadHendrick] = [LoadFace][0x31][0x1]
 [LoadDominic] = [LoadFace][0x34][0x1]
+[LoadMason] = [LoadFace][0x36][0x1]
 [LoadAlister] = [LoadPlaceholder]
 
 [LoadVillageMan1] = [LoadFace][0x58][0x1]

@@ -18,6 +18,7 @@
 #define SFXGroup 7
 
 #define voicegroup000 MusicVoices //in case you forget to change this
+#define VanillaVoiceGroup 0x8211BEC
 
 // --------------- SONGS: MUSIC ---------------
 
@@ -29,6 +30,11 @@ SongTable(BattleThemeEX_BGM,song09,MapMusicGroup)
 {
 SongTable(CombatAdversity_BGM,song03DA,MapMusicGroup)
 #include "songs/CombatAdversity_Kaidras.music.event"
+}
+
+{
+SongTable(KnightsOfWind_BGM,KnightsOfWind_Devvy,MapMusicGroup)
+#include "songs/KnightsOfWind_Devvy.music.event"
 }
 
 {
@@ -117,8 +123,8 @@ SongTable(NuclearFusion_BGM,NuclearFusion_DrGreen3339,MapMusicGroup)
 }
 
 {
-SongTable(GoldenrodGameCorner_BGM,GameCorner,MapMusicGroup)
-#include "songs/GoldenrodGameCorner_Sme.music.event"
+SongTable(TherionTheThief_BGM,song3D,MapMusicGroup)
+#include "songs/TherionTheThief_Devvy.music.event"
 }
 
 {
@@ -148,6 +154,10 @@ SongTable(0x5c,weaponbrokep22,7)
 #include "songs/gui/weaponbrokep22.music.event"
 }
 
+{
+SongTable(0xC7,songC7,8)
+#include "songs/songC7.music.event"
+}
 
 // --------------- TECHNICAL STUFF ---------------
 

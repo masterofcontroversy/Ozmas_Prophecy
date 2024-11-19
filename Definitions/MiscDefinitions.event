@@ -65,6 +65,7 @@
 #define WallofDefense_BGM       11
 #define FeldschlactIII_BGM      12
 #define CombatAdversity_BGM     13
+#define KnightsOfWind_BGM       14
 #define BGM16_BGM               27
 #define MarisaSortie_BGM        28
 #define NuclearFusion_BGM       37
@@ -78,7 +79,7 @@
 #define PrideoftheImperial_BGM  46
 #define KannaArmy_BGM           49
 #define MemoriesofGreen_BGM     50
-#define GoldenrodGameCorner_BGM 51
+#define TherionTheThief_BGM     51
 #define SortieFormation_BGM     52
 #define Redial_BGM              53
 

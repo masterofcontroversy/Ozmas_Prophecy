@@ -33,8 +33,8 @@ worth the trouble.[A]
 
 //Ronni
 [FarLeft]
-Then why did you offer[NL]
-to steal it back?[A]
+Then why did you say[NL]
+you'd steal it back?[A]
 
 //Colton
 [MidRight]
@@ -43,24 +43,35 @@ asking me and I got wrapped up in it.[A]
 
 //Ronni
 [FarLeft]
-So that's what happened.[.5][NL]
-Makes sense.[ANL]
-I didn't think you'd[NL]
-be nice enough to do that.[A]
+That explains it.[.5] I didn't think[NL]
+you'd be nice enough to offer.[A]
 
 //Colton
 [MidRight]
-It's called self-preservation.[ANL]
+With what they could[NL]
+pay me, not a chance.[ANL]
 No one in their right mind would[NL]
-deal with the Masons for peanuts.[A]
+cross the Masons for peanuts.[A]
 
 //Ronni
 [FarLeft]
-Lucy did.[A]
+But you did.[A]
 
 //Colton
 [MidRight]
-I said [OpenQuote]in their right mind[CloseQuote].[A]
+Because Lucy got everyone excited[NL]
+enough to start a mob if I refused.[A]
+
+//Ronni
+[FarLeft][ToggleSmile]
+I guess she really[NL]
+has a way with words.[A]
+
+[ToggleSmileFar]
+
+//Colton
+[MidRight]
+Unfortunately for me[Beat][A]
 
 //Absalom
 [Left]
@@ -256,10 +267,10 @@ Oop![A]
 Later, then[Beat][A]
 [X]
 
-## Ch4x_BeforeBattle
+## Ch4x_BeforeBattle_Part1
 [Right][LoadColton]
 [FarRight][LoadLucy]
-[MidLeft][LoadAbsalom]
+[MidLeft][LoadMax]
 [SendToBack]
 
 //Colton
@@ -271,27 +282,39 @@ Here we are.[A]
 Uh[Beat] Colton?[ANL]
 They're looking right at us.[NL]
 Did they see us coming?[A]
+[X]
+
+## Ch4x_BeforeBattle_Part2
+[MidRight][LoadMason]
+There they are![NL]
+Keep them away from the goods![A]
+[X]
+
+## Ch4x_BeforeBattle_Part3
+[Right][LoadColton]
+[FarRight][LoadLucy]
+[MidLeft][LoadMax]
+[SendToBack]
 
 //Colton
 [Right]
-Of course they did.[ANL]
-Our chatterboxes made sure of that.[A]
+[Beat]Maybe.[A]
 
-//Absalom
+//Max
 [MidLeft]
-Didn't you just[NL]
-yell two minutes ago?[A]
+I had hoped that we[NL]
+might find him here.[A]
 
 //Colton
 [Right]
-To tell you to shut up![ANL]
-Anyway, without the element of surprise,[NL]
-we'll need to fight our way through.[A]
+And I was hoping we wouldn't.[ANL]
+Anyway, it looks like we have[NL]
+to fight our way through.[A]
 
-//Absalom
+//Max
 [MidLeft]
-Lemme guess.[.5] We'll do all the fighting[NL]
-while you slink off to the treasure.[A]
+And by that, you mean we'll fight while[NL]
+you help yourself to the valuables.[A]
 
 //Colton
 [Right][ToggleSmile]
@@ -312,9 +335,7 @@ Huh? A key?[A]
 //Colton
 [MidLeft]
 It should open those chests.[.5][NL]
-It's my last one, so don't lose it.[ANL]
-Actually, on second thought,[NL]
-you should give it to someone else.[A]
+It's my last one, so don't lose it.[A]
 
 //Lucy
 [MidRight]
@@ -342,7 +363,146 @@ the thing this time, will ya?[A]
 [Beat][A]
 [X]
 
-## Ch4x_AfterBattle
+## Ch4x_AfterBattle1_MasonDead
+[MidRight][LoadDevan]
+[MidLeft][LoadMax]
+
+//Max
+[Beat]We've done it.[ANL]
+With Mason dead,[NL]
+his band won't last long.[ANL]
+Perhaps now Masaint[NL]
+can see a little peace.[A]
+
+//Devan
+[MidRight]
+At least until the[NL]
+next bandit gang forms.[A]
+
+//Max
+[MidLeft]
+I would have preferred to not[NL]
+think about it now, but yes.[ANL]
+Given the time of year, it won't be[NL]
+long before scarcity begets theft.[A]
+
+//Devan
+[MidRight]
+Well, winter does bring[NL]
+out the worst in us.[A]
+
+//Max
+[MidLeft]
+As does any form of adversity.[ANL]
+What's important is we don't let it[NL]
+compromise our values, as Mason did.[A]
+
+//Devan
+[MidRight]
+And if such rigidity[NL]
+leads to repeated loss?[A]
+
+//Max
+[MidLeft]
+Sometimes sacrifices must be made.[A]
+
+//Devan
+[MidRight]
+[Beat]Where do you draw the line?[A]
+
+//Max
+[MidLeft]
+[Beat]I[Beat]I don't know.[ANL]
+Everyone has their own answer,[NL]
+and I'm unsure of my own.[A][CloseSpeechSlow]
+In any case, we sat around long enough.[.5][NL]
+There's work to do.[.4] Come along.[A]
+[ClearFace]
+
+//Devan
+[MidRight]
+[Beat][A]
+[X]
+
+## Ch4x_AfterBattle1_MasonAlive
+//Devan
+[MidRight][LoadDevan]
+Over here![A]
+
+//Max
+[MidLeft][LoadMax]
+Where did he go?[A]
+
+//Devan
+[MidRight]
+Deeper into the caves.[A]
+
+//Max
+[MidLeft]
+Then what are we waiting for?[.5][NL]
+We must pursue him![A]
+
+//Devan
+[MidRight]
+If he ran this way,[NL]
+he must have an exit in mind.[ANL]
+With his familiarity of these caves,[NL]
+there's no way we could catch him.[A]
+
+//Max
+[MidLeft]
+[Beat][CloseEyes]Then I let him slip[NL]
+through my grasp yet again.[A]
+
+//Devan
+[MidRight]
+I'm sorry, Max.[A]
+
+//Max
+[MidLeft][OpenEyes]
+Well, I suppose it isn't all bad.[ANL]
+After stripping Mason of his supplies,[NL]
+The Lady in White might finish him for us.[A]
+
+//Devan
+[MidRight]
+She truly does bring out the[NL]
+worst in us, doesn't she?[A]
+
+//Max
+[MidLeft]
+As does any form of adversity.[ANL]
+What's important is we don't let it[NL]
+compromise our values, as Mason does.[A]
+
+//Devan
+[MidRight]
+And if such rigidity[NL]
+leads to repeated loss?[A]
+
+//Max
+[MidLeft]
+Sometimes sacrifices must be made.[A]
+
+//Devan
+[MidRight]
+[Beat]Where do you draw the line?[A]
+
+//Max
+[MidLeft]
+[Beat]I[Beat]I don't know.[ANL]
+Everyone has their own answer,[NL]
+and I'm unsure of my own.[A][CloseSpeechSlow]
+In any case, we sat around long enough.[.5][NL]
+There's work to do.[.4] Come along.[A]
+[ClearFace]
+
+//Devan
+[MidRight]
+[Beat][A]
+[X]
+
+## Ch4x_AfterBattle2
 [Right][LoadColton]
 [FarRight][LoadLucy]
 [Left][LoadEvelyn]
@@ -412,7 +572,7 @@ deal with guys like him.[A]
 //Evelyn
 [Left]
 [Beat]Speaking of Colton, you[NL]
-did get to how you met him.[A]
+never got to explain how you two met.[A]
 
 //Lucy
 [FarRight]
@@ -485,47 +645,6 @@ Later, Miss Evelyn.[A]
 [Left]
 So he at least has[NL]
 something resembling a heart.[A]
-[X]
-
-## Ch4x_LucyKeyFound_Part1
-[MidRight][LoadLucy]
-Wait a second.[.5][NL]
-This is that pillar[Beat][A]
-[X]
-
-## Ch4x_LucyKeyFound_Part2
-[MidRight][LoadLucy]
-[ToggleSmile]
-Ah hah![.5] My skeleton key![ANL]
-I can't wait to see the look[NL]
-on Colton's face when he sees this.[A]
-[X]
-
-## Ch4x_ColtonKeyFound_Part1
-[MidRight][LoadColton]
-Hold on.[.5] What's this?[A]
-[X]
-
-## Ch4x_ColtonKeyFound_Part2
-[MidRight][LoadColton]
-[ToggleSmile]
-Well, well, well.[NL]
-I think I'll hold on to this.[A]
-[X]
-
-## Ch4x_EvelynKeyFound_Part1
-[MidRight][LoadEvelyn]
-She said she had just[NL]
-picked up an ice tome.[ANL]
-The tome was found[NL]
-over there, so[Beat][A]
-[X]
-
-## Ch4x_EvelynKeyFound_Part2
-[MidRight][LoadEvelyn]
-[ToggleSmile]
-There we go.[.5] Lucy will[NL]
-be pleased to see this.[A]
 [X]
 
 ## Ch4x_Scene3
@@ -795,4 +914,209 @@ handle that musclehead.[A]
 //Lucy
 [MidLeft]
 Heehee.[.5] True.[A]
+[X]
+
+## Ch4x_LucyKeyFound_Part1
+[MidRight][LoadLucy]
+Wait a second.[.5][NL]
+This is that pillar[Beat][A]
+[X]
+
+## Ch4x_LucyKeyFound_Part2
+[MidRight][LoadLucy]
+[ToggleSmile]
+Ah hah![.5] My skeleton key![ANL]
+I can't wait to see the look[NL]
+on Colton's face when he sees this.[A]
+[X]
+
+## Ch4x_ColtonKeyFound_Part1
+[MidRight][LoadColton]
+Hold on.[.5] What's this?[A]
+[X]
+
+## Ch4x_ColtonKeyFound_Part2
+[MidRight][LoadColton]
+[ToggleSmile]
+Well, well, well.[NL]
+I think I'll hold on to this.[A]
+[X]
+
+## Ch4x_EvelynKeyFound_Part1
+[MidRight][LoadEvelyn]
+She said she had just[NL]
+picked up an ice tome.[ANL]
+The tome was found[NL]
+over there, so[Beat][A]
+[X]
+
+## Ch4x_EvelynKeyFound_Part2
+[MidRight][LoadEvelyn]
+[ToggleSmile]
+There we go.[.5] Lucy will[NL]
+be pleased to see this.[A]
+[X]
+
+## Ch4x_MasonBattleQuote
+[MidLeft][LoadMason]
+Not another step![ANL]
+We spent a year gathering[NL]
+these supplies for winter.[ANL]
+If you think you can take them,[NL]
+you better think again![A]
+[X]
+
+## Ch4x_MasonDeathQuote
+[MidLeft][LoadMason]
+Augh! Damn you[Beat] Varley[BeatSmooth][A]
+[SlowCloseEyes][X]
+
+## Ch4x_MaxMasonQuote
+//Max
+[MidRight][LoadMax]
+Mason.[A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+Count Varley.[ANL]
+I guess I was being wishful,[NL]
+assuming you'd never find us.[A]
+[ClearFace]
+
+//Max
+[MidRight][LoadMax]
+You knew it was inevitable the[NL]
+moment you broke your oath.[A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+Maybe I wouldn't have if[NL]
+you weren't so stubborn.[A]
+[ClearFace]
+
+//Max
+[MidRight][LoadMax]
+Don't you dare turn[NL]
+this on me, Mason.[ANL]
+You're the one who[NL]
+stole those supplies.[A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+Would you rather[NL]
+we all starved?[A]
+[ClearFace]
+
+//Max
+[MidRight][LoadMax]
+[Beat]I see little point in rehashing[NL]
+this discussion, Mason.[ANL]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+For once, I agree.[A]
+[X]
+
+## Ch4x_AbsalomMasonQuote
+//Absalom
+[MidRight][LoadAbsalom]
+Bigger axe than the others.[.5][NL]
+You must be the boss. Hmm[Beat][A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+What are you staring at?[A]
+[ClearFace]
+
+//Absalom
+[MidRight][LoadAbsalom]
+Just trying to figure out[NL]
+what's masonish about you.[A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+[Beat]Do you normally ask this[NL]
+about people's names, knave?[A]
+
+//Absalom
+[MidRight][LoadAbsalom]
+Wait, your name is Mason?[ANL][ToggleSmile]
+And you named your[NL]
+gang the Stonemasons?[ANL][CloseEyes]
+Ahahahah.[.4][OpenEyes] Man, no[NL]
+wonder you're an outlaw.[A]
+Being that bad at[NL]
+names has to be illegal.[A]
+[ClearFace]
+[ToggleSmile]
+
+//Mason
+[MidLeft][LoadMason]
+You walk into my cave and[NL]
+start mocking my name!?[A]
+[ClearFace]
+
+//Absalom
+[ToggleSmile]
+[MidRight][LoadAbsalom]
+I mean, come on.[.4] I can't not.[.5][NL]
+It's way too easy.[A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+Fine.[.5] I'll just[NL]
+shut you up myself.[A]
+[X]
+
+## Ch4x_ColtonMasonQuote
+//Mason
+[MidLeft][LoadMason]
+You![.4] You brought[NL]
+the army here![A]
+[ClearFace]
+
+//Colton
+[MidRight][LoadColton][ToggleSmile]
+Guilty as charged.[.5][NL]
+Brought the count here, too.[A]
+[ClearFace]
+
+[ToggleSmile]
+
+//Mason
+[MidLeft][LoadMason]
+Why you--[ANL]
+You know what?[.5]
+You got me.[.4] Well done.[ANL]
+However, I won't let[NL]
+you get away again.[A]
+[ClearFace]
+
+//Colton
+[MidRight][LoadColton][ToggleSmile]
+Take your best shot.[A]
+[X]
+
+## Ch4x_LucyMasonQuote
+//Mason
+[MidLeft][LoadMason]
+Well if it isn't the little[NL]
+rat from the other day.[A]
+[ClearFace]
+
+//Lucy
+[MidRight][LoadLucy]
+Eep![A]
+[ClearFace]
+
+//Mason
+[MidLeft][LoadMason]
+No escape for you this time![A]
 [X]

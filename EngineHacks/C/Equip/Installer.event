@@ -24,7 +24,7 @@ OffenseEquipmentList:
 BYTE 0x00 // terminator
 
 EquipmentRTextList:
-BYTE IronShield SteelShield SilverShield Whetstone MagicShield
+BYTE IronShield SteelShield SilverShield MagicShield
 BYTE 0x00 // terminator
 
 // Equipment in neither list doesn't decrement durability

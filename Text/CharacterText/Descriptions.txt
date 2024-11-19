@@ -54,7 +54,7 @@ who wants more out of life.[X]
 
 ## DominicDesc
 An overconfident captain[NL]
-of Margrave Alister.[X]
+serving Margrave Alister.[X]
 
 ## MasonDesc
 The former Masaint captain[NL]

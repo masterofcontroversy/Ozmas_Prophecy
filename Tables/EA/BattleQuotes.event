@@ -14,5 +14,10 @@ BattleQuoteEntryBothWays(Hendrick, Alexandra, Ch2_ChapterID, 0xA, Ch2_HendrickAl
 BattleQuoteEntryBothWays(Hendrick, 0x0, Ch2_ChapterID, BossQuoteID, Ch2_HendrickQuote, 0x0)
 BattleQuoteEntryBothWays(Max, Dominic, Ch4_ChapterID, Max_DominicFlag, 0x0000, MaxDominicQuoteEvent)
 BattleQuoteEntryBothWays(Dominic, 0x0, Ch4_ChapterID, BossQuoteID, DominicBattleQuote, 0x0)
+BattleQuoteEntryBothWays(Mason, Max, Ch4x_ChapterID, 0xA, Ch4x_MaxMasonQuote, 0x0)
+BattleQuoteEntryBothWays(Mason, Absalom, Ch4x_ChapterID, 0xB, Ch4x_AbsalomMasonQuote, 0x0)
+BattleQuoteEntryBothWays(Mason, Colton, Ch4x_ChapterID, 0xC, Ch4x_ColtonMasonQuote, 0x0)
+BattleQuoteEntryBothWays(Mason, Lucy, Ch4x_ChapterID, 0xD, Ch4x_LucyMasonQuote, 0x0)
+BattleQuoteEntryBothWays(Mason, 0x0, Ch4x_ChapterID, BossQuoteID, Ch4x_MasonBattleQuote, 0x0)
 
 BYTE 0xFF 0xFF 0x00 0x00 0x43 0x0C 0x00 0x00 0x00 0x00 0xFF 0xFF //TERMINATOR

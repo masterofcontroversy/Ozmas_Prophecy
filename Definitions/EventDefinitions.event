@@ -53,6 +53,7 @@
 
 //Global flags
 #define Max_DominicFlag 103
+#define MasonDeadFlag 104
 
 /*Plist definitions*/
 

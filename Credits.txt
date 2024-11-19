@@ -40,6 +40,7 @@ Iron, steel, Silver Blades: Zane
 Killing Edge, Longsword, Armorslayer: Zane
 Brave Sword: Lisandra Brave
 Swiftblade: Ereshkigal
+Lancereaver: 2WB
 Killer Lance and Heavy Spear: Zane
 DragonSpear: Beansy
 Greatlance and Knight Greatlance: George Reds
@@ -168,7 +169,7 @@ Mage: GabrielKnight
 Female Mage: Solum
 Sage: Levin64, HyperGammaSpaces
 Female Sage (fix): Shin19
-MageKnights sword: Aruka, Kenpuhu
+Mage Knights Sword: Aruka, Kenpuhu
 Berserker (improved): BwdYeti, Shadowofchaos, Red
 Pirate: DerTheVaporeon
 Iron Mage: Nuramon
@@ -179,7 +180,6 @@ Wrath: Struedelmuffin
 Eye For An Eye: Struedelmuffin
 
 Misc. Graphics:
-Modular Minimug Box icons: 2WB
 Updated system icons: Alusq
 FE9-10 BG rips: Runa
 Statscreen background: Struedelmuffin
@@ -193,6 +193,8 @@ FeldschlactIII: Saxor the Nobody
 Snow Battle: SilverKnight
 Maria Sortie: Saxor the Nobody
 Wall of Defense: Devisio
+Therion The Thief: Devisio
+Knights of the Wind: Devisio
 Cry A Live: Random Wizard
 Event Battle: Sme
 Nightfall: Pandan

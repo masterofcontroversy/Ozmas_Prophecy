@@ -26,6 +26,7 @@ DeathQuoteEntry(Max, 0xFF, 0xFF, 0x0, MaxDeathQuote, 0)
 DeathQuoteEntry(Charles, 0xFF, 0x0, BossDeathQuoteID, CharlesDeathQuote, 0)
 DeathQuoteEntry(Hendrick, 0xFF, Ch2_ChapterID, BossDeathQuoteID, HendrickDeathQuote, 0)
 DeathQuoteEntry(Dominic, 0xFF, Ch4_ChapterID, BossDeathQuoteID, DominicDeathQuote, 0)
+DeathQuoteEntry(Mason, 0xFF, Ch4x_ChapterID, BossDeathQuoteID, Ch4x_MasonDeathQuote, 0)
 
 
 WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF //TERMINATOR
