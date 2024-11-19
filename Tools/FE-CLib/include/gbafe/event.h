@@ -23,6 +23,7 @@ unsigned GetEventCounter(void); //! FE8U = 0x800D595
 void SetEventId(u16);           //! FE8U = 0x8083D81
 void UnsetEventId(u16);         //! FE8U = 0x8083D95
 bool CheckEventId(u16);         //! FE8U = 0x8083DA9
+Unit* GetUnitStructFromEventParameter(s16 pid);
 
 void CallMapEventEngine(const void* scene, int runKind);
 void StartMapEventEngine(const void* scene, int runKind);

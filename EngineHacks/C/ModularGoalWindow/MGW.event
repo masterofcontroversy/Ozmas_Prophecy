@@ -2,7 +2,6 @@
 
 //C compiled stuff
 #include "src/ModularGoalWindow.lyn.event"
-#include "src/DrawTimeText.lyn.event"
 
 #define GoalWindowTemplate(Template) "SHORT $1C30; BL(Template); SHORT $BCF0 $BC01 $4700"
 #define SetWindowOptions(Char,CharColor,CharX,CharY, IsIcon,IconPal,IconX,IconY) "BYTE Char CharColor CharX CharY IsIcon IconPal IconX IconY"
@@ -40,16 +39,32 @@ ALIGN 4
 CounterReadDisplay:
     GoalWindowTemplate(CounterReadTemplate)
 
+ALIGN 4
+CoordDisplay:
+    GoalWindowTemplate(CursorCoordinateTemplate)
+
 NewGoalWindowjpt:
-/*0x0*/ WORD 0x0808D354 // Single line display (Seize)
-/*0x1*/ WORD 0x0808D35C // Route
-/*0x2*/ WORD 0x0808D3B0 // Defend/Survive
-/*0x3*/ WORD 0x0808D354 // Single line display (Defeat Boss)
-/*0x4*/ WORD 0x0808D354 // Single line display (Unknown)
-/*0x5*/ POIN TwoLineDisplay
-/*0x6*/ POIN GoldDisplay
-/*0x7*/ POIN GoldTurnDisplay
-/*0x8*/ POIN CounterReadDisplay
+#ifndef __DEBUG__
+    /*0x0*/ WORD 0x0808D354 // Single line display (Seize)
+    /*0x1*/ WORD 0x0808D35C // Route
+    /*0x2*/ WORD 0x0808D3B0 // Defend/Survive
+    /*0x3*/ WORD 0x0808D354 // Single line display (Defeat Boss)
+    /*0x4*/ WORD 0x0808D354 // Single line display (Unknown)
+    /*0x5*/ POIN TwoLineDisplay
+    /*0x6*/ POIN GoldDisplay
+    /*0x7*/ POIN GoldTurnDisplay
+    /*0x8*/ POIN CounterReadDisplay
+#else
+    /*0x0*/ POIN CoordDisplay
+    /*0x1*/ POIN CoordDisplay 
+    /*0x2*/ POIN CoordDisplay
+    /*0x3*/ POIN CoordDisplay
+    /*0x4*/ POIN CoordDisplay
+    /*0x5*/ POIN CoordDisplay
+    /*0x6*/ POIN CoordDisplay
+    /*0x7*/ POIN CoordDisplay
+    /*0x8*/ POIN CoordDisplay
+#endif
 
 //NOTE: "IsIcon" is only used to decide whether or not to display an icon ever. Use the SetMGWIcon ASMC to set an Icon by ID
 MGWOptions:

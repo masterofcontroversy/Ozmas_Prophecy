@@ -16,12 +16,8 @@ ALIGN 4
 AiPerfomExtensionTable:
 	FILL 4*(PERFORM_EXTENSION_COUNT)
 
-InjectAi2(0xA, TestAi2)
-
-TestAi2:
-AiMoveTowardsPoint(11, 9)
-AiChangeAi(0x0, 0x0)
-AiRestart
+#include "FerryAi/FerryAi.event"
+#include "AiScripts.event"
 
 #include "Src/PerformHook.lyn.event"
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="20" height="24" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" name="SnowPeaks" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Tilesets/SnowPeaks/SnowPeaks.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="20" height="24">
+  <properties>
+   <property name="Anims1" value="VillageAnimationID"/>
+   <property name="Anims2" value="0x0"/>
+   <property name="ChapterID" value="Ch5_ChapterID"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="Ch5_MapID"/>
+   <property name="MapID" value="Ch5_TileChangesID"/>
+   <property name="ObjectType" value="SnowPeaksObjectID"/>
+   <property name="PaletteID" value="SnowPeaksPaletteID"/>
+   <property name="TileConfig" value="SnowPeaksConfigID"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxdVV1LVUEUPTMj9FRW/0ARhCC1n6D3kjcoKH0vqGtXsyDsOYT86iGi/kBW914tJM3oKS27plEPRVlPYR9SCX2i1ZsRrdVewz30sJgzM3v27L322nMKPkmWgHWXJJUkSYaALmASaxeAX1jPYTwGFICXzvY+wiYHFAWeddgbA55i/wCwFWvtQBPwHPMvwBOgG6gD2gEH/MCZOmARdmeBEWBTYmu92N8G7MT8lNCA9U9YmwZuAC3ANaztwLhXsdLnlLe4eKZDcU66aq69wHFgP+z6gAf4/qD81zB/AbvN4udoKlbuF5TXN2e5lvA9E5LkXrCzHd7sapQX4zyvWG9jrQTsEZ/M5bNipa+yYl2Gr7dAJZivLNCG7wyQBVYwfy9urzurz09yofq0OuNqFrZzwWr7SjEeUZ6H+Q3kg/G9kFi8zOGiF2fihr4uwa4/WF1zivEQcB8Yw/wMxgFgMBhH3UAzdeXtPDmb1x0PU/ppFhjTb5z9E6p8cj8D5FWfIfFNe+qizVmNV3m/r/qnL3JXq2/G+lo+Oa9VTi4Y97zjnLO4V7A2jnECGGZ/SG/Mu0+5k9/TsHsjfvuk25x8M+6SYuQ9RcXx3Vm9OsRJozTapD6KnBS03pjSLzmYSmmV9rFPb7kq56PBbBZ1bkY1YiwnZVOR9tmL271plfMe9W9F8c6q5oPKg3Vj3peDxTOomlCH7JdHzvqMPkeAXeqF1mA1eCf9lcXzqnK/k6pNXTC9t6in2Xv0OQ3clL+oizgyt07lVlSMB+WTMV7xpmX6XHDWh/QVfYxpHFCe6T4vpnS5oXqT3wX1YOz5vPo9K97uyjZqcl29Xkx98574TvJe1iG+FzXSB/c2Ur3XJB09Fs+s24Q0Nare65QWGWdGb17UEuu2j/UXX/Tlvb319Rq/As+88TgXqnqkz3rl2ZLS2wl9D4nnNWd12613aVj9UFEvsi4D6uOyt5gib/2q/7x6hPldxTiuNzPmxN7kuzasese3LdY7n1Tr1fWfTnv0D/LSP3NiLSvSxLLiiLFmpJGS7vv3zwvG3RbxRo1S80v6TzYoxi7VtqwcY//8BRaO+os=
+  </data>
+ </layer>
+ <layer id="2" name="DestroyedVillage" width="20" height="24" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQwksYmZgWAzES5ipY94hoDmHgfgIlcx7BDTnMRA/oZJ5o2AUjIJRMFwBAPqgBvc=
+  </data>
+ </layer>
+ <layer id="3" name="ClosedVillage" width="20" height="24" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4C6QHGgHTAKRsEoGAVDAAAAsiwAIg==
+  </data>
+ </layer>
+</map>

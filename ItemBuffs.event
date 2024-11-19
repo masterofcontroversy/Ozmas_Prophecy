@@ -23,3 +23,11 @@ StatBonus(0,0,0,0,0,(-3),3,0,0,0)
 ALIGN 4
 CloverBonus:
 StatBonus(0,0,0,0,0,0,0,7,0,0)
+
+ALIGN 4
+FalconPlumeBonus:
+StatBonus(0,0,0,(-5),2,0,0,0,0,0)
+
+ALIGN 4
+GlaiveBonus:
+StatBonus(0,0,0,0,0,2,0,0,0,0)

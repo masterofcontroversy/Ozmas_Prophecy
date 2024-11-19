@@ -103,6 +103,12 @@ bne EscapeCommandUsability_ReturnFalse
 @Check for being lord
 ldr r0,[r4]
 ldr r0,[r0]
+
+@First, check if it's Alexandra (Only Devan should be the lord right now)
+ldrb r1, [r0,#CharID]
+cmp  r1, #0xF
+beq  EscapeCommandUsability_ReturnTrue
+
 ldr r0,[r0,#40]
 lsl r0,r0,#16
 lsr r0,r0,#24
@@ -398,6 +404,12 @@ str	r1,[r3,#0xC]
 	
 	@check the lord bit on our rescuee to see if we should trigger the end of the map via their escape
 	ldr r0,[r3]
+
+	@First, check if it's Alexandra (Only Devan should be the lord right now)
+	ldrb r1, [r0,#CharID]
+	cmp  r1, #0xF
+	beq  NonRescueeEndingChecks
+
 	ldr r0,[r0,#0x28]
 	ldr r1,[r3,#4]
 	ldr r1,[r1,#0x28]
@@ -452,6 +464,12 @@ NonRescueeLordCheck:
 ldr r0,=#0x3004E50 @active unit
 ldr r0,[r0]
 ldr r0,[r0]
+
+@First, check if it's Alexandra (Only Devan should be the lord right now)
+ldrb r1, [r0,#CharID]
+cmp  r1, #0xF
+beq  GoBack
+
 ldr r0,[r0,#0x28]
 ldr r1,=#0x3004E50 @active unit
 ldr r1,[r1]

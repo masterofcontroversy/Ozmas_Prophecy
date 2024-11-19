@@ -1,0 +1,6 @@
+PUSH
+ORG $10644
+replaceWithHack(NewCHAI)
+POP
+
+#include "New_CHAI.lyn.event"

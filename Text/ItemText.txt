@@ -64,6 +64,9 @@ Javelin[X]
 ## PilumName
 Pilum[X]
 
+## GlaiveName
+Glaive[X]
+
 ## IronLanceName
 Iron Lance[X]
 
@@ -208,6 +211,9 @@ Rajin Arrow[X]
 ## SkeletonKeyName
 Skeleton Key[X]
 
+## FalconPlumeName
+Falcon Plume[X]
+
 ## BowDesc
 3x Might vs [PegasusIcon].[X]
 
@@ -215,16 +221,19 @@ Skeleton Key[X]
 3x Might vs [HorseIcon][PegasusIcon].[X]
 
 ## IronShieldDesc
-+2 defense, -1 speed.[X]
++2 Defense, -1 Speed.[X]
 
 ## SteelShieldDesc
-+4 defense, -2 speed.[X]
++4 Defense, -2 Speed.[X]
 
 ## SilverShieldDesc
-+6 defense, -4 speed.[X]
++6 Defense, -4 Speed.[X]
 
 ## WhetstoneDesc
-+2 strength, -2 defense.[X]
++2 Strength, -2 Defense.[X]
+
+## FalconPlumeDesc
++2 Speed, -5 Technique.[X]
 
 ## CloverDesc
 It must be lucky if it grew in[NL]
@@ -273,10 +282,13 @@ is on opposite side of opponent.[X]
 Unlocks crit.[X]
 
 ## BraveDesc
-Double attack count.[X]
+Double strike count.[X]
 
 ## BraveBowDesc
-Double attack count. 3x Might vs [PegasusIcon][X]
+Double strike count. 3x Might vs [PegasusIcon][X]
+
+## GlaiveDesc
+Infantry only. +2 Defense.[X]
 
 ## ReaverDesc
 Reverses and doubles weapon triangle.[X]

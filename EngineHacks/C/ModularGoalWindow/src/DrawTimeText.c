@@ -1,5 +1,3 @@
-#include "gbafe.h"
-
 //Adapted from Stan's FE7 version
 
 //TODO: Add a target time argument to count down too
@@ -19,16 +17,6 @@ void UpdateClockText(ClockTextProc* proc);
 struct ProcInstruction const ClockTextProcInstruction[] = {
     PROC_LOOP_ROUTINE(UpdateClockText),
 };
-
-static void DrawNumber2Chars(TextHandle* text, u16 number) {
-    char digit_a = '0' + __modsi3(number, 10);
-    char digit_b = '0' + __divsi3(number, 10);
-
-    Text_DrawChar(text, &digit_a);
-    text->xCursor -= 15;
-    Text_DrawChar(text, &digit_b);
-    text->xCursor -= 15;
-}
 
 void DrawClockText(ClockTextProc* proc) {
     int x = proc->x;

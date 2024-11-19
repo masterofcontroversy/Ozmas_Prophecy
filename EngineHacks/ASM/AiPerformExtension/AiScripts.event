@@ -1,0 +1,18 @@
+Ai2_Goto_11_9:
+AiMoveTowardsPoint(11, 9)
+AiChangeAi(0x0, 0x0)
+AiRestart
+
+Ai2_Goto_12_10:
+AiMoveTowardsPoint(12, 10)
+AiChangeAi(0x0, 0x0)
+AiRestart
+
+Ai2_Goto_13_11:
+AiMoveTowardsPoint(13, 11)
+AiChangeAi(0x0, 0x0)
+AiRestart
+
+InjectAi2(0xA, Ai2_Goto_11_9)
+InjectAi2(0xB, Ai2_Goto_12_10)
+InjectAi2(0x10, Ai2_Goto_13_11)

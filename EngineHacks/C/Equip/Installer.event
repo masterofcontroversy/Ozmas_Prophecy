@@ -8,7 +8,7 @@ ALIGN 4
 
 ALIGN 4
 EquipmentList:
-BYTE IronShield SteelShield SilverShield Whetstone MagicShield VigorStone AccostBand RajinArrow Clover
+BYTE IronShield SteelShield SilverShield Whetstone MagicShield VigorStone AccostBand RajinArrow Clover FalconPlume
 BYTE 0x00 //terminator
 
 // Defense equipemnt loses durability on each hit taken

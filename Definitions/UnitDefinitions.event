@@ -11,6 +11,7 @@
 #define Max 0xA
 #define Alexandra 0xF
 #define Evelyn 0x10
+#define Tobias 0xB
 
 #define Charles 0x68
 #define Hendrick 0x46

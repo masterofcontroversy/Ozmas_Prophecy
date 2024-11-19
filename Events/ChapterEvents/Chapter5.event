@@ -1,0 +1,343 @@
+EventPointerTable(0x1E,ThisChapter)
+
+TobiasRecruitmentFlag       := 0x8
+DeathReinforcementsFlag     := 0x9
+VillageID1                  := 0xA
+
+ALIGN 4
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(NoID, SetSnowStorm, 2)
+TurnEventPlayer(NoID, SetSnow, 3)
+TurnEventPlayer(NoID, SetSnowStorm, 4)
+TurnEventPlayer(NoID, SetSnow, 6)
+TurnEventPlayer(NoID, SetSnowStorm, 8)
+TurnEventPlayer(NoID, SetSnow, 11)
+TurnEventPlayer(NoID, CallTobias, 3)
+TurnEventPlayer(NoID, CallRescuingReinforcements, 2)
+TurnEventPlayer(NoID, CallRoadReinforcements, 4)
+TurnEventPlayer(NoID, CallWestForkReinforcements, 5)
+TurnEventPlayer(NoID, CallNorthWestReinforcements, 7)
+TurnEventPlayer(NoID, CallSouthEastReinforcements, 7)
+TurnEventPlayer(NoID, CallSouthWestReinforcements, 6)
+TurnEventPlayer(NoID, BossCharge, 8)
+TurnEventPlayer(NoID, CallDeathReinforcements, 0, 255) //Timings are handled by the event
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Village(VillageID1, Village1Event, 9, 7)
+Escape(4, 0)
+Escape(5, 0)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(TobiasRecruitmentFlag, TobiasRecruitment, Tobias, Devan)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene: {
+    //Setup
+    ENUT LordMustEscapeLastFlag
+    AddTrap(MapMarkerBlueID,4,0)
+    AddTrap(MapMarkerBlueID,5,0)
+
+    WEATHER Snow
+    LOAD1 0 EnemyUnits; ENUN
+    SCOORD sB [2,15]
+    SVAL s1 (1 << 31)
+    SET_CONDITION UnitAtCoordsSlotB
+    PREP
+    ENDA
+}
+
+EndingScene: {
+    ENDA
+}
+
+/*----Mid chapter events----*/
+
+TobiasRecruitment: {
+    FACTION_BLUE Tobias
+    NoFade
+    ENDA
+}
+
+Village1Event: {
+    VillageEventItem(HouseText,Village2WinterDayBG,Lancereaver)
+}
+
+CallTobias: {
+    CAMERA [16,9]
+    LOAD1 0 TobiasUnit; ENUN
+    SVAL s1 0x0
+    CHAI [18,5]
+    CHAI [19,4]
+    NoFade
+    ENDA
+}
+
+SetSnowStorm: {
+    SOUN 0xC7
+    WEATHER SnowStorm
+    NoFade
+    ENDA
+}
+
+SetSnow: {
+    ASMC ASMC_EndAllSfx|1
+    WEATHER Snow
+    NoFade
+    ENDA
+}
+
+BossCharge: {
+    CAMERA [14,0]
+    CURSOR_FLASHING [14,2]
+    CURSOR_FLASHING [15,3]
+    CURSOR_FLASHING [13,1]
+    STAL 90
+    REMOVE_CURSORS
+
+    SVAL s1 0x0
+    CHAI [14,2]
+    CHAI [15,3]
+    CHAI [13,1]
+
+    NoFade
+    ENDA
+}
+
+CallRescuingReinforcements: {
+    LoadReinforcements(RescuingReinforcements)
+    SCOORD sB [15,0]
+    SVAL s2 UnitAtCoordsSlotB
+    SVAL s1 RescuedUnit1
+    ASMC ASMC_LoadRescued|1
+
+    SCOORD sB [16,1]
+    SVAL s2 UnitAtCoordsSlotB
+    SVAL s1 RescuedUnit2
+    ASMC ASMC_LoadRescued|1
+
+    SCOORD sB [11,7]
+    ASMC ASMC_AddFerryDropTile
+    SCOORD sB [12,7]
+    ASMC ASMC_AddFerryDropTile
+    SCOORD sB [11,8]
+    ASMC ASMC_AddFerryDropTile
+    SCOORD sB [11,9]
+    ASMC ASMC_AddFerryDropTile
+    SCOORD sB [12,8]
+    ASMC ASMC_AddFerryDropTile
+    SCOORD sB [12,9]
+    ASMC ASMC_AddFerryDropTile
+    NoFade
+    ENDA
+}
+
+CallWestForkReinforcements: {
+    LoadReinforcements(WestForkReinforcements)
+    NoFade
+    ENDA
+}
+
+CallRoadReinforcements: {
+    LoadReinforcements(CavReinforcements)
+    LoadReinforcements(RoadReinforcements)
+    NoFade
+    ENDA
+}
+
+CallNorthWestReinforcements: {
+    LoadReinforcements(NorthWestReinforcements)
+    NoFade
+    ENDA
+}
+
+CallSouthWestReinforcements: {
+    LoadReinforcements(SouthWestReinforcements)
+    NoFade
+    ENDA
+}
+
+CallSouthEastReinforcements: {
+    LoadReinforcements(SouthEastReinforcements)
+    NoFade
+    ENDA
+}
+
+CallDeathReinforcements: {
+    #define LabelAnchor CallDeathReinforcements
+    CHECK_TURNS
+    SVAL s1 8
+    BLT LabelDest(EndEvent) sC s1
+        CHECK_FLAG DeathReinforcementsFlag
+        BNE LabelDest(UnsetFlag) sC s0
+            LoadReinforcements(DeathReinforcements1)
+            ENUT DeathReinforcementsFlag
+            GOTO LabelDest(EndEvent)
+
+        UnsetFlag: SetLabel
+        LoadReinforcements(DeathReinforcements2)
+        ENUF DeathReinforcementsFlag
+
+    EndEvent: SetLabel
+    NoFade
+    ENDA
+    #undef LabelAnchor
+}
+
+/*----Unit groups----*/
+
+PlayerUnits:
+UNIT Devan Count Devan Level(1,Ally,0) [15,20] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Alexandra Lord Devan Level(1,Ally,0) [16,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [16,20] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [14,21] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [15,21] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [16,21] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [17,21] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [15,22] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [16,22] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [17,19] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+UNIT Ronni BowKnight_F Devan Level(1,Player,0) [17,20] 0x0 0x0 0x0 0x1 [IronBow, HuntingBow, Vulnerary] NoAI
+
+UNIT //Tells the game that the unit list has ended
+
+TobiasUnit:
+UNIT Tobias Archer ONeill Level(6,NPC,0) [16,9] 0x0 0x0 0x0 0x1 [SteelBow, Longbow] NeverMoveAI
+UNIT
+
+EnemyUnits:
+//Boss placeholder
+UNIT EastDuramontis GriffonRider ONeill Level(8,Enemy,0) [14,2] 0x0 0x0 0x0 0x1 [SteelBow] NeverMoveAI
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [15,3] 0x0 0x0 0x0 0x1 [IronBow] NeverMoveAI
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x1 [IronBow] NeverMoveAI
+
+//Starting enemies
+UNIT EastDuramontis Archer ONeill Level(5,Enemy,1) [15,14] 0x0 0x0 0x0 0x1 [Longbow] NeverMoveAI
+UNIT EastDuramontis Fighter ONeill Level(5,Enemy,1) [15,16] 0x0 0x0 0x0 0x1 [Labrys] NoAI
+UNIT EastDuramontis Mercenary ONeill Level(5,Enemy,1) [12,17] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+UNIT EastDuramontis PegasusKnight ONeill Level(5,Enemy,1) [10,18] 0x0 0x0 0x0 0x1 [SteelLance] NoAI
+UNIT EastDuramontis Shaman ONeill Level(5,Enemy,1) [13,16] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT Cassis DracoRider ONeill Level(5,Enemy,1) [7,22] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+
+//Turn 2 enemies
+UNIT EastDuramontis Myrmidon ONeill Level(5,Enemy,1) [11,13] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
+UNIT EastDuramontis Soldier ONeill Level(5,Enemy,1) [10,14] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT EastDuramontis Mage ONeill Level(5,Enemy,1) [10,12] 0x0 0x0 0x0 0x1 [Thunder] NoAI
+
+//East fork
+UNIT EastDuramontis Acolyte ONeill Level(5,Enemy,1) [9,7] 0x0 0x0 0x0 0x1 [Lightning] GroupOneAI
+UNIT EastDuramontis Fighter ONeill Level(5,Enemy,1) [10,8] 0x0 0x0 0x0 0x1 [SteelAxe] GroupOneAI
+UNIT EastDuramontis Soldier ONeill Level(5,Enemy,1) [11,7] 0x0 0x0 0x0 0x1 [Javelin] GroupOneAI
+
+//West fork
+UNIT EastDuramontis Soldier ONeill Level(5,Enemy,1) [5,13] 0x0 0x0 0x0 0x1 [SteelLance] GroupTwoAI
+UNIT EastDuramontis Arcanist ONeill Level(5,Enemy,1) [3,14] 0x0 0x0 0x0 0x1 [Flux] GroupTwoAI
+UNIT EastDuramontis Archer ONeill Level(5,Enemy,1) [4,12] 0x0 0x0 0x0 0x1 [SteelBow] GroupTwoAI
+
+//Attacking Tobias
+UNIT EastDuramontis Fighter ONeill Level(5,Enemy,1) [19,4] 0x0 0x0 0x0 0x1 [IronAxe] AttackInRangeAI
+UNIT EastDuramontis Myrmidon ONeill Level(5,Enemy,1) [18,5] 0x0 0x0 0x0 0x1 [IronSword] AttackInRangeAI
+
+//Rushing units
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [13,4] 0x0 0x0 0x0 0x1 [IronBow] [AttackInRange, 0x10, NoRecovery, DefaultAI4]
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [12,3] 0x0 0x0 0x0 0x1 [IronBow] [AttackInRange, 0xB, NoRecovery, DefaultAI4]
+
+//Stationaries
+UNIT EastDuramontis IronMage ONeill Level(5,Enemy,1) [8,15] 0x0 0x0 0x0 0x1 [Thunder, AirShot] NeverMoveAI
+UNIT EastDuramontis ArmorKnight ONeill Level(5,Enemy,1) [14,11] 0x0 0x0 0x0 0x1 [IronBlade] NeverMoveAI
+
+UNIT EastDuramontis Fighter ONeill Level(5,Enemy,1) [4,9] 0x0 0x0 0x0 0x1 [HandAxe] NeverMoveAI
+UNIT EastDuramontis ArmorKnight ONeill Level(5,Enemy,1) [5,7] 0x0 0x0 0x0 0x1 [Spear] NeverMoveAI
+UNIT EastDuramontis Mage ONeill Level(5,Enemy,1) [5,5] 0x0 0x0 0x0 0x1 [Fire] NeverMoveAI
+
+UNIT EastDuramontis IronMage ONeill Level(5,Enemy,1) [3,3] 0x0 0x0 0x0 0x1 [Thunder] NeverMoveAI
+UNIT EastDuramontis Mercenary ONeill Level(5,Enemy,1) [4,3] 0x0 0x0 0x0 0x1 [IronBlade] NeverMoveAI
+UNIT EastDuramontis Archer ONeill Level(5,Enemy,1) [3,2] 0x0 0x0 0x0 0x1 [IronBow] NeverMoveAI
+
+UNIT EastDuramontis Crate ONeill Level(1,Enemy,0) [2,15] DropItem 0x0 0x0 0x1 [FalconPlume] NeverMoveAI
+UNIT
+
+RoadReinforcements:
+UNIT EastDuramontis Arcanist ONeill Level(5,Enemy,1) [0,6] 0x0 0x0 0x0 0x1 [Flux] NoAI
+UNIT EastDuramontis Myrmidon ONeill Level(5,Enemy,1) [0,8] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
+UNIT
+
+NorthWestReinforcements:
+UNIT EastDuramontis PegasusKnight ONeill Level(5,Enemy,1) [0,3] 0x0 0x0 0x1 REDA2R3 [IronLance] NoAI
+UNIT EastDuramontis PegasusKnight ONeill Level(5,Enemy,1) [0,4] 0x0 0x0 0x1 REDA1R4 [SteelLance] NoAI
+UNIT
+
+RescuingReinforcements:
+UNIT EastDuramontis PegasusKnight ONeill Level(5,Enemy,1) [15,0] 0x0 0x0 0x0 0x1 [SteelLance] [FERRY_AI1, Pursue, NoRecovery, DefaultAI4]
+UNIT EastDuramontis PegasusKnight ONeill Level(5,Enemy,1) [16,0] 0x0 0x0 0x1 REDA16R1 [SteelLance] [FERRY_AI1, Pursue, NoRecovery, DefaultAI4]
+UNIT
+
+CavReinforcements:
+UNIT EastDuramontis LanceCavalier ONeill Level(5,Enemy,1) [0,22] 0x0 0x0 0x0 0x1 [SteelLance] NoAI
+UNIT EastDuramontis SwordCavalier ONeill Level(5,Enemy,1) [1,23] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT
+
+SouthWestReinforcements:
+UNIT EastDuramontis LanceCavalier ONeill Level(5,Enemy,1) [0,23] 0x0 0x0 0x1 REDA1R22 [SteelLance] NoAI
+UNIT EastDuramontis MageKnight ONeill Level(5,Enemy,1) [0,23] 0x0 0x0 0x1 REDA2R23 [Thunder, SteelSword] NoAI
+UNIT
+
+SouthEastReinforcements:
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [19,14] 0x0 0x0 0x1 REDA18R14 [KillerBow] NoAI
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [19,13] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
+UNIT EastDuramontis GriffonRider ONeill Level(5,Enemy,1) [19,15] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
+UNIT
+
+DeathReinforcements1:
+UNIT Cassis DracoRider ONeill Level(15,Enemy,1) [8,23] 0x0 0x0 0x0 0x1 [Tomahawk, SilverAxe] NoAI
+UNIT Cassis DracoRider ONeill Level(15,Enemy,1) [9,22] 0x0 0x0 0x0 0x1 [Tomahawk, SilverAxe] NoAI
+
+UNIT Cassis GriffonRider ONeill Level(15,Enemy,1) [19,13] 0x0 0x0 0x0 0x1 [SilverBow, Longbow] NoAI
+UNIT Cassis GriffonRider ONeill Level(15,Enemy,1) [18,14] 0x0 0x0 0x0 0x1 [SilverBow, Longbow] NoAI
+UNIT
+
+DeathReinforcements2:
+UNIT Cassis LanceCavalier ONeill Level(15,Enemy,1) [0,22] 0x0 0x0 0x0 0x1 [SilverLance, Greatlance] NoAI
+UNIT Cassis MageKnight ONeill Level(15,Enemy,1) [1,23] 0x0 0x0 0x0 0x1 [FarFrost, Thunder] NoAI
+UNIT
+
+WestForkReinforcements:
+UNIT EastDuramontis PegasusKnight ONeill Level(5,Enemy,1) [0,11] 0x0 0x0 0x1 REDA3R11 [IronLance] NoAI
+UNIT
+
+RescuedUnit1:
+UNIT EastDuramontis IronMage ONeill Level(5,Enemy,1) [5,7] 0x0 0x0 0x0 0x1 [Thunder] NoAI
+UNIT
+
+RescuedUnit2:
+UNIT EastDuramontis Mercenary ONeill Level(5,Enemy,1) [5,7] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+UNIT

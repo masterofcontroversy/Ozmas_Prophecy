@@ -42,3 +42,6 @@ ALIGN 4
 {
 #include "ChapterEvents/Chapter4x.event"
 }
+{
+#include "ChapterEvents/Chapter5.event"
+}

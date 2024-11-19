@@ -28,7 +28,7 @@ SetIcon(LongswordIcon)
 SetIcon(ArmorslayerIcon)
 #incbin "Images/Swords/Armorslayer.4bpp"
 SetIcon(LancereaverIcon)
-//#incbin "Images/Swords/lanceraver.4bpp"
+#incbin "Images/Swords/Lancereaver.4bpp"
 SetIcon(RapierIcon)
 #incbin "Images/Swords/Rapier.4bpp"
 SetIcon(SwiftbladeIcon)
@@ -56,8 +56,10 @@ SetIcon(KnightGreatlanceIcon)
 #incbin "Images/Lances/KnightGreatlance.4bpp"
 SetIcon(AxereaverIcon)
 #incbin "Images/Lances/Axereaver.4bpp"
-SetIcon(DragonSpear)
+SetIcon(DragonSpearIcon)
 #incbin "Images/Lances/DragonSpear.4bpp"
+SetIcon(GlaiveIcon)
+#incbin "Images/Lances/Glaive.4bpp"
 
 SetIcon(IronAxeIcon)
 #incbin "Images/Axes/IronAxe.4bpp"

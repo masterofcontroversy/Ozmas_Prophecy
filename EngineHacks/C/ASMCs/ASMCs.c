@@ -116,3 +116,7 @@ void ASMC_SetMapPalette(void) {
 void ASMC_CheckTileChange(void) {
     gEventSlot[0xC] = AreMapChangeTriggered(gEventSlot[0x1]);
 }
+
+void ASMC_EndAllSfx(void) {
+    Sound_FadeOut_80023E0(8);
+}

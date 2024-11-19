@@ -59,7 +59,9 @@ Age:[X]
 Advance to the next class.[X]
 
 ## HouseText
-DUMMY[X]
+[OpenMidLeft]
+DUMMY[A][CloseSpeechSlow]
+[X]
 
 ## DV1Desc
 Freeze all enemies[N]

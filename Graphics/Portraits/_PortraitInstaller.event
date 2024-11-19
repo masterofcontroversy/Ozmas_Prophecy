@@ -96,7 +96,7 @@ setMugEntry(LazarusPortraitID,LazarusPortrait,3,5,3,3)
 //Enemies
 setMugEntry(HendrickPortraitID,HendrickPortrait,3,5,3,3)
 setMugEntry(DominicPortraitID,DominicPortrait,2,4,3,2)
-setMugEntry(MasonPortraitID,MasonPortrait,3,5,3,3)
+setMugEntry(MasonPortraitID,MasonPortrait,3,5,2,3)
 
 //Other
 setMugEntry(PriestPortraitID,PriestPortrait,2,6,2,4)

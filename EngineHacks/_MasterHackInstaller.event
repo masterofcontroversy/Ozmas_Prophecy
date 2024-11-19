@@ -79,8 +79,11 @@
 //AutoPromote
 #include "ASM/AutoPromote/AutoPromote.lyn.event"
 
+#include "ASM/CHAIFix/Installer.event"
+
 #include "ASM/StaffReturn/Installer.event"
 
+#include "ASM/ResumeSnowStormSound/Installer.event"
 #include "ASM/CameraSpeed/Installer.event"
 #include "ASM/ChangeBattleBGM/Installer.event"
 #include "ASM/ContinueBattleBGM/Installer.event"

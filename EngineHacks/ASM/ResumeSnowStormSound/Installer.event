@@ -1,0 +1,11 @@
+PUSH
+    ORG 0x310E4
+    jumpToHack(SnowStormSound)
+POP
+
+#include "SnowStormSound.lyn.event"
+
+SnowStormSoundProcInstruction:
+PROC_SLEEP(10)
+PROC_CALL_ROUTINE(StartSnowStormSound)
+PROC_END

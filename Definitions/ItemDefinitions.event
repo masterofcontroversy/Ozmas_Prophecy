@@ -307,6 +307,8 @@
 
 #define Finesse          0x59
 
+#define Glaive           0xad
+
 #define TealGem          0xba
 
 #define Lightning        0xbe
@@ -330,13 +332,14 @@
 #define IronShield       0xd5
 #define SteelShield      0xd6
 #define SilverShield     0xd7
-#define Whetstone             0xd8
+#define Whetstone        0xd8
 #define Clover           0xd9
 #define MagicShield      0xda
 #define VigorStone       0xdb
 #define AccostBand       0xdc
 #define RajinArrow       0xdd
 #define Labrys           0xde
+#define FalconPlume      0xdf
 
 #define SkeletonKey      Lockpick
 

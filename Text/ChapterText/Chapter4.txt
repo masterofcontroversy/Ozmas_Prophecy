@@ -2155,9 +2155,10 @@ Yeah[Beat] Sure[Beat][A]
 
 //Alexandra
 [FarLeft]
-They couldn't have[NL]
-more than a pittance.[A][2NL]
-I doubt it's worth the effort.[A]
+They couldn't have any[NL]
+more than a pittance.[A][NL]
+I doubt it's worth the time we[NL]
+could use to reach Tristis sooner.[A]
 
 //Devan
 [Left]

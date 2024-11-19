@@ -3,6 +3,7 @@
 #include "Ch3/Ch3Map.event"
 #include "Ch4/Ch4Map.event"
 #include "Ch4x/Ch4xMap.event"
+#include "Ch5/Ch5Map.event"
 #include "Ch1_Opening/Ch1OpeningMap.event"
 #include "Ch1_Cutscene/Ch1_Cutscene.event"
 #include "Ch3_Cutscene/Ch3_CutsceneMap.event"
