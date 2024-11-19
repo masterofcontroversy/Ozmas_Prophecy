@@ -1,31 +1,22 @@
 
 EventPointerTable(0x17,ThisChapter)
 
-#define ChestOpenedFlag 0x8
-#define KeyFlag         0x9
-#define ChestCounter    s0
+ChestOpenedFlag := 0x8
+KeyFlag         := 0x9
+ChestCounter    := s0
 
 ALIGN 4
 ThisChapter:
 
 POIN TurnBasedEvents
-
 POIN CharacterBasedEvents
-
 POIN LocationBasedEvents
-
 POIN MiscBasedEvents
-
 POIN Dunno Dunno Dunno
-
 POIN Tutorial
-
 POIN TrapData TrapData
-
 POIN PlayerUnits PlayerUnits
-
 POIN $0 $0 $0 $0 $0 $0
-
 POIN BeginningScene EndingScene
 
 Dunno:
@@ -39,7 +30,6 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
-TurnEventPlayer(0, BriefingEvent, 1)
 END_MAIN
 
 ALIGN 4
@@ -55,7 +45,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-AFEV 0x0 CheckChests ChestOpenedFlag
+AFEV NoID CheckChests ChestOpenedFlag
 AREA KeyFlag KeyEvent [1,5] [1,5]
 END_MAIN
 
@@ -65,27 +55,65 @@ BeginningScene: {
 
     COUNTER_SET ChestCounter 4
     LOAD1 0 EnemyUnits; ENUN
+    LOAD1 2 CutsceneUnits
 
-    MUSIC GoldenrodGameCorner_BGM
+    MUSIC TherionTheThief_BGM
     SetBackground(MountainsideWinterDayBG)
     Text(Ch4x_Scene1)
     Text(Ch4x_Scene2)
     EndConvo
+    STAL 20
 
-    Text(Ch4x_BeforeBattle)
-
+    MUSIC 0
+    Text(Ch4x_BeforeBattle_Part1)
+    CAMERA Mason
+    MUSIC NuclearFusion_BGM
+    Text(Ch4x_BeforeBattle_Part2)
+    STAL 20
+    CAMERA [0,16]
+    STAL 10
+    Text(Ch4x_BeforeBattle_Part3)
     FADI 20
+    REMOVEALL_BLUE
     PREP
+
+    CLEAN
+    EVBIT_F 2
+    FADU 10
+    MUSIC FeldschlactIII_BGM
+    Text(Ch4x_Briefing)
+    GiveItem(ChestKey_5, Lucy)
     NoFade
     ENDA
 }
 
 EndingScene: {
+    #define LabelAnchor EndingScene
     ENUT SeizeID
 
+    MUSIC TherionTheThief_BGM
     SetBackground(CaveBG)
-    Text(Ch4x_AfterBattle)
+    
+    CHECK_ALIVE Max
+    BEQ LabelDest(ContinueAfterBattle) sC s0
+
+        CHECK_ALIVE Mason
+        BEQ LabelDest(MasonDead) sC s0
+            Text(Ch4x_AfterBattle1_MasonAlive)
+            FADI 10
+            FADU 10
+            GOTO LabelDest(ContinueAfterBattle)
+
+        MasonDead: SetLabel
+            Text(Ch4x_AfterBattle1_MasonDead)
+            ENUT MasonDeadFlag
+            FADI 10
+            FADU 10
+
+    ContinueAfterBattle: SetLabel
+    Text(Ch4x_AfterBattle2)
     SetBackground(Village2WinterDayBG)
+    MUSIC OutsideBirdsChirping
     Text(Ch4x_Scene3)
     Text(Ch4x_Scene4)
     FADI 10
@@ -98,14 +126,7 @@ EndingScene: {
     CUSA Alexandra
     MNC2 Ch5_ChapterID
     ENDA
-}
-
-BriefingEvent: {
-    MUSIC FeldschlactIII_BGM
-    Text(Ch4x_Briefing)
-    GiveItem(ChestKey_5, Lucy)
-    NoFade
-    ENDA
+    #undef LabelAnchor
 }
 
 CheckChests: {
@@ -177,55 +198,58 @@ UNIT Ronni BowKnight_F Devan Level(1,Player,0) [2,13] 0x0 0x0 0x0 0x1 [IronBow, 
 UNIT //Tells the game that the unit list has ended
 
 EnemyUnits:
-UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [14,1] DropItem 0x0 0x0 0x1 [SteelAxe, TealGem] AttackInRangeAI
+UNIT Mason Fighter Mason Level(3,Enemy,0) [14,1] DropItem 0x0 0x0 0x1 [Tomahawk, TealGem] GroupSixAI
+UNIT Stonemason Soldier Mason Level(3,Enemy,1) [13,2] 0x0 0x0 0x0 0x1 [SteelLance] GroupSixAI
 
-UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [5,11] 0x0 0x0 0x0 0x1 [IronLance] NoAI
-UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [6,10] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
-UNIT Stonemason Shaman 0x0 Level(3,Enemy,1) [7,11] 0x0 0x0 0x0 0x1 [ShadeTome] NoAI
-UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [7,10] 0x0 0x0 0x0 0x1 [SteelBow, Vulnerary] NoAI
+UNIT Stonemason Soldier Mason Level(3,Enemy,1) [5,11] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Stonemason Mercenary Mason Level(3,Enemy,1) [6,10] 0x0 0x0 0x0 0x1 [IronBlade] NoAI
+UNIT Stonemason Shaman Mason Level(3,Enemy,1) [7,11] 0x0 0x0 0x0 0x1 [ShadeTome] NoAI
+UNIT Stonemason Archer Mason Level(3,Enemy,1) [7,10] 0x0 0x0 0x0 0x1 [SteelBow, Vulnerary] NoAI
 
-UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [6,8] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [9,9] 0x0 0x0 0x0 0x1 [SteelLance] NoAI
-UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [8,5] 0x0 0x0 0x0 0x1 [IronBlade] AttackInRangeAI
+UNIT Stonemason Fighter Mason Level(3,Enemy,1) [6,8] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT Stonemason Soldier Mason Level(3,Enemy,1) [9,9] 0x0 0x0 0x0 0x1 [SteelLance] NoAI
+UNIT Stonemason Mercenary Mason Level(3,Enemy,1) [8,5] 0x0 0x0 0x0 0x1 [IronBlade] AttackInRangeAI
 
-UNIT Stonemason Myrmidon 0x0 Level(3,Enemy,1) [5,2] 0x0 0x0 0x0 0x1 [IronSword, Vulnerary] GroupTwoAI
-UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [6,3] 0x0 0x0 0x0 0x1 [SteelLance] GroupTwoAI
+UNIT Stonemason Myrmidon Mason Level(3,Enemy,1) [5,2] 0x0 0x0 0x0 0x1 [IronSword, Vulnerary] GroupTwoAI
+UNIT Stonemason Soldier Mason Level(3,Enemy,1) [6,3] 0x0 0x0 0x0 0x1 [SteelLance] GroupTwoAI
 
-UNIT Stonemason MageKnight 0x0 Level(3,Enemy,1) [10,0] 0x0 0x0 0x0 0x1 [Thunder, SteelSword] GroupThreeAI
-UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [5,0] 0x0 0x0 0x0 0x1 [SteelBlade] GroupThreeAI
+UNIT Stonemason MageKnight Mason Level(3,Enemy,1) [10,0] 0x0 0x0 0x0 0x1 [Thunder, SteelSword] GroupThreeAI
+UNIT Stonemason Mercenary Mason Level(3,Enemy,1) [5,0] 0x0 0x0 0x0 0x1 [SteelBlade] GroupThreeAI
 
-UNIT Stonemason Mage 0x0 Level(3,Enemy,1) [16,6] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
+UNIT Stonemason Mage Mason Level(3,Enemy,1) [16,6] 0x0 0x0 0x0 0x1 [Fire] AttackInRangeAI
 
-UNIT Stonemason Arcanist 0x0 Level(3,Enemy,1) [13,8] 0x0 0x0 0x0 0x1 [Flux] NoAI
-UNIT Stonemason Myrmidon 0x0 Level(3,Enemy,1) [14,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Stonemason Arcanist Mason Level(3,Enemy,1) [13,8] 0x0 0x0 0x0 0x1 [Flux] NoAI
+UNIT Stonemason Myrmidon Mason Level(3,Enemy,1) [14,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 
-UNIT Stonemason SwordCavalier 0x0 Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x1 [SteelSword] AttackInRangeAI
+UNIT Stonemason SwordCavalier Mason Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x1 [SteelSword] AttackInRangeAI
 
-UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [13,15] 0x0 0x0 0x0 0x1 [Labrys] GroupFourAI
-UNIT Stonemason Acolyte 0x0 Level(3,Enemy,1) [12,16] 0x0 0x0 0x0 0x1 [Lightning] GroupFourAI
+UNIT Stonemason Fighter Mason Level(3,Enemy,1) [13,15] 0x0 0x0 0x0 0x1 [Labrys] GroupFourAI
+UNIT Stonemason Acolyte Mason Level(3,Enemy,1) [12,16] 0x0 0x0 0x0 0x1 [Lightning] GroupFourAI
 
-UNIT Stonemason Fighter 0x0 Level(3,Enemy,1) [1,6] 0x0 0x0 0x0 0x1 [IronAxe] GroupFiveAI
-UNIT Stonemason Myrmidon 0x0 Level(3,Enemy,1) [2,7] 0x0 0x0 0x0 0x1 [SteelSword] GroupFiveAI
+UNIT Stonemason Fighter Mason Level(3,Enemy,1) [1,6] 0x0 0x0 0x0 0x1 [IronAxe] GroupFiveAI
+UNIT Stonemason Myrmidon Mason Level(3,Enemy,1) [2,7] 0x0 0x0 0x0 0x1 [SteelSword] GroupFiveAI
 
-UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [15,7] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
-UNIT Stonemason Mercenary 0x0 Level(3,Enemy,1) [15,8] 0x0 0x0 0x0 0x1 [IronBlade] GroupOneAI
+UNIT Stonemason Soldier Mason Level(3,Enemy,1) [15,7] 0x0 0x0 0x0 0x1 [IronLance] GroupOneAI
+UNIT Stonemason Mercenary Mason Level(3,Enemy,1) [15,8] 0x0 0x0 0x0 0x1 [IronBlade] GroupOneAI
 
 //Stationaries
-UNIT Stonemason ArmorKnight 0x0 Level(3,Enemy,1) [7,7] 0x0 0x0 0x0 0x1 [Spear] NeverMoveAI
-UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [7,6] 0x0 0x0 0x0 0x1 [Longbow] NeverMoveAI
+UNIT Stonemason ArmorKnight Mason Level(3,Enemy,1) [7,7] 0x0 0x0 0x0 0x1 [Spear] NeverMoveAI
+UNIT Stonemason Archer Mason Level(3,Enemy,1) [7,6] 0x0 0x0 0x0 0x1 [Longbow] NeverMoveAI
 
-UNIT Stonemason IronMage 0x0 Level(3,Enemy,1) [14,4] 0x0 0x0 0x0 0x1 [Thunder, Vulnerary] NeverMoveAI
-UNIT Stonemason Archer 0x0 Level(3,Enemy,1) [13,4] 0x0 0x0 0x0 0x1 [SteelBow] NeverMoveAI
+UNIT Stonemason IronMage Mason Level(3,Enemy,1) [14,4] 0x0 0x0 0x0 0x1 [Thunder, Vulnerary] NeverMoveAI
+//UNIT Stonemason Archer Mason Level(3,Enemy,1) [13,4] 0x0 0x0 0x0 0x1 [SteelBow] NeverMoveAI
 
-UNIT Stonemason Shaman 0x0 Level(3,Enemy,1) [11,1] 0x0 0x0 0x0 0x1 [ShadeTome, Vulnerary] NeverMoveAI
+UNIT Stonemason Shaman Mason Level(3,Enemy,1) [11,1] 0x0 0x0 0x0 0x1 [ShadeTome, Vulnerary] NeverMoveAI
 
-UNIT Stonemason ArmorKnight 0x0 Level(3,Enemy,1) [14,11] 0x0 0x0 0x0 0x1 [SteelBlade, Vulnerary] NeverMoveAI
-UNIT Stonemason Soldier 0x0 Level(3,Enemy,1) [15,12] 0x0 0x0 0x0 0x1 [SteelLance] NeverMoveAI
+UNIT Stonemason ArmorKnight Mason Level(3,Enemy,1) [14,11] 0x0 0x0 0x0 0x1 [IronBlade, Vulnerary] NeverMoveAI
+UNIT Stonemason Soldier Mason Level(3,Enemy,1) [15,12] 0x0 0x0 0x0 0x1 [SteelLance] NeverMoveAI
 
-UNIT Stonemason Shaman 0x0 Level(3,Enemy,1) [4,4] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
+UNIT Stonemason Shaman Mason Level(3,Enemy,1) [4,4] 0x0 0x0 0x0 0x1 [Flux] NeverMoveAI
 
 UNIT
 
-#undef ChestOpenedFlag
-#undef KeyFlag
-#undef ChestCounter
+CutsceneUnits:
+UNIT Colton Thief Devan Level(4,Player,0) [2,15] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Lucy Mage_F Devan Level(4,Player,0) [2,16] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT Max Shaman Devan Level(4,Player,0) [1,15] 0x0 0x0 0x0 0x1 [0x0] NoAI
+UNIT
