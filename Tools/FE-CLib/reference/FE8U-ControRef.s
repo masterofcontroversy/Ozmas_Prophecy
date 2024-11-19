@@ -25,6 +25,7 @@ SET_DATA gTempSkillBuffer, 0x02026C20
 SET_DATA gAuraSkillBuffer, 0x02027200
 SET_DATA gUnitRangeBuffer, 0x0202764C
 SET_DATA pExtraItemOrSkill, 0x0202BCDE
+SET_DATA SkillsUnitBuffer, 0x02026BB0
 
 SET_DATA gCloudFreeByte, 0x020271F0
 SET_FUNC LoadBattleAnimePalette, 0x80599E9

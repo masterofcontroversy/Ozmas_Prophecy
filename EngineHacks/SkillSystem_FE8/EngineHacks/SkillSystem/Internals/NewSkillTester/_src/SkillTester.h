@@ -44,6 +44,7 @@ extern u8 gUnitRangeBuffer[];
 
 extern int gAuraSkillBufferLimit;
 
+extern Unit* SkillsUnitBuffer;
 extern u16 pExtraItemOrSkill;
 extern u8 AuraSkillTable[];
 extern u8 NegatedSkills[];

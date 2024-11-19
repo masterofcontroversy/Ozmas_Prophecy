@@ -140,7 +140,7 @@ lsr r1,r1,#8 @r1 = skill ID
 
 @now learn the skill specified in item uses
 
-blh SkillAdder+1
+blh SkillAdder
 
 @This decrements uses by 1, we want to remove the item entirely upon use since uses is skill ID
 @mov r0,r4

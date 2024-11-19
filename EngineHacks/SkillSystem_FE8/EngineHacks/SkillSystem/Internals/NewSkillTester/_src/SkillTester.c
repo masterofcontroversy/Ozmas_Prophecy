@@ -41,6 +41,13 @@ bool NihilTester(Unit* unit, u8 skillID) {
 
 /*Main functions*/
 
+//Sets skill buffers to refresh next skill test
+void InitSkillBuffers() {
+    gAttackerSkillBuffer->lastUnitChecked = 0;
+    gOpponentSkillBuffer->lastUnitChecked = 0;
+    SkillsUnitBuffer = 0;
+}
+
 //Makes skill buffer at a given location.
 SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
     int unitNum = unit->pCharacterData->number;
@@ -219,6 +226,7 @@ bool SkillAdder(Unit* unit, int skillID) {
     BWLData* unitBWL = BWL_GetEntry(unit->pCharacterData->number);
 
     if (unitBWL) {
+        InitSkillBuffers(); //Ensure changes apply as soon as possible
         for (i = 0; i < 2; ++i) {
             if (unitBWL->skills[i] == skillID) {
                 return FALSE;
@@ -245,12 +253,6 @@ void InitializePreBattleLoop(Unit* unit, Unit* opponent) {
     if (IsBattleReal()) {
         MakeSkillBuffer(opponent, gOpponentSkillBuffer);
     }
-}
-
-//Sets skill buffers to refresh next skill test
-void InitSkillBuffers() {
-    gAttackerSkillBuffer->lastUnitChecked = 0;
-    gOpponentSkillBuffer->lastUnitChecked = 0;
 }
 
 //Finds units in a radius and returns a list of matching unit's indexes
