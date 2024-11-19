@@ -4,7 +4,7 @@ INLINE DebugEvent,Event
 02 Ch 2,Chapter3DebugEvent|IsPointer
 03 Ch 3,Chapter4DebugEvent|IsPointer
 04 Ch 4/Zaha Woods,Chapter4xDebugEvent|IsPointer
-05 Ch 5x,0x0
+05 Ch 5x,Chapter4xDebugEvent
 06 Ch 5,0x0
 07 Ch 6/Adlas Plains,DebugEventTest|IsPointer
 08 Ch 7,0x0
