@@ -1,102 +1,117 @@
+#define setMugEntryDetailed(mugId, mugMain, mugFrames, mugMini, mugPalette, mouthX, mouthY, eyeX, eyeY) "PUSH; ORG PortraitTable+mugId*0x1C; POIN mugMain; POIN mugMini; POIN mugPalette; POIN mugFrames; WORD 0x00000000; BYTE mouthX mouthY eyeX eyeY; WORD 0x01; POP"
+
 //Devan
-ALIGN 4
-DevanPortrait:
-#incbin "dmp/Devan.portraitdmp"
+#define DevanMouthX 1
+#define DevanMouthY 5
+#define DevanEyeX   2
+#define DevanEyeY   3
+#include "dmp/Devan.portrait.event"
 
 //Ronni
-ALIGN 4
-RonniPortrait:
-#incbin "dmp/Ronni.portraitdmp"
+#define RonniMouthX 3
+#define RonniMouthY 6
+#define RonniEyeX   3
+#define RonniEyeY   4
+#include "dmp/Ronni.portrait.event"
 
 //Anthony
-ALIGN 4
-AnthonyPortrait:
-#incbin "dmp/Anthony.portraitdmp"
+#define AnthonyMouthX 3
+#define AnthonyMouthY 5
+#define AnthonyEyeX   3
+#define AnthonyEyeY   3
+#include "dmp/Anthony.portrait.event"
 
-ALIGN 4
-KennethPortrait:
-#incbin "dmp/Kenneth.portraitdmp"
+//Kenneth
+#define KennethMouthX 3
+#define KennethMouthY 6
+#define KennethEyeX   3
+#define KennethEyeY   4
+#include "dmp/Kenneth.portrait.event"
 
 //Evelyn
-ALIGN 4
-EvelynPortrait:
-#incbin "dmp/Evelyn.portraitdmp"
+#define EvelynMouthX 1
+#define EvelynMouthY 5
+#define EvelynEyeX   2
+#define EvelynEyeY   3
+#include "dmp/Evelyn.portrait.event"
 
 //Alexandra
-ALIGN 4
-AlexandraPortrait:
-#incbin "dmp/Alexandra.portraitdmp"
+#define AlexandraMouthX 2
+#define AlexandraMouthY 6
+#define AlexandraEyeX   3
+#define AlexandraEyeY   4
+#include "dmp/Alexandra.portrait.event"
 
-ALIGN 4
-AbsalomPortrait:
-#incbin "dmp/Absalom.portraitdmp"
+#define AbsalomMouthX 3
+#define AbsalomMouthY 5
+#define AbsalomEyeX   3
+#define AbsalomEyeY   3
+#include "dmp/Absalom.portrait.event"
 
-ALIGN 4
-HollyPortrait:
-#incbin "dmp/Holly.portraitdmp"
+#define HollyMouthX 3
+#define HollyMouthY 6
+#define HollyEyeX   3
+#define HollyEyeY   4
+#include "dmp/Holly.portrait.event"
 
 //Lucy
-ALIGN 4
-LucyPortrait:
-#incbin "dmp/Lucy.portraitdmp"
+#define LucyMouthX 3
+#define LucyMouthY 6
+#define LucyEyeX   3
+#define LucyEyeY   4
+#include "dmp/Lucy.portrait.event"
 
 ALIGN 4
-ColtonPortrait:
-#incbin "dmp/Colton.portraitdmp"
+#define ColtonMouthX 2
+#define ColtonMouthY 5
+#define ColtonEyeX   3
+#define ColtonEyeY   3
+#include "dmp/Colton.portrait.event"
 
 //Maximilion
-ALIGN 4
-MaxPortrait:
-#incbin "dmp/Max.portraitdmp"
+#define MaxMouthX 3
+#define MaxMouthY 5
+#define MaxEyeX   3
+#define MaxEyeY   3
+#include "dmp/Max.portrait.event"
 
 //Caius
-ALIGN 4
-CaiusPortrait:
-#incbin "dmp/Caius.portraitdmp"
+#define CaiusMouthX 3
+#define CaiusMouthY 6
+#define CaiusEyeX   3
+#define CaiusEyeY   4
+#include "dmp/Caius.portrait.event"
 
-ALIGN 4
-LazarusPortrait:
-#incbin "dmp/Lazarus.portraitdmp"
+#define LazarusMouthX 3
+#define LazarusMouthY 5
+#define LazarusEyeX   3
+#define LazarusEyeY   3
+#include "dmp/Lazarus.portrait.event"
 
 //Enemies
 
 //Hendrick
-ALIGN 4
-HendrickPortrait:
-#incbin "dmp/Hendrick.portraitdmp"
+#define HendrickMouthX 3
+#define HendrickMouthY 5
+#define HendrickEyeX   3
+#define HendrickEyeY   3
+#include "dmp/Hendrick.portrait.event"
 
-ALIGN 4
-DominicPortrait:
-#incbin "dmp/Dominic.portraitdmp"
+#define DominicMouthX 2
+#define DominicMouthY 4
+#define DominicEyeX   3
+#define DominicEyeY   2
+#include "dmp/Dominic.portrait.event"
 
-ALIGN 4
-MasonPortrait:
-#incbin "dmp/Mason.portraitdmp"
-
-//Other
-ALIGN 4
-PriestPortrait:
-#incbin "dmp/Priest.portraitdmp"
-
-//setMugEntry(<mugindex>,<portrait label>,<mouth X>,<mouth Y>,<eye X>,<eye Y>)
-setMugEntry(DevanPortraitID,DevanPortrait,1,5,2,3)
-setMugEntry(RonniPortraitID,RonniPortrait,3,6,3,4)
-setMugEntry(AnthonyPortraitID,AnthonyPortrait,3,5,3,3)
-setMugEntry(KennethPortraitID,KennethPortrait,3,6,3,4)
-setMugEntry(EvelynPortraitID,EvelynPortrait,1,5,2,3)
-setMugEntry(AbsalomPortraitID,AbsalomPortrait,3,5,3,3)
-setMugEntry(HollyPortraitID,HollyPortrait,3,6,3,4)
-setMugEntry(MaxPortraitID,MaxPortrait,3,5,3,3)
-setMugEntry(AlexandraPortraitID,AlexandraPortrait,2,6,3,4)
-setMugEntry(LucyPortraitID,LucyPortrait,3,6,3,4)
-setMugEntry(ColtonPortraitID,ColtonPortrait,2,5,3,3)
-setMugEntry(CaiusPortraitID,CaiusPortrait,3,6,3,4)
-setMugEntry(LazarusPortraitID,LazarusPortrait,3,5,3,3)
-
-//Enemies
-setMugEntry(HendrickPortraitID,HendrickPortrait,3,5,3,3)
-setMugEntry(DominicPortraitID,DominicPortrait,2,4,3,2)
-setMugEntry(MasonPortraitID,MasonPortrait,3,5,2,3)
+#define MasonMouthX 3
+#define MasonMouthY 5
+#define MasonEyeX   2
+#define MasonEyeY   3
+#include "dmp/Mason.portrait.event"
 
 //Other
-setMugEntry(PriestPortraitID,PriestPortrait,2,6,2,4)
+#define PriestMouthX 2
+#define PriestMouthY 6
+#define PriestEyeX   2
+#define PriestEyeY   4
+#include "dmp/Priest.portrait.event"

@@ -55,6 +55,7 @@ SYMCOMBO			:= $(PYTHON3) $(realpath .)/Tools/sym/SymCombo.py
 PALETTECONDENSER	:= $(PYTHON3) $(realpath .)/Tools/PaletteCondenser/PaletteCondenser.py
 TSAGENERATOR		:= $(PYTHON3) $(realpath .)/Tools/TSAGenerator/TSAGenerator.py
 S2EA				:= $(PYTHON3) $(realpath .)/Tools/s2ea.py
+INSTALLPORTRAITS	:= $(PYTHON3) $(realpath .)/Tools/PortraitInstallerGenerator/PortraitInstallerGenerator.py
 
 TSAGENERATOR_BGARGS := --header --reverse
 
@@ -63,7 +64,7 @@ GRIT8BPPLZ77ARGS	:= -gu 16 -gzl -gB 8 -p! -m! -ft bin -fh!
 GRIT4BPPARGS		:= -gu 16 -gB 4 -p! -m! -ft bin -fh!
 GRIT2BPPARGS		:= -gu 16 -gb -gB 2 -p! -m! -ft bin -fh!
 GRITPALETTEARGS		:= -g! -m! -p -ft bin -fh!
-GRIT10PALETTEARGS	:= -g! -m! -p -pe 159 -ft bin -fh!
+GRIT10PALETTEARGS	:= -g! -m! -p -pe 160 -ft bin -fh!
 
 VANILLASYM			:= $(realpath .)/Tools/sym/VanillaOffsets.sym
 
@@ -130,8 +131,13 @@ $(PORTRAIT_DMPS):
 	cd $(dir $<) && $(GRIT) $< $(GRITLZ77ARGS)
 	@mv $(basename $<).img.bin $@
 
-%.portraitdmp: ../img/%.png
-	$(PORTRAITFORMATTER) $< -o $@
+%.portrait.event: ../img/%.png
+	$(PORTRAITFORMATTER) $<
+	@mv $(basename $<)_mug.dmp $(dir $@)
+	@mv $(basename $<)_minimug.dmp $(dir $@)
+	@mv $(basename $<)_frames.dmp $(dir $@)
+	@mv $(basename $<)_palette.dmp $(dir $@)
+	$(INSTALLPORTRAITS) $< --output $@
 
 %.mapchip.dmp: %.mapchip
 	$(COMPRESS) $< $@

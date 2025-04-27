@@ -50,7 +50,6 @@ __pycache__
 
 # Stuff built with make
 *.mpsprite
-*.portraitdmp
 *.4bpp
 *.pal
 *.lz77
