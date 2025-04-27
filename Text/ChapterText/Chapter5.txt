@@ -1,0 +1,315 @@
+## Ch5_Scene1
+//Absalom
+[MidLeft][LoadAbsalom]
+I-Is it me or is it getting c-colder?[ANL]
+Feels like I'm turning t-to a human icicle[A]
+
+//Evelyn
+[MidRight][LoadEvelyn]
+All that time with Lord Apis[NL]
+and a little cold bothers you?[A]
+
+//Absalom
+[MidLeft]
+Yeah.[.4] Aren't you?[A]
+
+//Evelyn
+[MidRight]
+Not enough to neglect[NL]
+the duties of a soldier.[ANL]
+[Beat]Including stoicism.[A]
+
+//Absalom
+[MidLeft]
+You know what?[.4] You're right.[ANL]
+What's a little frostbite[NL]
+compared to how cold you are?[A]
+
+//Evelyn
+[MidRight]
+Your poor attempts at humor are far[NL]
+more hazardous than any cold spell.[A]
+
+//Absalom
+[MidLeft]
+If they bug you that much, why[NL]
+not fly off like you normally do?[A]
+
+//Evelyn
+[MidRight]
+As much as I would like to, it's[NL]
+colder in the sky than it is here.[A]
+
+//Absalom
+[MidLeft]
+Isn't scouting one of those
+duties you just mentioned?
+
+//Evelyn
+[MidRight]
+Ugh[Beat][A]
+[X]
+
+## Ch5_Scene2
+[Left][LoadRonni]
+[FarLeft][LoadDevan]
+[Right][LoadAlexandra]
+
+//Ronni
+[Left]
+[Beat]Are they always like this?[A]
+
+//Alexandra
+[Right]
+It's worsened by the cold,[NL]
+but yes, unfortunately.[A]
+
+//Ronni
+[Left]
+Winter's sure going[NL]
+to be something[Beat][A]
+
+//Absalom
+[FarLeft][LoadAbsalom]
+What was that?[A]
+
+//Alexandra
+[Right]
+You mean[Beat] we're not[NL]
+in an early winter?[A]
+
+//Ronni
+[Left]
+That's right.[ANL]
+We've got a bit more until[NL]
+we're at winter temperatures.[A]
+
+//Alexandra
+[Right]
+It's a wonder you can[NL]
+survive this climate.[A]
+
+//Devan
+[FarLeft]
+Between the cold, snow storms, and[Beat][NL]
+each other, not many of us do.[A]
+
+//Absalom
+[FarLeft]
+Then why settle here[NL]
+in the first place?[ANL]
+Most people want to live where[NL]
+they can[Beat] y'know, live, yeah?[A]
+
+//Ronni
+[Left]
+We've got ice, metals and a ton of[NL]
+stone. They used to go for a lot.[A]
+
+//Absalom
+[FarLeft]
+What happened?[A]
+
+//Devan
+[FarLeft]
+The war with Cassis.[ANL]
+When it broke out, Tolva forced us[NL]
+to cut ties with our best customer.[ANL]
+Naturally, with fewer alternatives,[NL]
+we had to settle for lower prices.[A]
+
+//Alexandra
+[Right]
+Surely you had a recourse.[A]
+[X]
+
+## Ch5_InitialStormStart
+[MidLeft][LoadAlexandra]
+[MidRight][LoadDevan]
+
+//Alexandra
+[MidLeft]
+It's starting.[A]
+
+//Devan
+[MidRight]
+It's just as Evelyn said.[.4][NL]
+Our flying enemies are slowing down.[A]
+
+//Alexandra
+[MidLeft]
+And so is Evelyn herself.[.4][NL]
+She'd best be careful[Beat][A]
+[X]
+
+## Ch5_InitialStormEnd
+[MidLeft][LoadAlexandra]
+[MidRight][LoadDevan]
+
+//Alexandra
+[MidLeft]
+A fine plan this was, Count Silvare![.4][NL]
+The storm died down![A]
+
+//Devan
+[MidRight]
+Then we'll have to hold out for now.[.4][NL]
+The winds will return soon. [Beat]I hope.[A]
+[X]
+
+## Ch5_InitialStormResume
+[MidLeft][LoadDevan]
+There.[.4] What did I say?[ANL]
+Keep moving, everyone![NL]
+Now's our chance![A]
+[X]
+
+## Ch5_StormWarning1_ver1
+[MidLeft][LoadLucy]
+[MidRight][LoadMax]
+
+//Lucy
+[MidLeft]
+Woah. My hair's sticking out![.4][NL]
+I think something's going to happen.[A]
+
+//Max
+[MidRight]
+So you sense it, too.[.4][NL]
+The storm is about to pick up.[A]
+[X]
+
+## Ch5_StormWarning1_ver2
+[MidLeft][LoadHolly]
+The blizzard is[NL]
+about to return.[ANL][CloseEyes]
+I only pray we can[NL]
+hold out that long[Beat][A]
+[X]
+
+## Ch5_StormWarning2_ver1
+[MidLeft][LoadColton]
+I can feel the storm blowing in.[.4][NL]
+We'll have a break soon.[A]
+[X]
+
+## Ch5_StormWarning_Final
+[MidLeft][LoadMax]
+[MidRight][LoadRonni]
+
+//Max
+[MidLeft]
+Do you see that, Veronica?[.4][NL]
+It's the eye.[A]
+
+//Ronni
+[MidRight][ToggleSmile]
+Great![.4] That should[NL]
+give us plenty of time![A]
+
+[ToggleSmileFar]
+
+//Max
+[MidLeft]
+Don't get complacent.[ANL]
+One false move and[NL]
+it's all over for us.[A]
+
+//Ronni
+[MidRight]
+Er.[.4] Right.[A]
+[X]
+
+## Ch5_SnowWarning2_ver1
+[MidLeft][LoadAnthony]
+[MidRight][LoadKenneth]
+
+//Anthony
+[MidLeft]
+The wind's getting weaker.[.4][NL]
+Keep your guard up, kid.[A]
+
+//Kenneth
+[MidRight]
+Right.[A]
+[X]
+
+## Ch5_SnowWarning2_ver2
+[MidLeft][LoadKenneth]
+[MidRight][LoadHolly]
+
+//Kenneth
+[MidLeft]
+I think the storm's letting up.[A]
+
+//Holly
+[MidRight]
+But there are still griffons around.[.4][NL]
+We'd best get moving.[A][CloseSpeechSlow]
+[MoveFarFarLeft]
+
+//Kenneth
+[MidLeft]
+Wait! you can't just run off like that![ANL]
+[Beat]And there she goes. I wonder if[NL]
+it was this bad for Brittany[Beat][A]
+[X]
+
+## Ch5_SnowWarning3_ver1
+[MidLeft][LoadAbsalom]
+[MidRight][LoadEvelyn]
+
+//Absalom
+[MidLeft]
+Shoot.[.4] Looks like the[NL]
+storm's letting up.[A]
+
+//Evelyn
+[MidRight][CloseEyes]
+Finally.[A]
+
+//Absalom
+[MidLeft]
+What are you so happy about?[.4][NL]
+This storm's keeping us safe![A]
+
+//Evelyn
+[MidRight][OpenEyes]
+Perhaps it's keeping you safe, but[NL]
+it's treating me like a ragdoll.[A]
+
+//Absalom
+[MidLeft]
+Oh.[.4] Almost forgot.[.4][ToggleSmile] Eheheh[Beat][A]
+[X]
+
+## Ch5_SnowWarning_Final
+[MidLeft][LoadDevan]
+This is last of it.[.4][NL]
+Everyone! Hurry to the pass! Go go go![A]
+[X]
+
+## Ch5_FerryConversation
+[MidLeft][LoadAbsalom]
+[MidRight][LoadEvelyn]
+
+//Absalom
+[MidLeft]
+Did you see that?[ANL]
+Pegasus knights just dropped[NL]
+off more soldiers.[ANL][ToggleSmile]
+Y'know, maybe[NL]
+we should do it sometime.[A]
+
+[ToggleSmileFar]
+
+//Evelyn
+[MidRight]
+The two of us?[.4] Alone?[.4][NL]
+Hundreds of feet in the air?[A][2NL]
+[Beat]I suppose we could try it.[A]
+
+//Absalom
+[MidLeft]
+Good point.[.4] Never mind.[A]
+[X]

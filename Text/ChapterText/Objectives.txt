@@ -1,6 +1,9 @@
 ## SeizeFortText
 Seize fort[X]
 
+## EscapeText
+Escape![X]
+
 ## Chapter1_Objective
 Defeat all Eastern[NL]
 Duramontis soldiers[X]
@@ -23,3 +26,7 @@ Open chests[X]
 ## Chapter4x_Objective
 Rob the Stonemasons[NL]
 of their stolen goods[X]
+
+## Chapter5_Objective
+Flee to the[NL]
+north-west valley[X]

@@ -90,6 +90,16 @@ void UpdateUnitsFromEventBattle(Unit* unit, BattleUnit* battleUnit) {
     }
 }
 
+void ASMC_SetUnitWeaponRank(void) {
+    Unit* unit = GetUnitStructFromEventParameter(gEventSlot[2]);
+    u8 val = gEventSlot[3];
+    unit->ranks[gEventSlot[1]] = val;
+}
+
+void ASMC_CheckAction(void) {
+    gEventSlot[0xC] = gActionData.unitActionType;
+}
+
 void ASMC_CheckPlayerHoldingKeys(void) {
 	u16 keyMask = gEventSlot[1];
 

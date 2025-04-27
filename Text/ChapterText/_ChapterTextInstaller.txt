@@ -3,6 +3,7 @@
 #include "Chapter3.txt"
 #include "Chapter4.txt"
 #include "Chapter4x.txt"
+#include "Chapter5.txt"
 #include "Objectives.txt"
 
 //Misc
