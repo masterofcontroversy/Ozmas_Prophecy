@@ -33,7 +33,8 @@ Change Battle BGM: 7743
 Extend Weapon Desc Box: Vesly
 Decide on Danger Map: Vesly
 CHAI Fix: HyperGammaSpaces
-
+AutoGenLeftOAM: 7743
+Individual Animation: 7743
 
 Icons:
 Iron, steel, Silver Blades: Zane

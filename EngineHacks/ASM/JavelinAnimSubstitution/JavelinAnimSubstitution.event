@@ -15,7 +15,6 @@ ALIGN 4
 JavelinSubList:
     // Including vanilla javelin substitutes
     JavelinAnimSubstitute(Cavalier,      0x4)
-    JavelinAnimSubstitute(ArmorKnight,   0x6)
     JavelinAnimSubstitute(Paladin,       0x6)
     JavelinAnimSubstitute(Paladin_F,     0xD)
     JavelinAnimSubstitute(General,       0xB)

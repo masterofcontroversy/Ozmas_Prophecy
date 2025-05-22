@@ -83,6 +83,9 @@
 
 #include "ASM/StaffReturn/Installer.event"
 
+#include "C/SetAnimation/Installer.event"
+#include "ASM/AutoGenLeftOAM/Installer.event"
+
 #include "C/UpdatePrepScreenUnits/Installer.event"
 
 #include "ASM/ResumeSnowStormSound/Installer.event"

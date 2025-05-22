@@ -1,0 +1,26 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+ORG $571E8  //FE8U
+jumpToHack(HackLocation)
+POP
+
+#include "GetSpecialAnimPointer.lyn.event"
+
+ALIGN 4
+HackLocation:
+#include "IndividualAnimation7743.lyn.event"
+
+ALIGN 4
+gCustomAnimList:
+BYTE 0x0  //Unit: Eirika
+BYTE FalcoKnight  //Class: Lord
+BYTE 0x01  //dummy
+BYTE 0x00  //dummy
+POIN FalcoKnightDiveAnimPoint //Eirika Master Load Battle Animation.
+
+BYTE 0x00  //Unit: term data
+BYTE 0x00  //dummy
+BYTE 0x00  //dummy
+BYTE 0x00  //dummy
+WORD 0x00  //dummy

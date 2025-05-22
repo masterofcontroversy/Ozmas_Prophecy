@@ -222,6 +222,10 @@ FILL 0x20 * 0x200
 #include "_Animations/FalcoKnight_UnarmedInstaller.event"
 }
 {
+#include "_Animations/FalcoKnightDive_SwordInstaller.event"
+#include "_Animations/FalcoKnightDive_LanceInstaller.event"
+}
+{
 #include "_Animations/GreatKnight_AxeInstaller.event"
 #include "_Animations/GreatKnight_HandaxeInstaller.event"
 #include "_Animations/GreatKnight_LanceInstaller.event"
@@ -267,12 +271,10 @@ FILL 0x20 * 0x200
 {
 #include "_Animations/MageKnight_MagicInstaller.event"
 #include "_Animations/MageKnight_SwordInstaller.event"
-#include "_Animations/MageKnight_StaffInstaller.event"
 }
 {
 #include "_Animations/MageKnight_F_MagicInstaller.event"
 #include "_Animations/MageKnight_F_SwordInstaller.event"
-#include "_Animations/MageKnight_F_StaffInstaller.event"
 }
 
 {
