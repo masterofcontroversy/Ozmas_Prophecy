@@ -209,6 +209,7 @@ Queens: LemonTart
 Warriors of Dawn: Sme
 Sortie Formation: Saxor the Nobody
 Wind Scene: Pandan
+General Store: RandomWizard
 
 Tilesets:
 Updated FE6 Snow Fields: N426

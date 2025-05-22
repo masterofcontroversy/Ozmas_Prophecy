@@ -132,6 +132,11 @@ SongTable(Redial_BGM,Redial_Sme,MapMusicGroup)
 #include "songs/Redial_Sme.music.event"
 }
 
+{
+SongTable(GeneralStore_BGM,GENERAL_STORE_INSERTABLE,MapMusicGroup)
+#include "songs/GeneralStore_RandomWizard.music.event"
+}
+
 // --------------- SONGS: GUI AND SFX ---------------
 
 // for sound effects for menus, battle anims, Echoes voice acting, etc, as well as jingles like Level Up! and Item Get
