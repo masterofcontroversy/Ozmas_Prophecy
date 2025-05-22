@@ -2,6 +2,7 @@
 
 .equ GetMaxDurabilityFromItemID, 0x8016540
 .equ HandleNewItemGetFromDrop, 0x801E098
+.equ DurabilityItemList, DroppedItemDurabilityOption+4
 
 .macro blh to, reg = r3
     ldr \reg, =\to
@@ -31,6 +32,22 @@ GetMaxDurability:
 ldr r1,DroppedItemDurabilityOption
 cmp r1,#1
 beq DoNotKeepDurability
+
+@Check if durability item
+mov  r1, #0xFF
+mov  r3, r0
+and  r3, r1
+ldr  r1, DurabilityItemList
+Loop:
+ldrb r2, [r1]
+cmp  r2, #0x0
+beq  KeepDurability
+cmp  r2, r3
+beq  DoNotKeepDurability
+add  r1, #0x1
+b    Loop
+
+KeepDurability:
 lsl r0,r0,#24
 lsr r0,r0,#24
 DoNotKeepDurability:
@@ -51,3 +68,4 @@ bx r0
 
 DroppedItemDurabilityOption:
 @WORD DROPPED_ITEM_DURABILITY
+@POIN DurabilityItemList
