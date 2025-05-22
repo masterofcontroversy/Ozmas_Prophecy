@@ -151,6 +151,11 @@ AddClassAnimation(FalcoKnightLance,Lance,0x1)
 AddClassAnimation(FalcoKnightUnarmed,Unarmed,0x1)
 EndClassAnimation
 
+FalcoKnightDiveAnimPoint:
+AddClassAnimation(FalcoKnightDiveLance,Lance,0x1)
+AddClassAnimation(FalcoKnightDiveSword,Sword,0x1)
+EndClassAnimation
+
 
 DracoRiderAnimPoint:
 AddClassAnimation(DracoRiderLance,Lance,0x1)
@@ -284,11 +289,13 @@ MageKnightAnimPoint:
 AddClassAnimation(MageKnightSword,Sword,0x1)
 AddClassAnimation(MageKnightMagic,Anima,0x1)
 AddClassAnimation(MageKnightMagic,Unarmed,0x1)
+EndClassAnimation
 
 MageKnightFAnimPoint:
 AddClassAnimation(MageKnightFSword,Sword,0x1)
 AddClassAnimation(MageKnightFMagic,Anima,0x1)
 AddClassAnimation(MageKnightFMagic,Unarmed,0x1)
+EndClassAnimation
 
 AcolyteAnimPoint:
 AddClassAnimation(AcolyteMagic,Light,0x1)
