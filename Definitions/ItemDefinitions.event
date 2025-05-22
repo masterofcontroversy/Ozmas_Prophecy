@@ -340,6 +340,7 @@
 #define RajinArrow       0xdd
 #define Labrys           0xde
 #define FalconPlume      0xdf
+#define Gauntlet         0xe0
 
 #define SkeletonKey      Lockpick
 
