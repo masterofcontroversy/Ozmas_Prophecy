@@ -6,7 +6,7 @@
 // Note: prCapHPIfOverMax comes with MSG (InstallHelpers.event) since it's direct asm (+ you'll probably want it anyway)
 
 pCurHPModifiers: // Current HP
-	POIN prAddUnitCurHP prCapHPIfOverMax prCapCurHPInPreps
+	POIN prAddUnitCurHP prCapHPIfOverMax
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif

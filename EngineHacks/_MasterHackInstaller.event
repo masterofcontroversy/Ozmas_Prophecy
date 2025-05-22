@@ -83,6 +83,8 @@
 
 #include "ASM/StaffReturn/Installer.event"
 
+#include "C/UpdatePrepScreenUnits/Installer.event"
+
 #include "ASM/ResumeSnowStormSound/Installer.event"
 #include "ASM/CameraSpeed/Installer.event"
 #include "ASM/ChangeBattleBGM/Installer.event"

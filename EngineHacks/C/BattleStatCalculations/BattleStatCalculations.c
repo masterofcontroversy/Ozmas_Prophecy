@@ -1,7 +1,8 @@
 #include "gbafe.h"
 
-#define ITEM_ID_FROSTBITE   0x42
-#define ITEM_ID_SHIV        0x16
+#define ITEMID_FROSTBITE   0x42
+#define ITEMID_SHIV        0x16
+#define ITEMID_GLAIVE      0xAD
 
 extern bool SkillTester(Unit* unit, u8 skillID);
 extern int  GetUnitEquippedItem(Unit* unit);
@@ -75,8 +76,18 @@ void ComputeBattleUnitSupportBonuses(BattleUnit* unit) {
     }
 }
 
+void LimitCurrentHPToMax(void) {
+    Unit* target = GetUnit(gActionData.targetIndex);
+
+    if (target) {
+        if (GetUnitCurrentHp(target) > GetUnitMaxHp(target)) {
+            SetUnitHp(target, GetUnitMaxHp(target));
+        }
+    }
+}
+
 void ApplyFrostbiteBonus(BattleUnit* unit) {
-    if (GetItemIndex(unit->weaponBefore) == ITEM_ID_FROSTBITE) {
+    if (GetItemIndex(unit->weaponBefore) == ITEMID_FROSTBITE) {
         if (gChapterData.weather == WEATHER_SNOW ||
             gChapterData.weather == WEATHER_SNOWSTORM) {
             unit->battleAttack += 5;
@@ -88,7 +99,7 @@ void ApplyFlankBonus(BattleUnit* unit, BattleUnit* opponent) {
     if (!(gBattleStats.config & (BATTLE_CONFIG_REAL|BATTLE_CONFIG_SIMULATE))) {
         return;
     }
-    if (GetItemIndex(unit->weaponBefore) != ITEM_ID_SHIV) {
+    if (GetItemIndex(unit->weaponBefore) != ITEMID_SHIV) {
         return;
     }
 
