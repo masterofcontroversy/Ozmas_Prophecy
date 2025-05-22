@@ -550,3 +550,5 @@ blue * 0x400
 #define IronMageMagic        0xAD
 #define ArcanistMagic        0xAE
 #define MercenarySwordFollowup 0xAF
+#define FalcoKnightDiveLance 0xB0
+#define FalcoKnightDiveSword 0xB1
