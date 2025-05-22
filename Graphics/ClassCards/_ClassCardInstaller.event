@@ -120,7 +120,7 @@ ALIGN 4
 CrateClassCardPalette:
 #incbin "Crate.pal"
 
-setCardEntry(ArmorKnightCC,ArmorKnightClassCardImage,ArmorKnightClassCardPalette)
+//setCardEntry(ArmorKnightCC,ArmorKnightClassCardImage,ArmorKnightClassCardPalette)
 setCardEntry(FighterCC,FighterClassCardImage,FighterClassCardPalette)
 setCardEntry(SoldierCC,SoldierClassCardImage,SoldierClassCardPalette)
 setCardEntry(DracoRiderCC,DracoRiderClassCardImage,DracoRiderClassCardPalette)

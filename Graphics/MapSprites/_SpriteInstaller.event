@@ -219,33 +219,6 @@ ALIGN 4
 DracoMasterFMoving:
 #incbin "dmp/WyvernKnightFMoving.mpsprite"
 
-//Sword Armor map sprites
-ALIGN 4
-SwordArmorStanding:
-#incbin "dmp/SwordArmorStanding.mpsprite"
-
-ALIGN 4
-SwordArmorMoving:
-#incbin "dmp/SwordArmorMoving.mpsprite"
-
-//Lance Armor map sprites
-ALIGN 4
-LanceArmorStanding:
-#incbin "dmp/LanceArmorStanding.mpsprite"
-
-ALIGN 4
-LanceArmorMoving:
-#incbin "dmp/LanceArmorMoving.mpsprite"
-
-//Axe Armor map sprites
-ALIGN 4
-AxeArmorStanding:
-#incbin "dmp/AxeArmorStanding.mpsprite"
-
-ALIGN 4
-AxeArmorMoving:
-#incbin "dmp/AxeArmorMoving.mpsprite"
-
 //Deserter map sprites
 ALIGN 4
 DeserterStanding:

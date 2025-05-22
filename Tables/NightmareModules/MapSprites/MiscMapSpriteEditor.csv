@@ -7,7 +7,7 @@ Lance Cavalier,LanceCavalierMoving|IsPointer,NormalAP
 Sword Cavalier,SwordCavalierMoving|IsPointer,NormalAP
 Lance Paladin,LancePaladinMoving|IsPointer,NormalAP
 Sword Paladin,SwordPaladinMoving|IsPointer,NormalAP
-Armor Knight,LanceArmorMoving|IsPointer,NormalAP
+Armor Knight,0x81c7580,0x81c7e74
 Armour Knight (F),0x81c7580,0x81c7e74
 General,0x81c7fcc,0x81c8a80
 General (F),0x81c7fcc,0x81c8a80
