@@ -82,6 +82,7 @@
 #define TherionTheThief_BGM     51
 #define SortieFormation_BGM     52
 #define Redial_BGM              53
+#define GeneralStore_BGM        54
 
 //Background noise IDs
 #define CricketsChirping        74
