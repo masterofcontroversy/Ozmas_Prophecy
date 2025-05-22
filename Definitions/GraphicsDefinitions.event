@@ -85,7 +85,7 @@ blue * 0x400
 #define RazeIcon             0x38
 #define BoltingIcon          0x39
 #define FarFrostIcon         0x3A
-//#define Free               0x3B
+#define AirShotIcon          0x3B
 #define ShaverIcon           0x3C
 #define LightningIcon        0x3D
 #define ShineIcon            0x3E
@@ -108,7 +108,7 @@ blue * 0x400
 #define VigorStoneIcon       0xD1
 #define AccostBandIcon       0xD2
 #define CloverIcon           0xD3
-
+#define GauntletIcon         0xD4
 
 //staves start at 0x49
 #define FinesseIcon          0x57
@@ -488,9 +488,9 @@ blue * 0x400
 #define SageFMagic           0x6F
 //#define SageFStaff         0x70
 #define MageKnightMagic      0x71
-#define MageKnightStaff      0x72
+#define MageKnightSword      0x72
 #define MageKnightFMagic     0x73
-#define MageKnightFStaff     0x74
+#define MageKnightFSword     0x74
 #define ShamanMagic          0x75
 #define ShamanFMagic         0x76
 #define DruidMagic           0x77
@@ -537,8 +537,8 @@ blue * 0x400
 #define FighterFUnarmed      0xA1
 //#define BishopMagic        0xA7
 #define PegasusKnightSword   0xA2
-#define MageKnightSword      0xA3
-#define MageKnightFSword     0xA4
+//#define Free               0xA3
+//#define Free               0xA4
 #define PaladinFSword        0xA5
 #define PaladinFLance        0xA6
 #define PaladinFAxe          0xA7

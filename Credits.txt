@@ -51,6 +51,8 @@ Axereaver: 2WB
 Shiv: BatimaTheBat
 Shields: cardcafe
 Vigor Stone: LordGlenn
+Clover: GabrielKnight
+Gauntlet: LUCT, EldritchAbo, serebii01
 
 Tomahawk: LordGlenn
 All other axes: Lisandra Brave

@@ -99,6 +99,9 @@ SetIcon(GreatbowIcon)
 SetIcon(HuntingBowIcon)
 #incbin "Images/Bows/HuntingBow.4bpp"
 
+SetIcon(AirShotIcon)
+#incbin "Images/Anima/AirShot.4bpp"
+
 SetIcon(ShivIcon)
 #incbin "Images/Swords/Shiv.4bpp"
 
@@ -119,5 +122,7 @@ SetIcon(AccostBandIcon)
 #incbin "Images/Items/AccostBand.4bpp"
 SetIcon(CloverIcon)
 #incbin "Images/Items/Clover.4bpp"
+SetIcon(GauntletIcon)
+#incbin "Images/Items/Gauntlet.4bpp"
 
 POP

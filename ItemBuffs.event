@@ -31,3 +31,7 @@ StatBonus(0,0,0,(-5),2,0,0,0,0,0)
 ALIGN 4
 GlaiveBonus:
 StatBonus(0,0,0,0,0,2,0,0,0,0)
+
+ALIGN 4
+GauntletBonus:
+StatBonus(7,0,0,0,0,0,0,0,0,0)

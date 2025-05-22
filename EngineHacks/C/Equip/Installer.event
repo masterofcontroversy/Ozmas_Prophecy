@@ -8,7 +8,7 @@ ALIGN 4
 
 ALIGN 4
 EquipmentList:
-BYTE IronShield SteelShield SilverShield Whetstone MagicShield VigorStone AccostBand RajinArrow Clover FalconPlume
+BYTE IronShield SteelShield SilverShield Whetstone MagicShield VigorStone AccostBand RajinArrow Clover FalconPlume Gauntlet
 BYTE 0x00 //terminator
 
 // Defense equipemnt loses durability on each hit taken
@@ -24,7 +24,7 @@ OffenseEquipmentList:
 BYTE 0x00 // terminator
 
 EquipmentRTextList:
-BYTE IronShield SteelShield SilverShield MagicShield
+//BYTE IronShield SteelShield SilverShield MagicShield
 BYTE 0x00 // terminator
 
 // Equipment in neither list doesn't decrement durability

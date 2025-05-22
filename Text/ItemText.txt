@@ -214,6 +214,9 @@ Skeleton Key[X]
 ## FalconPlumeName
 Falcon Plume[X]
 
+## GauntletName
+Gauntlet[X]
+
 ## BowDesc
 3x Might vs [PegasusIcon].[X]
 
@@ -221,19 +224,19 @@ Falcon Plume[X]
 3x Might vs [HorseIcon][PegasusIcon].[X]
 
 ## IronShieldDesc
-+2 Defense, -1 Speed.[X]
++2 Defense, -1 Speed when equipped.[X]
 
 ## SteelShieldDesc
-+4 Defense, -2 Speed.[X]
++4 Defense, -2 Speed when equipped.[X]
 
 ## SilverShieldDesc
-+6 Defense, -4 Speed.[X]
++6 Defense, -4 Speed when equipped.[X]
 
 ## WhetstoneDesc
-+2 Strength, -2 Defense.[X]
++2 Strength, -2 Defense when equipped.[X]
 
 ## FalconPlumeDesc
-+2 Speed, -5 Technique.[X]
++2 Speed, -5 Technique when equipped.[X]
 
 ## CloverDesc
 It must be lucky if it grew in[NL]
@@ -241,7 +244,7 @@ Duramontis. +7 Luck when held.[X]
 
 ## CloverOtherDesc
 Boosts Luck by[NL]
-7 when held.[X]
+7 when equipped.[X]
 
 ## VigorStoneDesc
 Allows equipped unit to move up to[NL]
@@ -268,24 +271,21 @@ Restores HP equal to damage dealt.[X]
 3x Might vs [HorseIcon][ArmorIcon].[X]
 
 ## SwiftbladeDesc
-Follow-ups occur before counterattacks.[X]
+Follow-up before enemy counter.[X]
 
 ## StrikerBladeDesc
 Enemy always attacks first.[NL]
 +1 strike at the end of round.[X]
 
 ## ShivDesc
-Negates Def. +4 atk when ally[NL]
+Negates Prt. +4 atk when ally[NL]
 is on opposite side of opponent.[X]
 
-## KillerDesc
-Unlocks crit.[X]
-
 ## BraveDesc
-Double strike count.[X]
+Double strikes dealt.[X]
 
 ## BraveBowDesc
-Double strike count. 3x Might vs [PegasusIcon][X]
+Double strikes dealt. 3x Might vs [PegasusIcon][X]
 
 ## GlaiveDesc
 Infantry only. +2 Defense.[X]
@@ -352,3 +352,6 @@ instead of strength.[X]
 ## SkeletonKeyDesc
 A special key that opens[NL]
 both doors and chests.[X]
+
+## GauntletDesc
++7 HP when equipped.[.][X]
