@@ -5,7 +5,7 @@ AnimTableEntry(RogueKnife) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
 WORD 0 0 0 //empty name field, who cares
 POIN Anim_Knife_sectiondata
 POIN Anim_Knife_framedata
-POIN Anim_Knife_rtl 0 Anim_Knife_pal
+POIN Anim_Knife_rtl Anim_Knife_rtl Anim_Knife_pal
 POP
 
 //install data

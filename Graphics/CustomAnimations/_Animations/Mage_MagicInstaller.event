@@ -5,7 +5,7 @@ AnimTableEntry(MageMagic) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
 WORD 0 0 0 //empty name field, who cares
 POIN Anim_magm_mg1_sectiondata
 POIN Anim_magm_mg1_framedata
-POIN Anim_magm_mg1_rtl 0 Anim_magm_mg1_pal
+POIN Anim_magm_mg1_rtl Anim_magm_mg1_rtl Anim_magm_mg1_pal
 POP
 
 //install data

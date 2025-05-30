@@ -5,7 +5,7 @@ AnimTableEntry(MercenarySwordFollowup) //CHANGE THIS TO THE SLOT YOU ARE REPLACI
 WORD 0 0 0 //empty name field, who cares
 POIN Anim_MercenaryJump_sectiondata
 POIN Anim_MercenaryJump_framedata
-POIN Anim_MercenaryJump_rtl 0 Anim_MercenaryJump_pal
+POIN Anim_MercenaryJump_rtl Anim_MercenaryJump_rtl Anim_MercenaryJump_pal
 POP
 
 //install data
